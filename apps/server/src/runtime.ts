@@ -28,7 +28,7 @@ export async function registerRuntime(app:FastifyInstance,x:{db:string;realmId:s
  app.post("/api/participants/:id/leave",async(req:any)=>{await requireParticipant(req,req.params.id);const sid=await repo.leave(req.params.id);if(sid){await broadcast(sid,"participant.left",{id:req.params.id});for(const client of sockets.get(sid)??[])if(client.participantId===req.params.id)client.socket.close(1008,"participant left")}return{ok:true}});
 
 
- app.get("/api/game/definitions",async()=>{const c=pack.content;return{checks:c.checks??{},resources:c.resources??{},effects:c.effects??{},actions:c.actions??{}}});
+ app.get("/api/game/definitions",async()=>{const c=pack.content;return{checks:c.checks??{},resources:c.resources??{},effects:c.effects??{},actions:c.actions??{},encounter:c.encounter??{orderingPolicy:"none"}}});
  app.get("/api/sessions/:id/actors",async(req:any)=>{await requireSessionMember(req,req.params.id);return actors.all(req.params.id)});
  app.post("/api/sessions/:id/participants/:participantId/initialize",async(req:any)=>{await requireSessionGm(req,req.params.id);const p=await repo.participant(req.params.participantId);if(!p?.characterId||p.sessionId!==req.params.id)throw Object.assign(Error("participant has no character in session"),{statusCode:409});const c=await repo.character(p.characterId),defs=Object.fromEntries(Object.entries(pack.content.resources??{}).map(([id,value])=>[id,{id,...value}])) as Record<string,ResourceDefinition>,state={actorId:p.id,resources:initializeResources(defs,c?.values??{}),effects:[]};await mutations.commit(req.params.id,[{type:"ActorInitialized",payload:{...state}}],[state]);await broadcast(req.params.id,"actor.state",state);return state});
  app.post("/api/sessions/:id/actions",async(req:any)=>{

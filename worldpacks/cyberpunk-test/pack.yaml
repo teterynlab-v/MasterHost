@@ -152,6 +152,11 @@ actions:
   spend-ammo: { label: Spend Ammo, kind: resource, target: self, resource: ammo, operation: subtract, amount: 1 }
   damage: { label: Damage, kind: resource, target: actor, resource: health, operation: subtract, amount: 5 }
   jam: { label: Jam Target, kind: effect, target: actor, effectId: jammed }
+  signal-boost:
+    label: Signal Boost
+    target: multiple-actors
+    steps:
+      - effect: { target: target, id: boosted }
   neural-overload:
     label: Neural Overload
     target: single-actor

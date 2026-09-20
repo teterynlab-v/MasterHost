@@ -127,6 +127,11 @@ actions:
   take-damage: { label: Take Damage, kind: resource, target: actor, resource: health, operation: subtract, amount: 5 }
   heal: { label: Heal, kind: resource, target: actor, resource: health, operation: add, amount: 5 }
   poison: { label: Poison, kind: effect, target: actor, effectId: poisoned }
+  rally:
+    label: Rally
+    target: multiple-actors
+    steps:
+      - effect: { target: target, id: inspired }
   sword-strike:
     label: Sword Strike
     target: single-actor

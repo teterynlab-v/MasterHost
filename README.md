@@ -22,6 +22,7 @@ With the server running, the live PostgreSQL smoke checks are:
 ```bash
 node scripts/m0-runtime-smoke.mjs
 node scripts/runtime-smoke.mjs  # Classic Fantasy Pack
+node scripts/cyberpunk-runtime-smoke.mjs  # Cyberpunk Pack server
 npm exec --yes --package=pnpm@10.17.1 -- pnpm exec tsx scripts/concurrency-smoke.mts
 ```
 
