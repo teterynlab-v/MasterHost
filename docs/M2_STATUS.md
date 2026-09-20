@@ -22,7 +22,7 @@ M2.2 declarative actions, M2.3 target policies, M2.4 Encounter ordering/turns, a
 - Action and Encounter commands reject stale actor/Encounter versions with 409 and roll back their events.
 - Pack-defined Encounter ordering; fixed, rolled, attribute, custom, and no-turn policies run through the same commands.
 - PostgreSQL permits only one live Encounter per Session; concurrent starts leave one committed event sequence.
-- Action and Encounter commands support an optional Session-scoped idempotency key, persisted atomically with their events and result.
+- Action, Encounter, NPC creation and Actor initialization commands support an optional Session-scoped idempotency key, persisted atomically with their events and result.
 - GM can instantiate a Session NPC from a Pack actor template. NPC resources and attributes are Pack-defined; NPCs use the same Action and Encounter engine as player actors.
 - GM-only runtime verification reconstructs Actor and Encounter state from version-1 events and compares it with persisted materialized state in one database snapshot.
 
@@ -61,6 +61,6 @@ A later Fantasy browser flow verified adding Goblin, an NPC-sourced action again
 
 ## Next architecture step
 
-1. Add snapshot-based recovery and repair after a verified replay. The current verifier is read-only and replays from the beginning. Extend idempotency receipts to remaining mutation commands.
+1. Add snapshot-based recovery and repair after a verified replay. The current verifier is read-only and replays from the beginning. Extend idempotency receipts to Check creation.
 2. Link optional NPC/creature actors to materialized World entities and add richer Encounter participant management.
 3. Expand Pack validation and cross-setting runtime conformance.

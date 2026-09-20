@@ -32,7 +32,9 @@ await valid(`/participants/${player.id}/ready`, { ready: true }, player.accessTo
 assert.equal((await call(`/sessions/${session.id}/state`, { state: "live" })).status, 403);
 await valid(`/sessions/${session.id}/state`, { state: "live" }, campaign.gmToken);
 assert.equal((await call("/join/resolve", { pin: session.pin })).status, 200);
-await valid(`/sessions/${session.id}/participants/${player.id}/initialize`, {}, campaign.gmToken);
+const playerInitKey = randomUUID();
+const initializedPlayer = await valid(`/sessions/${session.id}/participants/${player.id}/initialize`, {}, campaign.gmToken, playerInitKey);
+assert.deepEqual(await valid(`/sessions/${session.id}/participants/${player.id}/initialize`, {}, campaign.gmToken, playerInitKey), initializedPlayer);
 assert.equal((await call(`/sessions/${session.id}/actions`, { actorId: player.id, targetActorIds: [randomUUID()], actionId: "take-damage" }, campaign.gmToken)).status, 400);
 const damageBody = { actorId: player.id, targetActorIds: [player.id], actionId: "take-damage" }, damageKey = randomUUID();
 assert.equal((await call(`/sessions/${session.id}/actions`, damageBody, campaign.gmToken, "invalid key")).status, 400);
@@ -73,7 +75,11 @@ await valid(`/participants/${otherPlayer.id}/character`, { characterId: otherCha
 await valid(`/sessions/${session.id}/participants/${otherPlayer.id}/initialize`, {}, campaign.gmToken);
 assert.equal((await call(`/sessions/${session.id}/actors`, { templateId: "goblin" }, player.accessToken)).status, 403);
 assert.equal((await call(`/sessions/${session.id}/actors`, { templateId: "unknown" }, campaign.gmToken)).status, 400);
-const goblin = await valid(`/sessions/${session.id}/actors`, { templateId: "goblin" }, campaign.gmToken);
+const goblinKey = randomUUID(), goblinBody = { templateId: "goblin" };
+const goblinAttempts = await Promise.all(Array.from({ length: 2 }, () => call(`/sessions/${session.id}/actors`, goblinBody, campaign.gmToken, goblinKey)));
+assert.deepEqual(goblinAttempts.map(result => result.status), [200, 200]);
+assert.deepEqual(goblinAttempts[0].data, goblinAttempts[1].data);
+const goblin = goblinAttempts[0].data;
 assert.equal(goblin.kind, "npc");
 assert.equal(goblin.resources.health, 8);
 await valid(`/sessions/${session.id}/actions`, { actorId: player.id, targetActorIds: [goblin.actorId], actionId: "take-damage" }, campaign.gmToken);
@@ -129,6 +135,9 @@ const replayVerification = await valid(`/sessions/${session.id}/runtime/verify`,
 assert.deepEqual(replayVerification, { matching: true, eventCount: afterParallelEvents.length, actorIds: [], encounterIds: [], issues: [] });
 await valid(`/sessions/${session.id}/state`, { state: "finished" }, campaign.gmToken);
 assert.deepEqual(await valid(`/sessions/${session.id}/actions`, damageBody, campaign.gmToken, damageKey), firstDamage);
+assert.deepEqual(await valid(`/sessions/${session.id}/actors`, goblinBody, campaign.gmToken, goblinKey), goblin);
+assert.deepEqual(await valid(`/sessions/${session.id}/participants/${player.id}/initialize`, {}, campaign.gmToken, playerInitKey), initializedPlayer);
 assert.equal((await call(`/sessions/${session.id}/actors`, { templateId: "goblin" }, campaign.gmToken)).status, 409);
+assert.equal((await call(`/sessions/${session.id}/participants/${player.id}/initialize`, {}, campaign.gmToken)).status, 409);
 assert.equal((await call("/join/resolve", { pin: session.pin })).status, 404);
 console.log(`Runtime smoke passed: PIN, participant and GM authorization, concurrent Check roll, Action commands (${accepted} accepted, ${12 - accepted} conflicts), encounter, effect lifecycle, expiry.`);

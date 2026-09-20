@@ -30,7 +30,9 @@ for (const [name, role] of [["Neon", "solo"], ["Ghost", "netrunner"]]) {
 }
 await valid(`/sessions/${session.id}/state`, { state: "live" }, campaign.gmToken);
 for (const player of players) await valid(`/sessions/${session.id}/participants/${player.id}/initialize`, {}, campaign.gmToken);
-const drone = await valid(`/sessions/${session.id}/actors`, { templateId: "drone" }, campaign.gmToken);
+const droneKey = randomUUID(), droneBody = { templateId: "drone" };
+const drone = await valid(`/sessions/${session.id}/actors`, droneBody, campaign.gmToken, droneKey);
+assert.deepEqual(await valid(`/sessions/${session.id}/actors`, droneBody, campaign.gmToken, droneKey), drone);
 assert.equal(drone.kind, "npc");
 assert.equal(drone.resources.ammo, 8);
 await valid(`/sessions/${session.id}/actions`, { actorId: drone.actorId, targetActorIds: [players[0].id], actionId: "damage" }, campaign.gmToken);
