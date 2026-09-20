@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{resolve}from"node:path";import{loadWorldPack}from"@masterhost/worldpack-sdk";
+describe("pack-defined character creation",()=>{for(const name of["classic-fantasy-test","cyberpunk-test"])it(name,async()=>{const p=await loadWorldPack(resolve("worldpacks",name));const s=(p.content as any).characterCreation;expect(s.steps.length).toBeGreaterThan(0);expect(s.steps.flatMap((x:any)=>x.fields).some((f:any)=>f.required)).toBe(true)})});

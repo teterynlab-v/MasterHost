@@ -1,0 +1,76 @@
+import type{FastifyInstance}from"fastify";import websocket from"@fastify/websocket";import{RuntimeRepository,GameRepository,ActorStateRepository,EncounterRepository,RuntimeMutationRepository}from"@masterhost/persistence";import type{WorldRepository}from"@masterhost/persistence";import{newCheckRequest,resolveCheck,initializeResources,effectiveModifier,executeAction,startEncounter,advanceEncounter,endEncounter}from"@masterhost/game-runtime";import type{CheckDefinition,ResourceDefinition,EffectDefinition}from"@masterhost/game-runtime";import{validateCharacterValues}from"@masterhost/worldpack-sdk";import type{LoadedWorldPack}from"@masterhost/worldpack-sdk";
+declare module "fastify" { interface FastifyInstance { masterhostPack?: LoadedWorldPack; masterhostWorldRepository?: WorldRepository } }
+export async function registerRuntime(app:FastifyInstance,x:{db:string;realmId:string}){
+ const pack=app.masterhostPack,worldRepository=app.masterhostWorldRepository;if(!pack||!worldRepository)throw Error("MasterHost dependencies unavailable");
+ const repo=new RuntimeRepository(x.db),game=new GameRepository(x.db),actors=new ActorStateRepository(x.db),encounters=new EncounterRepository(x.db),mutations=new RuntimeMutationRepository(x.db);await game.migrate();await actors.migrate();await encounters.migrate();await repo.migrate();await repo.ensureRealm(x.realmId);await app.register(websocket);
+ const sockets=new Map<string,Set<any>>();
+ const snapshot=async(id:string)=>({session:await repo.session(id),participants:await repo.participants(id)});
+ const broadcast=async(id:string,type:string,payload:any)=>{const msg=JSON.stringify({type,sessionId:id,payload,at:new Date().toISOString()});for(const ws of sockets.get(id)??[])if(ws.readyState===1)ws.send(msg)};
+ const token=(req:any)=>String(req.headers.authorization??"").replace(/^Bearer\s+/i,"");
+ const requireCampaignGm=async(req:any,id:string)=>{if(!await repo.verifyCampaignGm(id,token(req)))throw Object.assign(Error("GM authorization required"),{statusCode:403})};
+ const requireSessionGm=async(req:any,id:string)=>{if(!await repo.verifySessionGm(id,token(req)))throw Object.assign(Error("GM authorization required"),{statusCode:403})};
+ app.post("/api/campaigns",async(req:any)=>{const world=await worldRepository.get(req.body?.worldId);if(!world||world.realmId!==x.realmId)throw Object.assign(Error("world not found in Realm"),{statusCode:404});return repo.createCampaign({realmId:x.realmId,worldId:world.id,name:req.body.name??"New Campaign"})});
+ app.get("/api/campaigns/:id",async(req:any)=>repo.campaign(req.params.id));
+ app.post("/api/campaigns/:id/sessions",async(req:any)=>{const c=await repo.campaign(req.params.id);if(!c||c.realmId!==x.realmId)throw Object.assign(Error("campaign not found"),{statusCode:404});await requireCampaignGm(req,c.id);return repo.startLobby({realmId:x.realmId,campaignId:c.id,gmId:req.body?.gmId})});
+ app.post("/api/join/resolve",async(req:any)=>{const s=await repo.resolvePin(x.realmId,String(req.body?.pin??""));if(!s)throw Object.assign(Error("PIN not found or expired"),{statusCode:404});return{session:s,campaign:await repo.campaign(s.campaignId)}});
+
+ app.get("/api/character-creation",async()=>({pack:{id:pack.manifest.id,version:pack.manifest.version},schema:pack.content.characterCreation??{steps:[]}}));
+ app.get("/api/characters",async(req:any)=>repo.characters(x.realmId,String(req.query?.ownerKey??"guest"),req.query?.packId,req.query?.packVersion));
+ app.post("/api/characters",async(req:any)=>{if(!pack)throw Error("pack unavailable");const values=validateCharacterValues(pack.content.characterCreation??{steps:[]},req.body?.values),name=String(values.name??values.handle??req.body?.displayName??"Unnamed");return repo.createCharacter({realmId:x.realmId,packId:pack.manifest.id,packVersion:pack.manifest.version,ownerKey:String(req.body?.ownerKey??"guest"),displayName:name,values})});
+ app.post("/api/participants/:id/character",async(req:any)=>{const participant=await repo.participant(req.params.id),c=await repo.character(req.body.characterId);if(!participant||!c)throw Object.assign(Error("participant or character not found"),{statusCode:404});const session=await repo.session(participant.sessionId);if(!session||session.realmId!==x.realmId||c.realmId!==x.realmId||c.worldPackId!==pack.manifest.id||c.worldPackVersion!==pack.manifest.version||!await repo.characterOwnedBy(c.id,String(req.body.ownerKey??"")))throw Object.assign(Error("character is not compatible or owned by this guest"),{statusCode:403});await repo.selectCharacter(req.params.id,c.id);return{ok:true,character:c}});
+
+ app.post("/api/sessions/:id/join",async(req:any)=>{const p=await repo.joinGuest({sessionId:req.params.id,displayName:String(req.body?.displayName??"Guest").trim().slice(0,80)||"Guest"});await broadcast(req.params.id,"participant.joined",p);return p});
+ app.get("/api/sessions/:id",async(req:any)=>snapshot(req.params.id));
+ app.post("/api/sessions/:id/state",async(req:any)=>{await requireSessionGm(req,req.params.id);const s=await repo.transition(req.params.id,req.body.state);await broadcast(req.params.id,"session.state",s);return s});
+ app.post("/api/participants/:id/ready",async(req:any)=>{const p=await repo.setReady(req.params.id,Boolean(req.body.ready));if(p)await broadcast(p.sessionId,"participant.ready",p);return p});
+ app.post("/api/participants/:id/leave",async(req:any)=>{const sid=await repo.leave(req.params.id);if(sid)await broadcast(sid,"participant.left",{id:req.params.id});return{ok:true}});
+
+
+ app.get("/api/game/definitions",async()=>{const c=pack.content;return{checks:c.checks??{},resources:c.resources??{},effects:c.effects??{},actions:c.actions??{}}});
+ app.get("/api/sessions/:id/actors",async(req:any)=>actors.all(req.params.id));
+ app.post("/api/sessions/:id/participants/:participantId/initialize",async(req:any)=>{await requireSessionGm(req,req.params.id);const p=await repo.participant(req.params.participantId);if(!p?.characterId||p.sessionId!==req.params.id)throw Object.assign(Error("participant has no character in session"),{statusCode:409});const c=await repo.character(p.characterId),defs=Object.fromEntries(Object.entries(pack.content.resources??{}).map(([id,value])=>[id,{id,...value}])) as Record<string,ResourceDefinition>,state={actorId:p.id,resources:initializeResources(defs,c?.values??{}),effects:[]};await actors.save(req.params.id,state);await game.event(req.params.id,"ActorInitialized",state);await broadcast(req.params.id,"actor.state",state);return state});
+ app.post("/api/sessions/:id/actions",async(req:any)=>{
+  await requireSessionGm(req,req.params.id);
+  const session=await repo.session(req.params.id);if(!session||session.state!=="live")throw Object.assign(Error("session is not live"),{statusCode:409});
+  const defs=pack.content,action=defs.actions?.[req.body?.actionId];if(!action)throw Object.assign(Error("unknown action"),{statusCode:400});
+  const actorId=String(req.body?.actorId??""),targetActorIds=Array.isArray(req.body?.targetActorIds)?req.body.targetActorIds:req.body?.targetActorId?[req.body.targetActorId]:[];
+  const all=await actors.all(session.id),actorMap=Object.fromEntries(all.map(state=>[state.actorId,state]));
+  const characterValues:Record<string,Record<string,unknown>>={};for(const state of all){const participant=await repo.participant(state.actorId);if(participant?.sessionId===session.id&&participant.characterId){const character=await repo.character(participant.characterId);if(character)characterValues[state.actorId]=character.values}}
+  const checks=Object.fromEntries(Object.entries(defs.checks??{}).map(([id,value])=>[id,{id,...value as object}])) as Record<string,CheckDefinition>;
+  const resources=Object.fromEntries(Object.entries(defs.resources??{}).map(([id,value])=>[id,{id,...value as object}])) as Record<string,ResourceDefinition>;
+  const effects=Object.fromEntries(Object.entries(defs.effects??{}).map(([id,value])=>[id,{id,...value as object}])) as Record<string,EffectDefinition>;
+  const result=executeAction({action:{id:req.body.actionId,...action},request:{sessionId:session.id,actionId:req.body.actionId,actorId,targetActorIds,inputs:req.body?.inputs},actors:actorMap,checks,resources,effects,characterValues});
+  await mutations.commit(session.id,result.events,result.states);
+  for(const state of result.states)await broadcast(session.id,"actor.state",state);
+  await broadcast(session.id,"action.resolved",result.events.at(-1)?.payload);return result;
+ });
+
+ app.get("/api/game/checks",async()=>({checks:pack.content.checks??{}}));
+ app.post("/api/sessions/:id/checks",async(req:any)=>{await requireSessionGm(req,req.params.id);const session=await repo.session(req.params.id);if(!session||session.state!=="live")throw Object.assign(Error("session is not live"),{statusCode:409});const checks=pack.content.checks??{},def=checks[req.body.checkId];if(!def)throw Object.assign(Error("unknown check"),{statusCode:400});const participant=await repo.participant(req.body.participantId);if(!participant||participant.sessionId!==session.id)throw Object.assign(Error("participant not in session"),{statusCode:400});const c=newCheckRequest({sessionId:session.id,participantId:participant.id,checkId:req.body.checkId,difficulty:Number(req.body.difficulty),visibility:req.body.visibility??"full"});await game.createCheck(c);await game.event(session.id,"CheckRequested",c);await broadcast(session.id,"check.requested",c);return c});
+ app.post("/api/checks/:id/roll",async(req:any)=>{const found=await game.check(req.params.id);if(!found)throw Object.assign(Error("check not found"),{statusCode:404});if(found.resolution)return found.resolution;const participant=await repo.participant(found.request.participantId);if(!participant?.characterId)throw Object.assign(Error("participant has no character"),{statusCode:409});const character=await repo.character(participant.characterId);if(!character)throw Error("character not found");const def=pack.content.checks?.[found.request.checkId];if(!def)throw Error("check definition unavailable");const state=await actors.get(found.request.sessionId,participant.id),effects=state?.effects??[],effectDefs=Object.fromEntries(Object.entries(pack.content.effects??{}).map(([id,value])=>[id,{id,...value}])) as Record<string,EffectDefinition>,field=def.modifierField,base=field?Number(character.values[field]??0):0,modified={...character.values,...(field?{[field]:effectiveModifier(base,field,effects,effectDefs)}:{})};const resolution=resolveCheck(found.request,{id:found.request.checkId,...def},modified);await game.resolveCheck(found.request.id,resolution);await game.event(found.request.sessionId,"DiceRolled",{requestId:found.request.id,roll:resolution.roll});await game.event(found.request.sessionId,"CheckResolved",resolution);await broadcast(found.request.sessionId,"check.resolved",{request:found.request,resolution});return resolution});
+ app.get("/api/sessions/:id/events",async(req:any)=>game.events(req.params.id));
+ app.get("/api/sessions/:id/participants/:participantId/checks",async(req:any)=>game.pendingForParticipant(req.params.id,req.params.participantId));
+
+ app.get("/api/sessions/:id/encounters",async(req:any)=>encounters.forSession(req.params.id));
+ app.post("/api/sessions/:id/encounters",async(req:any)=>{
+  await requireSessionGm(req,req.params.id);
+  const session=await repo.session(req.params.id);if(!session||session.state!=="live")throw Object.assign(Error("session is not live"),{statusCode:409});
+  const states=await actors.all(session.id),available=new Set(states.map(state=>state.actorId)),ids=req.body?.participantIds;
+  if(!Array.isArray(ids)||ids.some(id=>typeof id!=="string"||!available.has(id)))throw Object.assign(Error("encounter participants must be initialized session actors"),{statusCode:400});
+  const config=pack.content.encounter??{orderingPolicy:"none"};
+  const attributes:Record<string,number>={};if(config.orderingPolicy==="attribute"){if(!config.attributeField)throw Error("encounter attribute field missing in Pack");for(const id of ids){const participant=await repo.participant(id),character=participant?.characterId?await repo.character(participant.characterId):null;attributes[id]=Number(character?.values?.[config.attributeField]??NaN)}}
+  const result=startEncounter({sessionId:session.id,participantIds:ids,policy:config.orderingPolicy,attributes,customOrder:req.body?.customOrder});
+  await mutations.commit(session.id,result.events,[],result.encounter);await broadcast(session.id,"encounter.state",result.encounter);return result;
+ });
+ app.post("/api/encounters/:id/advance",async(req:any)=>{
+  const encounter=await encounters.get(req.params.id);if(!encounter)throw Object.assign(Error("encounter not found"),{statusCode:404});
+  await requireSessionGm(req,encounter.sessionId);
+  const states=await actors.all(encounter.sessionId),defs=pack.content.effects??{};
+  const effects=Object.fromEntries(Object.entries(defs).map(([id,value])=>[id,{id,...value as object}])) as Record<string,EffectDefinition>;
+  const result=advanceEncounter(encounter,Object.fromEntries(states.map(state=>[state.actorId,state])),effects);
+  await mutations.commit(encounter.sessionId,result.events,result.states,result.encounter);await broadcast(encounter.sessionId,"encounter.state",result.encounter);return result;
+ });
+ app.post("/api/encounters/:id/end",async(req:any)=>{const encounter=await encounters.get(req.params.id);if(!encounter)throw Object.assign(Error("encounter not found"),{statusCode:404});await requireSessionGm(req,encounter.sessionId);const result=endEncounter(encounter);await mutations.commit(encounter.sessionId,result.events,[],result.encounter);await broadcast(encounter.sessionId,"encounter.state",result.encounter);return result});
+
+ app.get("/ws/sessions/:id",{websocket:true},async(socket:any,req:any)=>{const id=req.params.id;let set=sockets.get(id);if(!set)sockets.set(id,set=new Set());set.add(socket);socket.send(JSON.stringify({type:"session.snapshot",sessionId:id,payload:await snapshot(id),at:new Date().toISOString()}));socket.on("close",()=>{set!.delete(socket);if(!set!.size)sockets.delete(id)})});
+}

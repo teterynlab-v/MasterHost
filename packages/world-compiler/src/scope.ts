@@ -1,0 +1,3 @@
+import type{MaterializedWorld}from"@masterhost/domain";
+export function entitySubtree(world:MaterializedWorld,rootId:string){const ids=new Set([rootId]);let changed=true;while(changed){changed=false;for(const e of world.entities)if(e.parentId&&ids.has(e.parentId)&&!ids.has(e.id)){ids.add(e.id);changed=true}}return world.entities.filter(e=>ids.has(e.id))}
+export function scopeSummary(world:MaterializedWorld,rootId:string){const xs=entitySubtree(world,rootId),kinds:Record<string,number>={};for(const e of xs)kinds[e.kind]=(kinds[e.kind]??0)+1;return{rootId,entities:xs.length,kinds,customValues:xs.flatMap(e=>Object.values(e.values)).filter(v=>v.source==="custom").length,lockedValues:xs.flatMap(e=>Object.values(e.values)).filter(v=>v.locked).length}}

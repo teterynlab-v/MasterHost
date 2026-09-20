@@ -1,0 +1,32 @@
+import assert from "node:assert/strict";
+const api = process.env.MASTERHOST_API_URL ?? "http://localhost:8080/api";
+async function json(path, method = "GET", body) {
+  const response = await fetch(`${api}${path}`, { method, headers: body === undefined ? {} : { "content-type": "application/json" }, body: body === undefined ? undefined : JSON.stringify(body) });
+  const value = await response.json();
+  assert.ok(response.ok, `${path}: ${response.status} ${JSON.stringify(value)}`);
+  return value;
+}
+const pack = await json("/pack");
+const world = await json("/worlds", "POST", { seed: "m0-runtime-smoke", choices: {} });
+const settlement = world.entities.find(entity => entity.values.name?.source === "generated");
+assert.ok(settlement);
+const explanation = await json(`/worlds/${world.id}/entities/${settlement.id}/explain/name`);
+assert.equal(explanation.source, "generated");
+assert.ok(explanation.sourceRef && explanation.seed);
+const edited = await json(`/worlds/${world.id}/values`, "PATCH", { entityId: settlement.id, key: "name", value: "Locked Smoke Town", locked: true });
+assert.equal(edited.revision, world.revision + 1);
+const preview = await json(`/worlds/${world.id}/regenerate/preview`, "POST", {});
+assert.ok(preview.blockedByLocks > 0);
+const regenerated = await json(`/worlds/${world.id}/regenerate`, "POST", { snapshotName: "Smoke before regeneration" });
+assert.equal(regenerated.entities.find(entity => entity.materializationPath === settlement.materializationPath)?.values.name.value, "Locked Smoke Town");
+const snapshot = await json(`/worlds/${world.id}/snapshots`, "POST", { name: "Smoke checkpoint" });
+assert.ok(snapshot.id);
+const fork = await json(`/worlds/${world.id}/fork`, "POST", { name: "Smoke fork" });
+assert.notEqual(fork.id, world.id);
+assert.equal(fork.entities.find(entity => entity.materializationPath === settlement.materializationPath)?.values.name.value, "Locked Smoke Town");
+const archive = await fetch(`${api}/worlds/${world.id}/export`);
+assert.equal(archive.status, 200);
+const bytes = new Uint8Array(await archive.arrayBuffer());
+assert.equal(String.fromCharCode(...bytes.slice(0, 2)), "PK");
+assert.equal((await json(`/worlds/${world.id}`)).entities.find(entity => entity.materializationPath === settlement.materializationPath)?.values.name.value, "Locked Smoke Town");
+console.log(`M0 runtime smoke passed for ${pack.manifest.id}: provenance, lock, preview, regeneration, snapshot, fork, ZIP export, persisted reload.`);

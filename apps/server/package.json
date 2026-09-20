@@ -1,0 +1,19 @@
+{
+  "name": "@masterhost/server",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts"
+  },
+  "dependencies": {
+    "@masterhost/descriptor": "workspace:*",
+    "@masterhost/world-compiler": "workspace:*",
+    "@masterhost/worldpack-sdk": "workspace:*",
+    "@masterhost/persistence": "workspace:*",
+    "fastify": "^5.6.0",
+    "@fastify/cors": "^11.1.0",
+    "@fastify/websocket": "^11.2.0",
+    "@masterhost/game-runtime": "workspace:*"
+  }
+}

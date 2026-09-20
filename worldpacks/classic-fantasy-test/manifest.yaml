@@ -1,0 +1,6 @@
+id: masterhost.classic-fantasy-test
+name: Classic Fantasy Test
+version: 0.1.0
+schemaVersion: "0.1"
+defaultArtSet: illustrated
+entryTemplate: world.default

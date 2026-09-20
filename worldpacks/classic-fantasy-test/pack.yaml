@@ -1,0 +1,140 @@
+questions:
+  - id: world.tone
+    label: Tone
+    type: choice
+    default: heroic
+    options: [{ value: heroic, label: Heroic }, { value: dark, label: Dark }]
+  - id: world.magic
+    label: Magic
+    type: choice
+    default: common
+    options: [{ value: low, label: Low }, { value: common, label: Common }, { value: high, label: High }]
+  - id: world.danger
+    label: Danger
+    type: choice
+    default: medium
+    options: [{ value: low, label: Low }, { value: medium, label: Medium }, { value: high, label: High }]
+generators:
+  region.count: { type: integer-range, min: 2, max: 3 }
+  settlement.count: { type: integer-range, min: 2, max: 4 }
+  settlement.population: { type: integer-range, min: 350, max: 1800 }
+  settlement.names: { type: values, values: [Ravenford, Stonecross, Greyhaven, Dunmere, Willowmere, Blackwater] }
+  economy:
+    type: weighted-table
+    entries: [{ value: farming, weight: 40 }, { value: mining, weight: 30 }, { value: trade, weight: 20 }, { value: hunting, weight: 10 }]
+traits:
+  settlement.dangerous:
+    id: settlement.dangerous
+    when: { eq: [{ descriptor: world.danger }, high] }
+    addTags: [dangerous]
+    set: { fortified: true }
+templates:
+  world.default:
+    kind: world
+    values:
+      name: { value: The Shattered Realms }
+      tone: { descriptor: world.tone, default: heroic }
+      magic: { descriptor: world.magic, default: common }
+    components:
+      regions: { template: region.frontier, count: { generator: region.count } }
+  region.frontier:
+    kind: region
+    values:
+      name: { value: Northern Reach }
+      culture: { value: northern }
+      danger: { descriptor: world.danger, default: medium }
+    components:
+      settlements:
+        template: settlement.frontier
+        count: { generator: settlement.count }
+        parameters:
+          culture: { parent: culture }
+          danger: { descriptor: world.danger, default: medium }
+      mageTower:
+        template: location.mage-tower
+        when: { in: [{ descriptor: world.magic }, [common, high]] }
+  settlement.frontier:
+    kind: settlement
+    tags: [frontier]
+    parameters:
+      culture: { required: true }
+      danger: { default: medium }
+    traits: [settlement.dangerous]
+    values:
+      name: { generator: settlement.names }
+      population: { generator: settlement.population }
+      economy: { generator: economy }
+      culture: { param: culture }
+      danger: { param: danger }
+  location.mage-tower:
+    kind: location
+    tags: [magic, tower]
+    values: { name: { value: Tower of the Veil } }
+
+relations:
+  - id: settlement.trade-network
+    type: tradesWith
+    from: { kind: settlement, tags: [frontier] }
+    to: { kind: settlement, tags: [frontier] }
+    mode: chain
+    bidirectional: true
+
+constraints:
+  - id: enough-settlements
+    type: entity-count
+    query: { kind: settlement }
+    min: 4
+  - id: trade-exists
+    type: relation-count
+    relation: tradesWith
+    min: 2
+
+characterCreation:
+  steps:
+    - id: identity
+      title: Identity
+      fields:
+        - { id: name, label: Name, type: text, required: true }
+    - id: archetype
+      title: Archetype
+      fields:
+        - id: archetype
+          label: Archetype
+          type: choice
+          required: true
+          options:
+            - { value: warrior, label: Warrior }
+            - { value: rogue, label: Rogue }
+            - { value: scholar, label: Scholar }
+
+checks:
+  perception: { label: Perception, dice: 1d20, modifierField: perception }
+  athletics: { label: Athletics, dice: 1d20, modifierField: athletics }
+
+resources:
+  health: { label: Health, min: 0, max: 30, default: 20 }
+  mana: { label: Mana, min: 0, max: 20, default: 10 }
+effects:
+  poisoned:
+    label: Poisoned
+    duration: { type: turns, value: 3 }
+    modifiers: { perception: -2, athletics: -1 }
+  inspired:
+    label: Inspired
+    duration: { type: turns, value: 2 }
+    modifiers: { perception: 2 }
+actions:
+  take-damage: { label: Take Damage, kind: resource, target: actor, resource: health, operation: subtract, amount: 5 }
+  heal: { label: Heal, kind: resource, target: actor, resource: health, operation: add, amount: 5 }
+  poison: { label: Poison, kind: effect, target: actor, effectId: poisoned }
+  sword-strike:
+    label: Sword Strike
+    target: single-actor
+    steps:
+      - check: { id: athletics, against: input.difficulty }
+      - when: { previousOutcome: success }
+        roll: { id: damage, dice: 1d8 }
+      - when: { previousOutcome: success }
+        resource: { target: target, resource: health, operation: subtract, value: damage.total }
+encounter:
+  orderingPolicy: fixed

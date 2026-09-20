@@ -1,0 +1,6 @@
+id: illustrated
+name: Classic Fantasy Default
+description: Built-in standard art set for the test pack.
+defaults:
+  portrait: assets/ui/default-portrait.svg
+  background: assets/ui/background.svg

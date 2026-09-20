@@ -1,0 +1,29 @@
+import React,{useEffect,useState}from"react";import{createRoot}from"react-dom/client";import"./style.css";import{PlayerJoin,GmLobby}from"./lobby.js";
+const API=(import.meta as any).env?.VITE_API_URL??"http://localhost:8080/api";
+async function api(path:string,init?:RequestInit){const r=await fetch(`${API}${path}`,init);const type=r.headers.get("content-type")??"";const body=type.includes("json")?await r.json():await r.text();if(!r.ok)throw Error((body as any)?.message??`HTTP ${r.status}`);return body}
+function App(){
+ const[hash,setHash]=useState(location.hash.slice(1));useEffect(()=>{const f=()=>setHash(location.hash.slice(1));addEventListener("hashchange",f);return()=>removeEventListener("hashchange",f)},[]);
+
+ const[pack,setPack]=useState<any>(),[choices,setChoices]=useState<Record<string,string>>({}),[world,setWorld]=useState<any>(),[error,setError]=useState(""),[report,setReport]=useState<any>(),[impact,setImpact]=useState<any>(),[explain,setExplain]=useState<any>();
+ useEffect(()=>{api("/pack").then((p:any)=>{setPack(p);setChoices(Object.fromEntries(p.questions.map((q:any)=>[q.id,q.default])))}).catch((e:any)=>setError(e.message))},[]);
+ const loadMeta=async(w:any)=>{setWorld(w);setReport(await api(`/worlds/${w.id}/report`));setImpact(undefined)};
+ async function generate(){try{setError("");await loadMeta(await api("/worlds",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({choices})}))}catch(e:any){setError(e.message)}}
+ async function preview(){setImpact(await api(`/worlds/${world.id}/regenerate/preview`,{method:"POST"}))}
+ async function regen(){await loadMeta(await api(`/worlds/${world.id}/regenerate`,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({snapshotName:`Before regeneration r${world.revision}`})}))}
+ async function customize(entity:any,key:string,current:any){const value=prompt(`New value for ${key}`,String(current));if(value===null)return;await loadMeta(await api(`/worlds/${world.id}/values`,{method:"PATCH",headers:{"content-type":"application/json"},body:JSON.stringify({entityId:entity.id,key,value,locked:true})}))}
+ async function why(e:any,k:string){setExplain(await api(`/worlds/${world.id}/entities/${e.id}/explain/${encodeURIComponent(k)}`))}
+ async function snapshot(){await api(`/worlds/${world.id}/snapshots`,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({name:`Manual snapshot r${world.revision}`})});alert("Snapshot created")}
+ if(hash==="join")return <PlayerJoin/>;
+ if(hash==="gm"&&world)return <GmLobby world={world} onBack={()=>location.hash=""}/>;
+ if(!pack)return <main><h1>MASTERHOST</h1><p>{error||"Loading…"}</p></main>;
+ return <main><header><h1>MASTERHOST</h1><p className="muted">{pack.manifest.name} · {pack.manifest.version}</p></header>{error&&<p className="error">{error}</p>}
+ {!world?<section><h2>Quick World</h2><p className="muted">Choose only what matters. The pack resolves the rest.</p>{pack.questions.map((q:any)=><label key={q.id}>{q.label}<select value={choices[q.id]??q.default} onChange={e=>setChoices({...choices,[q.id]:e.target.value})}>{q.options.map((o:any)=><option key={o.value} value={o.value}>{o.label}</option>)}</select></label>)}<button onClick={generate}>Generate world</button></section>
+ :<section><div className="titleRow"><div><h2>{world.name}</h2><p className="muted">Seed <code>{world.seed}</code> · revision {world.revision}</p></div><button className="secondary" onClick={()=>{setWorld(undefined);setReport(undefined)}}>New world</button></div>
+ {report&&<article><h3>Generation report</h3><div className="row"><b>Entities</b><span>{report.entities}</span><small>{Object.entries(report.kinds).map(([k,v])=>`${k}: ${v}`).join(" · ")}</small></div></article>}
+ {world.entities.map((e:any)=><article key={e.id}><h3>{e.kind} <small>{e.materializationPath}</small></h3>{Object.entries(e.values).map(([k,v]:any)=><div className="row" key={k}><b>{k}</b><span>{String(v.value)}</span><small>{v.source}{v.locked?" · LOCKED":""}</small><button className="tiny" onClick={()=>why(e,k)}>Why?</button><button className="tiny" onClick={()=>customize(e,k,v.value)}>Edit + lock</button></div>)}</article>)}
+ <div className="actions"><button onClick={()=>location.hash="gm"}>Start campaign</button><button onClick={preview}>Preview regeneration</button><button onClick={regen}>Snapshot + regenerate</button><button className="secondary" onClick={snapshot}>Create snapshot</button><a className="button secondary" href={`${API}/worlds/${world.id}/export`}>Export .mhworld</a></div>
+ {impact&&<article><h3>Regeneration impact</h3><p>Change {impact.changed} · Create {impact.created} · Remove {impact.removed} · Preserve {impact.preserved} · Locked {impact.blockedByLocks}</p></article>}
+ {explain&&<article><h3>Why?</h3><pre>{JSON.stringify(explain,null,2)}</pre><button className="secondary" onClick={()=>setExplain(undefined)}>Close</button></article>}
+ </section>}</main>
+}
+createRoot(document.getElementById("root")!).render(<App/>);

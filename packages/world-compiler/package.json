@@ -1,0 +1,12 @@
+{
+  "name": "@masterhost/world-compiler",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@masterhost/domain": "workspace:*",
+    "@masterhost/template-engine": "workspace:*",
+    "@masterhost/worldpack-sdk": "workspace:*"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@masterhost/worldpack-sdk",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@masterhost/domain": "workspace:*",
+    "zod": "^4.1.5",
+    "yaml": "^2.8.1"
+  }
+}

@@ -1,0 +1,6 @@
+id: masterhost.cyberpunk-test
+name: Cyberpunk Test
+version: 0.1.0
+schemaVersion: "0.1"
+defaultArtSet: neon
+entryTemplate: world.city

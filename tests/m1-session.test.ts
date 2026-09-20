@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{canTransition}from"@masterhost/domain";
+describe("session lifecycle",()=>{it("allows intended transitions",()=>{expect(canTransition("preparing","lobby")).toBe(true);expect(canTransition("lobby","live")).toBe(true);expect(canTransition("live","finished")).toBe(true)});it("rejects invalid transitions",()=>{expect(canTransition("finished","live")).toBe(false);expect(canTransition("lobby","finished")).toBe(false)})});

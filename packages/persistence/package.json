@@ -1,0 +1,17 @@
+{
+  "name": "@masterhost/persistence",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@masterhost/domain": "workspace:*",
+    "postgres": "^3.4.7",
+    "fflate": "^0.8.2",
+    "@masterhost/game-runtime": "workspace:*"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./export": "./src/export.ts"
+  }
+}

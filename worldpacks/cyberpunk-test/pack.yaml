@@ -1,0 +1,165 @@
+questions:
+  - id: world.corporateControl
+    label: Corporate control
+    type: choice
+    default: high
+    options:
+      - { value: low, label: Low }
+      - { value: high, label: High }
+  - id: world.streetViolence
+    label: Street violence
+    type: choice
+    default: high
+    options:
+      - { value: low, label: Low }
+      - { value: high, label: High }
+  - id: world.technology
+    label: Technology
+    type: choice
+    default: advanced
+    options:
+      - { value: modern, label: Modern }
+      - { value: advanced, label: Advanced }
+      - { value: bleeding-edge, label: Bleeding Edge }
+
+generators:
+  district.count: { type: integer-range, min: 3, max: 5 }
+  district.names:
+    type: values
+    values: [Neon Ward, Chrome Harbor, Sector Nine, Old Grid, Glass Heights]
+  gang.names:
+    type: values
+    values: [Red Static, Black Circuit, Ghost Dogs, Neon Saints]
+  population: { type: integer-range, min: 25000, max: 180000 }
+
+traits:
+  district.violent:
+    id: district.violent
+    when: { eq: [ { descriptor: world.streetViolence }, high ] }
+    addTags: [violent]
+    set: { securityRisk: high }
+
+templates:
+  world.city:
+    kind: city
+    values:
+      name: { value: Neon City }
+      technology: { descriptor: world.technology, default: advanced }
+      corporateControl: { descriptor: world.corporateControl, default: high }
+    components:
+      districts:
+        template: district.standard
+        count: { generator: district.count }
+        parameters:
+          corporateControl: { parent: corporateControl }
+      megacorp:
+        template: faction.megacorp
+        when: { eq: [ { descriptor: world.corporateControl }, high ] }
+
+  district.standard:
+    kind: district
+    parameters:
+      corporateControl: { required: true }
+    traits: [district.violent]
+    values:
+      name: { generator: district.names }
+      population: { generator: population }
+      corporateControl: { param: corporateControl }
+    components:
+      gang:
+        template: faction.gang
+        when: { eq: [ { descriptor: world.streetViolence }, high ] }
+      clinic:
+        template: location.street-clinic
+
+  faction.megacorp:
+    kind: faction
+    tags: [corporate, megacorp]
+    values:
+      name: { value: Helix Dynamics }
+
+  faction.gang:
+    kind: faction
+    tags: [street, gang]
+    values:
+      name: { generator: gang.names }
+
+  location.street-clinic:
+    kind: location
+    tags: [medical, street]
+    values:
+      name: { value: Nightshift Clinic }
+
+relations:
+  - id: gang-rivalry
+    type: hostileTo
+    from: { kind: faction, tags: [gang] }
+    to: { kind: faction, tags: [gang] }
+    mode: chain
+    bidirectional: true
+  - id: corporate-presence
+    type: controlledBy
+    from: { kind: district }
+    to: { kind: faction, tags: [megacorp] }
+    mode: each-to-first
+
+constraints:
+  - id: enough-districts
+    type: entity-count
+    query: { kind: district }
+    min: 3
+  - id: corporate-control
+    type: relation-count
+    relation: controlledBy
+    min: 3
+
+characterCreation:
+  steps:
+    - id: identity
+      title: Identity
+      fields:
+        - { id: name, label: Handle, type: text, required: true }
+    - id: role
+      title: Role
+      fields:
+        - id: role
+          label: Role
+          type: choice
+          required: true
+          options:
+            - { value: solo, label: Solo }
+            - { value: netrunner, label: Netrunner }
+            - { value: fixer, label: Fixer }
+
+checks:
+  intrusion: { label: Intrusion, dice: 2d6, modifierField: interface }
+  awareness: { label: Awareness, dice: 1d20, modifierField: awareness }
+
+resources:
+  health: { label: Health, min: 0, max: 30, default: 20 }
+  humanity: { label: Humanity, min: 0, max: 100, default: 70 }
+  ammo: { label: Ammo, min: 0, max: 30, default: 12 }
+effects:
+  jammed:
+    label: Jammed
+    duration: { type: turns, value: 1 }
+    modifiers: { awareness: -2 }
+  boosted:
+    label: Boosted
+    duration: { type: turns, value: 2 }
+    modifiers: { interface: 2 }
+actions:
+  spend-ammo: { label: Spend Ammo, kind: resource, target: self, resource: ammo, operation: subtract, amount: 1 }
+  damage: { label: Damage, kind: resource, target: actor, resource: health, operation: subtract, amount: 5 }
+  jam: { label: Jam Target, kind: effect, target: actor, effectId: jammed }
+  neural-overload:
+    label: Neural Overload
+    target: single-actor
+    steps:
+      - check: { id: intrusion, against: input.difficulty }
+      - when: { previousOutcome: success }
+        roll: { id: overload, dice: 1d6 }
+      - when: { previousOutcome: success }
+        resource: { target: target, resource: humanity, operation: subtract, value: overload.total }
+encounter:
+  orderingPolicy: none

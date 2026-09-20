@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@masterhost/domain": [
+        "packages/domain/src/index.ts"
+      ],
+      "@masterhost/descriptor": [
+        "packages/descriptor/src/index.ts"
+      ],
+      "@masterhost/template-engine": [
+        "packages/template-engine/src/index.ts"
+      ],
+      "@masterhost/worldpack-sdk": [
+        "packages/worldpack-sdk/src/index.ts"
+      ],
+      "@masterhost/world-compiler": [
+        "packages/world-compiler/src/index.ts"
+      ],
+      "@masterhost/persistence": [
+        "packages/persistence/src/index.ts"
+      ],
+      "@masterhost/game-runtime": [
+        "packages/game-runtime/src/index.ts"
+      ]
+    }
+  }
+}
