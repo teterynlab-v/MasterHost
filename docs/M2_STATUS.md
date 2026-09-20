@@ -9,7 +9,7 @@ M2.2 declarative actions, M2.3 target policies, M2.4 Encounter ordering/turns, a
 - Pack-defined Checks.
 - CheckRequested → DiceRolled → CheckResolved.
 - Character modifiers.
-- Persistent game events; Check request and resolution update their events in transactions. Eight concurrent roll requests return the same saved resolution in the live smoke.
+- Persistent game events; Check request and resolution update their events in transactions. An optional Session-scoped idempotency key stores a Check request response with its event, so concurrent retries return one request. Eight concurrent roll requests return the same saved resolution in the live smoke.
 
 ### Generic Action layer
 - `ActionDefinition` with kinds: check/resource/effect/custom.
@@ -22,7 +22,7 @@ M2.2 declarative actions, M2.3 target policies, M2.4 Encounter ordering/turns, a
 - Action and Encounter commands reject stale actor/Encounter versions with 409 and roll back their events.
 - Pack-defined Encounter ordering; fixed, rolled, attribute, custom, and no-turn policies run through the same commands.
 - PostgreSQL permits only one live Encounter per Session; concurrent starts leave one committed event sequence.
-- Action, Encounter, NPC creation and Actor initialization commands support an optional Session-scoped idempotency key, persisted atomically with their events and result.
+- Action, Encounter, NPC creation, Actor initialization and Check creation commands support an optional Session-scoped idempotency key, persisted atomically with their events and result.
 - GM can instantiate a Session NPC from a Pack actor template. NPC resources and attributes are Pack-defined; NPCs use the same Action and Encounter engine as player actors.
 - GM-only runtime verification reconstructs Actor and Encounter state from version-1 events and compares it with persisted materialized state in one database snapshot.
 
@@ -61,6 +61,6 @@ A later Fantasy browser flow verified adding Goblin, an NPC-sourced action again
 
 ## Next architecture step
 
-1. Add snapshot-based recovery and repair after a verified replay. The current verifier is read-only and replays from the beginning. Extend idempotency receipts to Check creation.
+1. Add snapshot-based recovery and repair after a verified replay. The current verifier is read-only and replays from the beginning.
 2. Link optional NPC/creature actors to materialized World entities and add richer Encounter participant management.
 3. Expand Pack validation and cross-setting runtime conformance.

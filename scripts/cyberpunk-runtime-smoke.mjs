@@ -30,6 +30,12 @@ for (const [name, role] of [["Neon", "solo"], ["Ghost", "netrunner"]]) {
 }
 await valid(`/sessions/${session.id}/state`, { state: "live" }, campaign.gmToken);
 for (const player of players) await valid(`/sessions/${session.id}/participants/${player.id}/initialize`, {}, campaign.gmToken);
+const checkBody = { participantId: players[0].id, checkId: "awareness", difficulty: 10 }, checkKey = randomUUID();
+const checkAttempts = await Promise.all(Array.from({ length: 2 }, () => call(`/sessions/${session.id}/checks`, checkBody, campaign.gmToken, checkKey)));
+assert.deepEqual(checkAttempts.map(result => result.status), [200, 200]);
+assert.deepEqual(checkAttempts[0].data, checkAttempts[1].data);
+const check = checkAttempts[0].data;
+assert.equal((await call(`/sessions/${session.id}/checks`, { ...checkBody, difficulty: 11 }, campaign.gmToken, checkKey)).status, 409);
 const droneKey = randomUUID(), droneBody = { templateId: "drone" };
 const drone = await valid(`/sessions/${session.id}/actors`, droneBody, campaign.gmToken, droneKey);
 assert.deepEqual(await valid(`/sessions/${session.id}/actors`, droneBody, campaign.gmToken, droneKey), drone);
@@ -48,11 +54,13 @@ assert.equal(started.encounter.currentActorId, undefined);
 assert.equal((await call(`/encounters/${started.encounter.id}/advance`, {}, campaign.gmToken)).status, 400);
 await valid(`/encounters/${started.encounter.id}/end`, {}, campaign.gmToken);
 const events = await valid(`/sessions/${session.id}/events`, undefined, campaign.gmToken);
+assert.equal(events.filter(event => event.type === "CheckRequested" && event.payload.id === check.id).length, 1);
 assert.equal(events.filter(event => event.type === "EffectApplied").length, 2);
 assert.ok(events.some(event => event.type === "EncounterStarted"));
 assert.ok(events.some(event => event.type === "EncounterEnded"));
 assert.ok(!events.some(event => event.type === "TurnStarted"));
 assert.deepEqual(await valid(`/sessions/${session.id}/runtime/verify`, undefined, campaign.gmToken), { matching: true, eventCount: events.length, actorIds: [], encounterIds: [], issues: [] });
 await valid(`/sessions/${session.id}/state`, { state: "finished" }, campaign.gmToken);
+assert.deepEqual(await valid(`/sessions/${session.id}/checks`, checkBody, campaign.gmToken, checkKey), check);
 assert.equal((await call(`/sessions/${session.id}/actors`, { templateId: "drone" }, campaign.gmToken)).status, 409);
 console.log("Cyberpunk runtime smoke passed: NPC action, two-target action, no-order encounter and effect events.");

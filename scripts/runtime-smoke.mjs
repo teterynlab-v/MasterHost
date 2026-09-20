@@ -42,7 +42,13 @@ const firstDamage = await valid(`/sessions/${session.id}/actions`, damageBody, c
 assert.deepEqual(await valid(`/sessions/${session.id}/actions`, damageBody, campaign.gmToken, damageKey), firstDamage);
 assert.equal((await call(`/sessions/${session.id}/actions`, { ...damageBody, actionId: "heal" }, campaign.gmToken, damageKey)).status, 409);
 await valid(`/sessions/${session.id}/actions`, { actorId: player.id, targetActorIds: [player.id], actionId: "poison" }, campaign.gmToken);
-const check = await valid(`/sessions/${session.id}/checks`, { participantId: player.id, checkId: "perception", difficulty: 12 }, campaign.gmToken);
+const checkBody = { participantId: player.id, checkId: "perception", difficulty: 12 }, checkKey = randomUUID();
+const repeatedChecks = await Promise.all(Array.from({ length: 2 }, () => call(`/sessions/${session.id}/checks`, checkBody, campaign.gmToken, checkKey)));
+assert.deepEqual(repeatedChecks.map(result => result.status), [200, 200]);
+assert.deepEqual(repeatedChecks[0].data, repeatedChecks[1].data);
+const check = repeatedChecks[0].data;
+assert.deepEqual(await valid(`/sessions/${session.id}/checks`, checkBody, campaign.gmToken, checkKey), check);
+assert.equal((await call(`/sessions/${session.id}/checks`, { ...checkBody, difficulty: 13 }, campaign.gmToken, checkKey)).status, 409);
 assert.equal((await call(`/checks/${check.id}/roll`, {})).status, 403);
 const rolls = await Promise.all(Array.from({ length: 8 }, () => call(`/checks/${check.id}/roll`, {}, player.accessToken)));
 assert.ok(rolls.every(result => result.status === 200));
@@ -134,6 +140,8 @@ assert.equal((await call(`/sessions/${session.id}/runtime/verify`, undefined, pl
 const replayVerification = await valid(`/sessions/${session.id}/runtime/verify`, undefined, campaign.gmToken);
 assert.deepEqual(replayVerification, { matching: true, eventCount: afterParallelEvents.length, actorIds: [], encounterIds: [], issues: [] });
 await valid(`/sessions/${session.id}/state`, { state: "finished" }, campaign.gmToken);
+assert.deepEqual(await valid(`/sessions/${session.id}/checks`, checkBody, campaign.gmToken, checkKey), check);
+assert.equal((await call(`/sessions/${session.id}/checks`, checkBody, campaign.gmToken)).status, 409);
 assert.deepEqual(await valid(`/sessions/${session.id}/actions`, damageBody, campaign.gmToken, damageKey), firstDamage);
 assert.deepEqual(await valid(`/sessions/${session.id}/actors`, goblinBody, campaign.gmToken, goblinKey), goblin);
 assert.deepEqual(await valid(`/sessions/${session.id}/participants/${player.id}/initialize`, {}, campaign.gmToken, playerInitKey), initializedPlayer);
