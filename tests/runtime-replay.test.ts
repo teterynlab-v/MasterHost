@@ -32,4 +32,13 @@ describe("runtime event replay", () => {
     ]);
     expect(replayed.issues).toHaveLength(4);
   });
+
+  it("replays after a checkpoint without mutating the saved state", () => {
+    const initial = { actors: [{ actorId: "actor", resources: { health: 20 }, effects: [] }], encounters: [], lastSequence: 7 };
+    const result = replayRuntimeEvents([{ sequence: 9, schemaVersion: "1", type: "ResourceChanged", payload: { actorId: "actor", resource: "health", before: 20, after: 15 } }], initial);
+    expect(result.issues).toEqual([]);
+    expect(result.actors[0]?.resources.health).toBe(15);
+    expect(initial.actors[0]?.resources.health).toBe(20);
+    expect(replayRuntimeEvents([{ sequence: 7, schemaVersion: "1", type: "ActionResolved", payload: {} }], initial).issues).toHaveLength(1);
+  });
 });

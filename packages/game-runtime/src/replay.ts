@@ -21,11 +21,11 @@ const strings = (value: unknown, field: string): string[] => {
   return value;
 };
 
-export function replayRuntimeEvents(events: ReplayEvent[]): RuntimeReplay {
-  const actors = new Map<string, ActorRuntimeState>();
-  const encounters = new Map<string, Encounter>();
+export function replayRuntimeEvents(events: ReplayEvent[], initial?: { actors: ActorRuntimeState[]; encounters: Encounter[]; lastSequence: number }): RuntimeReplay {
+  const actors = new Map((initial?.actors ?? []).map(actor => [actor.actorId, structuredClone(actor)]));
+  const encounters = new Map((initial?.encounters ?? []).map(encounter => [encounter.id, structuredClone(encounter)]));
   const issues: string[] = [];
-  let previous = 0;
+  let previous = initial?.lastSequence ?? 0;
   for (const event of events) {
     if (!Number.isSafeInteger(event.sequence) || event.sequence <= previous) { issues.push(`event sequence ${event.sequence} is out of order`); continue; }
     previous = event.sequence;

@@ -57,6 +57,10 @@ const checkEvents = await valid(`/sessions/${session.id}/events`, undefined, cam
 assert.equal(checkEvents.filter(event => event.type === "CheckRequested" && event.payload.id === check.id).length, 1);
 assert.equal(checkEvents.filter(event => event.type === "DiceRolled" && event.payload.requestId === check.id).length, 1);
 assert.equal(checkEvents.filter(event => event.type === "CheckResolved" && event.payload.requestId === check.id).length, 1);
+assert.equal((await call(`/sessions/${session.id}/runtime/snapshots`, {})).status, 403);
+const runtimeSnapshot = await valid(`/sessions/${session.id}/runtime/snapshots`, {}, campaign.gmToken);
+assert.ok(runtimeSnapshot.lastSequence > 0);
+assert.deepEqual(await valid(`/sessions/${session.id}/runtime/snapshots`, {}, campaign.gmToken), runtimeSnapshot);
 async function websocketSnapshot(token) {
   return new Promise((resolve, reject) => {
     const socket = new WebSocket(`ws://localhost:8080/ws/sessions/${session.id}`);
@@ -139,6 +143,11 @@ assert.equal(afterParallelEvents.filter(event => event.type === "EffectApplied")
 assert.equal((await call(`/sessions/${session.id}/runtime/verify`, undefined, player.accessToken)).status, 403);
 const replayVerification = await valid(`/sessions/${session.id}/runtime/verify`, undefined, campaign.gmToken);
 assert.deepEqual(replayVerification, { matching: true, eventCount: afterParallelEvents.length, actorIds: [], encounterIds: [], issues: [] });
+const snapshotVerification = await valid(`/sessions/${session.id}/runtime/verify-snapshot`, undefined, campaign.gmToken);
+assert.equal(snapshotVerification.matching, true);
+assert.equal(snapshotVerification.eventCount, replayVerification.eventCount);
+assert.equal(snapshotVerification.snapshotSequence, runtimeSnapshot.lastSequence);
+assert.equal(snapshotVerification.replayedEventCount, afterParallelEvents.length - runtimeSnapshot.eventCount);
 await valid(`/sessions/${session.id}/state`, { state: "finished" }, campaign.gmToken);
 assert.deepEqual(await valid(`/sessions/${session.id}/checks`, checkBody, campaign.gmToken, checkKey), check);
 assert.equal((await call(`/sessions/${session.id}/checks`, checkBody, campaign.gmToken)).status, 409);

@@ -25,6 +25,7 @@ M2.2 declarative actions, M2.3 target policies, M2.4 Encounter ordering/turns, a
 - Action, Encounter, NPC creation, Actor initialization and Check creation commands support an optional Session-scoped idempotency key, persisted atomically with their events and result.
 - GM can instantiate a Session NPC from a Pack actor template. NPC resources and attributes are Pack-defined; NPCs use the same Action and Encounter engine as player actors.
 - GM-only runtime verification reconstructs Actor and Encounter state from version-1 events and compares it with persisted materialized state in one database snapshot.
+- GM can create a checkpoint only after full replay matches materialized state. Checkpoint verification replays subsequent events. An offline command can repair divergent Actor/Encounter rows for a finished Session and records an audit row; see `RUNTIME_RECOVERY_DECISION.md`.
 
 ### Pack examples
 
@@ -61,6 +62,6 @@ A later Fantasy browser flow verified adding Goblin, an NPC-sourced action again
 
 ## Next architecture step
 
-1. Add snapshot-based recovery and repair after a verified replay. The current verifier is read-only and replays from the beginning.
-2. Link optional NPC/creature actors to materialized World entities and add richer Encounter participant management.
-3. Expand Pack validation and cross-setting runtime conformance.
+1. Link optional NPC/creature actors to materialized World entities and add richer Encounter participant management.
+2. Expand Pack validation and cross-setting runtime conformance.
+3. Add multi-node realtime delivery and operational recovery for pending Checks. Current checkpoints cover Actor/Encounter state only; repair requires a finished Session and stopped servers.

@@ -1,12 +1,13 @@
 import Fastify from"fastify";import cors from"@fastify/cors";import{randomUUID}from"node:crypto";import{resolve}from"node:path";import{fileURLToPath}from"node:url";
 import{loadWorldPack,validateWorldPack}from"@masterhost/worldpack-sdk";import{buildDescriptor}from"@masterhost/descriptor";
 import{compileWorld,customizeValue,regenerateWorld,generationReport,explainValue,compareWorlds,scopeSummary,preserveCustomByPath,assertUniqueMaterializationPaths}from"@masterhost/world-compiler";
-import{WorldRepository,exportMhWorldZip,importMhWorldZip}from"@masterhost/persistence";import{registerRuntime}from"./runtime.js";
+import{WorldRepository,exportMhWorldZip,importMhWorldZip,withMigrationLock}from"@masterhost/persistence";import{registerRuntime}from"./runtime.js";
 const app=Fastify({logger:true});await app.register(cors,{origin:true});
 app.addContentTypeParser("application/vnd.masterhost.world+zip",{parseAs:"buffer",bodyLimit:10_000_000},(_req,body,done)=>done(null,body));
 const repositoryRoot=fileURLToPath(new URL("../../../",import.meta.url));
 const pack=await loadWorldPack(resolve(repositoryRoot,process.env.WORLD_PACK_PATH??"worldpacks/classic-fantasy-test"));
-const repo=new WorldRepository(process.env.DATABASE_URL??"postgresql://masterhost:masterhost@localhost:5432/masterhost");await repo.migrate();
+const databaseUrl=process.env.DATABASE_URL??"postgresql://masterhost:masterhost@localhost:5432/masterhost";
+const repo=new WorldRepository(databaseUrl);
 app.masterhostWorldRepository=repo;
 const realmId="00000000-0000-0000-0000-000000000001";
 const must=async(id:string)=>{const w=await repo.get(id);if(!w)throw Object.assign(Error("world not found"),{statusCode:404});return w};
@@ -36,7 +37,7 @@ app.post("/api/worlds/:id/fork",async(req:any)=>{const w=await must(req.params.i
 app.get("/api/worlds/:id/export",async(req:any,reply)=>{const w=await must(req.params.id),bytes=exportMhWorldZip(w);reply.header("content-type","application/vnd.masterhost.world+zip");reply.header("content-disposition",`attachment; filename="${w.name.replace(/[^a-z0-9]+/gi,"-").toLowerCase()}.mhworld"`);return reply.send(Buffer.from(bytes))});
 
 app.masterhostPack=pack;
-await registerRuntime(app,{db:process.env.DATABASE_URL??"postgresql://masterhost:masterhost@localhost:5432/masterhost",realmId});
+await withMigrationLock(databaseUrl,async()=>{await repo.migrate();await registerRuntime(app,{db:databaseUrl,realmId})});
 
 app.setErrorHandler((err,req,reply)=>{req.log.error(err);const error=err instanceof Error?err:new Error(String(err));reply.code((error as Error&{statusCode?:number}).statusCode??400).send({error:"masterhost_error",message:error.message})});
 await app.listen({host:"0.0.0.0",port:Number(process.env.PORT??8080)});
