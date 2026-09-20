@@ -1,4 +1,4 @@
-# M2 Status — generic runtime baseline (2026-09-20)
+# M2 Status — generic runtime baseline (2026-09-21)
 
 M2.2 declarative actions, M2.3 target policies, M2.4 Encounter ordering/turns, and M2.5 effect ticking/expiry are implemented in `packages/game-runtime` and verified with tests plus a live PostgreSQL smoke. New runtime mutations use one transaction for events and materialized state. See `PROJECT_STATUS.md` and `ACTION_RUNTIME_DECISION.md` for limits.
 
@@ -9,7 +9,7 @@ M2.2 declarative actions, M2.3 target policies, M2.4 Encounter ordering/turns, a
 - Pack-defined Checks.
 - CheckRequested → DiceRolled → CheckResolved.
 - Character modifiers.
-- Persistent game events.
+- Persistent game events; Check request and resolution update their events in transactions. Eight concurrent roll requests return the same saved resolution in the live smoke.
 
 ### Generic Action layer
 - `ActionDefinition` with kinds: check/resource/effect/custom.
@@ -44,8 +44,6 @@ Same runtime engine handles both settings.
 
 ## Next architecture step
 
-1. Add authenticated participant commands and private reads.
-2. Add concurrency control and event replay from snapshots.
-3. Complete Encounter and multiple-target UI for GM and Player.
-4. Move the older Check request/roll path into the same transaction boundary.
-5. Expand Pack validation and cross-setting runtime conformance.
+1. Add concurrency control for action and encounter commands, then event replay from snapshots.
+2. Complete Encounter and multiple-target UI for GM and Player.
+3. Expand Pack validation and cross-setting runtime conformance.

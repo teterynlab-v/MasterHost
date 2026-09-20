@@ -2,13 +2,13 @@ import React,{useEffect,useState}from"react";
 import{sessionSocket}from"./session-client.js";
 const API=(import.meta as any).env?.VITE_API_URL??"http://localhost:8080/api";
 async function call(path:string,init?:RequestInit){const r=await fetch(`${API}${path}`,init),x=await r.json();if(!r.ok)throw Error(x.message??`HTTP ${r.status}`);return x}
-const post=(p:string,b:any={})=>call(p,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(b)});
+const post=(p:string,b:any={},token:string)=>call(p,{method:"POST",headers:{"content-type":"application/json",authorization:`Bearer ${token}`},body:JSON.stringify(b)});
 const gmPost=(p:string,b:any,gmToken:string)=>call(p,{method:"POST",headers:{"content-type":"application/json",authorization:`Bearer ${gmToken}`},body:JSON.stringify(b)});
 export function GmGame({session,participants,gmToken}:{session:any;participants:any[];gmToken:string}){
  const[defs,setDefs]=useState<any>({checks:{},actions:{}}),[participantId,setParticipant]=useState(""),[targetId,setTarget]=useState(""),[checkId,setCheck]=useState(""),[difficulty,setDifficulty]=useState(14),[events,setEvents]=useState<any[]>([]),[actors,setActors]=useState<any[]>([]),[actionId,setAction]=useState("");
- const refresh=async()=>{setEvents(await call(`/sessions/${session.id}/events`));setActors(await call(`/sessions/${session.id}/actors`))};
+ const refresh=async()=>{setEvents(await call(`/sessions/${session.id}/events`,{headers:{authorization:`Bearer ${gmToken}`}}));setActors(await call(`/sessions/${session.id}/actors`,{headers:{authorization:`Bearer ${gmToken}`}}))};
  useEffect(()=>{call("/game/definitions").then(x=>{setDefs(x);setCheck(Object.keys(x.checks)[0]??"");setAction(Object.keys(x.actions)[0]??"")});refresh()},[session.id]);
- useEffect(()=>{const ws=sessionSocket(session.id,e=>{if(["check.requested","check.resolved","actor.state","action.resolved","encounter.state"].includes(e.type))void refresh()});return()=>ws.close()},[session.id]);
+ useEffect(()=>{const ws=sessionSocket(session.id,gmToken,e=>{if(["check.requested","check.resolved","actor.state","action.resolved","encounter.state"].includes(e.type))void refresh()});return()=>ws.close()},[session.id]);
  useEffect(()=>{if(!participantId&&participants[0])setParticipant(participants[0].id);if(!targetId&&participants[0])setTarget(participants[0].id)},[participants]);
  async function initialize(){for(const p of participants)if(!actors.some(a=>a.actorId===p.id))await gmPost(`/sessions/${session.id}/participants/${p.id}/initialize`,{},gmToken);await refresh()}
  async function sendCheck(){await gmPost(`/sessions/${session.id}/checks`,{participantId,checkId,difficulty,visibility:"full"},gmToken);await refresh()}
@@ -20,10 +20,10 @@ export function GmGame({session,participants,gmToken}:{session:any;participants:
 }
 export function PlayerGame({session,participant}:{session:any;participant:any}){
  const[pending,setPending]=useState<any[]>([]),[last,setLast]=useState<any>(),[actor,setActor]=useState<any>();
- async function refresh(){setPending(await call(`/sessions/${session.id}/participants/${participant.id}/checks`));const a=await call(`/sessions/${session.id}/actors`);setActor(a.find((x:any)=>x.actorId===participant.id))}
+ async function refresh(){setPending(await call(`/sessions/${session.id}/participants/${participant.id}/checks`,{headers:{authorization:`Bearer ${participant.accessToken}`}}));const a=await call(`/sessions/${session.id}/actors`,{headers:{authorization:`Bearer ${participant.accessToken}`}});setActor(a.find((x:any)=>x.actorId===participant.id))}
  useEffect(()=>{refresh()},[session.id,participant.id]);
- useEffect(()=>{const ws=sessionSocket(session.id,e=>{if(["check.requested","check.resolved","actor.state","action.resolved","encounter.state"].includes(e.type))void refresh()});return()=>ws.close()},[session.id,participant.id]);
- async function roll(c:any){const r=await post(`/checks/${c.request.id}/roll`);setLast({request:c.request,resolution:r});await refresh()}
+ useEffect(()=>{const ws=sessionSocket(session.id,participant.accessToken,e=>{if(["check.requested","check.resolved","actor.state","action.resolved","encounter.state"].includes(e.type))void refresh()});return()=>ws.close()},[session.id,participant.id]);
+ async function roll(c:any){const r=await post(`/checks/${c.request.id}/roll`,{},participant.accessToken);setLast({request:c.request,resolution:r});await refresh()}
  const current=pending.find(x=>!x.resolution);
  return <section><h2>GAME LIVE</h2>{actor&&<article><h3>Resources</h3>{Object.entries(actor.resources).map(([k,v])=><div className="row" key={k}><b>{k}</b><span>{String(v)}</span></div>)}{actor.effects?.map((e:any)=><small key={e.id}>{e.definitionId}{e.remaining!==undefined?` · ${e.remaining} turns`:""}</small>)}</article>}{current?<article><h3>{current.request.checkId.toUpperCase()}</h3><p>Difficulty: <b>{current.request.difficulty}</b></p><button onClick={()=>roll(current)}>🎲 ROLL</button></article>:<p className="muted">Waiting for the GM…</p>}{last&&<article><h3>{last.resolution.outcome.toUpperCase()}</h3><div className="bigRoll">{last.resolution.total}</div><p>Dice {last.resolution.roll.total} + modifier {last.resolution.modifier}</p></article>}<button className="secondary" onClick={refresh}>Refresh state</button></section>
 }
