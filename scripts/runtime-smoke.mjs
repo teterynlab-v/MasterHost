@@ -2,11 +2,11 @@ import assert from "node:assert/strict";
 import { randomUUID } from "node:crypto";
 
 const base = process.env.MASTERHOST_API_URL ?? "http://localhost:8080/api";
-async function call(path, body, token) {
-  const response = await fetch(`${base}${path}`, { method: body === undefined ? "GET" : "POST", headers: { ...(body === undefined ? {} : { "content-type": "application/json" }), ...(token ? { authorization: `Bearer ${token}` } : {}) }, body: body === undefined ? undefined : JSON.stringify(body) });
+async function call(path, body, token, key) {
+  const response = await fetch(`${base}${path}`, { method: body === undefined ? "GET" : "POST", headers: { ...(body === undefined ? {} : { "content-type": "application/json" }), ...(token ? { authorization: `Bearer ${token}` } : {}), ...(key ? { "idempotency-key": key } : {}) }, body: body === undefined ? undefined : JSON.stringify(body) });
   return { status: response.status, data: await response.json() };
 }
-const valid = async (path, body, token) => { const result = await call(path, body, token); assert.ok(result.status >= 200 && result.status < 300, `${path}: ${result.status} ${JSON.stringify(result.data)}`); return result.data; };
+const valid = async (path, body, token, key) => { const result = await call(path, body, token, key); assert.ok(result.status >= 200 && result.status < 300, `${path}: ${result.status} ${JSON.stringify(result.data)}`); return result.data; };
 
 const pack = await valid("/pack");
 assert.equal(pack.manifest.id, "masterhost.classic-fantasy-test");
@@ -34,7 +34,11 @@ await valid(`/sessions/${session.id}/state`, { state: "live" }, campaign.gmToken
 assert.equal((await call("/join/resolve", { pin: session.pin })).status, 200);
 await valid(`/sessions/${session.id}/participants/${player.id}/initialize`, {}, campaign.gmToken);
 assert.equal((await call(`/sessions/${session.id}/actions`, { actorId: player.id, targetActorIds: [randomUUID()], actionId: "take-damage" }, campaign.gmToken)).status, 400);
-await valid(`/sessions/${session.id}/actions`, { actorId: player.id, targetActorIds: [player.id], actionId: "take-damage" }, campaign.gmToken);
+const damageBody = { actorId: player.id, targetActorIds: [player.id], actionId: "take-damage" }, damageKey = randomUUID();
+assert.equal((await call(`/sessions/${session.id}/actions`, damageBody, campaign.gmToken, "invalid key")).status, 400);
+const firstDamage = await valid(`/sessions/${session.id}/actions`, damageBody, campaign.gmToken, damageKey);
+assert.deepEqual(await valid(`/sessions/${session.id}/actions`, damageBody, campaign.gmToken, damageKey), firstDamage);
+assert.equal((await call(`/sessions/${session.id}/actions`, { ...damageBody, actionId: "heal" }, campaign.gmToken, damageKey)).status, 409);
 await valid(`/sessions/${session.id}/actions`, { actorId: player.id, targetActorIds: [player.id], actionId: "poison" }, campaign.gmToken);
 const check = await valid(`/sessions/${session.id}/checks`, { participantId: player.id, checkId: "perception", difficulty: 12 }, campaign.gmToken);
 assert.equal((await call(`/checks/${check.id}/roll`, {})).status, 403);
@@ -87,7 +91,10 @@ assert.deepEqual(competingStarts.map(result => result.status).sort(), [200, 409]
 const encounter = competingStarts.find(result => result.status === 200).data;
 assert.equal(encounter.encounter.orderingPolicy, "fixed");
 assert.equal((await call(`/sessions/${session.id}/encounters`, { participantIds: [goblin.actorId] }, campaign.gmToken)).status, 409);
-for (let i = 0; i < 3; i++) await valid(`/encounters/${encounter.encounter.id}/advance`, {}, campaign.gmToken);
+const turnKey = randomUUID();
+const firstTurn = await valid(`/encounters/${encounter.encounter.id}/advance`, {}, campaign.gmToken, turnKey);
+assert.deepEqual(await valid(`/encounters/${encounter.encounter.id}/advance`, {}, campaign.gmToken, turnKey), firstTurn);
+for (let i = 0; i < 2; i++) await valid(`/encounters/${encounter.encounter.id}/advance`, {}, campaign.gmToken);
 const after = await valid(`/sessions/${session.id}/actors`, undefined, player.accessToken);
 assert.equal(after.find(actor => actor.actorId === player.id).effects.length, 0);
 const events = await valid(`/sessions/${session.id}/events`, undefined, campaign.gmToken);
@@ -97,9 +104,18 @@ const parallelAdvance = await Promise.all(Array.from({ length: 2 }, () => call(`
 assert.ok(parallelAdvance.every(result => result.status === 200 || result.status === 409));
 const afterAdvance = (await valid(`/sessions/${session.id}/encounters`, undefined, campaign.gmToken)).find(value => value.id === encounter.encounter.id);
 assert.equal(afterAdvance.turn - beforeAdvance.turn, parallelAdvance.filter(result => result.status === 200).length);
-await valid(`/encounters/${encounter.encounter.id}/end`, {}, campaign.gmToken);
-const nextEncounter = await valid(`/sessions/${session.id}/encounters`, { participantIds: [goblin.actorId] }, campaign.gmToken);
+const endKey = randomUUID(), ended = await valid(`/encounters/${encounter.encounter.id}/end`, {}, campaign.gmToken, endKey);
+assert.deepEqual(await valid(`/encounters/${encounter.encounter.id}/end`, {}, campaign.gmToken, endKey), ended);
+const nextKey = randomUUID(), nextBody = { participantIds: [goblin.actorId] };
+const repeatedStarts = await Promise.all(Array.from({ length: 2 }, () => call(`/sessions/${session.id}/encounters`, nextBody, campaign.gmToken, nextKey)));
+assert.deepEqual(repeatedStarts.map(result => result.status), [200, 200]);
+assert.deepEqual(repeatedStarts[0].data, repeatedStarts[1].data);
+const nextEncounter = repeatedStarts[0].data;
 await valid(`/encounters/${nextEncounter.encounter.id}/end`, {}, campaign.gmToken);
+const poisonBody = { actorId: player.id, targetActorIds: [player.id], actionId: "poison" }, poisonKey = randomUUID();
+const repeatedActions = await Promise.all(Array.from({ length: 2 }, () => call(`/sessions/${session.id}/actions`, poisonBody, campaign.gmToken, poisonKey)));
+assert.deepEqual(repeatedActions.map(result => result.status), [200, 200]);
+assert.deepEqual(repeatedActions[0].data, repeatedActions[1].data);
 const beforeParallel = await valid(`/sessions/${session.id}/actors`, undefined, campaign.gmToken);
 const parallel = await Promise.all(Array.from({ length: 12 }, () => call(`/sessions/${session.id}/actions`, { actorId: player.id, targetActorIds: [player.id], actionId: "poison" }, campaign.gmToken)));
 assert.ok(parallel.every(result => result.status === 200 || result.status === 409));
@@ -107,11 +123,12 @@ const accepted = parallel.filter(result => result.status === 200).length;
 const afterParallel = await valid(`/sessions/${session.id}/actors`, undefined, campaign.gmToken);
 assert.equal(afterParallel.find(actor => actor.actorId === player.id).effects.length, beforeParallel.find(actor => actor.actorId === player.id).effects.length + accepted);
 const afterParallelEvents = await valid(`/sessions/${session.id}/events`, undefined, campaign.gmToken);
-assert.equal(afterParallelEvents.filter(event => event.type === "EffectApplied").length, events.filter(event => event.type === "EffectApplied").length + accepted);
+assert.equal(afterParallelEvents.filter(event => event.type === "EffectApplied").length, events.filter(event => event.type === "EffectApplied").length + 1 + accepted);
 assert.equal((await call(`/sessions/${session.id}/runtime/verify`, undefined, player.accessToken)).status, 403);
 const replayVerification = await valid(`/sessions/${session.id}/runtime/verify`, undefined, campaign.gmToken);
 assert.deepEqual(replayVerification, { matching: true, eventCount: afterParallelEvents.length, actorIds: [], encounterIds: [], issues: [] });
 await valid(`/sessions/${session.id}/state`, { state: "finished" }, campaign.gmToken);
+assert.deepEqual(await valid(`/sessions/${session.id}/actions`, damageBody, campaign.gmToken, damageKey), firstDamage);
 assert.equal((await call(`/sessions/${session.id}/actors`, { templateId: "goblin" }, campaign.gmToken)).status, 409);
 assert.equal((await call("/join/resolve", { pin: session.pin })).status, 404);
 console.log(`Runtime smoke passed: PIN, participant and GM authorization, concurrent Check roll, Action commands (${accepted} accepted, ${12 - accepted} conflicts), encounter, effect lifecycle, expiry.`);

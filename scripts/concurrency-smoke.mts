@@ -13,6 +13,7 @@ try {
   await game.migrate();
   await actors.migrate();
   await encounters.migrate();
+  await mutations.migrate();
   const initial = { actorId, resources: { health: 20 }, effects: [] };
   await mutations.commit(sessionId, [{ type: "ActorInitialized", payload: { ...initial } }], [initial]);
   assert.equal((await replay.verify(sessionId)).matching, true);
@@ -32,6 +33,12 @@ try {
   const current = (await actors.allVersioned(sessionId))[0];
   assert.equal(current.version, firstVersion + 1);
   assert.equal(current.state.resources.health, damageEvents[0].type === "DamageA" ? 15 : 12);
+  const staleKey = randomUUID();
+  await assert.rejects(
+    mutations.commit(sessionId, [{ type: "StaleDamage", payload: { actorId } }], [{ ...current.state, resources: { health: 99 } }], undefined, { actorVersions: { [actorId]: firstVersion } }, { key: staleKey, fingerprint: "stale-request", result: { ok: true } }),
+    isConflict,
+  );
+  assert.equal(await mutations.receipt(sessionId, staleKey, "stale-request"), undefined);
 
   const started = startEncounter({ sessionId, participantIds: [actorId], policy: "fixed" });
   await mutations.commit(sessionId, started.events, [], started.encounter);
@@ -54,6 +61,7 @@ try {
   console.log("Concurrency smoke passed: stale writes rolled back and replay detected/restored a materialized-state mismatch.");
 } finally {
   await sql`delete from game_events where session_id=${sessionId}`;
+  await sql`delete from runtime_command_receipts where session_id=${sessionId}`;
   await sql`delete from encounters where session_id=${sessionId}`;
   await sql`delete from actor_runtime_state where session_id=${sessionId}`;
   await Promise.all([sql.end(), actors.close(), encounters.close(), game.close(), mutations.close(), replay.close()]);

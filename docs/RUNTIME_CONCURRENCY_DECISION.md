@@ -10,6 +10,8 @@ Actor and Encounter rows carry monotonically increasing database versions. The s
 
 A partial unique index now permits at most one live Encounter per Session. Competing starts return one success and one 409, with no events from the rejected start. An ended Encounter releases the slot. Migration checks for pre-existing duplicates and stops with an explicit error instead of choosing an Encounter to end without an event.
 
+Action and Encounter start/advance/end accept an optional `Idempotency-Key` header (1–128 letters, digits, `.`, `_`, `:`, or `-`). The key is scoped to the Session. PostgreSQL stores its request fingerprint and successful response in the same transaction as state and events. A repeat with the same route and JSON body receives the original response, including when concurrent requests race. Reusing the key for different input returns 409. A failed transaction leaves no receipt. Commands without the header retain the version-conflict behavior above. Actor initialization, NPC creation, and Check creation do not yet use this receipt mechanism; Check rolling already returns its saved resolution.
+
 The pure Action and Encounter functions remain in `packages/game-runtime`; the concurrency rule lives in persistence. This works across server processes sharing PostgreSQL and does not require an in-memory mutex.
 
 ## Alternatives considered
@@ -20,4 +22,4 @@ The pure Action and Encounter functions remain in `packages/game-runtime`; the c
 
 ## Compatibility and limits
 
-Existing rows receive version 1 during migration. The state JSON and HTTP response shapes are unchanged. A client may now receive 409 for overlapping commands and should refresh before retrying; the server does not silently reroll. Standalone Check resolution has its own row lock and transaction. Full event replay, command idempotency keys, and concurrency with unrelated World authoring remain separate work.
+Existing rows receive version 1 during migration. The state JSON and HTTP response shapes are unchanged. A client may now receive 409 for overlapping commands without a shared idempotency key and should refresh before retrying; the server does not silently reroll. Standalone Check resolution has its own row lock and transaction. Snapshot-based recovery, idempotency for the remaining commands, and concurrency with unrelated World authoring remain separate work.

@@ -1,9 +1,9 @@
 import type{FastifyInstance}from"fastify";import websocket from"@fastify/websocket";import{RuntimeRepository,GameRepository,ActorStateRepository,EncounterRepository,RuntimeMutationRepository,RuntimeReplayRepository}from"@masterhost/persistence";import type{WorldRepository}from"@masterhost/persistence";import{newCheckRequest,resolveCheck,initializeResources,effectiveModifier,executeAction,startEncounter,advanceEncounter,endEncounter}from"@masterhost/game-runtime";import type{CheckDefinition,ResourceDefinition,EffectDefinition}from"@masterhost/game-runtime";import{validateCharacterValues}from"@masterhost/worldpack-sdk";import type{LoadedWorldPack}from"@masterhost/worldpack-sdk";
-import{randomUUID}from"node:crypto";
+import{createHash,randomUUID}from"node:crypto";
 declare module "fastify" { interface FastifyInstance { masterhostPack?: LoadedWorldPack; masterhostWorldRepository?: WorldRepository } }
 export async function registerRuntime(app:FastifyInstance,x:{db:string;realmId:string}){
  const pack=app.masterhostPack,worldRepository=app.masterhostWorldRepository;if(!pack||!worldRepository)throw Error("MasterHost dependencies unavailable");
- const repo=new RuntimeRepository(x.db),game=new GameRepository(x.db),actors=new ActorStateRepository(x.db),encounters=new EncounterRepository(x.db),mutations=new RuntimeMutationRepository(x.db),replay=new RuntimeReplayRepository(x.db);await game.migrate();await actors.migrate();await encounters.migrate();await repo.migrate();await repo.ensureRealm(x.realmId);await app.register(websocket);
+ const repo=new RuntimeRepository(x.db),game=new GameRepository(x.db),actors=new ActorStateRepository(x.db),encounters=new EncounterRepository(x.db),mutations=new RuntimeMutationRepository(x.db),replay=new RuntimeReplayRepository(x.db);await game.migrate();await actors.migrate();await encounters.migrate();await mutations.migrate();await repo.migrate();await repo.ensureRealm(x.realmId);await app.register(websocket);
  const sockets=new Map<string,Set<{socket:any;participantId?:string;gm:boolean}>>();
  const snapshot=async(id:string)=>({session:await repo.session(id),participants:await repo.participants(id)});
  const broadcast=async(id:string,type:string,payload:any,participantId?:string)=>{const msg=JSON.stringify({type,sessionId:id,payload,at:new Date().toISOString()});for(const client of sockets.get(id)??[])if(client.socket.readyState===1&&(!participantId||client.gm||client.participantId===participantId))client.socket.send(msg)};
@@ -12,6 +12,7 @@ export async function registerRuntime(app:FastifyInstance,x:{db:string;realmId:s
  const requireSessionGm=async(req:any,id:string)=>{if(!await repo.verifySessionGm(id,token(req)))throw Object.assign(Error("GM authorization required"),{statusCode:403})};
  const requireParticipant=async(req:any,id:string)=>{if(!await repo.verifyParticipant(id,token(req)))throw Object.assign(Error("participant authorization required"),{statusCode:403})};
  const requireSessionMember=async(req:any,id:string)=>{if(!await repo.verifySessionGm(id,token(req))&&!await repo.sessionMember(id,token(req)))throw Object.assign(Error("session authorization required"),{statusCode:403})};
+ const idempotency=async(req:any,sessionId:string)=>{const raw=req.headers["idempotency-key"];if(raw===undefined)return undefined;if(typeof raw!=="string"||!(/^[A-Za-z0-9._:-]{1,128}$/).test(raw))throw Object.assign(Error("invalid Idempotency-Key"),{statusCode:400});const fingerprint=createHash("sha256").update(`${req.method}\0${req.url}\0${JSON.stringify(req.body??{})}`).digest("hex");const prior=await mutations.receipt(sessionId,raw,fingerprint);return{key:raw,fingerprint,prior}};
  app.post("/api/campaigns",async(req:any)=>{const world=await worldRepository.get(req.body?.worldId);if(!world||world.realmId!==x.realmId)throw Object.assign(Error("world not found in Realm"),{statusCode:404});return repo.createCampaign({realmId:x.realmId,worldId:world.id,name:req.body.name??"New Campaign"})});
  app.get("/api/campaigns/:id",async(req:any)=>repo.campaign(req.params.id));
  app.post("/api/campaigns/:id/sessions",async(req:any)=>{const c=await repo.campaign(req.params.id);if(!c||c.realmId!==x.realmId)throw Object.assign(Error("campaign not found"),{statusCode:404});await requireCampaignGm(req,c.id);return repo.startLobby({realmId:x.realmId,campaignId:c.id,gmId:req.body?.gmId})});
@@ -35,6 +36,7 @@ export async function registerRuntime(app:FastifyInstance,x:{db:string;realmId:s
  app.post("/api/sessions/:id/participants/:participantId/initialize",async(req:any)=>{await requireSessionGm(req,req.params.id);const p=await repo.participant(req.params.participantId);if(!p?.characterId||p.sessionId!==req.params.id)throw Object.assign(Error("participant has no character in session"),{statusCode:409});const c=await repo.character(p.characterId),defs=Object.fromEntries(Object.entries(pack.content.resources??{}).map(([id,value])=>[id,{id,...value}])) as Record<string,ResourceDefinition>,state={actorId:p.id,resources:initializeResources(defs,c?.values??{}),effects:[]};await mutations.commit(req.params.id,[{type:"ActorInitialized",payload:{...state}}],[state]);await broadcast(req.params.id,"actor.state",state);return state});
  app.post("/api/sessions/:id/actions",async(req:any)=>{
   await requireSessionGm(req,req.params.id);
+  const idem=await idempotency(req,req.params.id);if(idem?.prior!==undefined)return idem.prior;
   const session=await repo.session(req.params.id);if(!session||session.state!=="live")throw Object.assign(Error("session is not live"),{statusCode:409});
   const defs=pack.content,action=defs.actions?.[req.body?.actionId];if(!action)throw Object.assign(Error("unknown action"),{statusCode:400});
   const actorId=String(req.body?.actorId??""),targetActorIds=Array.isArray(req.body?.targetActorIds)?req.body.targetActorIds:req.body?.targetActorId?[req.body.targetActorId]:[];
@@ -44,7 +46,8 @@ export async function registerRuntime(app:FastifyInstance,x:{db:string;realmId:s
   const resources=Object.fromEntries(Object.entries(defs.resources??{}).map(([id,value])=>[id,{id,...value as object}])) as Record<string,ResourceDefinition>;
   const effects=Object.fromEntries(Object.entries(defs.effects??{}).map(([id,value])=>[id,{id,...value as object}])) as Record<string,EffectDefinition>;
   const result=executeAction({action:{id:req.body.actionId,...action},request:{sessionId:session.id,actionId:req.body.actionId,actorId,targetActorIds,inputs:req.body?.inputs},actors:actorMap,checks,resources,effects,characterValues});
-  await mutations.commit(session.id,result.events,result.states,undefined,{actorVersions});
+  const receipt=await mutations.commit(session.id,result.events,result.states,undefined,{actorVersions},idem?{key:idem.key,fingerprint:idem.fingerprint,result}:undefined);
+  if(receipt.replayed)return receipt.result;
   for(const state of result.states)await broadcast(session.id,"actor.state",state);
   await broadcast(session.id,"action.resolved",result.events.at(-1)?.payload);return result;
  });
@@ -59,23 +62,24 @@ export async function registerRuntime(app:FastifyInstance,x:{db:string;realmId:s
  app.get("/api/sessions/:id/encounters",async(req:any)=>{await requireSessionMember(req,req.params.id);return encounters.forSession(req.params.id)});
  app.post("/api/sessions/:id/encounters",async(req:any)=>{
   await requireSessionGm(req,req.params.id);
+  const idem=await idempotency(req,req.params.id);if(idem?.prior!==undefined)return idem.prior;
   const session=await repo.session(req.params.id);if(!session||session.state!=="live")throw Object.assign(Error("session is not live"),{statusCode:409});
   const states=await actors.all(session.id),available=new Set(states.map(state=>state.actorId)),ids=req.body?.participantIds;
   if(!Array.isArray(ids)||ids.some(id=>typeof id!=="string"||!available.has(id)))throw Object.assign(Error("encounter participants must be initialized session actors"),{statusCode:400});
   const config=pack.content.encounter??{orderingPolicy:"none"};
   const attributes:Record<string,number>={};if(config.orderingPolicy==="attribute"){if(!config.attributeField)throw Error("encounter attribute field missing in Pack");for(const id of ids){const actor=states.find(state=>state.actorId===id);if(actor?.kind==="npc"){attributes[id]=Number(actor.attributes?.[config.attributeField]??NaN);continue}const participant=await repo.participant(id),character=participant?.characterId?await repo.character(participant.characterId):null;attributes[id]=Number(character?.values?.[config.attributeField]??NaN)}}
   const result=startEncounter({sessionId:session.id,participantIds:ids,policy:config.orderingPolicy,attributes,customOrder:req.body?.customOrder});
-  await mutations.commit(session.id,result.events,[],result.encounter);await broadcast(session.id,"encounter.state",result.encounter);return result;
+  const receipt=await mutations.commit(session.id,result.events,[],result.encounter,{},idem?{key:idem.key,fingerprint:idem.fingerprint,result}:undefined);if(receipt.replayed)return receipt.result;await broadcast(session.id,"encounter.state",result.encounter);return result;
  });
  app.post("/api/encounters/:id/advance",async(req:any)=>{
   const current=await encounters.getVersioned(req.params.id);if(!current)throw Object.assign(Error("encounter not found"),{statusCode:404});
-  const encounter=current.encounter;await requireSessionGm(req,encounter.sessionId);
+  const encounter=current.encounter;await requireSessionGm(req,encounter.sessionId);const idem=await idempotency(req,encounter.sessionId);if(idem?.prior!==undefined)return idem.prior;
   const versioned=await actors.allVersioned(encounter.sessionId),states=versioned.map(row=>row.state),actorVersions=Object.fromEntries(versioned.map(row=>[row.state.actorId,row.version])),defs=pack.content.effects??{};
   const effects=Object.fromEntries(Object.entries(defs).map(([id,value])=>[id,{id,...value as object}])) as Record<string,EffectDefinition>;
   const result=advanceEncounter(encounter,Object.fromEntries(states.map(state=>[state.actorId,state])),effects);
-  await mutations.commit(encounter.sessionId,result.events,result.states,result.encounter,{actorVersions,encounterVersion:current.version});await broadcast(encounter.sessionId,"encounter.state",result.encounter);return result;
+  const receipt=await mutations.commit(encounter.sessionId,result.events,result.states,result.encounter,{actorVersions,encounterVersion:current.version},idem?{key:idem.key,fingerprint:idem.fingerprint,result}:undefined);if(receipt.replayed)return receipt.result;await broadcast(encounter.sessionId,"encounter.state",result.encounter);return result;
  });
- app.post("/api/encounters/:id/end",async(req:any)=>{const current=await encounters.getVersioned(req.params.id);if(!current)throw Object.assign(Error("encounter not found"),{statusCode:404});const encounter=current.encounter;await requireSessionGm(req,encounter.sessionId);const result=endEncounter(encounter);await mutations.commit(encounter.sessionId,result.events,[],result.encounter,{encounterVersion:current.version});await broadcast(encounter.sessionId,"encounter.state",result.encounter);return result});
+ app.post("/api/encounters/:id/end",async(req:any)=>{const current=await encounters.getVersioned(req.params.id);if(!current)throw Object.assign(Error("encounter not found"),{statusCode:404});const encounter=current.encounter;await requireSessionGm(req,encounter.sessionId);const idem=await idempotency(req,encounter.sessionId);if(idem?.prior!==undefined)return idem.prior;const result=endEncounter(encounter);const receipt=await mutations.commit(encounter.sessionId,result.events,[],result.encounter,{encounterVersion:current.version},idem?{key:idem.key,fingerprint:idem.fingerprint,result}:undefined);if(receipt.replayed)return receipt.result;await broadcast(encounter.sessionId,"encounter.state",result.encounter);return result});
 
  app.get("/ws/sessions/:id",{websocket:true},(socket:any,req:any)=>{const id=req.params.id;let client:{socket:any;participantId?:string;gm:boolean}|undefined;const timer=setTimeout(()=>socket.close(1008,"authentication timeout"),5000);socket.on("message",async(raw:Buffer)=>{if(client)return;try{const message=JSON.parse(raw.toString()),credential=String(message?.token??"");if(message?.type!=="authenticate"||!credential){socket.close(1008,"authorization required");return}const gm=await repo.verifySessionGm(id,credential),member=gm?null:await repo.sessionMember(id,credential);if(!gm&&!member){socket.close(1008,"authorization required");return}clearTimeout(timer);client={socket,gm,participantId:member?.id};let set=sockets.get(id);if(!set)sockets.set(id,set=new Set());set.add(client);socket.send(JSON.stringify({type:"session.snapshot",sessionId:id,payload:await snapshot(id),at:new Date().toISOString()}))}catch{socket.close(1008,"invalid authentication")}});socket.on("close",()=>{clearTimeout(timer);const set=sockets.get(id);if(client)set?.delete(client);if(set&&!set.size)sockets.delete(id)})});
 }

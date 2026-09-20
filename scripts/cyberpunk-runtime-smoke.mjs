@@ -2,12 +2,12 @@ import assert from "node:assert/strict";
 import { randomUUID } from "node:crypto";
 
 const base = process.env.MASTERHOST_API_URL ?? "http://localhost:8080/api";
-async function call(path, body, token) {
-  const response = await fetch(`${base}${path}`, { method: body === undefined ? "GET" : "POST", headers: { ...(body === undefined ? {} : { "content-type": "application/json" }), ...(token ? { authorization: `Bearer ${token}` } : {}) }, body: body === undefined ? undefined : JSON.stringify(body) });
+async function call(path, body, token, key) {
+  const response = await fetch(`${base}${path}`, { method: body === undefined ? "GET" : "POST", headers: { ...(body === undefined ? {} : { "content-type": "application/json" }), ...(token ? { authorization: `Bearer ${token}` } : {}), ...(key ? { "idempotency-key": key } : {}) }, body: body === undefined ? undefined : JSON.stringify(body) });
   return { status: response.status, data: await response.json() };
 }
-async function valid(path, body, token) {
-  const result = await call(path, body, token);
+async function valid(path, body, token, key) {
+  const result = await call(path, body, token, key);
   assert.ok(result.status >= 200 && result.status < 300, `${path}: ${result.status} ${JSON.stringify(result.data)}`);
   return result.data;
 }
@@ -34,7 +34,9 @@ const drone = await valid(`/sessions/${session.id}/actors`, { templateId: "drone
 assert.equal(drone.kind, "npc");
 assert.equal(drone.resources.ammo, 8);
 await valid(`/sessions/${session.id}/actions`, { actorId: drone.actorId, targetActorIds: [players[0].id], actionId: "damage" }, campaign.gmToken);
-await valid(`/sessions/${session.id}/actions`, { actorId: players[0].id, targetActorIds: [players[0].id, drone.actorId], actionId: "signal-boost" }, campaign.gmToken);
+const signalBody = { actorId: players[0].id, targetActorIds: [players[0].id, drone.actorId], actionId: "signal-boost" }, signalKey = randomUUID();
+const signalResult = await valid(`/sessions/${session.id}/actions`, signalBody, campaign.gmToken, signalKey);
+assert.deepEqual(await valid(`/sessions/${session.id}/actions`, signalBody, campaign.gmToken, signalKey), signalResult);
 const actors = await valid(`/sessions/${session.id}/actors`, undefined, players[0].accessToken);
 for (const id of [players[0].id, drone.actorId]) assert.ok(actors.find(actor => actor.actorId === id).effects.some(effect => effect.definitionId === "boosted"));
 assert.equal(actors.find(actor => actor.actorId === players[0].id).resources.health, 15);

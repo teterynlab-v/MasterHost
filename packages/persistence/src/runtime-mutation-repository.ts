@@ -3,14 +3,31 @@ import type { ActorRuntimeState, Encounter } from "@masterhost/game-runtime";
 
 export interface RuntimeMutationEvent { type: string; payload: Record<string, unknown> }
 export interface RuntimeMutationVersions { actorVersions?: Record<string, number>; encounterVersion?: number }
+export interface RuntimeIdempotency { key: string; fingerprint: string; result: unknown }
 const conflict = () => Object.assign(Error("runtime state changed; reload and retry"), { statusCode: 409 });
 
 export class RuntimeMutationRepository {
   private sql;
   constructor(url: string) { this.sql = postgres(url); }
+  async migrate() { await this.sql`create table if not exists runtime_command_receipts(session_id uuid not null,key text not null,fingerprint text not null,result jsonb null,created_at timestamptz not null default now(),primary key(session_id,key))`; }
 
-  async commit(sessionId: string, events: RuntimeMutationEvent[], states: ActorRuntimeState[] = [], encounter?: Encounter, versions: RuntimeMutationVersions = {}) {
-    await this.sql.begin(async tx => {
+  async receipt(sessionId: string, key: string, fingerprint: string): Promise<unknown | undefined> {
+    const row = (await this.sql`select fingerprint,result from runtime_command_receipts where session_id=${sessionId} and key=${key}`)[0];
+    if (!row) return undefined;
+    if (row.fingerprint !== fingerprint) throw conflict();
+    return row.result ?? undefined;
+  }
+
+  async commit(sessionId: string, events: RuntimeMutationEvent[], states: ActorRuntimeState[] = [], encounter?: Encounter, versions: RuntimeMutationVersions = {}, idempotency?: RuntimeIdempotency): Promise<{ replayed: boolean; result?: unknown }> {
+    return this.sql.begin(async tx => {
+      if (idempotency) {
+        const inserted = await tx`insert into runtime_command_receipts(session_id,key,fingerprint) values(${sessionId},${idempotency.key},${idempotency.fingerprint}) on conflict do nothing returning key`;
+        if (!inserted.length) {
+          const row = (await tx`select fingerprint,result from runtime_command_receipts where session_id=${sessionId} and key=${idempotency.key}`)[0];
+          if (!row || row.fingerprint !== idempotency.fingerprint || row.result === null) throw conflict();
+          return { replayed: true, result: row.result };
+        }
+      }
       if (versions.actorVersions) {
         const rows = await tx`select actor_id,version from actor_runtime_state where session_id=${sessionId} order by actor_id for update`;
         if (rows.length !== Object.keys(versions.actorVersions).length || rows.some(row => versions.actorVersions![row.actor_id as string] !== Number(row.version))) throw conflict();
@@ -36,6 +53,8 @@ export class RuntimeMutationRepository {
         }
       }
       for (const event of events) await tx`insert into game_events(id,session_id,event_type,payload,schema_version) values(gen_random_uuid(),${sessionId},${event.type},${tx.json(event.payload as Parameters<typeof tx.json>[0])},'1')`;
+      if (idempotency) await tx`update runtime_command_receipts set result=${tx.json(idempotency.result as Parameters<typeof tx.json>[0])} where session_id=${sessionId} and key=${idempotency.key}`;
+      return { replayed: false, result: idempotency?.result };
     });
   }
   async close() { await this.sql.end(); }
