@@ -1,6 +1,6 @@
 # M2 Status — generic runtime baseline (2026-09-21)
 
-M2.2 declarative actions, M2.3 target policies, M2.4 Encounter ordering/turns, and M2.5 effect ticking/expiry are implemented in `packages/game-runtime` and verified with tests plus a live PostgreSQL smoke. New runtime mutations use one transaction for events and materialized state. See `PROJECT_STATUS.md` and `ACTION_RUNTIME_DECISION.md` for limits.
+M2.2 declarative actions, M2.3 target policies, M2.4 Encounter ordering/turns, and M2.5 effect ticking/expiry are implemented in `packages/game-runtime` and verified with tests plus a live PostgreSQL smoke. Runtime mutations use one transaction for events and materialized state, with actor and Encounter version checks. See `RUNTIME_CONCURRENCY_DECISION.md` for the conflict policy. See `PROJECT_STATUS.md` and `ACTION_RUNTIME_DECISION.md` for limits.
 
 ## Implemented
 
@@ -19,6 +19,7 @@ M2.2 declarative actions, M2.3 target policies, M2.4 Encounter ordering/turns, a
 - Effect modifiers applied to Checks.
 - Resource min/max clamping.
 - Runtime Actor state persisted per Session/Participant.
+- Action and Encounter commands reject stale actor/Encounter versions with 409 and roll back their events.
 
 ### Pack examples
 
@@ -44,6 +45,6 @@ Same runtime engine handles both settings.
 
 ## Next architecture step
 
-1. Add concurrency control for action and encounter commands, then event replay from snapshots.
+1. Add event replay from snapshots and command idempotency keys.
 2. Complete Encounter and multiple-target UI for GM and Player.
 3. Expand Pack validation and cross-setting runtime conformance.

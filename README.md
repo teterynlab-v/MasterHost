@@ -22,6 +22,7 @@ With the server running, the live PostgreSQL smoke checks are:
 ```bash
 node scripts/m0-runtime-smoke.mjs
 node scripts/runtime-smoke.mjs  # Classic Fantasy Pack
+npm exec --yes --package=pnpm@10.17.1 -- pnpm exec tsx scripts/concurrency-smoke.mts
 ```
 
 See [Project Status](docs/PROJECT_STATUS.md) for verified scope and remaining product/security work. The current local baseline is a development prototype and has not passed production acceptance.

@@ -30,19 +30,19 @@ export async function registerRuntime(app:FastifyInstance,x:{db:string;realmId:s
 
  app.get("/api/game/definitions",async()=>{const c=pack.content;return{checks:c.checks??{},resources:c.resources??{},effects:c.effects??{},actions:c.actions??{}}});
  app.get("/api/sessions/:id/actors",async(req:any)=>{await requireSessionMember(req,req.params.id);return actors.all(req.params.id)});
- app.post("/api/sessions/:id/participants/:participantId/initialize",async(req:any)=>{await requireSessionGm(req,req.params.id);const p=await repo.participant(req.params.participantId);if(!p?.characterId||p.sessionId!==req.params.id)throw Object.assign(Error("participant has no character in session"),{statusCode:409});const c=await repo.character(p.characterId),defs=Object.fromEntries(Object.entries(pack.content.resources??{}).map(([id,value])=>[id,{id,...value}])) as Record<string,ResourceDefinition>,state={actorId:p.id,resources:initializeResources(defs,c?.values??{}),effects:[]};await actors.save(req.params.id,state);await game.event(req.params.id,"ActorInitialized",state);await broadcast(req.params.id,"actor.state",state);return state});
+ app.post("/api/sessions/:id/participants/:participantId/initialize",async(req:any)=>{await requireSessionGm(req,req.params.id);const p=await repo.participant(req.params.participantId);if(!p?.characterId||p.sessionId!==req.params.id)throw Object.assign(Error("participant has no character in session"),{statusCode:409});const c=await repo.character(p.characterId),defs=Object.fromEntries(Object.entries(pack.content.resources??{}).map(([id,value])=>[id,{id,...value}])) as Record<string,ResourceDefinition>,state={actorId:p.id,resources:initializeResources(defs,c?.values??{}),effects:[]};await mutations.commit(req.params.id,[{type:"ActorInitialized",payload:{...state}}],[state]);await broadcast(req.params.id,"actor.state",state);return state});
  app.post("/api/sessions/:id/actions",async(req:any)=>{
   await requireSessionGm(req,req.params.id);
   const session=await repo.session(req.params.id);if(!session||session.state!=="live")throw Object.assign(Error("session is not live"),{statusCode:409});
   const defs=pack.content,action=defs.actions?.[req.body?.actionId];if(!action)throw Object.assign(Error("unknown action"),{statusCode:400});
   const actorId=String(req.body?.actorId??""),targetActorIds=Array.isArray(req.body?.targetActorIds)?req.body.targetActorIds:req.body?.targetActorId?[req.body.targetActorId]:[];
-  const all=await actors.all(session.id),actorMap=Object.fromEntries(all.map(state=>[state.actorId,state]));
+  const versioned=await actors.allVersioned(session.id),all=versioned.map(row=>row.state),actorVersions=Object.fromEntries(versioned.map(row=>[row.state.actorId,row.version])),actorMap=Object.fromEntries(all.map(state=>[state.actorId,state]));
   const characterValues:Record<string,Record<string,unknown>>={};for(const state of all){const participant=await repo.participant(state.actorId);if(participant?.sessionId===session.id&&participant.characterId){const character=await repo.character(participant.characterId);if(character)characterValues[state.actorId]=character.values}}
   const checks=Object.fromEntries(Object.entries(defs.checks??{}).map(([id,value])=>[id,{id,...value as object}])) as Record<string,CheckDefinition>;
   const resources=Object.fromEntries(Object.entries(defs.resources??{}).map(([id,value])=>[id,{id,...value as object}])) as Record<string,ResourceDefinition>;
   const effects=Object.fromEntries(Object.entries(defs.effects??{}).map(([id,value])=>[id,{id,...value as object}])) as Record<string,EffectDefinition>;
   const result=executeAction({action:{id:req.body.actionId,...action},request:{sessionId:session.id,actionId:req.body.actionId,actorId,targetActorIds,inputs:req.body?.inputs},actors:actorMap,checks,resources,effects,characterValues});
-  await mutations.commit(session.id,result.events,result.states);
+  await mutations.commit(session.id,result.events,result.states,undefined,{actorVersions});
   for(const state of result.states)await broadcast(session.id,"actor.state",state);
   await broadcast(session.id,"action.resolved",result.events.at(-1)?.payload);return result;
  });
@@ -65,14 +65,14 @@ export async function registerRuntime(app:FastifyInstance,x:{db:string;realmId:s
   await mutations.commit(session.id,result.events,[],result.encounter);await broadcast(session.id,"encounter.state",result.encounter);return result;
  });
  app.post("/api/encounters/:id/advance",async(req:any)=>{
-  const encounter=await encounters.get(req.params.id);if(!encounter)throw Object.assign(Error("encounter not found"),{statusCode:404});
-  await requireSessionGm(req,encounter.sessionId);
-  const states=await actors.all(encounter.sessionId),defs=pack.content.effects??{};
+  const current=await encounters.getVersioned(req.params.id);if(!current)throw Object.assign(Error("encounter not found"),{statusCode:404});
+  const encounter=current.encounter;await requireSessionGm(req,encounter.sessionId);
+  const versioned=await actors.allVersioned(encounter.sessionId),states=versioned.map(row=>row.state),actorVersions=Object.fromEntries(versioned.map(row=>[row.state.actorId,row.version])),defs=pack.content.effects??{};
   const effects=Object.fromEntries(Object.entries(defs).map(([id,value])=>[id,{id,...value as object}])) as Record<string,EffectDefinition>;
   const result=advanceEncounter(encounter,Object.fromEntries(states.map(state=>[state.actorId,state])),effects);
-  await mutations.commit(encounter.sessionId,result.events,result.states,result.encounter);await broadcast(encounter.sessionId,"encounter.state",result.encounter);return result;
+  await mutations.commit(encounter.sessionId,result.events,result.states,result.encounter,{actorVersions,encounterVersion:current.version});await broadcast(encounter.sessionId,"encounter.state",result.encounter);return result;
  });
- app.post("/api/encounters/:id/end",async(req:any)=>{const encounter=await encounters.get(req.params.id);if(!encounter)throw Object.assign(Error("encounter not found"),{statusCode:404});await requireSessionGm(req,encounter.sessionId);const result=endEncounter(encounter);await mutations.commit(encounter.sessionId,result.events,[],result.encounter);await broadcast(encounter.sessionId,"encounter.state",result.encounter);return result});
+ app.post("/api/encounters/:id/end",async(req:any)=>{const current=await encounters.getVersioned(req.params.id);if(!current)throw Object.assign(Error("encounter not found"),{statusCode:404});const encounter=current.encounter;await requireSessionGm(req,encounter.sessionId);const result=endEncounter(encounter);await mutations.commit(encounter.sessionId,result.events,[],result.encounter,{encounterVersion:current.version});await broadcast(encounter.sessionId,"encounter.state",result.encounter);return result});
 
  app.get("/ws/sessions/:id",{websocket:true},(socket:any,req:any)=>{const id=req.params.id;let client:{socket:any;participantId?:string;gm:boolean}|undefined;const timer=setTimeout(()=>socket.close(1008,"authentication timeout"),5000);socket.on("message",async(raw:Buffer)=>{if(client)return;try{const message=JSON.parse(raw.toString()),credential=String(message?.token??"");if(message?.type!=="authenticate"||!credential){socket.close(1008,"authorization required");return}const gm=await repo.verifySessionGm(id,credential),member=gm?null:await repo.sessionMember(id,credential);if(!gm&&!member){socket.close(1008,"authorization required");return}clearTimeout(timer);client={socket,gm,participantId:member?.id};let set=sockets.get(id);if(!set)sockets.set(id,set=new Set());set.add(client);socket.send(JSON.stringify({type:"session.snapshot",sessionId:id,payload:await snapshot(id),at:new Date().toISOString()}))}catch{socket.close(1008,"invalid authentication")}});socket.on("close",()=>{clearTimeout(timer);const set=sockets.get(id);if(client)set?.delete(client);if(set&&!set.size)sockets.delete(id)})});
 }
