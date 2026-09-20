@@ -82,8 +82,11 @@ for (const id of [player.id, otherPlayer.id]) assert.ok(rallied.find(actor => ac
 const before = await valid(`/sessions/${session.id}/actors`, undefined, player.accessToken);
 assert.equal(before.find(actor => actor.actorId === player.id).resources.health, 15);
 assert.equal(before.find(actor => actor.actorId === player.id).effects[0].remaining, 3);
-const encounter = await valid(`/sessions/${session.id}/encounters`, { participantIds: [player.id] }, campaign.gmToken);
+const competingStarts = await Promise.all(Array.from({ length: 2 }, () => call(`/sessions/${session.id}/encounters`, { participantIds: [player.id] }, campaign.gmToken)));
+assert.deepEqual(competingStarts.map(result => result.status).sort(), [200, 409]);
+const encounter = competingStarts.find(result => result.status === 200).data;
 assert.equal(encounter.encounter.orderingPolicy, "fixed");
+assert.equal((await call(`/sessions/${session.id}/encounters`, { participantIds: [goblin.actorId] }, campaign.gmToken)).status, 409);
 for (let i = 0; i < 3; i++) await valid(`/encounters/${encounter.encounter.id}/advance`, {}, campaign.gmToken);
 const after = await valid(`/sessions/${session.id}/actors`, undefined, player.accessToken);
 assert.equal(after.find(actor => actor.actorId === player.id).effects.length, 0);
@@ -95,6 +98,8 @@ assert.ok(parallelAdvance.every(result => result.status === 200 || result.status
 const afterAdvance = (await valid(`/sessions/${session.id}/encounters`, undefined, campaign.gmToken)).find(value => value.id === encounter.encounter.id);
 assert.equal(afterAdvance.turn - beforeAdvance.turn, parallelAdvance.filter(result => result.status === 200).length);
 await valid(`/encounters/${encounter.encounter.id}/end`, {}, campaign.gmToken);
+const nextEncounter = await valid(`/sessions/${session.id}/encounters`, { participantIds: [goblin.actorId] }, campaign.gmToken);
+await valid(`/encounters/${nextEncounter.encounter.id}/end`, {}, campaign.gmToken);
 const beforeParallel = await valid(`/sessions/${session.id}/actors`, undefined, campaign.gmToken);
 const parallel = await Promise.all(Array.from({ length: 12 }, () => call(`/sessions/${session.id}/actions`, { actorId: player.id, targetActorIds: [player.id], actionId: "poison" }, campaign.gmToken)));
 assert.ok(parallel.every(result => result.status === 200 || result.status === 409));
@@ -103,6 +108,9 @@ const afterParallel = await valid(`/sessions/${session.id}/actors`, undefined, c
 assert.equal(afterParallel.find(actor => actor.actorId === player.id).effects.length, beforeParallel.find(actor => actor.actorId === player.id).effects.length + accepted);
 const afterParallelEvents = await valid(`/sessions/${session.id}/events`, undefined, campaign.gmToken);
 assert.equal(afterParallelEvents.filter(event => event.type === "EffectApplied").length, events.filter(event => event.type === "EffectApplied").length + accepted);
+assert.equal((await call(`/sessions/${session.id}/runtime/verify`, undefined, player.accessToken)).status, 403);
+const replayVerification = await valid(`/sessions/${session.id}/runtime/verify`, undefined, campaign.gmToken);
+assert.deepEqual(replayVerification, { matching: true, eventCount: afterParallelEvents.length, actorIds: [], encounterIds: [], issues: [] });
 await valid(`/sessions/${session.id}/state`, { state: "finished" }, campaign.gmToken);
 assert.equal((await call(`/sessions/${session.id}/actors`, { templateId: "goblin" }, campaign.gmToken)).status, 409);
 assert.equal((await call("/join/resolve", { pin: session.pin })).status, 404);

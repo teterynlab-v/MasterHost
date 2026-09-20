@@ -1,0 +1,82 @@
+import type { ActorRuntimeState } from "./index.js";
+import type { Encounter } from "./encounters.js";
+
+export interface ReplayEvent { sequence: number; type: string; payload: Record<string, unknown>; schemaVersion: string }
+export interface RuntimeReplay { actors: ActorRuntimeState[]; encounters: Encounter[]; issues: string[] }
+
+const object = (value: unknown, field: string): Record<string, unknown> => {
+  if (!value || typeof value !== "object" || Array.isArray(value)) throw Error(`invalid ${field}`);
+  return value as Record<string, unknown>;
+};
+const string = (value: unknown, field: string): string => {
+  if (typeof value !== "string" || !value) throw Error(`invalid ${field}`);
+  return value;
+};
+const number = (value: unknown, field: string): number => {
+  if (typeof value !== "number" || !Number.isFinite(value)) throw Error(`invalid ${field}`);
+  return value;
+};
+const strings = (value: unknown, field: string): string[] => {
+  if (!Array.isArray(value) || value.some(item => typeof item !== "string")) throw Error(`invalid ${field}`);
+  return value;
+};
+
+export function replayRuntimeEvents(events: ReplayEvent[]): RuntimeReplay {
+  const actors = new Map<string, ActorRuntimeState>();
+  const encounters = new Map<string, Encounter>();
+  const issues: string[] = [];
+  let previous = 0;
+  for (const event of events) {
+    if (!Number.isSafeInteger(event.sequence) || event.sequence <= previous) { issues.push(`event sequence ${event.sequence} is out of order`); continue; }
+    previous = event.sequence;
+    if (event.schemaVersion !== "1") { issues.push(`event ${event.sequence} has unsupported schema ${event.schemaVersion}`); continue; }
+    try {
+      const payload = object(event.payload, "event payload");
+      if (event.type === "ActorInitialized") {
+        const actorId = string(payload.actorId, "actor ID");
+        if (actors.has(actorId)) throw Error(`actor ${actorId} initialized twice`);
+        const resources = object(payload.resources, "actor resources");
+        for (const [id, value] of Object.entries(resources)) number(value, `resource ${id}`);
+        if (!Array.isArray(payload.effects)) throw Error("invalid actor effects");
+        actors.set(actorId, structuredClone(payload as unknown as ActorRuntimeState));
+      } else if (event.type === "ResourceChanged") {
+        const actorId = string(payload.actorId, "actor ID"), actor = actors.get(actorId);
+        if (!actor) throw Error(`resource change for unknown actor ${actorId}`);
+        actor.resources[string(payload.resource, "resource ID")] = number(payload.after, "resource value");
+      } else if (event.type === "EffectApplied") {
+        const actorId = string(payload.actorId, "actor ID"), actor = actors.get(actorId);
+        if (!actor) throw Error(`effect for unknown actor ${actorId}`);
+        const effect = object(payload.effect, "effect");
+        string(effect.id, "effect ID");
+        actor.effects.push(structuredClone(effect) as unknown as ActorRuntimeState["effects"][number]);
+      } else if (event.type === "EffectTicked") {
+        const actorId = string(payload.actorId, "actor ID"), actor = actors.get(actorId);
+        const effect = actor?.effects.find(value => value.id === payload.effectId);
+        if (!effect) throw Error(`tick for unknown effect ${String(payload.effectId)}`);
+        effect.remaining = number(payload.remaining, "effect duration");
+      } else if (event.type === "EffectExpired") {
+        const actorId = string(payload.actorId, "actor ID"), actor = actors.get(actorId);
+        if (!actor || !actor.effects.some(value => value.id === payload.effectId)) throw Error(`expiry for unknown effect ${String(payload.effectId)}`);
+        actor.effects = actor.effects.filter(value => value.id !== payload.effectId);
+      } else if (event.type === "EncounterStarted") {
+        const id = string(payload.encounterId, "encounter ID"), sessionId = string(payload.sessionId, "session ID");
+        if (encounters.has(id)) throw Error(`encounter ${id} started twice`);
+        const participants = strings(payload.participants, "encounter participants");
+        const policy = string(payload.orderingPolicy, "ordering policy") as Encounter["orderingPolicy"];
+        encounters.set(id, { id, sessionId, state: "live", participants, orderingPolicy: policy, order: [], currentActorId: undefined, round: 0, turn: 0 });
+      } else if (["OrderEstablished", "RoundStarted", "TurnStarted", "EncounterEnded"].includes(event.type)) {
+        const id = string(payload.encounterId, "encounter ID"), encounter = encounters.get(id);
+        if (!encounter) throw Error(`event for unknown encounter ${id}`);
+        if (event.type === "OrderEstablished") encounter.order = strings(payload.order, "encounter order");
+        if (event.type === "RoundStarted") encounter.round = number(payload.round, "round");
+        if (event.type === "TurnStarted") { encounter.currentActorId = string(payload.actorId, "current actor"); encounter.turn = number(payload.turn, "turn"); }
+        if (event.type === "EncounterEnded") { encounter.state = "ended"; encounter.currentActorId = undefined; }
+      } else if (!["CheckRequested", "DiceRolled", "CheckResolved", "ActionRequested", "ActionResolved", "TurnEnded", "RoundEnded"].includes(event.type)) {
+        issues.push(`event ${event.sequence} has unsupported type ${event.type}`);
+      }
+    } catch (failure) {
+      issues.push(`event ${event.sequence}: ${failure instanceof Error ? failure.message : String(failure)}`);
+    }
+  }
+  return { actors: [...actors.values()], encounters: [...encounters.values()], issues };
+}

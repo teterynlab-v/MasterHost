@@ -17,7 +17,7 @@ export class RuntimeMutationRepository {
       }
       if (encounter) {
         if (versions.encounterVersion === undefined) {
-          const inserted = await tx`insert into encounters(id,session_id,state) values(${encounter.id},${sessionId},${tx.json(encounter as unknown as Parameters<typeof tx.json>[0])}) on conflict(id) do nothing returning id`;
+          const inserted = await tx`insert into encounters(id,session_id,state) values(${encounter.id},${sessionId},${tx.json(encounter as unknown as Parameters<typeof tx.json>[0])}) on conflict do nothing returning id`;
           if (!inserted.length) throw conflict();
         } else {
           const updated = await tx`update encounters set state=${tx.json(encounter as unknown as Parameters<typeof tx.json>[0])},version=version+1,updated_at=now() where id=${encounter.id} and session_id=${sessionId} and version=${versions.encounterVersion} returning id`;

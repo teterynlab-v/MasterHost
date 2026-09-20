@@ -38,3 +38,4 @@ export function effectiveModifier(base:number,field:string,effects:ActiveEffect[
 export function tickEffects(effects:ActiveEffect[],unit:"turns"|"rounds",defs:Record<string,EffectDefinition>){return effects.flatMap(e=>{const d=defs[e.definitionId];if(!d?.duration||d.duration.type!==unit||e.remaining===undefined)return[e];const remaining=e.remaining-1;return remaining>0?[{...e,remaining}]:[]})}
 export * from "./actions.js";
 export * from "./encounters.js";
+export * from "./replay.js";

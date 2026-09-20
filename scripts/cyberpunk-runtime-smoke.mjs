@@ -48,6 +48,7 @@ assert.equal(events.filter(event => event.type === "EffectApplied").length, 2);
 assert.ok(events.some(event => event.type === "EncounterStarted"));
 assert.ok(events.some(event => event.type === "EncounterEnded"));
 assert.ok(!events.some(event => event.type === "TurnStarted"));
+assert.deepEqual(await valid(`/sessions/${session.id}/runtime/verify`, undefined, campaign.gmToken), { matching: true, eventCount: events.length, actorIds: [], encounterIds: [], issues: [] });
 await valid(`/sessions/${session.id}/state`, { state: "finished" }, campaign.gmToken);
 assert.equal((await call(`/sessions/${session.id}/actors`, { templateId: "drone" }, campaign.gmToken)).status, 409);
 console.log("Cyberpunk runtime smoke passed: NPC action, two-target action, no-order encounter and effect events.");

@@ -1,11 +1,11 @@
 import assert from "node:assert/strict";
 import { randomUUID } from "node:crypto";
 import postgres from "postgres";
-import { ActorStateRepository, EncounterRepository, GameRepository, RuntimeMutationRepository } from "@masterhost/persistence";
+import { ActorStateRepository, EncounterRepository, GameRepository, RuntimeMutationRepository, RuntimeReplayRepository } from "@masterhost/persistence";
 import { advanceEncounter, endEncounter, startEncounter } from "@masterhost/game-runtime";
 
 const url = process.env.DATABASE_URL ?? "postgresql://masterhost:masterhost@localhost:5432/masterhost";
-const sql = postgres(url), actors = new ActorStateRepository(url), encounters = new EncounterRepository(url), game = new GameRepository(url), mutations = new RuntimeMutationRepository(url);
+const sql = postgres(url), actors = new ActorStateRepository(url), encounters = new EncounterRepository(url), game = new GameRepository(url), mutations = new RuntimeMutationRepository(url), replay = new RuntimeReplayRepository(url);
 const sessionId = randomUUID(), actorId = randomUUID();
 const isConflict = (reason: unknown) => reason instanceof Error && "statusCode" in reason && reason.statusCode === 409;
 
@@ -14,7 +14,12 @@ try {
   await actors.migrate();
   await encounters.migrate();
   const initial = { actorId, resources: { health: 20 }, effects: [] };
-  await mutations.commit(sessionId, [{ type: "ActorInitialized", payload: { actorId } }], [initial]);
+  await mutations.commit(sessionId, [{ type: "ActorInitialized", payload: { ...initial } }], [initial]);
+  assert.equal((await replay.verify(sessionId)).matching, true);
+  await sql`update actor_runtime_state set state=jsonb_set(state,'{resources,health}','19'::jsonb) where session_id=${sessionId} and actor_id=${actorId}`;
+  assert.deepEqual((await replay.verify(sessionId)).actorIds, [actorId]);
+  await sql`update actor_runtime_state set state=${sql.json(initial)} where session_id=${sessionId} and actor_id=${actorId}`;
+  assert.equal((await replay.verify(sessionId)).matching, true);
   const [{ version: firstVersion }] = await actors.allVersioned(sessionId);
   const attempts = await Promise.allSettled([
     mutations.commit(sessionId, [{ type: "DamageA", payload: { actorId } }], [{ ...initial, resources: { health: 15 } }], undefined, { actorVersions: { [actorId]: firstVersion } }),
@@ -46,10 +51,10 @@ try {
   const ended = endEncounter(afterTurn!.encounter);
   await mutations.commit(sessionId, ended.events, [], ended.encounter, { encounterVersion: afterTurn!.version });
   assert.equal((await encounters.get(started.encounter.id))?.state, "ended");
-  console.log("Concurrency smoke passed: one actor mutation and one encounter advance committed; stale events rolled back.");
+  console.log("Concurrency smoke passed: stale writes rolled back and replay detected/restored a materialized-state mismatch.");
 } finally {
   await sql`delete from game_events where session_id=${sessionId}`;
   await sql`delete from encounters where session_id=${sessionId}`;
   await sql`delete from actor_runtime_state where session_id=${sessionId}`;
-  await Promise.all([sql.end(), actors.close(), encounters.close(), game.close(), mutations.close()]);
+  await Promise.all([sql.end(), actors.close(), encounters.close(), game.close(), mutations.close(), replay.close()]);
 }

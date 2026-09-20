@@ -8,6 +8,8 @@ Action and Encounter commands read actor or encounter state before writing. A tr
 
 Actor and Encounter rows carry monotonically increasing database versions. The server loads those versions with the states it gives to the generic runtime. `RuntimeMutationRepository.commit` locks the read actor rows, compares the complete actor snapshot, updates changed rows only at their expected versions, and checks the expected Encounter version. It writes state and events in the same transaction. A stale command rolls back completely and returns HTTP 409, telling the caller to reload and retry. Actor initialization uses the same transaction and inserts only once.
 
+A partial unique index now permits at most one live Encounter per Session. Competing starts return one success and one 409, with no events from the rejected start. An ended Encounter releases the slot. Migration checks for pre-existing duplicates and stops with an explicit error instead of choosing an Encounter to end without an event.
+
 The pure Action and Encounter functions remain in `packages/game-runtime`; the concurrency rule lives in persistence. This works across server processes sharing PostgreSQL and does not require an in-memory mutex.
 
 ## Alternatives considered
