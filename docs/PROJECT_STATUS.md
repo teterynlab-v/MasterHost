@@ -6,13 +6,13 @@
 
 - `./scripts/m0-check.sh`: pnpm 10.17.1 install, PostgreSQL Compose startup, full TypeScript check, 39 unit/conformance tests — pass. Corepack is unavailable locally; the script uses the pinned pnpm through npm as a fallback.
 - `pnpm --filter @masterhost/web build` through pinned pnpm — pass.
-- `node scripts/m0-runtime-smoke.mjs` — pass against PostgreSQL for both Classic Fantasy and Cyberpunk: create/reload, provenance, CUSTOM/LOCK, impact preview, regeneration, snapshot, fork, ZIP export.
+- `node scripts/m0-runtime-smoke.mjs` — pass against PostgreSQL for Classic Fantasy and Cyberpunk: create/reload, provenance, CUSTOM/LOCK, impact preview, regeneration, snapshot, fork and ZIP import round trip.
 - Browser: both packs render through the same Quick Builder and generate their respective world concepts. Classic Fantasy was also checked in separate GM and player browsers through PIN, guest join, character creation, Ready, LIVE, check and server roll; the returning player selected the saved character, and a player refresh returned to LIVE.
 - `node scripts/runtime-smoke.mjs` — pass against PostgreSQL for Fantasy: GM authorization rejection without the campaign key, character validation/ownership, action events, target rejection, encounter turns, effect ticks/expiry, and PIN invalidation after FINISHED.
 
 ## M0 — World Engine
 
-**Status: verified development baseline; full product acceptance remains open.** Both packs compile, persist and pass the authoring smoke. The web UI can create, explain, lock, preview, snapshot/regenerate and export. Remaining M0 work includes a complete browser restore/fork/import experience, `.mhworld` import API, deeper migration/rollback testing, and full manual checklist on a clean database. The UI edit prompt could not be completed through browser automation; CUSTOM/LOCK was verified through the live API and persistence readback.
+**Status: verified development baseline; full product acceptance remains open.** Both packs compile, persist and pass the authoring smoke. The web UI can create, explain, lock, preview, snapshot/regenerate, export and import `.mhworld`. The import API validates archive paths, sizes, checksums, schema, identities and parent references, then assigns independent IDs. Archives with custom assets are rejected until an asset store can preserve them. Remaining M0 work includes a complete browser restore/fork/import experience, deeper migration/rollback testing, and full manual checklist on a clean database. The UI edit prompt could not be completed through browser automation; CUSTOM/LOCK was verified through the live API and persistence readback.
 
 ## M1 — Realm, Campaign, Session and Character
 

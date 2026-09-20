@@ -129,6 +129,9 @@ importers:
       postgres:
         specifier: ^3.4.7
         version: 3.4.9
+      zod:
+        specifier: ^4.1.5
+        version: 4.6.5
 
   packages/template-engine:
     dependencies:

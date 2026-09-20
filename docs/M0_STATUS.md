@@ -1,6 +1,6 @@
 # M0 Status — verified development baseline (2026-09-20)
 
-`./scripts/m0-check.sh` passed on macOS. Both Fantasy and Cyberpunk passed `scripts/m0-runtime-smoke.mjs` on PostgreSQL and generated through the same browser UI. Full product acceptance remains open for import and complete clean-database/manual browser coverage. See `PROJECT_STATUS.md`.
+`./scripts/m0-check.sh` passed on macOS. Both Fantasy and Cyberpunk passed authoring and ZIP import round-trip smoke on PostgreSQL and generated through the same browser UI. Asset-bearing archives are rejected until custom asset storage is implemented. Full product acceptance remains open for complete clean-database/manual browser coverage. See `PROJECT_STATUS.md`.
 
 ## Implemented in code
 
@@ -25,4 +25,4 @@
 
 ## Gate remaining
 
-The remaining gate is the complete browser import/restore/fork flow and validation on a clean database. Static checks and the two-Pack runtime smoke passed on this machine.
+The remaining gate is the complete browser import/restore/fork flow, custom asset persistence, and validation on a clean database. Static checks and the two-Pack authoring smoke passed on this machine.

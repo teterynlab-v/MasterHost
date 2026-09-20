@@ -1,8 +1,9 @@
 import Fastify from"fastify";import cors from"@fastify/cors";import{randomUUID}from"node:crypto";import{resolve}from"node:path";import{fileURLToPath}from"node:url";
 import{loadWorldPack,validateWorldPack}from"@masterhost/worldpack-sdk";import{buildDescriptor}from"@masterhost/descriptor";
 import{compileWorld,customizeValue,regenerateWorld,generationReport,explainValue,compareWorlds,scopeSummary,preserveCustomByPath,assertUniqueMaterializationPaths}from"@masterhost/world-compiler";
-import{WorldRepository,exportMhWorldZip}from"@masterhost/persistence";import{registerRuntime}from"./runtime.js";
+import{WorldRepository,exportMhWorldZip,importMhWorldZip}from"@masterhost/persistence";import{registerRuntime}from"./runtime.js";
 const app=Fastify({logger:true});await app.register(cors,{origin:true});
+app.addContentTypeParser("application/vnd.masterhost.world+zip",{parseAs:"buffer",bodyLimit:10_000_000},(_req,body,done)=>done(null,body));
 const repositoryRoot=fileURLToPath(new URL("../../../",import.meta.url));
 const pack=await loadWorldPack(resolve(repositoryRoot,process.env.WORLD_PACK_PATH??"worldpacks/classic-fantasy-test"));
 const repo=new WorldRepository(process.env.DATABASE_URL??"postgresql://masterhost:masterhost@localhost:5432/masterhost");await repo.migrate();
@@ -13,6 +14,7 @@ const must=async(id:string)=>{const w=await repo.get(id);if(!w)throw Object.assi
 app.get("/health",async()=>({status:"ok",pack:`${pack.manifest.id}@${pack.manifest.version}`}));
 app.get("/api/pack",async()=>({manifest:pack.manifest,questions:pack.content.questions,validation:validateWorldPack(pack)}));
 app.get("/api/worlds",async()=>repo.list());
+app.post("/api/worlds/import",async(req:any)=>{if(!Buffer.isBuffer(req.body))throw Object.assign(Error("mhworld ZIP body required"),{statusCode:415});let world;try{world=importMhWorldZip(req.body,realmId)}catch(error){throw Object.assign(Error(error instanceof Error?error.message:"Invalid mhworld archive"),{statusCode:400})}if(world.packId!==pack.manifest.id||world.packVersion!==pack.manifest.version)throw Object.assign(Error("required World Pack version is not active"),{statusCode:409});assertUniqueMaterializationPaths(world);return repo.save(world,"import")});
 app.post("/api/worlds",async(req:any)=>{const seed=req.body?.seed??randomUUID(),choices=Object.entries(req.body?.choices??{}).map(([path,value])=>({path,value:{mode:"explicit"as const,value},locked:Boolean(req.body?.locks?.includes(path))})),descriptor=buildDescriptor({packId:pack.manifest.id,packVersion:pack.manifest.version,choices,seed}),world=compileWorld({realmId,descriptor,pack,seed});assertUniqueMaterializationPaths(world);return repo.save(world,"compile")});
 app.get("/api/worlds/:id",async(req:any)=>must(req.params.id));
 
