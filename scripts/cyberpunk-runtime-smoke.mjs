@@ -30,10 +30,15 @@ for (const [name, role] of [["Neon", "solo"], ["Ghost", "netrunner"]]) {
 }
 await valid(`/sessions/${session.id}/state`, { state: "live" }, campaign.gmToken);
 for (const player of players) await valid(`/sessions/${session.id}/participants/${player.id}/initialize`, {}, campaign.gmToken);
-await valid(`/sessions/${session.id}/actions`, { actorId: players[0].id, targetActorIds: players.map(player => player.id), actionId: "signal-boost" }, campaign.gmToken);
+const drone = await valid(`/sessions/${session.id}/actors`, { templateId: "drone" }, campaign.gmToken);
+assert.equal(drone.kind, "npc");
+assert.equal(drone.resources.ammo, 8);
+await valid(`/sessions/${session.id}/actions`, { actorId: drone.actorId, targetActorIds: [players[0].id], actionId: "damage" }, campaign.gmToken);
+await valid(`/sessions/${session.id}/actions`, { actorId: players[0].id, targetActorIds: [players[0].id, drone.actorId], actionId: "signal-boost" }, campaign.gmToken);
 const actors = await valid(`/sessions/${session.id}/actors`, undefined, players[0].accessToken);
-for (const player of players) assert.ok(actors.find(actor => actor.actorId === player.id).effects.some(effect => effect.definitionId === "boosted"));
-const started = await valid(`/sessions/${session.id}/encounters`, { participantIds: players.map(player => player.id) }, campaign.gmToken);
+for (const id of [players[0].id, drone.actorId]) assert.ok(actors.find(actor => actor.actorId === id).effects.some(effect => effect.definitionId === "boosted"));
+assert.equal(actors.find(actor => actor.actorId === players[0].id).resources.health, 15);
+const started = await valid(`/sessions/${session.id}/encounters`, { participantIds: [players[0].id, drone.actorId] }, campaign.gmToken);
 assert.equal(started.encounter.orderingPolicy, "none");
 assert.equal(started.encounter.currentActorId, undefined);
 assert.equal((await call(`/encounters/${started.encounter.id}/advance`, {}, campaign.gmToken)).status, 400);
@@ -44,4 +49,5 @@ assert.ok(events.some(event => event.type === "EncounterStarted"));
 assert.ok(events.some(event => event.type === "EncounterEnded"));
 assert.ok(!events.some(event => event.type === "TurnStarted"));
 await valid(`/sessions/${session.id}/state`, { state: "finished" }, campaign.gmToken);
-console.log("Cyberpunk runtime smoke passed: two-target action, no-order encounter and effect events.");
+assert.equal((await call(`/sessions/${session.id}/actors`, { templateId: "drone" }, campaign.gmToken)).status, 409);
+console.log("Cyberpunk runtime smoke passed: NPC action, two-target action, no-order encounter and effect events.");

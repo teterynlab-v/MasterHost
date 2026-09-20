@@ -3,9 +3,9 @@ import { sessionSocket } from "./session-client.js";
 
 const API = (import.meta as { env?: { VITE_API_URL?: string } }).env?.VITE_API_URL ?? "http://localhost:8080/api";
 type Participant = { id: string; displayName: string; accessToken?: string };
-type Actor = { actorId: string; resources: Record<string, number>; effects: { id: string; definitionId: string; remaining?: number }[] };
+type Actor = { actorId: string; kind?: "npc"; label?: string; resources: Record<string, number>; effects: { id: string; definitionId: string; remaining?: number }[] };
 type Encounter = { id: string; state: "live" | "ended"; orderingPolicy: string; participants: string[]; order: string[]; currentActorId?: string; round: number; turn: number };
-type Definitions = { checks: Record<string, { label: string }>; actions: Record<string, { label: string; target: string }>; encounter: { orderingPolicy: string } };
+type Definitions = { checks: Record<string, { label: string }>; actions: Record<string, { label: string; target: string }>; actorTemplates: Record<string, { label: string }>; encounter: { orderingPolicy: string } };
 type GameEvent = { id: string; sequence: number; type: string; createdAt: string };
 type PendingCheck = { request: { id: string; checkId: string; difficulty: number }; resolution: CheckResolution | null };
 type CheckResolution = { outcome: "success" | "failure"; total: number; modifier: number; roll: { total: number } };
@@ -21,11 +21,13 @@ async function call<T>(path: string, init?: RequestInit): Promise<T> {
 }
 const headers = (token: string) => ({ authorization: `Bearer ${token}` });
 const authorizedPost = <T,>(path: string, body: object, token: string) => call<T>(path, { method: "POST", headers: { "content-type": "application/json", ...headers(token) }, body: JSON.stringify(body) });
-const nameOf = (id: string | undefined, participants: Participant[]) => participants.find(participant => participant.id === id)?.displayName ?? "Unknown actor";
+const nameOf = (id: string | undefined, participants: Participant[], actors: Actor[]) => actors.find(actor => actor.actorId === id)?.label ?? participants.find(participant => participant.id === id)?.displayName ?? "Unknown actor";
 
 export function GmGame({ session, participants, gmToken }: { session: { id: string }; participants: Participant[]; gmToken: string }) {
-  const [defs, setDefs] = useState<Definitions>({ checks: {}, actions: {}, encounter: { orderingPolicy: "none" } });
+  const [defs, setDefs] = useState<Definitions>({ checks: {}, actions: {}, actorTemplates: {}, encounter: { orderingPolicy: "none" } });
   const [actorId, setActorId] = useState("");
+  const [checkParticipantId, setCheckParticipantId] = useState("");
+  const [templateId, setTemplateId] = useState("");
   const [targetId, setTargetId] = useState("");
   const [targetIds, setTargetIds] = useState<string[]>([]);
   const [checkId, setCheckId] = useState("");
@@ -51,6 +53,7 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
       setDefs(value);
       setCheckId(Object.keys(value.checks)[0] ?? "");
       setActionId(Object.keys(value.actions)[0] ?? "");
+      setTemplateId(Object.keys(value.actorTemplates)[0] ?? "");
     }).catch(failure => setError(String(failure)));
     void refresh().catch(failure => setError(String(failure)));
   }, [session.id]);
@@ -61,11 +64,13 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
     return () => socket.close();
   }, [session.id, gmToken]);
   useEffect(() => {
-    const available = participants.filter(participant => actors.some(actor => actor.actorId === participant.id));
-    if (!available.some(participant => participant.id === actorId)) setActorId(available[0]?.id ?? "");
-    if (!available.some(participant => participant.id === targetId)) setTargetId(available[0]?.id ?? "");
-    setTargetIds(ids => ids.filter(id => available.some(participant => participant.id === id)));
-    setEncounterIds(ids => ids.filter(id => available.some(participant => participant.id === id)));
+    const ids = new Set(actors.map(actor => actor.actorId));
+    const players = participants.filter(participant => ids.has(participant.id));
+    if (!ids.has(actorId)) setActorId(actors[0]?.actorId ?? "");
+    if (!ids.has(targetId)) setTargetId(actors[0]?.actorId ?? "");
+    if (!players.some(participant => participant.id === checkParticipantId)) setCheckParticipantId(players[0]?.id ?? "");
+    setTargetIds(values => values.filter(id => ids.has(id)));
+    setEncounterIds(values => values.filter(id => ids.has(id)));
   }, [actors, participants]);
 
   async function run(command: () => Promise<unknown>) {
@@ -74,7 +79,8 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
     catch (failure) { setError(failure instanceof Error ? failure.message : String(failure)); await refresh().catch(() => undefined); }
     finally { setBusy(false); }
   }
-  const available = participants.filter(participant => actors.some(actor => actor.actorId === participant.id));
+  const available = actors.map(actor => ({ id: actor.actorId, displayName: nameOf(actor.actorId, participants, actors) }));
+  const availablePlayers = participants.filter(participant => actors.some(actor => actor.actorId === participant.id));
   const action = defs.actions[actionId];
   const targetPolicy = action?.target === "actor" ? "single-actor" : action?.target;
   const activeEncounter = encounters.find(encounter => encounter.state === "live");
@@ -98,21 +104,23 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
     <button className="secondary" disabled={busy || participants.length === 0} onClick={() => void run(async () => {
       for (const participant of participants) if (!actors.some(actor => actor.actorId === participant.id)) await authorizedPost(`/sessions/${session.id}/participants/${participant.id}/initialize`, {}, gmToken);
     })}>Initialize party runtime</button>
-    <h3>Party runtime</h3>
-    {participants.map(participant => {
-      const actor = actors.find(value => value.actorId === participant.id);
-      return <article key={participant.id}><h3>{participant.displayName}</h3>
+    {templateId && <div className="actions"><label>NPC template<select value={templateId} onChange={event => setTemplateId(event.target.value)}>{Object.entries(defs.actorTemplates).map(([id, template]) => <option key={id} value={id}>{template.label}</option>)}</select></label><button className="secondary" disabled={busy} onClick={() => void run(() => authorizedPost(`/sessions/${session.id}/actors`, { templateId }, gmToken))}>ADD NPC</button></div>}
+    <h3>Actors</h3>
+    {[...participants.map(participant => ({ id: participant.id, name: participant.displayName })), ...actors.filter(actor => actor.kind === "npc").map(actor => ({ id: actor.actorId, name: actor.label ?? "NPC" }))].map(entry => {
+      const actor = actors.find(value => value.actorId === entry.id);
+      return <article key={entry.id}><h3>{entry.name}</h3>
         {actor ? Object.entries(actor.resources).map(([key, value]) => <div className="row" key={key}><b>{key}</b><span>{value}</span></div>) : <p className="muted">Not initialized</p>}
         {actor?.effects.map(effect => <small key={effect.id}>Effect: {effect.definitionId}{effect.remaining !== undefined ? ` (${effect.remaining})` : ""}</small>)}
       </article>;
     })}
     <h3>Request check</h3>
-    <label>Player<select value={actorId} onChange={event => setActorId(event.target.value)}>{available.map(participant => <option key={participant.id} value={participant.id}>{participant.displayName}</option>)}</select></label>
+    <label>Player<select value={checkParticipantId} onChange={event => setCheckParticipantId(event.target.value)}>{availablePlayers.map(participant => <option key={participant.id} value={participant.id}>{participant.displayName}</option>)}</select></label>
     <label>Check<select value={checkId} onChange={event => setCheckId(event.target.value)}>{Object.entries(defs.checks).map(([id, check]) => <option key={id} value={id}>{check.label}</option>)}</select></label>
     <label>Difficulty<input type="number" value={difficulty} onChange={event => setDifficulty(Number(event.target.value))} /></label>
-    <button disabled={busy || !actorId || !checkId} onClick={() => void run(() => authorizedPost(`/sessions/${session.id}/checks`, { participantId: actorId, checkId, difficulty, visibility: "full" }, gmToken))}>SEND CHECK</button>
+    <button disabled={busy || !checkParticipantId || !checkId} onClick={() => void run(() => authorizedPost(`/sessions/${session.id}/checks`, { participantId: checkParticipantId, checkId, difficulty, visibility: "full" }, gmToken))}>SEND CHECK</button>
 
     <h3>Action</h3>
+    <label>Source actor<select value={actorId} onChange={event => setActorId(event.target.value)}>{available.map(actor => <option key={actor.id} value={actor.id}>{actor.displayName}</option>)}</select></label>
     <label>Action<select value={actionId} onChange={event => setActionId(event.target.value)}>{Object.entries(defs.actions).map(([id, definition]) => <option key={id} value={id}>{definition.label}</option>)}</select></label>
     {targetPolicy === "single-actor" && <label>Target<select value={targetId} onChange={event => setTargetId(event.target.value)}>{available.map(participant => <option key={participant.id} value={participant.id}>{participant.displayName}</option>)}</select></label>}
     {targetPolicy === "multiple-actors" && <fieldset className="choiceList"><legend>Targets</legend>{available.map(participant => <label key={participant.id}><input type="checkbox" checked={targetIds.includes(participant.id)} onChange={() => setTargetIds(ids => toggle(ids, participant.id))} />{participant.displayName}</label>)}</fieldset>}
@@ -121,8 +129,8 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
     <h3>Encounter</h3>
     {activeEncounter ? <article>
       <p>Ordering: <b>{activeEncounter.orderingPolicy}</b></p>
-      {activeEncounter.currentActorId ? <p>Round {activeEncounter.round} · Turn {activeEncounter.turn} · Current: <b>{nameOf(activeEncounter.currentActorId, participants)}</b></p> : <p>No turn order for this Pack.</p>}
-      {activeEncounter.order.length > 0 && <p>Order: {activeEncounter.order.map(id => nameOf(id, participants)).join(" → ")}</p>}
+      {activeEncounter.currentActorId ? <p>Round {activeEncounter.round} · Turn {activeEncounter.turn} · Current: <b>{nameOf(activeEncounter.currentActorId, participants, actors)}</b></p> : <p>No turn order for this Pack.</p>}
+      {activeEncounter.order.length > 0 && <p>Order: {activeEncounter.order.map(id => nameOf(id, participants, actors)).join(" → ")}</p>}
       <div className="actions">
         {activeEncounter.currentActorId && <button disabled={busy} onClick={() => void run(() => authorizedPost(`/encounters/${activeEncounter.id}/advance`, {}, gmToken))}>END TURN</button>}
         <button className="secondary" disabled={busy} onClick={() => void run(() => authorizedPost(`/encounters/${activeEncounter.id}/end`, {}, gmToken))}>END ENCOUNTER</button>

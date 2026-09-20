@@ -4,7 +4,7 @@
 
 ## Checks and real flows
 
-- `./scripts/m0-check.sh`: pnpm 10.17.1 install, PostgreSQL Compose startup, full TypeScript check, 41 unit/conformance tests — pass. Corepack is unavailable locally; the script uses the pinned pnpm through npm as a fallback.
+- `./scripts/m0-check.sh`: pnpm 10.17.1 install, PostgreSQL Compose startup, full TypeScript check — pass. The current unit/conformance suite has 42 passing tests, including invalid NPC template resources. Corepack is unavailable locally; the script uses the pinned pnpm through npm as a fallback.
 - `pnpm --filter @masterhost/web build` through pinned pnpm — pass.
 - `node scripts/m0-runtime-smoke.mjs` — pass against PostgreSQL for Classic Fantasy and Cyberpunk: create/reload, provenance, CUSTOM/LOCK, impact preview, regeneration, snapshot, fork and ZIP import round trip.
 - `pnpm exec tsx scripts/concurrency-smoke.mts` — pass against PostgreSQL: one of two actor mutations and one of two turn advances commits; stale commands return 409 and leave no event. The script removes its own database fixtures.
@@ -12,6 +12,7 @@
 - `node scripts/runtime-smoke.mjs` — pass against PostgreSQL for Fantasy: PIN required at join; GM and participant tokens enforced for commands, reads and WebSocket; cross-player access rejected; eight concurrent roll requests produce one resolution and one event pair; action events, target rejection, encounter turns, effect ticks/expiry and PIN invalidation after FINISHED. Parallel Action requests are checked against the number of committed EffectApplied events and final effects.
 - `node scripts/cyberpunk-runtime-smoke.mjs` against the Cyberpunk server — pass: Signal Boost applies an effect to two actors, no-order Encounter has no turn advancement or TurnStarted event, and the Session finishes.
 - Browser M2 flow on Fantasy: GM selected two Rally targets, started and advanced an Encounter, observed both effects tick, reloaded to restore the Encounter, ended it and finished the Session. The player view showed own/other turn and restored after reload. Browser M2 flow on Cyberpunk: GM and player saw an active Encounter without turn order; GM ended it and finished the Session.
+- NPC extension: Fantasy and Cyberpunk live API smokes pass Pack-template NPC creation, NPC-sourced Actions, resource effects and an Encounter including an NPC. In the Fantasy browser, GM added Goblin, applied NPC-sourced damage and advanced the Encounter to the Goblin turn; the player view updated, then the Session finished.
 
 ## M0 — World Engine
 
@@ -25,4 +26,4 @@
 
 **Status: M2.2–M2.5 baseline implemented and locally verified.** Declarative Action steps compose Check, Roll, Resource and Effect; target policies cover none, self, one actor and multiple actors. The HTTP layer delegates execution to `packages/game-runtime`. Action and Encounter mutations persist events and state together in one PostgreSQL transaction with actor and Encounter version checks. Stale commands return 409 without events. Actor initialization now inserts its state and event atomically. Standalone Check creation and resolution now persist their events in transactions; concurrent roll requests return the first saved result. Encounter ordering supports none, fixed, rolled, attribute and custom policies; Pack configuration selects the policy. Turns and rounds emit lifecycle events, and effects emit tick/expiry events. Fantasy and Cyberpunk contain declarative composed action examples.
 
-Remaining runtime work: NPC/creature actors and richer Encounter management; richer Pack capability validation; recovery from snapshots plus later events; replay and multi-node realtime. The UI currently offers initialized player actors as Encounter participants. These gaps prevent a production or full gameplay acceptance claim.
+Session NPCs now come from validated Pack actor templates, persist in the actor state table, and share Action and Encounter commands with player actors. Their resources and action/ordering attributes are defined by the Pack. NPCs are not yet linked to materialized World entities, independently editable, or removable; richer Encounter management, stronger Pack capability validation, recovery from snapshots plus later events, and multi-node realtime remain open. These gaps prevent a production or full gameplay acceptance claim.
