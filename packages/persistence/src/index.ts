@@ -59,4 +59,5 @@ export * from "./actor-state-repository.js";
 export * from "./encounter-repository.js";
 export * from "./runtime-mutation-repository.js";
 export * from "./runtime-replay-repository.js";
+export * from "./check-recovery-repository.js";
 export * from "./migration-lock.js";

@@ -59,6 +59,8 @@ const checkEvents = await valid(`/sessions/${session.id}/events`, undefined, cam
 assert.equal(checkEvents.filter(event => event.type === "CheckRequested" && event.payload.id === check.id).length, 1);
 assert.equal(checkEvents.filter(event => event.type === "DiceRolled" && event.payload.requestId === check.id).length, 1);
 assert.equal(checkEvents.filter(event => event.type === "CheckResolved" && event.payload.requestId === check.id).length, 1);
+assert.equal((await call(`/sessions/${session.id}/runtime/verify-checks`)).status, 403);
+assert.deepEqual(await valid(`/sessions/${session.id}/runtime/verify-checks`, undefined, campaign.gmToken), { matching: true, eventCount: checkEvents.length, checkIds: [], issues: [] });
 await valid(`/sessions/${session.id}/actions`, { actorId: player.id, targetActorIds: [player.id], actionId: "poison" }, campaign.gmToken);
 assert.equal((await call(`/sessions/${session.id}/runtime/snapshots`, {})).status, 403);
 const runtimeSnapshot = await valid(`/sessions/${session.id}/runtime/snapshots`, {}, campaign.gmToken);

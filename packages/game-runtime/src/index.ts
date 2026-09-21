@@ -39,3 +39,4 @@ export function tickEffects(effects:ActiveEffect[],unit:"turns"|"rounds",defs:Re
 export * from "./actions.js";
 export * from "./encounters.js";
 export * from "./replay.js";
+export * from "./check-replay.js";

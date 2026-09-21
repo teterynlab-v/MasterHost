@@ -30,6 +30,7 @@ M2.2 declarative actions, M2.3 target policies, M2.4 Encounter ordering/turns, a
 - GM can add initialized Actors to, or remove non-current Actors from, a live Encounter. The roster event and Encounter version update are atomic; late entrants append to the established order. See `WORLD_ACTOR_ENCOUNTER_DECISION.md`.
 - GM-only runtime verification reconstructs Actor and Encounter state from version-1 events and compares it with persisted materialized state in one database snapshot.
 - GM can create a checkpoint only after full replay matches materialized state. Checkpoint verification replays subsequent events. An offline command can repair divergent Actor/Encounter rows for a finished Session and records an audit row; see `RUNTIME_RECOVERY_DECISION.md`.
+- Standalone pending and resolved Checks now have a separate event replay verifier and offline finished-Session repair with audit. The GM-only verification endpoint reports mismatches; Action-scoped rolls are excluded from this Check projection. See `CHECK_RECOVERY_DECISION.md`.
 
 ### Pack examples
 
@@ -69,8 +70,10 @@ A later Fantasy browser flow verified adding Goblin, an NPC-sourced action again
 
 On 2026-09-21, the Fantasy browser created a Character through the three-step Pack schema, entered Perception 2 and Athletics 3, and reached the Session lobby. The Fantasy and Cyberpunk PostgreSQL API smokes exercised numeric Check modifiers and Pack actions; both M0 persistence/ZIP smokes remained green. The full suite passed 52 tests, TypeScript passed, and the web production build passed. This verifies the two bundled Packs and local runtime; it is not acceptance of arbitrary third-party Packs.
 
+The Check recovery slice passed 54 tests, TypeScript, the web build, both Pack API smokes with live PostgreSQL Check verification, and an isolated PostgreSQL corruption/repair smoke. No browser UI changed in this slice. Database Check timestamps are outside comparison; see the decision record.
+
 ## Next architecture step
 
-1. Add multi-node realtime delivery and operational recovery for pending Checks. Current checkpoints cover Actor/Encounter state only; repair requires a finished Session and stopped servers.
+1. Add multi-node realtime delivery. Check repair and Actor/Encounter repair remain separate stopped-server commands; checkpoints cover Actor/Encounter state only.
 2. Add NPC editing/removal and explicit reconciliation if a linked World entity changes or disappears in a later revision.
 3. Extend Pack validation for future capabilities when their execution semantics are defined; arbitrary third-party Packs and custom Action executors remain outside this verified slice.

@@ -67,6 +67,7 @@ assert.equal((await call(`/encounters/${started.encounter.id}/advance`, {}, camp
 await valid(`/encounters/${started.encounter.id}/end`, {}, campaign.gmToken);
 const events = await valid(`/sessions/${session.id}/events`, undefined, campaign.gmToken);
 assert.equal(events.filter(event => event.type === "CheckRequested" && event.payload.id === check.id).length, 1);
+assert.deepEqual(await valid(`/sessions/${session.id}/runtime/verify-checks`, undefined, campaign.gmToken), { matching: true, eventCount: events.length, checkIds: [], issues: [] });
 assert.equal(events.filter(event => event.type === "EffectApplied").length, 2);
 assert.ok(events.some(event => event.type === "EncounterStarted"));
 assert.ok(events.some(event => event.type === "EncounterEnded"));
