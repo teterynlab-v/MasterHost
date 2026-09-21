@@ -1,5 +1,11 @@
 # MasterHost Project Status
 
+## Current product expansion
+
+- **M17 Deep Universe Foundation: complete (2026-09-22).** Deep Universe Standard v1, Campaign Kits, quality assessment, twelve-entry catalog, preview, Play Today handoff, and Pack Creator completeness dashboard passed the isolated PostgreSQL/browser gate. Evidence: `docs/M17_STATUS.md`.
+- **Next:** M18 Deep Classic Fantasy. M18–M29 each deliver one complete universe to the same standard; M30 accepts the whole collection.
+- Ordinary clean installations correctly show all twelve entries as planned until their exact conforming Pack versions are present. The temporary ready Pack used by the M17 gate is not shipped content.
+
 **Verified:** 2026-09-21 on the local macOS development machine. Source came from `MasterHost-m2.1-actions-resources-effects.zip`; the supplied folder contained archives and no Git checkout.
 
 ## Checks and real flows

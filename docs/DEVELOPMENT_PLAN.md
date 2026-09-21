@@ -651,6 +651,29 @@ mechanism, not the product identity.
                                       features
   -----------------------------------------------------------------------
 
+## Deep universe product roadmap
+
+The approved product expansion is defined in `docs/superpowers/specs/2026-09-22-deep-universe-collection-design.md`. It preserves the generic Pack-driven runtime and adds no short-text composer.
+
+| Milestone | Product result | State |
+|---|---|---|
+| M17 | Deep Universe Standard, Campaign Kits, quality gate, catalog and preview | Complete |
+| M18 | Deep Classic Fantasy | Next |
+| M19 | Deep Space Opera | Planned |
+| M20 | Deep Cyberpunk | Planned |
+| M21 | Deep Gothic Horror | Planned |
+| M22 | Deep Post-Apocalypse | Planned |
+| M23 | Deep Dark Fantasy | Planned |
+| M24 | Mythic Antiquity | Planned |
+| M25 | Weird West | Planned |
+| M26 | Urban Fantasy | Planned |
+| M27 | Cosmic Investigation | Planned |
+| M28 | Age of Sail | Planned |
+| M29 | Mecha & Kaiju | Planned |
+| M30 | Whole-collection compatibility, localization, release and product acceptance | Planned |
+
+Each universe milestone closes only after the complete Deep Universe Standard, Quick and Advanced assembly, `.mhgame` round trip, restart persistence, Character → Campaign → Session play, ready demo, and clean browser gate pass.
+
 # Current immediate backlog
 
 Do now, in order:
