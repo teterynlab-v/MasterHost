@@ -18,6 +18,7 @@ function fixture(): MhGameExportInput {
 describe("M14 mhgame transport", () => {
   it("round-trips the exact nested packages, evidence and media", () => {
     const input = fixture(), bytes = exportMhGame(input), files = unzipSync(bytes);
+    expect(exportMhGame(input)).toEqual(bytes);
     expect(Object.keys(files).sort()).toEqual(["attribution.json", "checksums.json", "dependencies.lock.json", "game-assets/masterhost.asset.sunforge.setting@1.0.0.json", "game.json", "pack.mhpack", "world.mhworld"]);
     const imported = inspectMhGame(bytes, randomUUID());
     expect(imported.manifest.packageId).toBe(input.packageId); expect(imported.runtimePack.document).toEqual(input.packProject.document); expect(imported.runtimePack.assetData).toEqual(input.packProject.assetData);
@@ -37,6 +38,7 @@ describe("M14 mhgame transport", () => {
     const bytes = exportMhGame(fixture()), files = unzipSync(bytes); files["game.json"]![0] ^= 1;
     expect(() => inspectMhGame(zipSync(files), randomUUID())).toThrow(/checksum/i);
     expect(() => inspectMhGame(zipSync({ "../escape": strToU8("x") }), randomUUID())).toThrow(/unsafe/i);
+    expect(() => inspectMhGame(zipSync({ "%2e%2e/escape": strToU8("x") }), randomUUID())).toThrow(/unsafe/i);
     expect(() => inspectMhGame(new Uint8Array(25_000_001), randomUUID())).toThrow(/25 MB/i);
     const mismatch = fixture(); mismatch.world.packVersion = "9.9.9"; mismatch.world.descriptor.worldPack.version = "9.9.9";
     expect(() => exportMhGame(mismatch)).toThrow(/Pack identity/i);
@@ -57,6 +59,9 @@ databaseSuite("M14 atomic game installation", () => {
     expect(editable?.status).toBe("draft"); expect(editable?.lineage).toMatchObject({ source: "mhgame", packageId: input.packageId });
     expect((await hosted.realm(realmId))?.activePack).toEqual(installed.runtimePack);
     await expect(games.install(imported, realmId)).rejects.toMatchObject({ statusCode: 409 });
+    expect((await packs.list(realmId))).toHaveLength(2); expect(await worlds.list(realmId)).toHaveLength(1);
+    const late = inspectMhGame(exportMhGame(fixture()), realmId); late.runtimePack.document.manifest.id = "masterhost.m14-late"; late.world.packId = late.world.descriptor.worldPack.id = late.dependencyLock.pack.id = "masterhost.m14-late"; late.world.assets = { "late.png": { checksum: "0".repeat(64), mediaType: "image/png", size: 10 } }; late.worldAssets = { "late.png": strToU8("bad") };
+    await expect(games.install(late, realmId)).rejects.toThrow(/Missing or invalid asset/);
     expect((await packs.list(realmId))).toHaveLength(2); expect(await worlds.list(realmId)).toHaveLength(1);
   });
 });

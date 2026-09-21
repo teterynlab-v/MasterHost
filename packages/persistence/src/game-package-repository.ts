@@ -43,13 +43,13 @@ export class GamePackageRepository {
       if (!realm) throw Object.assign(Error("Realm not found"), { statusCode: 404 });
       const collision = (await tx`select id from world_pack_projects where realm_id=${realmId} and pack_id=${prepared.runtimePack.document.manifest.id} and pack_version=${prepared.runtimePack.document.manifest.version} and status='published'`)[0];
       if (collision) throw Object.assign(Error("Pack ID and version are already installed"), { statusCode: 409 });
+      for (const project of [prepared.runtimePack, prepared.editablePack]) await tx`insert into world_pack_projects(id,realm_id,pack_id,pack_version,status,revision,data) values(${project.id},${realmId},${project.document.manifest.id},${project.document.manifest.version},${project.status},${project.revision},${tx.json(project as any)})`;
       for (const [path, ref] of Object.entries(prepared.world.assets ?? {})) {
         const data = game.worldAssets[path];
         if (!data || data.length !== ref.size || assetChecksum(data) !== ref.checksum) throw Error(`Missing or invalid asset ${path}`);
         validateWorldImage(path, ref.mediaType, data);
         await tx`insert into world_asset_blobs(checksum,data) values(${ref.checksum},${Buffer.from(data)}) on conflict(checksum) do nothing`;
       }
-      for (const project of [prepared.runtimePack, prepared.editablePack]) await tx`insert into world_pack_projects(id,realm_id,pack_id,pack_version,status,revision,data) values(${project.id},${realmId},${project.document.manifest.id},${project.document.manifest.version},${project.status},${project.revision},${tx.json(project as any)})`;
       await tx`insert into worlds(id,realm_id,name,revision,data) values(${prepared.world.id},${realmId},${prepared.world.name},${prepared.world.revision},${tx.json(prepared.world as any)})`;
       await tx`insert into world_revisions(id,world_id,revision,reason,data) values(${randomUUID()},${prepared.world.id},${prepared.world.revision},'mhgame-import',${tx.json(prepared.world as any)})`;
       const evidence = { manifest: game.manifest, descriptorProject: game.descriptorProject, gameAssets: game.gameAssets, dependencyLock: game.dependencyLock, attribution: game.attribution };

@@ -26,7 +26,7 @@ try {
   await navigate(`${webUrl}/?realm=${encodeURIComponent(state.browserSlug)}`); await evaluate(`sessionStorage.setItem(${JSON.stringify(`masterhost.realmAccess.${state.browserSlug}`)}, ${JSON.stringify(state.browserToken)}); localStorage.setItem('masterhost.realm', ${JSON.stringify(state.browserSlug)}); location.hash='game-builder';`);
   await waitForText("QUICK GAME BUILDER"); await click("NEXT");
   for (const heading of ["Setting", "World template", "Locations", "Cast", "Items, clues and rewards", "Rules", "Character Builder", "Adventure, scenes and encounters", "Visual style"]) {
-    await waitForText(heading); assert.equal(await evaluate("document.querySelectorAll('.quickChoices article').length"), 3, `${heading} should expose three choices`);
+    await waitForText(heading); await poll(() => evaluate("document.querySelectorAll('.quickChoices article').length === 3"), `${heading} should expose three choices`);
     await evaluate("document.querySelector('.quickChoices article button').click()"); await poll(() => evaluate("[...document.querySelectorAll('button')].some(value => value.textContent.trim()==='NEXT' && !value.disabled)"), `NEXT disabled for ${heading}`);
     if (heading === "Visual style") await poll(() => evaluate("[...document.querySelectorAll('.quickChoices img')].every(value => value.complete && value.naturalWidth > 0) && document.querySelectorAll('.quickChoices img').length === 3"), "Quick media did not load");
     await click("NEXT");

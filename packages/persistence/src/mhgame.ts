@@ -8,7 +8,7 @@ import { exportMhPack, importMhPack } from "./mhpack.js";
 import { exportMhWorldZip, importMhWorldZipWithAssets } from "./mhworld-zip.js";
 
 const sha = (bytes: Uint8Array) => createHash("sha256").update(bytes).digest("hex");
-const safePath = (path: string) => Boolean(path) && !path.startsWith("/") && !path.includes("\\") && !path.split("/").some(part => part === "." || part === "..");
+const safePath = (path: string) => { try { const decoded = decodeURIComponent(path); return Boolean(path) && !path.startsWith("/") && !decoded.startsWith("/") && !path.includes("\\") && !decoded.includes("\\") && !decoded.split("/").some(part => part === "." || part === ".."); } catch { return false; } };
 const Identity = z.object({ id: z.string().min(1), version: z.string().min(1) }).strict();
 const AssetEvidence = z.object({ schemaVersion: z.string(), id: z.string().regex(/^[a-zA-Z0-9][a-zA-Z0-9._-]*$/), version: z.string(), type: z.string(), name: z.string(), contentChecksum: z.string().regex(/^[a-f0-9]{64}$/), license: z.object({ spdx: z.string(), attribution: z.string(), source: z.string() }).strict() }).passthrough();
 const DescriptorProject = z.object({ id: z.string(), name: z.string(), revision: z.number().int().positive(), seed: z.string(), basePack: Identity, selections: z.array(z.object({ fragmentId: z.string(), version: z.string(), parameters: z.record(z.string(), z.union([z.string(), z.number(), z.boolean()])) }).strict()), decisions: z.record(z.string(), z.unknown()), locks: z.array(z.string()) }).strict();

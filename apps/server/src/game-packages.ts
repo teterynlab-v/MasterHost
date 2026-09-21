@@ -11,7 +11,7 @@ const fail = (message: string, statusCode = 400) => Object.assign(Error(message)
 
 export async function registerGamePackages(app: FastifyInstance, dependencies: Dependencies) {
   const realmFor = async (request: any) => app.masterhostResolveRealm ? app.masterhostResolveRealm(request) : fail("Realm hosting is unavailable", 503) as never;
-  const authorize = async (request: any) => { const realm = await realmFor(request), role = app.masterhostRole ? await app.masterhostRole(request, realm) : null; if (!role || !["owner", "creator"].includes(role)) throw fail("Creator role required", 403); return realm; };
+  const authorize = async (request: any, roles: string[] = ["owner", "creator"]) => { const realm = await realmFor(request), role = app.masterhostRole ? await app.masterhostRole(request, realm) : null; if (!role || !roles.includes(role)) throw fail(roles.includes("gm") ? "GM role required" : "Creator role required", 403); return realm; };
   const assetData = async (document: any, realmId: string, active: LoadedWorldPack | null) => {
     const projects = await dependencies.packs.list(realmId), result: Record<string, string> = {};
     for (const [name, metadata] of Object.entries(document.assets) as [string, any][]) {
@@ -28,7 +28,7 @@ export async function registerGamePackages(app: FastifyInstance, dependencies: D
   };
   const source = async (world: any, realm: any) => {
     const projects = await dependencies.packs.list(realm.id), published = projects.find(value => value.status === "published" && value.document.manifest.id === world.packId && value.document.manifest.version === world.packVersion);
-    const composition = world.descriptor.composition, descriptor = composition ? await dependencies.descriptors.revision(composition.projectId, composition.revision) : null;
+    const composition = world.descriptor.composition, lineage = published?.lineage?.source === "game-descriptor" ? published.lineage : null, descriptor = composition ? await dependencies.descriptors.revision(composition.projectId, composition.revision) : lineage ? await dependencies.descriptors.revision(lineage.projectId, lineage.revision) : null;
     if (published) return { pack: published, descriptor };
     if (!descriptor) throw fail("World has no exportable Pack source", 409);
     const active = app.masterhostActivePack ? await app.masterhostActivePack(realm) : null, now = new Date().toISOString();
@@ -38,7 +38,7 @@ export async function registerGamePackages(app: FastifyInstance, dependencies: D
   const descriptorEvidence = (value: GameDescriptorProject | null) => value ? { id: value.id, name: value.name, revision: value.revision, seed: value.seed, basePack: value.basePack, selections: value.selections, decisions: value.decisions, locks: value.locks } : undefined;
 
   app.get("/api/worlds/:id/export-game", async (request: any, reply) => {
-    const realm = await authorize(request), world = await dependencies.worlds.get(request.params.id);
+    const realm = await authorize(request, ["owner", "creator", "gm"]), world = await dependencies.worlds.get(request.params.id);
     if (!world || world.realmId !== realm.id) throw fail("world not found in Realm", 404);
     const previous = await dependencies.packages.getByWorld(realm.id, world.id), resolved = await source(world, realm), evidence = previous?.evidence;
     const selected = (resolved.descriptor?.selections ?? evidence?.descriptorProject?.selections ?? []).map((selection: any) => dependencies.assets.find(asset => asset.id === selection.fragmentId && asset.version === selection.version) ?? evidence?.gameAssets?.find((asset: any) => asset.id === selection.fragmentId && asset.version === selection.version)).filter(Boolean);

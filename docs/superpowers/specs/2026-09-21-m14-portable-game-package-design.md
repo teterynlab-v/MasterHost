@@ -1,6 +1,6 @@
 # M14 Portable Game Package Design
 
-**Status:** approved roadmap slice, implementation starting 2026-09-21
+**Status:** accepted locally on 2026-09-21; evidence in `docs/M14_STATUS.md`
 
 ## Outcome
 
