@@ -99,3 +99,5 @@ export * from "./runtime-replay-repository.js";
 export * from "./check-recovery-repository.js";
 export * from "./migration-lock.js";
 export { validateWorldImage, assetChecksum } from "./world-assets.js";
+export * from "./pack-project-repository.js";
+export * from "./mhpack.js";

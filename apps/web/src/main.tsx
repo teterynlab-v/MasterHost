@@ -1,5 +1,6 @@
 import React,{useEffect,useState}from"react";import{createRoot}from"react-dom/client";import"./style.css";import{PlayerJoin,GmLobby}from"./lobby.js";
 import { WorldBuilder } from "./world-builder.js";
+import { PackCreator } from "./pack-creator.js";
 const API=(import.meta as any).env?.VITE_API_URL??"http://localhost:8080/api";
 async function api(path:string,init?:RequestInit){const r=await fetch(`${API}${path}`,init);const type=r.headers.get("content-type")??"";const body=type.includes("json")?await r.json():await r.text();if(!r.ok)throw Error((body as any)?.message??`HTTP ${r.status}`);return body}
 function App(){
@@ -22,8 +23,9 @@ function App(){
  const visibleWorlds=worlds.filter(w=>`${w.name} ${w.id}`.toLowerCase().includes(worldFilter.toLowerCase()));
  if(hash==="join")return <PlayerJoin/>;
  if(hash==="gm"&&world)return <GmLobby world={world} onBack={()=>location.hash=""}/>;
+ if(hash==="pack")return <PackCreator request={api} apiRoot={API} onBack={()=>location.hash=""}/>;
  if(!pack)return <main><h1>MASTERHOST</h1><p>{error||"Loading…"}</p></main>;
- return <main><header><h1>MASTERHOST</h1><p className="muted">{pack.manifest.name} · {pack.manifest.version}</p></header>{error&&<p className="error">{error}</p>}
+ return <main><header className="titleRow"><div><h1>MASTERHOST</h1><p className="muted">{pack.manifest.name} · {pack.manifest.version}</p></div><button className="secondary" onClick={()=>location.hash="pack"}>Create World Pack</button></header>{error&&<p className="error">{error}</p>}
  {!world?<section><h2>Quick World</h2><p className="muted">Choose only what matters. The pack resolves the rest.</p>{pack.questions.map((q:any)=><label key={q.id}>{q.label}<select value={choices[q.id]??q.default} onChange={e=>setChoices({...choices,[q.id]:e.target.value})}>{q.options.map((o:any)=><option key={o.value} value={o.value}>{o.label}</option>)}</select></label>)}<button onClick={generate}>Generate world</button><label>Import .mhworld<input type="file" accept=".mhworld" onChange={e=>{const file=e.target.files?.[0];if(file)void importWorld(file);e.target.value=""}}/></label>{worlds.length>0&&<article><h3>Open saved World</h3><label>Find World<input value={worldFilter} onChange={e=>{const query=e.target.value;setWorldFilter(query);setSelectedWorldId(worlds.find(w=>`${w.name} ${w.id}`.toLowerCase().includes(query.toLowerCase()))?.id??"")}}/></label><label>World<select value={selectedWorldId} onChange={e=>setSelectedWorldId(e.target.value)}>{visibleWorlds.map(w=><option key={w.id} value={w.id}>{w.name} · revision {w.revision} · {w.id.slice(0,8)}</option>)}</select></label><button className="secondary" disabled={!selectedWorldId} onClick={openWorld}>Open World</button></article>}</section>
  :<section><div className="titleRow"><div><h2>{world.name}</h2><p className="muted">Seed <code>{world.seed}</code> · revision {world.revision}</p></div><button className="secondary" onClick={()=>{setWorld(undefined);setReport(undefined);sessionStorage.removeItem("masterhost.worldId")}}>New world</button></div>
  {report&&<article><h3>Generation report</h3><div className="row"><b>Entities</b><span>{report.entities}</span><small>{Object.entries(report.kinds).map(([k,v])=>`${k}: ${v}`).join(" · ")}</small></div></article>}

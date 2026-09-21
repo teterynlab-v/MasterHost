@@ -126,6 +126,9 @@ importers:
       '@masterhost/game-runtime':
         specifier: workspace:*
         version: link:../game-runtime
+      '@masterhost/worldpack-sdk':
+        specifier: workspace:*
+        version: link:../worldpack-sdk
       fflate:
         specifier: ^0.8.2
         version: 0.8.3
