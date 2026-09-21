@@ -95,6 +95,7 @@ constraints:
     min: 2
 
 characterCreation:
+  schemaVersion: "2"
   steps:
     - id: identity
       title: Identity
@@ -116,6 +117,37 @@ characterCreation:
       fields:
         - { id: perception, label: Perception, type: number, min: -3, max: 5, default: 0 }
         - { id: athletics, label: Athletics, type: number, min: -3, max: 5, default: 0 }
+        - { id: arcana, label: Arcana, type: number, min: -3, max: 5, default: 0, when: { field: archetype, equals: scholar } }
+    - id: appearance
+      title: Appearance
+      fields:
+        - id: portrait
+          label: Portrait
+          type: asset
+          required: true
+          default: illustrated
+          options:
+            - { value: illustrated, label: Illustrated portrait }
+            - { value: silhouette, label: Silhouette token }
+  calculated:
+    - { id: readiness, operation: sum, fields: [perception, athletics] }
+  starting:
+    progression: { experience: 0 }
+    resources: { health: 20, mana: 10 }
+    inventory:
+      - { id: sword, quantity: 1, when: { field: archetype, equals: warrior } }
+      - { id: lockpicks, quantity: 1, when: { field: archetype, equals: rogue } }
+      - { id: spellbook, quantity: 1, when: { field: archetype, equals: scholar } }
+    traits:
+      - { id: martial-training, when: { field: archetype, equals: warrior } }
+      - { id: subtle, when: { field: archetype, equals: rogue } }
+      - { id: learned, when: { field: archetype, equals: scholar } }
+    assets:
+      - { id: portrait, value: assets/ui/default-portrait.svg }
+  portability:
+    rules:
+      - { fromPackId: masterhost.classic-fantasy-test, fromVersions: [0.1.0], fromSchemaVersions: ["1"], mode: normalize, defaults: { portrait: illustrated } }
+      - { fromPackId: masterhost.classic-fantasy-test, fromVersions: [0.0.9], mode: normalize, defaults: { portrait: illustrated } }
 
 checks:
   perception: { label: Perception, dice: 1d20, modifierField: perception }

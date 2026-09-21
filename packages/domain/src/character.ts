@@ -1,5 +1,11 @@
-export type CharacterFieldType="text"|"choice"|"number";
-export interface CharacterField{id:string;label:string;type:CharacterFieldType;required?:boolean;options?:{value:string;label:string}[];min?:number;max?:number;default?:unknown}
-export interface CharacterStep{id:string;title:string;fields:CharacterField[]}
-export interface CharacterCreationSchema{steps:CharacterStep[]}
-export interface Character{id:string;realmId:string;worldPackId:string;worldPackVersion:string;ownerProfileId?:string;displayName:string;values:Record<string,unknown>;createdAt:string;updatedAt:string}
+export type CharacterFieldType="text"|"choice"|"number"|"asset";
+export interface CharacterCondition{field:string;equals?:unknown;in?:unknown[]}
+export interface CharacterField{id:string;label:string;type:CharacterFieldType;required?:boolean;options?:{value:string;label:string}[];min?:number;max?:number;minLength?:number;maxLength?:number;pattern?:string;default?:unknown;when?:CharacterCondition}
+export interface CharacterStep{id:string;title:string;fields:CharacterField[];when?:CharacterCondition}
+export interface CharacterCalculatedValue{id:string;operation:"sum"|"copy";fields:string[]}
+export interface CharacterStartingEntry{id:string;quantity?:number;value?:unknown;when?:CharacterCondition}
+export type CharacterPortabilityMode="accept"|"normalize"|"migrate";
+export interface CharacterPortabilityRule{fromPackId:string;fromVersions:string[];fromSchemaVersions?:string[];mode:CharacterPortabilityMode;fieldMap?:Record<string,string>;defaults?:Record<string,unknown>}
+export interface CharacterCreationSchema{schemaVersion?:string;steps:CharacterStep[];calculated?:CharacterCalculatedValue[];starting?:{progression?:Record<string,unknown>;resources?:Record<string,number>;inventory?:CharacterStartingEntry[];traits?:CharacterStartingEntry[];assets?:CharacterStartingEntry[]};portability?:{rules:CharacterPortabilityRule[]}}
+export interface Character{id:string;realmId:string;worldPackId:string;worldPackVersion:string;characterSchemaVersion:string;ownerProfileId?:string;displayName:string;values:Record<string,unknown>;progression:Record<string,unknown>;inventory:CharacterStartingEntry[];resources:Record<string,number>;traits:string[];assets:Record<string,unknown>;createdAt:string;updatedAt:string}
+export type CharacterPortability={compatible:boolean;mode:"exact"|CharacterPortabilityMode|"reject";reason:string;values?:Record<string,unknown>};

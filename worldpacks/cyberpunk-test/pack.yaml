@@ -119,6 +119,7 @@ constraints:
     min: 3
 
 characterCreation:
+  schemaVersion: "2"
   steps:
     - id: identity
       title: Identity
@@ -140,6 +141,41 @@ characterCreation:
       fields:
         - { id: interface, label: Interface, type: number, min: -3, max: 5, default: 0 }
         - { id: awareness, label: Awareness, type: number, min: -3, max: 5, default: 0 }
+        - { id: intrusionSuite, label: Intrusion suite, type: text, minLength: 2, maxLength: 40, pattern: "^[A-Za-z0-9 _-]+$", when: { field: role, equals: netrunner } }
+    - id: appearance
+      title: Appearance
+      fields:
+        - id: portrait
+          label: Avatar
+          type: asset
+          required: true
+          default: neon
+          options:
+            - { value: neon, label: Neon avatar }
+            - { value: anonymous, label: Anonymous silhouette }
+  calculated:
+    - { id: edge, operation: sum, fields: [interface, awareness] }
+  starting:
+    progression: { streetCred: 0 }
+    resources: { health: 20, humanity: 70, ammo: 12 }
+    inventory:
+      - { id: assault-rifle, quantity: 1, when: { field: role, equals: solo } }
+      - { id: cyberdeck, quantity: 1, when: { field: role, equals: netrunner } }
+      - { id: encrypted-contacts, quantity: 1, when: { field: role, equals: fixer } }
+    traits:
+      - { id: combat-trained, when: { field: role, equals: solo } }
+      - { id: wired, when: { field: role, equals: netrunner } }
+      - { id: connected, when: { field: role, equals: fixer } }
+    assets:
+      - { id: portrait, value: assets/ui/default-portrait.svg }
+  portability:
+    rules:
+      - { fromPackId: masterhost.cyberpunk-test, fromVersions: [0.1.0], fromSchemaVersions: ["1"], mode: normalize, defaults: { portrait: neon } }
+      - fromPackId: masterhost.cyberpunk-test
+        fromVersions: [0.0.9]
+        mode: migrate
+        fieldMap: { name: name, role: archetype, interface: hacking, awareness: perception }
+        defaults: { portrait: neon }
 
 checks:
   intrusion: { label: Intrusion, dice: 2d6, modifierField: interface }

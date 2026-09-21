@@ -1,4 +1,4 @@
-# M2.1 Resources / Effects Acceptance
+# M3 Resources / Effects Acceptance
 
 1. Complete lobby and start LIVE.
 2. Initialize party runtime.

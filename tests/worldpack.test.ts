@@ -69,4 +69,16 @@ describe("world pack", () => {
       await rm(root, { recursive: true, force: true });
     }
   });
+  it("rejects invalid Character DSL references before a Session starts",async()=>{
+    const root=await mkdtemp(join(tmpdir(),"masterhost-pack-"));
+    try{
+      await copyFile(join(fixture,"manifest.yaml"),join(root,"manifest.yaml"));
+      const content=await readFile(join(fixture,"pack.yaml"),"utf8"),cases:Array<[string,string,RegExp]>=[
+        ["field: archetype, equals: scholar","field: missing, equals: scholar",/unknown character field missing/],
+        ["fields: [perception, athletics]","fields: [perception, missing]",/unknown field missing/],
+        ["mode: normalize, defaults:","mode: migrate, defaults:",/requires fieldMap/]
+      ];
+      for(const[before,after,error]of cases){expect(content).toContain(before);await writeFile(join(root,"pack.yaml"),content.replace(before,after));await expect(loadWorldPack(root)).rejects.toThrow(error)}
+    }finally{await rm(root,{recursive:true,force:true})}
+  });
 });
