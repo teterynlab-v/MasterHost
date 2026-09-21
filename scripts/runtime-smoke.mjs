@@ -18,7 +18,7 @@ assert.ok(creature);assert.ok(settlement);
 const campaign = await valid("/campaigns", { worldId: world.id, name: "Runtime smoke" });
 assert.equal((await call(`/campaigns/${campaign.id}/sessions`, {})).status, 403);
 const session = await valid(`/campaigns/${campaign.id}/sessions`, {}, campaign.gmToken);
-assert.match(session.pin, /^\d{5}$/);
+assert.match(session.pin, /^\d{6}$/);
 assert.equal((await valid("/join/resolve", { pin: session.pin })).session.id, session.id);
 const player = await valid(`/sessions/${session.id}/join`, { pin: session.pin, displayName: "Smoke player" });
 assert.ok(player.accessToken);

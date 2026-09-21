@@ -1,6 +1,7 @@
+import{realmHeaders}from"./realm.js";
 const API=(import.meta as any).env?.VITE_API_URL??"http://localhost:8080/api";
-export async function resolvePin(pin:string){const r=await fetch(`${API}/join/resolve`,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({pin})});if(!r.ok)throw Error((await r.json()).message??"PIN not found");return r.json()}
-export async function joinGuest(sessionId:string,pin:string,displayName:string){const r=await fetch(`${API}/sessions/${sessionId}/join`,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({pin,displayName})});if(!r.ok)throw Error((await r.json()).message??"Unable to join");return r.json()}
+export async function resolvePin(pin:string){const r=await fetch(`${API}/join/resolve-global`,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({pin})});if(!r.ok)throw Error((await r.json()).message??"PIN not found");return r.json()}
+export async function joinGuest(sessionId:string,pin:string,displayName:string){const r=await fetch(`${API}/sessions/${sessionId}/join`,{method:"POST",headers:realmHeaders({"content-type":"application/json"}),body:JSON.stringify({pin,displayName})});if(!r.ok)throw Error((await r.json()).message??"Unable to join");return r.json()}
 
 export type ConnectionStatus="connecting"|"live"|"recovering"|"offline"|"closed";
 export function sessionSocket(sessionId:string,credential:string,onEvent:(event:any)=>void,onStatus?:(status:ConnectionStatus)=>void){

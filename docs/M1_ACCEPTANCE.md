@@ -5,7 +5,7 @@ Prerequisite: M0 checks pass.
 1. Generate a World.
 2. Click **Start campaign**.
 3. Enter campaign name and create lobby.
-4. GM screen displays a 5-digit PIN.
+4. GM screen displays a numeric PIN (six digits after the M7 global resolver upgrade).
 5. Open a second browser/private window at `http://localhost:5173/#join`.
 6. Enter PIN.
 7. Session/campaign resolves.

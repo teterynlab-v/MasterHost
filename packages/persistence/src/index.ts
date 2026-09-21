@@ -61,11 +61,12 @@ export class WorldRepository {
   async asset(worldId:string,path:string){const world=await this.get(worldId),ref=world?.assets?.[path];if(!ref)return null;const row=(await this.sql`select data from world_asset_blobs where checksum=${ref.checksum}`)[0];if(!row)throw Error(`Missing stored asset ${path}`);const data=new Uint8Array(row.data as Buffer);if(assetChecksum(data)!==ref.checksum||data.length!==ref.size)throw Error(`Corrupt stored asset ${path}`);return{data,mediaType:ref.mediaType};}
   async assets(worldId:string){const world=await this.get(worldId);if(!world)throw Error("world not found");return Object.fromEntries(await Promise.all(Object.keys(world.assets??{}).map(async path=>[path,(await this.asset(worldId,path))!.data] as const)));}
   async get(id:string){ const r=await this.sql`select data from worlds where id=${id}`; return (r[0]?.data??null) as MaterializedWorld|null; }
-  async list(){ const r=await this.sql`select data from worlds order by updated_at desc`; return r.map(x=>x.data as MaterializedWorld); }
+  async list(realmId?:string){ const r=realmId?await this.sql`select data from worlds where realm_id=${realmId} order by updated_at desc`:await this.sql`select data from worlds order by updated_at desc`; return r.map(x=>x.data as MaterializedWorld); }
+  async publish(id:string,realmId:string){const world=await this.get(id);if(!world||world.realmId!==realmId)throw Object.assign(Error("world not found in Realm"),{statusCode:404});if(world.status!=="published"){world.status="published";world.revision++;world.updatedAt=new Date().toISOString();await this.save(world,"publish")}return world}
   async revisions(worldId:string):Promise<RevisionInfo[]>{ const r=await this.sql`select id,world_id,revision,reason,created_at from world_revisions where world_id=${worldId} order by revision desc`; return r.map(x=>({id:x.id as string,worldId:x.world_id as string,revision:Number(x.revision),reason:x.reason as string,createdAt:new Date(x.created_at as any).toISOString()})); }
   async snapshot(w:MaterializedWorld,name:string){ const id=randomUUID(); await this.sql`insert into world_snapshots(id,world_id,name,revision,data) values(${id},${w.id},${name},${w.revision},${this.sql.json(w as any)})`; return {id,worldId:w.id,name,revision:w.revision}; }
   async snapshots(worldId:string):Promise<SnapshotInfo[]>{ const r=await this.sql`select id,world_id,name,revision,created_at from world_snapshots where world_id=${worldId} order by created_at desc`; return r.map(x=>({id:x.id as string,worldId:x.world_id as string,name:x.name as string,revision:Number(x.revision),createdAt:new Date(x.created_at as any).toISOString()})); }
-  async restore(snapshotId:string){ const r=await this.sql`select data from world_snapshots where id=${snapshotId}`; if(!r[0])throw Error("snapshot not found"); const w=structuredClone(r[0].data as MaterializedWorld); const current=await this.get(w.id); w.revision=(current?.revision??w.revision)+1; w.updatedAt=new Date().toISOString(); return this.save(w,`restore:${snapshotId}`); }
+  async restore(snapshotId:string,realmId?:string){ const r=await this.sql`select data from world_snapshots where id=${snapshotId}`; if(!r[0])throw Error("snapshot not found"); const w=structuredClone(r[0].data as MaterializedWorld);if(realmId&&w.realmId!==realmId)throw Object.assign(Error("snapshot not found in Realm"),{statusCode:404}); const current=await this.get(w.id); w.revision=(current?.revision??w.revision)+1; w.updatedAt=new Date().toISOString(); return this.save(w,`restore:${snapshotId}`); }
   async fork(w:MaterializedWorld,name:string){
     const n=structuredClone(w), idMap=new Map<string,string>(); n.id=randomUUID(); n.name=name; n.revision=1; n.createdAt=n.updatedAt=new Date().toISOString();
     for(const e of n.entities) idMap.set(e.id,randomUUID());
@@ -101,3 +102,5 @@ export * from "./migration-lock.js";
 export { validateWorldImage, assetChecksum } from "./world-assets.js";
 export * from "./pack-project-repository.js";
 export * from "./mhpack.js";
+export * from "./hosted-platform-repository.js";
+export * from "./realtime-bus.js";

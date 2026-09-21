@@ -5,7 +5,7 @@ The two-browser Fantasy lobby and character flow passed through LIVE and reconne
 ## Implemented
 
 - Realm, Campaign, Session, Participant.
-- Session lifecycle and 5-digit PIN.
+- Session lifecycle and a numeric PIN (globally unique six-digit PIN since M7).
 - Guest join and realtime lobby.
 - Reconnect `session.snapshot`.
 - Ready state and LIVE transition.

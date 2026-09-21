@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { realmHeaders } from "./realm.js";
 import { sessionSocket } from "./session-client.js";
 import type { ConnectionStatus } from "./session-client.js";
 
@@ -16,7 +17,7 @@ type Character={displayName:string;values:Record<string,unknown>;traits:string[]
 type PlaytestReport={durationMinutes:number;eventCount:number;gatePassed:boolean;evidence:{checks:number;actions:number;encounters:number;travelMoves:number;reconnects:number;narrativeEvents:number}};
 
 async function call<T>(path: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(`${API}${path}`, init);
+  const response = await fetch(`${API}${path}`, {...init,headers:realmHeaders(init?.headers)});
   const body: unknown = await response.json();
   if (!response.ok) {
     const message = typeof body === "object" && body !== null && "message" in body ? String(body.message) : `HTTP ${response.status}`;

@@ -5,7 +5,7 @@
 - Realm domain model.
 - Campaign domain model.
 - Session state machine.
-- 5-digit PIN allocation and active Realm-scoped uniqueness.
+- Numeric PIN allocation (upgraded by M7 to six-digit global active uniqueness).
 - PIN expiry.
 - Guest participant model.
 - PostgreSQL tables for realms/campaigns/sessions/participants.

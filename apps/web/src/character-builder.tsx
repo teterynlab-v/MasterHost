@@ -1,6 +1,7 @@
 import React,{useMemo,useState}from"react";
+import{realmHeaders}from"./realm.js";
 const API=(import.meta as any).env?.VITE_API_URL??"http://localhost:8080/api";
-async function call(path:string,init?:RequestInit){const r=await fetch(`${API}${path}`,init),x=await r.json();if(!r.ok)throw Error(x.message??`HTTP ${r.status}`);return x}
+async function call(path:string,init?:RequestInit){const r=await fetch(`${API}${path}`,{...init,headers:realmHeaders(init?.headers)}),x=await r.json();if(!r.ok)throw Error(x.message??`HTTP ${r.status}`);return x}
 export function CharacterBuilder({schema,ownerKey,onCreated}:{schema:any;ownerKey:string;onCreated:(c:any)=>void}){
  const matches=(condition:any,data:Record<string,any>)=>!condition||(condition.in?condition.in.includes(data[condition.field]):Object.is(condition.equals,data[condition.field]));
  const defaults=Object.fromEntries((schema?.steps??[]).flatMap((s:any)=>s.fields).filter((f:any)=>f.default!==undefined).map((f:any)=>[f.id,f.default]));
