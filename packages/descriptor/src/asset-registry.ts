@@ -14,6 +14,11 @@ const Asset = z.object({ schemaVersion: z.literal("1"), id: Id, version: Version
 export interface GameAssetMedia { name: string; path: string; role: "map" | "portrait" | "token" | "background" | "item" | "location" | "card"; mediaType: "image/png" | "image/jpeg" | "image/webp" | "image/svg+xml"; checksum: string; size: number; absolutePath: string }
 export interface GameAsset { schemaVersion: "1"; id: string; version: string; type: "setting" | "world-template" | "locations" | "cast" | "items" | "adventure" | "characters" | "rules" | "visuals"; name: string; description: string; tags: string[]; preview: { summary: string; highlights: string[] }; compatibility: { basePackIds: string[]; requiresCapabilities: string[]; providesCapabilities: string[]; conflicts: string[] }; dependencies: { id: string; version: string }[]; license: { spdx: string; attribution: string; source: string }; published: true; lineage?: { forkedFrom: string; version: string }; counts: { locations: number; actors: number; items: number; scenes: number; archetypes: number; rules: number; media: number }; media: GameAssetMedia[]; fragment: GameDescriptorFragment; contentChecksum: string }
 export interface GameAssetCatalogQuery { query?: string; type?: string; tag?: string; basePackId?: string }
+export const quickGameAssetTypes = ["setting", "world-template", "locations", "cast", "items", "rules", "characters", "adventure", "visuals"] as const;
+export type QuickGameAssetType = typeof quickGameAssetTypes[number];
+export interface QuickGameSelection { id: string; version: string }
+export interface QuickGameDiagnostic { code: "unknown-asset" | "incompatible-pack" | "missing-category" | "duplicate-category" | "missing-dependency"; message: string; type?: QuickGameAssetType; asset?: string; dependency?: string }
+export interface QuickGameReview { ready: boolean; diagnostics: QuickGameDiagnostic[]; orderedSelections: QuickGameSelection[]; selected: { id: string; version: string; type: QuickGameAssetType; name: string; preview: GameAsset["preview"]; counts: GameAsset["counts"]; dependencies: GameAsset["dependencies"]; license: GameAsset["license"] }[]; counts: GameAsset["counts"]; licenses: GameAsset["license"][] }
 
 const sha = (value: Uint8Array | string) => createHash("sha256").update(value).digest("hex"), pointer = (value: string) => value.replaceAll("~", "~0").replaceAll("/", "~1");
 const mediaMatches = (bytes: Buffer, mediaType: GameAssetMedia["mediaType"]) => mediaType === "image/png" ? bytes.subarray(0, 8).equals(Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a])) : mediaType === "image/jpeg" ? bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[2] === 0xff : mediaType === "image/webp" ? bytes.subarray(0, 4).toString("ascii") === "RIFF" && bytes.subarray(8, 12).toString("ascii") === "WEBP" : /^\s*(?:<\?xml[^>]*>\s*)?<svg[\s/>]/i.test(bytes.toString("utf8"));
@@ -56,3 +61,29 @@ export function gameAssetCatalog(assets: GameAsset[], filters: GameAssetCatalogQ
 export const gameAssetFragments = (assets: GameAsset[]) => assets.map(asset => structuredClone(asset.fragment));
 export const gameAssetMedia = (assets: GameAsset[], name: string, checksum?: string) => assets.flatMap(asset => asset.media).find(media => media.name === name && (!checksum || media.checksum === checksum));
 export const gameAssetDetail = (assets: GameAsset[], id: string, version: string) => { const asset = assets.find(value => value.id === id && value.version === version); return asset ? publicAsset(asset) : null; };
+
+export function reviewQuickGameSelection(assets: GameAsset[], basePackId: string, selections: QuickGameSelection[]): QuickGameReview {
+  const diagnostics: QuickGameDiagnostic[] = [], byIdentity = new Map(assets.map(asset => [`${asset.id}@${asset.version}`, asset])), selected: GameAsset[] = [];
+  for (const selection of selections) {
+    const identity = `${selection.id}@${selection.version}`, asset = byIdentity.get(identity);
+    if (!asset) { diagnostics.push({ code: "unknown-asset", asset: identity, message: `unknown asset ${identity}` }); continue; }
+    selected.push(asset);
+    if (!asset.compatibility.basePackIds.includes(basePackId)) diagnostics.push({ code: "incompatible-pack", asset: identity, message: `${identity} is not compatible with base Pack ${basePackId}` });
+  }
+  for (const type of quickGameAssetTypes) {
+    const matches = selected.filter(asset => asset.type === type);
+    if (!matches.length) diagnostics.push({ code: "missing-category", type, message: `select one ${type} asset` });
+    if (matches.length > 1) diagnostics.push({ code: "duplicate-category", type, message: `quick games allow one ${type} asset, found ${matches.length}` });
+  }
+  const selectedIdentities = new Set(selected.map(asset => `${asset.id}@${asset.version}`));
+  for (const asset of selected) for (const dependency of asset.dependencies) {
+    const identity = `${dependency.id}@${dependency.version}`;
+    if (!selectedIdentities.has(identity)) diagnostics.push({ code: "missing-dependency", asset: `${asset.id}@${asset.version}`, dependency: identity, message: `${asset.id}@${asset.version} requires ${identity}` });
+  }
+  const typeOrder = new Map(quickGameAssetTypes.map((type, index) => [type, index])), ordered: GameAsset[] = [], visited = new Set<string>();
+  const visit = (asset: GameAsset) => { const identity = `${asset.id}@${asset.version}`; if (visited.has(identity)) return; for (const dependency of asset.dependencies) { const target = byIdentity.get(`${dependency.id}@${dependency.version}`); if (target && selectedIdentities.has(`${target.id}@${target.version}`)) visit(target); } visited.add(identity); ordered.push(asset); };
+  for (const asset of [...selected].sort((left, right) => (typeOrder.get(left.type as QuickGameAssetType) ?? 99) - (typeOrder.get(right.type as QuickGameAssetType) ?? 99) || left.id.localeCompare(right.id) || left.version.localeCompare(right.version))) visit(asset);
+  const countKeys = ["locations", "actors", "items", "scenes", "archetypes", "rules", "media"] as const, counts = Object.fromEntries(countKeys.map(key => [key, selected.reduce((sum, asset) => sum + asset.counts[key], 0)])) as GameAsset["counts"];
+  const licenses = [...new Map(selected.map(asset => [`${asset.license.spdx}\0${asset.license.attribution}\0${asset.license.source}`, asset.license])).values()].sort((left, right) => left.spdx.localeCompare(right.spdx) || left.attribution.localeCompare(right.attribution) || left.source.localeCompare(right.source));
+  return { ready: diagnostics.length === 0, diagnostics, orderedSelections: ordered.map(asset => ({ id: asset.id, version: asset.version })), selected: selected.map(asset => ({ id: asset.id, version: asset.version, type: asset.type, name: asset.name, preview: asset.preview, counts: asset.counts, dependencies: asset.dependencies, license: asset.license })), counts, licenses };
+}
