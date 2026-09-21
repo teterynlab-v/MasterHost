@@ -111,6 +111,11 @@ characterCreation:
             - { value: warrior, label: Warrior }
             - { value: rogue, label: Rogue }
             - { value: scholar, label: Scholar }
+    - id: abilities
+      title: Abilities
+      fields:
+        - { id: perception, label: Perception, type: number, min: -3, max: 5, default: 0 }
+        - { id: athletics, label: Athletics, type: number, min: -3, max: 5, default: 0 }
 
 checks:
   perception: { label: Perception, dice: 1d20, modifierField: perception }

@@ -162,6 +162,9 @@ importers:
       '@masterhost/domain':
         specifier: workspace:*
         version: link:../domain
+      '@masterhost/game-runtime':
+        specifier: workspace:*
+        version: link:../game-runtime
       yaml:
         specifier: ^2.8.1
         version: 2.9.1

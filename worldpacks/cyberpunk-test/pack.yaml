@@ -135,6 +135,11 @@ characterCreation:
             - { value: solo, label: Solo }
             - { value: netrunner, label: Netrunner }
             - { value: fixer, label: Fixer }
+    - id: abilities
+      title: Abilities
+      fields:
+        - { id: interface, label: Interface, type: number, min: -3, max: 5, default: 0 }
+        - { id: awareness, label: Awareness, type: number, min: -3, max: 5, default: 0 }
 
 checks:
   intrusion: { label: Intrusion, dice: 2d6, modifierField: interface }

@@ -6,6 +6,7 @@
   "main": "./src/index.ts",
   "dependencies": {
     "@masterhost/domain": "workspace:*",
+    "@masterhost/game-runtime": "workspace:*",
     "zod": "^4.1.5",
     "yaml": "^2.8.1"
   }

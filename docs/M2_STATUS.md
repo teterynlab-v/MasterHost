@@ -7,6 +7,7 @@ M2.2 declarative actions, M2.3 target policies, M2.4 Encounter ordering/turns, a
 ### Dice / Checks
 - Generic Dice parser and auditable server roll.
 - Pack-defined Checks.
+- Pack loading validates executable dice syntax and bounded roll complexity (at most 100 dice across 20 terms, 256 expression characters, and a bounded modifier), and requires numeric Character fields for Check modifiers and attribute Encounter ordering.
 - CheckRequested → DiceRolled → CheckResolved.
 - Character modifiers.
 - Persistent game events; Check request and resolution update their events in transactions. An optional Session-scoped idempotency key stores a Check request response with its event, so concurrent retries return one request. Eight concurrent roll requests return the same saved resolution in the live smoke.
@@ -19,6 +20,7 @@ M2.2 declarative actions, M2.3 target policies, M2.4 Encounter ordering/turns, a
 - Effect modifiers applied to Checks.
 - Resource min/max clamping.
 - Runtime Actor state persisted per Session and Actor, including NPCs.
+- Pack loading rejects unexecutable legacy Actions, mixed/unknown declarative step fields, unknown numeric references or conditional outputs, missing target actors, out-of-range Resource defaults, incomplete Effect durations, and Effect modifiers without a numeric Character or Actor field. `custom` remains a domain kind but has no Pack executor and is rejected at load.
 - Action and Encounter commands reject stale actor/Encounter versions with 409 and roll back their events.
 - Pack-defined Encounter ordering; fixed, rolled, attribute, custom, and no-turn policies run through the same commands.
 - PostgreSQL permits only one live Encounter per Session; concurrent starts leave one committed event sequence.
@@ -47,6 +49,8 @@ Cyberpunk:
 
 Same runtime engine handles both settings.
 
+Both Packs now declare optional numeric Character abilities for their Checks and actions. Existing saved Characters without these fields still resolve with a zero modifier; the new Character Builder step allows players to enter values. Cross-setting conformance tests execute each Pack's Check, composed Action and Encounter policy through the same runtime functions.
+
 ### UI
 - GM can initialize party runtime state.
 - GM sees Resources/Effects.
@@ -63,8 +67,10 @@ The Fantasy browser flow verified a two-target Rally, effect ticking on turn adv
 
 A later Fantasy browser flow verified adding Goblin, an NPC-sourced action against a player, a player-to-NPC turn transition, and Session finish. A further browser flow linked Goblin to a generated World creature, added and removed it in a live Encounter without changing the current turn, then finished the Session. Both Pack API smokes verify linked NPCs and roster changes. NPCs still use Pack templates for mechanics and are not independently editable or removable as individual records.
 
+On 2026-09-21, the Fantasy browser created a Character through the three-step Pack schema, entered Perception 2 and Athletics 3, and reached the Session lobby. The Fantasy and Cyberpunk PostgreSQL API smokes exercised numeric Check modifiers and Pack actions; both M0 persistence/ZIP smokes remained green. The full suite passed 52 tests, TypeScript passed, and the web production build passed. This verifies the two bundled Packs and local runtime; it is not acceptance of arbitrary third-party Packs.
+
 ## Next architecture step
 
-1. Expand Pack capability validation and cross-setting runtime conformance beyond the current actor-kind, resource and action reference checks.
-2. Add multi-node realtime delivery and operational recovery for pending Checks. Current checkpoints cover Actor/Encounter state only; repair requires a finished Session and stopped servers.
-3. Add NPC editing/removal and explicit reconciliation if a linked World entity changes or disappears in a later revision.
+1. Add multi-node realtime delivery and operational recovery for pending Checks. Current checkpoints cover Actor/Encounter state only; repair requires a finished Session and stopped servers.
+2. Add NPC editing/removal and explicit reconciliation if a linked World entity changes or disappears in a later revision.
+3. Extend Pack validation for future capabilities when their execution semantics are defined; arbitrary third-party Packs and custom Action executors remain outside this verified slice.

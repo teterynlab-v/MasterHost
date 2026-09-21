@@ -4,11 +4,11 @@ export interface DieTerm{count:number;sides:number;sign:1|-1}
 export interface DiceExpression{terms:DieTerm[];modifier:number;raw:string}
 export interface DiceRoll{expression:string;terms:{sides:number;rolls:number[];subtotal:number;sign:1|-1}[];modifier:number;total:number}
 export function parseDice(raw:string):DiceExpression{
- const s=raw.replace(/\s+/g,"").toLowerCase();if(!s)throw Error("empty dice expression");let i=0,modifier=0;const terms:DieTerm[]=[];
+ const s=raw.replace(/\s+/g,"").toLowerCase();if(!s)throw Error("empty dice expression");if(s.length>256)throw Error("dice expression too long");let i=0,modifier=0,totalDice=0;const terms:DieTerm[]=[];
  const re=/([+-]?)(?:(\d*)d(\d+)|(\d+))/gy;
  while(i<s.length){re.lastIndex=i;const m=re.exec(s);if(!m||m.index!==i)throw Error(`invalid dice expression at '${s.slice(i)}'`);const sign=m[1]==="-"?-1:1;
-  if(m[3]){const count=m[2]?Number(m[2]):1,sides=Number(m[3]);if(count<1||count>100||sides<2||sides>10000)throw Error("dice limits exceeded");terms.push({count,sides,sign})}
-  else modifier+=sign*Number(m[4]);i=re.lastIndex;
+  if(m[3]){const count=m[2]?Number(m[2]):1,sides=Number(m[3]);totalDice+=count;if(count<1||totalDice>100||terms.length>=20||sides<2||sides>10000)throw Error("dice limits exceeded");terms.push({count,sides,sign})}
+  else{modifier+=sign*Number(m[4]);if(!Number.isSafeInteger(modifier)||Math.abs(modifier)>1_000_000)throw Error("dice modifier limits exceeded")}i=re.lastIndex;
  }
  if(!terms.length)throw Error("dice expression requires at least one die");return{terms,modifier,raw:s};
 }

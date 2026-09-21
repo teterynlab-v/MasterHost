@@ -25,7 +25,7 @@ const players = [];
 for (const [name, role] of [["Neon", "solo"], ["Ghost", "netrunner"]]) {
   const player = await valid(`/sessions/${session.id}/join`, { pin: session.pin, displayName: name });
   const ownerKey = randomUUID();
-  const character = await valid("/characters", { ownerKey, values: { name, role } });
+  const character = await valid("/characters", { ownerKey, values: { name, role, interface: 2, awareness: 3 } });
   await valid(`/participants/${player.id}/character`, { characterId: character.id, ownerKey }, player.accessToken);
   await valid(`/participants/${player.id}/ready`, { ready: true }, player.accessToken);
   players.push(player);
@@ -38,6 +38,8 @@ assert.deepEqual(checkAttempts.map(result => result.status), [200, 200]);
 assert.deepEqual(checkAttempts[0].data, checkAttempts[1].data);
 const check = checkAttempts[0].data;
 assert.equal((await call(`/sessions/${session.id}/checks`, { ...checkBody, difficulty: 11 }, campaign.gmToken, checkKey)).status, 409);
+const checkRoll = await valid(`/checks/${check.id}/roll`, {}, players[0].accessToken);
+assert.equal(checkRoll.modifier, 3);
 assert.ok((await valid(`/sessions/${session.id}/world-actors`, undefined, campaign.gmToken)).some(entity => entity.id === droneEntity.id));
 const droneKey = randomUUID(), droneBody = { templateId: "drone", worldEntityId: droneEntity.id };
 const runtimeSnapshot = await valid(`/sessions/${session.id}/runtime/snapshots`, {}, campaign.gmToken);
