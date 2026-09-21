@@ -1,11 +1,12 @@
 import Fastify from"fastify";import cors from"@fastify/cors";import{randomUUID}from"node:crypto";import{resolve,join}from"node:path";import{fileURLToPath}from"node:url";import{readFile,readdir}from"node:fs/promises";
-import{loadWorldPack,validateWorldPack,assessOfficialPack,createStarterPack,validateWorldPackDocument,toLoadedWorldPack,packSource,WorldPackDocumentSchema}from"@masterhost/worldpack-sdk";import type{LoadedWorldPack,PackDiagnostic,WorldPackProject}from"@masterhost/worldpack-sdk";import{buildDescriptor,gameAssetFragments,gameAssetMedia,loadFragmentRegistry,loadGameAssetRegistry}from"@masterhost/descriptor";
+import{loadWorldPack,validateWorldPack,assessOfficialPack,createStarterPack,validateWorldPackDocument,toLoadedWorldPack,packSource,WorldPackDocumentSchema,loadUniverseCatalog}from"@masterhost/worldpack-sdk";import type{LoadedWorldPack,PackDiagnostic,WorldPackProject}from"@masterhost/worldpack-sdk";import{buildDescriptor,gameAssetFragments,gameAssetMedia,loadFragmentRegistry,loadGameAssetRegistry}from"@masterhost/descriptor";
 import{compileWorld,compileSatisfying,customizeValue,assignEntityImage,regenerateWorld,generationReport,explainValue,compareWorlds,scopeSummary,preserveCustomByPath,assertUniqueMaterializationPaths,createWorldEntity,updateWorldEntity,editWorldValue,worldDependencyGraph,entityRemovalImpact,removeWorldEntity,entityRegenerationImpact,regenerateWorldEntity}from"@masterhost/world-compiler";
 import{assetRoles}from"@masterhost/domain";import type{WorldArtSet}from"@masterhost/domain";
 import{WorldRepository,PackProjectRepository,GameDescriptorRepository,GamePackageRepository,exportMhWorldZip,importMhWorldZipWithAssets,exportMhPack,importMhPack,withMigrationLock,assetChecksum,validateWorldImage}from"@masterhost/persistence";import{registerRuntime}from"./runtime.js";
 import{registerHosted}from"./hosted.js";
 import{registerGameDescriptors}from"./game-descriptors.js";
 import{registerGamePackages}from"./game-packages.js";
+import{registerUniverseCatalog}from"./universe-catalog.js";
 const app=Fastify({logger:true});await app.register(cors,{origin:true,methods:["GET","HEAD","POST","PUT","PATCH","DELETE"]});
 app.addContentTypeParser("application/vnd.masterhost.world+zip",{parseAs:"buffer",bodyLimit:10_000_000},(_req,body,done)=>done(null,body));
 app.addContentTypeParser("application/vnd.masterhost.pack+zip",{parseAs:"buffer",bodyLimit:10_000_000},(_req,body,done)=>done(null,body));
@@ -21,6 +22,7 @@ const gameDescriptors=new GameDescriptorRepository(databaseUrl);
 const gamePackages=new GamePackageRepository(databaseUrl);
 const gameAssets=await loadGameAssetRegistry(resolve(repositoryRoot,process.env.GAME_ASSET_LIBRARY_PATH??"game-assets/library"));
 const gameFragments=[...await loadFragmentRegistry(resolve(repositoryRoot,"game-assets/fragments")),...gameAssetFragments(gameAssets)];
+const universeCatalog=await loadUniverseCatalog(resolve(repositoryRoot,"universe-catalog/catalog.json"));
 app.masterhostWorldRepository=repo;
 const realmId="00000000-0000-0000-0000-000000000001";
 const requestRealm=async(req:any)=>app.masterhostResolveRealm?app.masterhostResolveRealm(req):{id:realmId,slug:"default"};
@@ -92,7 +94,7 @@ app.post("/api/worlds/:id/fork",async(req:any)=>{const w=await must(req.params.i
 app.get("/api/worlds/:id/export",async(req:any,reply)=>{const w=await must(req.params.id,req),bytes=exportMhWorldZip(w,await repo.assets(w.id));reply.header("content-type","application/vnd.masterhost.world+zip");reply.header("content-disposition",`attachment; filename="${w.name.replace(/[^a-z0-9]+/gi,"-").toLowerCase()}.mhworld"`);return reply.send(Buffer.from(bytes))});
 
 app.masterhostPack=pack;
-await withMigrationLock(databaseUrl,async()=>{await repo.migrate();await packProjects.migrate();await gameDescriptors.migrate();await gamePackages.migrate();await registerHosted(app,{databaseUrl,defaultRealmId:realmId,bundledPack:pack,officialPacks,worlds:repo,packs:packProjects});await registerGameDescriptors(app,{descriptors:gameDescriptors,worlds:repo,packs:packProjects,fragments:gameFragments,assets:gameAssets});await registerGamePackages(app,{packages:gamePackages,descriptors:gameDescriptors,worlds:repo,packs:packProjects,assets:gameAssets});app.masterhostPack=new Proxy(pack,{get(target,key,receiver){return Reflect.get(app.masterhostContext?.()?.pack??target,key,receiver)}});await registerRuntime(app,{db:databaseUrl,realmId})});
+await withMigrationLock(databaseUrl,async()=>{await repo.migrate();await packProjects.migrate();await gameDescriptors.migrate();await gamePackages.migrate();await registerHosted(app,{databaseUrl,defaultRealmId:realmId,bundledPack:pack,officialPacks,worlds:repo,packs:packProjects});await registerUniverseCatalog(app,{catalog:universeCatalog,packs:packProjects,bundledDocuments:[]});await registerGameDescriptors(app,{descriptors:gameDescriptors,worlds:repo,packs:packProjects,fragments:gameFragments,assets:gameAssets});await registerGamePackages(app,{packages:gamePackages,descriptors:gameDescriptors,worlds:repo,packs:packProjects,assets:gameAssets});app.masterhostPack=new Proxy(pack,{get(target,key,receiver){return Reflect.get(app.masterhostContext?.()?.pack??target,key,receiver)}});await registerRuntime(app,{db:databaseUrl,realmId})});
 
 app.setErrorHandler((err,req,reply)=>{req.log.error(err);const error=err instanceof Error?err:new Error(String(err));reply.code((error as Error&{statusCode?:number}).statusCode??400).send({error:"masterhost_error",message:error.message})});
 await app.listen({host:"0.0.0.0",port:Number(process.env.PORT??8080)});
