@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.classic.cast",
+  "version": "1.0.0",
+  "type": "cast",
+  "name": "Crowns and Companions",
+  "description": "Twenty-four named allies and rivals plus eighteen adversaries tied to factions, places, and immediate motives.",
+  "tags": [
+    "classic-fantasy",
+    "border-kingdoms",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Twenty-four named allies and rivals plus eighteen adversaries tied to factions, places, and immediate motives.",
+    "highlights": [
+      "Crowns and Companions",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.classic-fantasy"
+    ],
+    "requiresCapabilities": [
+      "world:classic-fantasy"
+    ],
+    "providesCapabilities": [
+      "cast:classic-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.classic.world-template",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Classic Fantasy original content and artwork \u00a9 MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.classic.cast"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 42,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.classic.cast",
+    "version": "1.0.0",
+    "name": "Crowns and Companions",
+    "description": "Twenty-four named allies and rivals plus eighteen adversaries tied to factions, places, and immediate motives.",
+    "provides": [
+      "cast:classic-fantasy"
+    ],
+    "requires": [
+      "world:classic-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/generators/classic.cast.marker",
+        "value": {
+          "type": "values",
+          "values": [
+            "Crowns and Companions"
+          ]
+        }
+      }
+    ]
+  }
+}

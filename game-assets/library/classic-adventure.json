@@ -1,0 +1,104 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.classic.adventure",
+  "version": "1.0.0",
+  "type": "adventure",
+  "name": "The First Oath Adventure",
+  "description": "An eighteen-scene one-shot spine with travel, faction negotiation, discovery, conflict, reward, and a canonical final choice.",
+  "tags": [
+    "classic-fantasy",
+    "border-kingdoms",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "An eighteen-scene one-shot spine with travel, faction negotiation, discovery, conflict, reward, and a canonical final choice.",
+    "highlights": [
+      "The First Oath Adventure",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.classic-fantasy"
+    ],
+    "requiresCapabilities": [
+      "world:classic-fantasy",
+      "locations:classic-fantasy",
+      "cast:classic-fantasy",
+      "items:classic-fantasy",
+      "rules:classic-fantasy"
+    ],
+    "providesCapabilities": [
+      "adventure:classic-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.classic.world-template",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.classic.locations",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.classic.cast",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.classic.items",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.classic.rules",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Classic Fantasy original content and artwork \u00a9 MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.classic.adventure"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 18,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.classic.adventure",
+    "version": "1.0.0",
+    "name": "The First Oath Adventure",
+    "description": "An eighteen-scene one-shot spine with travel, faction negotiation, discovery, conflict, reward, and a canonical final choice.",
+    "provides": [
+      "adventure:classic-fantasy"
+    ],
+    "requires": [
+      "world:classic-fantasy",
+      "locations:classic-fantasy",
+      "cast:classic-fantasy",
+      "items:classic-fantasy",
+      "rules:classic-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/generators/classic.adventure.marker",
+        "value": {
+          "type": "values",
+          "values": [
+            "The First Oath Adventure"
+          ]
+        }
+      }
+    ]
+  }
+}

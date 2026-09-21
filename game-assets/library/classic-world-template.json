@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.classic.world-template",
+  "version": "1.0.0",
+  "type": "world-template",
+  "name": "Crowned Marches World",
+  "description": "A connected realm structure of provinces, settlements, roads, factions, adventure sites, and an opening threat.",
+  "tags": [
+    "classic-fantasy",
+    "border-kingdoms",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "A connected realm structure of provinces, settlements, roads, factions, adventure sites, and an opening threat.",
+    "highlights": [
+      "Crowned Marches World",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.classic-fantasy"
+    ],
+    "requiresCapabilities": [
+      "setting:classic-fantasy"
+    ],
+    "providesCapabilities": [
+      "world:classic-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.classic.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Classic Fantasy original content and artwork \u00a9 MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.classic.world-template"
+  },
+  "published": true,
+  "counts": {
+    "locations": 12,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.classic.world-template",
+    "version": "1.0.0",
+    "name": "Crowned Marches World",
+    "description": "A connected realm structure of provinces, settlements, roads, factions, adventure sites, and an opening threat.",
+    "provides": [
+      "world:classic-fantasy"
+    ],
+    "requires": [
+      "setting:classic-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/generators/classic.world-template.marker",
+        "value": {
+          "type": "values",
+          "values": [
+            "Crowned Marches World"
+          ]
+        }
+      }
+    ]
+  }
+}

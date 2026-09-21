@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.classic.visuals",
+  "version": "1.0.0",
+  "type": "visuals",
+  "name": "Illuminated Marches Art Set",
+  "description": "Original maps, portraits, tokens, item art, location cards, and backgrounds for the three Classic Fantasy patterns.",
+  "tags": [
+    "classic-fantasy",
+    "border-kingdoms",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Original maps, portraits, tokens, item art, location cards, and backgrounds for the three Classic Fantasy patterns.",
+    "highlights": [
+      "Illuminated Marches Art Set",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.classic-fantasy"
+    ],
+    "requiresCapabilities": [
+      "setting:classic-fantasy"
+    ],
+    "providesCapabilities": [
+      "visuals:classic-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.classic.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Classic Fantasy original content and artwork \u00a9 MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.classic.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 6
+  },
+  "media": [
+    {
+      "name": "classic-fantasy/classic-background.svg",
+      "path": "media/classic-background.svg",
+      "role": "background",
+      "mediaType": "image/svg+xml",
+      "checksum": "eea401b2f2f620841dfe1f9a634a591549999df152610fec54f59d2006bbccbe",
+      "size": 742
+    },
+    {
+      "name": "classic-fantasy/classic-map.svg",
+      "path": "media/classic-map.svg",
+      "role": "map",
+      "mediaType": "image/svg+xml",
+      "checksum": "6d18d39bc354ba20e419e8b25b46e9857730cecd63ee911a5a3f4841ead36170",
+      "size": 637
+    },
+    {
+      "name": "classic-fantasy/classic-portrait.svg",
+      "path": "media/classic-portrait.svg",
+      "role": "portrait",
+      "mediaType": "image/svg+xml",
+      "checksum": "8cb0682449e35acc60126073cf966554b4f6a4da5f0a91f8b9b783f4f2c9ffd4",
+      "size": 629
+    },
+    {
+      "name": "classic-fantasy/classic-creature.svg",
+      "path": "media/classic-creature.svg",
+      "role": "token",
+      "mediaType": "image/svg+xml",
+      "checksum": "4d3758e8b2703253341929f33114fd566ff1233708dd46bc999ff102f782736f",
+      "size": 707
+    },
+    {
+      "name": "classic-fantasy/classic-item.svg",
+      "path": "media/classic-item.svg",
+      "role": "item",
+      "mediaType": "image/svg+xml",
+      "checksum": "10c4bb295952cd97479c656d6abeed224d7deed544d7ce8370cd705b2b809cf0",
+      "size": 642
+    },
+    {
+      "name": "classic-fantasy/classic-location.svg",
+      "path": "media/classic-location.svg",
+      "role": "location",
+      "mediaType": "image/svg+xml",
+      "checksum": "d549a6b6706dd18b3afaa3e208bd636188091583cf44b648f96b1df91000b5e5",
+      "size": 631
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.classic.visuals",
+    "version": "1.0.0",
+    "name": "Illuminated Marches Art Set",
+    "description": "Original maps, portraits, tokens, item art, location cards, and backgrounds for the three Classic Fantasy patterns.",
+    "provides": [
+      "visuals:classic-fantasy"
+    ],
+    "requires": [
+      "setting:classic-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/classic-deep",
+        "value": {
+          "id": "classic-deep",
+          "name": "Illuminated Marches",
+          "description": "Original deep Classic Fantasy visual language",
+          "defaults": {
+            "background": "assets/classic-fantasy/classic-background.svg",
+            "portrait": "assets/classic-fantasy/classic-portrait.svg",
+            "token": "assets/classic-fantasy/classic-creature.svg",
+            "item": "assets/classic-fantasy/classic-item.svg",
+            "location": "assets/classic-fantasy/classic-location.svg",
+            "map": "assets/classic-fantasy/classic-map.svg"
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "classic-deep"
+  }
+}

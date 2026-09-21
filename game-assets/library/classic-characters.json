@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.classic.characters",
+  "version": "1.0.0",
+  "type": "characters",
+  "name": "Marches Character Paths",
+  "description": "Eight ready archetypes and six progression paths for oathbound, roadwise, magical, diplomatic, and delving heroes.",
+  "tags": [
+    "classic-fantasy",
+    "border-kingdoms",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Eight ready archetypes and six progression paths for oathbound, roadwise, magical, diplomatic, and delving heroes.",
+    "highlights": [
+      "Marches Character Paths",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.classic-fantasy"
+    ],
+    "requiresCapabilities": [
+      "rules:classic-fantasy",
+      "items:classic-fantasy"
+    ],
+    "providesCapabilities": [
+      "characters:classic-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.classic.rules",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.classic.items",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Classic Fantasy original content and artwork \u00a9 MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.classic.characters"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 8,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.classic.characters",
+    "version": "1.0.0",
+    "name": "Marches Character Paths",
+    "description": "Eight ready archetypes and six progression paths for oathbound, roadwise, magical, diplomatic, and delving heroes.",
+    "provides": [
+      "characters:classic-fantasy"
+    ],
+    "requires": [
+      "rules:classic-fantasy",
+      "items:classic-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/generators/classic.characters.marker",
+        "value": {
+          "type": "values",
+          "values": [
+            "Marches Character Paths"
+          ]
+        }
+      }
+    ]
+  }
+}

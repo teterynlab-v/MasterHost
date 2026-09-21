@@ -20,12 +20,12 @@ export function readQuickStartHandoff(storage: StorageLike): UniverseQuickStart 
   try { const value = JSON.parse(raw); return value?.universeId && value?.universeName && value?.basePack?.id && value?.basePack?.version && value?.patternId && value?.campaignKitId && value?.visualThemeId ? value : undefined; } catch { return undefined; }
 }
 
-export function UniverseCatalog({ request, onBack, onAdvanced, onPlay, initialItems, initialSelectedId }: { request: (path: string) => Promise<any>; onBack: () => void; onAdvanced: () => void; onPlay: (value: UniverseQuickStart) => void; initialItems?: UniverseCatalogItem[]; initialSelectedId?: string }) {
+export function UniverseCatalog({ request, onBack, onAdvanced, onPlay, initialItems, initialSelectedId }: { request: (path: string) => Promise<any>; onBack: () => void; onAdvanced: () => void; onPlay: (value: UniverseQuickStart) => void | Promise<void>; initialItems?: UniverseCatalogItem[]; initialSelectedId?: string }) {
   const { t } = useI18n(), [items, setItems] = useState<UniverseCatalogItem[]>(initialItems ?? []), [selectedId, setSelectedId] = useState(initialSelectedId ?? ""), [filters, setFilters] = useState<Filters>({ query: "", genre: "", tone: "", complexity: "" }), [error, setError] = useState("");
   useEffect(() => { if (!initialItems) void request("/universes").then(setItems).catch(reason => setError(reason instanceof Error ? reason.message : String(reason))); }, [initialItems]);
   const visible = useMemo(() => filterUniverseCatalog(items, filters), [items, filters]), selected = items.find(item => item.id === selectedId);
   const genres = [...new Set(items.flatMap(item => item.genres))].sort(), tones = [...new Set(items.flatMap(item => item.tones))].sort();
-  const play = (item: UniverseCatalogItem) => { if (item.availability !== "ready" || !item.playToday) return; const value: UniverseQuickStart = { universeId: item.id, universeName: item.name, basePack: item.targetPack, ...item.playToday }; if (typeof sessionStorage !== "undefined") writeQuickStartHandoff(sessionStorage, value); onPlay(value); };
+  const play = (item: UniverseCatalogItem) => { if (item.availability !== "ready" || !item.playToday) return; const value: UniverseQuickStart = { universeId: item.id, universeName: item.name, basePack: item.targetPack, ...item.playToday }; if (typeof sessionStorage !== "undefined") writeQuickStartHandoff(sessionStorage, value); void onPlay(value); };
   return <main className="universeCatalog">
     <header className="productHeader compact"><div><p className="eyebrow">{t("universe.eyebrow")}</p><h1>{t("universe.title")}</h1><p>{t("universe.subtitle")}</p></div><div className="actions"><LanguageSwitcher/><button className="secondary" onClick={onAdvanced}>{t("universe.advanced")}</button><button className="secondary" onClick={onBack}>{t("common.back")}</button></div></header>
     {error && <p className="error">{error}</p>}

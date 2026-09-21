@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.classic.setting",
+  "version": "1.0.0",
+  "type": "setting",
+  "name": "Border Kingdoms Setting",
+  "description": "The disputed marches, road oaths, rival crowns, and migrating monsters that frame a ready Classic Fantasy game.",
+  "tags": [
+    "classic-fantasy",
+    "border-kingdoms",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "The disputed marches, road oaths, rival crowns, and migrating monsters that frame a ready Classic Fantasy game.",
+    "highlights": [
+      "Border Kingdoms Setting",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.classic-fantasy"
+    ],
+    "requiresCapabilities": [],
+    "providesCapabilities": [
+      "setting:classic-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Classic Fantasy original content and artwork \u00a9 MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.classic.setting"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.classic.setting",
+    "version": "1.0.0",
+    "name": "Border Kingdoms Setting",
+    "description": "The disputed marches, road oaths, rival crowns, and migrating monsters that frame a ready Classic Fantasy game.",
+    "provides": [
+      "setting:classic-fantasy"
+    ],
+    "requires": [],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/generators/classic.setting.marker",
+        "value": {
+          "type": "values",
+          "values": [
+            "Border Kingdoms Setting"
+          ]
+        }
+      }
+    ]
+  }
+}

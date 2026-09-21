@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.classic.locations",
+  "version": "1.0.0",
+  "type": "locations",
+  "name": "Border Roads and Ruins",
+  "description": "Twelve playable settlements, wild roads, abbeys, keeps, vaults, and imperial ruins with linked pressures.",
+  "tags": [
+    "classic-fantasy",
+    "border-kingdoms",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Twelve playable settlements, wild roads, abbeys, keeps, vaults, and imperial ruins with linked pressures.",
+    "highlights": [
+      "Border Roads and Ruins",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.classic-fantasy"
+    ],
+    "requiresCapabilities": [
+      "world:classic-fantasy"
+    ],
+    "providesCapabilities": [
+      "locations:classic-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.classic.world-template",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Classic Fantasy original content and artwork \u00a9 MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.classic.locations"
+  },
+  "published": true,
+  "counts": {
+    "locations": 12,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.classic.locations",
+    "version": "1.0.0",
+    "name": "Border Roads and Ruins",
+    "description": "Twelve playable settlements, wild roads, abbeys, keeps, vaults, and imperial ruins with linked pressures.",
+    "provides": [
+      "locations:classic-fantasy"
+    ],
+    "requires": [
+      "world:classic-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/generators/classic.locations.marker",
+        "value": {
+          "type": "values",
+          "values": [
+            "Border Roads and Ruins"
+          ]
+        }
+      }
+    ]
+  }
+}
