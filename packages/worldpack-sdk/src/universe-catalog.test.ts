@@ -7,6 +7,15 @@ import { parseUniverseCatalog, resolveUniverseCatalog } from "./universe-catalog
 async function catalog() {
   return parseUniverseCatalog(JSON.parse(await readFile(resolve(process.cwd(), "universe-catalog/catalog.json"), "utf8")));
 }
+function matchingDocument(entry: Awaited<ReturnType<typeof catalog>>[number]) {
+  const document = completeDeepUniverseDocument(entry.targetPack), oldIds = document.universe!.patterns.map(pattern => pattern.id);
+  const remap = new Map(oldIds.map((id, index) => [id, entry.patterns[index]!.id]));
+  document.universe!.patterns.forEach((pattern, index) => Object.assign(pattern, entry.patterns[index]));
+  for (const kit of document.universe!.campaignKits) kit.patternIds = kit.patternIds.map(id => remap.get(id)!);
+  for (const entries of Object.values(document.universe!.content)) for (const item of entries) item.patternIds = item.patternIds.map(id => remap.get(id)!);
+  document.universe!.playToday.patternId = entry.patterns[0]!.id;
+  return document;
+}
 
 describe("M17 universe catalog", () => {
   it("contains the twelve approved universes, patterns, and game loops", async () => {
@@ -33,7 +42,17 @@ describe("M17 universe catalog", () => {
     expect(resolveUniverseCatalog([entry], [failing])[0].availability).toBe("planned");
     const wrongVersion = completeDeepUniverseDocument({ ...entry.targetPack, version: "99.0.0" });
     expect(resolveUniverseCatalog([entry], [wrongVersion])[0].availability).toBe("planned");
-    const ready = resolveUniverseCatalog([entry], [completeDeepUniverseDocument(entry.targetPack)])[0];
-    expect(ready).toMatchObject({ availability: "ready", playToday: { patternId: "pattern.1", campaignKitId: "kit.1" }, assessment: { passed: true } });
+    const ready = resolveUniverseCatalog([entry], [matchingDocument(entry)])[0];
+    expect(ready).toMatchObject({ availability: "ready", playToday: { patternId: entry.patterns[0]!.id, campaignKitId: "kit.1" }, assessment: { passed: true } });
+  });
+
+  it("requires the profile identity and patterns to match the catalog entry", async () => {
+    const [entry] = await catalog();
+    const wrongIdentity = matchingDocument(entry);
+    wrongIdentity.universe!.id = "another-universe";
+    expect(resolveUniverseCatalog([entry], [wrongIdentity])[0].availability).toBe("planned");
+    const wrongPatterns = matchingDocument(entry);
+    wrongPatterns.universe!.patterns[0].id = "not-in-catalog";
+    expect(resolveUniverseCatalog([entry], [wrongPatterns])[0].availability).toBe("planned");
   });
 });

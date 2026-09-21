@@ -101,4 +101,35 @@ describe("Deep Universe Standard v1", () => {
     const project = createStarterPack({ realmId: "realm", id: "masterhost.legacy", name: "Legacy" });
     expect(validateWorldPackDocument(project.document, project.assetData)).toMatchObject({ valid: true, diagnostics: [] });
   });
+
+  it("rejects duplicate pattern and Campaign Kit identities", () => {
+    const document = completeDocument();
+    document.universe.patterns[1].id = document.universe.patterns[0].id;
+    document.universe.campaignKits[1].id = document.universe.campaignKits[0].id;
+    const assessment = assessDeepUniverse(document);
+    expect(assessment.passed).toBe(false);
+    expect(assessment.diagnostics.filter(item => item.code === "deep-universe.duplicate")).toHaveLength(2);
+  });
+
+  it("rejects self-only relations and kit content outside its patterns", () => {
+    const document = completeDocument();
+    document.universe.content.factions[0].relations = [{ type: "echoes", targetId: "factions.1" }];
+    document.universe.campaignKits[0].sceneIds = ["scenes.2"];
+    document.universe.campaignKits[0].openingSceneId = "scenes.2";
+    const assessment = assessDeepUniverse(document);
+    expect(assessment.passed).toBe(false);
+    expect(assessment.diagnostics).toEqual(expect.arrayContaining([
+      expect.objectContaining({ code: "deep-universe.disconnected", path: "universe.content.factions.factions.1.relations" }),
+      expect.objectContaining({ code: "deep-universe.compatibility", path: "universe.campaignKits.kit.1.sceneIds" }),
+    ]));
+  });
+
+  it("rejects a Play Today kit or theme incompatible with its pattern", () => {
+    const document = completeDocument();
+    document.universe.playToday.campaignKitId = "kit.2";
+    document.universe.playToday.visualThemeId = "visualThemes.3";
+    const assessment = assessDeepUniverse(document);
+    expect(assessment.passed).toBe(false);
+    expect(assessment.diagnostics.filter(item => item.code === "deep-universe.compatibility").length).toBeGreaterThanOrEqual(2);
+  });
 });

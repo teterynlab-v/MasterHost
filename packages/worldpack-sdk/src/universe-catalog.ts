@@ -41,6 +41,8 @@ export function resolveUniverseCatalog(entries: UniverseCatalogEntry[], document
     const document = documents.find(candidate => candidate.manifest.id === entry.targetPack.id && candidate.manifest.version === entry.targetPack.version);
     if (!document?.universe) return { ...entry, availability: "planned" };
     const assessment = assessDeepUniverse(document);
-    return assessment.passed ? { ...entry, availability: "ready", assessment, playToday: document.universe.playToday } : { ...entry, availability: "planned", assessment };
+    const profilePatternIds = new Set(document.universe.patterns.map(pattern => pattern.id));
+    const identityMatches = document.universe.id === entry.id && entry.patterns.every(pattern => profilePatternIds.has(pattern.id));
+    return assessment.passed && identityMatches ? { ...entry, patterns: document.universe.patterns.map(({ id, name, summary }) => ({ id, name, summary })), availability: "ready", assessment, playToday: document.universe.playToday } : { ...entry, availability: "planned", assessment };
   });
 }

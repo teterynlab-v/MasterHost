@@ -63,12 +63,18 @@ export function assessDeepUniverse(document: AssessmentDocument): DeepUniverseAs
     return { standardVersion: "1", passed: false, counts, diagnostics };
   }
   const profile = parsed.data;
-  counts.patterns = { actual: profile.patterns.length, required: deepUniverseMinimums.patterns };
-  counts.campaignKits = { actual: profile.campaignKits.length, required: deepUniverseMinimums.campaignKits };
-  for (const kind of deepUniverseContentKinds) counts[kind] = { actual: profile.content[kind].length, required: deepUniverseMinimums[kind] };
+  counts.patterns = { actual: new Set(profile.patterns.map(value => value.id)).size, required: deepUniverseMinimums.patterns };
+  counts.campaignKits = { actual: new Set(profile.campaignKits.map(value => value.id)).size, required: deepUniverseMinimums.campaignKits };
+  for (const kind of deepUniverseContentKinds) counts[kind] = { actual: new Set(profile.content[kind].map(value => value.id)).size, required: deepUniverseMinimums[kind] };
   for (const [kind, count] of Object.entries(counts)) if (count.actual < count.required) add("error", "deep-universe.minimum", kind === "patterns" || kind === "campaignKits" ? `universe.${kind}` : `universe.content.${kind}`, `${kind} requires at least ${count.required}; found ${count.actual}`);
 
   const ids = new Map<string, DeepContentKind>(), patternIds = new Set(profile.patterns.map(value => value.id)), kitIds = new Set(profile.campaignKits.map(value => value.id));
+  const reportDuplicates = (values: Array<{ id: string }>, path: string) => {
+    const seen = new Set<string>();
+    for (const value of values) seen.has(value.id) ? add("error", "deep-universe.duplicate", `${path}.${value.id}`, `Duplicate ID ${value.id}`) : seen.add(value.id);
+  };
+  reportDuplicates(profile.patterns, "universe.patterns");
+  reportDuplicates(profile.campaignKits, "universe.campaignKits");
   for (const kind of deepUniverseContentKinds) for (const entry of profile.content[kind]) {
     if (ids.has(entry.id)) add("error", "deep-universe.reference", `universe.content.${kind}.${entry.id}`, `Duplicate content ID ${entry.id}`);
     ids.set(entry.id, kind);
@@ -82,7 +88,7 @@ export function assessDeepUniverse(document: AssessmentDocument): DeepUniverseAs
     descriptions.set(normalized, [...descriptions.get(normalized) ?? [], entry.id]);
     for (const patternId of entry.patternIds) if (!patternIds.has(patternId)) add("error", "deep-universe.reference", `${path}.patternIds`, `Missing pattern ${patternId}`);
     for (const relation of entry.relations) if (!ids.has(relation.targetId)) add("error", "deep-universe.reference", `${path}.relations`, `Missing relation target ${relation.targetId}`);
-    if ((kind === "factions" || kind === "npcs" || kind === "locations") && entry.relations.length === 0) add("error", "deep-universe.disconnected", `${path}.relations`, `${entry.id} must connect to another content entry`);
+    if ((kind === "factions" || kind === "npcs" || kind === "locations") && !entry.relations.some(relation => relation.targetId !== entry.id && ids.has(relation.targetId))) add("error", "deep-universe.disconnected", `${path}.relations`, `${entry.id} must connect to another content entry`);
     for (const media of entry.media) {
       if (!media.alt.trim()) add("error", "deep-universe.media", `${path}.media`, `${media.asset} requires alternative text`);
       if (!document.assets?.[media.asset]) add("error", "deep-universe.media", `${path}.media`, `Missing Pack asset ${media.asset}`);
@@ -101,7 +107,14 @@ export function assessDeepUniverse(document: AssessmentDocument): DeepUniverseAs
     refLists.push([kit, "sceneIds", "scenes"], [kit, "npcIds", "npcs"], [kit, "locationIds", "locations"], [kit, "rewardIds", "items"], [kit, "readyCharacterIds", "archetypes"]);
     if (!kit.sceneIds.includes(kit.openingSceneId)) add("error", "deep-universe.reference", `${path}.openingSceneId`, `Opening scene ${kit.openingSceneId} is not in sceneIds`);
   }
-  for (const [kit, field, kind] of refLists) for (const id of kit[field]) if (ids.get(id) !== kind) add("error", "deep-universe.reference", `universe.campaignKits.${kit.id}.${field}`, `Missing ${kind} entry ${id}`);
+  for (const [kit, field, kind] of refLists) for (const id of kit[field]) {
+    const path = `universe.campaignKits.${kit.id}.${field}`;
+    if (ids.get(id) !== kind) add("error", "deep-universe.reference", path, `Missing ${kind} entry ${id}`);
+    else {
+      const entry = profile.content[kind].find(value => value.id === id)!;
+      if (!entry.patternIds.some(patternId => kit.patternIds.includes(patternId))) add("error", "deep-universe.compatibility", path, `${id} is not compatible with Campaign Kit patterns`);
+    }
+  }
 
   const ruleGroups: Record<string, Record<string, unknown> | undefined> = { action: document.content?.actions, check: document.content?.checks, resource: document.content?.resources, effect: document.content?.effects, progression: document.content?.progression };
   for (const step of profile.gameLoop) for (const ref of step.ruleRefs) {
@@ -117,5 +130,9 @@ export function assessDeepUniverse(document: AssessmentDocument): DeepUniverseAs
   if (!patternIds.has(profile.playToday.patternId)) add("error", "deep-universe.reference", "universe.playToday.patternId", `Missing pattern ${profile.playToday.patternId}`);
   if (!kitIds.has(profile.playToday.campaignKitId)) add("error", "deep-universe.reference", "universe.playToday.campaignKitId", `Missing Campaign Kit ${profile.playToday.campaignKitId}`);
   if (ids.get(profile.playToday.visualThemeId) !== "visualThemes") add("error", "deep-universe.reference", "universe.playToday.visualThemeId", `Missing visual theme ${profile.playToday.visualThemeId}`);
+  const playKit = profile.campaignKits.find(value => value.id === profile.playToday.campaignKitId);
+  if (playKit && !playKit.patternIds.includes(profile.playToday.patternId)) add("error", "deep-universe.compatibility", "universe.playToday.campaignKitId", `Campaign Kit ${playKit.id} does not support pattern ${profile.playToday.patternId}`);
+  const playTheme = profile.content.visualThemes.find(value => value.id === profile.playToday.visualThemeId);
+  if (playTheme && !playTheme.patternIds.includes(profile.playToday.patternId)) add("error", "deep-universe.compatibility", "universe.playToday.visualThemeId", `Visual theme ${playTheme.id} does not support pattern ${profile.playToday.patternId}`);
   return { standardVersion: "1", passed: diagnostics.every(value => value.severity !== "error"), counts, diagnostics };
 }

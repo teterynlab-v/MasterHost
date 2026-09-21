@@ -5,6 +5,7 @@ import { loadUniverseCatalog, validateWorldPackDocument, type WorldPackProject }
 import { registerUniverseCatalog } from "./universe-catalog.js";
 
 const project = (id: string, realmId: string, status: "draft" | "published", document: any): WorldPackProject => ({ id, realmId, status, revision: 1, document, assetData: {}, createdAt: new Date(0).toISOString(), updatedAt: new Date(0).toISOString() });
+const matchingDocument = (entry: any) => { const document = completeDeepUniverseDocument(entry.targetPack), oldIds = document.universe!.patterns.map(pattern => pattern.id), remap = new Map(oldIds.map((id, index) => [id, entry.patterns[index].id])); document.universe!.patterns.forEach((pattern, index) => Object.assign(pattern, entry.patterns[index])); for (const kit of document.universe!.campaignKits) kit.patternIds = kit.patternIds.map(id => remap.get(id)); for (const values of Object.values(document.universe!.content) as any[]) for (const item of values) item.patternIds = item.patternIds.map((id: string) => remap.get(id)); document.universe!.playToday.patternId = entry.patterns[0].id; return document; };
 
 describe("M17 universe catalog API", () => {
   it("exposes catalog and Realm-isolated deep assessment with truthful readiness", async () => {
@@ -32,9 +33,14 @@ describe("M17 universe catalog API", () => {
     const liveAssessment = await app.inject({ method: "POST", url: "/api/pack-projects/draft-a/deep-universe", headers: { "x-realm": "realm-a", "content-type": "application/json" }, payload: { document: liveDraft } });
     expect(liveAssessment.json()).toMatchObject({ passed: false, diagnostics: expect.arrayContaining([expect.objectContaining({ path: "universe.content.npcs" })]) });
 
-    projects.push(project("published-a", "realm-a", "published", completeDeepUniverseDocument(entries[0].targetPack)));
+    liveDraft.universe!.content.factions[0].description = "";
+    const malformed = await app.inject({ method: "POST", url: "/api/pack-projects/draft-a/deep-universe", headers: { "x-realm": "realm-a", "content-type": "application/json" }, payload: { document: liveDraft } });
+    expect(malformed.statusCode).toBe(200);
+    expect(malformed.json()).toMatchObject({ passed: false, diagnostics: expect.arrayContaining([expect.objectContaining({ code: "deep-universe.schema", path: expect.stringContaining("factions") })]) });
+
+    projects.push(project("published-a", "realm-a", "published", matchingDocument(entries[0])));
     const ready = await app.inject({ method: "GET", url: "/api/universes/classic-fantasy", headers: { "x-realm": "realm-a" } });
-    expect(ready.json()).toMatchObject({ availability: "ready", assessment: { passed: true }, playToday: { patternId: "pattern.1" } });
+    expect(ready.json()).toMatchObject({ availability: "ready", assessment: { passed: true }, playToday: { patternId: entries[0].patterns[0].id } });
     await app.close();
   });
 });

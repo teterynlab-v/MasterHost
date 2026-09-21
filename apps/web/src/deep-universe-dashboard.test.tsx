@@ -14,6 +14,7 @@ describe("M17 Pack Creator deep universe dashboard", () => {
     const html = renderToStaticMarkup(<DeepUniverseDashboard document={document} assessment={assessment} draft canPublish={false}/>);
     expect(html).toContain("7 / 8");
     expect(html).toContain("universe.content.factions");
+    expect(html).not.toContain("href=\"#deep-");
     expect(html).toContain("Preview and publication blocked");
     expect(html).toContain("Draft editing remains available");
     expect(html).toContain("ru");
@@ -33,5 +34,11 @@ describe("M17 Pack Creator deep universe dashboard", () => {
     expect(html).toContain("locations.1");
     expect(html).toContain("items.1");
     expect(html).toContain("Frame the opening conflict clearly.");
+  });
+
+  it("describes the profile as optional for legacy Packs", () => {
+    const html = renderToStaticMarkup(<DeepUniverseDashboard document={{}} draft canPublish={false}/>);
+    expect(html).toContain("optional Deep Universe standard");
+    expect(html).toContain("published normally");
   });
 });
