@@ -4,7 +4,7 @@ import type { ActiveEffect, ActorRuntimeState, EffectDefinition } from "./index.
 
 export type OrderingPolicy = "none" | "fixed" | "rolled" | "attribute" | "custom";
 export interface Encounter { id: string; sessionId: string; state: "live" | "ended"; participants: string[]; orderingPolicy: OrderingPolicy; order: string[]; currentActorId?: string; round: number; turn: number }
-export interface EncounterEvent { type: "EncounterStarted" | "OrderEstablished" | "RoundStarted" | "TurnStarted" | "TurnEnded" | "RoundEnded" | "EncounterEnded" | "EffectTicked" | "EffectExpired"; payload: Record<string, unknown> }
+export interface EncounterEvent { type: "EncounterStarted" | "EncounterParticipantsChanged" | "OrderEstablished" | "RoundStarted" | "TurnStarted" | "TurnEnded" | "RoundEnded" | "EncounterEnded" | "EffectTicked" | "EffectExpired"; payload: Record<string, unknown> }
 const event = (type: EncounterEvent["type"], encounter: Encounter, extra: Record<string, unknown> = {}): EncounterEvent => ({ type, payload: { sessionId: encounter.sessionId, encounterId: encounter.id, ...extra } });
 
 export function startEncounter(input: { sessionId: string; participantIds: string[]; policy: OrderingPolicy; attributes?: Record<string, number>; customOrder?: string[]; roller?: (sides: number) => number; id?: string }): { encounter: Encounter; events: EncounterEvent[] } {
@@ -25,6 +25,21 @@ export function startEncounter(input: { sessionId: string; participantIds: strin
   const events = [event("EncounterStarted", encounter, { participants, orderingPolicy: input.policy }), event("OrderEstablished", encounter, { order: encounter.order })];
   if (encounter.currentActorId) events.push(event("RoundStarted", encounter, { round: 1 }), event("TurnStarted", encounter, { actorId: encounter.currentActorId, round: 1, turn: 1 }));
   return { encounter, events };
+}
+
+export function changeEncounterParticipants(encounter: Encounter, input: { addActorIds?: string[]; removeActorIds?: string[] }): { encounter: Encounter; events: EncounterEvent[] } {
+  if (encounter.state !== "live") throw Error("encounter already ended");
+  const added = input.addActorIds ?? [], removed = input.removeActorIds ?? [];
+  if (!added.length && !removed.length) throw Error("participant change is empty");
+  if (new Set(added).size !== added.length || new Set(removed).size !== removed.length || added.some(id => removed.includes(id))) throw Error("duplicate encounter participant change");
+  if (added.some(id => encounter.participants.includes(id))) throw Error("actor is already in encounter");
+  if (removed.some(id => !encounter.participants.includes(id))) throw Error("actor is not in encounter");
+  if (encounter.currentActorId && removed.includes(encounter.currentActorId)) throw Error("advance the current turn before removing its actor");
+  const participants = [...encounter.participants.filter(id => !removed.includes(id)), ...added];
+  if (!participants.length) throw Error("encounter needs a participant");
+  const order = encounter.orderingPolicy === "none" ? [] : [...encounter.order.filter(id => !removed.includes(id)), ...added];
+  const next = { ...encounter, participants, order };
+  return { encounter: next, events: [event("EncounterParticipantsChanged", next, { addedActorIds: added, removedActorIds: removed, participants, order })] };
 }
 
 function advanceEffects(encounter: Encounter, state: ActorRuntimeState, unit: "turns" | "rounds", definitions: Record<string, EffectDefinition>, events: EncounterEvent[]): ActorRuntimeState {

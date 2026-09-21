@@ -17,7 +17,7 @@ const Template=z.object({kind:z.string(),parameters:z.record(z.string(),Paramete
 const Generator=z.discriminatedUnion("type",[z.object({type:z.literal("values"),values:z.array(z.unknown()).min(1)}),z.object({type:z.literal("weighted-table"),entries:z.array(z.object({value:z.unknown(),weight:z.number().positive()})).min(1)}),z.object({type:z.literal("integer-range"),min:z.number().int(),max:z.number().int()})]);
 const Trait=z.object({id:Id,when:Condition.optional(),addTags:z.array(z.string()).optional(),set:z.record(z.string(),z.unknown()).optional(),multiply:z.record(z.string(),z.number()).optional()});
 const Resource=z.object({label:z.string(),min:z.number().optional(),max:z.number().optional(),default:z.number()}).refine(x=>x.min===undefined||x.max===undefined||x.min<=x.max,{message:"resource min exceeds max"});
-const ActorTemplate=z.object({label:z.string().trim().min(1).max(80),resources:z.record(Id,z.number().finite()).optional(),attributes:z.record(Id,z.number().finite()).optional()});
+const ActorTemplate=z.object({label:z.string().trim().min(1).max(80),resources:z.record(Id,z.number().finite()).optional(),attributes:z.record(Id,z.number().finite()).optional(),worldEntityKinds:z.array(Id).min(1).optional()});
 const Effect=z.object({label:z.string(),duration:z.object({type:z.enum(["turns","rounds","session","permanent"]),value:z.number().int().positive().optional()}).optional(),modifiers:z.record(z.string(),z.number()).optional()});
 const Target=z.enum(["self","actor","none","single-actor","multiple-actors"]);
 const StepCondition=z.object({previousOutcome:z.enum(["success","failure"])});
@@ -41,7 +41,11 @@ export async function loadWorldPack(input:string):Promise<LoadedWorldPack>{const
   if("steps" in action){for(const step of action.steps){if("check" in step&&!content.checks?.[step.check.id])throw Error(`Action ${id}: missing check ${step.check.id}`);if("resource" in step&&!content.resources?.[step.resource.resource])throw Error(`Action ${id}: missing resource ${step.resource.resource}`);if("effect" in step&&!content.effects?.[step.effect.id])throw Error(`Action ${id}: missing effect ${step.effect.id}`)}}
   else{if(action.checkId&&!content.checks?.[action.checkId])throw Error(`Action ${id}: missing check ${action.checkId}`);if(action.resource&&!content.resources?.[action.resource])throw Error(`Action ${id}: missing resource ${action.resource}`);if(action.effectId&&!content.effects?.[action.effectId])throw Error(`Action ${id}: missing effect ${action.effectId}`)}
  }
- for(const[id,template]of Object.entries(content.actorTemplates??{}))for(const[resourceId,value]of Object.entries(template.resources??{})){const resource=content.resources?.[resourceId];if(!resource)throw Error(`Actor template ${id}: unknown resource ${resourceId}`);if(resource.min!==undefined&&value<resource.min||resource.max!==undefined&&value>resource.max)throw Error(`Actor template ${id}: resource ${resourceId} outside bounds`)}
+ for(const[id,template]of Object.entries(content.actorTemplates??{})){
+  for(const[resourceId,value]of Object.entries(template.resources??{})){const resource=content.resources?.[resourceId];if(!resource)throw Error(`Actor template ${id}: unknown resource ${resourceId}`);if(resource.min!==undefined&&value<resource.min||resource.max!==undefined&&value>resource.max)throw Error(`Actor template ${id}: resource ${resourceId} outside bounds`)}
+  const kinds=new Set(Object.values(content.templates).map(value=>value.kind));
+  for(const kind of template.worldEntityKinds??[])if(!kinds.has(kind))throw Error(`Actor template ${id}: unknown World entity kind ${kind}`);
+ }
  return{manifest,content,root,assets:await files(root,join(root,"assets"))}}
 export function validateWorldPack(p:LoadedWorldPack){return{valid:true as const,id:p.manifest.id,version:p.manifest.version,questions:p.content.questions.length,templates:Object.keys(p.content.templates).length,generators:Object.keys(p.content.generators).length,traits:Object.keys(p.content.traits??{}).length,assets:p.assets.length}}
 export function validateCharacterValues(schema:CharacterCreationSchema,values:unknown):Record<string,unknown>{

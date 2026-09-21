@@ -71,6 +71,7 @@ templates:
         when: { eq: [ { descriptor: world.streetViolence }, high ] }
       clinic:
         template: location.street-clinic
+      drone: { template: actor.security-drone }
 
   faction.megacorp:
     kind: faction
@@ -89,6 +90,10 @@ templates:
     tags: [medical, street]
     values:
       name: { value: Nightshift Clinic }
+  actor.security-drone:
+    kind: actor
+    tags: [security, drone]
+    values: { name: { value: Security Drone } }
 
 relations:
   - id: gang-rivalry
@@ -140,7 +145,7 @@ resources:
   humanity: { label: Humanity, min: 0, max: 100, default: 70 }
   ammo: { label: Ammo, min: 0, max: 30, default: 12 }
 actorTemplates:
-  drone: { label: Security Drone, resources: { health: 12, humanity: 0, ammo: 8 }, attributes: { interface: 0, awareness: 2 } }
+  drone: { label: Security Drone, resources: { health: 12, humanity: 0, ammo: 8 }, attributes: { interface: 0, awareness: 2 }, worldEntityKinds: [actor] }
 effects:
   jammed:
     label: Jammed

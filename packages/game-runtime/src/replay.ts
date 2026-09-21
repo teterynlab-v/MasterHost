@@ -64,6 +64,18 @@ export function replayRuntimeEvents(events: ReplayEvent[], initial?: { actors: A
         const participants = strings(payload.participants, "encounter participants");
         const policy = string(payload.orderingPolicy, "ordering policy") as Encounter["orderingPolicy"];
         encounters.set(id, { id, sessionId, state: "live", participants, orderingPolicy: policy, order: [], currentActorId: undefined, round: 0, turn: 0 });
+      } else if (event.type === "EncounterParticipantsChanged") {
+        const id = string(payload.encounterId, "encounter ID"), encounter = encounters.get(id);
+        if (!encounter || encounter.state !== "live") throw Error(`participant change for inactive encounter ${id}`);
+        const added = strings(payload.addedActorIds, "added actor IDs"), removed = strings(payload.removedActorIds, "removed actor IDs");
+        if ((!added.length && !removed.length) || new Set(added).size !== added.length || new Set(removed).size !== removed.length || added.some(actorId => encounter.participants.includes(actorId) || removed.includes(actorId)) || removed.some(actorId => !encounter.participants.includes(actorId))) throw Error("invalid encounter participant change");
+        const participants = strings(payload.participants, "encounter participants"), order = strings(payload.order, "encounter order");
+        const expectedParticipants = [...encounter.participants.filter(actorId => !removed.includes(actorId)), ...added];
+        const expectedOrder = encounter.orderingPolicy === "none" ? [] : [...encounter.order.filter(actorId => !removed.includes(actorId)), ...added];
+        if (!participants.length || new Set(participants).size !== participants.length || participants.length !== expectedParticipants.length || participants.some((actorId, index) => actorId !== expectedParticipants[index]) || order.length !== expectedOrder.length || order.some((actorId, index) => actorId !== expectedOrder[index])) throw Error("invalid encounter participant order");
+        if (encounter.currentActorId && removed.includes(encounter.currentActorId)) throw Error("current actor removed from encounter");
+        encounter.participants = participants;
+        encounter.order = order;
       } else if (["OrderEstablished", "RoundStarted", "TurnStarted", "EncounterEnded"].includes(event.type)) {
         const id = string(payload.encounterId, "encounter ID"), encounter = encounters.get(id);
         if (!encounter) throw Error(`event for unknown encounter ${id}`);

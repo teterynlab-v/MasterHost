@@ -53,6 +53,7 @@ templates:
       mageTower:
         template: location.mage-tower
         when: { in: [{ descriptor: world.magic }, [common, high]] }
+      goblin: { template: creature.goblin }
   settlement.frontier:
     kind: settlement
     tags: [frontier]
@@ -70,6 +71,10 @@ templates:
     kind: location
     tags: [magic, tower]
     values: { name: { value: Tower of the Veil } }
+  creature.goblin:
+    kind: creature
+    tags: [goblin]
+    values: { name: { value: Goblin Scout } }
 
 relations:
   - id: settlement.trade-network
@@ -115,7 +120,7 @@ resources:
   health: { label: Health, min: 0, max: 30, default: 20 }
   mana: { label: Mana, min: 0, max: 20, default: 10 }
 actorTemplates:
-  goblin: { label: Goblin, resources: { health: 8, mana: 0 }, attributes: { perception: 1, athletics: 2 } }
+  goblin: { label: Goblin, resources: { health: 8, mana: 0 }, attributes: { perception: 1, athletics: 2 }, worldEntityKinds: [creature] }
 effects:
   poisoned:
     label: Poisoned

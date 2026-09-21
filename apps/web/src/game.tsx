@@ -3,9 +3,10 @@ import { sessionSocket } from "./session-client.js";
 
 const API = (import.meta as { env?: { VITE_API_URL?: string } }).env?.VITE_API_URL ?? "http://localhost:8080/api";
 type Participant = { id: string; displayName: string; accessToken?: string };
-type Actor = { actorId: string; kind?: "npc"; label?: string; resources: Record<string, number>; effects: { id: string; definitionId: string; remaining?: number }[] };
+type Actor = { actorId: string; kind?: "npc"; label?: string; worldEntityId?: string; resources: Record<string, number>; effects: { id: string; definitionId: string; remaining?: number }[] };
 type Encounter = { id: string; state: "live" | "ended"; orderingPolicy: string; participants: string[]; order: string[]; currentActorId?: string; round: number; turn: number };
-type Definitions = { checks: Record<string, { label: string }>; actions: Record<string, { label: string; target: string }>; actorTemplates: Record<string, { label: string }>; encounter: { orderingPolicy: string } };
+type Definitions = { checks: Record<string, { label: string }>; actions: Record<string, { label: string; target: string }>; actorTemplates: Record<string, { label: string; worldEntityKinds?: string[] }>; encounter: { orderingPolicy: string } };
+type WorldActor = { id: string; kind: string; name: string; materializationPath: string };
 type GameEvent = { id: string; sequence: number; type: string; createdAt: string };
 type PendingCheck = { request: { id: string; checkId: string; difficulty: number }; resolution: CheckResolution | null };
 type CheckResolution = { outcome: "success" | "failure"; total: number; modifier: number; roll: { total: number } };
@@ -28,6 +29,8 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
   const [actorId, setActorId] = useState("");
   const [checkParticipantId, setCheckParticipantId] = useState("");
   const [templateId, setTemplateId] = useState("");
+  const [worldEntityId, setWorldEntityId] = useState("");
+  const [worldActors, setWorldActors] = useState<WorldActor[]>([]);
   const [targetId, setTargetId] = useState("");
   const [targetIds, setTargetIds] = useState<string[]>([]);
   const [checkId, setCheckId] = useState("");
@@ -55,6 +58,7 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
       setActionId(Object.keys(value.actions)[0] ?? "");
       setTemplateId(Object.keys(value.actorTemplates)[0] ?? "");
     }).catch(failure => setError(String(failure)));
+    void call<WorldActor[]>(`/sessions/${session.id}/world-actors`, { headers: headers(gmToken) }).then(setWorldActors).catch(failure => setError(String(failure)));
     void refresh().catch(failure => setError(String(failure)));
   }, [session.id]);
   useEffect(() => {
@@ -84,6 +88,7 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
   const action = defs.actions[actionId];
   const targetPolicy = action?.target === "actor" ? "single-actor" : action?.target;
   const activeEncounter = encounters.find(encounter => encounter.state === "live");
+  const eligibleWorldActors = worldActors.filter(entity => defs.actorTemplates[templateId]?.worldEntityKinds?.includes(entity.kind) && !actors.some(actor => actor.worldEntityId === entity.id));
   const toggle = (ids: string[], id: string) => ids.includes(id) ? ids.filter(value => value !== id) : [...ids, id];
   function moveEncounter(id: string, direction: number) {
     const from = encounterIds.indexOf(id), to = from + direction;
@@ -104,11 +109,12 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
     <button className="secondary" disabled={busy || participants.length === 0} onClick={() => void run(async () => {
       for (const participant of participants) if (!actors.some(actor => actor.actorId === participant.id)) await authorizedPost(`/sessions/${session.id}/participants/${participant.id}/initialize`, {}, gmToken);
     })}>Initialize party runtime</button>
-    {templateId && <div className="actions"><label>NPC template<select value={templateId} onChange={event => setTemplateId(event.target.value)}>{Object.entries(defs.actorTemplates).map(([id, template]) => <option key={id} value={id}>{template.label}</option>)}</select></label><button className="secondary" disabled={busy} onClick={() => void run(() => authorizedPost(`/sessions/${session.id}/actors`, { templateId }, gmToken))}>ADD NPC</button></div>}
+    {templateId && <div className="actions"><label>NPC template<select value={templateId} onChange={event => { setTemplateId(event.target.value); setWorldEntityId(""); }}>{Object.entries(defs.actorTemplates).map(([id, template]) => <option key={id} value={id}>{template.label}</option>)}</select></label><label>World entity (optional)<select value={worldEntityId} onChange={event => setWorldEntityId(event.target.value)}><option value="">Session NPC</option>{eligibleWorldActors.map(entity => <option key={entity.id} value={entity.id}>{entity.name} · {entity.kind}</option>)}</select></label><button className="secondary" disabled={busy} onClick={() => void run(async () => { await authorizedPost(`/sessions/${session.id}/actors`, { templateId, ...(worldEntityId ? { worldEntityId } : {}) }, gmToken); setWorldEntityId(""); })}>ADD NPC</button></div>}
     <h3>Actors</h3>
     {[...participants.map(participant => ({ id: participant.id, name: participant.displayName })), ...actors.filter(actor => actor.kind === "npc").map(actor => ({ id: actor.actorId, name: actor.label ?? "NPC" }))].map(entry => {
       const actor = actors.find(value => value.actorId === entry.id);
       return <article key={entry.id}><h3>{entry.name}</h3>
+        {actor?.worldEntityId && <small>World entity: {worldActors.find(entity => entity.id === actor.worldEntityId)?.name ?? actor.worldEntityId}</small>}
         {actor ? Object.entries(actor.resources).map(([key, value]) => <div className="row" key={key}><b>{key}</b><span>{value}</span></div>) : <p className="muted">Not initialized</p>}
         {actor?.effects.map(effect => <small key={effect.id}>Effect: {effect.definitionId}{effect.remaining !== undefined ? ` (${effect.remaining})` : ""}</small>)}
       </article>;
@@ -131,6 +137,9 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
       <p>Ordering: <b>{activeEncounter.orderingPolicy}</b></p>
       {activeEncounter.currentActorId ? <p>Round {activeEncounter.round} · Turn {activeEncounter.turn} · Current: <b>{nameOf(activeEncounter.currentActorId, participants, actors)}</b></p> : <p>No turn order for this Pack.</p>}
       {activeEncounter.order.length > 0 && <p>Order: {activeEncounter.order.map(id => nameOf(id, participants, actors)).join(" → ")}</p>}
+      <p>Participants: {activeEncounter.participants.map(id => nameOf(id, participants, actors)).join(", ")}</p>
+      <div className="actions">{available.filter(actor => !activeEncounter.participants.includes(actor.id)).map(actor => <button className="secondary" key={actor.id} disabled={busy} onClick={() => void run(() => authorizedPost(`/encounters/${activeEncounter.id}/participants`, { addActorIds: [actor.id] }, gmToken))}>ADD {actor.displayName}</button>)}</div>
+      <div className="actions">{activeEncounter.participants.filter(id => id !== activeEncounter.currentActorId && activeEncounter.participants.length > 1).map(id => <button className="secondary" key={id} disabled={busy} onClick={() => void run(() => authorizedPost(`/encounters/${activeEncounter.id}/participants`, { removeActorIds: [id] }, gmToken))}>REMOVE {nameOf(id, participants, actors)}</button>)}</div>
       <div className="actions">
         {activeEncounter.currentActorId && <button disabled={busy} onClick={() => void run(() => authorizedPost(`/encounters/${activeEncounter.id}/advance`, {}, gmToken))}>END TURN</button>}
         <button className="secondary" disabled={busy} onClick={() => void run(() => authorizedPost(`/encounters/${activeEncounter.id}/end`, {}, gmToken))}>END ENCOUNTER</button>

@@ -12,6 +12,7 @@ describe("world pack", () => {
     expect(validateWorldPack(pack).valid).toBe(true);
     expect(pack.manifest.entryTemplate).toBe("world.default");
     expect(pack.content.actorTemplates?.goblin.resources?.health).toBe(8);
+    expect(pack.content.actorTemplates?.goblin.worldEntityKinds).toEqual(["creature"]);
   });
 
   it("rejects actor templates with unknown or out-of-bounds resources", async () => {
@@ -25,6 +26,17 @@ describe("world pack", () => {
       await expect(loadWorldPack(root)).rejects.toThrow("unknown resource missing");
       await writeFile(join(root, "pack.yaml"), content.replace(original, "goblin: { label: Goblin, resources: { health: 80"));
       await expect(loadWorldPack(root)).rejects.toThrow("resource health outside bounds");
+    } finally {
+      await rm(root, { recursive: true, force: true });
+    }
+  });
+  it("rejects actor links to World kinds absent from the Pack", async () => {
+    const root = await mkdtemp(join(tmpdir(), "masterhost-pack-"));
+    try {
+      await copyFile(join(fixture, "manifest.yaml"), join(root, "manifest.yaml"));
+      const content = await readFile(join(fixture, "pack.yaml"), "utf8");
+      await writeFile(join(root, "pack.yaml"), content.replace("worldEntityKinds: [creature]", "worldEntityKinds: [starship]"));
+      await expect(loadWorldPack(root)).rejects.toThrow("unknown World entity kind starship");
     } finally {
       await rm(root, { recursive: true, force: true });
     }

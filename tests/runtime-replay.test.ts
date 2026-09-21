@@ -41,4 +41,17 @@ describe("runtime event replay", () => {
     expect(initial.actors[0]?.resources.health).toBe(20);
     expect(replayRuntimeEvents([{ sequence: 7, schemaVersion: "1", type: "ActionResolved", payload: {} }], initial).issues).toHaveLength(1);
   });
+
+  it("rebuilds Encounter roster changes and rejects invalid order", () => {
+    const base = events([
+      { type: "EncounterStarted", payload: { encounterId: "e", sessionId: "s", participants: ["a", "b"], orderingPolicy: "fixed" } },
+      { type: "OrderEstablished", payload: { encounterId: "e", order: ["a", "b"] } },
+      { type: "RoundStarted", payload: { encounterId: "e", round: 1 } },
+      { type: "TurnStarted", payload: { encounterId: "e", actorId: "a", turn: 1 } },
+      { type: "EncounterParticipantsChanged", payload: { encounterId: "e", addedActorIds: ["c"], removedActorIds: ["b"], participants: ["a", "c"], order: ["a", "c"] } },
+    ]);
+    expect(replayRuntimeEvents(base).encounters[0]?.participants).toEqual(["a", "c"]);
+    expect(replayRuntimeEvents(base).issues).toEqual([]);
+    expect(replayRuntimeEvents([...base, { sequence: 6, schemaVersion: "1", type: "EncounterParticipantsChanged", payload: { encounterId: "e", addedActorIds: [], removedActorIds: [], participants: ["a", "c"], order: ["a", "a"] } }]).issues).toHaveLength(1);
+  });
 });

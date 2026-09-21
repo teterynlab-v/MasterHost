@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { advanceEncounter, endEncounter, startEncounter } from "@masterhost/game-runtime";
+import { advanceEncounter, changeEncounterParticipants, endEncounter, startEncounter } from "@masterhost/game-runtime";
 
 describe("encounter lifecycle", () => {
   it("orders by pack-selected attribute and emits turn, round and effect events", () => {
@@ -23,5 +23,19 @@ describe("encounter lifecycle", () => {
     expect(started.encounter.currentActorId).toBeUndefined();
     expect(started.events.map(e => e.type)).toEqual(["EncounterStarted", "OrderEstablished"]);
     expect(() => startEncounter({ sessionId: "s", participantIds: ["a", "b"], policy: "custom", customOrder: ["a", "a"] })).toThrow(/exactly once/);
+  });
+  it("changes a live roster without resetting the active turn or existing order", () => {
+    const started = startEncounter({ sessionId: "s", participantIds: ["a", "b"], policy: "fixed", id: "e" });
+    const changed = changeEncounterParticipants(started.encounter, { addActorIds: ["c"], removeActorIds: ["b"] });
+    expect(changed.encounter.participants).toEqual(["a", "c"]);
+    expect(changed.encounter.order).toEqual(["a", "c"]);
+    expect(changed.encounter.currentActorId).toBe("a");
+    expect(changed.encounter.turn).toBe(1);
+    expect(changed.events[0]?.type).toBe("EncounterParticipantsChanged");
+    expect(() => changeEncounterParticipants(changed.encounter, { removeActorIds: ["a"] })).toThrow(/current turn/);
+    expect(() => changeEncounterParticipants(changed.encounter, { addActorIds: ["a"] })).toThrow(/already/);
+    expect(() => changeEncounterParticipants(changed.encounter, { removeActorIds: ["c"], addActorIds: ["c"] })).toThrow(/duplicate/);
+    const noOrder = startEncounter({ sessionId: "s", participantIds: ["a"], policy: "none" });
+    expect(changeEncounterParticipants(noOrder.encounter, { addActorIds: ["b"] }).encounter.order).toEqual([]);
   });
 });

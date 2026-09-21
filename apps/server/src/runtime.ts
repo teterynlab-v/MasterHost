@@ -1,5 +1,6 @@
 import type{FastifyInstance}from"fastify";import websocket from"@fastify/websocket";import{RuntimeRepository,GameRepository,ActorStateRepository,EncounterRepository,RuntimeMutationRepository,RuntimeReplayRepository}from"@masterhost/persistence";import type{WorldRepository}from"@masterhost/persistence";import{newCheckRequest,resolveCheck,initializeResources,effectiveModifier,executeAction,startEncounter,advanceEncounter,endEncounter}from"@masterhost/game-runtime";import type{CheckDefinition,ResourceDefinition,EffectDefinition}from"@masterhost/game-runtime";import{validateCharacterValues}from"@masterhost/worldpack-sdk";import type{LoadedWorldPack}from"@masterhost/worldpack-sdk";
 import{createHash,randomUUID}from"node:crypto";
+import { changeEncounterParticipants } from "@masterhost/game-runtime";
 declare module "fastify" { interface FastifyInstance { masterhostPack?: LoadedWorldPack; masterhostWorldRepository?: WorldRepository } }
 export async function registerRuntime(app:FastifyInstance,x:{db:string;realmId:string}){
  const pack=app.masterhostPack,worldRepository=app.masterhostWorldRepository;if(!pack||!worldRepository)throw Error("MasterHost dependencies unavailable");
@@ -13,7 +14,8 @@ export async function registerRuntime(app:FastifyInstance,x:{db:string;realmId:s
  const requireParticipant=async(req:any,id:string)=>{if(!await repo.verifyParticipant(id,token(req)))throw Object.assign(Error("participant authorization required"),{statusCode:403})};
  const requireSessionMember=async(req:any,id:string)=>{if(!await repo.verifySessionGm(id,token(req))&&!await repo.sessionMember(id,token(req)))throw Object.assign(Error("session authorization required"),{statusCode:403})};
  const idempotency=async(req:any,sessionId:string)=>{const raw=req.headers["idempotency-key"];if(raw===undefined)return undefined;if(typeof raw!=="string"||!(/^[A-Za-z0-9._:-]{1,128}$/).test(raw))throw Object.assign(Error("invalid Idempotency-Key"),{statusCode:400});const fingerprint=createHash("sha256").update(`${req.method}\0${req.url}\0${JSON.stringify(req.body??{})}`).digest("hex");const prior=await mutations.receipt(sessionId,raw,fingerprint);return{key:raw,fingerprint,prior}};
- app.post("/api/campaigns",async(req:any)=>{const world=await worldRepository.get(req.body?.worldId);if(!world||world.realmId!==x.realmId)throw Object.assign(Error("world not found in Realm"),{statusCode:404});return repo.createCampaign({realmId:x.realmId,worldId:world.id,name:req.body.name??"New Campaign"})});
+ const sessionWorld=async(session:{campaignId:string;realmId:string})=>{const campaign=await repo.campaign(session.campaignId),world=campaign?await worldRepository.get(campaign.worldId):null;if(!campaign||!world||world.realmId!==session.realmId||world.packId!==pack.manifest.id||world.packVersion!==pack.manifest.version)throw Object.assign(Error("session World is unavailable or incompatible"),{statusCode:409});return world};
+ app.post("/api/campaigns",async(req:any)=>{const world=await worldRepository.get(req.body?.worldId);if(!world||world.realmId!==x.realmId)throw Object.assign(Error("world not found in Realm"),{statusCode:404});if(world.packId!==pack.manifest.id||world.packVersion!==pack.manifest.version)throw Object.assign(Error("World Pack is not active for this Realm"),{statusCode:409});return repo.createCampaign({realmId:x.realmId,worldId:world.id,name:req.body.name??"New Campaign"})});
  app.get("/api/campaigns/:id",async(req:any)=>repo.campaign(req.params.id));
  app.post("/api/campaigns/:id/sessions",async(req:any)=>{const c=await repo.campaign(req.params.id);if(!c||c.realmId!==x.realmId)throw Object.assign(Error("campaign not found"),{statusCode:404});await requireCampaignGm(req,c.id);return repo.startLobby({realmId:x.realmId,campaignId:c.id,gmId:req.body?.gmId})});
  app.post("/api/join/resolve",async(req:any)=>{const s=await repo.resolvePin(x.realmId,String(req.body?.pin??""));if(!s)throw Object.assign(Error("PIN not found or expired"),{statusCode:404});return{session:s,campaign:await repo.campaign(s.campaignId)}});
@@ -32,7 +34,26 @@ export async function registerRuntime(app:FastifyInstance,x:{db:string;realmId:s
 
  app.get("/api/game/definitions",async()=>{const c=pack.content;return{checks:c.checks??{},resources:c.resources??{},effects:c.effects??{},actions:c.actions??{},actorTemplates:c.actorTemplates??{},encounter:c.encounter??{orderingPolicy:"none"}}});
  app.get("/api/sessions/:id/actors",async(req:any)=>{await requireSessionMember(req,req.params.id);return actors.all(req.params.id)});
- app.post("/api/sessions/:id/actors",async(req:any)=>{await requireSessionGm(req,req.params.id);const idem=await idempotency(req,req.params.id);if(idem?.prior!==undefined)return idem.prior;const session=await repo.session(req.params.id);if(!session||session.state!=="live")throw Object.assign(Error("session is not live"),{statusCode:409});const templateId=String(req.body?.templateId??""),template=pack.content.actorTemplates?.[templateId];if(!template)throw Object.assign(Error("unknown actor template"),{statusCode:400});const definitions=Object.fromEntries(Object.entries(pack.content.resources??{}).map(([id,value])=>[id,{id,...value}])) as Record<string,ResourceDefinition>;const state={actorId:randomUUID(),kind:"npc" as const,label:template.label,templateId,attributes:template.attributes??{},resources:initializeResources(definitions,template.resources??{}),effects:[]};const receipt=await mutations.commit(session.id,[{type:"ActorInitialized",payload:{...state}}],[state],undefined,{},idem?{key:idem.key,fingerprint:idem.fingerprint,result:state}:undefined);if(receipt.replayed)return receipt.result;await broadcast(session.id,"actor.state",state);return state});
+ app.get("/api/sessions/:id/world-actors",async(req:any)=>{await requireSessionGm(req,req.params.id);const session=await repo.session(req.params.id);if(!session)throw Object.assign(Error("session not found"),{statusCode:404});const world=await sessionWorld(session),kinds=new Set(Object.values(pack.content.actorTemplates??{}).flatMap(template=>template.worldEntityKinds??[]));return world.entities.filter(entity=>kinds.has(entity.kind)).map(entity=>({id:entity.id,kind:entity.kind,name:String(entity.values.name?.value??entity.kind),materializationPath:entity.materializationPath}))});
+ app.post("/api/sessions/:id/actors",async(req:any)=>{
+  await requireSessionGm(req,req.params.id);
+  const idem=await idempotency(req,req.params.id);if(idem?.prior!==undefined)return idem.prior;
+  const session=await repo.session(req.params.id);if(!session||session.state!=="live")throw Object.assign(Error("session is not live"),{statusCode:409});
+  const templateId=String(req.body?.templateId??""),template=pack.content.actorTemplates?.[templateId];if(!template)throw Object.assign(Error("unknown actor template"),{statusCode:400});
+  const worldEntityId=req.body?.worldEntityId;
+  if(worldEntityId!==undefined){
+   if(typeof worldEntityId!=="string")throw Object.assign(Error("invalid World entity ID"),{statusCode:400});
+   const world=await sessionWorld(session),entity=world.entities.find(item=>item.id===worldEntityId);
+   if(!entity||!template.worldEntityKinds?.includes(entity.kind))throw Object.assign(Error("World entity is not compatible with actor template"),{statusCode:400});
+  }
+  const definitions=Object.fromEntries(Object.entries(pack.content.resources??{}).map(([id,value])=>[id,{id,...value}])) as Record<string,ResourceDefinition>;
+  const state={actorId:randomUUID(),kind:"npc" as const,label:template.label,templateId,...(worldEntityId?{worldEntityId}:{}),attributes:template.attributes??{},resources:initializeResources(definitions,template.resources??{}),effects:[]};
+  let receipt;
+  try{receipt=await mutations.commit(session.id,[{type:"ActorInitialized",payload:{...state}}],[state],undefined,{},idem?{key:idem.key,fingerprint:idem.fingerprint,result:state}:undefined)}
+  catch(error){if(error&&typeof error==="object"&&"constraint_name" in error&&error.constraint_name==="actor_one_world_entity_per_session")throw Object.assign(Error("World entity already has a session actor"),{statusCode:409});throw error}
+  if(receipt.replayed)return receipt.result;
+  await broadcast(session.id,"actor.state",state);return state;
+ });
  app.post("/api/sessions/:id/participants/:participantId/initialize",async(req:any)=>{await requireSessionGm(req,req.params.id);const idem=await idempotency(req,req.params.id);if(idem?.prior!==undefined)return idem.prior;const session=await repo.session(req.params.id);if(!session||session.state!=="live")throw Object.assign(Error("session is not live"),{statusCode:409});const p=await repo.participant(req.params.participantId);if(!p?.characterId||p.sessionId!==req.params.id)throw Object.assign(Error("participant has no character in session"),{statusCode:409});const c=await repo.character(p.characterId),defs=Object.fromEntries(Object.entries(pack.content.resources??{}).map(([id,value])=>[id,{id,...value}])) as Record<string,ResourceDefinition>,state={actorId:p.id,resources:initializeResources(defs,c?.values??{}),effects:[]};const receipt=await mutations.commit(req.params.id,[{type:"ActorInitialized",payload:{...state}}],[state],undefined,{},idem?{key:idem.key,fingerprint:idem.fingerprint,result:state}:undefined);if(receipt.replayed)return receipt.result;await broadcast(req.params.id,"actor.state",state);return state});
  app.post("/api/sessions/:id/actions",async(req:any)=>{
   await requireSessionGm(req,req.params.id);
@@ -82,6 +103,20 @@ export async function registerRuntime(app:FastifyInstance,x:{db:string;realmId:s
   const attributes:Record<string,number>={};if(config.orderingPolicy==="attribute"){if(!config.attributeField)throw Error("encounter attribute field missing in Pack");for(const id of ids){const actor=states.find(state=>state.actorId===id);if(actor?.kind==="npc"){attributes[id]=Number(actor.attributes?.[config.attributeField]??NaN);continue}const participant=await repo.participant(id),character=participant?.characterId?await repo.character(participant.characterId):null;attributes[id]=Number(character?.values?.[config.attributeField]??NaN)}}
   const result=startEncounter({sessionId:session.id,participantIds:ids,policy:config.orderingPolicy,attributes,customOrder:req.body?.customOrder});
   const receipt=await mutations.commit(session.id,result.events,[],result.encounter,{},idem?{key:idem.key,fingerprint:idem.fingerprint,result}:undefined);if(receipt.replayed)return receipt.result;await broadcast(session.id,"encounter.state",result.encounter);return result;
+ });
+ app.post("/api/encounters/:id/participants",async(req:any)=>{
+  const current=await encounters.getVersioned(req.params.id);if(!current)throw Object.assign(Error("encounter not found"),{statusCode:404});
+  const encounter=current.encounter;await requireSessionGm(req,encounter.sessionId);
+  const idem=await idempotency(req,encounter.sessionId);if(idem?.prior!==undefined)return idem.prior;
+  const session=await repo.session(encounter.sessionId);if(!session||session.state!=="live")throw Object.assign(Error("session is not live"),{statusCode:409});
+  const added=req.body?.addActorIds??[],removed=req.body?.removeActorIds??[];
+  if(!Array.isArray(added)||!Array.isArray(removed)||[...added,...removed].some(id=>typeof id!=="string"))throw Object.assign(Error("actor ID lists are required"),{statusCode:400});
+  const available=new Set((await actors.all(encounter.sessionId)).map(state=>state.actorId));
+  if(added.some(id=>!available.has(id)))throw Object.assign(Error("added actors must be initialized in this Session"),{statusCode:400});
+  const result=changeEncounterParticipants(encounter,{addActorIds:added,removeActorIds:removed});
+  const receipt=await mutations.commit(encounter.sessionId,result.events,[],result.encounter,{encounterVersion:current.version},idem?{key:idem.key,fingerprint:idem.fingerprint,result}:undefined);
+  if(receipt.replayed)return receipt.result;
+  await broadcast(encounter.sessionId,"encounter.state",result.encounter);return result;
  });
  app.post("/api/encounters/:id/advance",async(req:any)=>{
   const current=await encounters.getVersioned(req.params.id);if(!current)throw Object.assign(Error("encounter not found"),{statusCode:404});
