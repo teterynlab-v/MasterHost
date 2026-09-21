@@ -19,6 +19,7 @@
 - Ordinary Vitest suite: **146 passed**, with **4 environment-gated tests skipped** in the ordinary run.
 - Live PostgreSQL table repository contract: **2 passed**. It proves create/read, optimistic conflict, atomic event persistence and the absence of private note text in the event stream.
 - Web production build: pass, 43 modules transformed.
+- Complete M14 portable game regression gate: pass after the M15 runtime changes, including two installations, restart, browser edit and atomic rejection.
 
 ## Runtime proof
 
