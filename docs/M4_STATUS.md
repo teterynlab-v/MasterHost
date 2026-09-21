@@ -1,6 +1,6 @@
-# M4 Status — console and recovery ready for playtest (2026-09-21)
+# M4 Status — accepted with deferred playtest gate (2026-09-21)
 
-**Milestone gate: open.** M4.0 through M4.2 source and automated acceptance are implemented for both bundled Packs. The canonical gate still requires one real play session lasting at least 120 minutes.
+**Milestone status: accepted by explicit product-owner waiver.** M4.0 through M4.2 source and automated acceptance are implemented for both bundled Packs. On 2026-09-21 the product owner explicitly directed development to skip the real 120-minute playtest for now and continue. This records a waiver, not fabricated playtest evidence.
 
 ## Source
 
@@ -29,6 +29,6 @@
 - `scripts/m4-acceptance.mjs` passed Classic Fantasy and Cyberpunk on a clean temporary PostgreSQL database. Each Pack completed Session activity, WebSocket catchup, an actual server restart, recovered Actor/Encounter state and clean finish.
 - Cyberpunk browser proof used separate GM and player tabs. It showed the full GM control surface and evidence card, the expanded player sheet and named Location, travel and narrative activity, visible reconnecting state while the server was stopped, then automatic connected state and missed-event catchup after restart.
 
-## Remaining gate
+## Deferred evidence
 
-Run the protocol in `M4_PLAYTEST.md`. M4 may be marked complete only when a finished Session reports at least 120 real minutes and the required mechanic/reconnect evidence, with human observations recorded.
+The human playtest protocol remains in `M4_PLAYTEST.md` and should be run before a production-readiness claim. No 120-minute human Session has been executed or recorded.

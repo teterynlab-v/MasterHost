@@ -1,5 +1,7 @@
 # M4 Two-Hour Playtest Protocol
 
+> Deferred on 2026-09-21 by explicit product-owner direction so development could proceed to M5. Keep this protocol for later human and production-readiness evidence; no completed playtest is currently claimed.
+
 ## Participants and setup
 
 - One GM and at least one player use separate devices or browser contexts.

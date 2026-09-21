@@ -1,5 +1,6 @@
 import type{AssetRef,AssetRole,AssetSet}from"./assets.js";
 export interface ArtSetManifest{id:string;name:string;description?:string;defaults?:Partial<Record<AssetRole,AssetRef>>;families?:Record<string,AssetSet>;types?:Record<string,AssetSet>}
+export interface PackArtSetManifest{id:string;name:string;description?:string;defaults?:Partial<Record<AssetRole,string>>;families?:Record<string,Partial<Record<AssetRole,string>>>;types?:Record<string,Partial<Record<AssetRole,string>>>}
 export function artSetCandidates(x:{entity?:AssetSet;variant?:AssetSet;typeId?:string;familyId?:string;artSet?:ArtSetManifest;packDefault?:AssetSet}){
  return[
   {level:"entity"as const,assets:x.entity},

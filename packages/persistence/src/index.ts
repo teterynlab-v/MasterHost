@@ -39,21 +39,25 @@ export class WorldRepository {
       await tx`insert into world_revisions(id,world_id,revision,reason,data) values(${randomUUID()},${w.id},${w.revision},'import',${tx.json(w as any)})`;
     });return w;
   }
-  async putAsset(worldId:string,path:string,mediaType:string,data:Uint8Array){
+  async putAsset(worldId:string,path:string,mediaType:string,data:Uint8Array,replaceAssigned=false){
     validateWorldImage(path,mediaType,data);
     const checksum=assetChecksum(data);
     return this.sql.begin(async tx=>{
       const row=(await tx`select data from worlds where id=${worldId} for update`)[0];if(!row)throw Error("world not found");
       const world=row.data as MaterializedWorld;
       if(!world.assets?.[path]&&Object.keys(world.assets??{}).length>=20)throw Error("World asset limit exceeded");
-      if(world.assets?.[path]?.checksum!==undefined&&world.assets[path]!.checksum!==checksum&&world.entities.some(entity=>Object.values(entity.assets?.roles??{}).some(ref=>ref?.path===path)))throw Error("Assigned image must be detached before replacement");
+      const replacing=world.assets?.[path]?.checksum!==undefined&&world.assets[path]!.checksum!==checksum,assigned=world.entities.some(entity=>Object.values(entity.assets?.roles??{}).some(ref=>ref?.path===path));if(replacing&&assigned&&!replaceAssigned)throw Error("Assigned image replacement requires explicit confirmation");
       await tx`insert into world_asset_blobs(checksum,data) values(${checksum},${Buffer.from(data)}) on conflict(checksum) do nothing`;
-      world.assets={...world.assets,[path]:{checksum,mediaType,size:data.length}};world.revision++;world.updatedAt=new Date().toISOString();
+      world.assets={...world.assets,[path]:{checksum,mediaType,size:data.length}};world.authoring={...world.authoring,assetMetadata:{...world.authoring?.assetMetadata,[path]:world.authoring?.assetMetadata?.[path]??{tags:[],variants:[]}}};if(replacing&&assigned)for(const entity of world.entities)for(const ref of Object.values(entity.assets?.roles??{}))if(ref?.path===path)ref.checksum=checksum;world.revision++;world.updatedAt=new Date().toISOString();
       await tx`update worlds set data=${tx.json(world as any)},revision=${world.revision},updated_at=now() where id=${worldId}`;
       await tx`insert into world_revisions(id,world_id,revision,reason,data) values(${randomUUID()},${worldId},${world.revision},${`asset:${path}`},${tx.json(world as any)})`;
       return world;
     });
   }
+  async updateAssetMetadata(worldId:string,path:string,input:{title?:string;tags?:string[];variants?:string[]}){
+    const world=await this.get(worldId);if(!world?.assets?.[path])throw Error("asset not found");const variants=[...new Set(input.variants??world.authoring?.assetMetadata?.[path]?.variants??[])];for(const name of variants)if(!world.assets[name]||name===path)throw Error(`invalid asset variant ${name}`);world.authoring={...world.authoring,assetMetadata:{...world.authoring?.assetMetadata,[path]:{title:input.title?.trim()||undefined,tags:[...new Set((input.tags??[]).map(value=>value.trim()).filter(Boolean))],variants}}};world.revision++;world.updatedAt=new Date().toISOString();return this.save(world,`asset-metadata:${path}`);
+  }
+  async deleteAsset(worldId:string,path:string){const world=await this.get(worldId);if(!world?.assets?.[path])throw Error("asset not found");if(world.entities.some(entity=>Object.values(entity.assets?.roles??{}).some(ref=>ref?.path===path)))throw Object.assign(Error("asset is assigned to an entity"),{statusCode:409});if(Object.values(world.authoring?.artSets??{}).some(set=>JSON.stringify(set).includes(`\"${path}\"`)))throw Object.assign(Error("asset is used by an Art Set"),{statusCode:409});const next=structuredClone(world);delete next.assets![path];if(next.authoring?.assetMetadata){delete next.authoring.assetMetadata[path];for(const metadata of Object.values(next.authoring.assetMetadata))metadata.variants=metadata.variants.filter(value=>value!==path)}next.revision++;next.updatedAt=new Date().toISOString();return this.save(next,`asset-delete:${path}`)}
   async asset(worldId:string,path:string){const world=await this.get(worldId),ref=world?.assets?.[path];if(!ref)return null;const row=(await this.sql`select data from world_asset_blobs where checksum=${ref.checksum}`)[0];if(!row)throw Error(`Missing stored asset ${path}`);const data=new Uint8Array(row.data as Buffer);if(assetChecksum(data)!==ref.checksum||data.length!==ref.size)throw Error(`Corrupt stored asset ${path}`);return{data,mediaType:ref.mediaType};}
   async assets(worldId:string){const world=await this.get(worldId);if(!world)throw Error("world not found");return Object.fromEntries(await Promise.all(Object.keys(world.assets??{}).map(async path=>[path,(await this.asset(worldId,path))!.data] as const)));}
   async get(id:string){ const r=await this.sql`select data from worlds where id=${id}`; return (r[0]?.data??null) as MaterializedWorld|null; }

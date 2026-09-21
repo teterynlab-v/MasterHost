@@ -25,5 +25,6 @@ export * from "./constraint-compiler.js";
 export * from "./scope.js";
 
 export * from "./identity.js";
+export * from "./advanced-authoring.js";
 export * from "./repair.js";
 import {preserveCustomByPath} from "./identity.js";
