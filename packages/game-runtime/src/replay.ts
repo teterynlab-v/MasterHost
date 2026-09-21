@@ -99,7 +99,7 @@ export function replayRuntimeEvents(events: ReplayEvent[], initial?: { actors: A
         if (event.type === "RoundStarted") encounter.round = number(payload.round, "round");
         if (event.type === "TurnStarted") { encounter.currentActorId = string(payload.actorId, "current actor"); encounter.turn = number(payload.turn, "turn"); }
         if (event.type === "EncounterEnded") { encounter.state = "ended"; encounter.currentActorId = undefined; }
-      } else if (!["CheckRequested", "DiceRolled", "CheckResolved", "ActionRequested", "ActionResolved", "TurnEnded", "RoundEnded"].includes(event.type)) {
+      } else if (!["CheckRequested", "DiceRolled", "CheckResolved", "ActionRequested", "ActionResolved", "TurnEnded", "RoundEnded", "NarrativeEventRecorded", "SessionReconnected"].includes(event.type)) {
         issues.push(`event ${event.sequence} has unsupported type ${event.type}`);
       }
     } catch (failure) {

@@ -13,7 +13,8 @@ const pack = await valid("/pack");
 assert.equal(pack.manifest.id, "masterhost.classic-fantasy-test");
 const world = await valid("/worlds", { seed: "runtime-smoke", choices: {} });
 const creature = world.entities.find(entity => entity.kind === "creature");
-assert.ok(creature);
+const settlement = world.entities.find(entity => entity.kind === "settlement");
+assert.ok(creature);assert.ok(settlement);
 const campaign = await valid("/campaigns", { worldId: world.id, name: "Runtime smoke" });
 assert.equal((await call(`/campaigns/${campaign.id}/sessions`, {})).status, 403);
 const session = await valid(`/campaigns/${campaign.id}/sessions`, {}, campaign.gmToken);
@@ -67,11 +68,11 @@ assert.equal((await call(`/sessions/${session.id}/runtime/snapshots`, {})).statu
 const runtimeSnapshot = await valid(`/sessions/${session.id}/runtime/snapshots`, {}, campaign.gmToken);
 assert.ok(runtimeSnapshot.lastSequence > 0);
 assert.deepEqual(await valid(`/sessions/${session.id}/runtime/snapshots`, {}, campaign.gmToken), runtimeSnapshot);
-async function websocketSnapshot(token) {
+async function websocketSnapshot(token,afterSequence=0) {
   return new Promise((resolve, reject) => {
     const socket = new WebSocket(`ws://localhost:8080/ws/sessions/${session.id}`);
     const timeout = setTimeout(() => { socket.close(); reject(Error("WebSocket timeout")); }, 3000);
-    socket.addEventListener("open", () => socket.send(JSON.stringify({ type: "authenticate", token })));
+    socket.addEventListener("open", () => socket.send(JSON.stringify({ type: "authenticate", token, afterSequence })));
     socket.addEventListener("message", event => { clearTimeout(timeout); socket.close(); resolve(JSON.parse(event.data)); });
     socket.addEventListener("close", event => { clearTimeout(timeout); if (event.code === 1008) resolve({ denied: true }); });
     socket.addEventListener("error", error => { clearTimeout(timeout); reject(error); });
@@ -89,6 +90,14 @@ const otherOwnerKey = randomUUID();
 const otherCharacter = await valid("/characters", { ownerKey: otherOwnerKey, values: { name: "Borin", archetype: "scholar" } });
 await valid(`/participants/${otherPlayer.id}/character`, { characterId: otherCharacter.id, ownerKey: otherOwnerKey }, otherPlayer.accessToken);
 await valid(`/sessions/${session.id}/participants/${otherPlayer.id}/initialize`, {}, campaign.gmToken);
+const context=await valid(`/sessions/${session.id}/context`,undefined,player.accessToken);assert.equal(context.world.id,world.id);assert.equal((await valid(`/participants/${player.id}/character`,undefined,player.accessToken)).id,character.id);
+assert.equal((await call(`/participants/${player.id}/character`,undefined,otherPlayer.accessToken)).status,403);
+await valid(`/sessions/${session.id}/travel`,{actorIds:[player.id,otherPlayer.id],locationId:settlement.id},campaign.gmToken,randomUUID());
+const traveled=await valid(`/sessions/${session.id}/actors`,undefined,player.accessToken);assert.ok([player.id,otherPlayer.id].every(id=>traveled.find(actor=>actor.actorId===id).locationId===settlement.id));
+const beforeNarrative=(await valid(`/sessions/${session.id}/events`,undefined,campaign.gmToken)).at(-1).sequence;
+await valid(`/sessions/${session.id}/events/narrative`,{text:"The party reaches the settlement."},campaign.gmToken,randomUUID());
+const catchup=await websocketSnapshot(player.accessToken,beforeNarrative);assert.equal(catchup.type,"session.catchup");assert.ok(catchup.payload.missedEvents.some(event=>event.type==="NarrativeEventRecorded"));assert.equal(catchup.payload.actors.find(actor=>actor.actorId===player.id).locationId,settlement.id);
+const earlyPlaytest=await valid(`/sessions/${session.id}/playtest-report`,undefined,campaign.gmToken);assert.equal(earlyPlaytest.gatePassed,false);assert.equal(earlyPlaytest.evidence.reconnects,1);assert.equal(earlyPlaytest.evidence.narrativeEvents,1);assert.equal(earlyPlaytest.evidence.travelMoves,2);
 assert.equal((await call(`/sessions/${session.id}/actors`, { templateId: "goblin" }, player.accessToken)).status, 403);
 assert.equal((await call(`/sessions/${session.id}/actors`, { templateId: "unknown" }, campaign.gmToken)).status, 400);
 assert.equal((await call(`/sessions/${session.id}/world-actors`, undefined, player.accessToken)).status, 403);
