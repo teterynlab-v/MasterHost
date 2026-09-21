@@ -3,6 +3,7 @@ import { realmHeaders } from "./realm.js";
 import { sessionSocket } from "./session-client.js";
 import type { ConnectionStatus } from "./session-client.js";
 import {AdvancedSessionPanel} from "./advanced-session.js";
+import{gmWorkspaces,initialGmWorkspace}from"./gm-workspace.js";import type{GmWorkspace}from"./gm-workspace.js";import{useI18n}from"./i18n/react.js";
 
 const API = (import.meta as { env?: { VITE_API_URL?: string } }).env?.VITE_API_URL ?? "http://localhost:8080/api";
 type Participant = { id: string; displayName: string; accessToken?: string;ready?:boolean };
@@ -29,13 +30,14 @@ async function call<T>(path: string, init?: RequestInit): Promise<T> {
 const headers = (token: string) => ({ authorization: `Bearer ${token}` });
 const authorizedPost = <T,>(path: string, body: object, token: string) => call<T>(path, { method: "POST", headers: { "content-type": "application/json", ...headers(token) }, body: JSON.stringify(body) });
 const nameOf = (id: string | undefined, participants: Participant[], actors: Actor[]) => actors.find(actor => actor.actorId === id)?.label ?? participants.find(participant => participant.id === id)?.displayName ?? "Unknown actor";
-function ConnectionBadge({status}:{status:ConnectionStatus}){return <span className={`connection ${status}`} role="status">{status==="live"?"● Connected":status==="offline"?"● Offline":status==="recovering"?"● Reconnecting…":status==="connecting"?"● Connecting…":"● Disconnected"}</span>}
+function ConnectionBadge({status}:{status:ConnectionStatus}){const{t}=useI18n();const label=status==="live"?t("common.connected"):status==="offline"?t("common.offline"):status==="recovering"?t("common.reconnecting"):status==="connecting"?t("common.connecting"):t("common.disconnected");return <span className={`connection ${status}`} role="status">● {label}</span>}
 function NpcEditor({actor,template,busy,inEncounter,onEdit,onRemove}:{actor:Actor;template?:Definitions["actorTemplates"][string];busy:boolean;inEncounter:boolean;onEdit:(label:string,attributes:Record<string,number>)=>Promise<void>;onRemove:()=>Promise<void>}){
  const[label,setLabel]=useState(actor.label??"NPC"),[attributes,setAttributes]=useState<Record<string,number>>(actor.attributes??{});useEffect(()=>{setLabel(actor.label??"NPC");setAttributes(actor.attributes??{})},[actor.label,JSON.stringify(actor.attributes)]);
  return <div className="npcEditor"><label>NPC name<input value={label} maxLength={80} onChange={event=>setLabel(event.target.value)}/></label>{Object.keys(template?.attributes??{}).map(key=><label key={key}>{key}<input type="number" value={attributes[key]??0} onChange={event=>setAttributes({...attributes,[key]:Number(event.target.value)})}/></label>)}<div className="actions"><button className="secondary" disabled={busy||!label.trim()} onClick={()=>void onEdit(label.trim(),attributes)}>SAVE NPC</button><button className="secondary" disabled={busy||inEncounter} title={inEncounter?"Remove from the active Encounter first":undefined} onClick={()=>void onRemove()}>DELETE NPC</button></div></div>
 }
 
 export function GmGame({ session, participants, gmToken }: { session: { id: string }; participants: Participant[]; gmToken: string }) {
+  const{t}=useI18n();
   const [defs, setDefs] = useState<Definitions>({ checks: {}, actions: {},items:{},progression:{},locations:{worldEntityKinds:[]}, actorTemplates: {}, encounter: { orderingPolicy: "none" } });
   const [actorId, setActorId] = useState("");
   const [checkParticipantId, setCheckParticipantId] = useState("");
@@ -57,6 +59,7 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
   const [connection,setConnection]=useState<ConnectionStatus>("connecting"),[narrative,setNarrative]=useState("");
+  const[workspace,setWorkspace]=useState<GmWorkspace>(initialGmWorkspace);
 
   async function refresh() {
     const [nextEvents, nextActors, nextEncounters,nextWorldActors,nextLocations,nextPlaytest] = await Promise.all([
@@ -121,9 +124,13 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
   async function startEncounter() {
     await authorizedPost(`/sessions/${session.id}/encounters`, { participantIds: encounterIds, ...(defs.encounter.orderingPolicy === "custom" ? { customOrder: encounterIds } : {}) }, gmToken);
   }
-  return <section>
-    <div className="titleRow"><h2>GAME LIVE</h2><ConnectionBadge status={connection}/></div>
+  const labels:Record<GmWorkspace,string>={table:t("gm.table"),checks:t("gm.checks"),encounter:t("gm.encounter"),party:t("gm.party"),journal:t("gm.journal")};
+  return <section className="gmConsole">
+    <div className="titleRow"><div><p className="eyebrow">{t("gm.console")}</p><h2>{t("gm.live")}</h2></div><ConnectionBadge status={connection}/></div>
+    <nav className="workspaceNav" aria-label={t("gm.console")}>{gmWorkspaces.map(value=><button key={value} className={workspace===value?"selected secondary":"secondary"} aria-current={workspace===value?"page":undefined} onClick={()=>setWorkspace(value)}>{labels[value]}</button>)}</nav>
     {error && <p className="error" role="alert">{error}</p>}
+    <div hidden={workspace!=="table"}><div className="workspaceIntro"><div><h3>{t("gm.table")}</h3><p>{t("gm.tableHelp")}</p></div><button className="secondary" onClick={()=>setWorkspace("checks")}>{t("gm.openChecks")}</button></div><AdvancedSessionPanel sessionId={session.id} token={gmToken} gm actors={actors}/></div>
+    {workspace==="party"&&<><div className="workspaceIntro"><div><h3>{t("gm.party")}</h3><p>{t("gm.partyHelp")}</p></div></div>
     <button className="secondary" disabled={busy || participants.length === 0} onClick={() => void run(async () => {
       for (const participant of participants) if (!actors.some(actor => actor.actorId === participant.id)) await authorizedPost(`/sessions/${session.id}/participants/${participant.id}/initialize`, {}, gmToken);
     })}>Initialize party runtime</button>
@@ -146,10 +153,12 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
     {itemId&&<><label>Loot<select value={itemId} onChange={event=>setItemId(event.target.value)}>{Object.entries(defs.items).map(([id,item])=><option key={id} value={id}>{item.label}</option>)}</select></label><label>Quantity<input type="number" min="1" value={quantity} onChange={event=>setQuantity(Number(event.target.value))}/></label><button disabled={busy||!actorId} onClick={()=>void run(()=>authorizedPost(`/sessions/${session.id}/items/grant`,{actorId,itemId,quantity},gmToken))}>GRANT LOOT</button></>}
     {progressionId&&<><label>Progression<select value={progressionId} onChange={event=>setProgressionId(event.target.value)}>{Object.entries(defs.progression).map(([id,value])=><option key={id} value={id}>{value.label}</option>)}</select></label><button disabled={busy||!actorId} onClick={()=>void run(()=>authorizedPost(`/sessions/${session.id}/progression`,{actorId,progressionId,amount:quantity},gmToken))}>AWARD</button></>}
     {locations.length>0&&<><label>Location<select value={locationId} onChange={event=>setLocationId(event.target.value)}><option value="">Choose…</option>{locations.map(location=><option key={location.id} value={location.id}>{location.name}</option>)}</select></label><div className="actions"><button disabled={busy||!actorId||!locationId} onClick={()=>void run(()=>authorizedPost(`/sessions/${session.id}/location`,{actorId,locationId},gmToken))}>MOVE ACTOR</button><button className="secondary" disabled={busy||!locationId||!actors.length} onClick={()=>void run(()=>authorizedPost(`/sessions/${session.id}/travel`,{actorIds:actors.map(actor=>actor.actorId),locationId},gmToken))}>TRAVEL PARTY</button></div></>}
+    </>}
+    {workspace==="checks"&&<><div className="workspaceIntro"><div><h3>{t("gm.checks")}</h3><p>{t("gm.checksHelp")}</p></div>{activeEncounter&&<button className="secondary" onClick={()=>setWorkspace("encounter")}>{t("gm.openEncounter")}</button>}</div>
     <h3>Request check</h3>
     <label>Player<select value={checkParticipantId} onChange={event => setCheckParticipantId(event.target.value)}>{availablePlayers.map(participant => <option key={participant.id} value={participant.id}>{participant.displayName}</option>)}</select></label>
     <label>Check<select value={checkId} onChange={event => setCheckId(event.target.value)}>{Object.entries(defs.checks).map(([id, check]) => <option key={id} value={id}>{check.label}</option>)}</select></label>
-    <label>Difficulty<input type="number" value={difficulty} onChange={event => setDifficulty(Number(event.target.value))} /></label>
+    <label>{t("player.difficulty")}<input type="number" value={difficulty} onChange={event => setDifficulty(Number(event.target.value))} /></label>
     <label>Player visibility<select value={visibility} onChange={event=>setVisibility(event.target.value)}><option value="full">Full roll and DC</option><option value="result-only">Result, hidden DC</option><option value="roll-only">Roll, hidden outcome and DC</option><option value="hidden">Hidden result and DC</option></select></label>
     <button disabled={busy || !checkParticipantId || !checkId} onClick={() => void run(() => authorizedPost(`/sessions/${session.id}/checks`, { participantId: checkParticipantId, checkId, difficulty, visibility }, gmToken))}>SEND CHECK</button>
 
@@ -157,9 +166,11 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
     <label>Source actor<select value={actorId} onChange={event => setActorId(event.target.value)}>{available.map(actor => <option key={actor.id} value={actor.id}>{actor.displayName}</option>)}</select></label>
     <label>Action<select value={actionId} onChange={event => setActionId(event.target.value)}>{Object.entries(defs.actions).map(([id, definition]) => <option key={id} value={id}>{definition.label}</option>)}</select></label>
     {targetPolicy === "single-actor" && <label>Target<select value={targetId} onChange={event => setTargetId(event.target.value)}>{available.map(participant => <option key={participant.id} value={participant.id}>{participant.displayName}</option>)}</select></label>}
-    {targetPolicy === "multiple-actors" && <fieldset className="choiceList"><legend>Targets</legend>{available.map(participant => <label key={participant.id}><input type="checkbox" checked={targetIds.includes(participant.id)} onChange={() => setTargetIds(ids => toggle(ids, participant.id))} />{participant.displayName}</label>)}</fieldset>}
+    {targetPolicy === "multiple-actors" && <fieldset className="choiceList"><legend>{t("player.targets")}</legend>{available.map(participant => <label key={participant.id}><input type="checkbox" checked={targetIds.includes(participant.id)} onChange={() => setTargetIds(ids => toggle(ids, participant.id))} />{participant.displayName}</label>)}</fieldset>}
     <button disabled={busy || !actorId || !actionId || targetPolicy === "single-actor" && !targetId || targetPolicy === "multiple-actors" && !targetIds.length} onClick={() => void run(applyAction)}>APPLY ACTION</button>
 
+    </>}
+    {workspace==="encounter"&&<><div className="workspaceIntro"><div><h3>{t("gm.encounter")}</h3><p>{t("gm.encounterHelp")}</p></div></div>
     <h3>Encounter</h3>
     {activeEncounter ? <article>
       <p>Ordering: <b>{activeEncounter.orderingPolicy}</b></p>
@@ -178,19 +189,22 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
       <fieldset className="choiceList"><legend>Participants</legend>{available.map(participant => <label key={participant.id}><input type="checkbox" checked={encounterIds.includes(participant.id)} onChange={() => setEncounterIds(ids => toggle(ids, participant.id))} />{participant.displayName}{defs.encounter.orderingPolicy === "custom" && encounterIds.includes(participant.id) && <span><button className="tiny" disabled={encounterIds[0] === participant.id} onClick={() => moveEncounter(participant.id, -1)}>↑</button> <button className="tiny" disabled={encounterIds.at(-1) === participant.id} onClick={() => moveEncounter(participant.id, 1)}>↓</button></span>}</label>)}</fieldset>
       <button disabled={busy || encounterIds.length === 0} onClick={() => void run(startEncounter)}>START ENCOUNTER</button>
     </article>}
+    </>}
+    {workspace==="journal"&&<><div className="workspaceIntro"><div><h3>{t("gm.journal")}</h3><p>{t("gm.journalHelp")}</p></div></div>
     <h3>Session</h3>
-    {playtest&&<article><h3>M4 playtest evidence</h3><p><b>{playtest.durationMinutes} / 120 minutes</b> · {playtest.eventCount} events · {playtest.gatePassed?"gate passed":"gate open"}</p><small>Checks {playtest.evidence.checks} · Actions {playtest.evidence.actions} · Encounters {playtest.evidence.encounters} · Travel {playtest.evidence.travelMoves} · Reconnects {playtest.evidence.reconnects} · Notes {playtest.evidence.narrativeEvents}</small></article>}
     <label>Record event<textarea rows={3} maxLength={1000} value={narrative} onChange={event=>setNarrative(event.target.value)} placeholder="What changed in the fiction?"/></label>
     <button className="secondary" disabled={busy||!narrative.trim()} onClick={()=>void run(async()=>{await authorizedPost(`/sessions/${session.id}/events/narrative`,{text:narrative.trim()},gmToken);setNarrative("")})}>ADD TO SESSION LOG</button>
     <button className="secondary" disabled={busy || Boolean(activeEncounter)} onClick={() => void run(() => authorizedPost(`/sessions/${session.id}/state`, { state: "finished" }, gmToken))}>FINISH SESSION</button>
     {activeEncounter && <p className="muted">End the encounter before finishing the session.</p>}
-    <AdvancedSessionPanel sessionId={session.id} token={gmToken} gm actors={actors}/>
     <h3>Game log</h3>
     {events.slice(-15).reverse().map(event => <div className="row gameLogRow" key={event.id}><b>#{event.sequence} {event.type}</b><small>{new Date(event.createdAt).toLocaleTimeString()}</small></div>)}
+    {playtest&&<details className="technicalEvidence"><summary>{t("gm.devTools")}</summary><p><b>{playtest.durationMinutes} / 120 minutes</b> · {playtest.eventCount} events · {playtest.gatePassed?"gate passed":"gate open"}</p></details>}
+    </>}
   </section>;
 }
 
 export function PlayerGame({ session, participant, onLeave }: { session: { id: string }; participant: Participant & { accessToken: string }; onLeave: () => void }) {
+  const{t}=useI18n();
   const [pending, setPending] = useState<PendingCheck[]>([]);
   const [last, setLast] = useState<{ resolution: CheckResolution }>();
   const [actor, setActor] = useState<Actor>();
@@ -228,18 +242,19 @@ export function PlayerGame({ session, participant, onLeave }: { session: { id: s
   const shownResolution = last?.resolution ?? pending.find(check => check.resolution)?.resolution;
   const locationName=locations.find(value=>value.id===actor?.locationId)?.name;
   const playerAction=defs.actions[playerActionId],playerTargetPolicy=playerAction?.target==="actor"?"single-actor":playerAction?.target,targetChoices=allActors.map(value=>({id:value.actorId,name:nameOf(value.actorId,party,allActors)}));
-  return <section>
-    <div className="titleRow"><div><h2>{context?.campaign.name??"GAME LIVE"}</h2><p className="muted">{context&&`${context.world.name} · revision ${context.world.revision} · ${context.pack.name}`}</p></div><ConnectionBadge status={connection}/></div>
+  return <section className="playerConsole">
+    <div className="titleRow"><div><h2>{context?.campaign.name??"GAME LIVE"}</h2><p className="muted">{context&&`${context.world.name} · ${context.pack.name}`}</p></div><ConnectionBadge status={connection}/></div>
     {error && <p className="error" role="alert">{error}</p>}
-    {character&&<article><h3>{character.displayName}</h3><div className="sheetGrid">{Object.entries(character.values).map(([key,value])=><div key={key}><small>{key}</small><strong>{String(value)}</strong></div>)}</div>{character.traits.length>0&&<p>Traits: {character.traits.join(", ")}</p>}</article>}
-    {actor && <article><h3>Resources and status</h3><div className="sheetGrid">{Object.entries(actor.resources).map(([key, value]) => <div key={key}><small>{key}</small><strong>{value}</strong></div>)}</div>{actor.effects.map(effect => <small className="tag" key={effect.id}>{effect.definitionId}{effect.remaining !== undefined ? ` · ${effect.remaining} turns` : ""}</small>)}<h4>Inventory</h4>{actor.inventory?.length?actor.inventory.map(item=><div className="compactRow" key={item.itemId}><span>{defs.items[item.itemId]?.label??item.itemId}</span><b>× {item.quantity}</b></div>):<p className="muted">Empty</p>}{Object.entries(actor.progression??{}).map(([key,value])=><div className="compactRow" key={key}><span>{defs.progression[key]?.label??key}</span><b>{value}</b></div>)}{actor.locationId&&<p>Location: <b>{locationName??actor.locationId}</b></p>}</article>}
-    {actor&&playerAction&&<article className="abilityPanel"><h3>Abilities and actions</h3><label>Ability<select value={playerActionId} onChange={event=>{setPlayerActionId(event.target.value);setPlayerTargetIds([])}}>{Object.entries(defs.actions).map(([id,value])=><option key={id} value={id}>{value.label}</option>)}</select></label>{playerTargetPolicy==="single-actor"&&<label>Target<select aria-label="Action target" value={playerTargetIds[0]??""} onChange={event=>setPlayerTargetIds(event.target.value?[event.target.value]:[])}><option value="">Choose…</option>{targetChoices.map(value=><option key={value.id} value={value.id}>{value.name}</option>)}</select></label>}{playerTargetPolicy==="multiple-actors"&&<fieldset className="choiceList"><legend>Targets</legend>{targetChoices.map(value=><label key={value.id}><input type="checkbox" checked={playerTargetIds.includes(value.id)} onChange={()=>setPlayerTargetIds(ids=>ids.includes(value.id)?ids.filter(id=>id!==value.id):[...ids,value.id])}/>{value.name}</label>)}</fieldset>}<label>Difficulty<input type="number" value={actionDifficulty} onChange={event=>setActionDifficulty(Number(event.target.value))}/></label><button disabled={acting||playerTargetPolicy==="single-actor"&&!playerTargetIds.length||playerTargetPolicy==="multiple-actors"&&!playerTargetIds.length} onClick={()=>void useAction()}>USE {playerAction.label.toUpperCase()}</button></article>}
-    {encounter && <article><h3>Encounter</h3>{encounter.currentActorId ? <p>Round {encounter.round} · Turn {encounter.turn} · <b>{encounter.currentActorId === participant.id ? "Your turn" : "Another actor's turn"}</b></p> : <p>Active encounter · no turn order</p>}</article>}
-    {current ? <article className="pendingCard"><h3>Pending check · {defs.checks[current.request.checkId]?.label??current.request.checkId}</h3>{current.request.difficulty!==undefined&&<p>Difficulty: <b>{current.request.difficulty}</b></p>}<button onClick={() => void roll(current)}>🎲 ROLL</button></article> : <p className="muted">No pending check.</p>}
-    {shownResolution && <article><h3>{shownResolution.outcome?.toUpperCase()??"RESOLVED"}</h3>{shownResolution.total!==undefined&&<div className="bigRoll">{shownResolution.total}</div>}{shownResolution.roll&&<p>Dice {shownResolution.roll.total}{shownResolution.modifier!==undefined?` + modifier ${shownResolution.modifier}`:""}</p>}</article>}
-    <article><h3>Party</h3>{party.map(member=><div className="compactRow" key={member.id}><span>{member.displayName}</span><small>{member.id===participant.id?"You":member.ready?"Ready":"Joined"}</small></div>)}</article>
-    {activity.length>0&&<article><h3>Recent session activity</h3>{activity.slice().reverse().map((event,index)=><div className="compactRow" key={`${event.sequence}-${index}`}><span>#{event.sequence} {event.type}</span>{event.text&&<small>{event.text}</small>}</div>)}</article>}
-    <AdvancedSessionPanel sessionId={session.id} token={participant.accessToken} gm={false} actors={actor?[actor]:[]}/>
-    <button className="secondary" onClick={() => void refresh().catch(failure => setError(String(failure)))}>Refresh state</button> <button className="secondary" onClick={onLeave}>Join another session</button>
+    {character&&<article id="player-character"><h3>{character.displayName}</h3><div className="sheetGrid">{Object.entries(character.values).map(([key,value])=><div key={key}><small>{key}</small><strong>{String(value)}</strong></div>)}</div>{character.traits.length>0&&<p>Traits: {character.traits.join(", ")}</p>}</article>}
+    {current ? <article className="pendingCard urgentAction"><p className="eyebrow">{t("player.action")}</p><h3>{defs.checks[current.request.checkId]?.label??current.request.checkId}</h3>{current.request.difficulty!==undefined&&<p>Difficulty: <b>{current.request.difficulty}</b></p>}<button onClick={() => void roll(current)}>🎲 {t("player.roll")}</button></article> : null}
+    {actor && <article><h3>{t("player.resources")}</h3><div className="sheetGrid">{Object.entries(actor.resources).map(([key, value]) => <div key={key}><small>{key}</small><strong>{value}</strong></div>)}</div>{actor.effects.map(effect => <small className="tag" key={effect.id}>{effect.definitionId}{effect.remaining !== undefined ? ` · ${effect.remaining} turns` : ""}</small>)}<h4>{t("player.inventory")}</h4>{actor.inventory?.length?actor.inventory.map(item=><div className="compactRow" key={item.itemId}><span>{defs.items[item.itemId]?.label??item.itemId}</span><b>× {item.quantity}</b></div>):<p className="muted">{t("player.empty")}</p>}{Object.entries(actor.progression??{}).map(([key,value])=><div className="compactRow" key={key}><span>{defs.progression[key]?.label??key}</span><b>{value}</b></div>)}{actor.locationId&&<p>{t("player.location")}: <b>{locationName??actor.locationId}</b></p>}</article>}
+    {actor&&playerAction&&<article className="abilityPanel" id="player-abilities"><h3>{t("player.abilities")}</h3><label>{t("player.ability")}<select value={playerActionId} onChange={event=>{setPlayerActionId(event.target.value);setPlayerTargetIds([])}}>{Object.entries(defs.actions).map(([id,value])=><option key={id} value={id}>{value.label}</option>)}</select></label>{playerTargetPolicy==="single-actor"&&<label>{t("player.target")}<select aria-label={t("player.target")} value={playerTargetIds[0]??""} onChange={event=>setPlayerTargetIds(event.target.value?[event.target.value]:[])}><option value="">Choose…</option>{targetChoices.map(value=><option key={value.id} value={value.id}>{value.name}</option>)}</select></label>}{playerTargetPolicy==="multiple-actors"&&<fieldset className="choiceList"><legend>{t("player.targets")}</legend>{targetChoices.map(value=><label key={value.id}><input type="checkbox" checked={playerTargetIds.includes(value.id)} onChange={()=>setPlayerTargetIds(ids=>ids.includes(value.id)?ids.filter(id=>id!==value.id):[...ids,value.id])}/>{value.name}</label>)}</fieldset>}<label>{t("player.difficulty")}<input type="number" value={actionDifficulty} onChange={event=>setActionDifficulty(Number(event.target.value))}/></label><button disabled={acting||playerTargetPolicy==="single-actor"&&!playerTargetIds.length||playerTargetPolicy==="multiple-actors"&&!playerTargetIds.length} onClick={()=>void useAction()}>{t("player.use",{action:playerAction.label})}</button></article>}
+    {encounter && <article><h3>{t("player.encounter")}</h3>{encounter.currentActorId ? <p>{t("player.round")} {encounter.round} · {t("player.turn")} {encounter.turn} · <b>{encounter.currentActorId === participant.id?t("player.yourTurn"):t("player.otherTurn")}</b></p> : <p>{t("player.noOrder")}</p>}</article>}
+    {!current&&<p className="muted">{t("player.noCheck")}</p>}
+    {shownResolution && <article><h3>{shownResolution.outcome?.toUpperCase()??"RESOLVED"}</h3>{shownResolution.total!==undefined&&<div className="bigRoll">{shownResolution.total}</div>}{shownResolution.roll&&<p>{t("player.dice")} {shownResolution.roll.total}{shownResolution.modifier!==undefined?` + ${t("player.modifier")} ${shownResolution.modifier}`:""}</p>}</article>}
+    <article id="player-group"><h3>{t("player.group")}</h3>{party.map(member=><div className="compactRow" key={member.id}><span>{member.displayName}</span><small>{member.id===participant.id?t("player.you"):member.ready?t("common.ready"):t("player.joined")}</small></div>)}</article>
+    <article id="player-journal"><h3>{t("player.journal")}</h3>{activity.length?activity.slice().reverse().map((event,index)=><div className="compactRow" key={`${event.sequence}-${index}`}><span>#{event.sequence} {event.type}</span>{event.text&&<small>{event.text}</small>}</div>):<p className="muted">{t("player.noActivity")}</p>}</article>
+    <div id="player-map"><AdvancedSessionPanel sessionId={session.id} token={participant.accessToken} gm={false} actors={actor?[actor]:[]}/></div>
+    <nav className="playerBottomNav" aria-label={t("player.tools")}>{[["player-character",t("player.character")],["player-abilities",t("player.abilities")],["player-map",t("player.map")],["player-group",t("player.group")],["player-journal",t("player.journal")]].map(([id,label])=><button type="button" key={id} onClick={()=>document.getElementById(id)?.scrollIntoView({behavior:"smooth",block:"start"})}>{label}</button>)}</nav><button className="secondary" onClick={() => void refresh().catch(failure => setError(String(failure)))}>{t("player.refresh")}</button> <button className="secondary" onClick={onLeave}>{t("join.other")}</button>
   </section>;
 }
