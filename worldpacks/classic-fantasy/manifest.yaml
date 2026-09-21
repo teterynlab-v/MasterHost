@@ -1,6 +1,6 @@
 id: masterhost.classic-fantasy
 name: Classic Fantasy
-version: 1.0.0
+version: 2.0.0
 schemaVersion: "0.1"
 defaultArtSet: standard
 entryTemplate: world.root
