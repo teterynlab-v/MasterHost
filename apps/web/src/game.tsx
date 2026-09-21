@@ -3,9 +3,9 @@ import { sessionSocket } from "./session-client.js";
 
 const API = (import.meta as { env?: { VITE_API_URL?: string } }).env?.VITE_API_URL ?? "http://localhost:8080/api";
 type Participant = { id: string; displayName: string; accessToken?: string };
-type Actor = { actorId: string; kind?: "npc"; label?: string; worldEntityId?: string; resources: Record<string, number>; effects: { id: string; definitionId: string; remaining?: number }[] };
+type Actor = { actorId: string; kind?: "npc"; label?: string; templateId?:string; worldEntityId?: string; attributes?:Record<string,number>; resources: Record<string, number>; effects: { id: string; definitionId: string; remaining?: number }[] };
 type Encounter = { id: string; state: "live" | "ended"; orderingPolicy: string; participants: string[]; order: string[]; currentActorId?: string; round: number; turn: number };
-type Definitions = { checks: Record<string, { label: string }>; actions: Record<string, { label: string; target: string }>; actorTemplates: Record<string, { label: string; worldEntityKinds?: string[] }>; encounter: { orderingPolicy: string } };
+type Definitions = { checks: Record<string, { label: string }>; actions: Record<string, { label: string; target: string }>; actorTemplates: Record<string, { label: string; attributes?:Record<string,number>; worldEntityKinds?: string[] }>; encounter: { orderingPolicy: string } };
 type WorldActor = { id: string; kind: string; name: string; materializationPath: string };
 type GameEvent = { id: string; sequence: number; type: string; createdAt: string };
 type PendingCheck = { request: { id: string; checkId: string; difficulty: number }; resolution: CheckResolution | null };
@@ -23,6 +23,10 @@ async function call<T>(path: string, init?: RequestInit): Promise<T> {
 const headers = (token: string) => ({ authorization: `Bearer ${token}` });
 const authorizedPost = <T,>(path: string, body: object, token: string) => call<T>(path, { method: "POST", headers: { "content-type": "application/json", ...headers(token) }, body: JSON.stringify(body) });
 const nameOf = (id: string | undefined, participants: Participant[], actors: Actor[]) => actors.find(actor => actor.actorId === id)?.label ?? participants.find(participant => participant.id === id)?.displayName ?? "Unknown actor";
+function NpcEditor({actor,template,busy,inEncounter,onEdit,onRemove}:{actor:Actor;template?:Definitions["actorTemplates"][string];busy:boolean;inEncounter:boolean;onEdit:(label:string,attributes:Record<string,number>)=>Promise<void>;onRemove:()=>Promise<void>}){
+ const[label,setLabel]=useState(actor.label??"NPC"),[attributes,setAttributes]=useState<Record<string,number>>(actor.attributes??{});useEffect(()=>{setLabel(actor.label??"NPC");setAttributes(actor.attributes??{})},[actor.label,JSON.stringify(actor.attributes)]);
+ return <div className="npcEditor"><label>NPC name<input value={label} maxLength={80} onChange={event=>setLabel(event.target.value)}/></label>{Object.keys(template?.attributes??{}).map(key=><label key={key}>{key}<input type="number" value={attributes[key]??0} onChange={event=>setAttributes({...attributes,[key]:Number(event.target.value)})}/></label>)}<div className="actions"><button className="secondary" disabled={busy||!label.trim()} onClick={()=>void onEdit(label.trim(),attributes)}>SAVE NPC</button><button className="secondary" disabled={busy||inEncounter} title={inEncounter?"Remove from the active Encounter first":undefined} onClick={()=>void onRemove()}>DELETE NPC</button></div></div>
+}
 
 export function GmGame({ session, participants, gmToken }: { session: { id: string }; participants: Participant[]; gmToken: string }) {
   const [defs, setDefs] = useState<Definitions>({ checks: {}, actions: {}, actorTemplates: {}, encounter: { orderingPolicy: "none" } });
@@ -63,7 +67,7 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
   }, [session.id]);
   useEffect(() => {
     const socket = sessionSocket(session.id, gmToken, event => {
-      if (["check.requested", "check.resolved", "actor.state", "action.resolved", "encounter.state"].includes(event.type)) void refresh().catch(failure => setError(String(failure)));
+      if (["check.requested", "check.resolved", "actor.state", "actor.removed", "action.resolved", "encounter.state"].includes(event.type)) void refresh().catch(failure => setError(String(failure)));
     });
     return () => socket.close();
   }, [session.id, gmToken]);
@@ -117,6 +121,7 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
         {actor?.worldEntityId && <small>World entity: {worldActors.find(entity => entity.id === actor.worldEntityId)?.name ?? actor.worldEntityId}</small>}
         {actor ? Object.entries(actor.resources).map(([key, value]) => <div className="row" key={key}><b>{key}</b><span>{value}</span></div>) : <p className="muted">Not initialized</p>}
         {actor?.effects.map(effect => <small key={effect.id}>Effect: {effect.definitionId}{effect.remaining !== undefined ? ` (${effect.remaining})` : ""}</small>)}
+        {actor?.kind==="npc"&&<NpcEditor actor={actor} template={actor.templateId?defs.actorTemplates[actor.templateId]:undefined} busy={busy} inEncounter={Boolean(activeEncounter?.participants.includes(actor.actorId))} onEdit={(label,attributes)=>run(()=>authorizedPost(`/sessions/${session.id}/actors/${actor.actorId}/edit`,{label,attributes},gmToken))} onRemove={()=>run(()=>authorizedPost(`/sessions/${session.id}/actors/${actor.actorId}/remove`,{},gmToken))}/>}
       </article>;
     })}
     <h3>Request check</h3>

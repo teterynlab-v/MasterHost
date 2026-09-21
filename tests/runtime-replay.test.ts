@@ -42,6 +42,15 @@ describe("runtime event replay", () => {
     expect(replayRuntimeEvents([{ sequence: 7, schemaVersion: "1", type: "ActionResolved", payload: {} }], initial).issues).toHaveLength(1);
   });
 
+  it("replays NPC edits and removal",()=>{
+    const npc={actorId:"npc",kind:"npc" as const,label:"Goblin",templateId:"goblin",resources:{health:8},effects:[],attributes:{perception:1}};
+    const updated={...npc,label:"Scout",attributes:{perception:3}};
+    const edited=replayRuntimeEvents(events([{type:"ActorInitialized",payload:npc},{type:"ActorUpdated",payload:{actor:updated}}]));
+    expect(edited.issues).toEqual([]);expect(edited.actors).toEqual([updated]);
+    const removed=replayRuntimeEvents(events([{type:"ActorInitialized",payload:npc},{type:"ActorUpdated",payload:{actor:updated}},{type:"ActorRemoved",payload:{actorId:"npc"}}]));
+    expect(removed.issues).toEqual([]);expect(removed.actors).toEqual([]);
+  });
+
   it("rebuilds Encounter roster changes and rejects invalid order", () => {
     const base = events([
       { type: "EncounterStarted", payload: { encounterId: "e", sessionId: "s", participants: ["a", "b"], orderingPolicy: "fixed" } },

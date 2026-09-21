@@ -26,6 +26,7 @@ M2.2 declarative actions, M2.3 target policies, M2.4 Encounter ordering/turns, a
 - PostgreSQL permits only one live Encounter per Session; concurrent starts leave one committed event sequence.
 - Action, Encounter, NPC creation, Actor initialization and Check creation commands support an optional Session-scoped idempotency key, persisted atomically with their events and result.
 - GM can instantiate a Session NPC from a Pack actor template. NPC resources and attributes are Pack-defined; NPCs use the same Action and Encounter engine as player actors.
+- GM can edit an NPC label and its Pack-declared numeric attributes, then remove the NPC after it leaves any live Encounter. Both mutations are event sourced, version checked, idempotent and replayable; resources/effects remain Action controlled. See `NPC_LIFECYCLE_DECISION.md`.
 - NPCs can optionally link to compatible entities of their Campaign's materialized World. A Session permits one Actor per linked entity; Fantasy and Cyberpunk materialize compatible actor entities through their Pack template graphs.
 - GM can add initialized Actors to, or remove non-current Actors from, a live Encounter. The roster event and Encounter version update are atomic; late entrants append to the established order. See `WORLD_ACTOR_ENCOUNTER_DECISION.md`.
 - GM-only runtime verification reconstructs Actor and Encounter state from version-1 events and compares it with persisted materialized state in one database snapshot.
@@ -59,6 +60,7 @@ Both Packs now declare optional numeric Character abilities for their Checks and
 - GM can apply generic Actions.
 - GM can select multiple Action targets, start/end Encounters, and advance turns when the Pack defines an order.
 - GM can add NPCs, choose them as Action source or target, and include them in Encounters.
+- GM can edit and delete an NPC from its Actor card; deletion is disabled while that NPC is in the active Encounter.
 - GM can choose a materialized World entity when adding an NPC and adjust an active Encounter's roster.
 - Player can see own Resources/Effects, roll Checks, and see Encounter/turn state.
 - GM and player views restore live state after reload; both can move on after a finished Session.
@@ -66,7 +68,7 @@ Both Packs now declare optional numeric Character abilities for their Checks and
 
 The Fantasy browser flow verified a two-target Rally, effect ticking on turn advance, current-player changes, Encounter restore after reload, and Session finish. The Cyberpunk browser flow verified an active no-turn Encounter on GM and player screens; the live API smoke verified two-target Signal Boost and absence of TurnStarted events.
 
-A later Fantasy browser flow verified adding Goblin, an NPC-sourced action against a player, a player-to-NPC turn transition, and Session finish. A further browser flow linked Goblin to a generated World creature, added and removed it in a live Encounter without changing the current turn, then finished the Session. Both Pack API smokes verify linked NPCs and roster changes. NPCs still use Pack templates for mechanics and are not independently editable or removable as individual records.
+A later Fantasy browser flow verified adding Goblin, an NPC-sourced action against a player, a player-to-NPC turn transition, and Session finish. A further browser flow linked Goblin to a generated World creature, added and removed it in a live Encounter without changing the current turn, then finished the Session. Both Pack API smokes verify linked NPCs and roster changes. The NPC lifecycle slice then edited a Goblin label and Pack-declared attributes, retained the edit after browser reload, and removed the NPC. Both Pack API smokes passed edit/removal and replay verification.
 
 On 2026-09-21, the Fantasy browser created a Character through the three-step Pack schema, entered Perception 2 and Athletics 3, and reached the Session lobby. The Fantasy and Cyberpunk PostgreSQL API smokes exercised numeric Check modifiers and Pack actions; both M0 persistence/ZIP smokes remained green. The full suite passed 52 tests, TypeScript passed, and the web production build passed. This verifies the two bundled Packs and local runtime; it is not acceptance of arbitrary third-party Packs.
 
@@ -75,5 +77,5 @@ The Check recovery slice passed 54 tests, TypeScript, the web build, both Pack A
 ## Next architecture step
 
 1. Add multi-node realtime delivery. Check repair and Actor/Encounter repair remain separate stopped-server commands; checkpoints cover Actor/Encounter state only.
-2. Add NPC editing/removal and explicit reconciliation if a linked World entity changes or disappears in a later revision.
+2. Add explicit reconciliation if a linked World entity changes or disappears in a later revision.
 3. Extend Pack validation for future capabilities when their execution semantics are defined; arbitrary third-party Packs and custom Action executors remain outside this verified slice.

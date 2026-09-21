@@ -2,7 +2,7 @@ import postgres from "postgres";
 import type { ActorRuntimeState, Encounter } from "@masterhost/game-runtime";
 
 export interface RuntimeMutationEvent { type: string; payload: Record<string, unknown> }
-export interface RuntimeMutationVersions { actorVersions?: Record<string, number>; encounterVersion?: number }
+export interface RuntimeMutationVersions { actorVersions?: Record<string, number>; encounterVersion?: number; removeActorIds?: string[] }
 export interface RuntimeIdempotency { key: string; fingerprint: string; result: unknown }
 const conflict = () => Object.assign(Error("runtime state changed; reload and retry"), { statusCode: 409 });
 
@@ -51,6 +51,11 @@ export class RuntimeMutationRepository {
           const inserted = await tx`insert into actor_runtime_state(session_id,actor_id,state) values(${sessionId},${state.actorId},${tx.json(state as unknown as Parameters<typeof tx.json>[0])}) on conflict(session_id,actor_id) do nothing returning actor_id`;
           if (!inserted.length) throw conflict();
         }
+      }
+      for (const actorId of versions.removeActorIds ?? []) {
+        const expected=versions.actorVersions?.[actorId];if(expected===undefined)throw conflict();
+        const removed=await tx`delete from actor_runtime_state where session_id=${sessionId} and actor_id=${actorId} and version=${expected} returning actor_id`;
+        if(!removed.length)throw conflict();
       }
       for (const event of events) await tx`insert into game_events(id,session_id,event_type,payload,schema_version) values(gen_random_uuid(),${sessionId},${event.type},${tx.json(event.payload as Parameters<typeof tx.json>[0])},'1')`;
       if (idempotency) await tx`update runtime_command_receipts set result=${tx.json(idempotency.result as Parameters<typeof tx.json>[0])} where session_id=${sessionId} and key=${idempotency.key}`;
