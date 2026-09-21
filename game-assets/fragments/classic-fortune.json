@@ -1,0 +1,17 @@
+{
+  "id": "masterhost.fragment.fortune",
+  "version": "1.0.0",
+  "name": "Fortune Rules",
+  "description": "Adds a luck resource, a fortune check and a Tempt Fate action.",
+  "provides": ["rules:fortune"],
+  "requires": [],
+  "conflicts": [],
+  "parameters": {
+    "startingLuck": { "type": "number", "default": 3, "min": 0, "max": 10 }
+  },
+  "patches": [
+    { "op": "set", "path": "/content/resources/luck", "value": { "label": "Luck", "min": 0, "max": 10, "default": { "$parameter": "startingLuck" } } },
+    { "op": "set", "path": "/content/checks/fortune", "value": { "label": "Fortune", "dice": "1d20" } },
+    { "op": "set", "path": "/content/actions/tempt-fate", "value": { "label": "Tempt Fate", "target": "self", "kind": "check", "checkId": "fortune" } }
+  ]
+}

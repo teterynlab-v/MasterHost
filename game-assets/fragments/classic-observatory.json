@@ -1,0 +1,16 @@
+{
+  "id": "masterhost.fragment.observatory",
+  "version": "1.0.0",
+  "name": "Observatory Location",
+  "description": "Adds an ancient observatory location to the generated World.",
+  "provides": ["location:observatory"],
+  "requires": [],
+  "conflicts": [],
+  "parameters": {
+    "danger": { "type": "number", "required": true, "default": 3, "min": 1, "max": 5 }
+  },
+  "patches": [
+    { "op": "set", "path": "/content/templates/location.observatory", "value": { "kind": "location", "values": { "name": { "value": "Ancient Observatory" }, "danger": { "value": { "$parameter": "danger" } } } } },
+    { "op": "merge", "path": "/content/templates/world.root/components", "value": { "observatory": { "template": "location.observatory" } } }
+  ]
+}
