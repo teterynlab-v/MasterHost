@@ -62,7 +62,17 @@
       "setting:voidwake"
     ],
     "conflicts": [],
-    "parameters": {},
+    "parameters": {
+      "missionPremise": {
+        "type": "string",
+        "required": true,
+        "default": "Recover the Tide Engine before the storm closes.",
+        "options": [
+          "Recover the Tide Engine before the storm closes.",
+          "Escort the last archive ship through the closing storm."
+        ]
+      }
+    },
     "patches": [
       {
         "op": "set",
@@ -74,7 +84,9 @@
               "value": "The Voidwake Archipelago"
             },
             "premise": {
-              "value": "Recover the Tide Engine before the storm closes."
+              "value": {
+                "$parameter": "missionPremise"
+              }
             }
           },
         "tags": [

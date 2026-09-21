@@ -9,15 +9,16 @@
 - The existing searchable asset and fragment builder remains available as **Advanced mode** and still produces the same game Descriptor.
 - `reviewQuickGameSelection` is a pure registry-level contract that rejects missing categories, duplicate categories, unknown versions, incompatible Packs and missing exact dependencies. It emits deterministic dependency order, aggregate content counts and a complete license inventory.
 - `POST /api/game-assets/quick-review` requires a Realm creator, binds review to the active exact Pack and accepts at most 64 validated exact identities.
-- The final browser review shows all selected assets, content depth, Pack decisions, exact versions and every license/source. Creation remains disabled until both readiness review and Descriptor preview pass.
+- Every selected asset exposes its typed string, number and boolean parameters inside its guided stage. Defaults are initialized, required and bounded values gate navigation, edits invalidate prior review, and the selected values flow into the ordinary Descriptor.
+- The final browser review shows all selected asset IDs and versions, exact dependencies, chosen parameters, content depth, Pack decisions and every license/source. Creation remains disabled until both readiness review and Descriptor preview pass.
 - A successful final action creates the ordinary persisted M10 Descriptor project, compiles through the generic compiler and opens the existing materialized World UI.
 
 ## Automated tests
 
 - TypeScript workspace check: pass.
-- Ordinary Vitest suite: 133 passed; one PostgreSQL test is environment gated in the ordinary run.
+- Ordinary Vitest suite: 134 passed; one PostgreSQL test is environment gated in the ordinary run.
 - Live PostgreSQL Descriptor repository contract: pass.
-- M12 selection tests cover complete readiness, deterministic reverse-input ordering, aggregates, license inventory, missing category, unknown version, incompatible Pack, duplicate category and missing dependency.
+- M12 selection tests cover complete readiness, deterministic reverse-input ordering, aggregates, license inventory, missing category, unknown version, incompatible Pack, duplicate category, missing dependency and parameterized content composition.
 - Production Vite build: pass.
 
 ## Runtime proof
@@ -31,7 +32,7 @@
 5. the reviewed selection previews and creates a valid Descriptor and materializes a World containing 10 Voidwake locations, 20 cast entities and 12 scenes;
 6. the server restarts and reads back the review, Descriptor project and World from PostgreSQL.
 
-Headless Chrome then enters an otherwise empty browser Realm and uses all 12 visible stages. It names the game, selects all nine categories, changes Pack-defined decisions, inspects the content and licensing review, creates and compiles the World, and reloads the materialized World. The browser never opens JSON, YAML or a source editor. Browser exceptions, console errors and failed HTTP responses fail the gate.
+Headless Chrome then enters an otherwise empty browser Realm and uses all 12 visible stages. It names the game, selects all nine categories, changes the exposed world-template premise and Pack-defined decisions, verifies exact identities and dependencies in the review, creates and compiles the World, and reloads the materialized World. The browser never opens JSON, YAML or a source editor. Browser exceptions, console errors and failed HTTP responses fail the gate.
 
 The M10 dynamic Descriptor and M11 asset-library gates also pass after the new primary route and preserved Advanced mode.
 

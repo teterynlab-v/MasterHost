@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { resolve } from "node:path";
-import { loadGameAssetRegistry, quickGameAssetTypes, reviewQuickGameSelection } from "@masterhost/descriptor";
+import { composeGameDescriptor, gameAssetFragments, loadGameAssetRegistry, quickGameAssetTypes, reviewQuickGameSelection } from "@masterhost/descriptor";
+import { loadWorldPack, worldPackDocumentFromLoaded } from "@masterhost/worldpack-sdk";
 
 const identities = (assets: Awaited<ReturnType<typeof loadGameAssetRegistry>>) => assets.map(asset => ({ id: asset.id, version: asset.version }));
 
@@ -32,5 +33,21 @@ describe("M12 quick game selection", () => {
     expect(reviewQuickGameSelection(assets, "masterhost.space-opera", [...complete, complete[0]!]).diagnostics).toContainEqual(expect.objectContaining({ code: "duplicate-category" }));
     const withoutSetting = complete.filter(value => !value.id.endsWith(".setting"));
     expect(reviewQuickGameSelection(assets, "masterhost.space-opera", withoutSetting).diagnostics).toContainEqual(expect.objectContaining({ code: "missing-dependency", dependency: "masterhost.asset.voidwake.setting@1.0.0" }));
+  });
+
+  it("publishes an exposed world parameter that changes composed content", async () => {
+    const assets = await loadGameAssetRegistry(resolve("game-assets/library"));
+    const world = assets.find(asset => asset.type === "world-template")!;
+    expect(world.fragment.parameters.missionPremise).toEqual({
+      type: "string",
+      required: true,
+      default: "Recover the Tide Engine before the storm closes.",
+      options: ["Recover the Tide Engine before the storm closes.", "Escort the last archive ship through the closing storm."],
+    });
+    const base = await worldPackDocumentFromLoaded(await loadWorldPack(resolve("worldpacks/space-opera")), { terminology: { world: "World", character: "Character", gameMaster: "Game Master" }, theme: { primary: "#081827", accent: "#2dd4bf", background: "#030712" } });
+    const selections = assets.map(asset => ({ fragmentId: asset.id, version: asset.version, parameters: asset.id === world.id ? { missionPremise: "Escort the last archive ship through the closing storm." } : {} as Record<string, string | number | boolean> }));
+    const result = composeGameDescriptor({ projectId: "quick-parameters", revision: 1, name: "Quick Parameters", base, fragments: gameAssetFragments(assets), selections });
+    expect(result.report.valid).toBe(true);
+    expect((result.document.content.templates["voidwake.archipelago"] as any).values.premise.value).toBe("Escort the last archive ship through the closing storm.");
   });
 });
