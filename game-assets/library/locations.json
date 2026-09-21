@@ -1,0 +1,301 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.voidwake.locations",
+  "version": "1.0.0",
+  "type": "locations",
+  "name": "Voidwake Locations",
+  "description": "Ten connected locations for investigation, travel and confrontation.",
+  "tags": [
+    "voidwake",
+    "locations"
+  ],
+  "preview": {
+    "summary": "Ten connected locations for investigation, travel and confrontation.",
+    "highlights": [
+      "10 playable locations",
+      "Danger ratings and location tags"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.space-opera"
+    ],
+    "requiresCapabilities": [
+      "setting:voidwake",
+      "world:voidwake"
+    ],
+    "providesCapabilities": [
+      "locations:voidwake"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.voidwake.setting",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.voidwake.world",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Voidwake Archipelago original content and artwork \u00a9 MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.voidwake.locations"
+  },
+  "published": true,
+  "counts": {
+    "locations": 10,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.voidwake.locations",
+    "version": "1.0.0",
+    "name": "Voidwake Locations",
+    "description": "Ten connected locations for investigation, travel and confrontation.",
+    "provides": [
+      "locations:voidwake"
+    ],
+    "requires": [
+      "setting:voidwake",
+      "world:voidwake"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.location.1",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Beacon Spire"
+            },
+            "danger": {
+              "value": 2
+            }
+          },
+          "tags": [
+            "voidwake",
+            "location"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.location.2",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Glasswater Dock"
+            },
+            "danger": {
+              "value": 3
+            }
+          },
+          "tags": [
+            "voidwake",
+            "location"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.location.3",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Singing Reef"
+            },
+            "danger": {
+              "value": 4
+            }
+          },
+          "tags": [
+            "voidwake",
+            "location"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.location.4",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Drowned Vault"
+            },
+            "danger": {
+              "value": 5
+            }
+          },
+          "tags": [
+            "voidwake",
+            "location"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.location.5",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Stormglass Market"
+            },
+            "danger": {
+              "value": 1
+            }
+          },
+          "tags": [
+            "voidwake",
+            "location"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.location.6",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Warden Shoal"
+            },
+            "danger": {
+              "value": 2
+            }
+          },
+          "tags": [
+            "voidwake",
+            "location"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.location.7",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Moonfall Shrine"
+            },
+            "danger": {
+              "value": 3
+            }
+          },
+          "tags": [
+            "voidwake",
+            "location"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.location.8",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Copper Current"
+            },
+            "danger": {
+              "value": 4
+            }
+          },
+          "tags": [
+            "voidwake",
+            "location"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.location.9",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Leviathan Grave"
+            },
+            "danger": {
+              "value": 5
+            }
+          },
+          "tags": [
+            "voidwake",
+            "location"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.location.10",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Last Lantern"
+            },
+            "danger": {
+              "value": 1
+            }
+          },
+          "tags": [
+            "voidwake",
+            "location"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "location1": {
+            "template": "voidwake.location.1"
+          },
+          "location2": {
+            "template": "voidwake.location.2"
+          },
+          "location3": {
+            "template": "voidwake.location.3"
+          },
+          "location4": {
+            "template": "voidwake.location.4"
+          },
+          "location5": {
+            "template": "voidwake.location.5"
+          },
+          "location6": {
+            "template": "voidwake.location.6"
+          },
+          "location7": {
+            "template": "voidwake.location.7"
+          },
+          "location8": {
+            "template": "voidwake.location.8"
+          },
+          "location9": {
+            "template": "voidwake.location.9"
+          },
+          "location10": {
+            "template": "voidwake.location.10"
+          }
+        }
+      }
+    ]
+  }
+}

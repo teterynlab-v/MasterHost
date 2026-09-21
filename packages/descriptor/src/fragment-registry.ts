@@ -18,6 +18,7 @@ const Fragment = z.object({
   provides: z.array(z.string().trim().min(1)).default([]),
   requires: z.array(z.string().trim().min(1)).default([]),
   conflicts: z.array(z.string().trim().min(1)).default([]),
+  defaultArtSet: Id.optional(),
   parameters: z.record(Id, Parameter).default({}),
   patches: z.array(z.object({ op: z.enum(["set", "merge", "append"]), path: z.string(), value: z.unknown() }).strict()).max(100),
 }).strict();
@@ -66,6 +67,7 @@ export interface FragmentCatalogEntry {
   conflicts: string[];
   parameters: GameDescriptorFragment["parameters"];
   parameterCount: number;
+  defaultArtSet?: string;
 }
 
 export async function loadFragmentRegistry(root: string) {
@@ -79,5 +81,5 @@ export async function loadFragmentRegistry(root: string) {
 }
 
 export function fragmentCatalog(fragments: GameDescriptorFragment[]): FragmentCatalogEntry[] {
-  return fragments.map(({ id, version, name, description, provides, requires, conflicts, parameters }) => ({ id, version, name, description, provides: [...provides], requires: [...requires], conflicts: [...conflicts], parameters: structuredClone(parameters), parameterCount: Object.keys(parameters).length }));
+  return fragments.map(({ id, version, name, description, provides, requires, conflicts, parameters, defaultArtSet }) => ({ id, version, name, description, provides: [...provides], requires: [...requires], conflicts: [...conflicts], parameters: structuredClone(parameters), parameterCount: Object.keys(parameters).length, defaultArtSet }));
 }

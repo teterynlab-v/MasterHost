@@ -15,6 +15,7 @@ export interface GameDescriptorFragment {
   provides: string[];
   requires: string[];
   conflicts: string[];
+  defaultArtSet?: string;
   parameters: Record<string, FragmentParameter>;
   patches: FragmentPatch[];
 }
@@ -43,7 +44,7 @@ export function parseFragmentPointer(pointer: string) {
   const segments = pointer.slice(1).split("/").map(value => value.replaceAll("~1", "/").replaceAll("~0", "~"));
   if (segments.some(value => !value)) throw Error("JSON Pointer contains an empty segment");
   for (const segment of segments) if (unsafe.has(segment)) throw Error(`unsafe JSON Pointer segment ${segment}`);
-  if (!new Set(["content", "artSets", "terminology", "theme"]).has(segments[0]!)) throw Error(`unsupported patch root ${segments[0]}`);
+  if (!new Set(["content", "artSets", "terminology", "theme", "assets"]).has(segments[0]!)) throw Error(`unsupported patch root ${segments[0]}`);
   return segments;
 }
 
@@ -137,7 +138,10 @@ export function composeGameDescriptor(input: ComposeGameDescriptorInput): { docu
       }
     } catch (error) { diagnostics.push({ code: "path", path: `${fragment.id}.patches.${index}`, message: error instanceof Error ? error.message : "patch failed" }); }
   }
-  document.manifest = { ...document.manifest, id: `masterhost.game.${input.projectId}`, version: `0.1.${input.revision}`, name: input.name, official: false, publisher: "MasterHost Game Builder" };
+  const defaultArtSets = [...new Set(resolved.map(value => value.fragment.defaultArtSet).filter((value): value is string => Boolean(value)))];
+  if (defaultArtSets.length > 1) diagnostics.push({ code: "conflict", path: "manifest.defaultArtSet", message: `selected fragments request different default Art Sets: ${defaultArtSets.join(", ")}` });
+  if (defaultArtSets[0] && !document.artSets[defaultArtSets[0]]) diagnostics.push({ code: "pack", path: "manifest.defaultArtSet", message: `selected default Art Set ${defaultArtSets[0]} is missing` });
+  document.manifest = { ...document.manifest, id: `masterhost.game.${input.projectId}`, version: `0.1.${input.revision}`, name: input.name, official: false, publisher: "MasterHost Game Builder", ...(defaultArtSets.length === 1 ? { defaultArtSet: defaultArtSets[0] } : {}) };
   const parsed = WorldPackDocumentSchema.safeParse(document);
   if (!parsed.success) for (const issue of parsed.error.issues) diagnostics.push({ code: "pack", path: issue.path.join("."), message: issue.message });
   const report: CompositionReport = { valid: diagnostics.length === 0, diagnostics, selected, providedCapabilities: capabilities, writes: [...writes.keys()] };

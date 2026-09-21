@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.voidwake.setting",
+  "version": "1.0.0",
+  "type": "setting",
+  "name": "Voidwake Setting Core",
+  "description": "A storm-wrapped archipelago of drifting habitats, drowned gates and rival salvage fleets.",
+  "tags": [
+    "voidwake",
+    "space-opera",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "A storm-wrapped archipelago of drifting habitats, drowned gates and rival salvage fleets.",
+    "highlights": [
+      "Coherent science-fantasy setting",
+      "Salvage, mystery and faction pressure"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.space-opera"
+    ],
+    "requiresCapabilities": [],
+    "providesCapabilities": [
+      "setting:voidwake"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Voidwake Archipelago original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.voidwake.setting"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.voidwake.setting",
+    "version": "1.0.0",
+    "name": "Voidwake Setting Core",
+    "description": "A storm-wrapped archipelago of drifting habitats, drowned gates and rival salvage fleets.",
+    "provides": [
+      "setting:voidwake"
+    ],
+    "requires": [],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/generators/voidwake.names",
+        "value": {
+          "type": "values",
+          "values": [
+            "Nyra Vale",
+            "Orrin Wake",
+            "Sable Marr",
+            "Ilyon Reef",
+            "Kest Varo",
+            "Mira Quell"
+          ]
+        }
+      }
+    ]
+  }
+}

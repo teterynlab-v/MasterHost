@@ -33,7 +33,7 @@ try {
   await setInput("Game name", "The Browser Observatory"); await setInput("Deterministic seed", "m10-browser-seed");
   await evaluate(`document.querySelector('[data-fragment-id="masterhost.fragment.observatory"]')?.click()`);
   await evaluate(`document.querySelector('[data-fragment-id="masterhost.fragment.fortune"]')?.click()`);
-  await waitForText("Selected fragments · 2"); await setInput("Parameter danger", "9"); await click("PREVIEW"); await waitForText("INVALID"); await waitForText("masterhost.fragment.observatory.parameters.danger"); await setInput("Parameter danger", "4");
+  await waitForText("Selected assets and fragments · 2"); await setInput("Parameter danger", "9"); await click("PREVIEW"); await waitForText("INVALID"); await waitForText("masterhost.fragment.observatory.parameters.danger"); await setInput("Parameter danger", "4");
   await click("CREATE PROJECT"); await waitForText("Revision 1");
   await click("PREVIEW"); await waitForText("VALID"); await waitForText("location:observatory"); await waitForText("rules:fortune"); await waitForText("0.1.1");
   await click("COMPILE WORLD"); await waitForText("Generation report"); await waitForText("masterhost.game.");

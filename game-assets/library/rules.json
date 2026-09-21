@@ -1,0 +1,225 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.voidwake.rules",
+  "version": "1.0.0",
+  "type": "rules",
+  "name": "Voidwake Rules",
+  "description": "A complete 2d6 exploration and pressure module with resources, effects and actions.",
+  "tags": [
+    "voidwake",
+    "rules"
+  ],
+  "preview": {
+    "summary": "A complete 2d6 exploration and pressure module with resources, effects and actions.",
+    "highlights": [
+      "3 checks",
+      "3 resources",
+      "3 effects",
+      "6 actions"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.space-opera"
+    ],
+    "requiresCapabilities": [
+      "setting:voidwake"
+    ],
+    "providesCapabilities": [
+      "rules:voidwake"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.voidwake.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Voidwake Archipelago original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.voidwake.rules"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 15,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.voidwake.rules",
+    "version": "1.0.0",
+    "name": "Voidwake Rules",
+    "description": "A complete 2d6 exploration and pressure module with resources, effects and actions.",
+    "provides": [
+      "rules:voidwake"
+    ],
+    "requires": [
+      "setting:voidwake"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/checks/voidwake-navigation",
+        "value": {
+          "label": "Navigate the Storm",
+          "dice": "2d6"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/checks/voidwake-influence",
+        "value": {
+          "label": "Sway a Faction",
+          "dice": "2d6"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/checks/voidwake-salvage",
+        "value": {
+          "label": "Salvage Under Pressure",
+          "dice": "2d6"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/resources/voidwake-air",
+        "value": {
+          "label": "Air",
+          "min": 0,
+          "max": 6,
+          "default": 6
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/resources/voidwake-supply",
+        "value": {
+          "label": "Supply",
+          "min": 0,
+          "max": 8,
+          "default": 4
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/resources/voidwake-trust",
+        "value": {
+          "label": "Crew Trust",
+          "min": 0,
+          "max": 6,
+          "default": 2
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/effects/voidwake-stormbound",
+        "value": {
+          "label": "Stormbound",
+          "duration": {
+            "type": "rounds",
+            "value": 2
+          },
+          "modifiers": {
+            "command": -1
+          }
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/effects/voidwake-inspired",
+        "value": {
+          "label": "Inspired",
+          "duration": {
+            "type": "turns",
+            "value": 2
+          },
+          "modifiers": {
+            "command": 2
+          }
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/effects/voidwake-marked",
+        "value": {
+          "label": "Marked by the Deep",
+          "duration": {
+            "type": "session"
+          }
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/voidwake-chart-course",
+        "value": {
+          "label": "Chart Course",
+          "target": "self",
+          "kind": "check",
+          "checkId": "voidwake-navigation"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/voidwake-negotiate",
+        "value": {
+          "label": "Negotiate",
+          "target": "actor",
+          "kind": "check",
+          "checkId": "voidwake-influence"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/voidwake-salvage",
+        "value": {
+          "label": "Salvage",
+          "target": "self",
+          "kind": "check",
+          "checkId": "voidwake-salvage"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/voidwake-ration",
+        "value": {
+          "label": "Spend Supply",
+          "target": "self",
+          "kind": "resource",
+          "resource": "voidwake-supply",
+          "operation": "subtract",
+          "amount": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/voidwake-rally",
+        "value": {
+          "label": "Rally Crew",
+          "target": "actor",
+          "kind": "effect",
+          "effectId": "voidwake-inspired"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/voidwake-mark",
+        "value": {
+          "label": "Mark by the Deep",
+          "target": "actor",
+          "kind": "effect",
+          "effectId": "voidwake-marked"
+        }
+      }
+    ]
+  }
+}

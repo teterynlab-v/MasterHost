@@ -70,5 +70,10 @@ export class GameDescriptorRepository {
     return row ? toLoadedWorldPack((row.data as GameDescriptorRevision).compiled) : null;
   }
 
+  async resolveDocument(packId: string, packVersion: string): Promise<WorldPackDocument | null> {
+    const row = (await this.sql`select data from game_descriptor_revisions where pack_id=${packId} and pack_version=${packVersion}`)[0];
+    return row ? structuredClone((row.data as GameDescriptorRevision).compiled) : null;
+  }
+
   async close() { await this.sql.end(); }
 }

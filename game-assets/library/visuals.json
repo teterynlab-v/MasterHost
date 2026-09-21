@@ -1,0 +1,165 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.voidwake.visuals",
+  "version": "1.0.0",
+  "type": "visuals",
+  "name": "Voidwake Visual Kit",
+  "description": "Original functional maps, portraits, tokens and backgrounds for the Voidwake collection.",
+  "tags": [
+    "voidwake",
+    "visuals"
+  ],
+  "preview": {
+    "summary": "Original functional maps, portraits, tokens and backgrounds for the Voidwake collection.",
+    "highlights": [
+      "3 maps",
+      "2 portraits",
+      "2 tokens",
+      "1 background"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.space-opera"
+    ],
+    "requiresCapabilities": [
+      "setting:voidwake"
+    ],
+    "providesCapabilities": [
+      "visuals:voidwake"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.voidwake.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Voidwake Archipelago original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.voidwake.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 8
+  },
+  "media": [
+    {
+      "name": "voidwake/voidwake-background.svg",
+      "path": "media/voidwake-background.svg",
+      "role": "background",
+      "mediaType": "image/svg+xml",
+      "checksum": "91dabc988e95b8a2cb36052194a1d23af11be6ff10f0072d854c0744ba38d998",
+      "size": 530
+    },
+    {
+      "name": "voidwake/voidwake-map.svg",
+      "path": "media/voidwake-map.svg",
+      "role": "map",
+      "mediaType": "image/svg+xml",
+      "checksum": "94b8ff90b74fcee751467cafeea9ba9d97e3cf5ef75a1ef2da9c798429769982",
+      "size": 537
+    },
+    {
+      "name": "voidwake/voidwake-reef-map.svg",
+      "path": "media/voidwake-reef-map.svg",
+      "role": "map",
+      "mediaType": "image/svg+xml",
+      "checksum": "6f17cd861cb3f973abf44a8505b8fd09b723ea29d4ae67749765de77d9398766",
+      "size": 534
+    },
+    {
+      "name": "voidwake/voidwake-vault-map.svg",
+      "path": "media/voidwake-vault-map.svg",
+      "role": "map",
+      "mediaType": "image/svg+xml",
+      "checksum": "7994529795c8022847ed7b2eb788e71d04d3b0922d02e1ecfee4e7b02034c6b7",
+      "size": 535
+    },
+    {
+      "name": "voidwake/voidwake-captain.svg",
+      "path": "media/voidwake-captain.svg",
+      "role": "portrait",
+      "mediaType": "image/svg+xml",
+      "checksum": "4e39ad7d158c17abf1f7b1d7ff92be1d20cceeb47fd6292e16c5f9b3be7c3b17",
+      "size": 534
+    },
+    {
+      "name": "voidwake/voidwake-oracle.svg",
+      "path": "media/voidwake-oracle.svg",
+      "role": "portrait",
+      "mediaType": "image/svg+xml",
+      "checksum": "3d9631cd19142e3467c6e99c4bfa756bbf6468b2ade7755cef625e5b5612b135",
+      "size": 533
+    },
+    {
+      "name": "voidwake/voidwake-raider.svg",
+      "path": "media/voidwake-raider.svg",
+      "role": "token",
+      "mediaType": "image/svg+xml",
+      "checksum": "68e504e053781a13ef85377d502ee8503979d5e2303866993658a8f9481a51a1",
+      "size": 528
+    },
+    {
+      "name": "voidwake/voidwake-leviathan.svg",
+      "path": "media/voidwake-leviathan.svg",
+      "role": "token",
+      "mediaType": "image/svg+xml",
+      "checksum": "0a964087bfb25533e4c627c973272b1e6a8f8700424ae1c0f59ad402f5a7cb26",
+      "size": 531
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.voidwake.visuals",
+    "version": "1.0.0",
+    "name": "Voidwake Visual Kit",
+    "description": "Original functional maps, portraits, tokens and backgrounds for the Voidwake collection.",
+    "provides": [
+      "visuals:voidwake"
+    ],
+    "requires": [
+      "setting:voidwake"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/voidwake",
+        "value": {
+          "id": "voidwake",
+          "name": "Voidwake Standard",
+          "description": "Original Voidwake visual language",
+          "defaults": {
+            "background": "assets/voidwake/voidwake-background.svg",
+            "portrait": "assets/voidwake/voidwake-captain.svg",
+            "token": "assets/voidwake/voidwake-raider.svg",
+            "location": "assets/voidwake/voidwake-map.svg",
+            "card": "assets/voidwake/voidwake-background.svg",
+            "map": "assets/voidwake/voidwake-map.svg"
+          },
+          "types": {
+            "creature": {
+              "token": "assets/voidwake/voidwake-leviathan.svg"
+            },
+            "npc": {
+              "portrait": "assets/voidwake/voidwake-oracle.svg"
+            },
+            "location": {
+              "location": "assets/voidwake/voidwake-map.svg"
+            }
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "voidwake"
+  }
+}

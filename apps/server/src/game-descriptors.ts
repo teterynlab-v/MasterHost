@@ -1,17 +1,19 @@
 import { randomUUID } from "node:crypto";
+import { readFile } from "node:fs/promises";
 import type { FastifyInstance } from "fastify";
-import { buildDescriptor, composeGameDescriptor, fragmentCatalog, type GameDescriptorFragment, type GameFragmentSelection } from "@masterhost/descriptor";
+import { buildDescriptor, composeGameDescriptor, fragmentCatalog, gameAssetCatalog, gameAssetDetail, gameAssetMedia, type GameAsset, type GameDescriptorFragment, type GameFragmentSelection } from "@masterhost/descriptor";
 import type { DescriptorValue, MaterializedWorld } from "@masterhost/domain";
 import { GameDescriptorRepository, PackProjectRepository, WorldRepository, type GameDescriptorProject } from "@masterhost/persistence";
 import { toLoadedWorldPack, worldPackDocumentFromLoaded, type LoadedWorldPack, type WorldPackDocument } from "@masterhost/worldpack-sdk";
 import { assertUniqueMaterializationPaths, compareWorlds, compileSatisfying, preserveCustomByPath } from "@masterhost/world-compiler";
 
-interface Dependencies { descriptors: GameDescriptorRepository; worlds: WorldRepository; packs: PackProjectRepository; fragments: GameDescriptorFragment[] }
+interface Dependencies { descriptors: GameDescriptorRepository; worlds: WorldRepository; packs: PackProjectRepository; fragments: GameDescriptorFragment[]; assets: GameAsset[] }
 
 const fail = (message: string, statusCode = 400) => Object.assign(Error(message), { statusCode });
 const scalarRecord = (value: unknown) => value && typeof value === "object" && !Array.isArray(value) ? value as Record<string, unknown> : {};
 
 export async function registerGameDescriptors(app: FastifyInstance, dependencies: Dependencies) {
+  const assetIdentities = new Set(dependencies.assets.map(asset => `${asset.id}@${asset.version}`));
   const realmFor = async (request: any) => app.masterhostResolveRealm ? app.masterhostResolveRealm(request) : fail("Realm hosting is unavailable", 503) as never;
   const authorize = async (request: any) => {
     const realm = await realmFor(request), role = app.masterhostRole ? await app.masterhostRole(request, realm) : null;
@@ -41,7 +43,15 @@ export async function registerGameDescriptors(app: FastifyInstance, dependencies
   };
   const decisions = (value: unknown) => structuredClone(scalarRecord(value));
   const locks = (value: unknown) => Array.isArray(value) ? [...new Set(value.filter(item => typeof item === "string"))] as string[] : [];
-  const compose = (input: { id: string; revision: number; name: string; base: WorldPackDocument; selections: GameFragmentSelection[] }) => composeGameDescriptor({ projectId: input.id, revision: input.revision, name: input.name, base: input.base, fragments: dependencies.fragments, selections: input.selections });
+  const compose = (input: { id: string; revision: number; name: string; base: WorldPackDocument; selections: GameFragmentSelection[] }) => {
+    const result = composeGameDescriptor({ projectId: input.id, revision: input.revision, name: input.name, base: input.base, fragments: dependencies.fragments, selections: input.selections }), selected = new Set(input.selections.map(value => `${value.fragmentId}@${value.version}`));
+    for (const selection of input.selections) {
+      const asset = dependencies.assets.find(value => value.id === selection.fragmentId && value.version === selection.version); if (!asset) continue;
+      if (!asset.compatibility.basePackIds.includes(input.base.manifest.id)) result.report.diagnostics.push({ code: "capability", path: asset.id, message: `asset is not compatible with base Pack ${input.base.manifest.id}` });
+      for (const dependency of asset.dependencies) if (!selected.has(`${dependency.id}@${dependency.version}`)) result.report.diagnostics.push({ code: "capability", path: asset.id, message: `missing exact asset dependency ${dependency.id}@${dependency.version}` });
+    }
+    result.report.valid = result.report.diagnostics.length === 0; return result;
+  };
   const worldDescriptor = (project: GameDescriptorProject) => {
     const choices = Object.entries(project.decisions).map(([path, value]) => ({ path, value: { mode: "explicit" as const, value } as DescriptorValue, locked: project.locks.includes(path) }));
     const descriptor = buildDescriptor({ packId: project.compiled.manifest.id, packVersion: project.compiled.manifest.version, choices, seed: project.seed });
@@ -54,7 +64,16 @@ export async function registerGameDescriptors(app: FastifyInstance, dependencies
     assertUniqueMaterializationPaths(result.world); return result.world;
   };
 
-  app.get("/api/game-fragments", async (request: any) => { await authorize(request); return fragmentCatalog(dependencies.fragments); });
+  app.get("/api/game-fragments", async (request: any) => { await authorize(request); return fragmentCatalog(dependencies.fragments.filter(fragment => !assetIdentities.has(`${fragment.id}@${fragment.version}`))); });
+  app.get("/api/game-assets", async (request: any) => { await authorize(request); return gameAssetCatalog(dependencies.assets, { query: request.query?.query, type: request.query?.type, tag: request.query?.tag, basePackId: request.query?.basePackId }); });
+  app.get("/api/game-assets/media/:checksum/*", async (request: any, reply) => {
+    await authorize(request);
+    const name = String(request.params["*"] ?? ""), media = gameAssetMedia(dependencies.assets, name, String(request.params.checksum));
+    if (!media) throw fail("game asset media not found", 404);
+    reply.header("content-type", media.mediaType); reply.header("content-length", String(media.size)); reply.header("cache-control", "public, max-age=31536000, immutable"); reply.header("x-content-type-options", "nosniff");
+    return reply.send(await readFile(media.absolutePath));
+  });
+  app.get("/api/game-assets/:id/:version", async (request: any) => { await authorize(request); const asset = gameAssetDetail(dependencies.assets, request.params.id, request.params.version); if (!asset) throw fail("game asset not found", 404); return asset; });
   app.get("/api/game-descriptors", async (request: any) => dependencies.descriptors.list((await authorize(request)).id));
   app.post("/api/game-descriptors/preview", async (request: any) => {
     await authorize(request); const name = String(request.body?.name ?? "").trim(), expected = request.body?.basePack;

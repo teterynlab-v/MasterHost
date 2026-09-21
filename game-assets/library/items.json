@@ -1,0 +1,623 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.voidwake.items",
+  "version": "1.0.0",
+  "type": "items",
+  "name": "Voidwake Treasures and Clues",
+  "description": "Twenty usable items, clues and rewards tied to the one-shot mystery.",
+  "tags": [
+    "voidwake",
+    "items",
+    "clues"
+  ],
+  "preview": {
+    "summary": "Twenty usable items, clues and rewards tied to the one-shot mystery.",
+    "highlights": [
+      "10 tools and treasures",
+      "8 clues",
+      "2 finale rewards"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.space-opera"
+    ],
+    "requiresCapabilities": [
+      "setting:voidwake",
+      "world:voidwake"
+    ],
+    "providesCapabilities": [
+      "items:voidwake"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.voidwake.setting",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.voidwake.world",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Voidwake Archipelago original content and artwork \u00a9 MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.voidwake.items"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 20,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.voidwake.items",
+    "version": "1.0.0",
+    "name": "Voidwake Treasures and Clues",
+    "description": "Twenty usable items, clues and rewards tied to the one-shot mystery.",
+    "provides": [
+      "items:voidwake"
+    ],
+    "requires": [
+      "setting:voidwake",
+      "world:voidwake"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/items/voidwake-item-1",
+        "value": {
+          "label": "Tide Key",
+          "stackLimit": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.item.1",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Tide Key"
+            }
+          },
+          "tags": [
+            "voidwake",
+            "item"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/items/voidwake-item-2",
+        "value": {
+          "label": "Stormglass Compass",
+          "stackLimit": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.item.2",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Stormglass Compass"
+            }
+          },
+          "tags": [
+            "voidwake",
+            "item"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/items/voidwake-item-3",
+        "value": {
+          "label": "Leviathan Scale",
+          "stackLimit": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.item.3",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Leviathan Scale"
+            }
+          },
+          "tags": [
+            "voidwake",
+            "item"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/items/voidwake-item-4",
+        "value": {
+          "label": "Beacon Cipher",
+          "stackLimit": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.item.4",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Beacon Cipher"
+            }
+          },
+          "tags": [
+            "voidwake",
+            "item"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/items/voidwake-item-5",
+        "value": {
+          "label": "Void Pearl",
+          "stackLimit": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.item.5",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Void Pearl"
+            }
+          },
+          "tags": [
+            "voidwake",
+            "item"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/items/voidwake-item-6",
+        "value": {
+          "label": "Pressure Suit",
+          "stackLimit": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.item.6",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Pressure Suit"
+            }
+          },
+          "tags": [
+            "voidwake",
+            "item"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/items/voidwake-item-7",
+        "value": {
+          "label": "Salvage Torch",
+          "stackLimit": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.item.7",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Salvage Torch"
+            }
+          },
+          "tags": [
+            "voidwake",
+            "item"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/items/voidwake-item-8",
+        "value": {
+          "label": "Grav Hook",
+          "stackLimit": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.item.8",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Grav Hook"
+            }
+          },
+          "tags": [
+            "voidwake",
+            "item"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/items/voidwake-item-9",
+        "value": {
+          "label": "Reef Antidote",
+          "stackLimit": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.item.9",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Reef Antidote"
+            }
+          },
+          "tags": [
+            "voidwake",
+            "item"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/items/voidwake-item-10",
+        "value": {
+          "label": "Signal Flare",
+          "stackLimit": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.item.10",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Signal Flare"
+            }
+          },
+          "tags": [
+            "voidwake",
+            "item"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/items/voidwake-item-11",
+        "value": {
+          "label": "Oracle Tablet",
+          "stackLimit": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.item.11",
+        "value": {
+          "kind": "clue",
+          "values": {
+            "name": {
+              "value": "Oracle Tablet"
+            }
+          },
+          "tags": [
+            "voidwake",
+            "clue"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/items/voidwake-item-12",
+        "value": {
+          "label": "Captain\u2019s Seal",
+          "stackLimit": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.item.12",
+        "value": {
+          "kind": "clue",
+          "values": {
+            "name": {
+              "value": "Captain\u2019s Seal"
+            }
+          },
+          "tags": [
+            "voidwake",
+            "clue"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/items/voidwake-item-13",
+        "value": {
+          "label": "Smuggler Ledger",
+          "stackLimit": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.item.13",
+        "value": {
+          "kind": "clue",
+          "values": {
+            "name": {
+              "value": "Smuggler Ledger"
+            }
+          },
+          "tags": [
+            "voidwake",
+            "clue"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/items/voidwake-item-14",
+        "value": {
+          "label": "Vault Lens",
+          "stackLimit": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.item.14",
+        "value": {
+          "kind": "clue",
+          "values": {
+            "name": {
+              "value": "Vault Lens"
+            }
+          },
+          "tags": [
+            "voidwake",
+            "clue"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/items/voidwake-item-15",
+        "value": {
+          "label": "Echo Core",
+          "stackLimit": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.item.15",
+        "value": {
+          "kind": "clue",
+          "values": {
+            "name": {
+              "value": "Echo Core"
+            }
+          },
+          "tags": [
+            "voidwake",
+            "clue"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/items/voidwake-item-16",
+        "value": {
+          "label": "Warden Badge",
+          "stackLimit": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.item.16",
+        "value": {
+          "kind": "clue",
+          "values": {
+            "name": {
+              "value": "Warden Badge"
+            }
+          },
+          "tags": [
+            "voidwake",
+            "clue"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/items/voidwake-item-17",
+        "value": {
+          "label": "Moonfall Relic",
+          "stackLimit": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.item.17",
+        "value": {
+          "kind": "clue",
+          "values": {
+            "name": {
+              "value": "Moonfall Relic"
+            }
+          },
+          "tags": [
+            "voidwake",
+            "clue"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/items/voidwake-item-18",
+        "value": {
+          "label": "Current Map",
+          "stackLimit": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.item.18",
+        "value": {
+          "kind": "clue",
+          "values": {
+            "name": {
+              "value": "Current Map"
+            }
+          },
+          "tags": [
+            "voidwake",
+            "clue"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/items/voidwake-item-19",
+        "value": {
+          "label": "Emergency Charge",
+          "stackLimit": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.item.19",
+        "value": {
+          "kind": "reward",
+          "values": {
+            "name": {
+              "value": "Emergency Charge"
+            }
+          },
+          "tags": [
+            "voidwake",
+            "reward"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/items/voidwake-item-20",
+        "value": {
+          "label": "Tide Engine Shard",
+          "stackLimit": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.item.20",
+        "value": {
+          "kind": "reward",
+          "values": {
+            "name": {
+              "value": "Tide Engine Shard"
+            }
+          },
+          "tags": [
+            "voidwake",
+            "reward"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "item1": {
+            "template": "voidwake.item.1"
+          },
+          "item2": {
+            "template": "voidwake.item.2"
+          },
+          "item3": {
+            "template": "voidwake.item.3"
+          },
+          "item4": {
+            "template": "voidwake.item.4"
+          },
+          "item5": {
+            "template": "voidwake.item.5"
+          },
+          "item6": {
+            "template": "voidwake.item.6"
+          },
+          "item7": {
+            "template": "voidwake.item.7"
+          },
+          "item8": {
+            "template": "voidwake.item.8"
+          },
+          "item9": {
+            "template": "voidwake.item.9"
+          },
+          "item10": {
+            "template": "voidwake.item.10"
+          },
+          "item11": {
+            "template": "voidwake.item.11"
+          },
+          "item12": {
+            "template": "voidwake.item.12"
+          },
+          "item13": {
+            "template": "voidwake.item.13"
+          },
+          "item14": {
+            "template": "voidwake.item.14"
+          },
+          "item15": {
+            "template": "voidwake.item.15"
+          },
+          "item16": {
+            "template": "voidwake.item.16"
+          },
+          "item17": {
+            "template": "voidwake.item.17"
+          },
+          "item18": {
+            "template": "voidwake.item.18"
+          },
+          "item19": {
+            "template": "voidwake.item.19"
+          },
+          "item20": {
+            "template": "voidwake.item.20"
+          }
+        }
+      }
+    ]
+  }
+}

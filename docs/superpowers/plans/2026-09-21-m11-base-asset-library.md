@@ -15,7 +15,7 @@
 
 ## Task 2 — Bundled Voidwake one-shot collection
 
-- Add eight reusable assets: setting, world, locations, cast, treasures, adventure, archetypes/rules and visuals.
+- Add nine reusable assets: setting, world, locations, cast, treasures, rules, adventure, archetypes and visuals.
 - Meet or exceed 10 locations, 20 NPC/creature variants, 20 items/clues/rewards and 12 scenes/encounters.
 - Add original SVG maps, portraits, tokens and backgrounds with CC-BY-4.0 provenance and exact checksums.
 - Prove the complete selection composes and compiles deterministically through the existing compiler.

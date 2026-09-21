@@ -1,7 +1,7 @@
 # MasterHost M10–M16 Open-source Product Roadmap
 
 **Date:** 2026-09-21  
-**Status:** approved product direction; implementation pending  
+**Status:** approved product direction; M10 and M11 accepted locally
 **Target:** a self-hosted open-source product that a GM and friends can use to build, share and complete a full tabletop one-shot.
 
 ## Product outcome

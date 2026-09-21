@@ -1,0 +1,191 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.voidwake.characters",
+  "version": "1.0.0",
+  "type": "characters",
+  "name": "Voidwake Archetypes",
+  "description": "Six player archetypes and matching reusable Actor templates.",
+  "tags": [
+    "voidwake",
+    "characters"
+  ],
+  "preview": {
+    "summary": "Six player archetypes and matching reusable Actor templates.",
+    "highlights": [
+      "6 player archetypes",
+      "Pack-defined Character step"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.space-opera"
+    ],
+    "requiresCapabilities": [
+      "setting:voidwake"
+    ],
+    "providesCapabilities": [
+      "characters:voidwake"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.voidwake.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Voidwake Archipelago original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.voidwake.characters"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 6,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.voidwake.characters",
+    "version": "1.0.0",
+    "name": "Voidwake Archetypes",
+    "description": "Six player archetypes and matching reusable Actor templates.",
+    "provides": [
+      "characters:voidwake"
+    ],
+    "requires": [
+      "setting:voidwake"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "append",
+        "path": "/content/characterCreation/steps",
+        "value": [
+          {
+            "id": "voidwake-role",
+            "title": "Voidwake Calling",
+            "fields": [
+              {
+                "id": "voidwakeCalling",
+                "label": "Calling",
+                "type": "choice",
+                "required": true,
+                "options": [
+                  {
+                    "value": "storm-pilot",
+                    "label": "Storm Pilot"
+                  },
+                  {
+                    "value": "tide-oracle",
+                    "label": "Tide Oracle"
+                  },
+                  {
+                    "value": "vault-diver",
+                    "label": "Vault Diver"
+                  },
+                  {
+                    "value": "fleet-envoy",
+                    "label": "Fleet Envoy"
+                  },
+                  {
+                    "value": "reef-warden",
+                    "label": "Reef Warden"
+                  },
+                  {
+                    "value": "salvage-medic",
+                    "label": "Salvage Medic"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "op": "set",
+        "path": "/content/actorTemplates/voidwake-1",
+        "value": {
+          "label": "Storm Pilot",
+          "resources": {},
+          "inventory": [],
+          "progression": {},
+          "worldEntityKinds": [
+            "location"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actorTemplates/voidwake-2",
+        "value": {
+          "label": "Tide Oracle",
+          "resources": {},
+          "inventory": [],
+          "progression": {},
+          "worldEntityKinds": [
+            "location"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actorTemplates/voidwake-3",
+        "value": {
+          "label": "Vault Diver",
+          "resources": {},
+          "inventory": [],
+          "progression": {},
+          "worldEntityKinds": [
+            "location"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actorTemplates/voidwake-4",
+        "value": {
+          "label": "Fleet Envoy",
+          "resources": {},
+          "inventory": [],
+          "progression": {},
+          "worldEntityKinds": [
+            "location"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actorTemplates/voidwake-5",
+        "value": {
+          "label": "Reef Warden",
+          "resources": {},
+          "inventory": [],
+          "progression": {},
+          "worldEntityKinds": [
+            "location"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actorTemplates/voidwake-6",
+        "value": {
+          "label": "Salvage Medic",
+          "resources": {},
+          "inventory": [],
+          "progression": {},
+          "worldEntityKinds": [
+            "location"
+          ]
+        }
+      }
+    ]
+  }
+}

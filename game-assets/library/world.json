@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.voidwake.world",
+  "version": "1.0.0",
+  "type": "world-template",
+  "name": "Voidwake World Frame",
+  "description": "Adds the Voidwake Archipelago as a reusable campaign region.",
+  "tags": [
+    "voidwake",
+    "world"
+  ],
+  "preview": {
+    "summary": "Adds the Voidwake Archipelago as a reusable campaign region.",
+    "highlights": [
+      "One campaign region",
+      "Clear one-shot objective"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.space-opera"
+    ],
+    "requiresCapabilities": [
+      "setting:voidwake"
+    ],
+    "providesCapabilities": [
+      "world:voidwake"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.voidwake.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Voidwake Archipelago original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.voidwake.world"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.voidwake.world",
+    "version": "1.0.0",
+    "name": "Voidwake World Frame",
+    "description": "Adds the Voidwake Archipelago as a reusable campaign region.",
+    "provides": [
+      "world:voidwake"
+    ],
+    "requires": [
+      "setting:voidwake"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.archipelago",
+        "value": {
+          "kind": "region",
+          "values": {
+            "name": {
+              "value": "The Voidwake Archipelago"
+            },
+            "premise": {
+              "value": "Recover the Tide Engine before the storm closes."
+            }
+          },
+        "tags": [
+          "voidwake"
+        ],
+        "components": {}
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "voidwake": {
+            "template": "voidwake.archipelago"
+          }
+        }
+      }
+    ]
+  }
+}

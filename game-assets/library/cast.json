@@ -1,0 +1,521 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.voidwake.cast",
+  "version": "1.0.0",
+  "type": "cast",
+  "name": "Voidwake Cast",
+  "description": "Twenty named allies, rivals and creatures with distinct threat profiles.",
+  "tags": [
+    "voidwake",
+    "cast"
+  ],
+  "preview": {
+    "summary": "Twenty named allies, rivals and creatures with distinct threat profiles.",
+    "highlights": [
+      "10 NPCs",
+      "10 creatures"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.space-opera"
+    ],
+    "requiresCapabilities": [
+      "setting:voidwake",
+      "world:voidwake"
+    ],
+    "providesCapabilities": [
+      "cast:voidwake"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.voidwake.setting",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.voidwake.world",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Voidwake Archipelago original content and artwork \u00a9 MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.voidwake.cast"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 20,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.voidwake.cast",
+    "version": "1.0.0",
+    "name": "Voidwake Cast",
+    "description": "Twenty named allies, rivals and creatures with distinct threat profiles.",
+    "provides": [
+      "cast:voidwake"
+    ],
+    "requires": [
+      "setting:voidwake",
+      "world:voidwake"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.actor.1",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Captain Nyra Vale"
+            },
+            "threat": {
+              "value": 2
+            }
+          },
+          "tags": [
+            "voidwake",
+            "npc"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.actor.2",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Tide Oracle Senn"
+            },
+            "threat": {
+              "value": 3
+            }
+          },
+          "tags": [
+            "voidwake",
+            "npc"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.actor.3",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Dockmaster Brin"
+            },
+            "threat": {
+              "value": 4
+            }
+          },
+          "tags": [
+            "voidwake",
+            "npc"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.actor.4",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Archivist Oru"
+            },
+            "threat": {
+              "value": 5
+            }
+          },
+          "tags": [
+            "voidwake",
+            "npc"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.actor.5",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Pilot Kest"
+            },
+            "threat": {
+              "value": 1
+            }
+          },
+          "tags": [
+            "voidwake",
+            "npc"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.actor.6",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Medic Mira"
+            },
+            "threat": {
+              "value": 2
+            }
+          },
+          "tags": [
+            "voidwake",
+            "npc"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.actor.7",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Envoy Tal"
+            },
+            "threat": {
+              "value": 3
+            }
+          },
+          "tags": [
+            "voidwake",
+            "npc"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.actor.8",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Salvager Pell"
+            },
+            "threat": {
+              "value": 4
+            }
+          },
+          "tags": [
+            "voidwake",
+            "npc"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.actor.9",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Warden Ilya"
+            },
+            "threat": {
+              "value": 5
+            }
+          },
+          "tags": [
+            "voidwake",
+            "npc"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.actor.10",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Smuggler Cor"
+            },
+            "threat": {
+              "value": 1
+            }
+          },
+          "tags": [
+            "voidwake",
+            "npc"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.actor.11",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Reef Stalker"
+            },
+            "threat": {
+              "value": 2
+            }
+          },
+          "tags": [
+            "voidwake",
+            "creature"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.actor.12",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Glass Eel"
+            },
+            "threat": {
+              "value": 3
+            }
+          },
+          "tags": [
+            "voidwake",
+            "creature"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.actor.13",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Storm Ray"
+            },
+            "threat": {
+              "value": 4
+            }
+          },
+          "tags": [
+            "voidwake",
+            "creature"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.actor.14",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Vault Sentinel"
+            },
+            "threat": {
+              "value": 5
+            }
+          },
+          "tags": [
+            "voidwake",
+            "creature"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.actor.15",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Echo Drone"
+            },
+            "threat": {
+              "value": 1
+            }
+          },
+          "tags": [
+            "voidwake",
+            "creature"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.actor.16",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Rust Marauder"
+            },
+            "threat": {
+              "value": 2
+            }
+          },
+          "tags": [
+            "voidwake",
+            "creature"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.actor.17",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Abyss Hound"
+            },
+            "threat": {
+              "value": 3
+            }
+          },
+          "tags": [
+            "voidwake",
+            "creature"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.actor.18",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Current Wisp"
+            },
+            "threat": {
+              "value": 4
+            }
+          },
+          "tags": [
+            "voidwake",
+            "creature"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.actor.19",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Grave Crab"
+            },
+            "threat": {
+              "value": 5
+            }
+          },
+          "tags": [
+            "voidwake",
+            "creature"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.actor.20",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Young Leviathan"
+            },
+            "threat": {
+              "value": 1
+            }
+          },
+          "tags": [
+            "voidwake",
+            "creature"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "actor1": {
+            "template": "voidwake.actor.1"
+          },
+          "actor2": {
+            "template": "voidwake.actor.2"
+          },
+          "actor3": {
+            "template": "voidwake.actor.3"
+          },
+          "actor4": {
+            "template": "voidwake.actor.4"
+          },
+          "actor5": {
+            "template": "voidwake.actor.5"
+          },
+          "actor6": {
+            "template": "voidwake.actor.6"
+          },
+          "actor7": {
+            "template": "voidwake.actor.7"
+          },
+          "actor8": {
+            "template": "voidwake.actor.8"
+          },
+          "actor9": {
+            "template": "voidwake.actor.9"
+          },
+          "actor10": {
+            "template": "voidwake.actor.10"
+          },
+          "actor11": {
+            "template": "voidwake.actor.11"
+          },
+          "actor12": {
+            "template": "voidwake.actor.12"
+          },
+          "actor13": {
+            "template": "voidwake.actor.13"
+          },
+          "actor14": {
+            "template": "voidwake.actor.14"
+          },
+          "actor15": {
+            "template": "voidwake.actor.15"
+          },
+          "actor16": {
+            "template": "voidwake.actor.16"
+          },
+          "actor17": {
+            "template": "voidwake.actor.17"
+          },
+          "actor18": {
+            "template": "voidwake.actor.18"
+          },
+          "actor19": {
+            "template": "voidwake.actor.19"
+          },
+          "actor20": {
+            "template": "voidwake.actor.20"
+          }
+        }
+      }
+    ]
+  }
+}

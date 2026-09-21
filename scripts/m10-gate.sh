@@ -60,4 +60,4 @@ cleanup
 trap - EXIT
 if kill -0 "$FINAL_SERVER_PID" 2>/dev/null || kill -0 "$FINAL_WEB_PID" 2>/dev/null; then echo "M10 gate cleanup left a child process running." >&2; exit 1; fi
 if docker inspect "$CONTAINER" >/dev/null 2>&1; then echo "M10 gate cleanup left the PostgreSQL container running." >&2; exit 1; fi
-echo "M10 gate passed: source checks, 123 tests including the live repository contract, clean PostgreSQL acceptance, restart readback, headless browser acceptance and cleanup."
+echo "M10 gate passed: source checks, the full suite including the live repository contract, clean PostgreSQL acceptance, restart readback, headless browser acceptance and cleanup."

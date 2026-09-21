@@ -1,0 +1,363 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.voidwake.adventure",
+  "version": "1.0.0",
+  "type": "adventure",
+  "name": "Voidwake One-shot Spine",
+  "description": "Twelve ordered scenes and encounters from broken beacon to storm escape.",
+  "tags": [
+    "voidwake",
+    "adventure"
+  ],
+  "preview": {
+    "summary": "Twelve ordered scenes and encounters from broken beacon to storm escape.",
+    "highlights": [
+      "12-scene one-shot",
+      "Exploration, negotiation and conflict"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.space-opera"
+    ],
+    "requiresCapabilities": [
+      "setting:voidwake",
+      "world:voidwake",
+      "cast:voidwake",
+      "items:voidwake",
+      "rules:voidwake"
+    ],
+    "providesCapabilities": [
+      "adventure:voidwake"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.voidwake.setting",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.voidwake.world",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.voidwake.cast",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.voidwake.items",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.voidwake.rules",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Voidwake Archipelago original content and artwork \u00a9 MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.voidwake.adventure"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 12,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.voidwake.adventure",
+    "version": "1.0.0",
+    "name": "Voidwake One-shot Spine",
+    "description": "Twelve ordered scenes and encounters from broken beacon to storm escape.",
+    "provides": [
+      "adventure:voidwake"
+    ],
+    "requires": [
+      "setting:voidwake",
+      "world:voidwake",
+      "cast:voidwake",
+      "items:voidwake",
+      "rules:voidwake"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.scene.1",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Broken Beacon"
+            },
+            "order": {
+              "value": 1
+            }
+          },
+          "tags": [
+            "voidwake",
+            "scene"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.scene.2",
+        "value": {
+          "kind": "encounter",
+          "values": {
+            "name": {
+              "value": "Race Through Glasswater"
+            },
+            "order": {
+              "value": 2
+            }
+          },
+          "tags": [
+            "voidwake",
+            "scene"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.scene.3",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Parley at the Market"
+            },
+            "order": {
+              "value": 3
+            }
+          },
+          "tags": [
+            "voidwake",
+            "scene"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.scene.4",
+        "value": {
+          "kind": "encounter",
+          "values": {
+            "name": {
+              "value": "Ambush in Copper Current"
+            },
+            "order": {
+              "value": 4
+            }
+          },
+          "tags": [
+            "voidwake",
+            "scene"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.scene.5",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Oracle\u2019s Warning"
+            },
+            "order": {
+              "value": 5
+            }
+          },
+          "tags": [
+            "voidwake",
+            "scene"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.scene.6",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Crossing the Singing Reef"
+            },
+            "order": {
+              "value": 6
+            }
+          },
+          "tags": [
+            "voidwake",
+            "scene"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.scene.7",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Warden\u2019s Price"
+            },
+            "order": {
+              "value": 7
+            }
+          },
+          "tags": [
+            "voidwake",
+            "scene"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.scene.8",
+        "value": {
+          "kind": "encounter",
+          "values": {
+            "name": {
+              "value": "Dive to the Drowned Vault"
+            },
+            "order": {
+              "value": 8
+            }
+          },
+          "tags": [
+            "voidwake",
+            "scene"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.scene.9",
+        "value": {
+          "kind": "encounter",
+          "values": {
+            "name": {
+              "value": "Sentinels Awaken"
+            },
+            "order": {
+              "value": 9
+            }
+          },
+          "tags": [
+            "voidwake",
+            "scene"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.scene.10",
+        "value": {
+          "kind": "encounter",
+          "values": {
+            "name": {
+              "value": "Leviathan Rising"
+            },
+            "order": {
+              "value": 10
+            }
+          },
+          "tags": [
+            "voidwake",
+            "scene"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.scene.11",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Restore the Tide Engine"
+            },
+            "order": {
+              "value": 11
+            }
+          },
+          "tags": [
+            "voidwake",
+            "scene"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/voidwake.scene.12",
+        "value": {
+          "kind": "encounter",
+          "values": {
+            "name": {
+              "value": "Escape the Closing Storm"
+            },
+            "order": {
+              "value": 12
+            }
+          },
+          "tags": [
+            "voidwake",
+            "scene"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "scene1": {
+            "template": "voidwake.scene.1"
+          },
+          "scene2": {
+            "template": "voidwake.scene.2"
+          },
+          "scene3": {
+            "template": "voidwake.scene.3"
+          },
+          "scene4": {
+            "template": "voidwake.scene.4"
+          },
+          "scene5": {
+            "template": "voidwake.scene.5"
+          },
+          "scene6": {
+            "template": "voidwake.scene.6"
+          },
+          "scene7": {
+            "template": "voidwake.scene.7"
+          },
+          "scene8": {
+            "template": "voidwake.scene.8"
+          },
+          "scene9": {
+            "template": "voidwake.scene.9"
+          },
+          "scene10": {
+            "template": "voidwake.scene.10"
+          },
+          "scene11": {
+            "template": "voidwake.scene.11"
+          },
+          "scene12": {
+            "template": "voidwake.scene.12"
+          }
+        }
+      }
+    ]
+  }
+}
