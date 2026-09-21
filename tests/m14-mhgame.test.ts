@@ -1,10 +1,10 @@
 import { createHash, randomUUID } from "node:crypto";
-import { describe, expect, it } from "vitest";
+import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { strFromU8, strToU8, unzipSync, zipSync } from "fflate";
 import { createStarterPack } from "@masterhost/worldpack-sdk";
 import { buildDescriptor } from "@masterhost/descriptor";
 import { compileWorld } from "@masterhost/world-compiler";
-import { exportMhGame, inspectMhGame, type MhGameExportInput } from "@masterhost/persistence";
+import { exportMhGame, inspectMhGame, GamePackageRepository, HostedPlatformRepository, PackProjectRepository, WorldRepository, type MhGameExportInput } from "@masterhost/persistence";
 
 const sha = (bytes: Uint8Array) => createHash("sha256").update(bytes).digest("hex");
 function fixture(): MhGameExportInput {
@@ -40,5 +40,23 @@ describe("M14 mhgame transport", () => {
     expect(() => inspectMhGame(new Uint8Array(25_000_001), randomUUID())).toThrow(/25 MB/i);
     const mismatch = fixture(); mismatch.world.packVersion = "9.9.9"; mismatch.world.descriptor.worldPack.version = "9.9.9";
     expect(() => exportMhGame(mismatch)).toThrow(/Pack identity/i);
+  });
+});
+
+const databaseUrl = process.env.TEST_DATABASE_URL, databaseSuite = databaseUrl ? describe : describe.skip;
+databaseSuite("M14 atomic game installation", () => {
+  const realmId = "00000000-0000-4000-a000-000000000014";
+  let games: GamePackageRepository, hosted: HostedPlatformRepository, packs: PackProjectRepository, worlds: WorldRepository;
+  beforeAll(async () => { games = new GamePackageRepository(databaseUrl!); hosted = new HostedPlatformRepository(databaseUrl!); packs = new PackProjectRepository(databaseUrl!); worlds = new WorldRepository(databaseUrl!); await worlds.migrate(); await packs.migrate(); await hosted.migrate(); await games.migrate(); await hosted.ensureDefault(realmId); });
+  afterAll(async () => { await Promise.all([games.close(), hosted.close(), packs.close(), worlds.close()]); });
+  it("installs an independent World, immutable runtime Pack and editable fork in one transaction", async () => {
+    const input = fixture(), imported = inspectMhGame(exportMhGame(input), realmId), installed = await games.install(imported, realmId);
+    expect((await worlds.get(installed.worldId))?.realmId).toBe(realmId);
+    const installedPacks = await packs.list(realmId), runtime = installedPacks.find(value => value.id === installed.runtimePackProjectId), editable = installedPacks.find(value => value.id === installed.editablePackProjectId);
+    expect(runtime?.status).toBe("published"); expect(runtime?.document.manifest).toEqual(input.packProject.document.manifest);
+    expect(editable?.status).toBe("draft"); expect(editable?.lineage).toMatchObject({ source: "mhgame", packageId: input.packageId });
+    expect((await hosted.realm(realmId))?.activePack).toEqual(installed.runtimePack);
+    await expect(games.install(imported, realmId)).rejects.toMatchObject({ statusCode: 409 });
+    expect((await packs.list(realmId))).toHaveLength(2); expect(await worlds.list(realmId)).toHaveLength(1);
   });
 });

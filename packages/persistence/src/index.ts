@@ -107,3 +107,4 @@ export * from "./realtime-bus.js";
 export * from "./advanced-ecosystem-repository.js";
 export * from "./game-descriptor-repository.js";
 export * from "./mhgame.js";
+export * from "./game-package-repository.js";
