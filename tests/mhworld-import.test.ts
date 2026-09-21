@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { resolve } from "node:path";
 import { loadWorldPack } from "@masterhost/worldpack-sdk";
-import { compileWorld } from "@masterhost/world-compiler";
+import { compileWorld, assignEntityImage, preserveCustomByPath } from "@masterhost/world-compiler";
 import { exportMhWorldZip, importMhWorldZip, importMhWorldZipWithAssets, assetChecksum } from "@masterhost/persistence";
 
 describe("mhworld ZIP import", () => {
@@ -32,13 +32,20 @@ describe("mhworld ZIP import", () => {
     const world = compileWorld({ realmId, descriptor, pack, seed: "asset-test" });
     const image = Uint8Array.from(Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIHWP4z8DwHwAFgAI/ScL/nwAAAABJRU5ErkJggg==", "base64"));
     world.assets = { "portrait.png": { checksum: assetChecksum(image), mediaType: "image/png", size: image.length } };
-    const archive = exportMhWorldZip(world, { "portrait.png": image });
+    const assigned=assignEntityImage(world,world.entities[0]!.id,"portrait","portrait.png");
+    expect(assigned.entities[0]?.assets?.roles?.portrait?.checksum).toBe(assetChecksum(image));
+    const fresh=compileWorld({realmId,descriptor,pack,seed:"new-seed",worldId:world.id});preserveCustomByPath(assigned,fresh);
+    expect(fresh.entities[0]?.assets).toEqual(assigned.entities[0]?.assets);
+    expect(assignEntityImage(assigned,assigned.entities[0]!.id,"portrait",null).entities[0]?.assets).toBeUndefined();
+    const archive = exportMhWorldZip(assigned, { "portrait.png": image });
     const result = importMhWorldZipWithAssets(archive, realmId);
     expect(result.world.id).not.toBe(world.id);
     expect(result.world.assets).toEqual(world.assets);
+    expect(result.world.entities[0]?.assets).toEqual(assigned.entities[0]?.assets);
     expect(result.assets["portrait.png"]).toEqual(image);
     expect(() => importMhWorldZip(archive, realmId)).toThrow(/persistent storage/);
     const altered = image.slice();altered[12] ^= 1;
-    expect(() => exportMhWorldZip(world, { "portrait.png": altered })).toThrow(/Invalid World asset/);
+    expect(() => exportMhWorldZip(assigned, { "portrait.png": altered })).toThrow(/Invalid World asset/);
+    expect(() => exportMhWorldZip({ ...assigned, assets: {} }, {})).toThrow(/invalid entity image assignment/);
   });
 });

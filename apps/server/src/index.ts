@@ -1,8 +1,8 @@
 import Fastify from"fastify";import cors from"@fastify/cors";import{randomUUID}from"node:crypto";import{resolve}from"node:path";import{fileURLToPath}from"node:url";
 import{loadWorldPack,validateWorldPack}from"@masterhost/worldpack-sdk";import{buildDescriptor}from"@masterhost/descriptor";
-import{compileWorld,customizeValue,regenerateWorld,generationReport,explainValue,compareWorlds,scopeSummary,preserveCustomByPath,assertUniqueMaterializationPaths}from"@masterhost/world-compiler";
+import{compileWorld,customizeValue,assignEntityImage,regenerateWorld,generationReport,explainValue,compareWorlds,scopeSummary,preserveCustomByPath,assertUniqueMaterializationPaths}from"@masterhost/world-compiler";
 import{WorldRepository,exportMhWorldZip,importMhWorldZipWithAssets,withMigrationLock}from"@masterhost/persistence";import{registerRuntime}from"./runtime.js";
-const app=Fastify({logger:true});await app.register(cors,{origin:true});
+const app=Fastify({logger:true});await app.register(cors,{origin:true,methods:["GET","HEAD","POST","PATCH"]});
 app.addContentTypeParser("application/vnd.masterhost.world+zip",{parseAs:"buffer",bodyLimit:10_000_000},(_req,body,done)=>done(null,body));
 app.addContentTypeParser("application/octet-stream",{parseAs:"buffer",bodyLimit:2_000_000},(_req,body,done)=>done(null,body));
 const repositoryRoot=fileURLToPath(new URL("../../../",import.meta.url));
@@ -20,7 +20,8 @@ app.post("/api/worlds/import",async(req:any)=>{if(!Buffer.isBuffer(req.body))thr
 app.post("/api/worlds",async(req:any)=>{const seed=req.body?.seed??randomUUID(),choices=Object.entries(req.body?.choices??{}).map(([path,value])=>({path,value:{mode:"explicit"as const,value},locked:Boolean(req.body?.locks?.includes(path))})),descriptor=buildDescriptor({packId:pack.manifest.id,packVersion:pack.manifest.version,choices,seed}),world=compileWorld({realmId,descriptor,pack,seed});assertUniqueMaterializationPaths(world);return repo.save(world,"compile")});
 app.get("/api/worlds/:id",async(req:any)=>must(req.params.id));
 app.post("/api/worlds/:id/assets",async(req:any)=>{await must(req.params.id);if(!Buffer.isBuffer(req.body))throw Object.assign(Error("binary image required"),{statusCode:415});try{return await repo.putAsset(req.params.id,String(req.query?.name??""),String(req.headers["x-asset-media-type"]??""),req.body)}catch(error){throw Object.assign(Error(error instanceof Error?error.message:"Invalid asset"),{statusCode:400})}});
-app.get("/api/worlds/:id/assets/:name",async(req:any,reply)=>{await must(req.params.id);const asset=await repo.asset(req.params.id,req.params.name);if(!asset)throw Object.assign(Error("asset not found"),{statusCode:404});reply.header("content-type",asset.mediaType);reply.header("content-disposition",`attachment; filename="${req.params.name}"`);return reply.send(Buffer.from(asset.data))});
+app.get("/api/worlds/:id/assets/:name",async(req:any,reply)=>{await must(req.params.id);const asset=await repo.asset(req.params.id,req.params.name);if(!asset)throw Object.assign(Error("asset not found"),{statusCode:404});reply.header("content-type",asset.mediaType);reply.header("x-content-type-options","nosniff");reply.header("content-disposition",`${req.query?.inline==="1"?"inline":"attachment"}; filename="${req.params.name}"`);return reply.send(Buffer.from(asset.data))});
+app.patch("/api/worlds/:id/entities/:entityId/assets/:role",async(req:any)=>{const world=await must(req.params.id);try{return await repo.save(assignEntityImage(world,req.params.entityId,req.params.role,req.body?.name),`image:${req.params.entityId}.${req.params.role}`)}catch(error){if(error&&typeof error==="object"&&"statusCode" in error)throw error;throw Object.assign(Error(error instanceof Error?error.message:"Invalid image assignment"),{statusCode:400})}});
 
 app.patch("/api/worlds/:id/values",async(req:any)=>{const w=await must(req.params.id);return repo.save(customizeValue(w,req.body.entityId,req.body.key,req.body.value,req.body.locked??true),`customize:${req.body.entityId}.${req.body.key}`)});
 

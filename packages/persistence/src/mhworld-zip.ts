@@ -1,4 +1,4 @@
-import{zipSync,unzipSync,strToU8,strFromU8}from"fflate";import type{MaterializedWorld}from"@masterhost/domain";import{exportMhWorld,verifyMhWorld,type MhWorldBundle}from"./mhworld.js";
+import{zipSync,unzipSync,strToU8,strFromU8}from"fflate";import type{MaterializedWorld}from"@masterhost/domain";import{assertWorldAssetReferences}from"@masterhost/domain";import{exportMhWorld,verifyMhWorld,type MhWorldBundle}from"./mhworld.js";
 import{randomUUID}from"node:crypto";import{z}from"zod";
 import{createHash}from"node:crypto";
 import{validateWorldImage}from"./world-assets.js";
@@ -25,6 +25,7 @@ function scanZip(bytes:Uint8Array){
  if(position!==offset+size)throw Error("Invalid ZIP directory size");
 }
 export function exportMhWorldZip(world:MaterializedWorld,assets:Record<string,Uint8Array>={}){
+ assertWorldAssetReferences(world);
  const b=exportMhWorld(world),files:Record<string,Uint8Array>={"manifest.json":strToU8(JSON.stringify(b.manifest,null,2)),"descriptor.json":strToU8(b.descriptor),"world/entities.ndjson":strToU8(b.entities),"world/metadata.json":strToU8(b.metadata),"checksums.json":strToU8(JSON.stringify(b.checksums,null,2))};
  if(Object.keys(assets).length!==Object.keys(world.assets??{}).length)throw Error("World asset set is incomplete");
  for(const[k,v]of Object.entries(assets)){if(!safePath(k)||!world.assets?.[k]||world.assets[k].checksum!==digest(v)||world.assets[k].size!==v.length)throw Error(`Invalid World asset ${k}`);files[`assets/${k}`]=v;b.checksums[`assets/${k}`]=digest(v)}
@@ -53,6 +54,7 @@ export function importMhWorldZipWithAssets(bytes:Uint8Array,realmId:string):{wor
  const paths=new Set<string>(),ids=new Set<string>();for(const entity of entities){if(entity.worldId!==metadata.id||paths.has(entity.materializationPath)||ids.has(entity.id))throw Error("mhworld entity identity mismatch");paths.add(entity.materializationPath);ids.add(entity.id)}
  for(const entity of entities)if(entity.parentId&&!ids.has(entity.parentId))throw Error(`mhworld dangling parent ${entity.parentId}`);
  const id=randomUUID(),idMap=new Map(entities.map(entity=>[entity.id,randomUUID()])),now=new Date().toISOString();
- return{world:{id,realmId,name:metadata.name,packId:bundle.manifest.packId,packVersion:bundle.manifest.packVersion,descriptor,seed:metadata.seed,status:"draft",revision:1,createdAt:now,updatedAt:now,...(metadata.assets?{assets:metadata.assets}:{}),entities:entities.map(entity=>({...entity,id:idMap.get(entity.id)!,worldId:id,parentId:entity.parentId?idMap.get(entity.parentId):undefined,revision:1}))},assets};
+ const world:MaterializedWorld={id,realmId,name:metadata.name,packId:bundle.manifest.packId,packVersion:bundle.manifest.packVersion,descriptor,seed:metadata.seed,status:"draft",revision:1,createdAt:now,updatedAt:now,...(metadata.assets?{assets:metadata.assets}:{}),entities:entities.map(entity=>({...entity,id:idMap.get(entity.id)!,worldId:id,parentId:entity.parentId?idMap.get(entity.parentId):undefined,revision:1}))};
+ assertWorldAssetReferences(world);return{world,assets};
 }
 export function importMhWorldZip(bytes:Uint8Array,realmId:string):MaterializedWorld{const result=importMhWorldZipWithAssets(bytes,realmId);if(Object.keys(result.assets).length)throw Error("Asset import requires persistent storage");return result.world}

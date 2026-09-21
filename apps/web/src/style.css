@@ -11,3 +11,4 @@ pre{white-space:pre-wrap;overflow:auto}
 .choiceList{border:1px solid #39475a;border-radius:8px;margin:14px 0;padding:12px}.choiceList legend{padding:0 6px;color:#8e9bab}.choiceList label{display:flex;align-items:center;gap:10px;margin:8px 0}.choiceList input[type="checkbox"]{width:auto;margin:0}.choiceList span{margin-left:auto}
 
 .gameLogRow{grid-template-columns:minmax(0,1fr) auto}.gameLogRow b{overflow-wrap:anywhere}
+.entityImage{display:block;width:96px;height:96px;object-fit:contain;margin:8px 0;border:1px solid #777;border-radius:6px}.entityImages{margin-top:10px}

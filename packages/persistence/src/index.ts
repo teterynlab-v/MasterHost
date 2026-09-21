@@ -2,6 +2,7 @@ import postgres from "postgres";
 import { randomUUID } from "node:crypto";
 import { assetChecksum, validateWorldImage } from "./world-assets.js";
 import type { MaterializedWorld } from "@masterhost/domain";
+import { assertWorldAssetReferences } from "@masterhost/domain";
 
 export interface RevisionInfo { id:string; worldId:string; revision:number; reason:string; createdAt:string }
 export interface SnapshotInfo { id:string; worldId:string; name:string; revision:number; createdAt:string }
@@ -17,6 +18,7 @@ export class WorldRepository {
     await this.sql`create table if not exists world_asset_blobs(checksum text primary key,data bytea not null)`;
   }
   async save(w:MaterializedWorld, reason="autosave"){
+    assertWorldAssetReferences(w);
     await this.sql.begin(async tx=>{
       const current=(await tx`select revision from worlds where id=${w.id} for update`)[0];
       if(current&&Number(current.revision)+1!==w.revision)throw Object.assign(Error("World revision changed; reload and retry"),{statusCode:409});
@@ -27,6 +29,7 @@ export class WorldRepository {
     return w;
   }
   async saveImported(w:MaterializedWorld,assets:Record<string,Uint8Array>){
+    assertWorldAssetReferences(w);
     await this.sql.begin(async tx=>{
       for(const[path,ref]of Object.entries(w.assets??{})){
         const data=assets[path];if(!data||assetChecksum(data)!==ref.checksum||data.length!==ref.size)throw Error(`Missing or invalid asset ${path}`);validateWorldImage(path,ref.mediaType,data);
@@ -43,6 +46,7 @@ export class WorldRepository {
       const row=(await tx`select data from worlds where id=${worldId} for update`)[0];if(!row)throw Error("world not found");
       const world=row.data as MaterializedWorld;
       if(!world.assets?.[path]&&Object.keys(world.assets??{}).length>=20)throw Error("World asset limit exceeded");
+      if(world.assets?.[path]?.checksum!==undefined&&world.assets[path]!.checksum!==checksum&&world.entities.some(entity=>Object.values(entity.assets?.roles??{}).some(ref=>ref?.path===path)))throw Error("Assigned image must be detached before replacement");
       await tx`insert into world_asset_blobs(checksum,data) values(${checksum},${Buffer.from(data)}) on conflict(checksum) do nothing`;
       world.assets={...world.assets,[path]:{checksum,mediaType,size:data.length}};world.revision++;world.updatedAt=new Date().toISOString();
       await tx`update worlds set data=${tx.json(world as any)},revision=${world.revision},updated_at=now() where id=${worldId}`;
