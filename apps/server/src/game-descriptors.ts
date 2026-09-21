@@ -1,7 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import type { FastifyInstance } from "fastify";
-import { buildDescriptor, composeGameDescriptor, fragmentCatalog, gameAssetCatalog, gameAssetDetail, gameAssetMedia, type GameAsset, type GameDescriptorFragment, type GameFragmentSelection } from "@masterhost/descriptor";
+import { buildDescriptor, composeGameDescriptor, fragmentCatalog, gameAssetCatalog, gameAssetDetail, gameAssetMedia, reviewQuickGameSelection, type GameAsset, type GameDescriptorFragment, type GameFragmentSelection, type QuickGameSelection } from "@masterhost/descriptor";
 import type { DescriptorValue, MaterializedWorld } from "@masterhost/domain";
 import { GameDescriptorRepository, PackProjectRepository, WorldRepository, type GameDescriptorProject } from "@masterhost/persistence";
 import { toLoadedWorldPack, worldPackDocumentFromLoaded, type LoadedWorldPack, type WorldPackDocument } from "@masterhost/worldpack-sdk";
@@ -66,6 +66,14 @@ export async function registerGameDescriptors(app: FastifyInstance, dependencies
 
   app.get("/api/game-fragments", async (request: any) => { await authorize(request); return fragmentCatalog(dependencies.fragments.filter(fragment => !assetIdentities.has(`${fragment.id}@${fragment.version}`))); });
   app.get("/api/game-assets", async (request: any) => { await authorize(request); return gameAssetCatalog(dependencies.assets, { query: request.query?.query, type: request.query?.type, tag: request.query?.tag, basePackId: request.query?.basePackId }); });
+  app.post("/api/game-assets/quick-review", async (request: any) => {
+    await authorize(request); const expected = request.body?.basePack, entries = request.body?.selections;
+    if (!expected?.id || !expected?.version) throw fail("exact basePack is required");
+    await basePack(request, { id: String(expected.id), version: String(expected.version) });
+    if (!Array.isArray(entries) || entries.length > 64) throw fail("selections must be an array with at most 64 entries");
+    const selections: QuickGameSelection[] = entries.map((entry: any) => { const id = String(entry?.id ?? ""), version = String(entry?.version ?? ""); if (!/^[a-zA-Z0-9][a-zA-Z0-9._-]*$/.test(id) || !/^\d+\.\d+\.\d+(?:-[a-zA-Z0-9.-]+)?$/.test(version)) throw fail("every selection requires a valid exact id and version"); return { id, version }; });
+    return reviewQuickGameSelection(dependencies.assets, String(expected.id), selections);
+  });
   app.get("/api/game-assets/media/:checksum/*", async (request: any, reply) => {
     await authorize(request);
     const name = String(request.params["*"] ?? ""), media = gameAssetMedia(dependencies.assets, name, String(request.params.checksum));
