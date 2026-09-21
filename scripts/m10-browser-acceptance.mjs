@@ -27,7 +27,7 @@ try {
 
   await send("Runtime.enable"); await send("Network.enable"); await send("Page.enable");
   await navigate(`${webUrl}/?realm=${encodeURIComponent(state.slug)}`);
-  await evaluate(`sessionStorage.setItem(${JSON.stringify(`masterhost.realmAccess.${state.slug}`)}, ${JSON.stringify(state.creatorToken)}); localStorage.setItem('masterhost.realm', ${JSON.stringify(state.slug)}); location.hash = 'game-builder';`);
+  await evaluate(`sessionStorage.setItem(${JSON.stringify(`masterhost.realmAccess.${state.slug}`)}, ${JSON.stringify(state.creatorToken)}); localStorage.setItem('masterhost.realm', ${JSON.stringify(state.slug)}); location.hash = 'advanced-game-builder';`);
   await waitForText("DYNAMIC GAME BUILDER"); await waitForText("Revision 2");
   await click("New game");
   await setInput("Game name", "The Browser Observatory"); await setInput("Deterministic seed", "m10-browser-seed");
@@ -38,7 +38,7 @@ try {
   await click("PREVIEW"); await waitForText("VALID"); await waitForText("location:observatory"); await waitForText("rules:fortune"); await waitForText("0.1.1");
   await click("COMPILE WORLD"); await waitForText("Generation report"); await waitForText("masterhost.game.");
   await evaluate("location.reload()"); await waitForText("Generation report"); await waitForText("masterhost.game.");
-  await evaluate("location.hash = 'game-builder'"); await waitForText("DYNAMIC GAME BUILDER"); await evaluate("location.reload()");
+  await evaluate("location.hash = 'advanced-game-builder'"); await waitForText("DYNAMIC GAME BUILDER"); await evaluate("location.reload()");
   await waitForText("Revision 1"); await waitForText("Observatory Location"); await waitForText("Fortune Rules");
   assert.deepEqual(issues, []);
   console.log("M10 browser acceptance passed: creator inspected invalid diagnostics, previewed a valid Descriptor, compiled and reloaded its World, then restored the project after reload.");
