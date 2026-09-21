@@ -1,0 +1,160 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.sunforge.visuals",
+  "version": "1.0.0",
+  "type": "visuals",
+  "name": "Sunforge Visual Kit",
+  "description": "Original functional maps, portraits, tokens and backgrounds for the Sunforge collection.",
+  "tags": [
+    "sunforge",
+    "visuals"
+  ],
+  "preview": {
+    "summary": "Original functional maps, portraits, tokens and backgrounds for the Sunforge collection.",
+    "highlights": [
+      "3 maps",
+      "2 portraits",
+      "2 tokens",
+      "1 background"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.space-opera"
+    ],
+    "requiresCapabilities": [
+      "setting:space-opera"
+    ],
+    "providesCapabilities": [
+      "visuals:space-opera"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Sunforge Archipelago original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.sunforge.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 8
+  },
+  "media": [
+    {
+      "name": "sunforge/sunforge-background.svg",
+      "path": "media/sunforge-background.svg",
+      "role": "background",
+      "mediaType": "image/svg+xml",
+      "checksum": "f6284eff10fe40b01966b42d8a114c6d4bfc04694ea30da6ac430eb6840004e0",
+      "size": 530
+    },
+    {
+      "name": "sunforge/sunforge-map.svg",
+      "path": "media/sunforge-map.svg",
+      "role": "map",
+      "mediaType": "image/svg+xml",
+      "checksum": "040e3de8433d1fe0a4bf1d3decb4647244eb144e3892c1cd318bb583c2b66e7a",
+      "size": 537
+    },
+    {
+      "name": "sunforge/sunforge-reef-map.svg",
+      "path": "media/sunforge-reef-map.svg",
+      "role": "map",
+      "mediaType": "image/svg+xml",
+      "checksum": "c0f6d0fa6a9ffec82e1dc3a8643d67b626fbce2f277a58f48a4fc47058c45df4",
+      "size": 534
+    },
+    {
+      "name": "sunforge/sunforge-vault-map.svg",
+      "path": "media/sunforge-vault-map.svg",
+      "role": "map",
+      "mediaType": "image/svg+xml",
+      "checksum": "79fa2a15cb91c8c0f85a03dcebb1f2ab7b5bf7ccadb90769f9701f9770a864c2",
+      "size": 535
+    },
+    {
+      "name": "sunforge/sunforge-captain.svg",
+      "path": "media/sunforge-captain.svg",
+      "role": "portrait",
+      "mediaType": "image/svg+xml",
+      "checksum": "7d0fad808e89c6969ab0344b802baeba7d9cd4e81daa4f13203cfee2891d8aaf",
+      "size": 534
+    },
+    {
+      "name": "sunforge/sunforge-oracle.svg",
+      "path": "media/sunforge-oracle.svg",
+      "role": "portrait",
+      "mediaType": "image/svg+xml",
+      "checksum": "9653a8748dd81467ac355edd6e805514009cba90d65c4a35b6db10ace03471ab",
+      "size": 533
+    },
+    {
+      "name": "sunforge/sunforge-raider.svg",
+      "path": "media/sunforge-raider.svg",
+      "role": "token",
+      "mediaType": "image/svg+xml",
+      "checksum": "94d508d8003d73e1c6fda8d80f97a6ffa58e238a3d9b4dd1b05ae053cf083151",
+      "size": 528
+    },
+    {
+      "name": "sunforge/sunforge-leviathan.svg",
+      "path": "media/sunforge-leviathan.svg",
+      "role": "token",
+      "mediaType": "image/svg+xml",
+      "checksum": "226881ef85c50e4aa88b6b105131c708d9b674949234bf82de452d54b495cffb",
+      "size": 531
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.sunforge.visuals",
+    "version": "1.0.0",
+    "name": "Sunforge Visual Kit",
+    "description": "Original functional maps, portraits, tokens and backgrounds for the Sunforge collection.",
+    "provides": [
+      "visuals:space-opera"
+    ],
+    "requires": [
+      "setting:space-opera"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/sunforge",
+        "value": {
+          "id": "sunforge",
+          "name": "Sunforge Standard",
+          "description": "Original Sunforge visual language",
+          "defaults": {
+            "background": "assets/sunforge/sunforge-background.svg",
+            "portrait": "assets/sunforge/sunforge-captain.svg",
+            "token": "assets/sunforge/sunforge-raider.svg",
+            "location": "assets/sunforge/sunforge-map.svg",
+            "card": "assets/sunforge/sunforge-background.svg",
+            "map": "assets/sunforge/sunforge-map.svg"
+          },
+          "types": {
+            "creature": {
+              "token": "assets/sunforge/sunforge-leviathan.svg"
+            },
+            "npc": {
+              "portrait": "assets/sunforge/sunforge-oracle.svg"
+            },
+            "location": {
+              "location": "assets/sunforge/sunforge-map.svg"
+            }
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "sunforge"
+  }
+}

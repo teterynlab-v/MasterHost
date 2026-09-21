@@ -17,7 +17,7 @@ export interface GameAssetCatalogQuery { query?: string; type?: string; tag?: st
 export const quickGameAssetTypes = ["setting", "world-template", "locations", "cast", "items", "rules", "characters", "adventure", "visuals"] as const;
 export type QuickGameAssetType = typeof quickGameAssetTypes[number];
 export interface QuickGameSelection { id: string; version: string }
-export interface QuickGameDiagnostic { code: "unknown-asset" | "incompatible-pack" | "missing-category" | "duplicate-category" | "missing-dependency"; message: string; type?: QuickGameAssetType; asset?: string; dependency?: string }
+export interface QuickGameDiagnostic { code: "unknown-asset" | "incompatible-pack" | "missing-category" | "duplicate-category" | "missing-dependency" | "missing-capability"; message: string; type?: QuickGameAssetType; asset?: string; dependency?: string; capability?: string }
 export interface QuickGameReview { ready: boolean; diagnostics: QuickGameDiagnostic[]; orderedSelections: QuickGameSelection[]; selected: { id: string; version: string; type: QuickGameAssetType; name: string; preview: GameAsset["preview"]; counts: GameAsset["counts"]; dependencies: GameAsset["dependencies"]; license: GameAsset["license"] }[]; counts: GameAsset["counts"]; licenses: GameAsset["license"][] }
 
 const sha = (value: Uint8Array | string) => createHash("sha256").update(value).digest("hex"), pointer = (value: string) => value.replaceAll("~", "~0").replaceAll("/", "~1");
@@ -80,6 +80,8 @@ export function reviewQuickGameSelection(assets: GameAsset[], basePackId: string
     const identity = `${dependency.id}@${dependency.version}`;
     if (!selectedIdentities.has(identity)) diagnostics.push({ code: "missing-dependency", asset: `${asset.id}@${asset.version}`, dependency: identity, message: `${asset.id}@${asset.version} requires ${identity}` });
   }
+  const providedCapabilities = new Set(selected.flatMap(asset => asset.fragment.provides));
+  for (const asset of selected) for (const capability of asset.fragment.requires) if (!providedCapabilities.has(capability)) diagnostics.push({ code: "missing-capability", asset: `${asset.id}@${asset.version}`, capability, message: `${asset.id}@${asset.version} requires capability ${capability}` });
   const typeOrder = new Map(quickGameAssetTypes.map((type, index) => [type, index])), ordered: GameAsset[] = [], visited = new Set<string>();
   const visit = (asset: GameAsset) => { const identity = `${asset.id}@${asset.version}`; if (visited.has(identity)) return; for (const dependency of asset.dependencies) { const target = byIdentity.get(`${dependency.id}@${dependency.version}`); if (target && selectedIdentities.has(`${target.id}@${target.version}`)) visit(target); } visited.add(identity); ordered.push(asset); };
   for (const asset of [...selected].sort((left, right) => (typeOrder.get(left.type as QuickGameAssetType) ?? 99) - (typeOrder.get(right.type as QuickGameAssetType) ?? 99) || left.id.localeCompare(right.id) || left.version.localeCompare(right.version))) visit(asset);

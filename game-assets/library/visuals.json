@@ -23,19 +23,14 @@
       "masterhost.space-opera"
     ],
     "requiresCapabilities": [
-      "setting:voidwake"
+      "setting:space-opera"
     ],
     "providesCapabilities": [
-      "visuals:voidwake"
+      "visuals:space-opera"
     ],
     "conflicts": []
   },
-  "dependencies": [
-    {
-      "id": "masterhost.asset.voidwake.setting",
-      "version": "1.0.0"
-    }
-  ],
+  "dependencies": [],
   "license": {
     "spdx": "CC-BY-4.0",
     "attribution": "Voidwake Archipelago original content and artwork © MasterHost contributors.",
@@ -123,10 +118,10 @@
     "name": "Voidwake Visual Kit",
     "description": "Original functional maps, portraits, tokens and backgrounds for the Voidwake collection.",
     "provides": [
-      "visuals:voidwake"
+      "visuals:space-opera"
     ],
     "requires": [
-      "setting:voidwake"
+      "setting:space-opera"
     ],
     "conflicts": [],
     "parameters": {},

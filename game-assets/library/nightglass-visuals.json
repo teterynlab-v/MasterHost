@@ -1,0 +1,160 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.nightglass.visuals",
+  "version": "1.0.0",
+  "type": "visuals",
+  "name": "Nightglass Visual Kit",
+  "description": "Original functional maps, portraits, tokens and backgrounds for the Nightglass collection.",
+  "tags": [
+    "nightglass",
+    "visuals"
+  ],
+  "preview": {
+    "summary": "Original functional maps, portraits, tokens and backgrounds for the Nightglass collection.",
+    "highlights": [
+      "3 maps",
+      "2 portraits",
+      "2 tokens",
+      "1 background"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.space-opera"
+    ],
+    "requiresCapabilities": [
+      "setting:space-opera"
+    ],
+    "providesCapabilities": [
+      "visuals:space-opera"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Nightglass Archipelago original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.nightglass.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 8
+  },
+  "media": [
+    {
+      "name": "nightglass/nightglass-background.svg",
+      "path": "media/nightglass-background.svg",
+      "role": "background",
+      "mediaType": "image/svg+xml",
+      "checksum": "2bb09b6cc98a86fa76276bf2405744437a65dabf049d7a05f745ad630ff157b8",
+      "size": 532
+    },
+    {
+      "name": "nightglass/nightglass-map.svg",
+      "path": "media/nightglass-map.svg",
+      "role": "map",
+      "mediaType": "image/svg+xml",
+      "checksum": "ff7189c1c4b21c1315011882535d01a50103694928fd7db8f1f1a7c40973f890",
+      "size": 539
+    },
+    {
+      "name": "nightglass/nightglass-reef-map.svg",
+      "path": "media/nightglass-reef-map.svg",
+      "role": "map",
+      "mediaType": "image/svg+xml",
+      "checksum": "d2643654467871bd7d0cd2edbdb0e35f8b6821e898a50f7c7ac9c716251b81cd",
+      "size": 536
+    },
+    {
+      "name": "nightglass/nightglass-vault-map.svg",
+      "path": "media/nightglass-vault-map.svg",
+      "role": "map",
+      "mediaType": "image/svg+xml",
+      "checksum": "bb57c7796228041eb5366b46688aca4243b4b2856107afe93bf585465ba6155a",
+      "size": 537
+    },
+    {
+      "name": "nightglass/nightglass-captain.svg",
+      "path": "media/nightglass-captain.svg",
+      "role": "portrait",
+      "mediaType": "image/svg+xml",
+      "checksum": "0708090b41d2e238ce96c4ff9bd493f25cc704267874bcd3c9af849782a2e20f",
+      "size": 536
+    },
+    {
+      "name": "nightglass/nightglass-oracle.svg",
+      "path": "media/nightglass-oracle.svg",
+      "role": "portrait",
+      "mediaType": "image/svg+xml",
+      "checksum": "98c44ecc944b2785d7b24df199146aff89754212b201ddbbf183c02987384a4b",
+      "size": 535
+    },
+    {
+      "name": "nightglass/nightglass-raider.svg",
+      "path": "media/nightglass-raider.svg",
+      "role": "token",
+      "mediaType": "image/svg+xml",
+      "checksum": "a6124249238fb8ef0b0702bc08609c4b2bf113d7ab717bc301bd190acd02d8c1",
+      "size": 530
+    },
+    {
+      "name": "nightglass/nightglass-leviathan.svg",
+      "path": "media/nightglass-leviathan.svg",
+      "role": "token",
+      "mediaType": "image/svg+xml",
+      "checksum": "98c3e438c11e14a4a74f933135d0036a7d1d57594c934ad3f4ef15ce638e6be8",
+      "size": 533
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.nightglass.visuals",
+    "version": "1.0.0",
+    "name": "Nightglass Visual Kit",
+    "description": "Original functional maps, portraits, tokens and backgrounds for the Nightglass collection.",
+    "provides": [
+      "visuals:space-opera"
+    ],
+    "requires": [
+      "setting:space-opera"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/nightglass",
+        "value": {
+          "id": "nightglass",
+          "name": "Nightglass Standard",
+          "description": "Original Nightglass visual language",
+          "defaults": {
+            "background": "assets/nightglass/nightglass-background.svg",
+            "portrait": "assets/nightglass/nightglass-captain.svg",
+            "token": "assets/nightglass/nightglass-raider.svg",
+            "location": "assets/nightglass/nightglass-map.svg",
+            "card": "assets/nightglass/nightglass-background.svg",
+            "map": "assets/nightglass/nightglass-map.svg"
+          },
+          "types": {
+            "creature": {
+              "token": "assets/nightglass/nightglass-leviathan.svg"
+            },
+            "npc": {
+              "portrait": "assets/nightglass/nightglass-oracle.svg"
+            },
+            "location": {
+              "location": "assets/nightglass/nightglass-map.svg"
+            }
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "nightglass"
+  }
+}

@@ -1,16 +1,16 @@
 {
   "schemaVersion": "1",
-  "id": "masterhost.asset.voidwake.world",
+  "id": "masterhost.asset.sunforge.world",
   "version": "1.0.0",
   "type": "world-template",
-  "name": "Voidwake World Frame",
-  "description": "Adds the Voidwake Archipelago as a reusable campaign region.",
+  "name": "Sunforge World Frame",
+  "description": "Adds the Sunforge Archipelago as a reusable campaign region.",
   "tags": [
-    "voidwake",
+    "sunforge",
     "world"
   ],
   "preview": {
-    "summary": "Adds the Voidwake Archipelago as a reusable campaign region.",
+    "summary": "Adds the Sunforge Archipelago as a reusable campaign region.",
     "highlights": [
       "One campaign region",
       "Clear one-shot objective"
@@ -31,8 +31,8 @@
   "dependencies": [],
   "license": {
     "spdx": "CC-BY-4.0",
-    "attribution": "Voidwake Archipelago original content and artwork © MasterHost contributors.",
-    "source": "masterhost://bundled/masterhost.asset.voidwake.world"
+    "attribution": "Sunforge Archipelago original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.sunforge.world"
   },
   "published": true,
   "counts": {
@@ -46,10 +46,10 @@
   },
   "media": [],
   "fragment": {
-    "id": "masterhost.asset.voidwake.world",
+    "id": "masterhost.asset.sunforge.world",
     "version": "1.0.0",
-    "name": "Voidwake World Frame",
-    "description": "Adds the Voidwake Archipelago as a reusable campaign region.",
+    "name": "Sunforge World Frame",
+    "description": "Adds the Sunforge Archipelago as a reusable campaign region.",
     "provides": [
       "world:space-opera"
     ],
@@ -71,12 +71,12 @@
     "patches": [
       {
         "op": "set",
-        "path": "/content/templates/voidwake.archipelago",
+        "path": "/content/templates/sunforge.archipelago",
         "value": {
           "kind": "region",
           "values": {
             "name": {
-              "value": "The Voidwake Archipelago"
+              "value": "The Sunforge Archipelago"
             },
             "premise": {
               "value": {
@@ -85,7 +85,7 @@
             }
           },
           "tags": [
-            "voidwake"
+            "sunforge"
           ],
           "components": {}
         }
@@ -94,8 +94,8 @@
         "op": "merge",
         "path": "/content/templates/world.root/components",
         "value": {
-          "voidwake": {
-            "template": "voidwake.archipelago"
+          "sunforge": {
+            "template": "sunforge.archipelago"
           }
         }
       }

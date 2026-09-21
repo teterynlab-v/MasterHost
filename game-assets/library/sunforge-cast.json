@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1",
-  "id": "masterhost.asset.voidwake.cast",
+  "id": "masterhost.asset.sunforge.cast",
   "version": "1.0.0",
   "type": "cast",
-  "name": "Voidwake Cast",
+  "name": "Sunforge Cast",
   "description": "Twenty named allies, rivals and creatures with distinct threat profiles.",
   "tags": [
-    "voidwake",
+    "sunforge",
     "cast"
   ],
   "preview": {
@@ -31,8 +31,8 @@
   "dependencies": [],
   "license": {
     "spdx": "CC-BY-4.0",
-    "attribution": "Voidwake Archipelago original content and artwork © MasterHost contributors.",
-    "source": "masterhost://bundled/masterhost.asset.voidwake.cast"
+    "attribution": "Sunforge Archipelago original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.sunforge.cast"
   },
   "published": true,
   "counts": {
@@ -46,9 +46,9 @@
   },
   "media": [],
   "fragment": {
-    "id": "masterhost.asset.voidwake.cast",
+    "id": "masterhost.asset.sunforge.cast",
     "version": "1.0.0",
-    "name": "Voidwake Cast",
+    "name": "Sunforge Cast",
     "description": "Twenty named allies, rivals and creatures with distinct threat profiles.",
     "provides": [
       "cast:space-opera"
@@ -61,7 +61,7 @@
     "patches": [
       {
         "op": "set",
-        "path": "/content/templates/voidwake.actor.1",
+        "path": "/content/templates/sunforge.actor.1",
         "value": {
           "kind": "npc",
           "values": {
@@ -73,14 +73,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "npc"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.actor.2",
+        "path": "/content/templates/sunforge.actor.2",
         "value": {
           "kind": "npc",
           "values": {
@@ -92,14 +92,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "npc"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.actor.3",
+        "path": "/content/templates/sunforge.actor.3",
         "value": {
           "kind": "npc",
           "values": {
@@ -111,14 +111,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "npc"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.actor.4",
+        "path": "/content/templates/sunforge.actor.4",
         "value": {
           "kind": "npc",
           "values": {
@@ -130,14 +130,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "npc"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.actor.5",
+        "path": "/content/templates/sunforge.actor.5",
         "value": {
           "kind": "npc",
           "values": {
@@ -149,14 +149,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "npc"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.actor.6",
+        "path": "/content/templates/sunforge.actor.6",
         "value": {
           "kind": "npc",
           "values": {
@@ -168,14 +168,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "npc"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.actor.7",
+        "path": "/content/templates/sunforge.actor.7",
         "value": {
           "kind": "npc",
           "values": {
@@ -187,14 +187,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "npc"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.actor.8",
+        "path": "/content/templates/sunforge.actor.8",
         "value": {
           "kind": "npc",
           "values": {
@@ -206,14 +206,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "npc"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.actor.9",
+        "path": "/content/templates/sunforge.actor.9",
         "value": {
           "kind": "npc",
           "values": {
@@ -225,14 +225,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "npc"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.actor.10",
+        "path": "/content/templates/sunforge.actor.10",
         "value": {
           "kind": "npc",
           "values": {
@@ -244,14 +244,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "npc"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.actor.11",
+        "path": "/content/templates/sunforge.actor.11",
         "value": {
           "kind": "creature",
           "values": {
@@ -263,14 +263,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "creature"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.actor.12",
+        "path": "/content/templates/sunforge.actor.12",
         "value": {
           "kind": "creature",
           "values": {
@@ -282,14 +282,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "creature"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.actor.13",
+        "path": "/content/templates/sunforge.actor.13",
         "value": {
           "kind": "creature",
           "values": {
@@ -301,14 +301,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "creature"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.actor.14",
+        "path": "/content/templates/sunforge.actor.14",
         "value": {
           "kind": "creature",
           "values": {
@@ -320,14 +320,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "creature"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.actor.15",
+        "path": "/content/templates/sunforge.actor.15",
         "value": {
           "kind": "creature",
           "values": {
@@ -339,14 +339,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "creature"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.actor.16",
+        "path": "/content/templates/sunforge.actor.16",
         "value": {
           "kind": "creature",
           "values": {
@@ -358,14 +358,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "creature"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.actor.17",
+        "path": "/content/templates/sunforge.actor.17",
         "value": {
           "kind": "creature",
           "values": {
@@ -377,14 +377,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "creature"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.actor.18",
+        "path": "/content/templates/sunforge.actor.18",
         "value": {
           "kind": "creature",
           "values": {
@@ -396,14 +396,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "creature"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.actor.19",
+        "path": "/content/templates/sunforge.actor.19",
         "value": {
           "kind": "creature",
           "values": {
@@ -415,14 +415,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "creature"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.actor.20",
+        "path": "/content/templates/sunforge.actor.20",
         "value": {
           "kind": "creature",
           "values": {
@@ -434,7 +434,7 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "creature"
           ]
         }
@@ -444,64 +444,64 @@
         "path": "/content/templates/world.root/components",
         "value": {
           "actor1": {
-            "template": "voidwake.actor.1"
+            "template": "sunforge.actor.1"
           },
           "actor2": {
-            "template": "voidwake.actor.2"
+            "template": "sunforge.actor.2"
           },
           "actor3": {
-            "template": "voidwake.actor.3"
+            "template": "sunforge.actor.3"
           },
           "actor4": {
-            "template": "voidwake.actor.4"
+            "template": "sunforge.actor.4"
           },
           "actor5": {
-            "template": "voidwake.actor.5"
+            "template": "sunforge.actor.5"
           },
           "actor6": {
-            "template": "voidwake.actor.6"
+            "template": "sunforge.actor.6"
           },
           "actor7": {
-            "template": "voidwake.actor.7"
+            "template": "sunforge.actor.7"
           },
           "actor8": {
-            "template": "voidwake.actor.8"
+            "template": "sunforge.actor.8"
           },
           "actor9": {
-            "template": "voidwake.actor.9"
+            "template": "sunforge.actor.9"
           },
           "actor10": {
-            "template": "voidwake.actor.10"
+            "template": "sunforge.actor.10"
           },
           "actor11": {
-            "template": "voidwake.actor.11"
+            "template": "sunforge.actor.11"
           },
           "actor12": {
-            "template": "voidwake.actor.12"
+            "template": "sunforge.actor.12"
           },
           "actor13": {
-            "template": "voidwake.actor.13"
+            "template": "sunforge.actor.13"
           },
           "actor14": {
-            "template": "voidwake.actor.14"
+            "template": "sunforge.actor.14"
           },
           "actor15": {
-            "template": "voidwake.actor.15"
+            "template": "sunforge.actor.15"
           },
           "actor16": {
-            "template": "voidwake.actor.16"
+            "template": "sunforge.actor.16"
           },
           "actor17": {
-            "template": "voidwake.actor.17"
+            "template": "sunforge.actor.17"
           },
           "actor18": {
-            "template": "voidwake.actor.18"
+            "template": "sunforge.actor.18"
           },
           "actor19": {
-            "template": "voidwake.actor.19"
+            "template": "sunforge.actor.19"
           },
           "actor20": {
-            "template": "voidwake.actor.20"
+            "template": "sunforge.actor.20"
           }
         }
       }

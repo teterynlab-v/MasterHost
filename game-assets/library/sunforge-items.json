@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1",
-  "id": "masterhost.asset.voidwake.items",
+  "id": "masterhost.asset.sunforge.items",
   "version": "1.0.0",
   "type": "items",
-  "name": "Voidwake Treasures and Clues",
+  "name": "Sunforge Treasures and Clues",
   "description": "Twenty usable items, clues and rewards tied to the one-shot mystery.",
   "tags": [
-    "voidwake",
+    "sunforge",
     "items",
     "clues"
   ],
@@ -33,8 +33,8 @@
   "dependencies": [],
   "license": {
     "spdx": "CC-BY-4.0",
-    "attribution": "Voidwake Archipelago original content and artwork © MasterHost contributors.",
-    "source": "masterhost://bundled/masterhost.asset.voidwake.items"
+    "attribution": "Sunforge Archipelago original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.sunforge.items"
   },
   "published": true,
   "counts": {
@@ -48,9 +48,9 @@
   },
   "media": [],
   "fragment": {
-    "id": "masterhost.asset.voidwake.items",
+    "id": "masterhost.asset.sunforge.items",
     "version": "1.0.0",
-    "name": "Voidwake Treasures and Clues",
+    "name": "Sunforge Treasures and Clues",
     "description": "Twenty usable items, clues and rewards tied to the one-shot mystery.",
     "provides": [
       "items:space-opera"
@@ -63,7 +63,7 @@
     "patches": [
       {
         "op": "set",
-        "path": "/content/items/voidwake-item-1",
+        "path": "/content/items/sunforge-item-1",
         "value": {
           "label": "Tide Key",
           "stackLimit": 1
@@ -71,7 +71,7 @@
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.item.1",
+        "path": "/content/templates/sunforge.item.1",
         "value": {
           "kind": "item",
           "values": {
@@ -80,14 +80,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "item"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/items/voidwake-item-2",
+        "path": "/content/items/sunforge-item-2",
         "value": {
           "label": "Stormglass Compass",
           "stackLimit": 1
@@ -95,7 +95,7 @@
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.item.2",
+        "path": "/content/templates/sunforge.item.2",
         "value": {
           "kind": "item",
           "values": {
@@ -104,14 +104,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "item"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/items/voidwake-item-3",
+        "path": "/content/items/sunforge-item-3",
         "value": {
           "label": "Leviathan Scale",
           "stackLimit": 1
@@ -119,7 +119,7 @@
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.item.3",
+        "path": "/content/templates/sunforge.item.3",
         "value": {
           "kind": "item",
           "values": {
@@ -128,14 +128,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "item"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/items/voidwake-item-4",
+        "path": "/content/items/sunforge-item-4",
         "value": {
           "label": "Beacon Cipher",
           "stackLimit": 1
@@ -143,7 +143,7 @@
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.item.4",
+        "path": "/content/templates/sunforge.item.4",
         "value": {
           "kind": "item",
           "values": {
@@ -152,14 +152,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "item"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/items/voidwake-item-5",
+        "path": "/content/items/sunforge-item-5",
         "value": {
           "label": "Void Pearl",
           "stackLimit": 1
@@ -167,7 +167,7 @@
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.item.5",
+        "path": "/content/templates/sunforge.item.5",
         "value": {
           "kind": "item",
           "values": {
@@ -176,14 +176,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "item"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/items/voidwake-item-6",
+        "path": "/content/items/sunforge-item-6",
         "value": {
           "label": "Pressure Suit",
           "stackLimit": 1
@@ -191,7 +191,7 @@
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.item.6",
+        "path": "/content/templates/sunforge.item.6",
         "value": {
           "kind": "item",
           "values": {
@@ -200,14 +200,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "item"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/items/voidwake-item-7",
+        "path": "/content/items/sunforge-item-7",
         "value": {
           "label": "Salvage Torch",
           "stackLimit": 1
@@ -215,7 +215,7 @@
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.item.7",
+        "path": "/content/templates/sunforge.item.7",
         "value": {
           "kind": "item",
           "values": {
@@ -224,14 +224,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "item"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/items/voidwake-item-8",
+        "path": "/content/items/sunforge-item-8",
         "value": {
           "label": "Grav Hook",
           "stackLimit": 1
@@ -239,7 +239,7 @@
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.item.8",
+        "path": "/content/templates/sunforge.item.8",
         "value": {
           "kind": "item",
           "values": {
@@ -248,14 +248,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "item"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/items/voidwake-item-9",
+        "path": "/content/items/sunforge-item-9",
         "value": {
           "label": "Reef Antidote",
           "stackLimit": 1
@@ -263,7 +263,7 @@
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.item.9",
+        "path": "/content/templates/sunforge.item.9",
         "value": {
           "kind": "item",
           "values": {
@@ -272,14 +272,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "item"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/items/voidwake-item-10",
+        "path": "/content/items/sunforge-item-10",
         "value": {
           "label": "Signal Flare",
           "stackLimit": 1
@@ -287,7 +287,7 @@
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.item.10",
+        "path": "/content/templates/sunforge.item.10",
         "value": {
           "kind": "item",
           "values": {
@@ -296,14 +296,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "item"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/items/voidwake-item-11",
+        "path": "/content/items/sunforge-item-11",
         "value": {
           "label": "Oracle Tablet",
           "stackLimit": 1
@@ -311,7 +311,7 @@
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.item.11",
+        "path": "/content/templates/sunforge.item.11",
         "value": {
           "kind": "clue",
           "values": {
@@ -320,14 +320,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "clue"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/items/voidwake-item-12",
+        "path": "/content/items/sunforge-item-12",
         "value": {
           "label": "Captain’s Seal",
           "stackLimit": 1
@@ -335,7 +335,7 @@
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.item.12",
+        "path": "/content/templates/sunforge.item.12",
         "value": {
           "kind": "clue",
           "values": {
@@ -344,14 +344,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "clue"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/items/voidwake-item-13",
+        "path": "/content/items/sunforge-item-13",
         "value": {
           "label": "Smuggler Ledger",
           "stackLimit": 1
@@ -359,7 +359,7 @@
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.item.13",
+        "path": "/content/templates/sunforge.item.13",
         "value": {
           "kind": "clue",
           "values": {
@@ -368,14 +368,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "clue"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/items/voidwake-item-14",
+        "path": "/content/items/sunforge-item-14",
         "value": {
           "label": "Vault Lens",
           "stackLimit": 1
@@ -383,7 +383,7 @@
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.item.14",
+        "path": "/content/templates/sunforge.item.14",
         "value": {
           "kind": "clue",
           "values": {
@@ -392,14 +392,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "clue"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/items/voidwake-item-15",
+        "path": "/content/items/sunforge-item-15",
         "value": {
           "label": "Echo Core",
           "stackLimit": 1
@@ -407,7 +407,7 @@
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.item.15",
+        "path": "/content/templates/sunforge.item.15",
         "value": {
           "kind": "clue",
           "values": {
@@ -416,14 +416,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "clue"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/items/voidwake-item-16",
+        "path": "/content/items/sunforge-item-16",
         "value": {
           "label": "Warden Badge",
           "stackLimit": 1
@@ -431,7 +431,7 @@
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.item.16",
+        "path": "/content/templates/sunforge.item.16",
         "value": {
           "kind": "clue",
           "values": {
@@ -440,14 +440,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "clue"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/items/voidwake-item-17",
+        "path": "/content/items/sunforge-item-17",
         "value": {
           "label": "Moonfall Relic",
           "stackLimit": 1
@@ -455,7 +455,7 @@
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.item.17",
+        "path": "/content/templates/sunforge.item.17",
         "value": {
           "kind": "clue",
           "values": {
@@ -464,14 +464,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "clue"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/items/voidwake-item-18",
+        "path": "/content/items/sunforge-item-18",
         "value": {
           "label": "Current Map",
           "stackLimit": 1
@@ -479,7 +479,7 @@
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.item.18",
+        "path": "/content/templates/sunforge.item.18",
         "value": {
           "kind": "clue",
           "values": {
@@ -488,14 +488,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "clue"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/items/voidwake-item-19",
+        "path": "/content/items/sunforge-item-19",
         "value": {
           "label": "Emergency Charge",
           "stackLimit": 1
@@ -503,7 +503,7 @@
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.item.19",
+        "path": "/content/templates/sunforge.item.19",
         "value": {
           "kind": "reward",
           "values": {
@@ -512,14 +512,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "reward"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/items/voidwake-item-20",
+        "path": "/content/items/sunforge-item-20",
         "value": {
           "label": "Tide Engine Shard",
           "stackLimit": 1
@@ -527,7 +527,7 @@
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.item.20",
+        "path": "/content/templates/sunforge.item.20",
         "value": {
           "kind": "reward",
           "values": {
@@ -536,7 +536,7 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "reward"
           ]
         }
@@ -546,64 +546,64 @@
         "path": "/content/templates/world.root/components",
         "value": {
           "item1": {
-            "template": "voidwake.item.1"
+            "template": "sunforge.item.1"
           },
           "item2": {
-            "template": "voidwake.item.2"
+            "template": "sunforge.item.2"
           },
           "item3": {
-            "template": "voidwake.item.3"
+            "template": "sunforge.item.3"
           },
           "item4": {
-            "template": "voidwake.item.4"
+            "template": "sunforge.item.4"
           },
           "item5": {
-            "template": "voidwake.item.5"
+            "template": "sunforge.item.5"
           },
           "item6": {
-            "template": "voidwake.item.6"
+            "template": "sunforge.item.6"
           },
           "item7": {
-            "template": "voidwake.item.7"
+            "template": "sunforge.item.7"
           },
           "item8": {
-            "template": "voidwake.item.8"
+            "template": "sunforge.item.8"
           },
           "item9": {
-            "template": "voidwake.item.9"
+            "template": "sunforge.item.9"
           },
           "item10": {
-            "template": "voidwake.item.10"
+            "template": "sunforge.item.10"
           },
           "item11": {
-            "template": "voidwake.item.11"
+            "template": "sunforge.item.11"
           },
           "item12": {
-            "template": "voidwake.item.12"
+            "template": "sunforge.item.12"
           },
           "item13": {
-            "template": "voidwake.item.13"
+            "template": "sunforge.item.13"
           },
           "item14": {
-            "template": "voidwake.item.14"
+            "template": "sunforge.item.14"
           },
           "item15": {
-            "template": "voidwake.item.15"
+            "template": "sunforge.item.15"
           },
           "item16": {
-            "template": "voidwake.item.16"
+            "template": "sunforge.item.16"
           },
           "item17": {
-            "template": "voidwake.item.17"
+            "template": "sunforge.item.17"
           },
           "item18": {
-            "template": "voidwake.item.18"
+            "template": "sunforge.item.18"
           },
           "item19": {
-            "template": "voidwake.item.19"
+            "template": "sunforge.item.19"
           },
           "item20": {
-            "template": "voidwake.item.20"
+            "template": "sunforge.item.20"
           }
         }
       }

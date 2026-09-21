@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1",
-  "id": "masterhost.asset.voidwake.characters",
+  "id": "masterhost.asset.nightglass.characters",
   "version": "1.0.0",
   "type": "characters",
-  "name": "Voidwake Archetypes",
+  "name": "Nightglass Archetypes",
   "description": "Six player archetypes and matching reusable Actor templates.",
   "tags": [
-    "voidwake",
+    "nightglass",
     "characters"
   ],
   "preview": {
@@ -32,8 +32,8 @@
   "dependencies": [],
   "license": {
     "spdx": "CC-BY-4.0",
-    "attribution": "Voidwake Archipelago original content and artwork © MasterHost contributors.",
-    "source": "masterhost://bundled/masterhost.asset.voidwake.characters"
+    "attribution": "Nightglass Archipelago original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.nightglass.characters"
   },
   "published": true,
   "counts": {
@@ -47,9 +47,9 @@
   },
   "media": [],
   "fragment": {
-    "id": "masterhost.asset.voidwake.characters",
+    "id": "masterhost.asset.nightglass.characters",
     "version": "1.0.0",
-    "name": "Voidwake Archetypes",
+    "name": "Nightglass Archetypes",
     "description": "Six player archetypes and matching reusable Actor templates.",
     "provides": [
       "characters:space-opera"
@@ -66,11 +66,11 @@
         "path": "/content/characterCreation/steps",
         "value": [
           {
-            "id": "voidwake-role",
-            "title": "Voidwake Calling",
+            "id": "nightglass-role",
+            "title": "Nightglass Calling",
             "fields": [
               {
-                "id": "voidwakeCalling",
+                "id": "nightglassCalling",
                 "label": "Calling",
                 "type": "choice",
                 "required": true,
@@ -107,7 +107,7 @@
       },
       {
         "op": "set",
-        "path": "/content/actorTemplates/voidwake-1",
+        "path": "/content/actorTemplates/nightglass-1",
         "value": {
           "label": "Storm Pilot",
           "resources": {},
@@ -120,7 +120,7 @@
       },
       {
         "op": "set",
-        "path": "/content/actorTemplates/voidwake-2",
+        "path": "/content/actorTemplates/nightglass-2",
         "value": {
           "label": "Tide Oracle",
           "resources": {},
@@ -133,7 +133,7 @@
       },
       {
         "op": "set",
-        "path": "/content/actorTemplates/voidwake-3",
+        "path": "/content/actorTemplates/nightglass-3",
         "value": {
           "label": "Vault Diver",
           "resources": {},
@@ -146,7 +146,7 @@
       },
       {
         "op": "set",
-        "path": "/content/actorTemplates/voidwake-4",
+        "path": "/content/actorTemplates/nightglass-4",
         "value": {
           "label": "Fleet Envoy",
           "resources": {},
@@ -159,7 +159,7 @@
       },
       {
         "op": "set",
-        "path": "/content/actorTemplates/voidwake-5",
+        "path": "/content/actorTemplates/nightglass-5",
         "value": {
           "label": "Reef Warden",
           "resources": {},
@@ -172,7 +172,7 @@
       },
       {
         "op": "set",
-        "path": "/content/actorTemplates/voidwake-6",
+        "path": "/content/actorTemplates/nightglass-6",
         "value": {
           "label": "Salvage Medic",
           "resources": {},

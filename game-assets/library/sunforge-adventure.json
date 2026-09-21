@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1",
-  "id": "masterhost.asset.voidwake.adventure",
+  "id": "masterhost.asset.sunforge.adventure",
   "version": "1.0.0",
   "type": "adventure",
-  "name": "Voidwake One-shot Spine",
+  "name": "Sunforge One-shot Spine",
   "description": "Twelve ordered scenes and encounters from broken beacon to storm escape.",
   "tags": [
-    "voidwake",
+    "sunforge",
     "adventure"
   ],
   "preview": {
@@ -34,8 +34,8 @@
   "dependencies": [],
   "license": {
     "spdx": "CC-BY-4.0",
-    "attribution": "Voidwake Archipelago original content and artwork © MasterHost contributors.",
-    "source": "masterhost://bundled/masterhost.asset.voidwake.adventure"
+    "attribution": "Sunforge Archipelago original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.sunforge.adventure"
   },
   "published": true,
   "counts": {
@@ -49,9 +49,9 @@
   },
   "media": [],
   "fragment": {
-    "id": "masterhost.asset.voidwake.adventure",
+    "id": "masterhost.asset.sunforge.adventure",
     "version": "1.0.0",
-    "name": "Voidwake One-shot Spine",
+    "name": "Sunforge One-shot Spine",
     "description": "Twelve ordered scenes and encounters from broken beacon to storm escape.",
     "provides": [
       "adventure:space-opera"
@@ -67,7 +67,7 @@
     "patches": [
       {
         "op": "set",
-        "path": "/content/templates/voidwake.scene.1",
+        "path": "/content/templates/sunforge.scene.1",
         "value": {
           "kind": "scene",
           "values": {
@@ -79,14 +79,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "scene"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.scene.2",
+        "path": "/content/templates/sunforge.scene.2",
         "value": {
           "kind": "encounter",
           "values": {
@@ -98,14 +98,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "scene"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.scene.3",
+        "path": "/content/templates/sunforge.scene.3",
         "value": {
           "kind": "scene",
           "values": {
@@ -117,14 +117,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "scene"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.scene.4",
+        "path": "/content/templates/sunforge.scene.4",
         "value": {
           "kind": "encounter",
           "values": {
@@ -136,14 +136,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "scene"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.scene.5",
+        "path": "/content/templates/sunforge.scene.5",
         "value": {
           "kind": "scene",
           "values": {
@@ -155,14 +155,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "scene"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.scene.6",
+        "path": "/content/templates/sunforge.scene.6",
         "value": {
           "kind": "scene",
           "values": {
@@ -174,14 +174,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "scene"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.scene.7",
+        "path": "/content/templates/sunforge.scene.7",
         "value": {
           "kind": "scene",
           "values": {
@@ -193,14 +193,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "scene"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.scene.8",
+        "path": "/content/templates/sunforge.scene.8",
         "value": {
           "kind": "encounter",
           "values": {
@@ -212,14 +212,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "scene"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.scene.9",
+        "path": "/content/templates/sunforge.scene.9",
         "value": {
           "kind": "encounter",
           "values": {
@@ -231,14 +231,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "scene"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.scene.10",
+        "path": "/content/templates/sunforge.scene.10",
         "value": {
           "kind": "encounter",
           "values": {
@@ -250,14 +250,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "scene"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.scene.11",
+        "path": "/content/templates/sunforge.scene.11",
         "value": {
           "kind": "scene",
           "values": {
@@ -269,14 +269,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "scene"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.scene.12",
+        "path": "/content/templates/sunforge.scene.12",
         "value": {
           "kind": "encounter",
           "values": {
@@ -288,7 +288,7 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "scene"
           ]
         }
@@ -298,40 +298,40 @@
         "path": "/content/templates/world.root/components",
         "value": {
           "scene1": {
-            "template": "voidwake.scene.1"
+            "template": "sunforge.scene.1"
           },
           "scene2": {
-            "template": "voidwake.scene.2"
+            "template": "sunforge.scene.2"
           },
           "scene3": {
-            "template": "voidwake.scene.3"
+            "template": "sunforge.scene.3"
           },
           "scene4": {
-            "template": "voidwake.scene.4"
+            "template": "sunforge.scene.4"
           },
           "scene5": {
-            "template": "voidwake.scene.5"
+            "template": "sunforge.scene.5"
           },
           "scene6": {
-            "template": "voidwake.scene.6"
+            "template": "sunforge.scene.6"
           },
           "scene7": {
-            "template": "voidwake.scene.7"
+            "template": "sunforge.scene.7"
           },
           "scene8": {
-            "template": "voidwake.scene.8"
+            "template": "sunforge.scene.8"
           },
           "scene9": {
-            "template": "voidwake.scene.9"
+            "template": "sunforge.scene.9"
           },
           "scene10": {
-            "template": "voidwake.scene.10"
+            "template": "sunforge.scene.10"
           },
           "scene11": {
-            "template": "voidwake.scene.11"
+            "template": "sunforge.scene.11"
           },
           "scene12": {
-            "template": "voidwake.scene.12"
+            "template": "sunforge.scene.12"
           }
         }
       }

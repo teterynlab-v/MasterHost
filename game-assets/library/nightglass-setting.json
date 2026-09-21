@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1",
-  "id": "masterhost.asset.voidwake.setting",
+  "id": "masterhost.asset.nightglass.setting",
   "version": "1.0.0",
   "type": "setting",
-  "name": "Voidwake Setting Core",
+  "name": "Nightglass Setting Core",
   "description": "A storm-wrapped archipelago of drifting habitats, drowned gates and rival salvage fleets.",
   "tags": [
-    "voidwake",
+    "nightglass",
     "space-opera",
     "one-shot"
   ],
@@ -30,8 +30,8 @@
   "dependencies": [],
   "license": {
     "spdx": "CC-BY-4.0",
-    "attribution": "Voidwake Archipelago original content and artwork © MasterHost contributors.",
-    "source": "masterhost://bundled/masterhost.asset.voidwake.setting"
+    "attribution": "Nightglass Archipelago original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.nightglass.setting"
   },
   "published": true,
   "counts": {
@@ -45,9 +45,9 @@
   },
   "media": [],
   "fragment": {
-    "id": "masterhost.asset.voidwake.setting",
+    "id": "masterhost.asset.nightglass.setting",
     "version": "1.0.0",
-    "name": "Voidwake Setting Core",
+    "name": "Nightglass Setting Core",
     "description": "A storm-wrapped archipelago of drifting habitats, drowned gates and rival salvage fleets.",
     "provides": [
       "setting:space-opera"
@@ -58,7 +58,7 @@
     "patches": [
       {
         "op": "set",
-        "path": "/content/generators/voidwake.names",
+        "path": "/content/generators/nightglass.names",
         "value": {
           "type": "values",
           "values": [

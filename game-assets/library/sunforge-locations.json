@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1",
-  "id": "masterhost.asset.voidwake.locations",
+  "id": "masterhost.asset.sunforge.locations",
   "version": "1.0.0",
   "type": "locations",
-  "name": "Voidwake Locations",
+  "name": "Sunforge Locations",
   "description": "Ten connected locations for investigation, travel and confrontation.",
   "tags": [
-    "voidwake",
+    "sunforge",
     "locations"
   ],
   "preview": {
@@ -31,8 +31,8 @@
   "dependencies": [],
   "license": {
     "spdx": "CC-BY-4.0",
-    "attribution": "Voidwake Archipelago original content and artwork © MasterHost contributors.",
-    "source": "masterhost://bundled/masterhost.asset.voidwake.locations"
+    "attribution": "Sunforge Archipelago original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.sunforge.locations"
   },
   "published": true,
   "counts": {
@@ -46,9 +46,9 @@
   },
   "media": [],
   "fragment": {
-    "id": "masterhost.asset.voidwake.locations",
+    "id": "masterhost.asset.sunforge.locations",
     "version": "1.0.0",
-    "name": "Voidwake Locations",
+    "name": "Sunforge Locations",
     "description": "Ten connected locations for investigation, travel and confrontation.",
     "provides": [
       "locations:space-opera"
@@ -61,7 +61,7 @@
     "patches": [
       {
         "op": "set",
-        "path": "/content/templates/voidwake.location.1",
+        "path": "/content/templates/sunforge.location.1",
         "value": {
           "kind": "location",
           "values": {
@@ -73,14 +73,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "location"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.location.2",
+        "path": "/content/templates/sunforge.location.2",
         "value": {
           "kind": "location",
           "values": {
@@ -92,14 +92,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "location"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.location.3",
+        "path": "/content/templates/sunforge.location.3",
         "value": {
           "kind": "location",
           "values": {
@@ -111,14 +111,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "location"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.location.4",
+        "path": "/content/templates/sunforge.location.4",
         "value": {
           "kind": "location",
           "values": {
@@ -130,14 +130,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "location"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.location.5",
+        "path": "/content/templates/sunforge.location.5",
         "value": {
           "kind": "location",
           "values": {
@@ -149,14 +149,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "location"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.location.6",
+        "path": "/content/templates/sunforge.location.6",
         "value": {
           "kind": "location",
           "values": {
@@ -168,14 +168,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "location"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.location.7",
+        "path": "/content/templates/sunforge.location.7",
         "value": {
           "kind": "location",
           "values": {
@@ -187,14 +187,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "location"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.location.8",
+        "path": "/content/templates/sunforge.location.8",
         "value": {
           "kind": "location",
           "values": {
@@ -206,14 +206,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "location"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.location.9",
+        "path": "/content/templates/sunforge.location.9",
         "value": {
           "kind": "location",
           "values": {
@@ -225,14 +225,14 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "location"
           ]
         }
       },
       {
         "op": "set",
-        "path": "/content/templates/voidwake.location.10",
+        "path": "/content/templates/sunforge.location.10",
         "value": {
           "kind": "location",
           "values": {
@@ -244,7 +244,7 @@
             }
           },
           "tags": [
-            "voidwake",
+            "sunforge",
             "location"
           ]
         }
@@ -254,34 +254,34 @@
         "path": "/content/templates/world.root/components",
         "value": {
           "location1": {
-            "template": "voidwake.location.1"
+            "template": "sunforge.location.1"
           },
           "location2": {
-            "template": "voidwake.location.2"
+            "template": "sunforge.location.2"
           },
           "location3": {
-            "template": "voidwake.location.3"
+            "template": "sunforge.location.3"
           },
           "location4": {
-            "template": "voidwake.location.4"
+            "template": "sunforge.location.4"
           },
           "location5": {
-            "template": "voidwake.location.5"
+            "template": "sunforge.location.5"
           },
           "location6": {
-            "template": "voidwake.location.6"
+            "template": "sunforge.location.6"
           },
           "location7": {
-            "template": "voidwake.location.7"
+            "template": "sunforge.location.7"
           },
           "location8": {
-            "template": "voidwake.location.8"
+            "template": "sunforge.location.8"
           },
           "location9": {
-            "template": "voidwake.location.9"
+            "template": "sunforge.location.9"
           },
           "location10": {
-            "template": "voidwake.location.10"
+            "template": "sunforge.location.10"
           }
         }
       }

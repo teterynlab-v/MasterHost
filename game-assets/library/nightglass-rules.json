@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1",
-  "id": "masterhost.asset.voidwake.rules",
+  "id": "masterhost.asset.nightglass.rules",
   "version": "1.0.0",
   "type": "rules",
-  "name": "Voidwake Rules",
+  "name": "Nightglass Rules",
   "description": "A complete 2d6 exploration and pressure module with resources, effects and actions.",
   "tags": [
-    "voidwake",
+    "nightglass",
     "rules"
   ],
   "preview": {
@@ -33,8 +33,8 @@
   "dependencies": [],
   "license": {
     "spdx": "CC-BY-4.0",
-    "attribution": "Voidwake Archipelago original content and artwork © MasterHost contributors.",
-    "source": "masterhost://bundled/masterhost.asset.voidwake.rules"
+    "attribution": "Nightglass Archipelago original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.nightglass.rules"
   },
   "published": true,
   "counts": {
@@ -48,9 +48,9 @@
   },
   "media": [],
   "fragment": {
-    "id": "masterhost.asset.voidwake.rules",
+    "id": "masterhost.asset.nightglass.rules",
     "version": "1.0.0",
-    "name": "Voidwake Rules",
+    "name": "Nightglass Rules",
     "description": "A complete 2d6 exploration and pressure module with resources, effects and actions.",
     "provides": [
       "rules:space-opera"
@@ -63,7 +63,7 @@
     "patches": [
       {
         "op": "set",
-        "path": "/content/checks/voidwake-navigation",
+        "path": "/content/checks/nightglass-navigation",
         "value": {
           "label": "Navigate the Storm",
           "dice": "2d6"
@@ -71,7 +71,7 @@
       },
       {
         "op": "set",
-        "path": "/content/checks/voidwake-influence",
+        "path": "/content/checks/nightglass-influence",
         "value": {
           "label": "Sway a Faction",
           "dice": "2d6"
@@ -79,7 +79,7 @@
       },
       {
         "op": "set",
-        "path": "/content/checks/voidwake-salvage",
+        "path": "/content/checks/nightglass-salvage",
         "value": {
           "label": "Salvage Under Pressure",
           "dice": "2d6"
@@ -87,7 +87,7 @@
       },
       {
         "op": "set",
-        "path": "/content/resources/voidwake-air",
+        "path": "/content/resources/nightglass-air",
         "value": {
           "label": "Air",
           "min": 0,
@@ -97,7 +97,7 @@
       },
       {
         "op": "set",
-        "path": "/content/resources/voidwake-supply",
+        "path": "/content/resources/nightglass-supply",
         "value": {
           "label": "Supply",
           "min": 0,
@@ -107,7 +107,7 @@
       },
       {
         "op": "set",
-        "path": "/content/resources/voidwake-trust",
+        "path": "/content/resources/nightglass-trust",
         "value": {
           "label": "Crew Trust",
           "min": 0,
@@ -117,7 +117,7 @@
       },
       {
         "op": "set",
-        "path": "/content/effects/voidwake-stormbound",
+        "path": "/content/effects/nightglass-stormbound",
         "value": {
           "label": "Stormbound",
           "duration": {
@@ -131,7 +131,7 @@
       },
       {
         "op": "set",
-        "path": "/content/effects/voidwake-inspired",
+        "path": "/content/effects/nightglass-inspired",
         "value": {
           "label": "Inspired",
           "duration": {
@@ -145,7 +145,7 @@
       },
       {
         "op": "set",
-        "path": "/content/effects/voidwake-marked",
+        "path": "/content/effects/nightglass-marked",
         "value": {
           "label": "Marked by the Deep",
           "duration": {
@@ -155,64 +155,64 @@
       },
       {
         "op": "set",
-        "path": "/content/actions/voidwake-chart-course",
+        "path": "/content/actions/nightglass-chart-course",
         "value": {
           "label": "Chart Course",
           "target": "self",
           "kind": "check",
-          "checkId": "voidwake-navigation"
+          "checkId": "nightglass-navigation"
         }
       },
       {
         "op": "set",
-        "path": "/content/actions/voidwake-negotiate",
+        "path": "/content/actions/nightglass-negotiate",
         "value": {
           "label": "Negotiate",
           "target": "actor",
           "kind": "check",
-          "checkId": "voidwake-influence"
+          "checkId": "nightglass-influence"
         }
       },
       {
         "op": "set",
-        "path": "/content/actions/voidwake-salvage",
+        "path": "/content/actions/nightglass-salvage",
         "value": {
           "label": "Salvage",
           "target": "self",
           "kind": "check",
-          "checkId": "voidwake-salvage"
+          "checkId": "nightglass-salvage"
         }
       },
       {
         "op": "set",
-        "path": "/content/actions/voidwake-ration",
+        "path": "/content/actions/nightglass-ration",
         "value": {
           "label": "Spend Supply",
           "target": "self",
           "kind": "resource",
-          "resource": "voidwake-supply",
+          "resource": "nightglass-supply",
           "operation": "subtract",
           "amount": 1
         }
       },
       {
         "op": "set",
-        "path": "/content/actions/voidwake-rally",
+        "path": "/content/actions/nightglass-rally",
         "value": {
           "label": "Rally Crew",
           "target": "actor",
           "kind": "effect",
-          "effectId": "voidwake-inspired"
+          "effectId": "nightglass-inspired"
         }
       },
       {
         "op": "set",
-        "path": "/content/actions/voidwake-mark",
+        "path": "/content/actions/nightglass-mark",
         "value": {
           "label": "Mark by the Deep",
           "target": "actor",
           "kind": "effect",
-          "effectId": "voidwake-marked"
+          "effectId": "nightglass-marked"
         }
       }
     ]
