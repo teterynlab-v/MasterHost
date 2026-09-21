@@ -3,7 +3,7 @@ import type { FastifyInstance } from "fastify";
 import { buildDescriptor, composeGameDescriptor, fragmentCatalog, type GameDescriptorFragment, type GameFragmentSelection } from "@masterhost/descriptor";
 import type { DescriptorValue, MaterializedWorld } from "@masterhost/domain";
 import { GameDescriptorRepository, PackProjectRepository, WorldRepository, type GameDescriptorProject } from "@masterhost/persistence";
-import { toLoadedWorldPack, type LoadedWorldPack, type WorldPackDocument } from "@masterhost/worldpack-sdk";
+import { toLoadedWorldPack, worldPackDocumentFromLoaded, type LoadedWorldPack, type WorldPackDocument } from "@masterhost/worldpack-sdk";
 import { assertUniqueMaterializationPaths, compareWorlds, compileSatisfying, preserveCustomByPath } from "@masterhost/world-compiler";
 
 interface Dependencies { descriptors: GameDescriptorRepository; worlds: WorldRepository; packs: PackProjectRepository; fragments: GameDescriptorFragment[] }
@@ -27,12 +27,17 @@ export async function registerGameDescriptors(app: FastifyInstance, dependencies
     const realm = await realmFor(request), pack = app.masterhostActivePack ? await app.masterhostActivePack(realm) : null;
     if (!pack || pack.manifest.id !== expected.id || pack.manifest.version !== expected.version) throw fail(`base Pack ${expected.id}@${expected.version} is not active`, 409);
     const project = (await dependencies.packs.list(realm.id)).find(value => value.status === "published" && value.document.manifest.id === expected.id && value.document.manifest.version === expected.version);
-    const document: WorldPackDocument = project?.document ?? { manifest: structuredClone(pack.manifest), content: structuredClone(pack.content), artSets: structuredClone(pack.artSets), dependencies: [], migrations: [], fixtures: [{ id: "composed", seed: "composed", choices: {}, expect: {} }], terminology: { world: "World", character: "Character", gameMaster: "Game Master" }, theme: { primary: "#6dd6a8", accent: "#7aa7dd", background: "#0f131a" }, assets: {} };
+    const document = project?.document ?? await worldPackDocumentFromLoaded(pack, realm.brand);
     return { pack, document };
   };
   const selection = (value: unknown): GameFragmentSelection[] => {
     if (!Array.isArray(value)) throw fail("selections must be an array");
-    return value.map((entry: any) => ({ fragmentId: String(entry?.fragmentId ?? ""), version: String(entry?.version ?? ""), parameters: Object.fromEntries(Object.entries(scalarRecord(entry?.parameters)).filter(([, item]) => ["string", "number", "boolean"].includes(typeof item))) as Record<string, string | number | boolean> }));
+    return value.map((entry: any) => {
+      if (entry?.parameters !== undefined && (!entry.parameters || typeof entry.parameters !== "object" || Array.isArray(entry.parameters))) throw fail(`parameters for ${String(entry?.fragmentId ?? "fragment")} must be an object`);
+      const parameters = scalarRecord(entry?.parameters);
+      for (const [key, item] of Object.entries(parameters)) if (!["string", "number", "boolean"].includes(typeof item)) throw fail(`parameter ${String(entry?.fragmentId ?? "fragment")}.${key} must be scalar`);
+      return { fragmentId: String(entry?.fragmentId ?? ""), version: String(entry?.version ?? ""), parameters: parameters as Record<string, string | number | boolean> };
+    });
   };
   const decisions = (value: unknown) => structuredClone(scalarRecord(value));
   const locks = (value: unknown) => Array.isArray(value) ? [...new Set(value.filter(item => typeof item === "string"))] as string[] : [];
@@ -51,6 +56,12 @@ export async function registerGameDescriptors(app: FastifyInstance, dependencies
 
   app.get("/api/game-fragments", async (request: any) => { await authorize(request); return fragmentCatalog(dependencies.fragments); });
   app.get("/api/game-descriptors", async (request: any) => dependencies.descriptors.list((await authorize(request)).id));
+  app.post("/api/game-descriptors/preview", async (request: any) => {
+    await authorize(request); const name = String(request.body?.name ?? "").trim(), expected = request.body?.basePack;
+    if (!name || name.length > 120 || !expected?.id || !expected?.version) throw fail("name and exact basePack are required");
+    const base = await basePack(request, { id: String(expected.id), version: String(expected.version) });
+    return compose({ id: "preview", revision: 1, name, base: base.document, selections: selection(request.body?.selections) });
+  });
   app.post("/api/game-descriptors", async (request: any) => {
     const realm = await authorize(request), id = randomUUID(), name = String(request.body?.name ?? "").trim(), seed = String(request.body?.seed ?? "").trim() || randomUUID(), expected = request.body?.basePack;
     if (!name || name.length > 120 || !expected?.id || !expected?.version) throw fail("name and exact basePack are required");
@@ -67,7 +78,13 @@ export async function registerGameDescriptors(app: FastifyInstance, dependencies
     if (!result.report.valid) throw fail(result.report.diagnostics.map(value => `${value.path}: ${value.message}`).join("; "), 409);
     return dependencies.descriptors.save({ ...project, name, revision, seed: String(request.body?.seed ?? project.seed), selections, decisions: decisions(request.body?.decisions), locks: locks(request.body?.locks), compiled: result.document, report: result.report, updatedAt: new Date().toISOString() }, expectedRevision);
   });
-  app.post("/api/game-descriptors/:id/preview", async (request: any) => { const { project } = await current(request.params.id, request); return { document: project.compiled, report: project.report }; });
+  app.post("/api/game-descriptors/:id/preview", async (request: any) => {
+    const { project } = await current(request.params.id, request);
+    if (request.body?.selections === undefined) return { document: project.compiled, report: project.report };
+    const base = await basePack(request, project.basePack), name = String(request.body?.name ?? project.name).trim();
+    if (!name || name.length > 120) throw fail("name is required");
+    return compose({ id: project.id, revision: project.revision + 1, name, base: base.document, selections: selection(request.body.selections) });
+  });
   app.post("/api/game-descriptors/:id/compile", async (request: any) => { const { realm, project } = await current(request.params.id, request); return dependencies.worlds.save(compile(project, realm.id), `game-descriptor:${project.id}@${project.revision}`); });
 
   const recomposition = async (request: any) => {

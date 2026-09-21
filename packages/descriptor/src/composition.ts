@@ -26,6 +26,18 @@ export interface ComposeGameDescriptorInput { projectId: string; revision: numbe
 const unsafe = new Set(["__proto__", "prototype", "constructor"]);
 const pointerEscape = (value: string) => value.replaceAll("~", "~0").replaceAll("/", "~1");
 
+export function assertSafeFragmentValue(value: unknown, seen = new WeakSet<object>()) {
+  if (!value || typeof value !== "object") return;
+  if (seen.has(value)) throw Error("patch value must not contain cycles");
+  seen.add(value);
+  if (Array.isArray(value)) for (const item of value) assertSafeFragmentValue(item, seen);
+  else for (const [key, item] of Object.entries(value as Record<string, unknown>)) {
+    if (unsafe.has(key)) throw Error(`unsafe patch value key ${key}`);
+    assertSafeFragmentValue(item, seen);
+  }
+  seen.delete(value);
+}
+
 export function parseFragmentPointer(pointer: string) {
   if (!pointer.startsWith("/")) throw Error("JSON Pointer must start with /");
   const segments = pointer.slice(1).split("/").map(value => value.replaceAll("~1", "/").replaceAll("~0", "~"));
@@ -73,7 +85,7 @@ function parameterize(value: unknown, parameters: Record<string, string | number
 function target(root: Record<string, any>, segments: string[]) {
   let parent: any = root;
   for (const segment of segments.slice(0, -1)) {
-    if (!parent || typeof parent !== "object" || Array.isArray(parent) || !(segment in parent)) throw Error(`patch parent does not exist at ${segment}`);
+    if (!parent || typeof parent !== "object" || Array.isArray(parent) || !Object.prototype.hasOwnProperty.call(parent, segment)) throw Error(`patch parent does not exist at ${segment}`);
     parent = parent[segment];
   }
   return { parent, key: segments.at(-1)! };
@@ -81,6 +93,7 @@ function target(root: Record<string, any>, segments: string[]) {
 
 export function composeGameDescriptor(input: ComposeGameDescriptorInput): { document: WorldPackDocument; report: CompositionReport } {
   const document = structuredClone(input.base), diagnostics: CompositionDiagnostic[] = [], selected: { id: string; version: string }[] = [], writes = new Map<string, string>(), resolved: { fragment: GameDescriptorFragment; selection: GameFragmentSelection; parameters: Record<string, string | number | boolean> }[] = [];
+  const overlappingWrite = (path: string, owner: string) => [...writes.entries()].find(([written, writtenBy]) => writtenBy !== owner && (written === path || written.startsWith(`${path}/`) || path.startsWith(`${written}/`)));
   for (const selection of input.selections) {
     const versions = input.fragments.filter(value => value.id === selection.fragmentId), fragment = versions.find(value => value.version === selection.version);
     if (!versions.length) { diagnostics.push({ code: "fragment", path: selection.fragmentId, message: `unknown fragment ${selection.fragmentId}` }); continue; }
@@ -99,6 +112,7 @@ export function composeGameDescriptor(input: ComposeGameDescriptorInput): { docu
     try { segments = parseFragmentPointer(patch.path); }
     catch (error) { diagnostics.push({ code: "path", path: `${fragment.id}.patches.${index}`, message: error instanceof Error ? error.message : "invalid patch path" }); continue; }
     try {
+      assertSafeFragmentValue(patch.value);
       const destination = target(document as any, segments), value = parameterize(structuredClone(patch.value), parameters), concrete: string[] = [];
       if (patch.op === "set") {
         if (Object.prototype.hasOwnProperty.call(destination.parent, destination.key)) throw Error(`set target already exists at ${patch.path}`);
@@ -106,6 +120,10 @@ export function composeGameDescriptor(input: ComposeGameDescriptorInput): { docu
       } else if (patch.op === "merge") {
         const current = destination.parent[destination.key];
         if (!current || typeof current !== "object" || Array.isArray(current) || !value || typeof value !== "object" || Array.isArray(value)) throw Error(`merge requires objects at ${patch.path}`);
+        for (const key of Object.keys(value as Record<string, unknown>)) {
+          const path = `${patch.path}/${pointerEscape(key)}`;
+          if (Object.prototype.hasOwnProperty.call(current, key) && !overlappingWrite(path, fragment.id)) throw Error(`merge target already exists at ${path}`);
+        }
         for (const [key, item] of Object.entries(value as Record<string, unknown>)) { concrete.push(`${patch.path}/${pointerEscape(key)}`); if (!Object.prototype.hasOwnProperty.call(current, key)) current[key] = item; }
       } else {
         const current = destination.parent[destination.key];
@@ -113,8 +131,8 @@ export function composeGameDescriptor(input: ComposeGameDescriptorInput): { docu
         for (const item of value) { concrete.push(`${patch.path}/${current.length}`); current.push(item); }
       }
       for (const path of concrete) {
-        const owner = writes.get(path);
-        if (owner && owner !== fragment.id) diagnostics.push({ code: "write-conflict", path, message: `fragments ${owner} and ${fragment.id} both write ${path}` });
+        const overlap = overlappingWrite(path, fragment.id);
+        if (overlap) diagnostics.push({ code: "write-conflict", path, message: `fragments ${overlap[1]} and ${fragment.id} write overlapping paths ${overlap[0]} and ${path}` });
         else writes.set(path, fragment.id);
       }
     } catch (error) { diagnostics.push({ code: "path", path: `${fragment.id}.patches.${index}`, message: error instanceof Error ? error.message : "patch failed" }); }

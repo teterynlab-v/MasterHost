@@ -40,6 +40,10 @@ await ok(`/host/realms/${realmId}`, auth(slug, adminToken, { method: "PUT", body
 
 const fragments = await ok("/game-fragments", creator);
 assert.deepEqual(fragments.map(value => value.id), ["masterhost.fragment.fortune", "masterhost.fragment.observatory"]);
+const invalidType = await call("/game-descriptors", { ...creator, method: "POST", body: { name: "Invalid parameters", seed: "invalid", basePack: { id: baseProject.document.manifest.id, version: baseProject.document.manifest.version }, selections: [{ fragmentId: "masterhost.fragment.fortune", version: "1.0.0", parameters: { startingLuck: {} } }] } });
+assert.equal(invalidType.response.status, 400); assert.match(invalidType.data.message, /must be scalar/);
+const invalidPreview = await ok("/game-descriptors/preview", { ...creator, method: "POST", body: { name: "Invalid preview", seed: "invalid", basePack: { id: baseProject.document.manifest.id, version: baseProject.document.manifest.version }, selections: [{ fragmentId: "masterhost.fragment.observatory", version: "1.0.0", parameters: { danger: 9 } }] } });
+assert.equal(invalidPreview.report.valid, false); assert.ok(invalidPreview.report.diagnostics.some(value => value.code === "parameter" && value.path.endsWith("parameters.danger")));
 const selections = [
   { fragmentId: "masterhost.fragment.observatory", version: "1.0.0", parameters: { danger: 3 } },
   { fragmentId: "masterhost.fragment.fortune", version: "1.0.0", parameters: { startingLuck: 4 } },
@@ -64,5 +68,11 @@ const recomposed = await ok(`/game-descriptors/${project.id}/worlds/${first.id}/
 assert.equal(recomposed.packVersion, "0.1.2"); assert.equal(recomposed.descriptor.composition.revision, 2);
 const retained = recomposed.entities.find(value => value.materializationPath === observatory.materializationPath)?.values.name;
 assert.deepEqual(retained, { value: "Keeper's Observatory", source: "custom", locked: true });
+const officialRealm = await ok("/host/realms", { method: "POST", token: platform, body: { slug: "m10-official", name: "M10 Official Realm", quotas: { worlds: 10, packs: 10, activeSessions: 5, assetBytes: 1000000 } } });
+const officialCreator = await ok(`/host/realms/${officialRealm.realm.id}/members`, auth(officialRealm.realm.slug, officialRealm.adminToken, { method: "POST", body: { name: "Official Creator", role: "creator" } }));
+await ok(`/host/realms/${officialRealm.realm.id}`, auth(officialRealm.realm.slug, officialRealm.adminToken, { method: "PUT", body: { activePack: { id: "masterhost.space-opera", version: "1.0.0" } } }));
+const officialGame = await ok("/game-descriptors", { ...auth(officialRealm.realm.slug, officialCreator.accessToken), method: "POST", body: { name: "Official Observatory", seed: "official-observatory", basePack: { id: "masterhost.space-opera", version: "1.0.0" }, selections: [{ fragmentId: "masterhost.fragment.observatory", version: "1.0.0", parameters: { danger: 4 } }], decisions: {}, locks: [] } });
+assert.ok(Object.keys(officialGame.compiled.assets).length >= 5); assert.ok(Object.keys(officialGame.compiled.content.templates).length >= 10); assert.equal(officialGame.compiled.theme.primary, officialRealm.realm.brand.theme.primary);
+await ok(`/game-descriptors/${officialGame.id}/compile`, { ...auth(officialRealm.realm.slug, officialCreator.accessToken), method: "POST" });
 await writeFile(stateFile, JSON.stringify({ slug, creatorToken: creatorMember.accessToken, projectId: project.id, oldWorldId: second.id, worldId: recomposed.id, customPath: observatory.materializationPath }));
-console.log("M10 live acceptance passed: fragment selection, deterministic compilation, stale-write rejection and CUSTOM/LOCK recomposition.");
+console.log("M10 live acceptance passed: published and installed official base Packs retained their complete content, fragment selection remained deterministic, stale writes failed and CUSTOM/LOCK recomposition passed.");

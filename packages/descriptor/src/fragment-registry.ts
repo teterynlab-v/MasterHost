@@ -1,7 +1,7 @@
 import { readFile, readdir } from "node:fs/promises";
 import { join } from "node:path";
 import { z } from "zod";
-import { parseFragmentPointer, type GameDescriptorFragment } from "./composition.js";
+import { assertSafeFragmentValue, parseFragmentPointer, type GameDescriptorFragment } from "./composition.js";
 
 const Id = z.string().regex(/^[a-zA-Z0-9][a-zA-Z0-9._-]*$/);
 const Scalar = z.union([z.string(), z.number(), z.boolean()]);
@@ -45,6 +45,7 @@ export function validateGameDescriptorFragment(input: unknown): GameDescriptorFr
   for (const [index, patch] of fragment.patches.entries()) {
     try { parseFragmentPointer(patch.path); }
     catch (error) { throw Error(`unsafe JSON Pointer in patch ${index}: ${error instanceof Error ? error.message : "invalid path"}`); }
+    assertSafeFragmentValue(patch.value);
     if (Buffer.byteLength(JSON.stringify(patch.value), "utf8") > 256 * 1024) throw Error(`patch ${index} exceeds 256 KiB`);
     for (const key of references(patch.value)) if (!fragment.parameters[key]) throw Error(`unknown parameter reference ${key}`);
   }

@@ -9,7 +9,7 @@ const chrome = process.env.CHROME_BIN ?? (process.platform === "darwin" ? "/Appl
 if (!stateFile) throw Error("M10_STATE_FILE is required");
 const state = JSON.parse(await readFile(stateFile, "utf8")), profile = await mkdtemp(path.join(os.tmpdir(), "masterhost-m10-chrome-"));
 const browser = spawn(chrome, ["--headless=new", "--disable-gpu", "--no-first-run", "--no-default-browser-check", `--remote-debugging-port=${cdpPort}`, `--user-data-dir=${profile}`, "about:blank"], { stdio: "ignore" });
-let launchError, socket; browser.once("error", error => { launchError = error; });
+let launchError, socket, browserExited = false; browser.once("error", error => { launchError = error; }); const browserExit = new Promise(resolve => browser.once("exit", () => { browserExited = true; resolve(); }));
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 async function poll(fn, message, attempts = 120) { let last; for (let attempt = 0; attempt < attempts; attempt++) { try { const value = await fn(); if (value) return value; } catch (error) { last = error; } await delay(100); } throw Error(`${message}${last ? `: ${last.message}` : ""}`); }
 
@@ -33,14 +33,15 @@ try {
   await setInput("Game name", "The Browser Observatory"); await setInput("Deterministic seed", "m10-browser-seed");
   await evaluate(`document.querySelector('[data-fragment-id="masterhost.fragment.observatory"]')?.click()`);
   await evaluate(`document.querySelector('[data-fragment-id="masterhost.fragment.fortune"]')?.click()`);
-  await waitForText("Selected fragments · 2"); await setInput("Parameter danger", "4");
+  await waitForText("Selected fragments · 2"); await setInput("Parameter danger", "9"); await click("PREVIEW"); await waitForText("INVALID"); await waitForText("masterhost.fragment.observatory.parameters.danger"); await setInput("Parameter danger", "4");
   await click("CREATE PROJECT"); await waitForText("Revision 1");
   await click("PREVIEW"); await waitForText("VALID"); await waitForText("location:observatory"); await waitForText("rules:fortune"); await waitForText("0.1.1");
-  await click("COMPILE WORLD"); await waitForText("Generation report");
+  await click("COMPILE WORLD"); await waitForText("Generation report"); await waitForText("masterhost.game.");
+  await evaluate("location.reload()"); await waitForText("Generation report"); await waitForText("masterhost.game.");
   await evaluate("location.hash = 'game-builder'"); await waitForText("DYNAMIC GAME BUILDER"); await evaluate("location.reload()");
   await waitForText("Revision 1"); await waitForText("Observatory Location"); await waitForText("Fortune Rules");
   assert.deepEqual(issues, []);
-  console.log("M10 browser acceptance passed: creator selected fragments and parameters, previewed a valid Descriptor, compiled a World and restored the project after reload.");
+  console.log("M10 browser acceptance passed: creator inspected invalid diagnostics, previewed a valid Descriptor, compiled and reloaded its World, then restored the project after reload.");
 } finally {
-  socket?.close(); browser.kill("SIGTERM"); if (browser.exitCode === null) await Promise.race([new Promise(resolve => browser.once("exit", resolve)), delay(2_000)]); await rm(profile, { recursive: true, force: true });
+  socket?.close(); browser.kill("SIGTERM"); await Promise.race([browserExit, delay(2_000)]); if (!browserExited) { browser.kill("SIGKILL"); await Promise.race([browserExit, delay(2_000)]); } await rm(profile, { recursive: true, force: true }); if (!browserExited) throw Error(`Chrome process ${browser.pid} did not exit`);
 }

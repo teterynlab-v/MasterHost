@@ -58,6 +58,24 @@ describe("M10 dynamic game Descriptor composition", () => {
     expect(result.report.diagnostics).toContainEqual(expect.objectContaining({ code: "write-conflict", path: "/content/templates/world.root/components/observatory" }));
   });
 
+  it("rejects merge keys that already exist in the base Pack", () => {
+    const collision: GameDescriptorFragment = { id: "base-collision", version: "1", name: "Base collision", provides: [], requires: [], conflicts: [], parameters: {}, patches: [{ op: "merge", path: "/content/templates/world.root/components", value: { places: { template: "place.standard", count: 1 } } }] };
+    expect(compose([collision]).report.diagnostics).toContainEqual(expect.objectContaining({ code: "path", message: expect.stringContaining("already exists") }));
+  });
+
+  it("rejects ancestor and descendant writes across fragments", () => {
+    const parent: GameDescriptorFragment = { id: "parent-write", version: "1", name: "Parent", provides: [], requires: [], conflicts: [], parameters: {}, patches: [{ op: "set", path: "/content/templates/tree", value: { kind: "location", values: {} } }] };
+    const child: GameDescriptorFragment = { id: "child-write", version: "1", name: "Child", provides: [], requires: [], conflicts: [], parameters: {}, patches: [{ op: "set", path: "/content/templates/tree/values/name", value: { value: "Nested" } }] };
+    expect(compose([parent, child]).report.diagnostics).toContainEqual(expect.objectContaining({ code: "write-conflict", path: "/content/templates/tree/values/name" }));
+  });
+
+  it.each(["__proto__", "prototype", "constructor"])("rejects unsafe nested payload key %s", key => {
+    const payload = JSON.parse(`{"${key}":{"polluted":true}}`);
+    const hostile: GameDescriptorFragment = { id: `payload-${key}`, version: "1", name: "Payload", provides: [], requires: [], conflicts: [], parameters: {}, patches: [{ op: "merge", path: "/content/templates/world.root/components", value: payload }] };
+    expect(compose([hostile]).report.diagnostics).toContainEqual(expect.objectContaining({ code: "path", message: expect.stringContaining(key) }));
+    expect(({} as any).polluted).toBeUndefined();
+  });
+
   it.each([
     ["missing", {}, "required"],
     ["wrong type", { danger: "high" }, "number"],
