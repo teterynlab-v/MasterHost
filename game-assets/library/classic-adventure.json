@@ -91,12 +91,1640 @@
     "patches": [
       {
         "op": "set",
-        "path": "/content/generators/classic.adventure.marker",
+        "path": "/content/templates/classic.deep.scenes.1",
         "value": {
-          "type": "values",
-          "values": [
-            "The First Oath Adventure"
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "A Bell at Dawn"
+            },
+            "description": {
+              "value": "A Bell at Dawn opens a playable situation in Border Kingdoms with a visible threat, two useful approaches, and a consequence for waiting."
+            },
+            "deepId": {
+              "value": "scenes.1"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms"
           ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.scenes.2",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Closed Gate"
+            },
+            "description": {
+              "value": "The Closed Gate brings rival needs together in War of Heirs; clues support negotiation, stealth, or a direct confrontation."
+            },
+            "deepId": {
+              "value": "scenes.2"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.scenes.3",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Tracks Beyond the Ford"
+            },
+            "description": {
+              "value": "Tracks Beyond the Ford reveals what the opposition wants in Ruins of the Ancient Empire and lets the party change the route by accepting a costly bargain."
+            },
+            "deepId": {
+              "value": "scenes.3"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.scenes.4",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Council of Banners"
+            },
+            "description": {
+              "value": "Council of Banners resolves one pressure in Border Kingdoms while carrying the party\u2019s choice forward into the next location."
+            },
+            "deepId": {
+              "value": "scenes.4"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.scenes.5",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Ambush on Old Road"
+            },
+            "description": {
+              "value": "Ambush on Old Road opens a playable situation in War of Heirs with a visible threat, two useful approaches, and a consequence for waiting."
+            },
+            "deepId": {
+              "value": "scenes.5"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.scenes.6",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Parley Under Thorns"
+            },
+            "description": {
+              "value": "Parley Under Thorns brings rival needs together in Ruins of the Ancient Empire; clues support negotiation, stealth, or a direct confrontation."
+            },
+            "deepId": {
+              "value": "scenes.6"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.scenes.7",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Empty Throne"
+            },
+            "description": {
+              "value": "The Empty Throne reveals what the opposition wants in Border Kingdoms and lets the party change the route by accepting a costly bargain."
+            },
+            "deepId": {
+              "value": "scenes.7"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.scenes.8",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Feast of Knives"
+            },
+            "description": {
+              "value": "Feast of Knives resolves one pressure in War of Heirs while carrying the party\u2019s choice forward into the next location."
+            },
+            "deepId": {
+              "value": "scenes.8"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.scenes.9",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Oath Before Battle"
+            },
+            "description": {
+              "value": "Oath Before Battle opens a playable situation in Ruins of the Ancient Empire with a visible threat, two useful approaches, and a consequence for waiting."
+            },
+            "deepId": {
+              "value": "scenes.9"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.scenes.10",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Descent to Moonwell"
+            },
+            "description": {
+              "value": "Descent to Moonwell brings rival needs together in Border Kingdoms; clues support negotiation, stealth, or a direct confrontation."
+            },
+            "deepId": {
+              "value": "scenes.10"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.scenes.11",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Gallery of Statues"
+            },
+            "description": {
+              "value": "Gallery of Statues reveals what the opposition wants in War of Heirs and lets the party change the route by accepting a costly bargain."
+            },
+            "deepId": {
+              "value": "scenes.11"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.scenes.12",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Engine Beneath the Hill"
+            },
+            "description": {
+              "value": "Engine Beneath the Hill resolves one pressure in Ruins of the Ancient Empire while carrying the party\u2019s choice forward into the next location."
+            },
+            "deepId": {
+              "value": "scenes.12"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.scenes.13",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Guardian Wakes"
+            },
+            "description": {
+              "value": "The Guardian Wakes opens a playable situation in Border Kingdoms with a visible threat, two useful approaches, and a consequence for waiting."
+            },
+            "deepId": {
+              "value": "scenes.13"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.scenes.14",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Choice of the Heirs"
+            },
+            "description": {
+              "value": "Choice of the Heirs brings rival needs together in War of Heirs; clues support negotiation, stealth, or a direct confrontation."
+            },
+            "deepId": {
+              "value": "scenes.14"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.scenes.15",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Battle at Kingsbridge"
+            },
+            "description": {
+              "value": "Battle at Kingsbridge reveals what the opposition wants in Ruins of the Ancient Empire and lets the party change the route by accepting a costly bargain."
+            },
+            "deepId": {
+              "value": "scenes.15"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.scenes.16",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Price of the Crown"
+            },
+            "description": {
+              "value": "Price of the Crown resolves one pressure in Border Kingdoms while carrying the party\u2019s choice forward into the next location."
+            },
+            "deepId": {
+              "value": "scenes.16"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.scenes.17",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Road Home"
+            },
+            "description": {
+              "value": "Road Home opens a playable situation in War of Heirs with a visible threat, two useful approaches, and a consequence for waiting."
+            },
+            "deepId": {
+              "value": "scenes.17"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.scenes.18",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Songs After Victory"
+            },
+            "description": {
+              "value": "Songs After Victory brings rival needs together in Ruins of the Ancient Empire; clues support negotiation, stealth, or a direct confrontation."
+            },
+            "deepId": {
+              "value": "scenes.18"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.1",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Missing Crown"
+            },
+            "description": {
+              "value": "Missing Crown interrupts the journey across Border Kingdoms, forcing the party to choose between speed, public trust, and scarce supplies."
+            },
+            "deepId": {
+              "value": "events.1"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.2",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Green Oath"
+            },
+            "description": {
+              "value": "Green Oath changes the balance in War of Heirs; two factions offer incompatible accounts and both can prove part of their claim."
+            },
+            "deepId": {
+              "value": "events.2"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.3",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Comet Feast"
+            },
+            "description": {
+              "value": "Comet Feast exposes a consequence of delay in Ruins of the Ancient Empire, moving one threatened NPC and closing an otherwise safe route."
+            },
+            "deepId": {
+              "value": "events.3"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.4",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Bridge Toll"
+            },
+            "description": {
+              "value": "Bridge Toll gives the people of Border Kingdoms a voice, turning the party\u2019s last deed into support, suspicion, or open resistance."
+            },
+            "deepId": {
+              "value": "events.4"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.5",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Broken Betrothal"
+            },
+            "description": {
+              "value": "Broken Betrothal interrupts the journey across War of Heirs, forcing the party to choose between speed, public trust, and scarce supplies."
+            },
+            "deepId": {
+              "value": "events.5"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.6",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Winter Tithe"
+            },
+            "description": {
+              "value": "Winter Tithe changes the balance in Ruins of the Ancient Empire; two factions offer incompatible accounts and both can prove part of their claim."
+            },
+            "deepId": {
+              "value": "events.6"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.7",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Monster Truce"
+            },
+            "description": {
+              "value": "Monster Truce exposes a consequence of delay in Border Kingdoms, moving one threatened NPC and closing an otherwise safe route."
+            },
+            "deepId": {
+              "value": "events.7"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.8",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Silent Bell"
+            },
+            "description": {
+              "value": "Silent Bell gives the people of War of Heirs a voice, turning the party\u2019s last deed into support, suspicion, or open resistance."
+            },
+            "deepId": {
+              "value": "events.8"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.9",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "False Heir"
+            },
+            "description": {
+              "value": "False Heir interrupts the journey across Ruins of the Ancient Empire, forcing the party to choose between speed, public trust, and scarce supplies."
+            },
+            "deepId": {
+              "value": "events.9"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.10",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Flooded Ford"
+            },
+            "description": {
+              "value": "Flooded Ford changes the balance in Border Kingdoms; two factions offer incompatible accounts and both can prove part of their claim."
+            },
+            "deepId": {
+              "value": "events.10"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.11",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Warden Moot"
+            },
+            "description": {
+              "value": "Warden Moot exposes a consequence of delay in War of Heirs, moving one threatened NPC and closing an otherwise safe route."
+            },
+            "deepId": {
+              "value": "events.11"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.12",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Ashfall"
+            },
+            "description": {
+              "value": "Ashfall gives the people of Ruins of the Ancient Empire a voice, turning the party\u2019s last deed into support, suspicion, or open resistance."
+            },
+            "deepId": {
+              "value": "events.12"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.13",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Royal Funeral"
+            },
+            "description": {
+              "value": "Royal Funeral interrupts the journey across Border Kingdoms, forcing the party to choose between speed, public trust, and scarce supplies."
+            },
+            "deepId": {
+              "value": "events.13"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.14",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Harvest Dispute"
+            },
+            "description": {
+              "value": "Harvest Dispute changes the balance in War of Heirs; two factions offer incompatible accounts and both can prove part of their claim."
+            },
+            "deepId": {
+              "value": "events.14"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.15",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Old Road Opens"
+            },
+            "description": {
+              "value": "Old Road Opens exposes a consequence of delay in Ruins of the Ancient Empire, moving one threatened NPC and closing an otherwise safe route."
+            },
+            "deepId": {
+              "value": "events.15"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.16",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Griffin Migration"
+            },
+            "description": {
+              "value": "Griffin Migration gives the people of Border Kingdoms a voice, turning the party\u2019s last deed into support, suspicion, or open resistance."
+            },
+            "deepId": {
+              "value": "events.16"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.17",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Plague Caravan"
+            },
+            "description": {
+              "value": "Plague Caravan interrupts the journey across War of Heirs, forcing the party to choose between speed, public trust, and scarce supplies."
+            },
+            "deepId": {
+              "value": "events.17"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.18",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Moonwell Eclipse"
+            },
+            "description": {
+              "value": "Moonwell Eclipse changes the balance in Ruins of the Ancient Empire; two factions offer incompatible accounts and both can prove part of their claim."
+            },
+            "deepId": {
+              "value": "events.18"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.19",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Guild Strike"
+            },
+            "description": {
+              "value": "Guild Strike exposes a consequence of delay in Border Kingdoms, moving one threatened NPC and closing an otherwise safe route."
+            },
+            "deepId": {
+              "value": "events.19"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.20",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Border Raid"
+            },
+            "description": {
+              "value": "Border Raid gives the people of War of Heirs a voice, turning the party\u2019s last deed into support, suspicion, or open resistance."
+            },
+            "deepId": {
+              "value": "events.20"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.21",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Prisoner Exchange"
+            },
+            "description": {
+              "value": "Prisoner Exchange interrupts the journey across Ruins of the Ancient Empire, forcing the party to choose between speed, public trust, and scarce supplies."
+            },
+            "deepId": {
+              "value": "events.21"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.22",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Ancient Beacon"
+            },
+            "description": {
+              "value": "Ancient Beacon changes the balance in Border Kingdoms; two factions offer incompatible accounts and both can prove part of their claim."
+            },
+            "deepId": {
+              "value": "events.22"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.23",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Swords at Supper"
+            },
+            "description": {
+              "value": "Swords at Supper exposes a consequence of delay in War of Heirs, moving one threatened NPC and closing an otherwise safe route."
+            },
+            "deepId": {
+              "value": "events.23"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.24",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Village Accusation"
+            },
+            "description": {
+              "value": "Village Accusation gives the people of Ruins of the Ancient Empire a voice, turning the party\u2019s last deed into support, suspicion, or open resistance."
+            },
+            "deepId": {
+              "value": "events.24"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.25",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Lost Patrol"
+            },
+            "description": {
+              "value": "Lost Patrol interrupts the journey across Border Kingdoms, forcing the party to choose between speed, public trust, and scarce supplies."
+            },
+            "deepId": {
+              "value": "events.25"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.26",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Relic Auction"
+            },
+            "description": {
+              "value": "Relic Auction changes the balance in War of Heirs; two factions offer incompatible accounts and both can prove part of their claim."
+            },
+            "deepId": {
+              "value": "events.26"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.27",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Siege Warning"
+            },
+            "description": {
+              "value": "Siege Warning exposes a consequence of delay in Ruins of the Ancient Empire, moving one threatened NPC and closing an otherwise safe route."
+            },
+            "deepId": {
+              "value": "events.27"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.28",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "River Runs Red"
+            },
+            "description": {
+              "value": "River Runs Red gives the people of Border Kingdoms a voice, turning the party\u2019s last deed into support, suspicion, or open resistance."
+            },
+            "deepId": {
+              "value": "events.28"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.29",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Envoy Vanishes"
+            },
+            "description": {
+              "value": "Envoy Vanishes interrupts the journey across War of Heirs, forcing the party to choose between speed, public trust, and scarce supplies."
+            },
+            "deepId": {
+              "value": "events.29"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.events.30",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Crown Judgment"
+            },
+            "description": {
+              "value": "Crown Judgment changes the balance in Ruins of the Ancient Empire; two factions offer incompatible accounts and both can prove part of their claim."
+            },
+            "deepId": {
+              "value": "events.30"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-scenes-1": {
+            "template": "classic.deep.scenes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-scenes-2": {
+            "template": "classic.deep.scenes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-scenes-3": {
+            "template": "classic.deep.scenes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-scenes-4": {
+            "template": "classic.deep.scenes.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-scenes-5": {
+            "template": "classic.deep.scenes.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-scenes-6": {
+            "template": "classic.deep.scenes.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-scenes-7": {
+            "template": "classic.deep.scenes.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-scenes-8": {
+            "template": "classic.deep.scenes.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-scenes-9": {
+            "template": "classic.deep.scenes.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-scenes-10": {
+            "template": "classic.deep.scenes.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-scenes-11": {
+            "template": "classic.deep.scenes.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-scenes-12": {
+            "template": "classic.deep.scenes.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-scenes-13": {
+            "template": "classic.deep.scenes.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-scenes-14": {
+            "template": "classic.deep.scenes.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-scenes-15": {
+            "template": "classic.deep.scenes.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-scenes-16": {
+            "template": "classic.deep.scenes.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-scenes-17": {
+            "template": "classic.deep.scenes.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-scenes-18": {
+            "template": "classic.deep.scenes.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-events-1": {
+            "template": "classic.deep.events.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-events-2": {
+            "template": "classic.deep.events.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-events-3": {
+            "template": "classic.deep.events.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-events-4": {
+            "template": "classic.deep.events.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-events-5": {
+            "template": "classic.deep.events.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-events-6": {
+            "template": "classic.deep.events.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-events-7": {
+            "template": "classic.deep.events.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-events-8": {
+            "template": "classic.deep.events.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-events-9": {
+            "template": "classic.deep.events.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-events-10": {
+            "template": "classic.deep.events.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-events-11": {
+            "template": "classic.deep.events.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-events-12": {
+            "template": "classic.deep.events.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-events-13": {
+            "template": "classic.deep.events.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-events-14": {
+            "template": "classic.deep.events.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-events-15": {
+            "template": "classic.deep.events.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-events-16": {
+            "template": "classic.deep.events.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-events-17": {
+            "template": "classic.deep.events.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-events-18": {
+            "template": "classic.deep.events.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-events-19": {
+            "template": "classic.deep.events.19",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-events-20": {
+            "template": "classic.deep.events.20",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-events-21": {
+            "template": "classic.deep.events.21",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-events-22": {
+            "template": "classic.deep.events.22",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-events-23": {
+            "template": "classic.deep.events.23",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-events-24": {
+            "template": "classic.deep.events.24",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-events-25": {
+            "template": "classic.deep.events.25",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-events-26": {
+            "template": "classic.deep.events.26",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-events-27": {
+            "template": "classic.deep.events.27",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-events-28": {
+            "template": "classic.deep.events.28",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-events-29": {
+            "template": "classic.deep.events.29",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-events-30": {
+            "template": "classic.deep.events.30",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          }
         }
       }
     ]

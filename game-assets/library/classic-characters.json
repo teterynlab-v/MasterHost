@@ -73,12 +73,484 @@
     "patches": [
       {
         "op": "set",
-        "path": "/content/generators/classic.characters.marker",
+        "path": "/content/templates/classic.deep.archetypes.1",
         "value": {
-          "type": "values",
-          "values": [
-            "Marches Character Paths"
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Oathbound Knight"
+            },
+            "description": {
+              "value": "Oathbound Knight enters Border Kingdoms with a clear duty, a useful field specialty, and a relationship that can complicate the first oath."
+            },
+            "deepId": {
+              "value": "archetypes.1"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms"
           ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.archetypes.2",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Thornwood Ranger"
+            },
+            "description": {
+              "value": "Thornwood Ranger is ready for War of Heirs, combining a distinct approach to danger with a reason to protect one of its communities."
+            },
+            "deepId": {
+              "value": "archetypes.2"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.archetypes.3",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Ember Mage"
+            },
+            "description": {
+              "value": "Ember Mage knows one hidden truth about Ruins of the Ancient Empire and must decide when revealing it matters more than personal standing."
+            },
+            "deepId": {
+              "value": "archetypes.3"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.archetypes.4",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Roadwise Envoy"
+            },
+            "description": {
+              "value": "Roadwise Envoy has practical authority in Border Kingdoms, but every use of that status strengthens a rival obligation."
+            },
+            "deepId": {
+              "value": "archetypes.4"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.archetypes.5",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Moonwell Healer"
+            },
+            "description": {
+              "value": "Moonwell Healer enters War of Heirs with a clear duty, a useful field specialty, and a relationship that can complicate the first oath."
+            },
+            "deepId": {
+              "value": "archetypes.5"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.archetypes.6",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Crownless Scion"
+            },
+            "description": {
+              "value": "Crownless Scion is ready for Ruins of the Ancient Empire, combining a distinct approach to danger with a reason to protect one of its communities."
+            },
+            "deepId": {
+              "value": "archetypes.6"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.archetypes.7",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Guild Delver"
+            },
+            "description": {
+              "value": "Guild Delver knows one hidden truth about Border Kingdoms and must decide when revealing it matters more than personal standing."
+            },
+            "deepId": {
+              "value": "archetypes.7"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.archetypes.8",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Banner Captain"
+            },
+            "description": {
+              "value": "Banner Captain has practical authority in War of Heirs, but every use of that status strengthens a rival obligation."
+            },
+            "deepId": {
+              "value": "archetypes.8"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.progressionPaths.1",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Renowned Warden"
+            },
+            "description": {
+              "value": "Renowned Warden advances through deeds in Border Kingdoms, unlocking recognition, a reliable contact, and responsibility for a lasting consequence."
+            },
+            "deepId": {
+              "value": "progressionPaths.1"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.progressionPaths.2",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Master of Roads"
+            },
+            "description": {
+              "value": "Master of Roads rewards difficult choices in War of Heirs with new reach, while tying the hero more closely to a faction\u2019s expectations."
+            },
+            "deepId": {
+              "value": "progressionPaths.2"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.progressionPaths.3",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Keeper of Embers"
+            },
+            "description": {
+              "value": "Keeper of Embers turns discoveries in Ruins of the Ancient Empire into expertise, access, and a final opportunity to reshape an old institution."
+            },
+            "deepId": {
+              "value": "progressionPaths.3"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.progressionPaths.4",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Voice of the Compact"
+            },
+            "description": {
+              "value": "Voice of the Compact grows through service in Border Kingdoms, exchanging short-term power for a promise the Realm can remember."
+            },
+            "deepId": {
+              "value": "progressionPaths.4"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.progressionPaths.5",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Heir of Reconciliation"
+            },
+            "description": {
+              "value": "Heir of Reconciliation advances through deeds in War of Heirs, unlocking recognition, a reliable contact, and responsibility for a lasting consequence."
+            },
+            "deepId": {
+              "value": "progressionPaths.5"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.progressionPaths.6",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Seeker of the Old Empire"
+            },
+            "description": {
+              "value": "Seeker of the Old Empire rewards difficult choices in Ruins of the Ancient Empire with new reach, while tying the hero more closely to a faction\u2019s expectations."
+            },
+            "deepId": {
+              "value": "progressionPaths.6"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-archetypes-1": {
+            "template": "classic.deep.archetypes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-archetypes-2": {
+            "template": "classic.deep.archetypes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-archetypes-3": {
+            "template": "classic.deep.archetypes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-archetypes-4": {
+            "template": "classic.deep.archetypes.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-archetypes-5": {
+            "template": "classic.deep.archetypes.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-archetypes-6": {
+            "template": "classic.deep.archetypes.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-archetypes-7": {
+            "template": "classic.deep.archetypes.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-archetypes-8": {
+            "template": "classic.deep.archetypes.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-progressionPaths-1": {
+            "template": "classic.deep.progressionPaths.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-progressionPaths-2": {
+            "template": "classic.deep.progressionPaths.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-progressionPaths-3": {
+            "template": "classic.deep.progressionPaths.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-progressionPaths-4": {
+            "template": "classic.deep.progressionPaths.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-progressionPaths-5": {
+            "template": "classic.deep.progressionPaths.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-progressionPaths-6": {
+            "template": "classic.deep.progressionPaths.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          }
         }
       }
     ]

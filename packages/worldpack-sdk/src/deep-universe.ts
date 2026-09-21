@@ -51,6 +51,26 @@ interface AssessmentDocument {
   universe?: unknown;
 }
 
+type DecisionValue = unknown | { mode?: string; value?: unknown };
+const selectedDecision = (document: AssessmentDocument, decisions: Record<string, DecisionValue>, path: string) => {
+  const supplied = decisions[path], value = supplied && typeof supplied === "object" && "value" in supplied ? supplied.value : supplied;
+  if (typeof value === "string") return value;
+  const question = (document.content as any)?.questions?.find((item: any) => item?.id === path);
+  return typeof question?.default === "string" ? question.default : undefined;
+};
+
+export function validateDeepUniverseDecisions(document: AssessmentDocument, decisions: Record<string, DecisionValue>) {
+  const parsed = DeepUniverseProfileSchema.safeParse(document.universe);
+  if (!parsed.success) return [] as DeepUniverseDiagnostic[];
+  const profile = parsed.data, patternId = selectedDecision(document, decisions, "world.pattern"), kitId = selectedDecision(document, decisions, "world.campaignKit"), themeId = selectedDecision(document, decisions, "world.visualTheme"), diagnostics: DeepUniverseDiagnostic[] = [];
+  if (!patternId) return diagnostics;
+  const kit = profile.campaignKits.find(value => value.id === kitId);
+  if (kitId && (!kit || !kit.patternIds.includes(patternId))) diagnostics.push({ severity: "error", code: "deep-universe.compatibility", path: "world.campaignKit", message: `Campaign Kit ${kitId} does not support pattern ${patternId}` });
+  const theme = profile.content.visualThemes.find(value => value.id === themeId);
+  if (themeId && (!theme || !theme.patternIds.includes(patternId))) diagnostics.push({ severity: "error", code: "deep-universe.compatibility", path: "world.visualTheme", message: `Visual theme ${themeId} does not support pattern ${patternId}` });
+  return diagnostics;
+}
+
 const copyMarker = /\b(?:todo|tbd|lorem ipsum|placeholder)\b/i;
 const requiredMediaRoles = ["map", "background", "portrait", "token", "item", "ui"] as const;
 

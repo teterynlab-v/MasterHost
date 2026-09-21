@@ -1,0 +1,14 @@
+id: masterhost.classic-fantasy
+name: Classic Fantasy
+version: 1.0.0
+schemaVersion: "0.1"
+defaultArtSet: standard
+entryTemplate: world.root
+description: Heroic kingdoms, old roads, rival crowns, monsters, magic, and bright fellowship.
+publisher: MasterHost
+official: true
+contentRating: everyone
+license:
+  spdx: CC-BY-4.0
+  attribution: Classic Fantasy original setting content and artwork © MasterHost contributors.
+  source: https://creativecommons.org/licenses/by/4.0/

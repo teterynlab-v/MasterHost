@@ -12,6 +12,13 @@ type Preview = { report: { valid: boolean; diagnostics: { code: string; path: st
 
 interface Props { request: (path: string, init?: RequestInit) => Promise<any>; requestMedia: (path: string) => Promise<Blob>; pack: { manifest: { id: string; version: string }; questions: Question[] }; onWorld: (world: any) => Promise<void> | void; onBack: () => void; onAdvanced: () => void }
 export function quickStartMatchesPack(value: ReturnType<typeof readQuickStartHandoff>, pack: Props["pack"]) { return !value || (pack.manifest.id === value.basePack.id && pack.manifest.version === value.basePack.version); }
+export function initialQuickDecisions(questions: Question[], quickStart: ReturnType<typeof readQuickStartHandoff>) {
+  const decisions = Object.fromEntries(questions.map(question => [question.id, question.default]));
+  if (!quickStart) return decisions;
+  const selected: Record<string, string> = { "world.pattern": quickStart.patternId, "world.campaignKit": quickStart.campaignKitId, "world.visualTheme": quickStart.visualThemeId };
+  for (const question of questions) if (selected[question.id] && question.options.some(option => option.value === selected[question.id])) decisions[question.id] = selected[question.id]!;
+  return decisions;
+}
 
 const categories = [
   { type: "setting", title: "Setting", prompt: "Choose the premise and tone foundation." },
@@ -55,7 +62,7 @@ function MediaPreview({ asset, requestMedia, onError }: { asset: Asset; requestM
 export function QuickGameBuilder({ request, requestMedia, pack, onWorld, onBack, onAdvanced }: Props) {
   const [quickStart] = useState(() => typeof sessionStorage === "undefined" ? undefined : readQuickStartHandoff(sessionStorage));
   const [assets, setAssets] = useState<Asset[]>([]), [step, setStep] = useState(0), [name, setName] = useState(quickStart ? `${quickStart.universeName} One-shot` : "Untitled One-shot"), [seed, setSeed] = useState(quickStart ? `play-today-${quickStart.universeId}` : "masterhost-quick-game"), [selected, setSelected] = useState<Record<string, Selection>>({});
-  const [decisions, setDecisions] = useState<Record<string, string>>(() => Object.fromEntries(pack.questions.map(question => [question.id, question.default]))), [review, setReview] = useState<Review | null>(null), [preview, setPreview] = useState<Preview | null>(null), [busy, setBusy] = useState(false), [error, setError] = useState("");
+  const [decisions, setDecisions] = useState<Record<string, string>>(() => initialQuickDecisions(pack.questions, quickStart)), [review, setReview] = useState<Review | null>(null), [preview, setPreview] = useState<Preview | null>(null), [busy, setBusy] = useState(false), [error, setError] = useState("");
   const exactPackActive = quickStartMatchesPack(quickStart, pack);
   useEffect(() => { void request(`/game-assets?basePackId=${encodeURIComponent(pack.manifest.id)}`).then(setAssets).catch(reason => setError(reason.message)); }, []);
   const category = step > 0 && step <= categories.length ? categories[step - 1] : null, choices = useMemo(() => category ? assets.filter(asset => asset.type === category.type) : [], [assets, category?.type]);

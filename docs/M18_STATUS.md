@@ -1,29 +1,29 @@
 # M18 Deep Classic Fantasy Status
 
-**State:** automated milestone gate passed on 2026-09-22; independent final review pending.  
+**State:** complete; automated milestone gate and independent review corrections verified on 2026-09-22.
 **Plan:** `docs/superpowers/plans/2026-09-22-m18-deep-classic-fantasy.md`
 
 ## Delivered source
 
-- `masterhost.classic-fantasy@2.0.0` is an installed official Deep Universe Pack. Optional `universe.yaml` metadata now travels through the filesystem loader and portable Pack document without adding setting logic to the runtime.
+- `masterhost.classic-fantasy@1.0.0` remains installed by exact identity alongside the official `2.0.0` Deep Universe Pack. Optional `universe.yaml` metadata travels through the filesystem loader and portable Pack document without adding setting logic to the runtime.
 - Three patterns are present: Border Kingdoms, War of Heirs, and Ruins of the Ancient Empire.
 - Three compatible Campaign Kits contain exact openings, scenes, cast, locations, rewards, ready Characters, duration, player range, and GM guidance.
 - The profile contains 151 distinct content entries: 8 factions, 12 locations, 24 NPCs, 18 adversaries, 24 items, 30 events, 18 scenes, 8 archetypes, 6 progression paths, and 3 visual themes.
-- Every entry has pattern ownership, a valid cross-entry relationship, final copy, a locale key, media role/reference, and text for English, Russian, Spanish, Japanese, Simplified Chinese, and Korean. Human translation review remains separate.
+- Every entry has pattern ownership, varied type-specific final copy, a distributed valid cross-entry relationship, and a media role/reference. Stable catalogs contain all 151 display-name keys in English, Russian, Spanish, Japanese, Simplified Chinese and Korean with no blanks or locale-prefix placeholders. These translations are machine-authored; native-speaker editorial review remains required before a polished public release.
 - Six original Pack SVGs cover map, background, portrait, token, item, and location presentation.
-- Nine published Classic Fantasy assets cover every Quick Builder category with explicit capabilities, dependencies, content counts, license evidence, and six portable media files. The same fragments compose through Advanced mode.
-- Play Today activates the exact installed official Pack before entering Quick Builder and keeps the M17 handoff visible.
+- Nine published Classic Fantasy assets cover every Quick Builder category with explicit capabilities, dependencies, truthful content counts, license evidence, and six portable media files. Their fragments materialize pattern-specific factions, locations, cast, items, scenes, progression options, rules, Campaign Kit and visual theme through the generic compiler; the same fragments also compose through Advanced mode.
+- Play Today activates the exact installed official Pack before entering Quick Builder, keeps the M17 handoff visible, and persists the selected pattern, Campaign Kit and visual theme as Descriptor decisions that survive `.mhgame` transfer.
 
 ## Automated proof
 
 `./scripts/m18-gate.sh` passed:
 
 - TypeScript workspace check.
-- Vitest: **182 passed**, **4 environment-gated tests skipped**.
+- Vitest: **185 passed**, **4 environment-gated tests skipped**.
 - Vite production build: **49 modules transformed**.
 - Production server image build and startup.
-- SDK contract: filesystem profile load, portable document conversion, passing Deep Universe assessment, and ready catalog resolution.
-- Asset contract: nine Quick categories, dependency ordering, aggregate counts, and valid Advanced composition.
+- SDK contract: parallel exact 1.0.0/2.0.0 filesystem versions, portable document conversion, passing Deep Universe assessment, and ready catalog resolution.
+- Asset contract: nine Quick categories, dependency ordering, truthful aggregate counts, valid Advanced composition, and three different materialized pattern graphs with their exact Descriptor decisions. Generic preview/compiler validation rejects pattern, Campaign Kit and visual theme mismatches.
 
 ## Runtime and browser proof
 
@@ -32,9 +32,9 @@ The gate used two empty PostgreSQL 17 installations.
 Installation A proved:
 
 1. Classic Fantasy alone was ready in the twelve-universe catalog.
-2. Play Today activated exact `masterhost.classic-fantasy@2.0.0`.
+2. The server first activated and served exact `masterhost.classic-fantasy@1.0.0`, then Play Today activated exact `2.0.0`; the primary catalog continued to expose one latest card.
 3. Headless Chrome completed catalog preview, all twelve Quick Builder stages, final review, and World creation.
-4. API acceptance repeated the nine-asset review, composed through the generic Descriptor path, compiled a 20+ entity World, and exported a self-contained `.mhgame`.
+4. API acceptance repeated the nine-asset review, composed through the generic Descriptor path, persisted exact pattern/Kit/theme decisions, materialized the selected Campaign Kit with six scenes and substantial cast/items, and exported a self-contained `.mhgame`.
 
 Installation B proved:
 

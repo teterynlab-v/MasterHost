@@ -5,7 +5,7 @@ import type { FastifyInstance } from "fastify";
 import { buildDescriptor, composeGameDescriptor, fragmentCatalog, gameAssetCatalog, gameAssetDetail, gameAssetMedia, reviewQuickGameSelection, type GameAsset, type GameDescriptorFragment, type GameFragmentSelection, type QuickGameSelection } from "@masterhost/descriptor";
 import type { DescriptorValue, MaterializedWorld } from "@masterhost/domain";
 import { GameDescriptorRepository, PackProjectRepository, WorldRepository, type GameDescriptorProject } from "@masterhost/persistence";
-import { createPackFork, toLoadedWorldPack, worldPackDocumentFromLoaded, type LoadedWorldPack, type WorldPackDocument } from "@masterhost/worldpack-sdk";
+import { createPackFork, toLoadedWorldPack, validateDeepUniverseDecisions, worldPackDocumentFromLoaded, type LoadedWorldPack, type WorldPackDocument } from "@masterhost/worldpack-sdk";
 import { assertUniqueMaterializationPaths, compareWorlds, compileSatisfying, preserveCustomByPath } from "@masterhost/world-compiler";
 
 interface Dependencies { descriptors: GameDescriptorRepository; worlds: WorldRepository; packs: PackProjectRepository; fragments: GameDescriptorFragment[]; assets: GameAsset[] }
@@ -43,6 +43,7 @@ export async function registerGameDescriptors(app: FastifyInstance, dependencies
     });
   };
   const decisions = (value: unknown) => structuredClone(scalarRecord(value));
+  const validateDecisions = (document: WorldPackDocument, value: unknown) => validateDeepUniverseDecisions(document, decisions(value));
   const locks = (value: unknown) => Array.isArray(value) ? [...new Set(value.filter(item => typeof item === "string"))] as string[] : [];
   const compose = (input: { id: string; revision: number; name: string; base: WorldPackDocument; selections: GameFragmentSelection[] }) => {
     const result = composeGameDescriptor({ projectId: input.id, revision: input.revision, name: input.name, base: input.base, fragments: dependencies.fragments, selections: input.selections }), selected = new Set(input.selections.map(value => `${value.fragmentId}@${value.version}`));
@@ -88,12 +89,15 @@ export async function registerGameDescriptors(app: FastifyInstance, dependencies
     await authorize(request); const name = String(request.body?.name ?? "").trim(), expected = request.body?.basePack;
     if (!name || name.length > 120 || !expected?.id || !expected?.version) throw fail("name and exact basePack are required");
     const base = await basePack(request, { id: String(expected.id), version: String(expected.version) });
-    return compose({ id: "preview", revision: 1, name, base: base.document, selections: selection(request.body?.selections) });
+    const result = compose({ id: "preview", revision: 1, name, base: base.document, selections: selection(request.body?.selections) });
+    for (const diagnostic of validateDecisions(result.document, request.body?.decisions)) result.report.diagnostics.push({ code: "capability", path: diagnostic.path, message: diagnostic.message });
+    result.report.valid = result.report.diagnostics.length === 0; return result;
   });
   app.post("/api/game-descriptors", async (request: any) => {
     const realm = await authorize(request), id = randomUUID(), name = String(request.body?.name ?? "").trim(), seed = String(request.body?.seed ?? "").trim() || randomUUID(), expected = request.body?.basePack;
     if (!name || name.length > 120 || !expected?.id || !expected?.version) throw fail("name and exact basePack are required");
     const base = await basePack(request, { id: String(expected.id), version: String(expected.version) }), selections = selection(request.body?.selections), result = compose({ id, revision: 1, name, base: base.document, selections });
+    for (const diagnostic of validateDecisions(result.document, request.body?.decisions)) result.report.diagnostics.push({ code: "capability", path: diagnostic.path, message: diagnostic.message }); result.report.valid = result.report.diagnostics.length === 0;
     if (!result.report.valid) throw fail(result.report.diagnostics.map(value => `${value.path}: ${value.message}`).join("; "), 409);
     const now = new Date().toISOString(), project: GameDescriptorProject = { id, realmId: realm.id, name, revision: 1, seed, basePack: { id: base.pack.manifest.id, version: base.pack.manifest.version }, selections, decisions: decisions(request.body?.decisions), locks: locks(request.body?.locks), compiled: result.document, report: result.report, createdAt: now, updatedAt: now };
     return dependencies.descriptors.create(project);
@@ -103,6 +107,7 @@ export async function registerGameDescriptors(app: FastifyInstance, dependencies
     const { project } = await current(request.params.id, request), expectedRevision = Number(request.body?.expectedRevision);
     if (!Number.isSafeInteger(expectedRevision)) throw fail("expectedRevision is required");
     const base = await basePack(request, project.basePack), name = String(request.body?.name ?? project.name).trim(), selections = selection(request.body?.selections), revision = expectedRevision + 1, result = compose({ id: project.id, revision, name, base: base.document, selections });
+    for (const diagnostic of validateDecisions(result.document, request.body?.decisions)) result.report.diagnostics.push({ code: "capability", path: diagnostic.path, message: diagnostic.message }); result.report.valid = result.report.diagnostics.length === 0;
     if (!result.report.valid) throw fail(result.report.diagnostics.map(value => `${value.path}: ${value.message}`).join("; "), 409);
     return dependencies.descriptors.save({ ...project, name, revision, seed: String(request.body?.seed ?? project.seed), selections, decisions: decisions(request.body?.decisions), locks: locks(request.body?.locks), compiled: result.document, report: result.report, updatedAt: new Date().toISOString() }, expectedRevision);
   });
@@ -111,7 +116,9 @@ export async function registerGameDescriptors(app: FastifyInstance, dependencies
     if (request.body?.selections === undefined) return { document: project.compiled, report: project.report };
     const base = await basePack(request, project.basePack), name = String(request.body?.name ?? project.name).trim();
     if (!name || name.length > 120) throw fail("name is required");
-    return compose({ id: project.id, revision: project.revision + 1, name, base: base.document, selections: selection(request.body.selections) });
+    const result = compose({ id: project.id, revision: project.revision + 1, name, base: base.document, selections: selection(request.body.selections) });
+    for (const diagnostic of validateDecisions(result.document, request.body?.decisions)) result.report.diagnostics.push({ code: "capability", path: diagnostic.path, message: diagnostic.message });
+    result.report.valid = result.report.diagnostics.length === 0; return result;
   });
   app.post("/api/game-descriptors/:id/compile", async (request: any) => { const { realm, project } = await current(request.params.id, request); return dependencies.worlds.save(compile(project, realm.id), `game-descriptor:${project.id}@${project.revision}`); });
   app.post("/api/game-descriptors/:id/fork-pack", async (request: any) => {

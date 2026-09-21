@@ -1,7 +1,7 @@
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
-import { QuickGameBuilder, quickStartMatchesPack } from "./quick-game-builder.js";
+import { initialQuickDecisions, QuickGameBuilder, quickStartMatchesPack } from "./quick-game-builder.js";
 import { parsePackSource } from "./pack-creator.js";
 
 describe("M17 authoring safety", () => {
@@ -13,6 +13,17 @@ describe("M17 authoring safety", () => {
     const html = renderToStaticMarkup(<QuickGameBuilder request={async()=>[]} requestMedia={async()=>new Blob()} pack={{ manifest: { id: "masterhost.space-opera", version: "1.0.0" }, questions: [] }} onWorld={()=>undefined} onBack={()=>undefined} onAdvanced={()=>undefined}/>);
     expect(html).toContain("Activate the exact universe Pack");
     expect(html).toMatch(/<button[^>]*disabled=""[^>]*>NEXT<\/button>/);
+  });
+
+  it("turns the selected Play Today pattern, kit and theme into Pack decisions", () => {
+    const handoff = { universeId: "classic-fantasy", universeName: "Classic Fantasy", basePack: { id: "masterhost.classic-fantasy", version: "2.0.0" }, patternId: "war-of-heirs", campaignKitId: "kit.war-of-heirs", visualThemeId: "visualThemes.2" };
+    const options = (values: string[]) => values.map(value => ({ value, label: value }));
+    expect(initialQuickDecisions([
+      { id: "world.pattern", label: "Pattern", default: "border-kingdoms", options: options(["border-kingdoms", "war-of-heirs"]) },
+      { id: "world.campaignKit", label: "Kit", default: "kit.border-kingdoms", options: options(["kit.border-kingdoms", "kit.war-of-heirs"]) },
+      { id: "world.visualTheme", label: "Theme", default: "visualThemes.1", options: options(["visualThemes.1", "visualThemes.2"]) },
+      { id: "world.threat", label: "Threat", default: "medium", options: options(["medium", "high"]) },
+    ], handoff)).toEqual({ "world.pattern": "war-of-heirs", "world.campaignKit": "kit.war-of-heirs", "world.visualTheme": "visualThemes.2", "world.threat": "medium" });
   });
 
   it("parses editable JSON source and rejects non-object input", () => {

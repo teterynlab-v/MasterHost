@@ -3,7 +3,7 @@
 ## Current product expansion
 
 - **M17 Deep Universe Foundation: complete (2026-09-22).** Deep Universe Standard v1, Campaign Kits, quality assessment, twelve-entry catalog, preview, Play Today handoff, and Pack Creator completeness dashboard passed the isolated PostgreSQL/browser gate. Evidence: `docs/M17_STATUS.md`.
-- **M18 Deep Classic Fantasy: automated gate passed (2026-09-22), final review pending.** The installed 2.0.0 Pack, three patterns/Kits, 151-entry profile, nine Quick/Advanced assets, exact Play Today activation, `.mhgame` transfer, full table flow, browser acceptance and restart readback are recorded in `docs/M18_STATUS.md`.
+- **M18 Deep Classic Fantasy: complete (2026-09-22).** Exact 1.0.0 retention beside the installed 2.0.0 Pack, three materially different patterns/Kits, the 151-entry profile, nine content-producing Quick/Advanced assets, Descriptor-backed Play Today choices, `.mhgame` transfer, full table flow, browser acceptance and restart readback are recorded in `docs/M18_STATUS.md`.
 - **Next after review:** M19 Deep Space Opera. M20–M29 each deliver one complete universe to the same standard; M30 accepts the whole collection.
 - Ordinary clean installations now show Classic Fantasy ready and the remaining eleven universes planned.
 

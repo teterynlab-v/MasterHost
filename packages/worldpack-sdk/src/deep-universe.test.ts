@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { createStarterPack, validateWorldPackDocument } from "./authoring.js";
-import { assessDeepUniverse, DeepUniverseProfileSchema, deepUniverseMinimums } from "./deep-universe.js";
+import { assessDeepUniverse, DeepUniverseProfileSchema, deepUniverseMinimums, validateDeepUniverseDecisions } from "./deep-universe.js";
 
 const locales = ["en", "ru", "es", "ja", "zh-CN", "ko"];
 const kinds = ["factions", "locations", "npcs", "adversaries", "items", "events", "scenes", "archetypes", "progressionPaths", "visualThemes"] as const;
@@ -131,5 +131,19 @@ describe("Deep Universe Standard v1", () => {
     const assessment = assessDeepUniverse(document);
     expect(assessment.passed).toBe(false);
     expect(assessment.diagnostics.filter(item => item.code === "deep-universe.compatibility").length).toBeGreaterThanOrEqual(2);
+  });
+
+  it("rejects Descriptor choices that combine a pattern with another kit or theme", () => {
+    const document = completeDocument();
+    document.content.questions.push(
+      { id: "world.pattern", label: "Pattern", type: "choice", default: "pattern.1", options: [] },
+      { id: "world.campaignKit", label: "Kit", type: "choice", default: "kit.1", options: [] },
+      { id: "world.visualTheme", label: "Theme", type: "choice", default: "visualThemes.1", options: [] },
+    );
+    expect(validateDeepUniverseDecisions(document, { "world.pattern": "pattern.2", "world.campaignKit": "kit.1", "world.visualTheme": "visualThemes.3" })).toEqual([
+      expect.objectContaining({ code: "deep-universe.compatibility", path: "world.campaignKit" }),
+      expect.objectContaining({ code: "deep-universe.compatibility", path: "world.visualTheme" }),
+    ]);
+    expect(validateDeepUniverseDecisions(document, { "world.pattern": { mode: "explicit", value: "pattern.2" }, "world.campaignKit": { mode: "explicit", value: "kit.2" }, "world.visualTheme": { mode: "explicit", value: "visualThemes.2" } })).toEqual([]);
   });
 });

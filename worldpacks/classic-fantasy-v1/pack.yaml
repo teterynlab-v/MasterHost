@@ -43,39 +43,6 @@ questions:
         label: Strained
       - value: rare
         label: Rare
-  - id: world.pattern
-    label: Universe pattern
-    type: choice
-    default: border-kingdoms
-    options:
-      - value: border-kingdoms
-        label: Border Kingdoms
-      - value: war-of-heirs
-        label: War of Heirs
-      - value: ancient-empire-ruins
-        label: Ruins of the Ancient Empire
-  - id: world.campaignKit
-    label: Campaign Kit
-    type: choice
-    default: kit.border-kingdoms
-    options:
-      - value: kit.border-kingdoms
-        label: "Border Kingdoms: The First Oath"
-      - value: kit.war-of-heirs
-        label: "War of Heirs: The First Oath"
-      - value: kit.ancient-empire-ruins
-        label: "Ruins of the Ancient Empire: The First Oath"
-  - id: world.visualTheme
-    label: Visual theme
-    type: choice
-    default: visualThemes.1
-    options:
-      - value: visualThemes.1
-        label: Illuminated Chronicle
-      - value: visualThemes.2
-        label: Weathered Border Map
-      - value: visualThemes.3
-        label: Imperial Mosaic
 generators:
   region.count:
     type: integer-range

@@ -47,7 +47,7 @@
     "items": 0,
     "scenes": 0,
     "archetypes": 0,
-    "rules": 12,
+    "rules": 6,
     "media": 0
   },
   "media": [],
@@ -67,12 +67,74 @@
     "patches": [
       {
         "op": "set",
-        "path": "/content/generators/classic.rules.marker",
+        "path": "/content/actions/classic-take-cover",
         "value": {
-          "type": "values",
-          "values": [
-            "Deeds and Oaths Rules"
-          ]
+          "label": "Take Cover",
+          "target": "self",
+          "kind": "resource",
+          "resource": "resolve",
+          "operation": "add",
+          "amount": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/classic-study-signs",
+        "value": {
+          "label": "Study Signs",
+          "target": "self",
+          "kind": "resource",
+          "resource": "resolve",
+          "operation": "subtract",
+          "amount": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/classic-call-for-aid",
+        "value": {
+          "label": "Call For Aid",
+          "target": "self",
+          "kind": "resource",
+          "resource": "resolve",
+          "operation": "add",
+          "amount": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/classic-share-supplies",
+        "value": {
+          "label": "Share Supplies",
+          "target": "self",
+          "kind": "resource",
+          "resource": "resolve",
+          "operation": "subtract",
+          "amount": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/classic-invoke-oath",
+        "value": {
+          "label": "Invoke Oath",
+          "target": "self",
+          "kind": "resource",
+          "resource": "resolve",
+          "operation": "add",
+          "amount": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/classic-mark-the-road",
+        "value": {
+          "label": "Mark The Road",
+          "target": "self",
+          "kind": "resource",
+          "resource": "resolve",
+          "operation": "subtract",
+          "amount": 1
         }
       }
     ]

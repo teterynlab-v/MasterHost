@@ -42,7 +42,7 @@
   },
   "published": true,
   "counts": {
-    "locations": 12,
+    "locations": 0,
     "actors": 0,
     "items": 0,
     "scenes": 0,
@@ -67,12 +67,110 @@
     "patches": [
       {
         "op": "set",
-        "path": "/content/generators/classic.world-template.marker",
+        "path": "/content/templates/classic.deep.kit.border-kingdoms",
         "value": {
-          "type": "values",
-          "values": [
-            "Crowned Marches World"
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "Border Kingdoms: The First Oath"
+            },
+            "kitId": {
+              "value": "kit.border-kingdoms"
+            },
+            "openingSceneId": {
+              "value": "scenes.1"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "campaign-kit"
           ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.kit.war-of-heirs",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "War of Heirs: The First Oath"
+            },
+            "kitId": {
+              "value": "kit.war-of-heirs"
+            },
+            "openingSceneId": {
+              "value": "scenes.2"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.kit.ancient-empire-ruins",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "Ruins of the Ancient Empire: The First Oath"
+            },
+            "kitId": {
+              "value": "kit.ancient-empire-ruins"
+            },
+            "openingSceneId": {
+              "value": "scenes.3"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-kit-border-kingdoms": {
+            "template": "classic.deep.kit.border-kingdoms",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.border-kingdoms"
+              ]
+            }
+          },
+          "deep-kit-war-of-heirs": {
+            "template": "classic.deep.kit.war-of-heirs",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.war-of-heirs"
+              ]
+            }
+          },
+          "deep-kit-ancient-empire-ruins": {
+            "template": "classic.deep.kit.ancient-empire-ruins",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.ancient-empire-ruins"
+              ]
+            }
+          }
         }
       }
     ]
