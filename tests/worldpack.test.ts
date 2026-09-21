@@ -59,6 +59,10 @@ describe("world pack", () => {
         ["- when: { previousOutcome: success }\n        resource: { target: target, resource: health, operation: subtract, value: damage.total }", "- when: { previousOutcome: failure }\n        resource: { target: target, resource: health, operation: subtract, value: damage.total }", /unavailable numeric reference damage.total/],
         ["roll: { id: damage, dice: 1d8 }", "roll: { id: damage, dice: 1d8 }\n        effect: { target: target, id: inspired }", /Unrecognized key|Invalid input/],
         ["orderingPolicy: fixed", "orderingPolicy: attribute", /Encounter: attribute ordering requires a numeric Character field/],
+        ["rollTotalAtLeast: 20", "rollTotalAtLeast: 21", /Check perception: invalid critical thresholds/],
+        ["blockedActions: [rally]", "blockedActions: [missing]", /Effect poisoned: unknown blocked action missing/],
+        ["itemId: healing-potion, quantity: 1", "itemId: missing, quantity: 1", /Actor template goblin: unknown item missing/],
+        ["itemId: healing-potion, quantity: 1", "itemId: healing-potion, quantity: 11", /Actor template goblin: item healing-potion exceeds stack limit/],
       ];
       for (const [before, after, error] of cases) {
         expect(content).toContain(before);

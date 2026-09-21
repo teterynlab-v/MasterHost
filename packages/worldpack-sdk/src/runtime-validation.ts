@@ -47,7 +47,9 @@ export function validateRuntimePack(content: Content): void {
     if (!numericCharacterFields.has(field) && !numericActorFields.has(field)) throw Error(`Effect ${name}: modifier ${field} has no numeric Character or Actor field`);
   }
   for (const [name, check] of Object.entries(content.checks ?? {})) {
-    try { parseDice(check.dice); } catch (error) { throw Error(`Check ${name}: ${error instanceof Error ? error.message : String(error)}`); }
+    let parsed;try { parsed=parseDice(check.dice); } catch (error) { throw Error(`Check ${name}: ${error instanceof Error ? error.message : String(error)}`); }
+    const minimum=parsed.modifier+parsed.terms.reduce((sum,term)=>sum+(term.sign===1?term.count:-term.count*term.sides),0),maximum=parsed.modifier+parsed.terms.reduce((sum,term)=>sum+(term.sign===1?term.count*term.sides:-term.count),0),success=check.criticalSuccess?.rollTotalAtLeast,failure=check.criticalFailure?.rollTotalAtMost;
+    if(success!==undefined&&(success<minimum||success>maximum)||failure!==undefined&&(failure<minimum||failure>maximum)||success!==undefined&&failure!==undefined&&failure>=success)throw Error(`Check ${name}: invalid critical thresholds`);
     if (check.modifierField && !numericCharacterFields.has(check.modifierField)) throw Error(`Check ${name}: modifier field ${check.modifierField} must be a numeric Character field`);
   }
   if (content.encounter?.orderingPolicy === "attribute" && (!content.encounter.attributeField || !numericCharacterFields.has(content.encounter.attributeField))) throw Error("Encounter: attribute ordering requires a numeric Character field");

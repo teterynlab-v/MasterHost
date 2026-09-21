@@ -27,7 +27,7 @@ export function replayChecks(events: ReplayEvent[], sessionId: string): { checks
           rolls.set(id, payload.roll);
         } else {
           const resolution = payload as unknown as CheckResolution;
-          if (!rolls.has(id) || check.resolution || resolution.difficulty !== check.request.difficulty || resolution.requestId !== id || !resolution.roll || JSON.stringify(resolution.roll) !== JSON.stringify(rolls.get(id)) || !Number.isFinite(resolution.roll.total) || !Number.isFinite(resolution.modifier) || resolution.total !== resolution.roll.total + resolution.modifier || resolution.outcome !== (resolution.total >= resolution.difficulty ? "success" : "failure") || typeof resolution.resolvedAt !== "string" || !Number.isFinite(Date.parse(resolution.resolvedAt))) throw Error(`invalid CheckResolved for ${id}`);
+          const ordinary=resolution.total>=resolution.difficulty?"success":"failure";if (!rolls.has(id) || check.resolution || resolution.difficulty !== check.request.difficulty || resolution.requestId !== id || !resolution.roll || JSON.stringify(resolution.roll) !== JSON.stringify(rolls.get(id)) || !Number.isFinite(resolution.roll.total) || !Number.isFinite(resolution.modifier) || resolution.total !== resolution.roll.total + resolution.modifier || ![ordinary,"critical-success","critical-failure"].includes(resolution.outcome) || typeof resolution.resolvedAt !== "string" || !Number.isFinite(Date.parse(resolution.resolvedAt))) throw Error(`invalid CheckResolved for ${id}`);
           check.resolution = resolution;
         }
       } else if (payload.actionId === undefined) throw Error("check event has no request or action ID");

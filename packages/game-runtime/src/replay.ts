@@ -66,6 +66,14 @@ export function replayRuntimeEvents(events: ReplayEvent[], initial?: { actors: A
         const actorId = string(payload.actorId, "actor ID"), actor = actors.get(actorId);
         if (!actor || !actor.effects.some(value => value.id === payload.effectId)) throw Error(`expiry for unknown effect ${String(payload.effectId)}`);
         actor.effects = actor.effects.filter(value => value.id !== payload.effectId);
+      } else if(event.type==="ItemGranted"){
+        const actorId=string(payload.actorId,"actor ID"),actor=actors.get(actorId),itemId=string(payload.itemId,"item ID"),after=number(payload.after,"item quantity");if(!actor||!Number.isSafeInteger(after)||after<=0)throw Error("invalid item grant");actor.inventory=(actor.inventory??[]).filter(value=>value.itemId!==itemId);actor.inventory.push({itemId,quantity:after});
+      } else if(event.type==="ItemTransferred"){
+        const from=actors.get(string(payload.fromActorId,"source actor ID")),to=actors.get(string(payload.toActorId,"target actor ID")),itemId=string(payload.itemId,"item ID"),fromAfter=number(payload.fromAfter,"source item quantity"),toAfter=number(payload.toAfter,"target item quantity");if(!from||!to||!Number.isSafeInteger(fromAfter)||fromAfter<0||!Number.isSafeInteger(toAfter)||toAfter<=0)throw Error("invalid item transfer");from.inventory=(from.inventory??[]).filter(value=>value.itemId!==itemId);if(fromAfter)from.inventory.push({itemId,quantity:fromAfter});to.inventory=(to.inventory??[]).filter(value=>value.itemId!==itemId);to.inventory.push({itemId,quantity:toAfter});
+      } else if(event.type==="ProgressionChanged"){
+        const actor=actors.get(string(payload.actorId,"actor ID")),progressionId=string(payload.progressionId,"progression ID"),after=number(payload.after,"progression value");if(!actor)throw Error("progression for unknown actor");actor.progression={...(actor.progression??{}),[progressionId]:after};
+      } else if(event.type==="ActorMoved"){
+        const actor=actors.get(string(payload.actorId,"actor ID"));if(!actor)throw Error("move for unknown actor");actor.locationId=string(payload.toLocationId,"location ID");
       } else if (event.type === "EncounterStarted") {
         const id = string(payload.encounterId, "encounter ID"), sessionId = string(payload.sessionId, "session ID");
         if (encounters.has(id)) throw Error(`encounter ${id} started twice`);

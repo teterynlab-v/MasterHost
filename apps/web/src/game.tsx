@@ -3,13 +3,13 @@ import { sessionSocket } from "./session-client.js";
 
 const API = (import.meta as { env?: { VITE_API_URL?: string } }).env?.VITE_API_URL ?? "http://localhost:8080/api";
 type Participant = { id: string; displayName: string; accessToken?: string };
-type Actor = { actorId: string; kind?: "npc"; label?: string; templateId?:string; worldEntityId?: string; worldEntityPath?:string;worldEntityLabel?:string;worldEntityRevision?:number;worldEntityStatus?:"current"|"missing"|"incompatible"; attributes?:Record<string,number>; resources: Record<string, number>; effects: { id: string; definitionId: string; remaining?: number }[] };
+type Actor = { actorId: string; kind?: "npc"; label?: string; templateId?:string; worldEntityId?: string; worldEntityPath?:string;worldEntityLabel?:string;worldEntityRevision?:number;worldEntityStatus?:"current"|"missing"|"incompatible"; attributes?:Record<string,number>; resources: Record<string, number>; effects: { id: string; definitionId: string; remaining?: number }[];inventory?:{itemId:string;quantity:number}[];progression?:Record<string,number>;locationId?:string };
 type Encounter = { id: string; state: "live" | "ended"; orderingPolicy: string; participants: string[]; order: string[]; currentActorId?: string; round: number; turn: number };
-type Definitions = { checks: Record<string, { label: string }>; actions: Record<string, { label: string; target: string }>; actorTemplates: Record<string, { label: string; attributes?:Record<string,number>; worldEntityKinds?: string[] }>; encounter: { orderingPolicy: string } };
+type Definitions = { checks: Record<string, { label: string }>; actions: Record<string, { label: string; target: string }>; items:Record<string,{label:string}>;progression:Record<string,{label:string}>;locations:{worldEntityKinds:string[]};actorTemplates: Record<string, { label: string; attributes?:Record<string,number>; worldEntityKinds?: string[] }>; encounter: { orderingPolicy: string } };
 type WorldActor = { id: string; kind: string; name: string; materializationPath: string };
 type GameEvent = { id: string; sequence: number; type: string; createdAt: string };
-type PendingCheck = { request: { id: string; checkId: string; difficulty: number }; resolution: CheckResolution | null };
-type CheckResolution = { outcome: "success" | "failure"; total: number; modifier: number; roll: { total: number } };
+type PendingCheck = { request: { id: string; checkId: string; difficulty?: number }; resolution: CheckResolution | null };
+type CheckResolution = { outcome?: "critical-success"|"success" | "failure"|"critical-failure"; total?: number; modifier?: number; roll?: { total: number } };
 
 async function call<T>(path: string, init?: RequestInit): Promise<T> {
   const response = await fetch(`${API}${path}`, init);
@@ -29,7 +29,7 @@ function NpcEditor({actor,template,busy,inEncounter,onEdit,onRemove}:{actor:Acto
 }
 
 export function GmGame({ session, participants, gmToken }: { session: { id: string }; participants: Participant[]; gmToken: string }) {
-  const [defs, setDefs] = useState<Definitions>({ checks: {}, actions: {}, actorTemplates: {}, encounter: { orderingPolicy: "none" } });
+  const [defs, setDefs] = useState<Definitions>({ checks: {}, actions: {},items:{},progression:{},locations:{worldEntityKinds:[]}, actorTemplates: {}, encounter: { orderingPolicy: "none" } });
   const [actorId, setActorId] = useState("");
   const [checkParticipantId, setCheckParticipantId] = useState("");
   const [templateId, setTemplateId] = useState("");
@@ -40,6 +40,8 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
   const [checkId, setCheckId] = useState("");
   const [actionId, setActionId] = useState("");
   const [difficulty, setDifficulty] = useState(14);
+  const [visibility,setVisibility]=useState("full"),[itemId,setItemId]=useState(""),[progressionId,setProgressionId]=useState(""),[locationId,setLocationId]=useState(""),[quantity,setQuantity]=useState(1);
+  const[locations,setLocations]=useState<WorldActor[]>([]);
   const [events, setEvents] = useState<GameEvent[]>([]);
   const [actors, setActors] = useState<Actor[]>([]);
   const [encounters, setEncounters] = useState<Encounter[]>([]);
@@ -48,13 +50,14 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
   const [busy, setBusy] = useState(false);
 
   async function refresh() {
-    const [nextEvents, nextActors, nextEncounters,nextWorldActors] = await Promise.all([
+    const [nextEvents, nextActors, nextEncounters,nextWorldActors,nextLocations] = await Promise.all([
       call<GameEvent[]>(`/sessions/${session.id}/events`, { headers: headers(gmToken) }),
       call<Actor[]>(`/sessions/${session.id}/actors`, { headers: headers(gmToken) }),
       call<Encounter[]>(`/sessions/${session.id}/encounters`, { headers: headers(gmToken) }),
       call<WorldActor[]>(`/sessions/${session.id}/world-actors`, { headers: headers(gmToken) }),
+      call<WorldActor[]>(`/sessions/${session.id}/locations`, { headers: headers(gmToken) }),
     ]);
-    setEvents(nextEvents); setActors(nextActors); setEncounters(nextEncounters);setWorldActors(nextWorldActors);
+    setEvents(nextEvents); setActors(nextActors); setEncounters(nextEncounters);setWorldActors(nextWorldActors);setLocations(nextLocations);
   }
   useEffect(() => {
     void call<Definitions>("/game/definitions").then(value => {
@@ -62,6 +65,7 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
       setCheckId(Object.keys(value.checks)[0] ?? "");
       setActionId(Object.keys(value.actions)[0] ?? "");
       setTemplateId(Object.keys(value.actorTemplates)[0] ?? "");
+      setItemId(Object.keys(value.items)[0]??"");setProgressionId(Object.keys(value.progression)[0]??"");
     }).catch(failure => setError(String(failure)));
     void refresh().catch(failure => setError(String(failure)));
   }, [session.id]);
@@ -121,14 +125,23 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
         {actor?.worldEntityId && <small>World entity: {actor.worldEntityLabel??worldActors.find(entity => entity.id === actor.worldEntityId)?.name??actor.worldEntityId} · {actor.worldEntityStatus??"unreconciled"}{actor.worldEntityRevision!==undefined?` at r${actor.worldEntityRevision}`:""}</small>}
         {actor ? Object.entries(actor.resources).map(([key, value]) => <div className="row" key={key}><b>{key}</b><span>{value}</span></div>) : <p className="muted">Not initialized</p>}
         {actor?.effects.map(effect => <small key={effect.id}>Effect: {effect.definitionId}{effect.remaining !== undefined ? ` (${effect.remaining})` : ""}</small>)}
+        {actor?.inventory?.map(item=><small key={item.itemId}>Item: {defs.items[item.itemId]?.label??item.itemId} × {item.quantity}</small>)}
+        {Object.entries(actor?.progression??{}).map(([id,value])=><small key={id}>{defs.progression[id]?.label??id}: {value}</small>)}
+        {actor?.locationId&&<small>Location: {locations.find(value=>value.id===actor.locationId)?.name??actor.locationId}</small>}
         {actor?.kind==="npc"&&<NpcEditor actor={actor} template={actor.templateId?defs.actorTemplates[actor.templateId]:undefined} busy={busy} inEncounter={Boolean(activeEncounter?.participants.includes(actor.actorId))} onEdit={(label,attributes)=>run(()=>authorizedPost(`/sessions/${session.id}/actors/${actor.actorId}/edit`,{label,attributes},gmToken))} onRemove={()=>run(()=>authorizedPost(`/sessions/${session.id}/actors/${actor.actorId}/remove`,{},gmToken))}/>}
       </article>;
     })}
+    <h3>Inventory, progression and location</h3>
+    <label>Actor<select value={actorId} onChange={event=>setActorId(event.target.value)}>{available.map(actor=><option key={actor.id} value={actor.id}>{actor.displayName}</option>)}</select></label>
+    {itemId&&<><label>Loot<select value={itemId} onChange={event=>setItemId(event.target.value)}>{Object.entries(defs.items).map(([id,item])=><option key={id} value={id}>{item.label}</option>)}</select></label><label>Quantity<input type="number" min="1" value={quantity} onChange={event=>setQuantity(Number(event.target.value))}/></label><button disabled={busy||!actorId} onClick={()=>void run(()=>authorizedPost(`/sessions/${session.id}/items/grant`,{actorId,itemId,quantity},gmToken))}>GRANT LOOT</button></>}
+    {progressionId&&<><label>Progression<select value={progressionId} onChange={event=>setProgressionId(event.target.value)}>{Object.entries(defs.progression).map(([id,value])=><option key={id} value={id}>{value.label}</option>)}</select></label><button disabled={busy||!actorId} onClick={()=>void run(()=>authorizedPost(`/sessions/${session.id}/progression`,{actorId,progressionId,amount:quantity},gmToken))}>AWARD</button></>}
+    {locations.length>0&&<><label>Location<select value={locationId} onChange={event=>setLocationId(event.target.value)}><option value="">Choose…</option>{locations.map(location=><option key={location.id} value={location.id}>{location.name}</option>)}</select></label><button disabled={busy||!actorId||!locationId} onClick={()=>void run(()=>authorizedPost(`/sessions/${session.id}/location`,{actorId,locationId},gmToken))}>MOVE</button></>}
     <h3>Request check</h3>
     <label>Player<select value={checkParticipantId} onChange={event => setCheckParticipantId(event.target.value)}>{availablePlayers.map(participant => <option key={participant.id} value={participant.id}>{participant.displayName}</option>)}</select></label>
     <label>Check<select value={checkId} onChange={event => setCheckId(event.target.value)}>{Object.entries(defs.checks).map(([id, check]) => <option key={id} value={id}>{check.label}</option>)}</select></label>
     <label>Difficulty<input type="number" value={difficulty} onChange={event => setDifficulty(Number(event.target.value))} /></label>
-    <button disabled={busy || !checkParticipantId || !checkId} onClick={() => void run(() => authorizedPost(`/sessions/${session.id}/checks`, { participantId: checkParticipantId, checkId, difficulty, visibility: "full" }, gmToken))}>SEND CHECK</button>
+    <label>Player visibility<select value={visibility} onChange={event=>setVisibility(event.target.value)}><option value="full">Full roll and DC</option><option value="result-only">Result, hidden DC</option><option value="roll-only">Roll, hidden outcome and DC</option><option value="hidden">Hidden result and DC</option></select></label>
+    <button disabled={busy || !checkParticipantId || !checkId} onClick={() => void run(() => authorizedPost(`/sessions/${session.id}/checks`, { participantId: checkParticipantId, checkId, difficulty, visibility }, gmToken))}>SEND CHECK</button>
 
     <h3>Action</h3>
     <label>Source actor<select value={actorId} onChange={event => setActorId(event.target.value)}>{available.map(actor => <option key={actor.id} value={actor.id}>{actor.displayName}</option>)}</select></label>
@@ -193,10 +206,10 @@ export function PlayerGame({ session, participant, onLeave }: { session: { id: s
   return <section>
     <h2>GAME LIVE</h2>
     {error && <p className="error" role="alert">{error}</p>}
-    {actor && <article><h3>Resources</h3>{Object.entries(actor.resources).map(([key, value]) => <div className="row" key={key}><b>{key}</b><span>{value}</span></div>)}{actor.effects.map(effect => <small key={effect.id}>{effect.definitionId}{effect.remaining !== undefined ? ` · ${effect.remaining} turns` : ""}</small>)}</article>}
+    {actor && <article><h3>Character state</h3>{Object.entries(actor.resources).map(([key, value]) => <div className="row" key={key}><b>{key}</b><span>{value}</span></div>)}{actor.effects.map(effect => <small key={effect.id}>{effect.definitionId}{effect.remaining !== undefined ? ` · ${effect.remaining} turns` : ""}</small>)}{actor.inventory?.map(item=><small key={item.itemId}>Item: {item.itemId} × {item.quantity}</small>)}{Object.entries(actor.progression??{}).map(([key,value])=><small key={key}>{key}: {value}</small>)}{actor.locationId&&<small>Location: {actor.locationId}</small>}</article>}
     {encounter && <article><h3>Encounter</h3>{encounter.currentActorId ? <p>Round {encounter.round} · Turn {encounter.turn} · <b>{encounter.currentActorId === participant.id ? "Your turn" : "Another actor's turn"}</b></p> : <p>Active encounter · no turn order</p>}</article>}
-    {current ? <article><h3>{current.request.checkId.toUpperCase()}</h3><p>Difficulty: <b>{current.request.difficulty}</b></p><button onClick={() => void roll(current)}>🎲 ROLL</button></article> : <p className="muted">Waiting for the GM…</p>}
-    {shownResolution && <article><h3>{shownResolution.outcome.toUpperCase()}</h3><div className="bigRoll">{shownResolution.total}</div><p>Dice {shownResolution.roll.total} + modifier {shownResolution.modifier}</p></article>}
+    {current ? <article><h3>{current.request.checkId.toUpperCase()}</h3>{current.request.difficulty!==undefined&&<p>Difficulty: <b>{current.request.difficulty}</b></p>}<button onClick={() => void roll(current)}>🎲 ROLL</button></article> : <p className="muted">Waiting for the GM…</p>}
+    {shownResolution && <article><h3>{shownResolution.outcome?.toUpperCase()??"RESOLVED"}</h3>{shownResolution.total!==undefined&&<div className="bigRoll">{shownResolution.total}</div>}{shownResolution.roll&&<p>Dice {shownResolution.roll.total}{shownResolution.modifier!==undefined?` + modifier ${shownResolution.modifier}`:""}</p>}</article>}
     <button className="secondary" onClick={() => void refresh().catch(failure => setError(String(failure)))}>Refresh state</button> <button className="secondary" onClick={onLeave}>Join another session</button>
   </section>;
 }

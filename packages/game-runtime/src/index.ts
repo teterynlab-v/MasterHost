@@ -16,20 +16,23 @@ export function rollDice(expression:string,roller:(sides:number)=>number=(s)=>ra
  const p=parseDice(expression),terms=p.terms.map(t=>{const rolls=Array.from({length:t.count},()=>roller(t.sides)),subtotal=rolls.reduce((a,b)=>a+b,0)*t.sign;return{sides:t.sides,rolls,subtotal,sign:t.sign}}),total=terms.reduce((a,t)=>a+t.subtotal,0)+p.modifier;return{expression:p.raw,terms,modifier:p.modifier,total};
 }
 export type ResultVisibility="full"|"result-only"|"roll-only"|"hidden";
-export interface CheckDefinition{id:string;label:string;dice:string;modifierField?:string}
+export type CheckOutcome="critical-success"|"success"|"failure"|"critical-failure";
+export interface CheckDefinition{id:string;label:string;dice:string;modifierField?:string;criticalSuccess?:{rollTotalAtLeast:number};criticalFailure?:{rollTotalAtMost:number}}
 export interface CheckRequest{id:string;sessionId:string;participantId:string;checkId:string;difficulty:number;visibility:ResultVisibility;status:"pending"|"resolved";createdAt:string}
-export interface CheckResolution{requestId:string;roll:DiceRoll;modifier:number;total:number;difficulty:number;outcome:"success"|"failure";resolvedAt:string}
+export interface CheckResolution{requestId:string;roll:DiceRoll;modifier:number;total:number;difficulty:number;outcome:CheckOutcome;resolvedAt:string}
 export function resolveCheck(req:CheckRequest,def:CheckDefinition,characterValues:Record<string,unknown>,roller?:(sides:number)=>number):CheckResolution{
  const roll=rollDice(def.dice,roller),modifier=def.modifierField?Number(characterValues[def.modifierField]??0):0,total=roll.total+modifier;
- return{requestId:req.id,roll,modifier,total,difficulty:req.difficulty,outcome:total>=req.difficulty?"success":"failure",resolvedAt:new Date().toISOString()};
+ const outcome:CheckOutcome=def.criticalSuccess&&roll.total>=def.criticalSuccess.rollTotalAtLeast?"critical-success":def.criticalFailure&&roll.total<=def.criticalFailure.rollTotalAtMost?"critical-failure":total>=req.difficulty?"success":"failure";
+ return{requestId:req.id,roll,modifier,total,difficulty:req.difficulty,outcome,resolvedAt:new Date().toISOString()};
 }
 export const newCheckRequest=(x:Omit<CheckRequest,"id"|"status"|"createdAt">):CheckRequest=>({...x,id:randomUUID(),status:"pending",createdAt:new Date().toISOString()});
 
 export type ActionKind="check"|"resource"|"effect"|"custom";
 export interface ActionDefinition{id:string;label:string;kind?:ActionKind;target:"self"|"actor"|"none"|"single-actor"|"multiple-actors";steps?:ActionStep[];checkId?:string;resource?:string;operation?:"add"|"subtract"|"set";amount?:number;effectId?:string}
 export interface ResourceDefinition{id:string;label:string;min?:number;max?:number;default:number}
-export interface EffectDefinition{id:string;label:string;duration?:{type:"turns"|"rounds"|"session"|"permanent";value?:number};modifiers?:Record<string,number>}
-export interface ActorRuntimeState{actorId:string;resources:Record<string,number>;effects:ActiveEffect[];kind?:"npc";label?:string;templateId?:string;worldEntityId?:string;worldEntityPath?:string;worldEntityLabel?:string;worldEntityRevision?:number;worldEntityStatus?:"current"|"missing"|"incompatible";attributes?:Record<string,number>}
+export interface EffectDefinition{id:string;label:string;duration?:{type:"turns"|"rounds"|"session"|"permanent";value?:number};modifiers?:Record<string,number>;blockedActions?:string[]}
+export interface InventoryEntry{itemId:string;quantity:number}
+export interface ActorRuntimeState{actorId:string;resources:Record<string,number>;effects:ActiveEffect[];inventory?:InventoryEntry[];progression?:Record<string,number>;locationId?:string;kind?:"npc";label?:string;templateId?:string;worldEntityId?:string;worldEntityPath?:string;worldEntityLabel?:string;worldEntityRevision?:number;worldEntityStatus?:"current"|"missing"|"incompatible";attributes?:Record<string,number>}
 export interface ActiveEffect{id:string;definitionId:string;remaining?:number;appliedAt:string;sourceActorId?:string}
 export function initializeResources(defs:Record<string,ResourceDefinition>,values:Record<string,unknown>={}):Record<string,number>{return Object.fromEntries(Object.entries(defs).map(([id,d])=>[id,Number(values[id]??d.default)]))}
 export function applyResource(def:ResourceDefinition,current:number,op:"add"|"subtract"|"set",amount:number){let n=op==="set"?amount:op==="add"?current+amount:current-amount;if(def.min!==undefined)n=Math.max(def.min,n);if(def.max!==undefined)n=Math.min(def.max,n);return n}
@@ -41,3 +44,4 @@ export * from "./encounters.js";
 export * from "./replay.js";
 export * from "./check-replay.js";
 export * from "./world-links.js";
+export * from "./inventory.js";

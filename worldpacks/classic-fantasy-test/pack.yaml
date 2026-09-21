@@ -150,19 +150,29 @@ characterCreation:
       - { fromPackId: masterhost.classic-fantasy-test, fromVersions: [0.0.9], mode: normalize, defaults: { portrait: illustrated } }
 
 checks:
-  perception: { label: Perception, dice: 1d20, modifierField: perception }
-  athletics: { label: Athletics, dice: 1d20, modifierField: athletics }
+  perception: { label: Perception, dice: 1d20, modifierField: perception, criticalSuccess: { rollTotalAtLeast: 20 }, criticalFailure: { rollTotalAtMost: 1 } }
+  athletics: { label: Athletics, dice: 1d20, modifierField: athletics, criticalSuccess: { rollTotalAtLeast: 20 }, criticalFailure: { rollTotalAtMost: 1 } }
 
 resources:
   health: { label: Health, min: 0, max: 30, default: 20 }
   mana: { label: Mana, min: 0, max: 20, default: 10 }
+items:
+  sword: { label: Sword, stackLimit: 1 }
+  lockpicks: { label: Lockpicks, stackLimit: 1 }
+  spellbook: { label: Spellbook, stackLimit: 1 }
+  healing-potion: { label: Healing Potion, stackLimit: 10 }
+progression:
+  experience: { label: Experience, min: 0, default: 0 }
+locations:
+  worldEntityKinds: [settlement]
 actorTemplates:
-  goblin: { label: Goblin, resources: { health: 8, mana: 0 }, attributes: { perception: 1, athletics: 2 }, worldEntityKinds: [creature] }
+  goblin: { label: Goblin, resources: { health: 8, mana: 0 }, attributes: { perception: 1, athletics: 2 }, inventory: [{ itemId: healing-potion, quantity: 1 }], progression: { experience: 0 }, worldEntityKinds: [creature] }
 effects:
   poisoned:
     label: Poisoned
     duration: { type: turns, value: 3 }
     modifiers: { perception: -2, athletics: -1 }
+    blockedActions: [rally]
   inspired:
     label: Inspired
     duration: { type: turns, value: 2 }

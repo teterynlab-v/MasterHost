@@ -178,20 +178,30 @@ characterCreation:
         defaults: { portrait: neon }
 
 checks:
-  intrusion: { label: Intrusion, dice: 2d6, modifierField: interface }
-  awareness: { label: Awareness, dice: 1d20, modifierField: awareness }
+  intrusion: { label: Intrusion, dice: 2d6, modifierField: interface, criticalSuccess: { rollTotalAtLeast: 12 }, criticalFailure: { rollTotalAtMost: 2 } }
+  awareness: { label: Awareness, dice: 1d20, modifierField: awareness, criticalSuccess: { rollTotalAtLeast: 20 }, criticalFailure: { rollTotalAtMost: 1 } }
 
 resources:
   health: { label: Health, min: 0, max: 30, default: 20 }
   humanity: { label: Humanity, min: 0, max: 100, default: 70 }
   ammo: { label: Ammo, min: 0, max: 30, default: 12 }
+items:
+  assault-rifle: { label: Assault Rifle, stackLimit: 1 }
+  cyberdeck: { label: Cyberdeck, stackLimit: 1 }
+  encrypted-contacts: { label: Encrypted Contacts, stackLimit: 1 }
+  ammo-pack: { label: Ammo Pack, stackLimit: 20 }
+progression:
+  streetCred: { label: Street Cred, min: 0, max: 100, default: 0 }
+locations:
+  worldEntityKinds: [district, location]
 actorTemplates:
-  drone: { label: Security Drone, resources: { health: 12, humanity: 0, ammo: 8 }, attributes: { interface: 0, awareness: 2 }, worldEntityKinds: [actor] }
+  drone: { label: Security Drone, resources: { health: 12, humanity: 0, ammo: 8 }, attributes: { interface: 0, awareness: 2 }, inventory: [{ itemId: ammo-pack, quantity: 2 }], progression: { streetCred: 0 }, worldEntityKinds: [actor] }
 effects:
   jammed:
     label: Jammed
     duration: { type: turns, value: 1 }
     modifiers: { awareness: -2 }
+    blockedActions: [spend-ammo]
   boosted:
     label: Boosted
     duration: { type: turns, value: 2 }

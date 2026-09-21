@@ -113,8 +113,8 @@ assert.deepEqual(await valid(`/sessions/${session.id}/actors/reconcile-world`,{}
 await valid(`/sessions/${session.id}/actions`, { actorId: player.id, targetActorIds: [goblin.actorId], actionId: "take-damage" }, campaign.gmToken);
 await valid(`/sessions/${session.id}/actions`, { actorId: goblin.actorId, targetActorIds: [goblin.actorId], actionId: "heal" }, campaign.gmToken);
 assert.equal((await valid(`/sessions/${session.id}/actors`, undefined, campaign.gmToken)).find(actor => actor.actorId === goblin.actorId).resources.health, 8);
-assert.equal((await call(`/sessions/${session.id}/actions`, { actorId: player.id, targetActorIds: [player.id, player.id], actionId: "rally" }, campaign.gmToken)).status, 400);
-await valid(`/sessions/${session.id}/actions`, { actorId: player.id, targetActorIds: [player.id, otherPlayer.id], actionId: "rally" }, campaign.gmToken);
+assert.equal((await call(`/sessions/${session.id}/actions`, { actorId: player.id, targetActorIds: [player.id, otherPlayer.id], actionId: "rally" }, campaign.gmToken)).status, 400);
+await valid(`/sessions/${session.id}/actions`, { actorId: otherPlayer.id, targetActorIds: [player.id, otherPlayer.id], actionId: "rally" }, campaign.gmToken);
 const rallied = await valid(`/sessions/${session.id}/actors`, undefined, campaign.gmToken);
 for (const id of [player.id, otherPlayer.id]) assert.ok(rallied.find(actor => actor.actorId === id).effects.some(effect => effect.definitionId === "inspired"));
 const before = await valid(`/sessions/${session.id}/actors`, undefined, player.accessToken);

@@ -53,6 +53,7 @@ function numeric(value: number | string, input: Record<string, number>, totals: 
 export function executeAction(context: ActionContext): { states: ActorRuntimeState[]; events: ActionEvent[] } {
   const { request, action } = context;
   if (action.id !== request.actionId) throw Error("action ID mismatch");
+  const blocking=context.actors[request.actorId]?.effects.find(effect=>context.effects[effect.definitionId]?.blockedActions?.includes(action.id));if(blocking)throw Error(`action ${action.id} blocked by effect ${blocking.definitionId}`);
   const ids = targets(request, action, context.actors);
   const states = structuredClone(context.actors);
   const events: ActionEvent[] = [{ type: "ActionRequested", payload: { sessionId: request.sessionId, actionId: action.id, actorId: request.actorId, targetActorIds: ids } }];
@@ -68,9 +69,9 @@ export function executeAction(context: ActionContext): { states: ActorRuntimeSta
         if (!Number.isFinite(base)) throw Error("invalid check modifier");
         const modifier = def.modifierField ? effectiveModifier(base, def.modifierField, states[request.actorId]!.effects, context.effects) : 0;
         const difficulty = numeric(step.check.against ?? "input.difficulty", request.inputs ?? {}, totals, targetId ? states[targetId] : undefined);
-        const total = roll.total + modifier; previousOutcome = total >= difficulty ? "success" : "failure"; totals[step.check.id] = total;
+        const total = roll.total + modifier,outcome=def.criticalSuccess&&roll.total>=def.criticalSuccess.rollTotalAtLeast?"critical-success":def.criticalFailure&&roll.total<=def.criticalFailure.rollTotalAtMost?"critical-failure":total>=difficulty?"success":"failure";previousOutcome=outcome.endsWith("success")?"success":"failure"; totals[step.check.id] = total;
         events.push({ type: "DiceRolled", payload: { sessionId: request.sessionId, actionId: action.id, actorId: request.actorId, targetActorId: targetId, roll } });
-        events.push({ type: "CheckResolved", payload: { sessionId: request.sessionId, actionId: action.id, actorId: request.actorId, targetActorId: targetId, checkId: step.check.id, total, difficulty, outcome: previousOutcome } });
+        events.push({ type: "CheckResolved", payload: { sessionId: request.sessionId, actionId: action.id, actorId: request.actorId, targetActorId: targetId, checkId: step.check.id, total, difficulty, outcome } });
       } else if ("roll" in step) {
         const roll = rollDice(step.roll.dice, context.roller); totals[step.roll.id] = roll.total;
         events.push({ type: "DiceRolled", payload: { sessionId: request.sessionId, actionId: action.id, actorId: request.actorId, targetActorId: targetId, rollId: step.roll.id, roll } });

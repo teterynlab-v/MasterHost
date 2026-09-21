@@ -1,84 +1,66 @@
-# M3 Status — generic runtime baseline (2026-09-21)
+# M3 Status — canonical game runtime complete locally (2026-09-21)
 
-The existing declarative actions, target policies, Encounter ordering/turns, and effect ticking/expiry slice are implemented in `packages/game-runtime` and verified with tests plus a live PostgreSQL smoke. Runtime mutations use one transaction for events and materialized state, with actor and Encounter version checks. See `RUNTIME_CONCURRENCY_DECISION.md` for the conflict policy. See `PROJECT_STATUS.md` and `ACTION_RUNTIME_DECISION.md` for limits.
+**Gate: passed for both bundled World Packs on a clean local PostgreSQL database.** A GM can request a Check, a player rolls through the server, both receive the result allowed by the Pack/GM visibility policy, and an active Encounter survives browser reconnect and an actual server process restart.
 
-## Implemented
+## Source delivered
 
-### Dice / Checks
-- Generic Dice parser and auditable server roll.
-- Pack-defined Checks.
-- Pack loading validates executable dice syntax and bounded roll complexity (at most 100 dice across 20 terms, 256 expression characters, and a bounded modifier), and requires numeric Character fields for Check modifiers and attribute Encounter ordering.
-- CheckRequested → DiceRolled → CheckResolved.
-- Character modifiers.
-- Persistent game events; Check request and resolution update their events in transactions. An optional Session-scoped idempotency key stores a Check request response with its event, so concurrent retries return one request. Eight concurrent roll requests return the same saved resolution in the live smoke.
+### M3.0 — generic primitives
 
-### Generic Action layer
-- `ActionDefinition` with kinds: check/resource/effect/custom.
-- Generic Resources.
-- Generic Effects.
-- ActiveEffect duration model.
-- Effect modifiers applied to Checks.
-- Resource min/max clamping.
-- Runtime Actor state persisted per Session and Actor, including NPCs.
-- Pack loading rejects unexecutable legacy Actions, mixed/unknown declarative step fields, unknown numeric references or conditional outputs, missing target actors, out-of-range Resource defaults, incomplete Effect durations, and Effect modifiers without a numeric Character or Actor field. `custom` remains a domain kind but has no Pack executor and is rejected at load.
-- Action and Encounter commands reject stale actor/Encounter versions with 409 and roll back their events.
-- Pack-defined Encounter ordering; fixed, rolled, attribute, custom, and no-turn policies run through the same commands.
-- PostgreSQL permits only one live Encounter per Session; concurrent starts leave one committed event sequence.
-- Action, Encounter, NPC creation, Actor initialization and Check creation commands support an optional Session-scoped idempotency key, persisted atomically with their events and result.
-- GM can instantiate a Session NPC from a Pack actor template. NPC resources and attributes are Pack-defined; NPCs use the same Action and Encounter engine as player actors.
-- GM can edit an NPC label and its Pack-declared numeric attributes, then remove the NPC after it leaves any live Encounter. Both mutations are event sourced, version checked, idempotent and replayable; resources/effects remain Action controlled. See `NPC_LIFECYCLE_DECISION.md`.
-- NPCs can optionally link to compatible entities of their Campaign's materialized World. A Session permits one Actor per linked entity; Fantasy and Cyberpunk materialize compatible actor entities through their Pack template graphs.
-- Linked NPCs record a stable World path, observed label, revision and status. A GM-only idempotent reconciliation command marks links current, missing or incompatible without changing runtime mechanics; reconciliation is replayable. See `WORLD_LINK_RECONCILIATION_DECISION.md`.
-- GM can add initialized Actors to, or remove non-current Actors from, a live Encounter. The roster event and Encounter version update are atomic; late entrants append to the established order. See `WORLD_ACTOR_ENCOUNTER_DECISION.md`.
-- GM-only runtime verification reconstructs Actor and Encounter state from version-1 events and compares it with persisted materialized state in one database snapshot.
-- GM can create a checkpoint only after full replay matches materialized state. Checkpoint verification replays subsequent events. An offline command can repair divergent Actor/Encounter rows for a finished Session and records an audit row; see `RUNTIME_RECOVERY_DECISION.md`.
-- Standalone pending and resolved Checks now have a separate event replay verifier and offline finished-Session repair with audit. The GM-only verification endpoint reports mismatches; Action-scoped rolls are excluded from this Check projection. See `CHECK_RECOVERY_DECISION.md`.
+- `ActorRuntimeState` carries Pack-defined attributes, resources, effects, inventory, progression and location.
+- Actions, Checks, Effects, Items, Encounters, Turns, Locations and Events have generic runtime representations. No runtime rule requires health, levels, classes, initiative or combat.
+- Player Actors, Session NPCs and World-linked NPCs use the same runtime engine.
 
-### Pack examples
+### M3.1 — dice and Checks
 
-Classic Fantasy:
-- Health, Mana.
-- Poisoned, Inspired.
-- Damage, Heal, Poison.
-- Rally applies Inspired to multiple actors.
-- Goblin actor template with bounded starting resources and action attributes.
+- Packs define bounded dice expressions, Character modifiers and raw-roll critical success/failure thresholds.
+- GM requests persist `CheckRequested`; the server creates the roll and persists `DiceRolled` plus `CheckResolved`.
+- `full`, `result-only`, `roll-only` and `hidden` policies redact the player HTTP and WebSocket representations while the GM event stream retains the authoritative record.
+- Concurrent roll requests converge on the first persisted resolution.
 
-Cyberpunk:
-- Health, Humanity, Ammo.
-- Jammed, Boosted.
-- Spend Ammo, Damage, Jam.
-- Signal Boost applies Boosted to multiple actors.
-- Security Drone actor template with its own resources and attributes.
+### M3.2 — resources and Effects
 
-Same runtime engine handles both settings.
+- Pack resources have defaults and optional bounds. Actions add, subtract or set them.
+- Effects can modify Check fields, block declared Actions, and expire by turn, round, Session or Pack-defined permanence.
+- Pack loading rejects unknown numeric fields, resources, Actions, invalid duration definitions and unexecutable Action graphs.
 
-Both Packs now declare optional numeric Character abilities for their Checks and actions. Existing saved Characters without these fields still resolve with a zero modifier; the new Character Builder step allows players to enter values. Cross-setting conformance tests execute each Pack's Check, composed Action and Encounter policy through the same runtime functions.
+### M3.3 — Encounters and Turns
 
-### UI
-- GM can initialize party runtime state.
-- GM sees Resources/Effects.
-- GM can request Checks.
-- GM can apply generic Actions.
-- GM can select multiple Action targets, start/end Encounters, and advance turns when the Pack defines an order.
-- GM can add NPCs, choose them as Action source or target, and include them in Encounters.
-- GM can edit and delete an NPC from its Actor card; deletion is disabled while that NPC is in the active Encounter.
-- GM can choose a materialized World entity when adding an NPC and adjust an active Encounter's roster.
-- GM can reconcile all linked NPCs and see each link's observed World label, status and revision.
-- Player can see own Resources/Effects, roll Checks, and see Encounter/turn state.
-- GM and player views restore live state after reload; both can move on after a finished Session.
-- Game log records runtime events.
+- The Pack selects `none`, `fixed`, `rolled`, `attribute` or `custom` ordering. A no-order Pack does not emit turn events.
+- Encounter start, roster changes, turn/round advance and end are event sourced and version checked.
+- PostgreSQL permits one live Encounter per Session; reconnect and restart read the persisted live state.
 
-The Fantasy browser flow verified a two-target Rally, effect ticking on turn advance, current-player changes, Encounter restore after reload, and Session finish. The Cyberpunk browser flow verified an active no-turn Encounter on GM and player screens; the live API smoke verified two-target Signal Boost and absence of TurnStarted events.
+### M3.4 — inventory, loot, progression and location
 
-A later Fantasy browser flow verified adding Goblin, an NPC-sourced action against a player, a player-to-NPC turn transition, and Session finish. A further browser flow linked Goblin to a generated World creature, added and removed it in a live Encounter without changing the current turn, then finished the Session. Both Pack API smokes verify linked NPCs and roster changes. The NPC lifecycle slice then edited a Goblin label and Pack-declared attributes, retained the edit after browser reload, and removed the NPC. Both Pack API smokes passed edit/removal and replay verification.
+- Packs define Items and stack limits, progression tracks and bounds, and compatible materialized World kinds for Locations.
+- Character/NPC starting state, GM loot grants, atomic Actor-to-Actor transfers, progression changes and movement are persisted with events and actor version checks.
+- Pack validation rejects unknown, duplicate and over-limit starting Items, unknown or out-of-range progression, and incompatible Location kinds.
 
-On 2026-09-21, the Fantasy browser created a Character through the three-step Pack schema, entered Perception 2 and Athletics 3, and reached the Session lobby. The Fantasy and Cyberpunk PostgreSQL API smokes exercised numeric Check modifiers and Pack actions; both M0 persistence/ZIP smokes remained green. The full suite passed 52 tests, TypeScript passed, and the web production build passed. This verifies the two bundled Packs and local runtime; it is not acceptance of arbitrary third-party Packs.
+### M3.5 — event stream and recovery
 
-The Check recovery slice passed 54 tests, TypeScript, the web build, both Pack API smokes with live PostgreSQL Check verification, and an isolated PostgreSQL corruption/repair smoke. No browser UI changed in this slice. Database Check timestamps are outside comparison; see the decision record.
+- Inventory, progression and movement add `ItemGranted`, `ItemTransferred`, `ProgressionChanged` and `ActorMoved` to the existing Check, Action, Effect and Encounter stream.
+- Runtime replay reconstructs the materialized Actor and Encounter state. Verified snapshots allow replay from a checkpoint.
+- GM-only verification compares replay with one PostgreSQL snapshot. Existing offline repair remains limited to finished Sessions and records an audit entry.
 
-The World-link reconciliation slice passed 59 tests, TypeScript, the web build and both Pack PostgreSQL smokes. The live smokes changed a linked entity name, reconciled with idempotency, preserved the NPC's independent label and passed full/checkpoint replay. Unit coverage exercised missing, reappeared and incompatible paths. The Fantasy browser displayed the new World label/revision and retained it after reload.
+## Test evidence
 
-## Next architecture step
+- TypeScript project check: pass.
+- Vitest: 22 files, 65 tests passed.
+- Web production build: pass.
+- Fantasy runtime regression smoke: pass, including authorization, concurrent Check resolution, Actions, blocked Action, Encounter and Effect lifecycle.
+- Cyberpunk runtime regression smoke: pass, including NPCs, multiple targets and no-turn Encounter behavior.
 
-1. Add multi-node realtime delivery. Check repair and Actor/Encounter repair remain separate stopped-server commands; checkpoints cover Actor/Encounter state only.
-2. Extend Pack validation for future capabilities when their execution semantics are defined; arbitrary third-party Packs and custom Action executors remain outside this verified slice.
+The final checks used the installed TypeScript, Vitest and Vite binaries directly. The local pnpm wrapper attempted an automatic install and rejected esbuild's ignored build script before any project command ran.
+
+## Live runtime proof
+
+- A clean temporary PostgreSQL database ran the generic two-phase M3 acceptance for Classic Fantasy and Cyberpunk.
+- For each Pack, the create phase made two Character-backed Actors, granted and transferred Pack loot, changed Pack progression, moved an Actor to a compatible materialized World Location, resolved a redacted Check, proved an Effect blocked a Pack Action, started an Encounter and created a runtime snapshot.
+- The server process was stopped and started again before each verify phase. Readback recovered inventory, progression, location, redacted Check data, event history and the live Encounter; `/runtime/verify` matched replay to materialized state.
+- Browser proof used the Cyberpunk Pack in separate GM/player tabs. The player completed the Pack Character builder, joined the lobby and entered LIVE. The GM granted Ammo Pack, awarded Street Cred, moved the Actor to Nightshift Clinic and sent a result-only Check. The player saw the outcome and total without dice or DC. Both tabs were reloaded and still showed the active no-order Encounter and persisted Actor state; the Encounter and Session then ended cleanly.
+
+## Limits beyond M3
+
+- The evidence certifies the two bundled Packs, not arbitrary third-party Packs or custom Action executors.
+- Realtime delivery is process-local; multi-node fan-out is still required for horizontally scaled hosting.
+- Account-backed ownership, production authorization and hosted Realm administration remain later product work.
+- The two-hour real playtest and full GM/player usability gate belong to M4.
