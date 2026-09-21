@@ -27,6 +27,10 @@ describe("M17 universe catalog API", () => {
     expect(assessment.json()).toMatchObject({ passed: false, diagnostics: expect.arrayContaining([expect.objectContaining({ code: "deep-universe.minimum" })]) });
     expect((await app.inject({ method: "GET", url: "/api/pack-projects/draft-b/deep-universe", headers: { "x-realm": "realm-a" } })).statusCode).toBe(404);
     expect(validateWorldPackDocument(incomplete).valid).toBe(false);
+    const liveDraft = completeDeepUniverseDocument(entries[0].targetPack);
+    liveDraft.universe!.content.npcs.pop();
+    const liveAssessment = await app.inject({ method: "POST", url: "/api/pack-projects/draft-a/deep-universe", headers: { "x-realm": "realm-a", "content-type": "application/json" }, payload: { document: liveDraft } });
+    expect(liveAssessment.json()).toMatchObject({ passed: false, diagnostics: expect.arrayContaining([expect.objectContaining({ path: "universe.content.npcs" })]) });
 
     projects.push(project("published-a", "realm-a", "published", completeDeepUniverseDocument(entries[0].targetPack)));
     const ready = await app.inject({ method: "GET", url: "/api/universes/classic-fantasy", headers: { "x-realm": "realm-a" } });

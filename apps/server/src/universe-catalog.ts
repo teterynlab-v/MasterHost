@@ -1,5 +1,5 @@
 import type { FastifyInstance } from "fastify";
-import { assessDeepUniverse, resolveUniverseCatalog, type UniverseCatalogEntry, type WorldPackDocument, type WorldPackProject } from "@masterhost/worldpack-sdk";
+import { assessDeepUniverse, resolveUniverseCatalog, WorldPackDocumentSchema, type UniverseCatalogEntry, type WorldPackDocument, type WorldPackProject } from "@masterhost/worldpack-sdk";
 
 interface PackReader {
   list(realmId: string): Promise<WorldPackProject[]>;
@@ -32,5 +32,10 @@ export async function registerUniverseCatalog(app: FastifyInstance, dependencies
     const realm = await realmFor(request), project = await dependencies.packs.get(request.params.id);
     if (!project || project.realmId !== realm.id) throw fail("Pack project not found", 404);
     return assessDeepUniverse(project.document);
+  });
+  app.post("/api/pack-projects/:id/deep-universe", async (request: any) => {
+    const realm = await realmFor(request), project = await dependencies.packs.get(request.params.id);
+    if (!project || project.realmId !== realm.id) throw fail("Pack project not found", 404);
+    return assessDeepUniverse(WorldPackDocumentSchema.parse(request.body?.document));
   });
 }
