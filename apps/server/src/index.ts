@@ -1,5 +1,5 @@
-import Fastify from"fastify";import cors from"@fastify/cors";import{randomUUID}from"node:crypto";import{resolve,join}from"node:path";import{fileURLToPath}from"node:url";import{readFile}from"node:fs/promises";
-import{loadWorldPack,validateWorldPack,createStarterPack,validateWorldPackDocument,toLoadedWorldPack,packSource,WorldPackDocumentSchema}from"@masterhost/worldpack-sdk";import type{PackDiagnostic,WorldPackProject}from"@masterhost/worldpack-sdk";import{buildDescriptor}from"@masterhost/descriptor";
+import Fastify from"fastify";import cors from"@fastify/cors";import{randomUUID}from"node:crypto";import{resolve,join}from"node:path";import{fileURLToPath}from"node:url";import{readFile,readdir}from"node:fs/promises";
+import{loadWorldPack,validateWorldPack,assessOfficialPack,createStarterPack,validateWorldPackDocument,toLoadedWorldPack,packSource,WorldPackDocumentSchema}from"@masterhost/worldpack-sdk";import type{LoadedWorldPack,PackDiagnostic,WorldPackProject}from"@masterhost/worldpack-sdk";import{buildDescriptor}from"@masterhost/descriptor";
 import{compileWorld,compileSatisfying,customizeValue,assignEntityImage,regenerateWorld,generationReport,explainValue,compareWorlds,scopeSummary,preserveCustomByPath,assertUniqueMaterializationPaths,createWorldEntity,updateWorldEntity,editWorldValue,worldDependencyGraph,entityRemovalImpact,removeWorldEntity,entityRegenerationImpact,regenerateWorldEntity}from"@masterhost/world-compiler";
 import{assetRoles}from"@masterhost/domain";import type{WorldArtSet}from"@masterhost/domain";
 import{WorldRepository,PackProjectRepository,exportMhWorldZip,importMhWorldZipWithAssets,exportMhPack,importMhPack,withMigrationLock,assetChecksum,validateWorldImage}from"@masterhost/persistence";import{registerRuntime}from"./runtime.js";
@@ -10,6 +10,7 @@ app.addContentTypeParser("application/vnd.masterhost.pack+zip",{parseAs:"buffer"
 app.addContentTypeParser("application/octet-stream",{parseAs:"buffer",bodyLimit:2_000_000},(_req,body,done)=>done(null,body));
 const repositoryRoot=fileURLToPath(new URL("../../../",import.meta.url));
 const pack=await loadWorldPack(resolve(repositoryRoot,process.env.WORLD_PACK_PATH??"worldpacks/classic-fantasy-test"));
+const officialPacks=new Map<string,LoadedWorldPack>();for(const entry of await readdir(resolve(repositoryRoot,"worldpacks"),{withFileTypes:true})){if(!entry.isDirectory())continue;const candidate=await loadWorldPack(resolve(repositoryRoot,"worldpacks",entry.name));if(!candidate.manifest.official)continue;const assessment=assessOfficialPack(candidate);if(!assessment.passed)throw Error(`Official Pack ${candidate.manifest.id} failed quality assessment: ${assessment.errors.join("; ")}`);officialPacks.set(candidate.manifest.id,candidate)}
 const databaseUrl=process.env.DATABASE_URL??"postgresql://masterhost:masterhost@localhost:5432/masterhost";
 const repo=new WorldRepository(databaseUrl);
 const packProjects=new PackProjectRepository(databaseUrl);
@@ -83,7 +84,7 @@ app.post("/api/worlds/:id/fork",async(req:any)=>{const w=await must(req.params.i
 app.get("/api/worlds/:id/export",async(req:any,reply)=>{const w=await must(req.params.id,req),bytes=exportMhWorldZip(w,await repo.assets(w.id));reply.header("content-type","application/vnd.masterhost.world+zip");reply.header("content-disposition",`attachment; filename="${w.name.replace(/[^a-z0-9]+/gi,"-").toLowerCase()}.mhworld"`);return reply.send(Buffer.from(bytes))});
 
 app.masterhostPack=pack;
-await withMigrationLock(databaseUrl,async()=>{await repo.migrate();await packProjects.migrate();await registerHosted(app,{databaseUrl,defaultRealmId:realmId,bundledPack:pack,worlds:repo,packs:packProjects});app.masterhostPack=new Proxy(pack,{get(target,key,receiver){return Reflect.get(app.masterhostContext?.()?.pack??target,key,receiver)}});await registerRuntime(app,{db:databaseUrl,realmId})});
+await withMigrationLock(databaseUrl,async()=>{await repo.migrate();await packProjects.migrate();await registerHosted(app,{databaseUrl,defaultRealmId:realmId,bundledPack:pack,officialPacks,worlds:repo,packs:packProjects});app.masterhostPack=new Proxy(pack,{get(target,key,receiver){return Reflect.get(app.masterhostContext?.()?.pack??target,key,receiver)}});await registerRuntime(app,{db:databaseUrl,realmId})});
 
 app.setErrorHandler((err,req,reply)=>{req.log.error(err);const error=err instanceof Error?err:new Error(String(err));reply.code((error as Error&{statusCode?:number}).statusCode??400).send({error:"masterhost_error",message:error.message})});
 await app.listen({host:"0.0.0.0",port:Number(process.env.PORT??8080)});

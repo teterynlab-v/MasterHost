@@ -1,0 +1,14 @@
+id: masterhost.gothic-horror
+name: Gothic Horror
+version: 1.0.0
+schemaVersion: "0.1"
+defaultArtSet: standard
+entryTemplate: world.root
+description: Stormbound estates, secret societies, tragic monsters, occult investigations, and candlelit dread.
+publisher: MasterHost
+official: true
+contentRating: mature
+license:
+  spdx: CC-BY-4.0
+  attribution: Gothic Horror original setting content and artwork © MasterHost contributors.
+  source: https://creativecommons.org/licenses/by/4.0/

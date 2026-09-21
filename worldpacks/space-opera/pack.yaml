@@ -1,0 +1,674 @@
+questions:
+  - id: world.tone
+    label: Campaign tone
+    type: choice
+    default: heroic
+    options:
+      - value: heroic
+        label: Heroic
+      - value: tense
+        label: Tense
+      - value: tragic
+        label: Tragic
+  - id: world.threat
+    label: Threat level
+    type: choice
+    default: high
+    options:
+      - value: low
+        label: Low
+      - value: medium
+        label: Medium
+      - value: high
+        label: High
+  - id: world.environment
+    label: Dominant environment
+    type: choice
+    default: core-world
+    options:
+      - value: core-world
+        label: Core World
+      - value: frontier
+        label: Frontier
+      - value: uncharted
+        label: Uncharted
+  - id: world.scarcity
+    label: Resource pressure
+    type: choice
+    default: rationed
+    options:
+      - value: abundant
+        label: Abundant
+      - value: rationed
+        label: Rationed
+      - value: isolated
+        label: Isolated
+generators:
+  region.count:
+    type: integer-range
+    min: 2
+    max: 3
+  region.names:
+    type: values
+    values:
+      - Asterion
+      - Vega Crown
+      - The Myriad
+      - Orison Drift
+      - Khepri Verge
+  settlement.names:
+    type: values
+    values:
+      - Port Meridian
+      - Lumen Station
+      - Farpoint
+      - Helios Ring
+      - New Carthage
+  location.names:
+    type: values
+    values:
+      - The Sapphire Gate
+      - Zero-G Basilica
+      - Ghost Moon Vault
+      - Crown Nebula
+      - Pilgrim Array
+  creature.names:
+    type: values
+    values:
+      - Void Manta
+      - Crystal Leviathan
+      - Rift Stalker
+      - Solar Wyrm
+      - Echo Swarm
+  npc.names:
+    type: values
+    values:
+      - Captain Ilya Voss
+      - Envoy Nami Kade
+      - Doctor Quill
+      - Rook Seven
+      - Admiral Sen
+  faction.names:
+    type: values
+    values:
+      - Solar Concord
+      - Free Captains
+      - The Mnemonic Court
+  event.names:
+    type: values
+    values:
+      - The Gate Awakens
+      - A Moon Vanishes
+      - The Concord Fractures
+  encounter.names:
+    type: values
+    values:
+      - Battle at Farpoint
+      - Through the Rift
+      - Mutiny on Lumen
+  item.names:
+    type: values
+    values:
+      - Plasma Carbine
+      - Survey Rig
+      - Gate Key
+      - Med Gel
+      - Vacuum Armor
+      - Drone Toolkit
+      - Concord Beacon
+  economy:
+    type: weighted-table
+    entries:
+      - value: trade
+        weight: 35
+      - value: craft
+        weight: 30
+      - value: service
+        weight: 20
+      - value: smuggling
+        weight: 15
+  danger:
+    type: integer-range
+    min: 1
+    max: 5
+traits:
+  region.threatened:
+    id: region.threatened
+    when:
+      eq:
+        - descriptor: world.threat
+        - high
+    addTags:
+      - dangerous
+    set:
+      alert: true
+  location.scarce:
+    id: location.scarce
+    when:
+      ne:
+        - descriptor: world.scarcity
+        - abundant
+    addTags:
+      - contested
+    set:
+      supplies: limited
+templates:
+  world.root:
+    kind: sector
+    values:
+      name:
+        value: The Meridian Reach
+      tone:
+        descriptor: world.tone
+        default: heroic
+      environment:
+        descriptor: world.environment
+        default: core-world
+      scarcity:
+        descriptor: world.scarcity
+        default: rationed
+    components:
+      regions:
+        template: region.standard
+        count:
+          generator: region.count
+      faction:
+        template: faction.major
+      encounter:
+        template: encounter.signature
+      event:
+        template: event.opening
+  region.standard:
+    kind: star-system
+    traits:
+      - region.threatened
+    values:
+      name:
+        generator: region.names
+      threat:
+        descriptor: world.threat
+        default: high
+      danger:
+        generator: danger
+    components:
+      settlements:
+        template: settlement.standard
+        count: 2
+      locations:
+        template: location.standard
+        count: 2
+      creatures:
+        template: creature.standard
+        count: 2
+      npc:
+        template: npc.standard
+      item:
+        template: item.signature
+  settlement.standard:
+    kind: settlement
+    tags:
+      - community
+    values:
+      name:
+        generator: settlement.names
+      economy:
+        generator: economy
+      environment:
+        descriptor: world.environment
+        default: core-world
+    components: {}
+  location.standard:
+    kind: location
+    tags:
+      - adventure-site
+    traits:
+      - location.scarce
+    values:
+      name:
+        generator: location.names
+      feature:
+        descriptor: world.environment
+        default: core-world
+    components: {}
+  creature.standard:
+    kind: creature
+    tags:
+      - threat
+    values:
+      name:
+        generator: creature.names
+      danger:
+        generator: danger
+    components: {}
+  npc.standard:
+    kind: npc
+    tags:
+      - contact
+    values:
+      name:
+        generator: npc.names
+      agenda:
+        generator: economy
+    components: {}
+  item.signature:
+    kind: item
+    tags:
+      - treasure
+    values:
+      name:
+        generator: item.names
+      scarcity:
+        descriptor: world.scarcity
+        default: rationed
+    components: {}
+  faction.major:
+    kind: faction
+    tags:
+      - major-faction
+    values:
+      name:
+        generator: faction.names
+      agenda:
+        generator: economy
+    components: {}
+  encounter.signature:
+    kind: encounter
+    tags:
+      - set-piece
+    values:
+      name:
+        generator: encounter.names
+      threat:
+        descriptor: world.threat
+        default: high
+    components: {}
+  event.opening:
+    kind: event
+    tags:
+      - campaign-hook
+    values:
+      name:
+        generator: event.names
+      tone:
+        descriptor: world.tone
+        default: heroic
+    components: {}
+relations:
+  - id: settlement-route
+    type: connectedTo
+    from:
+      kind: settlement
+    to:
+      kind: settlement
+    mode: chain
+    bidirectional: true
+  - id: faction-influence
+    type: influencedBy
+    from:
+      kind: star-system
+    to:
+      kind: faction
+      tags:
+        - major-faction
+    mode: each-to-first
+constraints:
+  - id: regional-depth
+    type: entity-count
+    query:
+      kind: star-system
+    min: 2
+  - id: adventure-sites
+    type: entity-count
+    query:
+      kind: location
+    min: 4
+  - id: routes-exist
+    type: relation-count
+    relation: connectedTo
+    min: 3
+dependencies: []
+characterCreation:
+  schemaVersion: "1"
+  steps:
+    - id: identity
+      title: Identity
+      fields:
+        - id: name
+          label: Name
+          type: text
+          required: true
+          minLength: 2
+          maxLength: 60
+    - id: calling
+      title: Calling
+      fields:
+        - id: calling
+          label: Calling
+          type: choice
+          required: true
+          options:
+            - value: ace
+              label: Ace
+            - value: envoy
+              label: Envoy
+            - value: tech
+              label: Tech
+    - id: aptitudes
+      title: Aptitudes
+      fields:
+        - id: nerve
+          label: Nerve
+          type: number
+          min: -2
+          max: 5
+          default: 1
+        - id: insight
+          label: Insight
+          type: number
+          min: -2
+          max: 5
+          default: 1
+        - id: command
+          label: Command
+          type: number
+          min: -2
+          max: 5
+          default: 1
+    - id: signature
+      title: Signature
+      fields:
+        - id: signature
+          label: Signature approach
+          type: choice
+          required: true
+          default: bold
+          options:
+            - value: bold
+              label: Bold
+            - value: careful
+              label: Careful
+            - value: compassionate
+              label: Compassionate
+        - id: portrait
+          label: Portrait
+          type: asset
+          required: true
+          default: standard
+          options:
+            - value: standard
+              label: Space Opera portrait
+            - value: silhouette
+              label: Silhouette
+  calculated:
+    - id: readiness
+      operation: sum
+      fields:
+        - nerve
+        - insight
+        - command
+  starting:
+    progression:
+      renown: 0
+      experience: 0
+    resources:
+      integrity: 18
+      focus: 10
+      charge: 12
+    inventory:
+      - id: weapon
+        quantity: 1
+        when:
+          field: calling
+          equals: ace
+      - id: kit
+        quantity: 1
+        when:
+          field: calling
+          equals: envoy
+      - id: relic
+        quantity: 1
+        when:
+          field: calling
+          equals: tech
+      - id: supply
+        quantity: 2
+    traits:
+      - id: trained-ace
+        when:
+          field: calling
+          equals: ace
+      - id: trained-envoy
+        when:
+          field: calling
+          equals: envoy
+      - id: trained-tech
+        when:
+          field: calling
+          equals: tech
+    assets:
+      - id: portrait
+        value: assets/ui/portrait.svg
+  portability:
+    rules: []
+checks:
+  nerve:
+    label: Nerve
+    dice: 1d20
+    modifierField: nerve
+    criticalSuccess:
+      rollTotalAtLeast: 20
+    criticalFailure:
+      rollTotalAtMost: 1
+  insight:
+    label: Insight
+    dice: 2d6
+    modifierField: insight
+    criticalSuccess:
+      rollTotalAtLeast: 12
+    criticalFailure:
+      rollTotalAtMost: 2
+  command:
+    label: Command
+    dice: 1d20
+    modifierField: command
+    criticalSuccess:
+      rollTotalAtLeast: 20
+    criticalFailure:
+      rollTotalAtMost: 1
+resources:
+  integrity:
+    label: Integrity
+    min: 0
+    max: 24
+    default: 18
+  focus:
+    label: Focus
+    min: 0
+    max: 16
+    default: 10
+  charge:
+    label: Charge
+    min: 0
+    max: 20
+    default: 12
+items:
+  weapon:
+    label: Plasma Carbine
+    stackLimit: 1
+  kit:
+    label: Survey Rig
+    stackLimit: 1
+  relic:
+    label: Gate Key
+    stackLimit: 1
+  supply:
+    label: Med Gel
+    stackLimit: 10
+  armor:
+    label: Vacuum Armor
+    stackLimit: 1
+  tool:
+    label: Drone Toolkit
+    stackLimit: 1
+  token:
+    label: Concord Beacon
+    stackLimit: 1
+progression:
+  renown:
+    label: Renown
+    min: 0
+    max: 100
+    default: 0
+  experience:
+    label: Experience
+    min: 0
+    default: 0
+locations:
+  worldEntityKinds:
+    - settlement
+    - location
+actorTemplates:
+  adversary:
+    label: Void Manta
+    resources:
+      integrity: 10
+      focus: 0
+      charge: 0
+    attributes:
+      nerve: 2
+      insight: 0
+      command: 1
+    inventory:
+      - itemId: weapon
+        quantity: 1
+    progression:
+      renown: 0
+      experience: 0
+    worldEntityKinds:
+      - creature
+  contact:
+    label: Captain Ilya Voss
+    resources:
+      integrity: 18
+      focus: 10
+      charge: 12
+    attributes:
+      nerve: 0
+      insight: 2
+      command: 2
+    inventory:
+      - itemId: kit
+        quantity: 1
+    progression:
+      renown: 5
+      experience: 0
+    worldEntityKinds:
+      - npc
+  elite:
+    label: Crystal Leviathan
+    resources:
+      integrity: 18
+      focus: 10
+      charge: 12
+    attributes:
+      nerve: 3
+      insight: 2
+      command: 2
+    inventory:
+      - itemId: relic
+        quantity: 1
+    progression:
+      renown: 10
+      experience: 5
+    worldEntityKinds:
+      - creature
+effects:
+  suppressed:
+    label: Suppressed
+    duration:
+      type: turns
+      value: 2
+    modifiers:
+      nerve: -2
+    blockedActions:
+      - inspire
+  overclocked:
+    label: Overclocked
+    duration:
+      type: rounds
+      value: 2
+    modifiers:
+      insight: 2
+  shielded:
+    label: Shielded
+    duration:
+      type: turns
+      value: 1
+    modifiers:
+      command: 2
+actions:
+  basic-attack:
+    label: Use Plasma Carbine
+    target: single-actor
+    steps:
+      - check:
+          id: nerve
+          against: input.difficulty
+      - roll:
+          id: impact
+          dice: 1d6
+        when:
+          previousOutcome: success
+      - resource:
+          target: target
+          resource: integrity
+          operation: subtract
+          value: impact.total
+        when:
+          previousOutcome: success
+  recover:
+    label: Recover Integrity
+    kind: resource
+    target: self
+    resource: integrity
+    operation: add
+    amount: 3
+  hinder:
+    label: Suppressed
+    kind: effect
+    target: actor
+    effectId: suppressed
+  inspire:
+    label: Overclocked
+    target: multiple-actors
+    steps:
+      - effect:
+          target: target
+          id: overclocked
+  guard:
+    label: Shielded
+    kind: effect
+    target: self
+    effectId: shielded
+  signature-move:
+    label: Signature Move
+    target: single-actor
+    steps:
+      - check:
+          id: insight
+          against: input.difficulty
+      - effect:
+          target: target
+          id: suppressed
+        when:
+          previousOutcome: success
+  pressure:
+    label: Spend Charge
+    kind: resource
+    target: self
+    resource: charge
+    operation: subtract
+    amount: 1
+encounter:
+  orderingPolicy: attribute
+  attributeField: command

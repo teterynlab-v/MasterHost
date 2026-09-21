@@ -1,0 +1,14 @@
+id: masterhost.cyberpunk
+name: Cyberpunk
+version: 1.0.0
+schemaVersion: "0.1"
+defaultArtSet: standard
+entryTemplate: world.root
+description: Neon megacities, predatory corporations, street crews, dangerous code, and fragile humanity.
+publisher: MasterHost
+official: true
+contentRating: mature
+license:
+  spdx: CC-BY-4.0
+  attribution: Cyberpunk original setting content and artwork © MasterHost contributors.
+  source: https://creativecommons.org/licenses/by/4.0/

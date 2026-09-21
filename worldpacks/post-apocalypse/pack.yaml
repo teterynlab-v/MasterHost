@@ -1,0 +1,673 @@
+questions:
+  - id: world.tone
+    label: Campaign tone
+    type: choice
+    default: heroic
+    options:
+      - value: heroic
+        label: Heroic
+      - value: tense
+        label: Tense
+      - value: tragic
+        label: Tragic
+  - id: world.threat
+    label: Threat level
+    type: choice
+    default: high
+    options:
+      - value: low
+        label: Low
+      - value: medium
+        label: Medium
+      - value: high
+        label: High
+  - id: world.environment
+    label: Dominant environment
+    type: choice
+    default: desert
+    options:
+      - value: desert
+        label: Desert
+      - value: overgrown
+        label: Overgrown
+      - value: flooded
+        label: Flooded
+  - id: world.scarcity
+    label: Resource pressure
+    type: choice
+    default: scarce
+    options:
+      - value: recovering
+        label: Recovering
+      - value: scarce
+        label: Scarce
+      - value: critical
+        label: Critical
+generators:
+  region.count:
+    type: integer-range
+    min: 2
+    max: 3
+  region.names:
+    type: values
+    values:
+      - Rust Basin
+      - Green Scar
+      - Salt Expanse
+      - Flooded North
+      - The Glasslands
+  settlement.names:
+    type: values
+    values:
+      - Haven 17
+      - Tin Roof
+      - Mercy Well
+      - Last Stop
+      - Foundry Town
+  location.names:
+    type: values
+    values:
+      - The Buried Arcology
+      - Radio Mountain
+      - Mutant Grove
+      - Old World Dam
+      - The Long Tunnel
+  creature.names:
+    type: values
+    values:
+      - Rad Bear
+      - Dust Lurker
+      - Spore Brute
+      - Razor Flock
+      - Tunnel Maw
+  npc.names:
+    type: values
+    values:
+      - Scout Juniper
+      - Doc Hollis
+      - Gearbox
+      - Marshal Flint
+      - Mother Rain
+  faction.names:
+    type: values
+    values:
+      - The Road Union
+      - Vault Kin
+      - Children of Bloom
+  event.names:
+    type: values
+    values:
+      - The Wells Run Red
+      - A Satellite Speaks
+      - The Great Migration
+  encounter.names:
+    type: values
+    values:
+      - Convoy Under Fire
+      - Night in the Tunnel
+      - Siege of Haven 17
+  item.names:
+    type: values
+    values:
+      - Scrap Rifle
+      - Salvage Kit
+      - Old World Core
+      - Clean Water
+      - Patchwork Armor
+      - Geiger Counter
+      - Trade Chits
+  economy:
+    type: weighted-table
+    entries:
+      - value: trade
+        weight: 35
+      - value: craft
+        weight: 30
+      - value: service
+        weight: 20
+      - value: smuggling
+        weight: 15
+  danger:
+    type: integer-range
+    min: 1
+    max: 5
+traits:
+  region.threatened:
+    id: region.threatened
+    when:
+      eq:
+        - descriptor: world.threat
+        - high
+    addTags:
+      - dangerous
+    set:
+      alert: true
+  location.scarce:
+    id: location.scarce
+    when:
+      ne:
+        - descriptor: world.scarcity
+        - recovering
+    addTags:
+      - contested
+    set:
+      supplies: limited
+templates:
+  world.root:
+    kind: wasteland
+    values:
+      name:
+        value: The Broken Highway
+      tone:
+        descriptor: world.tone
+        default: heroic
+      environment:
+        descriptor: world.environment
+        default: desert
+      scarcity:
+        descriptor: world.scarcity
+        default: scarce
+    components:
+      regions:
+        template: region.standard
+        count:
+          generator: region.count
+      faction:
+        template: faction.major
+      encounter:
+        template: encounter.signature
+      event:
+        template: event.opening
+  region.standard:
+    kind: territory
+    traits:
+      - region.threatened
+    values:
+      name:
+        generator: region.names
+      threat:
+        descriptor: world.threat
+        default: high
+      danger:
+        generator: danger
+    components:
+      settlements:
+        template: settlement.standard
+        count: 2
+      locations:
+        template: location.standard
+        count: 2
+      creatures:
+        template: creature.standard
+        count: 2
+      npc:
+        template: npc.standard
+      item:
+        template: item.signature
+  settlement.standard:
+    kind: settlement
+    tags:
+      - community
+    values:
+      name:
+        generator: settlement.names
+      economy:
+        generator: economy
+      environment:
+        descriptor: world.environment
+        default: desert
+    components: {}
+  location.standard:
+    kind: location
+    tags:
+      - adventure-site
+    traits:
+      - location.scarce
+    values:
+      name:
+        generator: location.names
+      feature:
+        descriptor: world.environment
+        default: desert
+    components: {}
+  creature.standard:
+    kind: creature
+    tags:
+      - threat
+    values:
+      name:
+        generator: creature.names
+      danger:
+        generator: danger
+    components: {}
+  npc.standard:
+    kind: npc
+    tags:
+      - contact
+    values:
+      name:
+        generator: npc.names
+      agenda:
+        generator: economy
+    components: {}
+  item.signature:
+    kind: item
+    tags:
+      - treasure
+    values:
+      name:
+        generator: item.names
+      scarcity:
+        descriptor: world.scarcity
+        default: scarce
+    components: {}
+  faction.major:
+    kind: faction
+    tags:
+      - major-faction
+    values:
+      name:
+        generator: faction.names
+      agenda:
+        generator: economy
+    components: {}
+  encounter.signature:
+    kind: encounter
+    tags:
+      - set-piece
+    values:
+      name:
+        generator: encounter.names
+      threat:
+        descriptor: world.threat
+        default: high
+    components: {}
+  event.opening:
+    kind: event
+    tags:
+      - campaign-hook
+    values:
+      name:
+        generator: event.names
+      tone:
+        descriptor: world.tone
+        default: heroic
+    components: {}
+relations:
+  - id: settlement-route
+    type: connectedTo
+    from:
+      kind: settlement
+    to:
+      kind: settlement
+    mode: chain
+    bidirectional: true
+  - id: faction-influence
+    type: influencedBy
+    from:
+      kind: territory
+    to:
+      kind: faction
+      tags:
+        - major-faction
+    mode: each-to-first
+constraints:
+  - id: regional-depth
+    type: entity-count
+    query:
+      kind: territory
+    min: 2
+  - id: adventure-sites
+    type: entity-count
+    query:
+      kind: location
+    min: 4
+  - id: routes-exist
+    type: relation-count
+    relation: connectedTo
+    min: 3
+dependencies: []
+characterCreation:
+  schemaVersion: "1"
+  steps:
+    - id: identity
+      title: Identity
+      fields:
+        - id: name
+          label: Name
+          type: text
+          required: true
+          minLength: 2
+          maxLength: 60
+    - id: calling
+      title: Calling
+      fields:
+        - id: calling
+          label: Calling
+          type: choice
+          required: true
+          options:
+            - value: scout
+              label: Scout
+            - value: tinker
+              label: Tinker
+            - value: warden
+              label: Warden
+    - id: aptitudes
+      title: Aptitudes
+      fields:
+        - id: grit
+          label: Grit
+          type: number
+          min: -2
+          max: 5
+          default: 1
+        - id: scavenge
+          label: Scavenge
+          type: number
+          min: -2
+          max: 5
+          default: 1
+        - id: heart
+          label: Heart
+          type: number
+          min: -2
+          max: 5
+          default: 1
+    - id: signature
+      title: Signature
+      fields:
+        - id: signature
+          label: Signature approach
+          type: choice
+          required: true
+          default: bold
+          options:
+            - value: bold
+              label: Bold
+            - value: careful
+              label: Careful
+            - value: compassionate
+              label: Compassionate
+        - id: portrait
+          label: Portrait
+          type: asset
+          required: true
+          default: standard
+          options:
+            - value: standard
+              label: Post-Apocalypse portrait
+            - value: silhouette
+              label: Silhouette
+  calculated:
+    - id: readiness
+      operation: sum
+      fields:
+        - grit
+        - scavenge
+        - heart
+  starting:
+    progression:
+      renown: 0
+      experience: 0
+    resources:
+      health: 18
+      water: 8
+      radiation: 0
+    inventory:
+      - id: weapon
+        quantity: 1
+        when:
+          field: calling
+          equals: scout
+      - id: kit
+        quantity: 1
+        when:
+          field: calling
+          equals: tinker
+      - id: relic
+        quantity: 1
+        when:
+          field: calling
+          equals: warden
+      - id: supply
+        quantity: 2
+    traits:
+      - id: trained-scout
+        when:
+          field: calling
+          equals: scout
+      - id: trained-tinker
+        when:
+          field: calling
+          equals: tinker
+      - id: trained-warden
+        when:
+          field: calling
+          equals: warden
+    assets:
+      - id: portrait
+        value: assets/ui/portrait.svg
+  portability:
+    rules: []
+checks:
+  grit:
+    label: Grit
+    dice: 1d20
+    modifierField: grit
+    criticalSuccess:
+      rollTotalAtLeast: 20
+    criticalFailure:
+      rollTotalAtMost: 1
+  scavenge:
+    label: Scavenge
+    dice: 2d6
+    modifierField: scavenge
+    criticalSuccess:
+      rollTotalAtLeast: 12
+    criticalFailure:
+      rollTotalAtMost: 2
+  heart:
+    label: Heart
+    dice: 1d20
+    modifierField: heart
+    criticalSuccess:
+      rollTotalAtLeast: 20
+    criticalFailure:
+      rollTotalAtMost: 1
+resources:
+  health:
+    label: Health
+    min: 0
+    max: 24
+    default: 18
+  water:
+    label: Water
+    min: 0
+    max: 12
+    default: 8
+  radiation:
+    label: Radiation
+    min: 0
+    max: 10
+    default: 0
+items:
+  weapon:
+    label: Scrap Rifle
+    stackLimit: 1
+  kit:
+    label: Salvage Kit
+    stackLimit: 1
+  relic:
+    label: Old World Core
+    stackLimit: 1
+  supply:
+    label: Clean Water
+    stackLimit: 10
+  armor:
+    label: Patchwork Armor
+    stackLimit: 1
+  tool:
+    label: Geiger Counter
+    stackLimit: 1
+  token:
+    label: Trade Chits
+    stackLimit: 1
+progression:
+  renown:
+    label: Renown
+    min: 0
+    max: 100
+    default: 0
+  experience:
+    label: Experience
+    min: 0
+    default: 0
+locations:
+  worldEntityKinds:
+    - settlement
+    - location
+actorTemplates:
+  adversary:
+    label: Rad Bear
+    resources:
+      health: 10
+      water: 0
+      radiation: 0
+    attributes:
+      grit: 2
+      scavenge: 0
+      heart: 1
+    inventory:
+      - itemId: weapon
+        quantity: 1
+    progression:
+      renown: 0
+      experience: 0
+    worldEntityKinds:
+      - creature
+  contact:
+    label: Scout Juniper
+    resources:
+      health: 18
+      water: 8
+      radiation: 0
+    attributes:
+      grit: 0
+      scavenge: 2
+      heart: 2
+    inventory:
+      - itemId: kit
+        quantity: 1
+    progression:
+      renown: 5
+      experience: 0
+    worldEntityKinds:
+      - npc
+  elite:
+    label: Dust Lurker
+    resources:
+      health: 18
+      water: 8
+      radiation: 0
+    attributes:
+      grit: 3
+      scavenge: 2
+      heart: 2
+    inventory:
+      - itemId: relic
+        quantity: 1
+    progression:
+      renown: 10
+      experience: 5
+    worldEntityKinds:
+      - creature
+effects:
+  irradiated:
+    label: Irradiated
+    duration:
+      type: turns
+      value: 2
+    modifiers:
+      grit: -2
+    blockedActions:
+      - inspire
+  resourceful:
+    label: Resourceful
+    duration:
+      type: rounds
+      value: 2
+    modifiers:
+      scavenge: 2
+  fortified:
+    label: Fortified
+    duration:
+      type: turns
+      value: 1
+    modifiers:
+      heart: 2
+actions:
+  basic-attack:
+    label: Use Scrap Rifle
+    target: single-actor
+    steps:
+      - check:
+          id: grit
+          against: input.difficulty
+      - roll:
+          id: impact
+          dice: 1d6
+        when:
+          previousOutcome: success
+      - resource:
+          target: target
+          resource: health
+          operation: subtract
+          value: impact.total
+        when:
+          previousOutcome: success
+  recover:
+    label: Recover Health
+    kind: resource
+    target: self
+    resource: health
+    operation: add
+    amount: 3
+  hinder:
+    label: Irradiated
+    kind: effect
+    target: actor
+    effectId: irradiated
+  inspire:
+    label: Resourceful
+    target: multiple-actors
+    steps:
+      - effect:
+          target: target
+          id: resourceful
+  guard:
+    label: Fortified
+    kind: effect
+    target: self
+    effectId: fortified
+  signature-move:
+    label: Signature Move
+    target: single-actor
+    steps:
+      - check:
+          id: scavenge
+          against: input.difficulty
+      - effect:
+          target: target
+          id: irradiated
+        when:
+          previousOutcome: success
+  pressure:
+    label: Spend Radiation
+    kind: resource
+    target: self
+    resource: radiation
+    operation: subtract
+    amount: 1
+encounter:
+  orderingPolicy: custom

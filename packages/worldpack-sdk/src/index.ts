@@ -1,7 +1,7 @@
 import{readFile,readdir}from"node:fs/promises";import{join,relative,resolve}from"node:path";import YAML from"yaml";import{z}from"zod";import type{Character,CharacterCondition,CharacterCreationSchema,CharacterPortability,PackArtSetManifest}from"@masterhost/domain";
 import { validateRuntimePack } from "./runtime-validation.js";
 const Id=z.string().regex(/^[a-zA-Z0-9][a-zA-Z0-9._-]*$/);
-export const ManifestSchema=z.object({id:z.string(),name:z.string(),version:z.string(),schemaVersion:z.literal("0.1"),defaultArtSet:z.string(),entryTemplate:Id});
+export const ManifestSchema=z.object({id:z.string(),name:z.string(),version:z.string(),schemaVersion:z.literal("0.1"),defaultArtSet:z.string(),entryTemplate:Id,description:z.string().min(1).optional(),publisher:z.string().min(1).optional(),official:z.boolean().optional(),contentRating:z.enum(["everyone","teen","mature"]).optional(),license:z.object({spdx:z.string().min(1),attribution:z.string().min(1),source:z.string().url().optional()}).strict().optional()});
 const Question=z.object({id:Id,label:z.string(),type:z.literal("choice"),options:z.array(z.object({value:z.string(),label:z.string()})).min(1),default:z.string()});
 export const ValueSpecSchema:z.ZodType<any>=z.lazy(()=>z.union([
  z.object({value:z.unknown()}),z.object({descriptor:z.string(),default:z.unknown().optional()}),z.object({generator:Id}),
@@ -77,6 +77,14 @@ export async function loadWorldPack(input:string):Promise<LoadedWorldPack>{const
  validateRuntimePack(content);
  return{manifest,content,root,assets:await files(root,join(root,"assets")),artSets}}
 export function validateWorldPack(p:LoadedWorldPack){return{valid:true as const,id:p.manifest.id,version:p.manifest.version,questions:p.content.questions.length,templates:Object.keys(p.content.templates).length,generators:Object.keys(p.content.generators).length,traits:Object.keys(p.content.traits??{}).length,assets:p.assets.length}}
+export interface OfficialPackAssessment{passed:boolean;errors:string[];metrics:Record<string,number>}
+export function assessOfficialPack(pack:LoadedWorldPack):OfficialPackAssessment{
+ const content=pack.content,kinds=new Set(Object.values(content.templates).map(value=>value.kind)),metrics:Record<string,number>={questions:content.questions.length,generators:Object.keys(content.generators).length,templates:Object.keys(content.templates).length,kinds:kinds.size,relations:content.relations?.length??0,constraints:content.constraints?.length??0,characterSteps:content.characterCreation?.steps.length??0,checks:Object.keys(content.checks??{}).length,resources:Object.keys(content.resources??{}).length,items:Object.keys(content.items??{}).length,effects:Object.keys(content.effects??{}).length,actions:Object.keys(content.actions??{}).length,actorTemplates:Object.keys(content.actorTemplates??{}).length,artSets:Object.keys(pack.artSets).length,assets:pack.assets.length};
+ const errors:string[]=[];if(!pack.manifest.official)errors.push("manifest must declare official content");if(!pack.manifest.publisher)errors.push("publisher is required");if(!pack.manifest.license?.spdx||!pack.manifest.license.attribution)errors.push("license and attribution are required");
+ for(const[key,min]of Object.entries({questions:3,generators:6,templates:10,kinds:8,relations:2,constraints:2,characterSteps:4,checks:3,resources:3,items:6,effects:3,actions:6,actorTemplates:3,artSets:1,assets:5}))if((metrics[key]??0)<min)errors.push(`${key} requires at least ${min}, found ${metrics[key]}`);
+ for(const kind of["location","creature","npc","item","encounter","event"])if(!kinds.has(kind))errors.push(`missing ${kind} World content`);if(!content.locations||!content.encounter)errors.push("playable location and encounter rules are required");if(!content.characterCreation?.starting)errors.push("character starting state is required");
+ return{passed:errors.length===0,errors,metrics};
+}
 export * from "./authoring.js";
 export function characterConditionMatches(condition:CharacterCondition|undefined,values:Record<string,unknown>){if(!condition)return true;const value=values[condition.field];return condition.in?condition.in.some(candidate=>Object.is(candidate,value)):Object.is(condition.equals,value)}
 export function validateCharacterValues(schema:CharacterCreationSchema,values:unknown):Record<string,unknown>{

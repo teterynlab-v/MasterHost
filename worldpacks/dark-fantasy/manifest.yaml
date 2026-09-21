@@ -1,0 +1,14 @@
+id: masterhost.dark-fantasy
+name: Dark Fantasy
+version: 1.0.0
+schemaVersion: "0.1"
+defaultArtSet: standard
+entryTemplate: world.root
+description: Cursed borderlands where desperate houses bargain with old powers beneath a dying sun.
+publisher: MasterHost
+official: true
+contentRating: mature
+license:
+  spdx: CC-BY-4.0
+  attribution: Dark Fantasy original setting content and artwork © MasterHost contributors.
+  source: https://creativecommons.org/licenses/by/4.0/

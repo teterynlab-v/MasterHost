@@ -1,0 +1,14 @@
+id: masterhost.space-opera
+name: Space Opera
+version: 1.0.0
+schemaVersion: "0.1"
+defaultArtSet: standard
+entryTemplate: world.root
+description: A sweeping interstellar frontier of ancient gates, contested systems, daring crews, and impossible wonders.
+publisher: MasterHost
+official: true
+contentRating: teen
+license:
+  spdx: CC-BY-4.0
+  attribution: Space Opera original setting content and artwork © MasterHost contributors.
+  source: https://creativecommons.org/licenses/by/4.0/

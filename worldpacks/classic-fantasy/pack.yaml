@@ -1,0 +1,673 @@
+questions:
+  - id: world.tone
+    label: Campaign tone
+    type: choice
+    default: heroic
+    options:
+      - value: heroic
+        label: Heroic
+      - value: tense
+        label: Tense
+      - value: tragic
+        label: Tragic
+  - id: world.threat
+    label: Threat level
+    type: choice
+    default: high
+    options:
+      - value: low
+        label: Low
+      - value: medium
+        label: Medium
+      - value: high
+        label: High
+  - id: world.environment
+    label: Dominant environment
+    type: choice
+    default: pastoral
+    options:
+      - value: pastoral
+        label: Pastoral
+      - value: mountain
+        label: Mountain
+      - value: coastal
+        label: Coastal
+  - id: world.scarcity
+    label: Resource pressure
+    type: choice
+    default: strained
+    options:
+      - value: plentiful
+        label: Plentiful
+      - value: strained
+        label: Strained
+      - value: rare
+        label: Rare
+generators:
+  region.count:
+    type: integer-range
+    min: 2
+    max: 3
+  region.names:
+    type: values
+    values:
+      - Amber Vale
+      - Frostmere
+      - The Green March
+      - Sunfall Coast
+      - High Barrows
+  settlement.names:
+    type: values
+    values:
+      - Oakheart
+      - Kingsbridge
+      - Bellhaven
+      - Ironford
+      - Rosewatch
+  location.names:
+    type: values
+    values:
+      - Dragon Gate
+      - Moonwell Abbey
+      - Whispering Wood
+      - Starfall Keep
+      - Pilgrim's Rest
+  creature.names:
+    type: values
+    values:
+      - Hill Troll
+      - Wyvern
+      - Goblin Reaver
+      - Moss Drake
+      - Griffin
+  npc.names:
+    type: values
+    values:
+      - Elara the Bold
+      - Brother Aldren
+      - Mira Foxglove
+      - Sir Corven
+      - Old Nessa
+  faction.names:
+    type: values
+    values:
+      - The Argent Crown
+      - Wardens of the Road
+      - Circle of Embers
+  event.names:
+    type: values
+    values:
+      - The Comet Feast
+      - A Crown Goes Missing
+      - The Green Oath
+  encounter.names:
+    type: values
+    values:
+      - Bridge of Blades
+      - Wyrm at Dusk
+      - Siege of Bells
+  item.names:
+    type: values
+    values:
+      - Longsword
+      - Wayfarer's Kit
+      - Ember Relic
+      - Healing Draught
+      - Mail Coat
+      - Lockpicks
+      - Royal Token
+  economy:
+    type: weighted-table
+    entries:
+      - value: trade
+        weight: 35
+      - value: craft
+        weight: 30
+      - value: service
+        weight: 20
+      - value: smuggling
+        weight: 15
+  danger:
+    type: integer-range
+    min: 1
+    max: 5
+traits:
+  region.threatened:
+    id: region.threatened
+    when:
+      eq:
+        - descriptor: world.threat
+        - high
+    addTags:
+      - dangerous
+    set:
+      alert: true
+  location.scarce:
+    id: location.scarce
+    when:
+      ne:
+        - descriptor: world.scarcity
+        - plentiful
+    addTags:
+      - contested
+    set:
+      supplies: limited
+templates:
+  world.root:
+    kind: realm
+    values:
+      name:
+        value: The Crowned Marches
+      tone:
+        descriptor: world.tone
+        default: heroic
+      environment:
+        descriptor: world.environment
+        default: pastoral
+      scarcity:
+        descriptor: world.scarcity
+        default: strained
+    components:
+      regions:
+        template: region.standard
+        count:
+          generator: region.count
+      faction:
+        template: faction.major
+      encounter:
+        template: encounter.signature
+      event:
+        template: event.opening
+  region.standard:
+    kind: province
+    traits:
+      - region.threatened
+    values:
+      name:
+        generator: region.names
+      threat:
+        descriptor: world.threat
+        default: high
+      danger:
+        generator: danger
+    components:
+      settlements:
+        template: settlement.standard
+        count: 2
+      locations:
+        template: location.standard
+        count: 2
+      creatures:
+        template: creature.standard
+        count: 2
+      npc:
+        template: npc.standard
+      item:
+        template: item.signature
+  settlement.standard:
+    kind: settlement
+    tags:
+      - community
+    values:
+      name:
+        generator: settlement.names
+      economy:
+        generator: economy
+      environment:
+        descriptor: world.environment
+        default: pastoral
+    components: {}
+  location.standard:
+    kind: location
+    tags:
+      - adventure-site
+    traits:
+      - location.scarce
+    values:
+      name:
+        generator: location.names
+      feature:
+        descriptor: world.environment
+        default: pastoral
+    components: {}
+  creature.standard:
+    kind: creature
+    tags:
+      - threat
+    values:
+      name:
+        generator: creature.names
+      danger:
+        generator: danger
+    components: {}
+  npc.standard:
+    kind: npc
+    tags:
+      - contact
+    values:
+      name:
+        generator: npc.names
+      agenda:
+        generator: economy
+    components: {}
+  item.signature:
+    kind: item
+    tags:
+      - treasure
+    values:
+      name:
+        generator: item.names
+      scarcity:
+        descriptor: world.scarcity
+        default: strained
+    components: {}
+  faction.major:
+    kind: faction
+    tags:
+      - major-faction
+    values:
+      name:
+        generator: faction.names
+      agenda:
+        generator: economy
+    components: {}
+  encounter.signature:
+    kind: encounter
+    tags:
+      - set-piece
+    values:
+      name:
+        generator: encounter.names
+      threat:
+        descriptor: world.threat
+        default: high
+    components: {}
+  event.opening:
+    kind: event
+    tags:
+      - campaign-hook
+    values:
+      name:
+        generator: event.names
+      tone:
+        descriptor: world.tone
+        default: heroic
+    components: {}
+relations:
+  - id: settlement-route
+    type: connectedTo
+    from:
+      kind: settlement
+    to:
+      kind: settlement
+    mode: chain
+    bidirectional: true
+  - id: faction-influence
+    type: influencedBy
+    from:
+      kind: province
+    to:
+      kind: faction
+      tags:
+        - major-faction
+    mode: each-to-first
+constraints:
+  - id: regional-depth
+    type: entity-count
+    query:
+      kind: province
+    min: 2
+  - id: adventure-sites
+    type: entity-count
+    query:
+      kind: location
+    min: 4
+  - id: routes-exist
+    type: relation-count
+    relation: connectedTo
+    min: 3
+dependencies: []
+characterCreation:
+  schemaVersion: "1"
+  steps:
+    - id: identity
+      title: Identity
+      fields:
+        - id: name
+          label: Name
+          type: text
+          required: true
+          minLength: 2
+          maxLength: 60
+    - id: calling
+      title: Calling
+      fields:
+        - id: calling
+          label: Calling
+          type: choice
+          required: true
+          options:
+            - value: knight
+              label: Knight
+            - value: ranger
+              label: Ranger
+            - value: mage
+              label: Mage
+    - id: aptitudes
+      title: Aptitudes
+      fields:
+        - id: might
+          label: Might
+          type: number
+          min: -2
+          max: 5
+          default: 1
+        - id: wits
+          label: Wits
+          type: number
+          min: -2
+          max: 5
+          default: 1
+        - id: spirit
+          label: Spirit
+          type: number
+          min: -2
+          max: 5
+          default: 1
+    - id: signature
+      title: Signature
+      fields:
+        - id: signature
+          label: Signature approach
+          type: choice
+          required: true
+          default: bold
+          options:
+            - value: bold
+              label: Bold
+            - value: careful
+              label: Careful
+            - value: compassionate
+              label: Compassionate
+        - id: portrait
+          label: Portrait
+          type: asset
+          required: true
+          default: standard
+          options:
+            - value: standard
+              label: Classic Fantasy portrait
+            - value: silhouette
+              label: Silhouette
+  calculated:
+    - id: readiness
+      operation: sum
+      fields:
+        - might
+        - wits
+        - spirit
+  starting:
+    progression:
+      renown: 0
+      experience: 0
+    resources:
+      vigor: 18
+      resolve: 10
+      mana: 8
+    inventory:
+      - id: weapon
+        quantity: 1
+        when:
+          field: calling
+          equals: knight
+      - id: kit
+        quantity: 1
+        when:
+          field: calling
+          equals: ranger
+      - id: relic
+        quantity: 1
+        when:
+          field: calling
+          equals: mage
+      - id: supply
+        quantity: 2
+    traits:
+      - id: trained-knight
+        when:
+          field: calling
+          equals: knight
+      - id: trained-ranger
+        when:
+          field: calling
+          equals: ranger
+      - id: trained-mage
+        when:
+          field: calling
+          equals: mage
+    assets:
+      - id: portrait
+        value: assets/ui/portrait.svg
+  portability:
+    rules: []
+checks:
+  might:
+    label: Might
+    dice: 1d20
+    modifierField: might
+    criticalSuccess:
+      rollTotalAtLeast: 20
+    criticalFailure:
+      rollTotalAtMost: 1
+  wits:
+    label: Wits
+    dice: 2d6
+    modifierField: wits
+    criticalSuccess:
+      rollTotalAtLeast: 12
+    criticalFailure:
+      rollTotalAtMost: 2
+  spirit:
+    label: Spirit
+    dice: 1d20
+    modifierField: spirit
+    criticalSuccess:
+      rollTotalAtLeast: 20
+    criticalFailure:
+      rollTotalAtMost: 1
+resources:
+  vigor:
+    label: Vigor
+    min: 0
+    max: 24
+    default: 18
+  resolve:
+    label: Resolve
+    min: 0
+    max: 16
+    default: 10
+  mana:
+    label: Mana
+    min: 0
+    max: 18
+    default: 8
+items:
+  weapon:
+    label: Longsword
+    stackLimit: 1
+  kit:
+    label: Wayfarer's Kit
+    stackLimit: 1
+  relic:
+    label: Ember Relic
+    stackLimit: 1
+  supply:
+    label: Healing Draught
+    stackLimit: 10
+  armor:
+    label: Mail Coat
+    stackLimit: 1
+  tool:
+    label: Lockpicks
+    stackLimit: 1
+  token:
+    label: Royal Token
+    stackLimit: 1
+progression:
+  renown:
+    label: Renown
+    min: 0
+    max: 100
+    default: 0
+  experience:
+    label: Experience
+    min: 0
+    default: 0
+locations:
+  worldEntityKinds:
+    - settlement
+    - location
+actorTemplates:
+  adversary:
+    label: Hill Troll
+    resources:
+      vigor: 10
+      resolve: 0
+      mana: 0
+    attributes:
+      might: 2
+      wits: 0
+      spirit: 1
+    inventory:
+      - itemId: weapon
+        quantity: 1
+    progression:
+      renown: 0
+      experience: 0
+    worldEntityKinds:
+      - creature
+  contact:
+    label: Elara the Bold
+    resources:
+      vigor: 18
+      resolve: 10
+      mana: 8
+    attributes:
+      might: 0
+      wits: 2
+      spirit: 2
+    inventory:
+      - itemId: kit
+        quantity: 1
+    progression:
+      renown: 5
+      experience: 0
+    worldEntityKinds:
+      - npc
+  elite:
+    label: Wyvern
+    resources:
+      vigor: 18
+      resolve: 10
+      mana: 8
+    attributes:
+      might: 3
+      wits: 2
+      spirit: 2
+    inventory:
+      - itemId: relic
+        quantity: 1
+    progression:
+      renown: 10
+      experience: 5
+    worldEntityKinds:
+      - creature
+effects:
+  shaken:
+    label: Shaken
+    duration:
+      type: turns
+      value: 2
+    modifiers:
+      might: -2
+    blockedActions:
+      - inspire
+  blessed:
+    label: Blessed
+    duration:
+      type: rounds
+      value: 2
+    modifiers:
+      wits: 2
+  guarded:
+    label: Guarded
+    duration:
+      type: turns
+      value: 1
+    modifiers:
+      spirit: 2
+actions:
+  basic-attack:
+    label: Use Longsword
+    target: single-actor
+    steps:
+      - check:
+          id: might
+          against: input.difficulty
+      - roll:
+          id: impact
+          dice: 1d6
+        when:
+          previousOutcome: success
+      - resource:
+          target: target
+          resource: vigor
+          operation: subtract
+          value: impact.total
+        when:
+          previousOutcome: success
+  recover:
+    label: Recover Vigor
+    kind: resource
+    target: self
+    resource: vigor
+    operation: add
+    amount: 3
+  hinder:
+    label: Shaken
+    kind: effect
+    target: actor
+    effectId: shaken
+  inspire:
+    label: Blessed
+    target: multiple-actors
+    steps:
+      - effect:
+          target: target
+          id: blessed
+  guard:
+    label: Guarded
+    kind: effect
+    target: self
+    effectId: guarded
+  signature-move:
+    label: Signature Move
+    target: single-actor
+    steps:
+      - check:
+          id: wits
+          against: input.difficulty
+      - effect:
+          target: target
+          id: shaken
+        when:
+          previousOutcome: success
+  pressure:
+    label: Spend Mana
+    kind: resource
+    target: self
+    resource: mana
+    operation: subtract
+    amount: 1
+encounter:
+  orderingPolicy: fixed

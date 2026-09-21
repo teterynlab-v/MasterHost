@@ -1,0 +1,673 @@
+questions:
+  - id: world.tone
+    label: Campaign tone
+    type: choice
+    default: heroic
+    options:
+      - value: heroic
+        label: Heroic
+      - value: tense
+        label: Tense
+      - value: tragic
+        label: Tragic
+  - id: world.threat
+    label: Threat level
+    type: choice
+    default: high
+    options:
+      - value: low
+        label: Low
+      - value: medium
+        label: Medium
+      - value: high
+        label: High
+  - id: world.environment
+    label: Dominant environment
+    type: choice
+    default: blighted
+    options:
+      - value: blighted
+        label: Blighted
+      - value: haunted
+        label: Haunted
+      - value: war-torn
+        label: War Torn
+  - id: world.scarcity
+    label: Resource pressure
+    type: choice
+    default: desperate
+    options:
+      - value: meager
+        label: Meager
+      - value: desperate
+        label: Desperate
+      - value: famine
+        label: Famine
+generators:
+  region.count:
+    type: integer-range
+    min: 2
+    max: 3
+  region.names:
+    type: values
+    values:
+      - Gallows Fen
+      - The Hollow Crown
+      - Black Briar
+      - Graven Coast
+      - Witchglass Moor
+  settlement.names:
+    type: values
+    values:
+      - Mourning Bell
+      - Cinderwick
+      - Saint's Ruin
+      - Thornmarket
+      - Last Candle
+  location.names:
+    type: values
+    values:
+      - Bone Orchard
+      - The Drowned Chapel
+      - Red Moon Crypt
+      - Witchglass Tower
+      - The Weeping Road
+  creature.names:
+    type: values
+    values:
+      - Grave Hound
+      - Briar Witch
+      - Hollow Knight
+      - Carrion Saint
+      - Night Hag
+  npc.names:
+    type: values
+    values:
+      - Sister Mercy
+      - The Pale Hunter
+      - Morcant Vale
+      - Widow Sable
+      - Father Crow
+  faction.names:
+    type: values
+    values:
+      - House Veyr
+      - The Lantern Synod
+      - The Thorn Compact
+  event.names:
+    type: values
+    values:
+      - The Bells Ring Thirteen
+      - A Saint Returns Hungry
+      - The Sun Bleeds
+  encounter.names:
+    type: values
+    values:
+      - Feast of Crows
+      - The Unburied Host
+      - Trial at Witchglass
+  item.names:
+    type: values
+    values:
+      - Blacksteel Blade
+      - Hunter's Satchel
+      - Saintbone Charm
+      - Bitter Tonic
+      - Funeral Plate
+      - Hexing Nails
+      - Lantern Seal
+  economy:
+    type: weighted-table
+    entries:
+      - value: trade
+        weight: 35
+      - value: craft
+        weight: 30
+      - value: service
+        weight: 20
+      - value: smuggling
+        weight: 15
+  danger:
+    type: integer-range
+    min: 1
+    max: 5
+traits:
+  region.threatened:
+    id: region.threatened
+    when:
+      eq:
+        - descriptor: world.threat
+        - high
+    addTags:
+      - dangerous
+    set:
+      alert: true
+  location.scarce:
+    id: location.scarce
+    when:
+      ne:
+        - descriptor: world.scarcity
+        - meager
+    addTags:
+      - contested
+    set:
+      supplies: limited
+templates:
+  world.root:
+    kind: cursed-realm
+    values:
+      name:
+        value: The Ashen Covenant
+      tone:
+        descriptor: world.tone
+        default: heroic
+      environment:
+        descriptor: world.environment
+        default: blighted
+      scarcity:
+        descriptor: world.scarcity
+        default: desperate
+    components:
+      regions:
+        template: region.standard
+        count:
+          generator: region.count
+      faction:
+        template: faction.major
+      encounter:
+        template: encounter.signature
+      event:
+        template: event.opening
+  region.standard:
+    kind: blighted-land
+    traits:
+      - region.threatened
+    values:
+      name:
+        generator: region.names
+      threat:
+        descriptor: world.threat
+        default: high
+      danger:
+        generator: danger
+    components:
+      settlements:
+        template: settlement.standard
+        count: 2
+      locations:
+        template: location.standard
+        count: 2
+      creatures:
+        template: creature.standard
+        count: 2
+      npc:
+        template: npc.standard
+      item:
+        template: item.signature
+  settlement.standard:
+    kind: settlement
+    tags:
+      - community
+    values:
+      name:
+        generator: settlement.names
+      economy:
+        generator: economy
+      environment:
+        descriptor: world.environment
+        default: blighted
+    components: {}
+  location.standard:
+    kind: location
+    tags:
+      - adventure-site
+    traits:
+      - location.scarce
+    values:
+      name:
+        generator: location.names
+      feature:
+        descriptor: world.environment
+        default: blighted
+    components: {}
+  creature.standard:
+    kind: creature
+    tags:
+      - threat
+    values:
+      name:
+        generator: creature.names
+      danger:
+        generator: danger
+    components: {}
+  npc.standard:
+    kind: npc
+    tags:
+      - contact
+    values:
+      name:
+        generator: npc.names
+      agenda:
+        generator: economy
+    components: {}
+  item.signature:
+    kind: item
+    tags:
+      - treasure
+    values:
+      name:
+        generator: item.names
+      scarcity:
+        descriptor: world.scarcity
+        default: desperate
+    components: {}
+  faction.major:
+    kind: faction
+    tags:
+      - major-faction
+    values:
+      name:
+        generator: faction.names
+      agenda:
+        generator: economy
+    components: {}
+  encounter.signature:
+    kind: encounter
+    tags:
+      - set-piece
+    values:
+      name:
+        generator: encounter.names
+      threat:
+        descriptor: world.threat
+        default: high
+    components: {}
+  event.opening:
+    kind: event
+    tags:
+      - campaign-hook
+    values:
+      name:
+        generator: event.names
+      tone:
+        descriptor: world.tone
+        default: heroic
+    components: {}
+relations:
+  - id: settlement-route
+    type: connectedTo
+    from:
+      kind: settlement
+    to:
+      kind: settlement
+    mode: chain
+    bidirectional: true
+  - id: faction-influence
+    type: influencedBy
+    from:
+      kind: blighted-land
+    to:
+      kind: faction
+      tags:
+        - major-faction
+    mode: each-to-first
+constraints:
+  - id: regional-depth
+    type: entity-count
+    query:
+      kind: blighted-land
+    min: 2
+  - id: adventure-sites
+    type: entity-count
+    query:
+      kind: location
+    min: 4
+  - id: routes-exist
+    type: relation-count
+    relation: connectedTo
+    min: 3
+dependencies: []
+characterCreation:
+  schemaVersion: "1"
+  steps:
+    - id: identity
+      title: Identity
+      fields:
+        - id: name
+          label: Name
+          type: text
+          required: true
+          minLength: 2
+          maxLength: 60
+    - id: calling
+      title: Calling
+      fields:
+        - id: calling
+          label: Calling
+          type: choice
+          required: true
+          options:
+            - value: vigilant
+              label: Vigilant
+            - value: hexer
+              label: Hexer
+            - value: penitent
+              label: Penitent
+    - id: aptitudes
+      title: Aptitudes
+      fields:
+        - id: steel
+          label: Steel
+          type: number
+          min: -2
+          max: 5
+          default: 1
+        - id: guile
+          label: Guile
+          type: number
+          min: -2
+          max: 5
+          default: 1
+        - id: will
+          label: Will
+          type: number
+          min: -2
+          max: 5
+          default: 1
+    - id: signature
+      title: Signature
+      fields:
+        - id: signature
+          label: Signature approach
+          type: choice
+          required: true
+          default: bold
+          options:
+            - value: bold
+              label: Bold
+            - value: careful
+              label: Careful
+            - value: compassionate
+              label: Compassionate
+        - id: portrait
+          label: Portrait
+          type: asset
+          required: true
+          default: standard
+          options:
+            - value: standard
+              label: Dark Fantasy portrait
+            - value: silhouette
+              label: Silhouette
+  calculated:
+    - id: readiness
+      operation: sum
+      fields:
+        - steel
+        - guile
+        - will
+  starting:
+    progression:
+      renown: 0
+      experience: 0
+    resources:
+      flesh: 14
+      hope: 7
+      taint: 0
+    inventory:
+      - id: weapon
+        quantity: 1
+        when:
+          field: calling
+          equals: vigilant
+      - id: kit
+        quantity: 1
+        when:
+          field: calling
+          equals: hexer
+      - id: relic
+        quantity: 1
+        when:
+          field: calling
+          equals: penitent
+      - id: supply
+        quantity: 2
+    traits:
+      - id: trained-vigilant
+        when:
+          field: calling
+          equals: vigilant
+      - id: trained-hexer
+        when:
+          field: calling
+          equals: hexer
+      - id: trained-penitent
+        when:
+          field: calling
+          equals: penitent
+    assets:
+      - id: portrait
+        value: assets/ui/portrait.svg
+  portability:
+    rules: []
+checks:
+  steel:
+    label: Steel
+    dice: 1d20
+    modifierField: steel
+    criticalSuccess:
+      rollTotalAtLeast: 20
+    criticalFailure:
+      rollTotalAtMost: 1
+  guile:
+    label: Guile
+    dice: 2d6
+    modifierField: guile
+    criticalSuccess:
+      rollTotalAtLeast: 12
+    criticalFailure:
+      rollTotalAtMost: 2
+  will:
+    label: Will
+    dice: 1d20
+    modifierField: will
+    criticalSuccess:
+      rollTotalAtLeast: 20
+    criticalFailure:
+      rollTotalAtMost: 1
+resources:
+  flesh:
+    label: Flesh
+    min: 0
+    max: 20
+    default: 14
+  hope:
+    label: Hope
+    min: 0
+    max: 12
+    default: 7
+  taint:
+    label: Taint
+    min: 0
+    max: 10
+    default: 0
+items:
+  weapon:
+    label: Blacksteel Blade
+    stackLimit: 1
+  kit:
+    label: Hunter's Satchel
+    stackLimit: 1
+  relic:
+    label: Saintbone Charm
+    stackLimit: 1
+  supply:
+    label: Bitter Tonic
+    stackLimit: 10
+  armor:
+    label: Funeral Plate
+    stackLimit: 1
+  tool:
+    label: Hexing Nails
+    stackLimit: 1
+  token:
+    label: Lantern Seal
+    stackLimit: 1
+progression:
+  renown:
+    label: Renown
+    min: 0
+    max: 100
+    default: 0
+  experience:
+    label: Experience
+    min: 0
+    default: 0
+locations:
+  worldEntityKinds:
+    - settlement
+    - location
+actorTemplates:
+  adversary:
+    label: Grave Hound
+    resources:
+      flesh: 10
+      hope: 0
+      taint: 0
+    attributes:
+      steel: 2
+      guile: 0
+      will: 1
+    inventory:
+      - itemId: weapon
+        quantity: 1
+    progression:
+      renown: 0
+      experience: 0
+    worldEntityKinds:
+      - creature
+  contact:
+    label: Sister Mercy
+    resources:
+      flesh: 14
+      hope: 7
+      taint: 0
+    attributes:
+      steel: 0
+      guile: 2
+      will: 2
+    inventory:
+      - itemId: kit
+        quantity: 1
+    progression:
+      renown: 5
+      experience: 0
+    worldEntityKinds:
+      - npc
+  elite:
+    label: Briar Witch
+    resources:
+      flesh: 14
+      hope: 7
+      taint: 0
+    attributes:
+      steel: 3
+      guile: 2
+      will: 2
+    inventory:
+      - itemId: relic
+        quantity: 1
+    progression:
+      renown: 10
+      experience: 5
+    worldEntityKinds:
+      - creature
+effects:
+  terrified:
+    label: Terrified
+    duration:
+      type: turns
+      value: 2
+    modifiers:
+      steel: -2
+    blockedActions:
+      - inspire
+  consecrated:
+    label: Consecrated
+    duration:
+      type: rounds
+      value: 2
+    modifiers:
+      guile: 2
+  blood-marked:
+    label: Blood Marked
+    duration:
+      type: turns
+      value: 1
+    modifiers:
+      will: 2
+actions:
+  basic-attack:
+    label: Use Blacksteel Blade
+    target: single-actor
+    steps:
+      - check:
+          id: steel
+          against: input.difficulty
+      - roll:
+          id: impact
+          dice: 1d6
+        when:
+          previousOutcome: success
+      - resource:
+          target: target
+          resource: flesh
+          operation: subtract
+          value: impact.total
+        when:
+          previousOutcome: success
+  recover:
+    label: Recover Flesh
+    kind: resource
+    target: self
+    resource: flesh
+    operation: add
+    amount: 3
+  hinder:
+    label: Terrified
+    kind: effect
+    target: actor
+    effectId: terrified
+  inspire:
+    label: Consecrated
+    target: multiple-actors
+    steps:
+      - effect:
+          target: target
+          id: consecrated
+  guard:
+    label: Blood Marked
+    kind: effect
+    target: self
+    effectId: blood-marked
+  signature-move:
+    label: Signature Move
+    target: single-actor
+    steps:
+      - check:
+          id: guile
+          against: input.difficulty
+      - effect:
+          target: target
+          id: terrified
+        when:
+          previousOutcome: success
+  pressure:
+    label: Spend Taint
+    kind: resource
+    target: self
+    resource: taint
+    operation: subtract
+    amount: 1
+encounter:
+  orderingPolicy: rolled

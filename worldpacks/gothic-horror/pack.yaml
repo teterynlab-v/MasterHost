@@ -1,0 +1,673 @@
+questions:
+  - id: world.tone
+    label: Campaign tone
+    type: choice
+    default: heroic
+    options:
+      - value: heroic
+        label: Heroic
+      - value: tense
+        label: Tense
+      - value: tragic
+        label: Tragic
+  - id: world.threat
+    label: Threat level
+    type: choice
+    default: high
+    options:
+      - value: low
+        label: Low
+      - value: medium
+        label: Medium
+      - value: high
+        label: High
+  - id: world.environment
+    label: Dominant environment
+    type: choice
+    default: urban
+    options:
+      - value: urban
+        label: Urban
+      - value: moorland
+        label: Moorland
+      - value: coastal
+        label: Coastal
+  - id: world.scarcity
+    label: Resource pressure
+    type: choice
+    default: fading
+    options:
+      - value: comfortable
+        label: Comfortable
+      - value: fading
+        label: Fading
+      - value: destitute
+        label: Destitute
+generators:
+  region.count:
+    type: integer-range
+    min: 2
+    max: 3
+  region.names:
+    type: values
+    values:
+      - Ravenmoor
+      - Saint Orla
+      - Greyhaven
+      - Wolfsbane Vale
+      - Mere Nocturne
+  settlement.names:
+    type: values
+    values:
+      - Vesper Hollow
+      - Blackwick
+      - Gloambridge
+      - Mourningport
+      - Rosegrave
+  location.names:
+    type: values
+    values:
+      - Castle Vey
+      - The Mirror Crypt
+      - Wolfsbane Manor
+      - Moonlit Asylum
+      - Cathedral of Mists
+  creature.names:
+    type: values
+    values:
+      - Pale Vampire
+      - Grave Revenant
+      - Moon Wolf
+      - Mirror Wraith
+      - Gargoyle
+  npc.names:
+    type: values
+    values:
+      - Inspector Vale
+      - Lady Carmine
+      - Doctor Graves
+      - Sister Lucent
+      - The Night Coachman
+  faction.names:
+    type: values
+    values:
+      - The Silver Vigil
+      - House Carmine
+      - The Veiled Society
+  event.names:
+    type: values
+    values:
+      - The Portrait Weeps
+      - A Funeral Has No Corpse
+      - The Moon Stays Full
+  encounter.names:
+    type: values
+    values:
+      - Masquerade of Blood
+      - The Locked Séance
+      - Hunt Across Ravenmoor
+  item.names:
+    type: values
+    values:
+      - Silver Pistol
+      - Investigation Case
+      - Spirit Lens
+      - Laudanum
+      - Hunter's Coat
+      - Ritual Chalk
+      - Society Signet
+  economy:
+    type: weighted-table
+    entries:
+      - value: trade
+        weight: 35
+      - value: craft
+        weight: 30
+      - value: service
+        weight: 20
+      - value: smuggling
+        weight: 15
+  danger:
+    type: integer-range
+    min: 1
+    max: 5
+traits:
+  region.threatened:
+    id: region.threatened
+    when:
+      eq:
+        - descriptor: world.threat
+        - high
+    addTags:
+      - dangerous
+    set:
+      alert: true
+  location.scarce:
+    id: location.scarce
+    when:
+      ne:
+        - descriptor: world.scarcity
+        - comfortable
+    addTags:
+      - contested
+    set:
+      supplies: limited
+templates:
+  world.root:
+    kind: haunted-county
+    values:
+      name:
+        value: The Veiled County
+      tone:
+        descriptor: world.tone
+        default: heroic
+      environment:
+        descriptor: world.environment
+        default: urban
+      scarcity:
+        descriptor: world.scarcity
+        default: fading
+    components:
+      regions:
+        template: region.standard
+        count:
+          generator: region.count
+      faction:
+        template: faction.major
+      encounter:
+        template: encounter.signature
+      event:
+        template: event.opening
+  region.standard:
+    kind: parish
+    traits:
+      - region.threatened
+    values:
+      name:
+        generator: region.names
+      threat:
+        descriptor: world.threat
+        default: high
+      danger:
+        generator: danger
+    components:
+      settlements:
+        template: settlement.standard
+        count: 2
+      locations:
+        template: location.standard
+        count: 2
+      creatures:
+        template: creature.standard
+        count: 2
+      npc:
+        template: npc.standard
+      item:
+        template: item.signature
+  settlement.standard:
+    kind: settlement
+    tags:
+      - community
+    values:
+      name:
+        generator: settlement.names
+      economy:
+        generator: economy
+      environment:
+        descriptor: world.environment
+        default: urban
+    components: {}
+  location.standard:
+    kind: location
+    tags:
+      - adventure-site
+    traits:
+      - location.scarce
+    values:
+      name:
+        generator: location.names
+      feature:
+        descriptor: world.environment
+        default: urban
+    components: {}
+  creature.standard:
+    kind: creature
+    tags:
+      - threat
+    values:
+      name:
+        generator: creature.names
+      danger:
+        generator: danger
+    components: {}
+  npc.standard:
+    kind: npc
+    tags:
+      - contact
+    values:
+      name:
+        generator: npc.names
+      agenda:
+        generator: economy
+    components: {}
+  item.signature:
+    kind: item
+    tags:
+      - treasure
+    values:
+      name:
+        generator: item.names
+      scarcity:
+        descriptor: world.scarcity
+        default: fading
+    components: {}
+  faction.major:
+    kind: faction
+    tags:
+      - major-faction
+    values:
+      name:
+        generator: faction.names
+      agenda:
+        generator: economy
+    components: {}
+  encounter.signature:
+    kind: encounter
+    tags:
+      - set-piece
+    values:
+      name:
+        generator: encounter.names
+      threat:
+        descriptor: world.threat
+        default: high
+    components: {}
+  event.opening:
+    kind: event
+    tags:
+      - campaign-hook
+    values:
+      name:
+        generator: event.names
+      tone:
+        descriptor: world.tone
+        default: heroic
+    components: {}
+relations:
+  - id: settlement-route
+    type: connectedTo
+    from:
+      kind: settlement
+    to:
+      kind: settlement
+    mode: chain
+    bidirectional: true
+  - id: faction-influence
+    type: influencedBy
+    from:
+      kind: parish
+    to:
+      kind: faction
+      tags:
+        - major-faction
+    mode: each-to-first
+constraints:
+  - id: regional-depth
+    type: entity-count
+    query:
+      kind: parish
+    min: 2
+  - id: adventure-sites
+    type: entity-count
+    query:
+      kind: location
+    min: 4
+  - id: routes-exist
+    type: relation-count
+    relation: connectedTo
+    min: 3
+dependencies: []
+characterCreation:
+  schemaVersion: "1"
+  steps:
+    - id: identity
+      title: Identity
+      fields:
+        - id: name
+          label: Name
+          type: text
+          required: true
+          minLength: 2
+          maxLength: 60
+    - id: calling
+      title: Calling
+      fields:
+        - id: calling
+          label: Calling
+          type: choice
+          required: true
+          options:
+            - value: investigator
+              label: Investigator
+            - value: medium
+              label: Medium
+            - value: hunter
+              label: Hunter
+    - id: aptitudes
+      title: Aptitudes
+      fields:
+        - id: reason
+          label: Reason
+          type: number
+          min: -2
+          max: 5
+          default: 1
+        - id: nerve
+          label: Nerve
+          type: number
+          min: -2
+          max: 5
+          default: 1
+        - id: occult
+          label: Occult
+          type: number
+          min: -2
+          max: 5
+          default: 1
+    - id: signature
+      title: Signature
+      fields:
+        - id: signature
+          label: Signature approach
+          type: choice
+          required: true
+          default: bold
+          options:
+            - value: bold
+              label: Bold
+            - value: careful
+              label: Careful
+            - value: compassionate
+              label: Compassionate
+        - id: portrait
+          label: Portrait
+          type: asset
+          required: true
+          default: standard
+          options:
+            - value: standard
+              label: Gothic Horror portrait
+            - value: silhouette
+              label: Silhouette
+  calculated:
+    - id: readiness
+      operation: sum
+      fields:
+        - reason
+        - nerve
+        - occult
+  starting:
+    progression:
+      renown: 0
+      experience: 0
+    resources:
+      health: 14
+      composure: 10
+      insight: 4
+    inventory:
+      - id: weapon
+        quantity: 1
+        when:
+          field: calling
+          equals: investigator
+      - id: kit
+        quantity: 1
+        when:
+          field: calling
+          equals: medium
+      - id: relic
+        quantity: 1
+        when:
+          field: calling
+          equals: hunter
+      - id: supply
+        quantity: 2
+    traits:
+      - id: trained-investigator
+        when:
+          field: calling
+          equals: investigator
+      - id: trained-medium
+        when:
+          field: calling
+          equals: medium
+      - id: trained-hunter
+        when:
+          field: calling
+          equals: hunter
+    assets:
+      - id: portrait
+        value: assets/ui/portrait.svg
+  portability:
+    rules: []
+checks:
+  reason:
+    label: Reason
+    dice: 1d20
+    modifierField: reason
+    criticalSuccess:
+      rollTotalAtLeast: 20
+    criticalFailure:
+      rollTotalAtMost: 1
+  nerve:
+    label: Nerve
+    dice: 2d6
+    modifierField: nerve
+    criticalSuccess:
+      rollTotalAtLeast: 12
+    criticalFailure:
+      rollTotalAtMost: 2
+  occult:
+    label: Occult
+    dice: 1d20
+    modifierField: occult
+    criticalSuccess:
+      rollTotalAtLeast: 20
+    criticalFailure:
+      rollTotalAtMost: 1
+resources:
+  health:
+    label: Health
+    min: 0
+    max: 20
+    default: 14
+  composure:
+    label: Composure
+    min: 0
+    max: 16
+    default: 10
+  insight:
+    label: Insight
+    min: 0
+    max: 12
+    default: 4
+items:
+  weapon:
+    label: Silver Pistol
+    stackLimit: 1
+  kit:
+    label: Investigation Case
+    stackLimit: 1
+  relic:
+    label: Spirit Lens
+    stackLimit: 1
+  supply:
+    label: Laudanum
+    stackLimit: 10
+  armor:
+    label: Hunter's Coat
+    stackLimit: 1
+  tool:
+    label: Ritual Chalk
+    stackLimit: 1
+  token:
+    label: Society Signet
+    stackLimit: 1
+progression:
+  renown:
+    label: Renown
+    min: 0
+    max: 100
+    default: 0
+  experience:
+    label: Experience
+    min: 0
+    default: 0
+locations:
+  worldEntityKinds:
+    - settlement
+    - location
+actorTemplates:
+  adversary:
+    label: Pale Vampire
+    resources:
+      health: 10
+      composure: 0
+      insight: 0
+    attributes:
+      reason: 2
+      nerve: 0
+      occult: 1
+    inventory:
+      - itemId: weapon
+        quantity: 1
+    progression:
+      renown: 0
+      experience: 0
+    worldEntityKinds:
+      - creature
+  contact:
+    label: Inspector Vale
+    resources:
+      health: 14
+      composure: 10
+      insight: 4
+    attributes:
+      reason: 0
+      nerve: 2
+      occult: 2
+    inventory:
+      - itemId: kit
+        quantity: 1
+    progression:
+      renown: 5
+      experience: 0
+    worldEntityKinds:
+      - npc
+  elite:
+    label: Grave Revenant
+    resources:
+      health: 14
+      composure: 10
+      insight: 4
+    attributes:
+      reason: 3
+      nerve: 2
+      occult: 2
+    inventory:
+      - itemId: relic
+        quantity: 1
+    progression:
+      renown: 10
+      experience: 5
+    worldEntityKinds:
+      - creature
+effects:
+  haunted:
+    label: Haunted
+    duration:
+      type: turns
+      value: 2
+    modifiers:
+      reason: -2
+    blockedActions:
+      - inspire
+  focused:
+    label: Focused
+    duration:
+      type: rounds
+      value: 2
+    modifiers:
+      nerve: 2
+  warded:
+    label: Warded
+    duration:
+      type: turns
+      value: 1
+    modifiers:
+      occult: 2
+actions:
+  basic-attack:
+    label: Use Silver Pistol
+    target: single-actor
+    steps:
+      - check:
+          id: reason
+          against: input.difficulty
+      - roll:
+          id: impact
+          dice: 1d6
+        when:
+          previousOutcome: success
+      - resource:
+          target: target
+          resource: health
+          operation: subtract
+          value: impact.total
+        when:
+          previousOutcome: success
+  recover:
+    label: Recover Health
+    kind: resource
+    target: self
+    resource: health
+    operation: add
+    amount: 3
+  hinder:
+    label: Haunted
+    kind: effect
+    target: actor
+    effectId: haunted
+  inspire:
+    label: Focused
+    target: multiple-actors
+    steps:
+      - effect:
+          target: target
+          id: focused
+  guard:
+    label: Warded
+    kind: effect
+    target: self
+    effectId: warded
+  signature-move:
+    label: Signature Move
+    target: single-actor
+    steps:
+      - check:
+          id: nerve
+          against: input.difficulty
+      - effect:
+          target: target
+          id: haunted
+        when:
+          previousOutcome: success
+  pressure:
+    label: Spend Insight
+    kind: resource
+    target: self
+    resource: insight
+    operation: subtract
+    amount: 1
+encounter:
+  orderingPolicy: rolled

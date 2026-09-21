@@ -1,0 +1,673 @@
+questions:
+  - id: world.tone
+    label: Campaign tone
+    type: choice
+    default: heroic
+    options:
+      - value: heroic
+        label: Heroic
+      - value: tense
+        label: Tense
+      - value: tragic
+        label: Tragic
+  - id: world.threat
+    label: Threat level
+    type: choice
+    default: high
+    options:
+      - value: low
+        label: Low
+      - value: medium
+        label: Medium
+      - value: high
+        label: High
+  - id: world.environment
+    label: Dominant environment
+    type: choice
+    default: corporate
+    options:
+      - value: corporate
+        label: Corporate
+      - value: street
+        label: Street
+      - value: industrial
+        label: Industrial
+  - id: world.scarcity
+    label: Resource pressure
+    type: choice
+    default: controlled
+    options:
+      - value: luxury
+        label: Luxury
+      - value: controlled
+        label: Controlled
+      - value: black-market
+        label: Black-market
+generators:
+  region.count:
+    type: integer-range
+    min: 2
+    max: 3
+  region.names:
+    type: values
+    values:
+      - Chrome Harbor
+      - Neon Ward
+      - Old Grid
+      - Glass Heights
+      - Sector Nine
+  settlement.names:
+    type: values
+    values:
+      - Night Market
+      - Stack Twelve
+      - Lazarus Mall
+      - Redline Station
+      - The Undercity
+  location.names:
+    type: values
+    values:
+      - Ghost Clinic
+      - Black ICE Vault
+      - Orbital Elevator
+      - Memory Bazaar
+      - Rain Temple
+  creature.names:
+    type: values
+    values:
+      - Security Drone
+      - Razor Hound
+      - Autonomous Tank
+      - Nanite Swarm
+      - Chrome Stalker
+  npc.names:
+    type: values
+    values:
+      - Nyx Voltage
+      - Doctor Zero
+      - Mako Chen
+      - Saint Static
+      - Rex Meridian
+  faction.names:
+    type: values
+    values:
+      - Helix Dynamics
+      - Red Static
+      - Civic Algorithm
+  event.names:
+    type: values
+    values:
+      - The Grid Goes Dark
+      - A CEO Is Copied
+      - Acid Rain Lockdown
+  encounter.names:
+    type: values
+    values:
+      - Data Heist
+      - Redline Ambush
+      - Tower Extraction
+  item.names:
+    type: values
+    values:
+      - Smart Rifle
+      - Intrusion Deck
+      - Memory Shard
+      - Trauma Patch
+      - Reactive Coat
+      - Spider Drone
+      - Credstick
+  economy:
+    type: weighted-table
+    entries:
+      - value: trade
+        weight: 35
+      - value: craft
+        weight: 30
+      - value: service
+        weight: 20
+      - value: smuggling
+        weight: 15
+  danger:
+    type: integer-range
+    min: 1
+    max: 5
+traits:
+  region.threatened:
+    id: region.threatened
+    when:
+      eq:
+        - descriptor: world.threat
+        - high
+    addTags:
+      - dangerous
+    set:
+      alert: true
+  location.scarce:
+    id: location.scarce
+    when:
+      ne:
+        - descriptor: world.scarcity
+        - luxury
+    addTags:
+      - contested
+    set:
+      supplies: limited
+templates:
+  world.root:
+    kind: megacity
+    values:
+      name:
+        value: Nova City 2091
+      tone:
+        descriptor: world.tone
+        default: heroic
+      environment:
+        descriptor: world.environment
+        default: corporate
+      scarcity:
+        descriptor: world.scarcity
+        default: controlled
+    components:
+      regions:
+        template: region.standard
+        count:
+          generator: region.count
+      faction:
+        template: faction.major
+      encounter:
+        template: encounter.signature
+      event:
+        template: event.opening
+  region.standard:
+    kind: district
+    traits:
+      - region.threatened
+    values:
+      name:
+        generator: region.names
+      threat:
+        descriptor: world.threat
+        default: high
+      danger:
+        generator: danger
+    components:
+      settlements:
+        template: settlement.standard
+        count: 2
+      locations:
+        template: location.standard
+        count: 2
+      creatures:
+        template: creature.standard
+        count: 2
+      npc:
+        template: npc.standard
+      item:
+        template: item.signature
+  settlement.standard:
+    kind: settlement
+    tags:
+      - community
+    values:
+      name:
+        generator: settlement.names
+      economy:
+        generator: economy
+      environment:
+        descriptor: world.environment
+        default: corporate
+    components: {}
+  location.standard:
+    kind: location
+    tags:
+      - adventure-site
+    traits:
+      - location.scarce
+    values:
+      name:
+        generator: location.names
+      feature:
+        descriptor: world.environment
+        default: corporate
+    components: {}
+  creature.standard:
+    kind: creature
+    tags:
+      - threat
+    values:
+      name:
+        generator: creature.names
+      danger:
+        generator: danger
+    components: {}
+  npc.standard:
+    kind: npc
+    tags:
+      - contact
+    values:
+      name:
+        generator: npc.names
+      agenda:
+        generator: economy
+    components: {}
+  item.signature:
+    kind: item
+    tags:
+      - treasure
+    values:
+      name:
+        generator: item.names
+      scarcity:
+        descriptor: world.scarcity
+        default: controlled
+    components: {}
+  faction.major:
+    kind: faction
+    tags:
+      - major-faction
+    values:
+      name:
+        generator: faction.names
+      agenda:
+        generator: economy
+    components: {}
+  encounter.signature:
+    kind: encounter
+    tags:
+      - set-piece
+    values:
+      name:
+        generator: encounter.names
+      threat:
+        descriptor: world.threat
+        default: high
+    components: {}
+  event.opening:
+    kind: event
+    tags:
+      - campaign-hook
+    values:
+      name:
+        generator: event.names
+      tone:
+        descriptor: world.tone
+        default: heroic
+    components: {}
+relations:
+  - id: settlement-route
+    type: connectedTo
+    from:
+      kind: settlement
+    to:
+      kind: settlement
+    mode: chain
+    bidirectional: true
+  - id: faction-influence
+    type: influencedBy
+    from:
+      kind: district
+    to:
+      kind: faction
+      tags:
+        - major-faction
+    mode: each-to-first
+constraints:
+  - id: regional-depth
+    type: entity-count
+    query:
+      kind: district
+    min: 2
+  - id: adventure-sites
+    type: entity-count
+    query:
+      kind: location
+    min: 4
+  - id: routes-exist
+    type: relation-count
+    relation: connectedTo
+    min: 3
+dependencies: []
+characterCreation:
+  schemaVersion: "1"
+  steps:
+    - id: identity
+      title: Identity
+      fields:
+        - id: name
+          label: Name
+          type: text
+          required: true
+          minLength: 2
+          maxLength: 60
+    - id: calling
+      title: Calling
+      fields:
+        - id: calling
+          label: Calling
+          type: choice
+          required: true
+          options:
+            - value: solo
+              label: Solo
+            - value: netrunner
+              label: Netrunner
+            - value: fixer
+              label: Fixer
+    - id: aptitudes
+      title: Aptitudes
+      fields:
+        - id: reflex
+          label: Reflex
+          type: number
+          min: -2
+          max: 5
+          default: 1
+        - id: interface
+          label: Interface
+          type: number
+          min: -2
+          max: 5
+          default: 1
+        - id: cool
+          label: Cool
+          type: number
+          min: -2
+          max: 5
+          default: 1
+    - id: signature
+      title: Signature
+      fields:
+        - id: signature
+          label: Signature approach
+          type: choice
+          required: true
+          default: bold
+          options:
+            - value: bold
+              label: Bold
+            - value: careful
+              label: Careful
+            - value: compassionate
+              label: Compassionate
+        - id: portrait
+          label: Portrait
+          type: asset
+          required: true
+          default: standard
+          options:
+            - value: standard
+              label: Cyberpunk portrait
+            - value: silhouette
+              label: Silhouette
+  calculated:
+    - id: readiness
+      operation: sum
+      fields:
+        - reflex
+        - interface
+        - cool
+  starting:
+    progression:
+      renown: 0
+      experience: 0
+    resources:
+      health: 18
+      humanity: 70
+      ammo: 12
+    inventory:
+      - id: weapon
+        quantity: 1
+        when:
+          field: calling
+          equals: solo
+      - id: kit
+        quantity: 1
+        when:
+          field: calling
+          equals: netrunner
+      - id: relic
+        quantity: 1
+        when:
+          field: calling
+          equals: fixer
+      - id: supply
+        quantity: 2
+    traits:
+      - id: trained-solo
+        when:
+          field: calling
+          equals: solo
+      - id: trained-netrunner
+        when:
+          field: calling
+          equals: netrunner
+      - id: trained-fixer
+        when:
+          field: calling
+          equals: fixer
+    assets:
+      - id: portrait
+        value: assets/ui/portrait.svg
+  portability:
+    rules: []
+checks:
+  reflex:
+    label: Reflex
+    dice: 1d20
+    modifierField: reflex
+    criticalSuccess:
+      rollTotalAtLeast: 20
+    criticalFailure:
+      rollTotalAtMost: 1
+  interface:
+    label: Interface
+    dice: 2d6
+    modifierField: interface
+    criticalSuccess:
+      rollTotalAtLeast: 12
+    criticalFailure:
+      rollTotalAtMost: 2
+  cool:
+    label: Cool
+    dice: 1d20
+    modifierField: cool
+    criticalSuccess:
+      rollTotalAtLeast: 20
+    criticalFailure:
+      rollTotalAtMost: 1
+resources:
+  health:
+    label: Health
+    min: 0
+    max: 24
+    default: 18
+  humanity:
+    label: Humanity
+    min: 0
+    max: 100
+    default: 70
+  ammo:
+    label: Ammo
+    min: 0
+    max: 30
+    default: 12
+items:
+  weapon:
+    label: Smart Rifle
+    stackLimit: 1
+  kit:
+    label: Intrusion Deck
+    stackLimit: 1
+  relic:
+    label: Memory Shard
+    stackLimit: 1
+  supply:
+    label: Trauma Patch
+    stackLimit: 10
+  armor:
+    label: Reactive Coat
+    stackLimit: 1
+  tool:
+    label: Spider Drone
+    stackLimit: 1
+  token:
+    label: Credstick
+    stackLimit: 1
+progression:
+  renown:
+    label: Renown
+    min: 0
+    max: 100
+    default: 0
+  experience:
+    label: Experience
+    min: 0
+    default: 0
+locations:
+  worldEntityKinds:
+    - settlement
+    - location
+actorTemplates:
+  adversary:
+    label: Security Drone
+    resources:
+      health: 10
+      humanity: 0
+      ammo: 0
+    attributes:
+      reflex: 2
+      interface: 0
+      cool: 1
+    inventory:
+      - itemId: weapon
+        quantity: 1
+    progression:
+      renown: 0
+      experience: 0
+    worldEntityKinds:
+      - creature
+  contact:
+    label: Nyx Voltage
+    resources:
+      health: 18
+      humanity: 70
+      ammo: 12
+    attributes:
+      reflex: 0
+      interface: 2
+      cool: 2
+    inventory:
+      - itemId: kit
+        quantity: 1
+    progression:
+      renown: 5
+      experience: 0
+    worldEntityKinds:
+      - npc
+  elite:
+    label: Razor Hound
+    resources:
+      health: 18
+      humanity: 70
+      ammo: 12
+    attributes:
+      reflex: 3
+      interface: 2
+      cool: 2
+    inventory:
+      - itemId: relic
+        quantity: 1
+    progression:
+      renown: 10
+      experience: 5
+    worldEntityKinds:
+      - creature
+effects:
+  jammed:
+    label: Jammed
+    duration:
+      type: turns
+      value: 2
+    modifiers:
+      reflex: -2
+    blockedActions:
+      - inspire
+  boosted:
+    label: Boosted
+    duration:
+      type: rounds
+      value: 2
+    modifiers:
+      interface: 2
+  ghosted:
+    label: Ghosted
+    duration:
+      type: turns
+      value: 1
+    modifiers:
+      cool: 2
+actions:
+  basic-attack:
+    label: Use Smart Rifle
+    target: single-actor
+    steps:
+      - check:
+          id: reflex
+          against: input.difficulty
+      - roll:
+          id: impact
+          dice: 1d6
+        when:
+          previousOutcome: success
+      - resource:
+          target: target
+          resource: health
+          operation: subtract
+          value: impact.total
+        when:
+          previousOutcome: success
+  recover:
+    label: Recover Health
+    kind: resource
+    target: self
+    resource: health
+    operation: add
+    amount: 3
+  hinder:
+    label: Jammed
+    kind: effect
+    target: actor
+    effectId: jammed
+  inspire:
+    label: Boosted
+    target: multiple-actors
+    steps:
+      - effect:
+          target: target
+          id: boosted
+  guard:
+    label: Ghosted
+    kind: effect
+    target: self
+    effectId: ghosted
+  signature-move:
+    label: Signature Move
+    target: single-actor
+    steps:
+      - check:
+          id: interface
+          against: input.difficulty
+      - effect:
+          target: target
+          id: jammed
+        when:
+          previousOutcome: success
+  pressure:
+    label: Spend Ammo
+    kind: resource
+    target: self
+    resource: ammo
+    operation: subtract
+    amount: 1
+encounter:
+  orderingPolicy: none
