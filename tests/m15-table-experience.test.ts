@@ -1,5 +1,5 @@
 import {describe,expect,it} from "vitest";
-import {buildRehearsalReport,createTableState,visibleTableState} from "@masterhost/game-runtime";
+import {assertActorControl,buildRehearsalReport,createTableState,visibleTableState} from "@masterhost/game-runtime";
 
 describe("M15 table experience",()=>{
  it("builds ordered scenes and keeps GM notes out of the public view",()=>{
@@ -34,5 +34,11 @@ describe("M15 table experience",()=>{
   expect(report.stages.characterCreation.passed).toBe(false);
   expect(report.missing).toContain("exploration");
   expect(report.missing).toContain("completion");
+ });
+
+ it("allows a participant to control only their own actor",()=>{
+  expect(()=>assertActorControl({gm:false,participantId:"player",actorId:"player"})).not.toThrow();
+  expect(()=>assertActorControl({gm:true,actorId:"npc"})).not.toThrow();
+  expect(()=>assertActorControl({gm:false,participantId:"player",actorId:"other"})).toThrowError("actor control forbidden");
  });
 });

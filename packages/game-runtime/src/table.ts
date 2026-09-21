@@ -20,6 +20,10 @@ export function visibleTableState(table:TableState,gm:boolean):TableState|Public
 
 export function isTablePhase(value:unknown):value is TablePhase{return typeof value==="string"&&(tablePhases as readonly string[]).includes(value)}
 
+export function assertActorControl(input:{gm:boolean;participantId?:string;actorId:string}){
+ if(!input.gm&&(!input.participantId||input.participantId!==input.actorId))throw Object.assign(Error("actor control forbidden"),{statusCode:403});
+}
+
 export function buildRehearsalReport(input:{sessionId:string;sessionState:string;participants:Array<{id:string;characterId?:string}>;actors:Array<{actorId:string}>;events:TableEvent[]}):RehearsalReport{
  const count=(type:string)=>input.events.filter(event=>event.type===type).length;
  const social=input.events.filter(event=>event.type==="TableBeatRecorded"&&event.payload?.phase==="social").length;
