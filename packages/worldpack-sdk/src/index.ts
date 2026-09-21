@@ -87,6 +87,7 @@ export function assessOfficialPack(pack:LoadedWorldPack):OfficialPackAssessment{
 }
 export * from "./authoring.js";
 export * from "./deep-universe.js";
+export * from "./universe-catalog.js";
 export function characterConditionMatches(condition:CharacterCondition|undefined,values:Record<string,unknown>){if(!condition)return true;const value=values[condition.field];return condition.in?condition.in.some(candidate=>Object.is(candidate,value)):Object.is(condition.equals,value)}
 export function validateCharacterValues(schema:CharacterCreationSchema,values:unknown):Record<string,unknown>{
  if(!values||typeof values!=="object"||Array.isArray(values))throw Error("character values must be an object");
