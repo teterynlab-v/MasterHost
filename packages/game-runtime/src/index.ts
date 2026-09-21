@@ -46,3 +46,4 @@ export * from "./check-replay.js";
 export * from "./world-links.js";
 export * from "./advanced.js";
 export * from "./inventory.js";
+export * from "./table.js";
