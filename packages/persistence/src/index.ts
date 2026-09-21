@@ -104,3 +104,4 @@ export * from "./pack-project-repository.js";
 export * from "./mhpack.js";
 export * from "./hosted-platform-repository.js";
 export * from "./realtime-bus.js";
+export * from "./advanced-ecosystem-repository.js";

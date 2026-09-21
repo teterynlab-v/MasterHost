@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { realmHeaders } from "./realm.js";
 import { sessionSocket } from "./session-client.js";
 import type { ConnectionStatus } from "./session-client.js";
+import {AdvancedSessionPanel} from "./advanced-session.js";
 
 const API = (import.meta as { env?: { VITE_API_URL?: string } }).env?.VITE_API_URL ?? "http://localhost:8080/api";
 type Participant = { id: string; displayName: string; accessToken?: string;ready?:boolean };
@@ -183,6 +184,7 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
     <button className="secondary" disabled={busy||!narrative.trim()} onClick={()=>void run(async()=>{await authorizedPost(`/sessions/${session.id}/events/narrative`,{text:narrative.trim()},gmToken);setNarrative("")})}>ADD TO SESSION LOG</button>
     <button className="secondary" disabled={busy || Boolean(activeEncounter)} onClick={() => void run(() => authorizedPost(`/sessions/${session.id}/state`, { state: "finished" }, gmToken))}>FINISH SESSION</button>
     {activeEncounter && <p className="muted">End the encounter before finishing the session.</p>}
+    <AdvancedSessionPanel sessionId={session.id} token={gmToken} gm actors={actors}/>
     <h3>Game log</h3>
     {events.slice(-15).reverse().map(event => <div className="row gameLogRow" key={event.id}><b>#{event.sequence} {event.type}</b><small>{new Date(event.createdAt).toLocaleTimeString()}</small></div>)}
   </section>;
@@ -234,6 +236,7 @@ export function PlayerGame({ session, participant, onLeave }: { session: { id: s
     {shownResolution && <article><h3>{shownResolution.outcome?.toUpperCase()??"RESOLVED"}</h3>{shownResolution.total!==undefined&&<div className="bigRoll">{shownResolution.total}</div>}{shownResolution.roll&&<p>Dice {shownResolution.roll.total}{shownResolution.modifier!==undefined?` + modifier ${shownResolution.modifier}`:""}</p>}</article>}
     <article><h3>Party</h3>{party.map(member=><div className="compactRow" key={member.id}><span>{member.displayName}</span><small>{member.id===participant.id?"You":member.ready?"Ready":"Joined"}</small></div>)}</article>
     {activity.length>0&&<article><h3>Recent session activity</h3>{activity.slice().reverse().map((event,index)=><div className="compactRow" key={`${event.sequence}-${index}`}><span>#{event.sequence} {event.type}</span>{event.text&&<small>{event.text}</small>}</div>)}</article>}
+    <AdvancedSessionPanel sessionId={session.id} token={participant.accessToken} gm={false} actors={actor?[actor]:[]}/>
     <button className="secondary" onClick={() => void refresh().catch(failure => setError(String(failure)))}>Refresh state</button> <button className="secondary" onClick={onLeave}>Join another session</button>
   </section>;
 }

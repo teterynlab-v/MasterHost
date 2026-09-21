@@ -44,4 +44,5 @@ export * from "./encounters.js";
 export * from "./replay.js";
 export * from "./check-replay.js";
 export * from "./world-links.js";
+export * from "./advanced.js";
 export * from "./inventory.js";
