@@ -64,4 +64,3 @@ The gate passes only when every stage is true. It is independent of the deferred
 ## Acceptance
 
 On a clean PostgreSQL database, the acceptance script creates a complete game, Character, Campaign and Session; runs setup, exploration, social interaction, a Pack-defined action and check, an Encounter, reward and progression; reconnects; completes the Session; restarts the server; and verifies table, actors, events, redaction and the passing report. Headless Chrome performs the GM and player table controls without JSON/YAML/source editing. TypeScript, unit tests, live repository tests and the production web build pass.
-

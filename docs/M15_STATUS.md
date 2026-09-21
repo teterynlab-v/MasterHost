@@ -47,4 +47,3 @@ Headless Chrome exercised the visible GM and player surfaces. The GM loaded the 
 - This is a reproducible engineering rehearsal with one automated player. It is not the real three-to-four-hour game with one GM and two to five people.
 - M16 still owns clean-machine installation, onboarding, backup/restore operations, migration/diagnostic documentation, license inventory, accessibility/responsive audit, release archives and the real group game.
 - Production identity, abuse controls and external infrastructure remain outside this local gate.
-
