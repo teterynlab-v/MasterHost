@@ -1,6 +1,6 @@
 # M13 Advanced and Full Custom Builder Design
 
-**Status:** approved product direction, implementation in progress
+**Status:** implemented and accepted locally on 2026-09-21
 
 ## Outcome
 
@@ -73,4 +73,3 @@ TypeScript, ordinary tests, production build, clean database API acceptance, res
 - `.mhgame` transfer between installations belongs to M14.
 - Complete real-table UX and rehearsal belong to M15.
 - Release packaging and public installation acceptance belong to M16.
-

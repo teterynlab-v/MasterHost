@@ -1,10 +1,11 @@
 import { randomUUID } from "node:crypto";
 import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import type { FastifyInstance } from "fastify";
 import { buildDescriptor, composeGameDescriptor, fragmentCatalog, gameAssetCatalog, gameAssetDetail, gameAssetMedia, reviewQuickGameSelection, type GameAsset, type GameDescriptorFragment, type GameFragmentSelection, type QuickGameSelection } from "@masterhost/descriptor";
 import type { DescriptorValue, MaterializedWorld } from "@masterhost/domain";
 import { GameDescriptorRepository, PackProjectRepository, WorldRepository, type GameDescriptorProject } from "@masterhost/persistence";
-import { toLoadedWorldPack, worldPackDocumentFromLoaded, type LoadedWorldPack, type WorldPackDocument } from "@masterhost/worldpack-sdk";
+import { createPackFork, toLoadedWorldPack, worldPackDocumentFromLoaded, type LoadedWorldPack, type WorldPackDocument } from "@masterhost/worldpack-sdk";
 import { assertUniqueMaterializationPaths, compareWorlds, compileSatisfying, preserveCustomByPath } from "@masterhost/world-compiler";
 
 interface Dependencies { descriptors: GameDescriptorRepository; worlds: WorldRepository; packs: PackProjectRepository; fragments: GameDescriptorFragment[]; assets: GameAsset[] }
@@ -113,6 +114,19 @@ export async function registerGameDescriptors(app: FastifyInstance, dependencies
     return compose({ id: project.id, revision: project.revision + 1, name, base: base.document, selections: selection(request.body.selections) });
   });
   app.post("/api/game-descriptors/:id/compile", async (request: any) => { const { realm, project } = await current(request.params.id, request); return dependencies.worlds.save(compile(project, realm.id), `game-descriptor:${project.id}@${project.revision}`); });
+  app.post("/api/game-descriptors/:id/fork-pack", async (request: any) => {
+    const { realm, project } = await current(request.params.id, request), id = String(request.body?.id ?? "").trim(), name = String(request.body?.name ?? "").trim(), version = String(request.body?.version ?? "").trim();
+    if (!/^[a-zA-Z0-9][a-zA-Z0-9._-]*$/.test(id) || !name || name.length > 120 || !/^\d+\.\d+\.\d+(?:-[a-zA-Z0-9.-]+)?$/.test(version)) throw fail("valid Pack id, name and semantic version are required");
+    const base = await basePack(request, project.basePack), publishedBase = (await dependencies.packs.list(realm.id)).find(value => value.status === "published" && value.document.manifest.id === project.basePack.id && value.document.manifest.version === project.basePack.version), assetData: Record<string, string> = {};
+    for (const [assetName, metadata] of Object.entries(project.compiled.assets)) {
+      const media = gameAssetMedia(dependencies.assets, assetName, metadata.checksum);
+      if (media) assetData[assetName] = (await readFile(media.absolutePath)).toString("base64");
+      else if (publishedBase?.assetData[assetName]) assetData[assetName] = publishedBase.assetData[assetName]!;
+      else if (base.pack.root && base.pack.assets.includes(`assets/${assetName}`)) assetData[assetName] = (await readFile(join(base.pack.root, "assets", assetName))).toString("base64");
+      else throw fail(`composed media ${assetName} is unavailable`, 409);
+    }
+    return dependencies.packs.create(createPackFork({ realmId: realm.id, sourceProjectId: project.id, sourceRevision: project.revision, document: project.compiled, assetData, id, name, version }));
+  });
 
   const recomposition = async (request: any) => {
     const { realm, project } = await current(request.params.id, request), world = await dependencies.worlds.get(request.params.worldId);

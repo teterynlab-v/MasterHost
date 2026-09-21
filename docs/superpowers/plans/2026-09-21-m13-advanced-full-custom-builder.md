@@ -57,4 +57,3 @@
 - Request independent review and resolve every Critical and Important finding.
 - Record source, tests, runtime proof and limits separately.
 - Commit, integrate locally into `master`, rerun M13 there and clean the worktree.
-
