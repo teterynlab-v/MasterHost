@@ -8,6 +8,7 @@ import { QuickGameBuilder } from "./quick-game-builder.js";
 import { currentRealm,realmHeaders } from "./realm.js";
 import { I18nProvider,LanguageSwitcher } from "./i18n/react.js";
 import { ProductHome } from "./product-home.js";
+import { UniverseCatalog } from "./universe-catalog.js";
 const API=(import.meta as any).env?.VITE_API_URL??"http://localhost:8080/api";
 const REALM=currentRealm();
 async function api(path:string,init?:RequestInit){const r=await fetch(`${API}${path}`,{...init,headers:realmHeaders(init?.headers)});const type=r.headers.get("content-type")??"";const body=type.includes("json")?await r.json():await r.text();if(!r.ok)throw Error((body as any)?.message??`HTTP ${r.status}`);return body}
@@ -39,7 +40,8 @@ function App(){
  if(hash==="realm")return <RealmConsole request={api} onBack={()=>location.hash=""}/>;
  if(hash==="official")return <OfficialLibrary realm={realm} request={api} onBack={()=>location.hash=""}/>;
  if(!pack||!realm)return <main><h1>MASTERHOST</h1><p>{error||"Loading…"}</p></main>;
- if(hash==="game-builder")return <QuickGameBuilder request={api} requestMedia={apiMedia} pack={pack} onWorld={async next=>{await loadMeta(next);await loadWorlds();location.hash=""}} onBack={()=>location.hash=""} onAdvanced={()=>location.hash="advanced-game-builder"}/>;
+ if(hash==="universes")return <UniverseCatalog request={api} onBack={()=>location.hash=""} onAdvanced={()=>location.hash="advanced-game-builder"} onPlay={()=>location.hash="game-builder"}/>;
+ if(hash==="game-builder")return <QuickGameBuilder request={api} requestMedia={apiMedia} pack={pack} onWorld={async next=>{await loadMeta(next);await loadWorlds();location.hash=""}} onBack={()=>location.hash="universes"} onAdvanced={()=>location.hash="advanced-game-builder"}/>;
  if(hash==="advanced-game-builder")return <GameDescriptorBuilder request={api} requestMedia={apiMedia} pack={pack} onWorld={async next=>{await loadMeta(next);await loadWorlds();location.hash=""}} onBack={()=>location.hash="game-builder"} onFork={project=>{sessionStorage.setItem("masterhost.packProject",project.id);location.hash="pack"}}/>;
  if(hash!=="world")return <ProductHome realm={realm} pack={pack} worlds={worlds} currentWorld={world} onRun={async next=>{await loadMeta(next);location.hash="gm"}} onEdit={async next=>{await loadMeta(next);location.hash="world"}}/>;
  const terms=realm.brand.terminology;
