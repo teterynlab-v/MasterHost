@@ -29,7 +29,7 @@ export type ActionKind="check"|"resource"|"effect"|"custom";
 export interface ActionDefinition{id:string;label:string;kind?:ActionKind;target:"self"|"actor"|"none"|"single-actor"|"multiple-actors";steps?:ActionStep[];checkId?:string;resource?:string;operation?:"add"|"subtract"|"set";amount?:number;effectId?:string}
 export interface ResourceDefinition{id:string;label:string;min?:number;max?:number;default:number}
 export interface EffectDefinition{id:string;label:string;duration?:{type:"turns"|"rounds"|"session"|"permanent";value?:number};modifiers?:Record<string,number>}
-export interface ActorRuntimeState{actorId:string;resources:Record<string,number>;effects:ActiveEffect[];kind?:"npc";label?:string;templateId?:string;worldEntityId?:string;attributes?:Record<string,number>}
+export interface ActorRuntimeState{actorId:string;resources:Record<string,number>;effects:ActiveEffect[];kind?:"npc";label?:string;templateId?:string;worldEntityId?:string;worldEntityPath?:string;worldEntityLabel?:string;worldEntityRevision?:number;worldEntityStatus?:"current"|"missing"|"incompatible";attributes?:Record<string,number>}
 export interface ActiveEffect{id:string;definitionId:string;remaining?:number;appliedAt:string;sourceActorId?:string}
 export function initializeResources(defs:Record<string,ResourceDefinition>,values:Record<string,unknown>={}):Record<string,number>{return Object.fromEntries(Object.entries(defs).map(([id,d])=>[id,Number(values[id]??d.default)]))}
 export function applyResource(def:ResourceDefinition,current:number,op:"add"|"subtract"|"set",amount:number){let n=op==="set"?amount:op==="add"?current+amount:current-amount;if(def.min!==undefined)n=Math.max(def.min,n);if(def.max!==undefined)n=Math.min(def.max,n);return n}
@@ -40,3 +40,4 @@ export * from "./actions.js";
 export * from "./encounters.js";
 export * from "./replay.js";
 export * from "./check-replay.js";
+export * from "./world-links.js";

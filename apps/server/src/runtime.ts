@@ -1,4 +1,4 @@
-import type{FastifyInstance}from"fastify";import websocket from"@fastify/websocket";import{RuntimeRepository,GameRepository,ActorStateRepository,EncounterRepository,RuntimeMutationRepository,RuntimeReplayRepository,CheckRecoveryRepository}from"@masterhost/persistence";import type{WorldRepository}from"@masterhost/persistence";import{newCheckRequest,resolveCheck,initializeResources,effectiveModifier,executeAction,startEncounter,advanceEncounter,endEncounter}from"@masterhost/game-runtime";import type{CheckDefinition,ResourceDefinition,EffectDefinition}from"@masterhost/game-runtime";import{validateCharacterValues}from"@masterhost/worldpack-sdk";import type{LoadedWorldPack}from"@masterhost/worldpack-sdk";
+import type{FastifyInstance}from"fastify";import websocket from"@fastify/websocket";import{RuntimeRepository,GameRepository,ActorStateRepository,EncounterRepository,RuntimeMutationRepository,RuntimeReplayRepository,CheckRecoveryRepository}from"@masterhost/persistence";import type{WorldRepository}from"@masterhost/persistence";import{newCheckRequest,resolveCheck,initializeResources,effectiveModifier,executeAction,startEncounter,advanceEncounter,endEncounter,reconcileWorldLink}from"@masterhost/game-runtime";import type{CheckDefinition,ResourceDefinition,EffectDefinition,ActorRuntimeState}from"@masterhost/game-runtime";import{validateCharacterValues}from"@masterhost/worldpack-sdk";import type{LoadedWorldPack}from"@masterhost/worldpack-sdk";
 import{createHash,randomUUID}from"node:crypto";
 import { changeEncounterParticipants } from "@masterhost/game-runtime";
 declare module "fastify" { interface FastifyInstance { masterhostPack?: LoadedWorldPack; masterhostWorldRepository?: WorldRepository } }
@@ -40,19 +40,26 @@ export async function registerRuntime(app:FastifyInstance,x:{db:string;realmId:s
   const idem=await idempotency(req,req.params.id);if(idem?.prior!==undefined)return idem.prior;
   const session=await repo.session(req.params.id);if(!session||session.state!=="live")throw Object.assign(Error("session is not live"),{statusCode:409});
   const templateId=String(req.body?.templateId??""),template=pack.content.actorTemplates?.[templateId];if(!template)throw Object.assign(Error("unknown actor template"),{statusCode:400});
-  const worldEntityId=req.body?.worldEntityId;
+  const worldEntityId=req.body?.worldEntityId;let worldLink:{}|Pick<ActorRuntimeState,"worldEntityId"|"worldEntityPath"|"worldEntityLabel"|"worldEntityRevision"|"worldEntityStatus">={};
   if(worldEntityId!==undefined){
    if(typeof worldEntityId!=="string")throw Object.assign(Error("invalid World entity ID"),{statusCode:400});
    const world=await sessionWorld(session),entity=world.entities.find(item=>item.id===worldEntityId);
    if(!entity||!template.worldEntityKinds?.includes(entity.kind))throw Object.assign(Error("World entity is not compatible with actor template"),{statusCode:400});
+   worldLink={worldEntityId,worldEntityPath:entity.materializationPath,worldEntityLabel:String(entity.values.name?.value??entity.kind),worldEntityRevision:world.revision,worldEntityStatus:"current"};
   }
   const definitions=Object.fromEntries(Object.entries(pack.content.resources??{}).map(([id,value])=>[id,{id,...value}])) as Record<string,ResourceDefinition>;
-  const state={actorId:randomUUID(),kind:"npc" as const,label:template.label,templateId,...(worldEntityId?{worldEntityId}:{}),attributes:template.attributes??{},resources:initializeResources(definitions,template.resources??{}),effects:[]};
+  const state={actorId:randomUUID(),kind:"npc" as const,label:template.label,templateId,...worldLink,attributes:template.attributes??{},resources:initializeResources(definitions,template.resources??{}),effects:[]};
   let receipt;
   try{receipt=await mutations.commit(session.id,[{type:"ActorInitialized",payload:{...state}}],[state],undefined,{},idem?{key:idem.key,fingerprint:idem.fingerprint,result:state}:undefined)}
   catch(error){if(error&&typeof error==="object"&&"constraint_name" in error&&error.constraint_name==="actor_one_world_entity_per_session")throw Object.assign(Error("World entity already has a session actor"),{statusCode:409});throw error}
   if(receipt.replayed)return receipt.result;
   await broadcast(session.id,"actor.state",state);return state;
+ });
+ app.post("/api/sessions/:id/actors/reconcile-world",async(req:any)=>{
+  await requireSessionGm(req,req.params.id);const idem=await idempotency(req,req.params.id);if(idem?.prior!==undefined)return idem.prior;
+  const session=await repo.session(req.params.id);if(!session||session.state!=="live")throw Object.assign(Error("session is not live"),{statusCode:409});const world=await sessionWorld(session),versioned=await actors.allVersioned(session.id),states:ActorRuntimeState[]=[],events:{type:string;payload:Record<string,unknown>}[]=[],result:{actorId:string;status:string;worldRevision:number;changed:boolean}[]=[];
+  for(const row of versioned){const actor=row.state;if(actor.kind!=="npc"||!actor.worldEntityId)continue;const template=actor.templateId?pack.content.actorTemplates?.[actor.templateId]:undefined;if(!template)throw Object.assign(Error(`NPC template unavailable for ${actor.actorId}`),{statusCode:409});const next=reconcileWorldLink(actor,template,world),changed=JSON.stringify(next)!==JSON.stringify(actor);result.push({actorId:actor.actorId,status:next.worldEntityStatus!,worldRevision:world.revision,changed});if(changed){states.push(next);events.push({type:"ActorWorldLinkReconciled",payload:{actor:next}})}}
+  const actorVersions=Object.fromEntries(versioned.map(value=>[value.state.actorId,value.version])),receipt=await mutations.commit(session.id,events,states,undefined,{actorVersions},idem?{key:idem.key,fingerprint:idem.fingerprint,result}:undefined);if(receipt.replayed)return receipt.result;for(const state of states)await broadcast(session.id,"actor.state",state);return result;
  });
  app.post("/api/sessions/:id/actors/:actorId/edit",async(req:any)=>{
   await requireSessionGm(req,req.params.id);const idem=await idempotency(req,req.params.id);if(idem?.prior!==undefined)return idem.prior;

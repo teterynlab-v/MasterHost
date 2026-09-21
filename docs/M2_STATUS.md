@@ -28,6 +28,7 @@ M2.2 declarative actions, M2.3 target policies, M2.4 Encounter ordering/turns, a
 - GM can instantiate a Session NPC from a Pack actor template. NPC resources and attributes are Pack-defined; NPCs use the same Action and Encounter engine as player actors.
 - GM can edit an NPC label and its Pack-declared numeric attributes, then remove the NPC after it leaves any live Encounter. Both mutations are event sourced, version checked, idempotent and replayable; resources/effects remain Action controlled. See `NPC_LIFECYCLE_DECISION.md`.
 - NPCs can optionally link to compatible entities of their Campaign's materialized World. A Session permits one Actor per linked entity; Fantasy and Cyberpunk materialize compatible actor entities through their Pack template graphs.
+- Linked NPCs record a stable World path, observed label, revision and status. A GM-only idempotent reconciliation command marks links current, missing or incompatible without changing runtime mechanics; reconciliation is replayable. See `WORLD_LINK_RECONCILIATION_DECISION.md`.
 - GM can add initialized Actors to, or remove non-current Actors from, a live Encounter. The roster event and Encounter version update are atomic; late entrants append to the established order. See `WORLD_ACTOR_ENCOUNTER_DECISION.md`.
 - GM-only runtime verification reconstructs Actor and Encounter state from version-1 events and compares it with persisted materialized state in one database snapshot.
 - GM can create a checkpoint only after full replay matches materialized state. Checkpoint verification replays subsequent events. An offline command can repair divergent Actor/Encounter rows for a finished Session and records an audit row; see `RUNTIME_RECOVERY_DECISION.md`.
@@ -62,6 +63,7 @@ Both Packs now declare optional numeric Character abilities for their Checks and
 - GM can add NPCs, choose them as Action source or target, and include them in Encounters.
 - GM can edit and delete an NPC from its Actor card; deletion is disabled while that NPC is in the active Encounter.
 - GM can choose a materialized World entity when adding an NPC and adjust an active Encounter's roster.
+- GM can reconcile all linked NPCs and see each link's observed World label, status and revision.
 - Player can see own Resources/Effects, roll Checks, and see Encounter/turn state.
 - GM and player views restore live state after reload; both can move on after a finished Session.
 - Game log records runtime events.
@@ -74,8 +76,9 @@ On 2026-09-21, the Fantasy browser created a Character through the three-step Pa
 
 The Check recovery slice passed 54 tests, TypeScript, the web build, both Pack API smokes with live PostgreSQL Check verification, and an isolated PostgreSQL corruption/repair smoke. No browser UI changed in this slice. Database Check timestamps are outside comparison; see the decision record.
 
+The World-link reconciliation slice passed 59 tests, TypeScript, the web build and both Pack PostgreSQL smokes. The live smokes changed a linked entity name, reconciled with idempotency, preserved the NPC's independent label and passed full/checkpoint replay. Unit coverage exercised missing, reappeared and incompatible paths. The Fantasy browser displayed the new World label/revision and retained it after reload.
+
 ## Next architecture step
 
 1. Add multi-node realtime delivery. Check repair and Actor/Encounter repair remain separate stopped-server commands; checkpoints cover Actor/Encounter state only.
-2. Add explicit reconciliation if a linked World entity changes or disappears in a later revision.
-3. Extend Pack validation for future capabilities when their execution semantics are defined; arbitrary third-party Packs and custom Action executors remain outside this verified slice.
+2. Extend Pack validation for future capabilities when their execution semantics are defined; arbitrary third-party Packs and custom Action executors remain outside this verified slice.

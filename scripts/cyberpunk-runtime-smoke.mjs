@@ -11,6 +11,7 @@ async function valid(path, body, token, key) {
   assert.ok(result.status >= 200 && result.status < 300, `${path}: ${result.status} ${JSON.stringify(result.data)}`);
   return result.data;
 }
+const patch=async(path,body)=>{const response=await fetch(`${base}${path}`,{method:"PATCH",headers:{"content-type":"application/json"},body:JSON.stringify(body)}),data=await response.json();assert.ok(response.ok,`${path}: ${response.status} ${JSON.stringify(data)}`);return data};
 
 const pack = await valid("/pack");
 assert.equal(pack.manifest.id, "masterhost.cyberpunk-test");
@@ -48,9 +49,12 @@ const drone = await valid(`/sessions/${session.id}/actors`, droneBody, campaign.
 assert.deepEqual(await valid(`/sessions/${session.id}/actors`, droneBody, campaign.gmToken, droneKey), drone);
 assert.equal(drone.kind, "npc");
 assert.equal(drone.worldEntityId, droneEntity.id);
+assert.equal(drone.worldEntityPath,droneEntity.materializationPath);assert.equal(drone.worldEntityStatus,"current");assert.equal(drone.worldEntityRevision,world.revision);
 assert.equal(drone.resources.ammo, 8);
 assert.equal((await call(`/sessions/${session.id}/actors`, droneBody, campaign.gmToken)).status, 409);
 const editedDrone=await valid(`/sessions/${session.id}/actors/${drone.actorId}/edit`,{label:"Sentinel Drone",attributes:{interface:2,awareness:4}},campaign.gmToken);assert.equal(editedDrone.label,"Sentinel Drone");assert.deepEqual(editedDrone.attributes,{interface:2,awareness:4});
+const renamedWorld=await patch(`/worlds/${world.id}/values`,{entityId:droneEntity.id,key:"name",value:"Chrome Sentinel",locked:true}),reconciled=await valid(`/sessions/${session.id}/actors/reconcile-world`,{},campaign.gmToken,randomUUID());assert.deepEqual(reconciled,[{actorId:drone.actorId,status:"current",worldRevision:renamedWorld.revision,changed:true}]);const linked=(await valid(`/sessions/${session.id}/actors`,undefined,campaign.gmToken)).find(actor=>actor.actorId===drone.actorId);assert.equal(linked.label,"Sentinel Drone");assert.equal(linked.worldEntityLabel,"Chrome Sentinel");
+assert.deepEqual(await valid(`/sessions/${session.id}/actors/reconcile-world`,{},campaign.gmToken),[{actorId:drone.actorId,status:"current",worldRevision:renamedWorld.revision,changed:false}]);
 await valid(`/sessions/${session.id}/actions`, { actorId: drone.actorId, targetActorIds: [players[0].id], actionId: "damage" }, campaign.gmToken);
 const signalBody = { actorId: players[0].id, targetActorIds: [players[0].id, drone.actorId], actionId: "signal-boost" }, signalKey = randomUUID();
 const signalResult = await valid(`/sessions/${session.id}/actions`, signalBody, campaign.gmToken, signalKey);

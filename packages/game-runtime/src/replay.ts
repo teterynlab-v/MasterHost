@@ -39,10 +39,11 @@ export function replayRuntimeEvents(events: ReplayEvent[], initial?: { actors: A
         for (const [id, value] of Object.entries(resources)) number(value, `resource ${id}`);
         if (!Array.isArray(payload.effects)) throw Error("invalid actor effects");
         actors.set(actorId, structuredClone(payload as unknown as ActorRuntimeState));
-      } else if (event.type === "ActorUpdated") {
+      } else if (event.type === "ActorUpdated" || event.type === "ActorWorldLinkReconciled") {
         const next=object(payload.actor,"actor") as unknown as ActorRuntimeState,actorId=string(next.actorId,"actor ID");
         if(!actors.has(actorId)||next.kind!=="npc"||typeof next.label!=="string"||!next.label)throw Error(`invalid update for actor ${actorId}`);
         const resources=object(next.resources,"actor resources"),attributes=object(next.attributes??{},"actor attributes");for(const[id,value]of[...Object.entries(resources),...Object.entries(attributes)])number(value,`actor value ${id}`);
+        if(event.type==="ActorWorldLinkReconciled"){string(next.worldEntityId,"World entity ID");number(next.worldEntityRevision,"World revision");if(!["current","missing","incompatible"].includes(String(next.worldEntityStatus)))throw Error("invalid World entity status");if(next.worldEntityStatus!=="missing"){string(next.worldEntityPath,"World entity path");string(next.worldEntityLabel,"World entity label")}}
         if(!Array.isArray(next.effects))throw Error("invalid actor effects");actors.set(actorId,structuredClone(next));
       } else if (event.type === "ActorRemoved") {
         const actorId=string(payload.actorId,"actor ID"),actor=actors.get(actorId);if(!actor||actor.kind!=="npc")throw Error(`cannot remove actor ${actorId}`);actors.delete(actorId);

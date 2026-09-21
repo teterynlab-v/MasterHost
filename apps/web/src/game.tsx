@@ -3,7 +3,7 @@ import { sessionSocket } from "./session-client.js";
 
 const API = (import.meta as { env?: { VITE_API_URL?: string } }).env?.VITE_API_URL ?? "http://localhost:8080/api";
 type Participant = { id: string; displayName: string; accessToken?: string };
-type Actor = { actorId: string; kind?: "npc"; label?: string; templateId?:string; worldEntityId?: string; attributes?:Record<string,number>; resources: Record<string, number>; effects: { id: string; definitionId: string; remaining?: number }[] };
+type Actor = { actorId: string; kind?: "npc"; label?: string; templateId?:string; worldEntityId?: string; worldEntityPath?:string;worldEntityLabel?:string;worldEntityRevision?:number;worldEntityStatus?:"current"|"missing"|"incompatible"; attributes?:Record<string,number>; resources: Record<string, number>; effects: { id: string; definitionId: string; remaining?: number }[] };
 type Encounter = { id: string; state: "live" | "ended"; orderingPolicy: string; participants: string[]; order: string[]; currentActorId?: string; round: number; turn: number };
 type Definitions = { checks: Record<string, { label: string }>; actions: Record<string, { label: string; target: string }>; actorTemplates: Record<string, { label: string; attributes?:Record<string,number>; worldEntityKinds?: string[] }>; encounter: { orderingPolicy: string } };
 type WorldActor = { id: string; kind: string; name: string; materializationPath: string };
@@ -48,12 +48,13 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
   const [busy, setBusy] = useState(false);
 
   async function refresh() {
-    const [nextEvents, nextActors, nextEncounters] = await Promise.all([
+    const [nextEvents, nextActors, nextEncounters,nextWorldActors] = await Promise.all([
       call<GameEvent[]>(`/sessions/${session.id}/events`, { headers: headers(gmToken) }),
       call<Actor[]>(`/sessions/${session.id}/actors`, { headers: headers(gmToken) }),
       call<Encounter[]>(`/sessions/${session.id}/encounters`, { headers: headers(gmToken) }),
+      call<WorldActor[]>(`/sessions/${session.id}/world-actors`, { headers: headers(gmToken) }),
     ]);
-    setEvents(nextEvents); setActors(nextActors); setEncounters(nextEncounters);
+    setEvents(nextEvents); setActors(nextActors); setEncounters(nextEncounters);setWorldActors(nextWorldActors);
   }
   useEffect(() => {
     void call<Definitions>("/game/definitions").then(value => {
@@ -62,7 +63,6 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
       setActionId(Object.keys(value.actions)[0] ?? "");
       setTemplateId(Object.keys(value.actorTemplates)[0] ?? "");
     }).catch(failure => setError(String(failure)));
-    void call<WorldActor[]>(`/sessions/${session.id}/world-actors`, { headers: headers(gmToken) }).then(setWorldActors).catch(failure => setError(String(failure)));
     void refresh().catch(failure => setError(String(failure)));
   }, [session.id]);
   useEffect(() => {
@@ -113,12 +113,12 @@ export function GmGame({ session, participants, gmToken }: { session: { id: stri
     <button className="secondary" disabled={busy || participants.length === 0} onClick={() => void run(async () => {
       for (const participant of participants) if (!actors.some(actor => actor.actorId === participant.id)) await authorizedPost(`/sessions/${session.id}/participants/${participant.id}/initialize`, {}, gmToken);
     })}>Initialize party runtime</button>
-    {templateId && <div className="actions"><label>NPC template<select value={templateId} onChange={event => { setTemplateId(event.target.value); setWorldEntityId(""); }}>{Object.entries(defs.actorTemplates).map(([id, template]) => <option key={id} value={id}>{template.label}</option>)}</select></label><label>World entity (optional)<select value={worldEntityId} onChange={event => setWorldEntityId(event.target.value)}><option value="">Session NPC</option>{eligibleWorldActors.map(entity => <option key={entity.id} value={entity.id}>{entity.name} · {entity.kind}</option>)}</select></label><button className="secondary" disabled={busy} onClick={() => void run(async () => { await authorizedPost(`/sessions/${session.id}/actors`, { templateId, ...(worldEntityId ? { worldEntityId } : {}) }, gmToken); setWorldEntityId(""); })}>ADD NPC</button></div>}
+    {templateId && <div className="actions"><label>NPC template<select value={templateId} onChange={event => { setTemplateId(event.target.value); setWorldEntityId(""); }}>{Object.entries(defs.actorTemplates).map(([id, template]) => <option key={id} value={id}>{template.label}</option>)}</select></label><label>World entity (optional)<select value={worldEntityId} onChange={event => setWorldEntityId(event.target.value)}><option value="">Session NPC</option>{eligibleWorldActors.map(entity => <option key={entity.id} value={entity.id}>{entity.name} · {entity.kind}</option>)}</select></label><button className="secondary" disabled={busy} onClick={() => void run(async () => { await authorizedPost(`/sessions/${session.id}/actors`, { templateId, ...(worldEntityId ? { worldEntityId } : {}) }, gmToken); setWorldEntityId(""); })}>ADD NPC</button><button className="secondary" disabled={busy||!actors.some(actor=>actor.worldEntityId)} onClick={()=>void run(()=>authorizedPost(`/sessions/${session.id}/actors/reconcile-world`,{},gmToken))}>RECONCILE WORLD LINKS</button></div>}
     <h3>Actors</h3>
     {[...participants.map(participant => ({ id: participant.id, name: participant.displayName })), ...actors.filter(actor => actor.kind === "npc").map(actor => ({ id: actor.actorId, name: actor.label ?? "NPC" }))].map(entry => {
       const actor = actors.find(value => value.actorId === entry.id);
       return <article key={entry.id}><h3>{entry.name}</h3>
-        {actor?.worldEntityId && <small>World entity: {worldActors.find(entity => entity.id === actor.worldEntityId)?.name ?? actor.worldEntityId}</small>}
+        {actor?.worldEntityId && <small>World entity: {actor.worldEntityLabel??worldActors.find(entity => entity.id === actor.worldEntityId)?.name??actor.worldEntityId} · {actor.worldEntityStatus??"unreconciled"}{actor.worldEntityRevision!==undefined?` at r${actor.worldEntityRevision}`:""}</small>}
         {actor ? Object.entries(actor.resources).map(([key, value]) => <div className="row" key={key}><b>{key}</b><span>{value}</span></div>) : <p className="muted">Not initialized</p>}
         {actor?.effects.map(effect => <small key={effect.id}>Effect: {effect.definitionId}{effect.remaining !== undefined ? ` (${effect.remaining})` : ""}</small>)}
         {actor?.kind==="npc"&&<NpcEditor actor={actor} template={actor.templateId?defs.actorTemplates[actor.templateId]:undefined} busy={busy} inEncounter={Boolean(activeEncounter?.participants.includes(actor.actorId))} onEdit={(label,attributes)=>run(()=>authorizedPost(`/sessions/${session.id}/actors/${actor.actorId}/edit`,{label,attributes},gmToken))} onRemove={()=>run(()=>authorizedPost(`/sessions/${session.id}/actors/${actor.actorId}/remove`,{},gmToken))}/>}

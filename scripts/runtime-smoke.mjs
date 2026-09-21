@@ -7,6 +7,7 @@ async function call(path, body, token, key) {
   return { status: response.status, data: await response.json() };
 }
 const valid = async (path, body, token, key) => { const result = await call(path, body, token, key); assert.ok(result.status >= 200 && result.status < 300, `${path}: ${result.status} ${JSON.stringify(result.data)}`); return result.data; };
+const patch=async(path,body)=>{const response=await fetch(`${base}${path}`,{method:"PATCH",headers:{"content-type":"application/json"},body:JSON.stringify(body)}),data=await response.json();assert.ok(response.ok,`${path}: ${response.status} ${JSON.stringify(data)}`);return data};
 
 const pack = await valid("/pack");
 assert.equal(pack.manifest.id, "masterhost.classic-fantasy-test");
@@ -100,12 +101,15 @@ assert.deepEqual(goblinAttempts[0].data, goblinAttempts[1].data);
 const goblin = goblinAttempts[0].data;
 assert.equal(goblin.kind, "npc");
 assert.equal(goblin.worldEntityId, creature.id);
+assert.equal(goblin.worldEntityPath,creature.materializationPath);assert.equal(goblin.worldEntityLabel,creature.values.name.value);assert.equal(goblin.worldEntityRevision,world.revision);assert.equal(goblin.worldEntityStatus,"current");
 assert.equal(goblin.resources.health, 8);
 assert.equal((await call(`/sessions/${session.id}/actors`, goblinBody, campaign.gmToken)).status, 409);
 assert.equal((await call(`/sessions/${session.id}/actors/${goblin.actorId}/edit`,{label:"Scout"},player.accessToken)).status,403);
 assert.equal((await call(`/sessions/${session.id}/actors/${goblin.actorId}/edit`,{attributes:{unknown:2}},campaign.gmToken)).status,400);
 const editKey=randomUUID(),editBody={label:"Goblin Scout",attributes:{perception:3,athletics:4}},editAttempts=await Promise.all(Array.from({length:2},()=>call(`/sessions/${session.id}/actors/${goblin.actorId}/edit`,editBody,campaign.gmToken,editKey)));
 assert.deepEqual(editAttempts.map(result=>result.status),[200,200]);assert.deepEqual(editAttempts[0].data,editAttempts[1].data);assert.equal(editAttempts[0].data.label,"Goblin Scout");assert.deepEqual(editAttempts[0].data.attributes,{perception:3,athletics:4});
+const renamedWorld=await patch(`/worlds/${world.id}/values`,{entityId:creature.id,key:"name",value:"Scarlet Scout",locked:true});assert.equal((await call(`/sessions/${session.id}/actors/reconcile-world`,{},player.accessToken)).status,403);const reconcileKey=randomUUID(),reconcileAttempts=await Promise.all(Array.from({length:2},()=>call(`/sessions/${session.id}/actors/reconcile-world`,{},campaign.gmToken,reconcileKey)));assert.deepEqual(reconcileAttempts.map(result=>result.status),[200,200]);assert.deepEqual(reconcileAttempts[0].data,reconcileAttempts[1].data);assert.deepEqual(reconcileAttempts[0].data,[{actorId:goblin.actorId,status:"current",worldRevision:renamedWorld.revision,changed:true}]);const reconciled=(await valid(`/sessions/${session.id}/actors`,undefined,campaign.gmToken)).find(actor=>actor.actorId===goblin.actorId);assert.equal(reconciled.label,"Goblin Scout");assert.equal(reconciled.worldEntityLabel,"Scarlet Scout");assert.equal(reconciled.worldEntityRevision,renamedWorld.revision);
+assert.deepEqual(await valid(`/sessions/${session.id}/actors/reconcile-world`,{},campaign.gmToken),[{actorId:goblin.actorId,status:"current",worldRevision:renamedWorld.revision,changed:false}]);
 await valid(`/sessions/${session.id}/actions`, { actorId: player.id, targetActorIds: [goblin.actorId], actionId: "take-damage" }, campaign.gmToken);
 await valid(`/sessions/${session.id}/actions`, { actorId: goblin.actorId, targetActorIds: [goblin.actorId], actionId: "heal" }, campaign.gmToken);
 assert.equal((await valid(`/sessions/${session.id}/actors`, undefined, campaign.gmToken)).find(actor => actor.actorId === goblin.actorId).resources.health, 8);
