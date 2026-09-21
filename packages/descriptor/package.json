@@ -5,6 +5,8 @@
   "type": "module",
   "main": "./src/index.ts",
   "dependencies": {
-    "@masterhost/domain": "workspace:*"
+    "@masterhost/domain": "workspace:*",
+    "@masterhost/worldpack-sdk": "workspace:*",
+    "zod": "^4.1.5"
   }
 }
