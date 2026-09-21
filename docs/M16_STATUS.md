@@ -1,6 +1,6 @@
 # M16 — Open Source Product Release
 
-**Milestone gate: in progress. Product UX and localization slice verified locally on 2026-09-21.** The approved product journey is implemented and running in the local demo. The full M16 release gate remains open until clean-machine installation, release and operations material, accessibility review, and a real three-to-four-hour game with one GM and two to five players are accepted.
+**Milestone gate: in progress. Product UX, localization and local release engineering slices verified on 2026-09-21.** The approved product journey is implemented and running in the local demo. A clean isolated Compose installation, backup/restore, diagnostics, release archive and automated accessibility baseline now pass. Full M16 acceptance remains open until a real three-to-four-hour game with one GM and two to five players, human accessibility/localization review and an explicitly authorized public release are accepted.
 
 ## Delivered source
 
@@ -10,15 +10,20 @@
 - The player surface prioritizes a pending roll/action, keeps Character state and Pack-defined actions together, and provides phone navigation for Character, abilities, map, party and journal.
 - Application chrome is available in English, Russian, Spanish, Japanese, Simplified Chinese and Korean. Locale selection persists in the browser and can be overridden with `?lang=`. Stable Pack identifiers and Pack-authored game content are preserved in their source language.
 - The HTML shell includes a responsive viewport, and the accepted 375 px layout has no horizontal document overflow.
+- Product Compose starts PostgreSQL, the API and Nginx-hosted web client with health checks and one public origin. PostgreSQL and API ports remain private; WebSocket and API requests are proxied by Nginx. The stack requires explicit database and Realm-admin secrets.
+- `backup.sh` writes a PostgreSQL custom-format dump through a partial file. `restore.sh` validates the archive, stops API writes, replaces the database, restores with `--exit-on-error`, restarts the API and waits for health. `diagnose.sh` checks containers, PostgreSQL, internal API, public proxy and browser without printing secrets.
+- `build-release.mjs` produces a versioned source archive with `VERSION`, `SHA256SUMS`, a sidecar archive checksum and a generated dependency-license inventory. Backups, database dumps and logs are excluded even when present as untracked files. `verify-release.mjs` rejects unsafe/excluded paths, verifies exact archive-to-manifest coverage, every file checksum, required install/operator files and complete declared license records, then builds both Compose images from the extracted archive.
+- The README plus install, game, operations and licensing guides describe first start, play flow, upgrades, migration policy, diagnosis, backup, destructive restore and rollback.
 
 ## Automated tests
 
 - TypeScript workspace check: pass.
-- Ordinary Vitest suite: **153 passed**, with **4 environment-gated tests skipped**.
+- Ordinary Vitest suite: **157 passed**, with **4 environment-gated tests skipped**.
 - Localization tests: all six catalogs have key parity; language detection and parameter interpolation pass.
 - GM workspace tests: Table is the default and the approved five-workspace order is stable.
 - Web production build: pass, **47 modules transformed**.
 - Existing M15 live-browser regression: pass after the navigation and localization changes.
+- Release engineering tests cover archive exclusions, deterministic file checksums and deduplicated dependency-license collection.
 
 ## Runtime proof
 
@@ -36,10 +41,15 @@ The persistent local PostgreSQL demo at `http://localhost:8202/?realm=default&la
 
 The M15 browser gate was also repeated against the same live API and passed, retaining the previous privacy and gameplay regression coverage.
 
+`scripts/m16-release-gate.sh` then created a separate named Compose project and volume from the current source. It built both product images, reached healthy PostgreSQL/API/public browser endpoints and ran the complete M15 rehearsal plus M15 and M16 Chrome routes through Nginx. The rehearsal authenticated a real Session WebSocket on that same public origin. The gate backed up the resulting playable World and Session, created a second World, destructively restored the backup, proved that the original game remained while the post-backup World disappeared, then repeated the M15 restart readback. It removed its isolated containers and volume on exit.
+
+The same gate passed the automated accessibility baseline for one main landmark, one page heading, accessible names/labels, image alternatives, keyboard traversal of all three primary choices, keyboard activation of Join, visible focus and no horizontal overflow at 375 × 844. It built and independently verified a release archive containing **376 checksummed files** and **197 dependency-license records**, including the installation environment template but no local `.env`, backup, database dump, log, Git data, dependencies or generated build directories. Both product images were then rebuilt from the extracted archive itself.
+
 ## Remaining limits
 
 - The full M16 acceptance gate is open: a real three-to-four-hour game with one GM and two to five people has not been conducted.
-- Clean-machine installation, backup/restore operator guidance, migration and diagnostic guidance, license inventory, distributable release archives and rollback evidence remain to be completed.
+- The Compose gate starts from clean containers and a clean database volume on the development host. Installation from the built archive on a physically separate machine has not yet been independently witnessed.
 - The six locale packs cover the home, campaign setup, lobby, Character creation shell, GM table, player navigation and core player actions. The Quick Game Builder and detailed GM Checks, Encounter, Party and Journal forms still use English; Pack-authored names, field labels and narrative content intentionally retain the Pack language.
-- A complete keyboard, screen-reader, contrast and human localization review remains open.
+- Automated structural, keyboard-focus and responsive checks pass. A complete human keyboard, screen-reader, contrast and localization review remains open.
+- The verified archive remains local; no public release has been published because publication requires explicit authorization.
 - Production identity, abuse controls and public hosting infrastructure remain outside this local product gate.

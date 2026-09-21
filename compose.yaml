@@ -2,10 +2,47 @@ services:
   postgres:
     image: postgres:17-alpine
     environment:
-      POSTGRES_USER: masterhost
-      POSTGRES_PASSWORD: masterhost
-      POSTGRES_DB: masterhost
-    ports: ["5432:5432"]
-    volumes: [masterhost_pg:/var/lib/postgresql/data]
+      POSTGRES_USER: ${MASTERHOST_DB_USER:-masterhost}
+      POSTGRES_PASSWORD: ${MASTERHOST_DB_PASSWORD:?Copy .env.example to .env and set MASTERHOST_DB_PASSWORD}
+      POSTGRES_DB: ${MASTERHOST_DB_NAME:-masterhost}
+    volumes:
+      - masterhost_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  api:
+    build:
+      context: .
+      target: server
+    environment:
+      DATABASE_URL: postgresql://${MASTERHOST_DB_USER:-masterhost}:${MASTERHOST_DB_PASSWORD:?Copy .env.example to .env and set MASTERHOST_DB_PASSWORD}@postgres:5432/${MASTERHOST_DB_NAME:-masterhost}
+      PORT: 8080
+      WORLD_PACK_PATH: ${MASTERHOST_WORLD_PACK:-worldpacks/space-opera}
+      MASTERHOST_DEFAULT_REALM_ADMIN: ${MASTERHOST_ADMIN_TOKEN:?Copy .env.example to .env and set MASTERHOST_ADMIN_TOKEN}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8080/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  web:
+    build:
+      context: .
+      target: web
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "${MASTERHOST_PORT:-8088}:80"
+    restart: unless-stopped
+
 volumes:
   masterhost_pg:

@@ -7,7 +7,7 @@ else
   PNPM=(npm exec --yes --package=pnpm@10.17.1 -- pnpm)
 fi
 "${PNPM[@]}" install
-docker compose up -d
+docker compose -f compose.dev.yaml up -d
 "${PNPM[@]}" typecheck
 "${PNPM[@]}" test
 echo

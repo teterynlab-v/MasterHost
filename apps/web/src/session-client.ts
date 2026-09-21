@@ -5,7 +5,7 @@ export async function joinGuest(sessionId:string,pin:string,displayName:string){
 
 export type ConnectionStatus="connecting"|"live"|"recovering"|"offline"|"closed";
 export function sessionSocket(sessionId:string,credential:string,onEvent:(event:any)=>void,onStatus?:(status:ConnectionStatus)=>void){
- const base=(import.meta as any).env?.VITE_WS_URL??"ws://localhost:8080",storageKey=`masterhost.session-sequence.${sessionId}`;
+ const configured=(import.meta as any).env?.VITE_WS_URL,base=configured||`${location.protocol==="https:"?"wss":"ws"}://${location.host}`,storageKey=`masterhost.session-sequence.${sessionId}`;
  let socket:WebSocket|undefined,stopped=false,retry=0,timer:number|undefined,lastSequence=Number(sessionStorage.getItem(storageKey)??0);
  const status=(value:ConnectionStatus)=>onStatus?.(value);
  const connect=()=>{

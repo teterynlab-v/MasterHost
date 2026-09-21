@@ -1,0 +1,13 @@
+.git
+.env
+node_modules
+**/node_modules
+**/dist
+coverage
+release
+backups
+*.dump
+*.log
+MasterHost-*.zip
+MasterHost-*.tar.gz
+.DS_Store

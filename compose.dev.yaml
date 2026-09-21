@@ -1,0 +1,11 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: masterhost
+      POSTGRES_PASSWORD: masterhost
+      POSTGRES_DB: masterhost
+    ports: ["5432:5432"]
+    volumes: [masterhost_dev_pg:/var/lib/postgresql/data]
+volumes:
+  masterhost_dev_pg:
