@@ -15,7 +15,7 @@ if (phase === "verify") {
   console.log("M17 restart/browser readback passed: ready catalog Pack persisted and preview created no World."); process.exit(0);
 }
 
-const initial = await ok("/universes"); assert.equal(initial.length, 12); assert.equal(new Set(initial.map(item => item.id)).size, 12); assert.ok(initial.every(item => item.availability === "planned"));
+const initial = await ok("/universes"); assert.equal(initial.length, 12); assert.equal(new Set(initial.map(item => item.id)).size, 12); assert.equal(initial.find(item => item.id === "classic-fantasy").availability, "ready"); assert.equal(initial.filter(item => item.availability === "planned").length, 11);
 assert.equal((await call("/universes/not-a-universe")).response.status, 404);
 let project = await ok("/pack-projects", { method: "POST", body: { id: "masterhost.classic-fantasy", name: "M17 Deep Classic Fixture", version: "2.0.0", worldKind: "realm", childKind: "location" } });
 assert.equal((await ok(`/pack-projects/${project.id}/validate`, { method: "POST" })).valid, true);
