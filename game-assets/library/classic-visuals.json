@@ -1,17 +1,17 @@
 {
   "schemaVersion": "1",
   "id": "masterhost.asset.classic.visuals",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "visuals",
   "name": "Illuminated Marches Art Set",
-  "description": "Original maps, portraits, tokens, item art, location cards, and backgrounds for the three Classic Fantasy patterns.",
+  "description": "Illustration-quality maps plus portraits, tokens, item art, location cards, and backgrounds for the three Classic Fantasy patterns.",
   "tags": [
     "classic-fantasy",
     "border-kingdoms",
     "one-shot"
   ],
   "preview": {
-    "summary": "Original maps, portraits, tokens, item art, location cards, and backgrounds for the three Classic Fantasy patterns.",
+    "summary": "Illustration-quality maps plus portraits, tokens, item art, location cards, and backgrounds for the three Classic Fantasy patterns.",
     "highlights": [
       "Illuminated Marches Art Set",
       "Deep Universe Standard v1"
@@ -37,7 +37,7 @@
   ],
   "license": {
     "spdx": "CC-BY-4.0",
-    "attribution": "Deep Classic Fantasy original content and artwork \u00a9 MasterHost contributors.",
+    "attribution": "Deep Classic Fantasy original content and artwork © MasterHost contributors.",
     "source": "masterhost://bundled/masterhost.asset.classic.visuals"
   },
   "published": true,
@@ -60,12 +60,12 @@
       "size": 742
     },
     {
-      "name": "classic-fantasy/classic-map.svg",
-      "path": "media/classic-map.svg",
+      "name": "classic-fantasy/classic-table-map.jpg",
+      "path": "media/classic-table-map.jpg",
       "role": "map",
-      "mediaType": "image/svg+xml",
-      "checksum": "6d18d39bc354ba20e419e8b25b46e9857730cecd63ee911a5a3f4841ead36170",
-      "size": 637
+      "mediaType": "image/jpeg",
+      "checksum": "0197704189e528c3d541c3e6c266bc9dba3bca27574e184771e37c7b88f432d3",
+      "size": 717792
     },
     {
       "name": "classic-fantasy/classic-portrait.svg",
@@ -102,7 +102,7 @@
   ],
   "fragment": {
     "id": "masterhost.asset.classic.visuals",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "name": "Illuminated Marches Art Set",
     "description": "Original maps, portraits, tokens, item art, location cards, and backgrounds for the three Classic Fantasy patterns.",
     "provides": [
@@ -127,7 +127,7 @@
             "token": "assets/classic-fantasy/classic-creature.svg",
             "item": "assets/classic-fantasy/classic-item.svg",
             "location": "assets/classic-fantasy/classic-location.svg",
-            "map": "assets/classic-fantasy/classic-map.svg"
+            "map": "assets/classic-fantasy/classic-table-map.jpg"
           }
         }
       }
