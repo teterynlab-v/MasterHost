@@ -7,6 +7,14 @@
 - **Next after review:** M19 Deep Space Opera. M20–M29 each deliver one complete universe to the same standard; M30 accepts the whole collection.
 - Ordinary clean installations now show Classic Fantasy ready and the remaining eleven universes planned.
 
+## Post-M18 playability correction (2026-09-22)
+
+- **Source:** composed games now resolve their own immutable Pack for runtime, Character and hosted routes; the GM may enter a live table before players arrive; participant removal, same-device GM/player recovery, duplicate-join prevention and API-derived WebSocket URLs are wired through the live Session. Quick Builder omits categories with only one compatible choice, and saved games open through a plain-language Game Hub.
+- **Approved GM screen:** the live table now uses the approved cockpit composition: compact Campaign/live/code bar, four immediate scenes plus the complete scene drawer, private notebook, Pack-provided map with persisted fog and token controls, persistent participant/NPC dock, tactile d20/d6 tray and direct scene/check/note/encounter actions. The old setup and player-waiting screen is no longer the GM entry point.
+- **Automated proof:** workspace TypeScript passed; Vitest passed **190 tests** with **4 environment-gated skips**; the Vite production build passed with **51 modules transformed**. The local pnpm wrapper's dependency preflight still rejects the already-installed ignored `esbuild` build script, so verification used the pinned installed binaries directly.
+- **Live proof:** against the retained PostgreSQL demo, the GM recovered directly into the live table, a player joined the already-running Session and recovered after reload without duplication, and the GM saw that participant. A desktop browser pass then switched the persisted active scene, rolled the visual d20, opened the real Check workspace and returned to the table while the composed Classic Fantasy map loaded through the Session's Pack media mapping.
+- **Remaining product limit:** the cockpit structure is implemented and functional, but the bundled Classic Fantasy map and thumbnails are still schematic SVGs. Replacing those source assets with illustration-quality media, accepting the separate player-screen mockup, cross-device GM/co-GM recovery, accessibility review and a full friends-at-table game remain open. No later universe milestone is claimed by this correction.
+
 **Verified:** 2026-09-21 on the local macOS development machine. Source came from `MasterHost-m2.1-actions-resources-effects.zip`; the supplied folder contained archives and no Git checkout.
 
 ## Checks and real flows

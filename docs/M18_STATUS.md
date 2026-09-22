@@ -49,3 +49,7 @@ The gate removed both databases, server/web processes, image, archive, state fil
 
 - Automated checks prove structural completeness and executable paths. Human editorial review, native-language translation review, accessibility review, illustration review, and an actual friends-at-table game are not claimed.
 - Only Classic Fantasy is ready in a clean installation. M19 delivers Deep Space Opera; M20–M29 follow the approved order.
+
+## Post-review table correction
+
+After milestone acceptance, live use exposed a product-level gap between runtime completeness and a usable GM surface. The follow-up correction keeps the generic table APIs and replaces the initial setup/lobby-first presentation with the approved map-first cockpit. It also fixes per-game Pack resolution, direct GM entry, participant removal and reconnect behavior. TypeScript, 190 ordinary tests and the production build pass; a PostgreSQL-backed two-window browser flow verified GM/player recovery, scene persistence, visual dice and the real Check workspace. This correction does not upgrade the schematic bundled SVG artwork or satisfy the deferred human playtest.
