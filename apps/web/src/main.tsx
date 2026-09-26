@@ -58,4 +58,7 @@ function App(){
  {impact&&<article><h3>Regeneration impact</h3><p>Change {impact.changed} · Create {impact.created} · Remove {impact.removed} · Preserve {impact.preserved} · Locked {impact.blockedByLocks}</p></article>}
  </section>}</main>
 }
-createRoot(document.getElementById("root")!).render(<I18nProvider><App/></I18nProvider>);
+const hot=(import.meta as ImportMeta & {hot?:{data:{root?:ReturnType<typeof createRoot>}}}).hot;
+const root=hot?.data.root??createRoot(document.getElementById("root")!);
+if(hot)hot.data.root=root;
+root.render(<I18nProvider><App/></I18nProvider>);

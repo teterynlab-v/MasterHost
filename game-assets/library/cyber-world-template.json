@@ -1,0 +1,178 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.cyber.world-template",
+  "version": "1.0.0",
+  "type": "world-template",
+  "name": "Three District Campaign Frames",
+  "description": "Three District Campaign Frames for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+  "tags": [
+    "cyberpunk",
+    "rainline-mutual",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Three District Campaign Frames for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+    "highlights": [
+      "Three District Campaign Frames",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.cyberpunk"
+    ],
+    "requiresCapabilities": [
+      "setting:cyberpunk"
+    ],
+    "providesCapabilities": [
+      "world:cyberpunk"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.cyber.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Cyberpunk original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.cyber.world-template"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.cyber.world-template",
+    "version": "1.0.0",
+    "name": "Three District Campaign Frames",
+    "description": "Three District Campaign Frames for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+    "provides": [
+      "world:cyberpunk"
+    ],
+    "requires": [
+      "setting:cyberpunk"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.kit.rainline-mutual",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "Rainline: Who Owns the Water"
+            },
+            "kitId": {
+              "value": "kit.rainline-mutual"
+            },
+            "openingSceneId": {
+              "value": "scenes.1"
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.kit.glass-house",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "Glass House: Names After Glass"
+            },
+            "kitId": {
+              "value": "kit.glass-house"
+            },
+            "openingSceneId": {
+              "value": "scenes.2"
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.kit.ghost-transit",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "Ghost Transit: Laststop at Dawn"
+            },
+            "kitId": {
+              "value": "kit.ghost-transit"
+            },
+            "openingSceneId": {
+              "value": "scenes.3"
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-kit-rainline-mutual": {
+            "template": "cyber.deep.kit.rainline-mutual",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.rainline-mutual"
+              ]
+            }
+          },
+          "deep-kit-glass-house": {
+            "template": "cyber.deep.kit.glass-house",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.glass-house"
+              ]
+            }
+          },
+          "deep-kit-ghost-transit": {
+            "template": "cyber.deep.kit.ghost-transit",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.ghost-transit"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

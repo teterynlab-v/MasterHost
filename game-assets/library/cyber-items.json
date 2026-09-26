@@ -1,0 +1,1084 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.cyber.items",
+  "version": "1.0.0",
+  "type": "items",
+  "name": "Consent Evidence and Repair Gear",
+  "description": "Consent Evidence and Repair Gear for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+  "tags": [
+    "cyberpunk",
+    "rainline-mutual",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Consent Evidence and Repair Gear for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+    "highlights": [
+      "Consent Evidence and Repair Gear",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.cyberpunk"
+    ],
+    "requiresCapabilities": [
+      "setting:cyberpunk"
+    ],
+    "providesCapabilities": [
+      "items:cyberpunk"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.cyber.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Cyberpunk original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.cyber.items"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 24,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.cyber.items",
+    "version": "1.0.0",
+    "name": "Consent Evidence and Repair Gear",
+    "description": "Consent Evidence and Repair Gear for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+    "provides": [
+      "items:cyberpunk"
+    ],
+    "requires": [
+      "setting:cyberpunk"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.1",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Pump Override"
+            },
+            "description": {
+              "value": "Pump Override: opens the water intake but records the identity of the operator."
+            },
+            "deepId": {
+              "value": "items.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.2",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Original Consent Sheet"
+            },
+            "description": {
+              "value": "Original Consent Sheet: proves which treatment the patient actually approved."
+            },
+            "deepId": {
+              "value": "items.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.3",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Courier Farewell"
+            },
+            "description": {
+              "value": "Courier Farewell: contains Juno's request to control future copies."
+            },
+            "deepId": {
+              "value": "items.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.4",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Insulated Coil"
+            },
+            "description": {
+              "value": "Insulated Coil: repairs one live cable and cannot support the entire roof bridge."
+            },
+            "deepId": {
+              "value": "items.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.5",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Unplugged Ledger"
+            },
+            "description": {
+              "value": "Unplugged Ledger: survives remote erasure but must be carried through reception."
+            },
+            "deepId": {
+              "value": "items.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.6",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Tunnel Map"
+            },
+            "description": {
+              "value": "Tunnel Map: marks occupied platforms and unsafe electrified tracks."
+            },
+            "deepId": {
+              "value": "items.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.7",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Roof Medicine Case"
+            },
+            "description": {
+              "value": "Roof Medicine Case: keeps emergency doses dry until its short battery expires."
+            },
+            "deepId": {
+              "value": "items.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.8",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Patient Name Seal"
+            },
+            "description": {
+              "value": "Patient Name Seal: can return one identity without cancelling another person's care."
+            },
+            "deepId": {
+              "value": "items.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.9",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Memory Boundary Key"
+            },
+            "description": {
+              "value": "Memory Boundary Key: separates public testimony from intimate recordings."
+            },
+            "deepId": {
+              "value": "items.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.10",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Contract Invoice"
+            },
+            "description": {
+              "value": "Contract Invoice: links the outage company to the meter auction."
+            },
+            "deepId": {
+              "value": "items.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.11",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Ward Exit Order"
+            },
+            "description": {
+              "value": "Ward Exit Order: authorizes evacuation if certified by a neutral clinician."
+            },
+            "deepId": {
+              "value": "items.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.12",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Tram Starter"
+            },
+            "description": {
+              "value": "Tram Starter: moves the abandoned carriage and reveals its location."
+            },
+            "deepId": {
+              "value": "items.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.13",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Anonymous Meter"
+            },
+            "description": {
+              "value": "Anonymous Meter: restores billing without exposing individual routines."
+            },
+            "deepId": {
+              "value": "items.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.13"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.14",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Clinic Backup Lens"
+            },
+            "description": {
+              "value": "Clinic Backup Lens: holds receipts that implicate both exchange and consenting brokers."
+            },
+            "deepId": {
+              "value": "items.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.17"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.15",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Signal Anchor"
+            },
+            "description": {
+              "value": "Signal Anchor: keeps one branch coherent while others collapse."
+            },
+            "deepId": {
+              "value": "items.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.21"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.16",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Repair Deed"
+            },
+            "description": {
+              "value": "Repair Deed: offers community ownership with shared maintenance liability."
+            },
+            "deepId": {
+              "value": "items.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.22"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.17",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Witness Mask"
+            },
+            "description": {
+              "value": "Witness Mask: defeats lobby cameras but makes official identification difficult."
+            },
+            "deepId": {
+              "value": "items.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.18",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Sleeper Charter"
+            },
+            "description": {
+              "value": "Sleeper Charter: records a safe relocation agreement for the tunnel camp."
+            },
+            "deepId": {
+              "value": "items.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.19",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Transformer Voucher"
+            },
+            "description": {
+              "value": "Transformer Voucher: pays the repair crew only after the flood danger ends."
+            },
+            "deepId": {
+              "value": "items.19"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.20",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Continuity Ruling"
+            },
+            "description": {
+              "value": "Continuity Ruling: suspends trading if the original witness appears in person."
+            },
+            "deepId": {
+              "value": "items.20"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.21",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Courier Badge"
+            },
+            "description": {
+              "value": "Courier Badge: opens Juno's locker and confirms the physical route."
+            },
+            "deepId": {
+              "value": "items.21"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.15"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.22",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Flood Sensor"
+            },
+            "description": {
+              "value": "Flood Sensor: records water levels without household surveillance."
+            },
+            "deepId": {
+              "value": "items.22"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.16"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.23",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Treatment Credit"
+            },
+            "description": {
+              "value": "Treatment Credit: compensates patients but leaves the exchange's ownership intact."
+            },
+            "deepId": {
+              "value": "items.23"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.20"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.items.24",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Consent Recorder"
+            },
+            "description": {
+              "value": "Consent Recorder: records one final choice in a format the transit trust cannot overwrite."
+            },
+            "deepId": {
+              "value": "items.24"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.24"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-items-1": {
+            "template": "cyber.deep.items.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-items-2": {
+            "template": "cyber.deep.items.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-items-3": {
+            "template": "cyber.deep.items.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-items-4": {
+            "template": "cyber.deep.items.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-items-5": {
+            "template": "cyber.deep.items.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-items-6": {
+            "template": "cyber.deep.items.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-items-7": {
+            "template": "cyber.deep.items.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-items-8": {
+            "template": "cyber.deep.items.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-items-9": {
+            "template": "cyber.deep.items.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-items-10": {
+            "template": "cyber.deep.items.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-items-11": {
+            "template": "cyber.deep.items.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-items-12": {
+            "template": "cyber.deep.items.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-items-13": {
+            "template": "cyber.deep.items.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-items-14": {
+            "template": "cyber.deep.items.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-items-15": {
+            "template": "cyber.deep.items.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-items-16": {
+            "template": "cyber.deep.items.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-items-17": {
+            "template": "cyber.deep.items.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-items-18": {
+            "template": "cyber.deep.items.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-items-19": {
+            "template": "cyber.deep.items.19",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-items-20": {
+            "template": "cyber.deep.items.20",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-items-21": {
+            "template": "cyber.deep.items.21",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-items-22": {
+            "template": "cyber.deep.items.22",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-items-23": {
+            "template": "cyber.deep.items.23",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-items-24": {
+            "template": "cyber.deep.items.24",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

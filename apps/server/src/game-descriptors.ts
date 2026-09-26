@@ -63,7 +63,7 @@ export async function registerGameDescriptors(app: FastifyInstance, dependencies
   const compile = (project: GameDescriptorProject, realmId: string, worldId?: string) => {
     const pack = toLoadedWorldPack(project.compiled), descriptor = worldDescriptor(project), result = compileSatisfying({ realmId, descriptor, pack, seed: project.seed, worldId });
     if (result.constraints.some(value => !value.passed)) throw fail("composed Pack constraints could not be satisfied", 409);
-    assertUniqueMaterializationPaths(result.world); return result.world;
+    assertUniqueMaterializationPaths(result.world); return { ...result.world, name: project.name };
   };
 
   app.get("/api/game-fragments", async (request: any) => { await authorize(request); return fragmentCatalog(dependencies.fragments.filter(fragment => !assetIdentities.has(`${fragment.id}@${fragment.version}`))); });

@@ -1,0 +1,670 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.cyber.characters",
+  "version": "1.0.0",
+  "type": "characters",
+  "name": "Street Roles and Consent Paths",
+  "description": "Street Roles and Consent Paths for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+  "tags": [
+    "cyberpunk",
+    "rainline-mutual",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Street Roles and Consent Paths for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+    "highlights": [
+      "Street Roles and Consent Paths",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.cyberpunk"
+    ],
+    "requiresCapabilities": [
+      "rules:cyberpunk",
+      "items:cyberpunk"
+    ],
+    "providesCapabilities": [
+      "characters:cyberpunk"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.cyber.rules",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.cyber.items",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Cyberpunk original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.cyber.characters"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 8,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.cyber.characters",
+    "version": "1.0.0",
+    "name": "Street Roles and Consent Paths",
+    "description": "Street Roles and Consent Paths for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+    "provides": [
+      "characters:cyberpunk"
+    ],
+    "requires": [
+      "rules:cyberpunk",
+      "items:cyberpunk"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.archetypes.1",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Tenant Electrician"
+            },
+            "description": {
+              "value": "Tenant Electrician: repairs utilities and owes the block reliable power."
+            },
+            "deepId": {
+              "value": "archetypes.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.archetypes.2",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Consent Auditor"
+            },
+            "description": {
+              "value": "Consent Auditor: reads medical contracts and carries an unaltered treatment form."
+            },
+            "deepId": {
+              "value": "archetypes.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.archetypes.3",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Signal Diver"
+            },
+            "description": {
+              "value": "Signal Diver: navigates memory branches and refuses unauthorized copying."
+            },
+            "deepId": {
+              "value": "archetypes.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.archetypes.4",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Roof Runner"
+            },
+            "description": {
+              "value": "Roof Runner: carries medicines and knows evacuation paths."
+            },
+            "deepId": {
+              "value": "archetypes.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.archetypes.5",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Ward Advocate"
+            },
+            "description": {
+              "value": "Ward Advocate: defends patients whose identities no longer match their records."
+            },
+            "deepId": {
+              "value": "archetypes.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.archetypes.6",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Tunnel Gardener"
+            },
+            "description": {
+              "value": "Tunnel Gardener: keeps a hidden community alive and knows service routes."
+            },
+            "deepId": {
+              "value": "archetypes.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.archetypes.7",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Mutual Treasurer"
+            },
+            "description": {
+              "value": "Mutual Treasurer: tracks shared debts and protects emergency reserves."
+            },
+            "deepId": {
+              "value": "archetypes.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.archetypes.8",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Continuity Witness"
+            },
+            "description": {
+              "value": "Continuity Witness: can identify forged signatures but risks exposing private treatment."
+            },
+            "deepId": {
+              "value": "archetypes.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.progressionPaths.1",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Grid Steward"
+            },
+            "description": {
+              "value": "Grid Steward: earn trust by restoring power without surveillance; gain repair access and shared maintenance duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.progressionPaths.2",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Identity Defender"
+            },
+            "description": {
+              "value": "Identity Defender: earn trust by preserving consent and treatment together; gain legal contacts and confidentiality duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.progressionPaths.3",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Boundary Keeper"
+            },
+            "description": {
+              "value": "Boundary Keeper: earn trust by honoring a recorded refusal to copy; gain archive access and stewardship obligations."
+            },
+            "deepId": {
+              "value": "progressionPaths.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.progressionPaths.4",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Roof Coordinator"
+            },
+            "description": {
+              "value": "Roof Coordinator: earn trust by evacuating vulnerable neighbors; gain runners and responsibility for safe crossings."
+            },
+            "deepId": {
+              "value": "progressionPaths.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.progressionPaths.5",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Clinic Monitor"
+            },
+            "description": {
+              "value": "Clinic Monitor: earn trust by stopping a sale without leaking intimate data; gain inspection access and patient oversight."
+            },
+            "deepId": {
+              "value": "progressionPaths.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.progressionPaths.6",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Transit Custodian"
+            },
+            "description": {
+              "value": "Transit Custodian: earn trust by finding shelter before moving the camp; gain service access and relocation duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-archetypes-1": {
+            "template": "cyber.deep.archetypes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-archetypes-2": {
+            "template": "cyber.deep.archetypes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-archetypes-3": {
+            "template": "cyber.deep.archetypes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-archetypes-4": {
+            "template": "cyber.deep.archetypes.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-archetypes-5": {
+            "template": "cyber.deep.archetypes.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-archetypes-6": {
+            "template": "cyber.deep.archetypes.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-archetypes-7": {
+            "template": "cyber.deep.archetypes.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-archetypes-8": {
+            "template": "cyber.deep.archetypes.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-progressionPaths-1": {
+            "template": "cyber.deep.progressionPaths.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-progressionPaths-2": {
+            "template": "cyber.deep.progressionPaths.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-progressionPaths-3": {
+            "template": "cyber.deep.progressionPaths.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-progressionPaths-4": {
+            "template": "cyber.deep.progressionPaths.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-progressionPaths-5": {
+            "template": "cyber.deep.progressionPaths.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-progressionPaths-6": {
+            "template": "cyber.deep.progressionPaths.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

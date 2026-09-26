@@ -43,39 +43,6 @@ questions:
         label: Controlled
       - value: black-market
         label: Black-market
-  - id: world.pattern
-    label: Universe pattern
-    type: choice
-    default: rainline-mutual
-    options:
-      - value: rainline-mutual
-        label: Rainline Mutual
-      - value: glass-house
-        label: Glass House
-      - value: ghost-transit
-        label: Ghost Transit
-  - id: world.campaignKit
-    label: Campaign Kit
-    type: choice
-    default: kit.rainline-mutual
-    options:
-      - value: kit.rainline-mutual
-        label: "Rainline: Who Owns the Water"
-      - value: kit.glass-house
-        label: "Glass House: Names After Glass"
-      - value: kit.ghost-transit
-        label: "Ghost Transit: Laststop at Dawn"
-  - id: world.visualTheme
-    label: Visual theme
-    type: choice
-    default: visualThemes.1
-    options:
-      - value: visualThemes.1
-        label: Rainline Circuit
-      - value: visualThemes.2
-        label: Glass Consent
-      - value: visualThemes.3
-        label: Ghost Platform
 generators:
   region.count:
     type: integer-range
@@ -386,46 +353,6 @@ characterCreation:
               label: Netrunner
             - value: fixer
               label: Fixer
-        - id: archetype
-          label: Street role
-          type: choice
-          required: true
-          default: archetypes.1
-          options:
-            - value: archetypes.1
-              label: Tenant Electrician
-            - value: archetypes.2
-              label: Consent Auditor
-            - value: archetypes.3
-              label: Signal Diver
-            - value: archetypes.4
-              label: Roof Runner
-            - value: archetypes.5
-              label: Ward Advocate
-            - value: archetypes.6
-              label: Tunnel Gardener
-            - value: archetypes.7
-              label: Mutual Treasurer
-            - value: archetypes.8
-              label: Continuity Witness
-        - id: path
-          label: Progression path
-          type: choice
-          required: true
-          default: progressionPaths.1
-          options:
-            - value: progressionPaths.1
-              label: Grid Steward
-            - value: progressionPaths.2
-              label: Identity Defender
-            - value: progressionPaths.3
-              label: Boundary Keeper
-            - value: progressionPaths.4
-              label: Roof Coordinator
-            - value: progressionPaths.5
-              label: Clinic Monitor
-            - value: progressionPaths.6
-              label: Transit Custodian
     - id: aptitudes
       title: Aptitudes
       fields:
@@ -483,12 +410,6 @@ characterCreation:
     progression:
       renown: 0
       experience: 0
-      progressionPaths.1: 0
-      progressionPaths.2: 0
-      progressionPaths.3: 0
-      progressionPaths.4: 0
-      progressionPaths.5: 0
-      progressionPaths.6: 0
     resources:
       health: 18
       humanity: 70
@@ -524,62 +445,6 @@ characterCreation:
         when:
           field: calling
           equals: fixer
-      - id: role-archetypes.1
-        when:
-          field: archetype
-          equals: archetypes.1
-      - id: role-archetypes.2
-        when:
-          field: archetype
-          equals: archetypes.2
-      - id: role-archetypes.3
-        when:
-          field: archetype
-          equals: archetypes.3
-      - id: role-archetypes.4
-        when:
-          field: archetype
-          equals: archetypes.4
-      - id: role-archetypes.5
-        when:
-          field: archetype
-          equals: archetypes.5
-      - id: role-archetypes.6
-        when:
-          field: archetype
-          equals: archetypes.6
-      - id: role-archetypes.7
-        when:
-          field: archetype
-          equals: archetypes.7
-      - id: role-archetypes.8
-        when:
-          field: archetype
-          equals: archetypes.8
-      - id: path-progressionPaths.1
-        when:
-          field: path
-          equals: progressionPaths.1
-      - id: path-progressionPaths.2
-        when:
-          field: path
-          equals: progressionPaths.2
-      - id: path-progressionPaths.3
-        when:
-          field: path
-          equals: progressionPaths.3
-      - id: path-progressionPaths.4
-        when:
-          field: path
-          equals: progressionPaths.4
-      - id: path-progressionPaths.5
-        when:
-          field: path
-          equals: progressionPaths.5
-      - id: path-progressionPaths.6
-        when:
-          field: path
-          equals: progressionPaths.6
     assets:
       - id: portrait
         value: assets/ui/portrait.svg
@@ -656,30 +521,6 @@ progression:
     default: 0
   experience:
     label: Experience
-    min: 0
-    default: 0
-  progressionPaths.1:
-    label: Grid Steward
-    min: 0
-    default: 0
-  progressionPaths.2:
-    label: Identity Defender
-    min: 0
-    default: 0
-  progressionPaths.3:
-    label: Boundary Keeper
-    min: 0
-    default: 0
-  progressionPaths.4:
-    label: Roof Coordinator
-    min: 0
-    default: 0
-  progressionPaths.5:
-    label: Clinic Monitor
-    min: 0
-    default: 0
-  progressionPaths.6:
-    label: Transit Custodian
     min: 0
     default: 0
 locations:

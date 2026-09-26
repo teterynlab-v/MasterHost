@@ -1,0 +1,529 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.cyber.setting",
+  "version": "1.0.0",
+  "type": "setting",
+  "name": "Rainline Neighborhood Mutual",
+  "description": "Rainline Neighborhood Mutual for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+  "tags": [
+    "cyberpunk",
+    "rainline-mutual",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Rainline Neighborhood Mutual for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+    "highlights": [
+      "Rainline Neighborhood Mutual",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.cyberpunk"
+    ],
+    "requiresCapabilities": [],
+    "providesCapabilities": [
+      "setting:cyberpunk"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Cyberpunk original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.cyber.setting"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.cyber.setting",
+    "version": "1.0.0",
+    "name": "Rainline Neighborhood Mutual",
+    "description": "Rainline Neighborhood Mutual for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+    "provides": [
+      "setting:cyberpunk"
+    ],
+    "requires": [],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.factions.1",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Rainline Repair Union"
+            },
+            "description": {
+              "value": "Rainline Repair Union: needs access to substations but rejects police control of household data."
+            },
+            "deepId": {
+              "value": "factions.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.factions.2",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Helix Benefit Exchange"
+            },
+            "description": {
+              "value": "Helix Benefit Exchange: will free a patient if the crew returns the stolen consent ledger."
+            },
+            "deepId": {
+              "value": "factions.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.factions.3",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Transit Memory Trust"
+            },
+            "description": {
+              "value": "Transit Memory Trust: keeps the lost courier alive as a signal and demands a right to refuse copying."
+            },
+            "deepId": {
+              "value": "factions.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.factions.4",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Northbank Tenants"
+            },
+            "description": {
+              "value": "Northbank Tenants: offers shelter in exchange for uninterrupted water and anonymous meters."
+            },
+            "deepId": {
+              "value": "factions.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.factions.5",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Glasshouse Auditors"
+            },
+            "description": {
+              "value": "Glasshouse Auditors: wants evidence preserved before its officers erase the clinic's backups."
+            },
+            "deepId": {
+              "value": "factions.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.factions.6",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Platform Sleepers"
+            },
+            "description": {
+              "value": "Platform Sleepers: guards the tunnel camp and distrusts anyone wearing corporate optics."
+            },
+            "deepId": {
+              "value": "factions.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.factions.7",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Copper Street Mutual"
+            },
+            "description": {
+              "value": "Copper Street Mutual: can fund repairs if its elected treasurer survives the debt auction."
+            },
+            "deepId": {
+              "value": "factions.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.factions.8",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Continuity Advocates"
+            },
+            "description": {
+              "value": "Continuity Advocates: can challenge forged consent with original signatures."
+            },
+            "deepId": {
+              "value": "factions.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.visualThemes.1",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Rainline Circuit"
+            },
+            "description": {
+              "value": "Rainline Circuit: copper repair lines and blue flood markers separate public utilities from corporate locks."
+            },
+            "deepId": {
+              "value": "visualThemes.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.visualThemes.2",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Glass Consent"
+            },
+            "description": {
+              "value": "Glass Consent: white clinic grids and magenta receipt traces distinguish evidence from private records."
+            },
+            "deepId": {
+              "value": "visualThemes.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.visualThemes.3",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Ghost Platform"
+            },
+            "description": {
+              "value": "Ghost Platform: dim green transit lamps and violet memory branches mark shelter and unstable signals."
+            },
+            "deepId": {
+              "value": "visualThemes.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-factions-1": {
+            "template": "cyber.deep.factions.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-factions-2": {
+            "template": "cyber.deep.factions.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-factions-3": {
+            "template": "cyber.deep.factions.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-factions-4": {
+            "template": "cyber.deep.factions.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-factions-5": {
+            "template": "cyber.deep.factions.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-factions-6": {
+            "template": "cyber.deep.factions.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-factions-7": {
+            "template": "cyber.deep.factions.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-factions-8": {
+            "template": "cyber.deep.factions.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-visualThemes-1": {
+            "template": "cyber.deep.visualThemes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.1"
+              ]
+            }
+          },
+          "deep-visualThemes-2": {
+            "template": "cyber.deep.visualThemes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.2"
+              ]
+            }
+          },
+          "deep-visualThemes-3": {
+            "template": "cyber.deep.visualThemes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.3"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

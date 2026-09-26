@@ -6,8 +6,6 @@ defaults:
   portrait: assets/ui/portrait.svg
   card: assets/ui/background.svg
   ui: assets/ui/background.svg
-  map: assets/ui/map.svg
-  token: assets/ui/creature.svg
 types:
   location:
     location: assets/ui/location.svg

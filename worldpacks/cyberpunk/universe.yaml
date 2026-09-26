@@ -1,0 +1,3763 @@
+{
+  "schemaVersion": "1",
+  "id": "cyberpunk",
+  "genres": [
+    "near-future",
+    "adventure",
+    "noir"
+  ],
+  "tones": [
+    "neon",
+    "tense",
+    "human"
+  ],
+  "complexity": "intermediate",
+  "recommendedPlayers": {
+    "min": 2,
+    "max": 6
+  },
+  "gameLoop": [
+    {
+      "id": "repair",
+      "label": "Restore emergency utilities without surrendering privacy",
+      "ruleRefs": [
+        "check:interface",
+        "action:recover"
+      ]
+    },
+    {
+      "id": "consent",
+      "label": "Protect witnesses and certify original treatment records",
+      "ruleRefs": [
+        "check:cool",
+        "action:inspire"
+      ]
+    },
+    {
+      "id": "memory",
+      "label": "Navigate branches and honor explicit copying consent",
+      "ruleRefs": [
+        "check:reflex",
+        "action:hinder"
+      ]
+    },
+    {
+      "id": "neighborhood",
+      "label": "Settle repair ownership, restitution and shelter",
+      "ruleRefs": [
+        "progression:renown"
+      ]
+    }
+  ],
+  "patterns": [
+    {
+      "id": "rainline-mutual",
+      "name": "Rainline Mutual",
+      "summary": "A flooded district builds its own utility network. Rescue tenants, prove deliberate outages and decide who owns the repair.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    },
+    {
+      "id": "glass-house",
+      "name": "Glass House",
+      "summary": "A corporate clinic sells stolen identities as insurance. Protect witnesses, trace consent records and choose how to expose the exchange.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    },
+    {
+      "id": "ghost-transit",
+      "name": "Ghost Transit",
+      "summary": "An abandoned metro carries a missing courier's memories. Follow the signal, protect displaced sleepers and decide who may copy a person.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    }
+  ],
+  "campaignKits": [
+    {
+      "id": "kit.rainline-mutual",
+      "name": "Rainline: Who Owns the Water",
+      "summary": "A three to four hour Rainline Mutual game: A flooded district builds its own utility network. Rescue tenants, prove deliberate outages and decide who owns the repair.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "rainline-mutual"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.1",
+      "sceneIds": [
+        "scenes.1",
+        "scenes.4",
+        "scenes.7",
+        "scenes.10",
+        "scenes.13",
+        "scenes.16"
+      ],
+      "npcIds": [
+        "npcs.1",
+        "npcs.4",
+        "npcs.7"
+      ],
+      "locationIds": [
+        "locations.1",
+        "locations.4",
+        "locations.7"
+      ],
+      "rewardIds": [
+        "items.1",
+        "items.4"
+      ],
+      "gmGuidance": [
+        "Open with water trapped behind a remotely locked intake.",
+        "Make repairs possible through engineering, bargaining or public authority.",
+        "Separate emergency power from the sale of household data.",
+        "Record who controls the repaired grid and who bears its maintenance."
+      ],
+      "readyCharacterIds": [
+        "archetypes.1",
+        "archetypes.4"
+      ]
+    },
+    {
+      "id": "kit.glass-house",
+      "name": "Glass House: Names After Glass",
+      "summary": "A three to four hour Glass House game: A corporate clinic sells stolen identities as insurance. Protect witnesses, trace consent records and choose how to expose the exchange.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "glass-house"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.2",
+      "sceneIds": [
+        "scenes.2",
+        "scenes.5",
+        "scenes.8",
+        "scenes.11",
+        "scenes.14",
+        "scenes.17"
+      ],
+      "npcIds": [
+        "npcs.2",
+        "npcs.5",
+        "npcs.8"
+      ],
+      "locationIds": [
+        "locations.2",
+        "locations.5",
+        "locations.8"
+      ],
+      "rewardIds": [
+        "items.2",
+        "items.5"
+      ],
+      "gmGuidance": [
+        "Start with a terminal using the missing patient’s name.",
+        "Treat consent records and medical care as separate obligations.",
+        "Offer evidence redaction and neutral treatment as alternatives to armed extraction.",
+        "Record restitution, restored identities and whether testimony remains public."
+      ],
+      "readyCharacterIds": [
+        "archetypes.2",
+        "archetypes.5"
+      ]
+    },
+    {
+      "id": "kit.ghost-transit",
+      "name": "Ghost Transit: Laststop at Dawn",
+      "summary": "A three to four hour Ghost Transit game: An abandoned metro carries a missing courier's memories. Follow the signal, protect displaced sleepers and decide who may copy a person.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "ghost-transit"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.3",
+      "sceneIds": [
+        "scenes.3",
+        "scenes.6",
+        "scenes.9",
+        "scenes.12",
+        "scenes.15",
+        "scenes.18"
+      ],
+      "npcIds": [
+        "npcs.3",
+        "npcs.6",
+        "npcs.9"
+      ],
+      "locationIds": [
+        "locations.3",
+        "locations.6",
+        "locations.9"
+      ],
+      "rewardIds": [
+        "items.3",
+        "items.6"
+      ],
+      "gmGuidance": [
+        "Play Juno’s unfinished announcement before revealing the empty platform.",
+        "Give each memory branch a consistent wish and allow uncertainty.",
+        "Protect the sleepers’ shelter before relocating the trust.",
+        "Record consent boundaries and the surviving archive’s custodian."
+      ],
+      "readyCharacterIds": [
+        "archetypes.3",
+        "archetypes.6"
+      ]
+    }
+  ],
+  "content": {
+    "factions": [
+      {
+        "id": "factions.1",
+        "name": "Rainline Repair Union",
+        "description": "Rainline Repair Union: needs access to substations but rejects police control of household data.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "cyber.factions.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Rainline Repair Union: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.2",
+        "name": "Helix Benefit Exchange",
+        "description": "Helix Benefit Exchange: will free a patient if the crew returns the stolen consent ledger.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "cyber.factions.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Helix Benefit Exchange: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.3",
+        "name": "Transit Memory Trust",
+        "description": "Transit Memory Trust: keeps the lost courier alive as a signal and demands a right to refuse copying.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "cyber.factions.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Transit Memory Trust: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.4",
+        "name": "Northbank Tenants",
+        "description": "Northbank Tenants: offers shelter in exchange for uninterrupted water and anonymous meters.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "cyber.factions.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Northbank Tenants: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.5",
+        "name": "Glasshouse Auditors",
+        "description": "Glasshouse Auditors: wants evidence preserved before its officers erase the clinic's backups.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "cyber.factions.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Glasshouse Auditors: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.6",
+        "name": "Platform Sleepers",
+        "description": "Platform Sleepers: guards the tunnel camp and distrusts anyone wearing corporate optics.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "cyber.factions.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Platform Sleepers: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.7",
+        "name": "Copper Street Mutual",
+        "description": "Copper Street Mutual: can fund repairs if its elected treasurer survives the debt auction.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.7"
+          }
+        ],
+        "localeKey": "cyber.factions.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Copper Street Mutual: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.8",
+        "name": "Continuity Advocates",
+        "description": "Continuity Advocates: can challenge forged consent with original signatures.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.11"
+          }
+        ],
+        "localeKey": "cyber.factions.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Continuity Advocates: map schematic"
+          }
+        ]
+      }
+    ],
+    "locations": [
+      {
+        "id": "locations.1",
+        "name": "Rainline Pump Hall",
+        "description": "Rainline Pump Hall: rising water threatens tenants while a remote contract keeps the intake locked.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "cyber.locations.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Rainline Pump Hall: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.2",
+        "name": "Glasshouse Reception",
+        "description": "Glasshouse Reception: a smiling terminal admits insured bodies but rejects their original names.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "cyber.locations.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Glasshouse Reception: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.3",
+        "name": "Ghost Platform",
+        "description": "Ghost Platform: a dead train announces a courier who never arrived.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "cyber.locations.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Ghost Platform: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.4",
+        "name": "Copper Substation",
+        "description": "Copper Substation: live wiring shares a wall with sleeping families.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "cyber.locations.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Copper Substation: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.5",
+        "name": "Consent Vault",
+        "description": "Consent Vault: paper originals contradict the clinic's sale receipts.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "cyber.locations.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Consent Vault: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.6",
+        "name": "Tunnel Garden",
+        "description": "Tunnel Garden: sleepers irrigate vegetables with stolen condensation.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "cyber.locations.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Tunnel Garden: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.7",
+        "name": "Northbank Roofs",
+        "description": "Northbank Roofs: a cable bridge carries medicines over the flooded road.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "cyber.locations.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Northbank Roofs: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.8",
+        "name": "Helix Recovery Ward",
+        "description": "Helix Recovery Ward: an awake patient hears their identity used by another body.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "cyber.locations.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Helix Recovery Ward: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.9",
+        "name": "Signal Junction",
+        "description": "Signal Junction: three memory routes offer incompatible versions of one farewell.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.3"
+          }
+        ],
+        "localeKey": "cyber.locations.9",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Signal Junction: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.10",
+        "name": "Meter Market",
+        "description": "Meter Market: vendors auction the district's household consumption profiles.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.4"
+          }
+        ],
+        "localeKey": "cyber.locations.10",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Meter Market: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.11",
+        "name": "Auditor Annex",
+        "description": "Auditor Annex: a clerk keeps erased referrals in an unplugged recorder.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.8"
+          }
+        ],
+        "localeKey": "cyber.locations.11",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Auditor Annex: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.12",
+        "name": "Return Siding",
+        "description": "Return Siding: the courier's last physical possessions sit inside a sealed maintenance tram.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.12"
+          }
+        ],
+        "localeKey": "cyber.locations.12",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Return Siding: location schematic"
+          }
+        ]
+      }
+    ],
+    "npcs": [
+      {
+        "id": "npcs.1",
+        "name": "Mara Coil",
+        "description": "Mara Coil: a tenant electrician can reconnect water if someone protects her family from seizure.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "cyber.npcs.1",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Mara Coil: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.2",
+        "name": "Doctor Vale Index",
+        "description": "Doctor Vale Index: a clinician wants patients freed but will hide their own unsigned experiments.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "cyber.npcs.2",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Doctor Vale Index: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.3",
+        "name": "Juno Laststop",
+        "description": "Juno Laststop: a courier's memory asks to speak to a sibling before deciding its fate.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "cyber.npcs.3",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Juno Laststop: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.4",
+        "name": "Treasurer Ken Flux",
+        "description": "Treasurer Ken Flux: knows the debt is fabricated and has pledged a house as collateral.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "cyber.npcs.4",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Treasurer Ken Flux: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.5",
+        "name": "Auditor Ina Glass",
+        "description": "Auditor Ina Glass: can certify evidence only if the originals remain unaltered.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "cyber.npcs.5",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Auditor Ina Glass: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.6",
+        "name": "Sol Platform",
+        "description": "Sol Platform: a tunnel organizer will guide visitors who leave their scanners outside.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "cyber.npcs.6",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Sol Platform: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.7",
+        "name": "Nessa Bridge",
+        "description": "Nessa Bridge: a rooftop runner has medicine but needs a dry route for children.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "cyber.npcs.7",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Nessa Bridge: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.8",
+        "name": "Patient Eli Double",
+        "description": "Patient Eli Double: wants their name returned without destroying the body using it.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "cyber.npcs.8",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Patient Eli Double: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.9",
+        "name": "Recorder Moss",
+        "description": "Recorder Moss: an obsolete station assistant confuses privacy with permanent erasure.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "cyber.npcs.9",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Recorder Moss: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.10",
+        "name": "Vendor Rook Amp",
+        "description": "Vendor Rook Amp: sells meter keys and hides the outage contractor's invoice.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "cyber.npcs.10",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Vendor Rook Amp: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.11",
+        "name": "Counsel Rosa Continuity",
+        "description": "Counsel Rosa Continuity: can suspend the exchange if a witness agrees to public testimony.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "cyber.npcs.11",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Counsel Rosa Continuity: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.12",
+        "name": "Sibling Ren Laststop",
+        "description": "Sibling Ren Laststop: wants Juno rescued and fears accepting a copy will end the search.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "cyber.npcs.12",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Sibling Ren Laststop: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.13",
+        "name": "Foreman Ash Relay",
+        "description": "Foreman Ash Relay: owes the corporate crew money but can identify the sabotage.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "cyber.npcs.13",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Foreman Ash Relay: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.14",
+        "name": "Nurse Ada Quiet",
+        "description": "Nurse Ada Quiet: keeps a patient list outside the network and wants safe evacuation.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "cyber.npcs.14",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Nurse Ada Quiet: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.15",
+        "name": "Driver Noa Sleeper",
+        "description": "Driver Noa Sleeper: can move the maintenance tram if the sleepers receive another shelter.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "cyber.npcs.15",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Driver Noa Sleeper: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.16",
+        "name": "Child Vee Current",
+        "description": "Child Vee Current: has mapped safe roof paths and knows where the leak began.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "cyber.npcs.16",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Child Vee Current: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.17",
+        "name": "Broker Pax Helix",
+        "description": "Broker Pax Helix: offers compensation for silence without admitting the ledger is real.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "cyber.npcs.17",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Broker Pax Helix: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.18",
+        "name": "Tech Sia Loop",
+        "description": "Tech Sia Loop: can separate memory branches but needs the courier's explicit consent.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "cyber.npcs.18",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Tech Sia Loop: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.19",
+        "name": "Elder Bo Northbank",
+        "description": "Elder Bo Northbank: remembers public ownership before the utility privatization.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "cyber.npcs.19",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Elder Bo Northbank: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.20",
+        "name": "Guard Taro Lens",
+        "description": "Guard Taro Lens: will open the ward if their detained partner is located.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "cyber.npcs.20",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Guard Taro Lens: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.21",
+        "name": "Gardener Mei Condense",
+        "description": "Gardener Mei Condense: keeps the camp alive and refuses a rescue that floods its beds.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "cyber.npcs.21",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Gardener Mei Condense: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.22",
+        "name": "Dispatcher Kira Surge",
+        "description": "Dispatcher Kira Surge: holds the contractor's emergency override and fears its trace.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "cyber.npcs.22",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Dispatcher Kira Surge: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.23",
+        "name": "Witness Dev Original",
+        "description": "Witness Dev Original: signed a treatment form whose body-transfer clause was added later.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "cyber.npcs.23",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Witness Dev Original: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.24",
+        "name": "Archivist Len Boundary",
+        "description": "Archivist Len Boundary: can preserve testimony without publishing intimate memories.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "cyber.npcs.24",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Archivist Len Boundary: portrait schematic"
+          }
+        ]
+      }
+    ],
+    "adversaries": [
+      {
+        "id": "adversaries.1",
+        "name": "Seizure Crew",
+        "description": "Seizure Crew: tries to take the substation transformer while pretending to enforce a debt.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "cyber.adversaries.1",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Seizure Crew: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.2",
+        "name": "Consent Enforcer",
+        "description": "Consent Enforcer: isolates witnesses with a forged medical warrant.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "cyber.adversaries.2",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Consent Enforcer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.3",
+        "name": "Echo Collector",
+        "description": "Echo Collector: copies memories at the junction and treats consent as a technical fault.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "cyber.adversaries.3",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Echo Collector: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.4",
+        "name": "Flood Drone",
+        "description": "Flood Drone: marks unauthorized repairs for shutdown and can be redirected by a real outage report.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "cyber.adversaries.4",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Flood Drone: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.5",
+        "name": "Ward Sentinel",
+        "description": "Ward Sentinel: guards patient exits but accepts a verified evacuation order.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "cyber.adversaries.5",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Ward Sentinel: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.6",
+        "name": "Track Hound",
+        "description": "Track Hound: pursues warm bodies through the tunnel until its stolen charger is returned.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "cyber.adversaries.6",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Track Hound: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.7",
+        "name": "Meter Leech",
+        "description": "Meter Leech: a hidden device siphons emergency power into an auction display.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.7"
+          }
+        ],
+        "localeKey": "cyber.adversaries.7",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Meter Leech: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.8",
+        "name": "Ledger Wiper",
+        "description": "Ledger Wiper: deletes originals one floor ahead of the investigators.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.11"
+          }
+        ],
+        "localeKey": "cyber.adversaries.8",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Ledger Wiper: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.9",
+        "name": "Split Signal",
+        "description": "Split Signal: an unstable memory branch impersonates Juno's sibling.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.3"
+          }
+        ],
+        "localeKey": "cyber.adversaries.9",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Split Signal: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.10",
+        "name": "Contract Sheriff",
+        "description": "Contract Sheriff: uses a utility agreement to justify taking tenants hostage.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.4"
+          }
+        ],
+        "localeKey": "cyber.adversaries.10",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Contract Sheriff: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.11",
+        "name": "Identity Hunter",
+        "description": "Identity Hunter: tracks a patient's borrowed name through camera networks.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.8"
+          }
+        ],
+        "localeKey": "cyber.adversaries.11",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Identity Hunter: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.12",
+        "name": "Sleep Clearer",
+        "description": "Sleep Clearer: a maintenance bot destroys the camp unless rerouted to the blocked drain.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.12"
+          }
+        ],
+        "localeKey": "cyber.adversaries.12",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Sleep Clearer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.13",
+        "name": "Arc Swarm",
+        "description": "Arc Swarm: faulty repair motes discharge around the children crossing the cable.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "cyber.adversaries.13",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Arc Swarm: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.14",
+        "name": "Insurance Blackmailer",
+        "description": "Insurance Blackmailer: threatens to expose patients' private records if the exchange is challenged.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "cyber.adversaries.14",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Insurance Blackmailer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.15",
+        "name": "Cold Train",
+        "description": "Cold Train: a remote operator locks the courier's possessions inside a departing tram.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "cyber.adversaries.15",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Cold Train: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.16",
+        "name": "Debt Auctioneer",
+        "description": "Debt Auctioneer: sells the repair fund before the hearing starts.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "cyber.adversaries.16",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Debt Auctioneer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.17",
+        "name": "False Advocate",
+        "description": "False Advocate: promises legal safety while collecting signatures for the exchange.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "cyber.adversaries.17",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "False Advocate: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.18",
+        "name": "Archive Parasite",
+        "description": "Archive Parasite: eats farewell messages and releases fragments as advertisements.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "cyber.adversaries.18",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Archive Parasite: creature schematic"
+          }
+        ]
+      }
+    ],
+    "items": [
+      {
+        "id": "items.1",
+        "name": "Pump Override",
+        "description": "Pump Override: opens the water intake but records the identity of the operator.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "cyber.items.1",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Pump Override: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.2",
+        "name": "Original Consent Sheet",
+        "description": "Original Consent Sheet: proves which treatment the patient actually approved.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "cyber.items.2",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Original Consent Sheet: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.3",
+        "name": "Courier Farewell",
+        "description": "Courier Farewell: contains Juno's request to control future copies.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "cyber.items.3",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Courier Farewell: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.4",
+        "name": "Insulated Coil",
+        "description": "Insulated Coil: repairs one live cable and cannot support the entire roof bridge.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "cyber.items.4",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Insulated Coil: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.5",
+        "name": "Unplugged Ledger",
+        "description": "Unplugged Ledger: survives remote erasure but must be carried through reception.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "cyber.items.5",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Unplugged Ledger: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.6",
+        "name": "Tunnel Map",
+        "description": "Tunnel Map: marks occupied platforms and unsafe electrified tracks.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "cyber.items.6",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Tunnel Map: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.7",
+        "name": "Roof Medicine Case",
+        "description": "Roof Medicine Case: keeps emergency doses dry until its short battery expires.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "cyber.items.7",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Roof Medicine Case: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.8",
+        "name": "Patient Name Seal",
+        "description": "Patient Name Seal: can return one identity without cancelling another person's care.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "cyber.items.8",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Patient Name Seal: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.9",
+        "name": "Memory Boundary Key",
+        "description": "Memory Boundary Key: separates public testimony from intimate recordings.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.3"
+          }
+        ],
+        "localeKey": "cyber.items.9",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Memory Boundary Key: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.10",
+        "name": "Contract Invoice",
+        "description": "Contract Invoice: links the outage company to the meter auction.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.4"
+          }
+        ],
+        "localeKey": "cyber.items.10",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Contract Invoice: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.11",
+        "name": "Ward Exit Order",
+        "description": "Ward Exit Order: authorizes evacuation if certified by a neutral clinician.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.8"
+          }
+        ],
+        "localeKey": "cyber.items.11",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Ward Exit Order: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.12",
+        "name": "Tram Starter",
+        "description": "Tram Starter: moves the abandoned carriage and reveals its location.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.12"
+          }
+        ],
+        "localeKey": "cyber.items.12",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Tram Starter: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.13",
+        "name": "Anonymous Meter",
+        "description": "Anonymous Meter: restores billing without exposing individual routines.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.13"
+          }
+        ],
+        "localeKey": "cyber.items.13",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Anonymous Meter: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.14",
+        "name": "Clinic Backup Lens",
+        "description": "Clinic Backup Lens: holds receipts that implicate both exchange and consenting brokers.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.17"
+          }
+        ],
+        "localeKey": "cyber.items.14",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Clinic Backup Lens: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.15",
+        "name": "Signal Anchor",
+        "description": "Signal Anchor: keeps one branch coherent while others collapse.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.21"
+          }
+        ],
+        "localeKey": "cyber.items.15",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Signal Anchor: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.16",
+        "name": "Repair Deed",
+        "description": "Repair Deed: offers community ownership with shared maintenance liability.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.22"
+          }
+        ],
+        "localeKey": "cyber.items.16",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Repair Deed: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.17",
+        "name": "Witness Mask",
+        "description": "Witness Mask: defeats lobby cameras but makes official identification difficult.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.2"
+          }
+        ],
+        "localeKey": "cyber.items.17",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Witness Mask: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.18",
+        "name": "Sleeper Charter",
+        "description": "Sleeper Charter: records a safe relocation agreement for the tunnel camp.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.6"
+          }
+        ],
+        "localeKey": "cyber.items.18",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Sleeper Charter: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.19",
+        "name": "Transformer Voucher",
+        "description": "Transformer Voucher: pays the repair crew only after the flood danger ends.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.7"
+          }
+        ],
+        "localeKey": "cyber.items.19",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Transformer Voucher: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.20",
+        "name": "Continuity Ruling",
+        "description": "Continuity Ruling: suspends trading if the original witness appears in person.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.11"
+          }
+        ],
+        "localeKey": "cyber.items.20",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Continuity Ruling: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.21",
+        "name": "Courier Badge",
+        "description": "Courier Badge: opens Juno's locker and confirms the physical route.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.15"
+          }
+        ],
+        "localeKey": "cyber.items.21",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Courier Badge: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.22",
+        "name": "Flood Sensor",
+        "description": "Flood Sensor: records water levels without household surveillance.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.16"
+          }
+        ],
+        "localeKey": "cyber.items.22",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Flood Sensor: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.23",
+        "name": "Treatment Credit",
+        "description": "Treatment Credit: compensates patients but leaves the exchange's ownership intact.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.20"
+          }
+        ],
+        "localeKey": "cyber.items.23",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Treatment Credit: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.24",
+        "name": "Consent Recorder",
+        "description": "Consent Recorder: records one final choice in a format the transit trust cannot overwrite.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.24"
+          }
+        ],
+        "localeKey": "cyber.items.24",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Consent Recorder: item schematic"
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "id": "events.1",
+        "name": "Pump Lockout",
+        "description": "Pump Lockout: the intake shuts while the utility advertises priority access.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "cyber.events.1",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Pump Lockout: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.2",
+        "name": "Borrowed Voice",
+        "description": "Borrowed Voice: a terminal greets the crew with a missing patient's name.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "cyber.events.2",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Borrowed Voice: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.3",
+        "name": "Arrival Announcement",
+        "description": "Arrival Announcement: the abandoned station repeats Juno's unfinished message.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "cyber.events.3",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Arrival Announcement: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.4",
+        "name": "Debt Notice",
+        "description": "Debt Notice: repair volunteers receive seizure orders before the public hearing.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "cyber.events.4",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Debt Notice: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.5",
+        "name": "Witness Transfer",
+        "description": "Witness Transfer: the clinic moves the only original signatory into isolation.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "cyber.events.5",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Witness Transfer: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.6",
+        "name": "Camp Inspection",
+        "description": "Camp Inspection: maintenance drones order sleepers to leave without another shelter.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "cyber.events.6",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Camp Inspection: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.7",
+        "name": "Roof Surge",
+        "description": "Roof Surge: a faulty bridge wire sparks beside a medicine runner.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "cyber.events.7",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Roof Surge: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.8",
+        "name": "Receipt Leak",
+        "description": "Receipt Leak: a broker offers evidence in exchange for deleting one buyer's name.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "cyber.events.8",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Receipt Leak: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.9",
+        "name": "Branch Dispute",
+        "description": "Branch Dispute: two copies disagree about whether the courier wanted rescue.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "cyber.events.9",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Branch Dispute: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.10",
+        "name": "Transformer Auction",
+        "description": "Transformer Auction: the district's spare unit goes on sale during the flood.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "cyber.events.10",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Transformer Auction: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.11",
+        "name": "Ward Alarm",
+        "description": "Ward Alarm: patients panic when their borrowed names stop receiving care.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "cyber.events.11",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Ward Alarm: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.12",
+        "name": "Garden Blackout",
+        "description": "Garden Blackout: a signal test threatens the camp's only water pump.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "cyber.events.12",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Garden Blackout: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.13",
+        "name": "Public Hearing",
+        "description": "Public Hearing: the utility demands personal meter records as proof of sabotage.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "cyber.events.13",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Public Hearing: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.14",
+        "name": "Backup Erasure",
+        "description": "Backup Erasure: auditors have minutes before the original consent scan disappears.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "cyber.events.14",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Backup Erasure: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.15",
+        "name": "False Farewell",
+        "description": "False Farewell: an advertisement repeats a stolen intimate memory.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "cyber.events.15",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "False Farewell: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.16",
+        "name": "Contract Confession",
+        "description": "Contract Confession: the foreman offers testimony if their crew receives amnesty.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "cyber.events.16",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Contract Confession: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.17",
+        "name": "Patient Escape",
+        "description": "Patient Escape: a name seal frees one patient but locks another out.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "cyber.events.17",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Patient Escape: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.18",
+        "name": "Track Closure",
+        "description": "Track Closure: the tram route will be demolished at sunrise.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "cyber.events.18",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Track Closure: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.19",
+        "name": "Repair Offer",
+        "description": "Repair Offer: a corporation offers free equipment in exchange for perpetual data access.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "cyber.events.19",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Repair Offer: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.20",
+        "name": "Clinic Injunction",
+        "description": "Clinic Injunction: an advocate can halt sales if the crew preserves the originals.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "cyber.events.20",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Clinic Injunction: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.21",
+        "name": "Sibling Arrival",
+        "description": "Sibling Arrival: Ren arrives with a farewell that contradicts the signal.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "cyber.events.21",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Sibling Arrival: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.22",
+        "name": "Roof Council",
+        "description": "Roof Council: tenants debate who should hold the emergency override.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "cyber.events.22",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Roof Council: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.23",
+        "name": "Buyer Threat",
+        "description": "Buyer Threat: an insurer threatens to cancel innocent patients' treatment.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "cyber.events.23",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Buyer Threat: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.24",
+        "name": "Anchor Failure",
+        "description": "Anchor Failure: the coherent courier branch begins losing its last journey.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "cyber.events.24",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Anchor Failure: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.25",
+        "name": "Power Shared",
+        "description": "Power Shared: a neighboring block offers cells if its own outage is acknowledged.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "cyber.events.25",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Power Shared: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.26",
+        "name": "Exchange Hearing",
+        "description": "Exchange Hearing: the court offers restitution without restoring every stolen name.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "cyber.events.26",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Exchange Hearing: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.27",
+        "name": "Camp Vote",
+        "description": "Camp Vote: sleepers demand a say in moving the memory trust.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "cyber.events.27",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Camp Vote: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.28",
+        "name": "Open Intake",
+        "description": "Open Intake: the crew's ownership decision changes who controls emergency water.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "cyber.events.28",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Open Intake: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.29",
+        "name": "Names Returned",
+        "description": "Names Returned: patients choose between privacy, testimony and compensation.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "cyber.events.29",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Names Returned: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.30",
+        "name": "Final Departure",
+        "description": "Final Departure: Juno asks the crew to record their chosen boundary before the train leaves.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "cyber.events.30",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Final Departure: background schematic"
+          }
+        ]
+      }
+    ],
+    "scenes": [
+      {
+        "id": "scenes.1",
+        "name": "Water Behind the Lock",
+        "description": "Water Behind the Lock: Objective: restore emergency water. Bypass the contract or secure a public override; delay floods the clinic road.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.4"
+          }
+        ],
+        "localeKey": "cyber.scenes.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Water Behind the Lock: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.2",
+        "name": "The Wrong Name",
+        "description": "The Wrong Name: Objective: locate the original patient. Follow receipts or interview the lobby nurse; delay starts a forced transfer.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "cyber.scenes.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Wrong Name: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.3",
+        "name": "A Train for the Missing",
+        "description": "A Train for the Missing: Objective: contact Juno. Trace the announcement or enter the maintenance tram; delay closes the tunnel.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.6"
+          }
+        ],
+        "localeKey": "cyber.scenes.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Train for the Missing: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.4",
+        "name": "Live Copper",
+        "description": "Live Copper: Objective: make repairs safe. Isolate the transformer or reroute families; delay burns the roof bridge.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.7"
+          }
+        ],
+        "localeKey": "cyber.scenes.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Live Copper: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.5",
+        "name": "The Paper Vault",
+        "description": "The Paper Vault: Objective: preserve consent evidence. Escort the auditor or copy originals under witness; delay triggers erasure.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.8"
+          }
+        ],
+        "localeKey": "cyber.scenes.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Paper Vault: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.6",
+        "name": "Garden of Sleepers",
+        "description": "Garden of Sleepers: Objective: protect shelter while pursuing the signal. Reroute drones or negotiate relocation; delay destroys the pump.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "cyber.scenes.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Garden of Sleepers: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.7",
+        "name": "The Meter Auction",
+        "description": "The Meter Auction: Objective: stop seizure. Prove sabotage or redeem the disputed transformer; delay sells household profiles.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "cyber.scenes.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Meter Auction: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.8",
+        "name": "A Body in the Ward",
+        "description": "A Body in the Ward: Objective: free patients without denying others care. Verify identities or secure neutral treatment; delay locks the ward.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.11"
+          }
+        ],
+        "localeKey": "cyber.scenes.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Body in the Ward: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.9",
+        "name": "Two Farewells",
+        "description": "Two Farewells: Objective: establish Juno's wishes. Compare physical records or mediate the branches; delay lets the collector copy them.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.12"
+          }
+        ],
+        "localeKey": "cyber.scenes.9",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Two Farewells: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.10",
+        "name": "The Repair Bargain",
+        "description": "The Repair Bargain: Objective: secure sustainable power. Form a mutual or accept a bounded equipment contract; delay drains reserves.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.13"
+          }
+        ],
+        "localeKey": "cyber.scenes.10",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Repair Bargain: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.11",
+        "name": "Names on the Receipt",
+        "description": "Names on the Receipt: Objective: expose the exchange safely. Redact intimate data or protect public witnesses; delay reaches the insurer.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "cyber.scenes.11",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Names on the Receipt: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.12",
+        "name": "The Moving Tram",
+        "description": "The Moving Tram: Objective: recover possessions and a return path. Start the tram or open a service gate; delay seals the carriage.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.15"
+          }
+        ],
+        "localeKey": "cyber.scenes.12",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Moving Tram: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.13",
+        "name": "Hearing in the Rain",
+        "description": "Hearing in the Rain: Objective: settle liability. Present anonymous outage evidence or seek a tenants' injunction; delay authorizes seizure.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.16"
+          }
+        ],
+        "localeKey": "cyber.scenes.13",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Hearing in the Rain: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.14",
+        "name": "The Clinic Injunction",
+        "description": "The Clinic Injunction: Objective: stop further sales. Certify originals or bring the patient to testify; delay moves the ledger offsite.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.17"
+          }
+        ],
+        "localeKey": "cyber.scenes.14",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Clinic Injunction: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.15",
+        "name": "A Boundary for Juno",
+        "description": "A Boundary for Juno: Objective: record explicit consent. Preserve one branch or honor an end to copying; delay merges the recordings.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "cyber.scenes.15",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Boundary for Juno: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.16",
+        "name": "Who Owns the Water",
+        "description": "Who Owns the Water: Objective: choose repair governance. Sign a community deed or a limited lease; record who can cut power.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "cyber.scenes.16",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Who Owns the Water: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.17",
+        "name": "Names After Glass",
+        "description": "Names After Glass: Objective: settle restitution. Restore identities or fund private care; record whose evidence remains public.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.2"
+          }
+        ],
+        "localeKey": "cyber.scenes.17",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Names After Glass: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.18",
+        "name": "Laststop at Dawn",
+        "description": "Laststop at Dawn: Objective: decide the archive's future. Establish a consent trust or erase copies after farewell; record where sleepers can stay.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.3"
+          }
+        ],
+        "localeKey": "cyber.scenes.18",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Laststop at Dawn: map schematic"
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "archetypes.1",
+        "name": "Tenant Electrician",
+        "description": "Tenant Electrician: repairs utilities and owes the block reliable power.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "cyber.archetypes.1",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Tenant Electrician: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.2",
+        "name": "Consent Auditor",
+        "description": "Consent Auditor: reads medical contracts and carries an unaltered treatment form.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "cyber.archetypes.2",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Consent Auditor: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.3",
+        "name": "Signal Diver",
+        "description": "Signal Diver: navigates memory branches and refuses unauthorized copying.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "cyber.archetypes.3",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Signal Diver: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.4",
+        "name": "Roof Runner",
+        "description": "Roof Runner: carries medicines and knows evacuation paths.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "cyber.archetypes.4",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Roof Runner: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.5",
+        "name": "Ward Advocate",
+        "description": "Ward Advocate: defends patients whose identities no longer match their records.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "cyber.archetypes.5",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Ward Advocate: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.6",
+        "name": "Tunnel Gardener",
+        "description": "Tunnel Gardener: keeps a hidden community alive and knows service routes.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "cyber.archetypes.6",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Tunnel Gardener: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.7",
+        "name": "Mutual Treasurer",
+        "description": "Mutual Treasurer: tracks shared debts and protects emergency reserves.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "cyber.archetypes.7",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Mutual Treasurer: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.8",
+        "name": "Continuity Witness",
+        "description": "Continuity Witness: can identify forged signatures but risks exposing private treatment.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "cyber.archetypes.8",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Continuity Witness: portrait schematic"
+          }
+        ]
+      }
+    ],
+    "progressionPaths": [
+      {
+        "id": "progressionPaths.1",
+        "name": "Grid Steward",
+        "description": "Grid Steward: earn trust by restoring power without surveillance; gain repair access and shared maintenance duties.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.1"
+          }
+        ],
+        "localeKey": "cyber.progressionPaths.1",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Grid Steward: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.2",
+        "name": "Identity Defender",
+        "description": "Identity Defender: earn trust by preserving consent and treatment together; gain legal contacts and confidentiality duties.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.5"
+          }
+        ],
+        "localeKey": "cyber.progressionPaths.2",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Identity Defender: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.3",
+        "name": "Boundary Keeper",
+        "description": "Boundary Keeper: earn trust by honoring a recorded refusal to copy; gain archive access and stewardship obligations.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.3"
+          }
+        ],
+        "localeKey": "cyber.progressionPaths.3",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Boundary Keeper: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.4",
+        "name": "Roof Coordinator",
+        "description": "Roof Coordinator: earn trust by evacuating vulnerable neighbors; gain runners and responsibility for safe crossings.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.1"
+          }
+        ],
+        "localeKey": "cyber.progressionPaths.4",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Roof Coordinator: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.5",
+        "name": "Clinic Monitor",
+        "description": "Clinic Monitor: earn trust by stopping a sale without leaking intimate data; gain inspection access and patient oversight.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.5"
+          }
+        ],
+        "localeKey": "cyber.progressionPaths.5",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Clinic Monitor: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.6",
+        "name": "Transit Custodian",
+        "description": "Transit Custodian: earn trust by finding shelter before moving the camp; gain service access and relocation duties.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.6"
+          }
+        ],
+        "localeKey": "cyber.progressionPaths.6",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Transit Custodian: item schematic"
+          }
+        ]
+      }
+    ],
+    "visualThemes": [
+      {
+        "id": "visualThemes.1",
+        "name": "Rainline Circuit",
+        "description": "Rainline Circuit: copper repair lines and blue flood markers separate public utilities from corporate locks.",
+        "patternIds": [
+          "rainline-mutual"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "cyber.visualThemes.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Rainline Circuit: map schematic"
+          },
+          {
+            "role": "ui",
+            "asset": "ui/background.svg",
+            "alt": "District navigation interface"
+          }
+        ]
+      },
+      {
+        "id": "visualThemes.2",
+        "name": "Glass Consent",
+        "description": "Glass Consent: white clinic grids and magenta receipt traces distinguish evidence from private records.",
+        "patternIds": [
+          "glass-house"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "cyber.visualThemes.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Glass Consent: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "visualThemes.3",
+        "name": "Ghost Platform",
+        "description": "Ghost Platform: dim green transit lamps and violet memory branches mark shelter and unstable signals.",
+        "patternIds": [
+          "ghost-transit"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "cyber.visualThemes.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Ghost Platform: map schematic"
+          }
+        ]
+      }
+    ]
+  },
+  "playToday": {
+    "patternId": "rainline-mutual",
+    "campaignKitId": "kit.rainline-mutual",
+    "visualThemeId": "visualThemes.1"
+  },
+  "localization": {
+    "sourceLocale": "en",
+    "supportedLocales": [
+      "en",
+      "ru",
+      "es",
+      "ja",
+      "zh-CN",
+      "ko"
+    ],
+    "strings": {
+      "en": {
+        "cyber.factions.1": "Rainline Repair Union",
+        "cyber.factions.2": "Helix Benefit Exchange",
+        "cyber.factions.3": "Transit Memory Trust",
+        "cyber.factions.4": "Northbank Tenants",
+        "cyber.factions.5": "Glasshouse Auditors",
+        "cyber.factions.6": "Platform Sleepers",
+        "cyber.factions.7": "Copper Street Mutual",
+        "cyber.factions.8": "Continuity Advocates",
+        "cyber.locations.1": "Rainline Pump Hall",
+        "cyber.locations.2": "Glasshouse Reception",
+        "cyber.locations.3": "Ghost Platform",
+        "cyber.locations.4": "Copper Substation",
+        "cyber.locations.5": "Consent Vault",
+        "cyber.locations.6": "Tunnel Garden",
+        "cyber.locations.7": "Northbank Roofs",
+        "cyber.locations.8": "Helix Recovery Ward",
+        "cyber.locations.9": "Signal Junction",
+        "cyber.locations.10": "Meter Market",
+        "cyber.locations.11": "Auditor Annex",
+        "cyber.locations.12": "Return Siding",
+        "cyber.npcs.1": "Mara Coil",
+        "cyber.npcs.2": "Doctor Vale Index",
+        "cyber.npcs.3": "Juno Laststop",
+        "cyber.npcs.4": "Treasurer Ken Flux",
+        "cyber.npcs.5": "Auditor Ina Glass",
+        "cyber.npcs.6": "Sol Platform",
+        "cyber.npcs.7": "Nessa Bridge",
+        "cyber.npcs.8": "Patient Eli Double",
+        "cyber.npcs.9": "Recorder Moss",
+        "cyber.npcs.10": "Vendor Rook Amp",
+        "cyber.npcs.11": "Counsel Rosa Continuity",
+        "cyber.npcs.12": "Sibling Ren Laststop",
+        "cyber.npcs.13": "Foreman Ash Relay",
+        "cyber.npcs.14": "Nurse Ada Quiet",
+        "cyber.npcs.15": "Driver Noa Sleeper",
+        "cyber.npcs.16": "Child Vee Current",
+        "cyber.npcs.17": "Broker Pax Helix",
+        "cyber.npcs.18": "Tech Sia Loop",
+        "cyber.npcs.19": "Elder Bo Northbank",
+        "cyber.npcs.20": "Guard Taro Lens",
+        "cyber.npcs.21": "Gardener Mei Condense",
+        "cyber.npcs.22": "Dispatcher Kira Surge",
+        "cyber.npcs.23": "Witness Dev Original",
+        "cyber.npcs.24": "Archivist Len Boundary",
+        "cyber.adversaries.1": "Seizure Crew",
+        "cyber.adversaries.2": "Consent Enforcer",
+        "cyber.adversaries.3": "Echo Collector",
+        "cyber.adversaries.4": "Flood Drone",
+        "cyber.adversaries.5": "Ward Sentinel",
+        "cyber.adversaries.6": "Track Hound",
+        "cyber.adversaries.7": "Meter Leech",
+        "cyber.adversaries.8": "Ledger Wiper",
+        "cyber.adversaries.9": "Split Signal",
+        "cyber.adversaries.10": "Contract Sheriff",
+        "cyber.adversaries.11": "Identity Hunter",
+        "cyber.adversaries.12": "Sleep Clearer",
+        "cyber.adversaries.13": "Arc Swarm",
+        "cyber.adversaries.14": "Insurance Blackmailer",
+        "cyber.adversaries.15": "Cold Train",
+        "cyber.adversaries.16": "Debt Auctioneer",
+        "cyber.adversaries.17": "False Advocate",
+        "cyber.adversaries.18": "Archive Parasite",
+        "cyber.items.1": "Pump Override",
+        "cyber.items.2": "Original Consent Sheet",
+        "cyber.items.3": "Courier Farewell",
+        "cyber.items.4": "Insulated Coil",
+        "cyber.items.5": "Unplugged Ledger",
+        "cyber.items.6": "Tunnel Map",
+        "cyber.items.7": "Roof Medicine Case",
+        "cyber.items.8": "Patient Name Seal",
+        "cyber.items.9": "Memory Boundary Key",
+        "cyber.items.10": "Contract Invoice",
+        "cyber.items.11": "Ward Exit Order",
+        "cyber.items.12": "Tram Starter",
+        "cyber.items.13": "Anonymous Meter",
+        "cyber.items.14": "Clinic Backup Lens",
+        "cyber.items.15": "Signal Anchor",
+        "cyber.items.16": "Repair Deed",
+        "cyber.items.17": "Witness Mask",
+        "cyber.items.18": "Sleeper Charter",
+        "cyber.items.19": "Transformer Voucher",
+        "cyber.items.20": "Continuity Ruling",
+        "cyber.items.21": "Courier Badge",
+        "cyber.items.22": "Flood Sensor",
+        "cyber.items.23": "Treatment Credit",
+        "cyber.items.24": "Consent Recorder",
+        "cyber.events.1": "Pump Lockout",
+        "cyber.events.2": "Borrowed Voice",
+        "cyber.events.3": "Arrival Announcement",
+        "cyber.events.4": "Debt Notice",
+        "cyber.events.5": "Witness Transfer",
+        "cyber.events.6": "Camp Inspection",
+        "cyber.events.7": "Roof Surge",
+        "cyber.events.8": "Receipt Leak",
+        "cyber.events.9": "Branch Dispute",
+        "cyber.events.10": "Transformer Auction",
+        "cyber.events.11": "Ward Alarm",
+        "cyber.events.12": "Garden Blackout",
+        "cyber.events.13": "Public Hearing",
+        "cyber.events.14": "Backup Erasure",
+        "cyber.events.15": "False Farewell",
+        "cyber.events.16": "Contract Confession",
+        "cyber.events.17": "Patient Escape",
+        "cyber.events.18": "Track Closure",
+        "cyber.events.19": "Repair Offer",
+        "cyber.events.20": "Clinic Injunction",
+        "cyber.events.21": "Sibling Arrival",
+        "cyber.events.22": "Roof Council",
+        "cyber.events.23": "Buyer Threat",
+        "cyber.events.24": "Anchor Failure",
+        "cyber.events.25": "Power Shared",
+        "cyber.events.26": "Exchange Hearing",
+        "cyber.events.27": "Camp Vote",
+        "cyber.events.28": "Open Intake",
+        "cyber.events.29": "Names Returned",
+        "cyber.events.30": "Final Departure",
+        "cyber.scenes.1": "Water Behind the Lock",
+        "cyber.scenes.2": "The Wrong Name",
+        "cyber.scenes.3": "A Train for the Missing",
+        "cyber.scenes.4": "Live Copper",
+        "cyber.scenes.5": "The Paper Vault",
+        "cyber.scenes.6": "Garden of Sleepers",
+        "cyber.scenes.7": "The Meter Auction",
+        "cyber.scenes.8": "A Body in the Ward",
+        "cyber.scenes.9": "Two Farewells",
+        "cyber.scenes.10": "The Repair Bargain",
+        "cyber.scenes.11": "Names on the Receipt",
+        "cyber.scenes.12": "The Moving Tram",
+        "cyber.scenes.13": "Hearing in the Rain",
+        "cyber.scenes.14": "The Clinic Injunction",
+        "cyber.scenes.15": "A Boundary for Juno",
+        "cyber.scenes.16": "Who Owns the Water",
+        "cyber.scenes.17": "Names After Glass",
+        "cyber.scenes.18": "Laststop at Dawn",
+        "cyber.archetypes.1": "Tenant Electrician",
+        "cyber.archetypes.2": "Consent Auditor",
+        "cyber.archetypes.3": "Signal Diver",
+        "cyber.archetypes.4": "Roof Runner",
+        "cyber.archetypes.5": "Ward Advocate",
+        "cyber.archetypes.6": "Tunnel Gardener",
+        "cyber.archetypes.7": "Mutual Treasurer",
+        "cyber.archetypes.8": "Continuity Witness",
+        "cyber.progressionPaths.1": "Grid Steward",
+        "cyber.progressionPaths.2": "Identity Defender",
+        "cyber.progressionPaths.3": "Boundary Keeper",
+        "cyber.progressionPaths.4": "Roof Coordinator",
+        "cyber.progressionPaths.5": "Clinic Monitor",
+        "cyber.progressionPaths.6": "Transit Custodian",
+        "cyber.visualThemes.1": "Rainline Circuit",
+        "cyber.visualThemes.2": "Glass Consent",
+        "cyber.visualThemes.3": "Ghost Platform"
+      }
+    },
+    "fallbackLocales": [
+      "ru",
+      "es",
+      "ja",
+      "zh-CN",
+      "ko"
+    ]
+  }
+}

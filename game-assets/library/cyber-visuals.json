@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.cyber.visuals",
+  "version": "1.0.0",
+  "type": "visuals",
+  "name": "Neighborhood Mutual Schematics",
+  "description": "Neighborhood Mutual Schematics for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+  "tags": [
+    "cyberpunk",
+    "rainline-mutual",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Neighborhood Mutual Schematics for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+    "highlights": [
+      "Neighborhood Mutual Schematics",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.cyberpunk"
+    ],
+    "requiresCapabilities": [
+      "setting:cyberpunk"
+    ],
+    "providesCapabilities": [
+      "visuals:cyberpunk"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.cyber.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Cyberpunk original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.cyber.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 6
+  },
+  "media": [
+    {
+      "name": "cyberpunk/cyber-background.svg",
+      "path": "media/cyber-background.svg",
+      "role": "background",
+      "mediaType": "image/svg+xml",
+      "checksum": "dd10b9a9a045ae229e959984e8f9afb74fcee9567024fb505c9ea7b066e228f8",
+      "size": 736
+    },
+    {
+      "name": "cyberpunk/cyber-portrait.svg",
+      "path": "media/cyber-portrait.svg",
+      "role": "portrait",
+      "mediaType": "image/svg+xml",
+      "checksum": "3a3e866d015af4a9a7306cade25a54e0df25be5fe960d429ea78f0a48bfad002",
+      "size": 623
+    },
+    {
+      "name": "cyberpunk/cyber-creature.svg",
+      "path": "media/cyber-creature.svg",
+      "role": "token",
+      "mediaType": "image/svg+xml",
+      "checksum": "06fdf7195eab64b897312f855caaa6a9131c86426e8f79b8750cc47fa7246c9b",
+      "size": 701
+    },
+    {
+      "name": "cyberpunk/cyber-item.svg",
+      "path": "media/cyber-item.svg",
+      "role": "item",
+      "mediaType": "image/svg+xml",
+      "checksum": "05d2f0fe4c867db88e592557e1179be167eb7f84567d194dbc37563ab30ba63c",
+      "size": 636
+    },
+    {
+      "name": "cyberpunk/cyber-location.svg",
+      "path": "media/cyber-location.svg",
+      "role": "location",
+      "mediaType": "image/svg+xml",
+      "checksum": "0de48c506badb1ec454367f0a4413e6e7145872b2789214c0e8c44d5a0efd371",
+      "size": 625
+    },
+    {
+      "name": "cyberpunk/cyber-map.svg",
+      "path": "media/cyber-map.svg",
+      "role": "map",
+      "mediaType": "image/svg+xml",
+      "checksum": "b7768253c1dc03c1b1e834388d53760af5552ed477cbeb588e2a476cc7db5030",
+      "size": 2443
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.cyber.visuals",
+    "version": "1.0.0",
+    "name": "Neighborhood Mutual Schematics",
+    "description": "Neighborhood Mutual Schematics for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+    "provides": [
+      "visuals:cyberpunk"
+    ],
+    "requires": [
+      "setting:cyberpunk"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/cyber-deep",
+        "value": {
+          "id": "cyber-deep",
+          "name": "District Navigation",
+          "description": "Original Cyberpunk navigation schematics",
+          "defaults": {
+            "background": "assets/cyberpunk/cyber-background.svg",
+            "portrait": "assets/cyberpunk/cyber-portrait.svg",
+            "token": "assets/cyberpunk/cyber-creature.svg",
+            "item": "assets/cyberpunk/cyber-item.svg",
+            "location": "assets/cyberpunk/cyber-location.svg",
+            "map": "assets/cyberpunk/cyber-map.svg"
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "cyber-deep"
+  }
+}

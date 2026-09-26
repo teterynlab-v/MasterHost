@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.cyber.rules",
+  "version": "1.0.0",
+  "type": "rules",
+  "name": "Utility Repair and Consent Rules",
+  "description": "Utility Repair and Consent Rules for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+  "tags": [
+    "cyberpunk",
+    "rainline-mutual",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Utility Repair and Consent Rules for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+    "highlights": [
+      "Utility Repair and Consent Rules",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.cyberpunk"
+    ],
+    "requiresCapabilities": [
+      "setting:cyberpunk"
+    ],
+    "providesCapabilities": [
+      "rules:cyberpunk"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.cyber.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Cyberpunk original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.cyber.rules"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 6,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.cyber.rules",
+    "version": "1.0.0",
+    "name": "Utility Repair and Consent Rules",
+    "description": "Utility Repair and Consent Rules for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+    "provides": [
+      "rules:cyberpunk"
+    ],
+    "requires": [
+      "setting:cyberpunk"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/actions/cyber-repair-grid",
+        "value": {
+          "label": "Repair Grid",
+          "target": "self",
+          "kind": "check",
+          "checkId": "interface"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/cyber-protect-witness",
+        "value": {
+          "label": "Protect Witness",
+          "target": "self",
+          "kind": "check",
+          "checkId": "cool"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/cyber-certify-consent",
+        "value": {
+          "label": "Certify Consent",
+          "target": "self",
+          "kind": "check",
+          "checkId": "interface"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/cyber-share-power",
+        "value": {
+          "label": "Share Power",
+          "target": "self",
+          "kind": "check",
+          "checkId": "cool"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/cyber-trace-memory",
+        "value": {
+          "label": "Trace Memory",
+          "target": "self",
+          "kind": "check",
+          "checkId": "interface"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/cyber-record-boundary",
+        "value": {
+          "label": "Record Boundary",
+          "target": "self",
+          "kind": "check",
+          "checkId": "cool"
+        }
+      }
+    ]
+  }
+}

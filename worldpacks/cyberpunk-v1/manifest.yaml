@@ -1,11 +1,10 @@
 id: masterhost.cyberpunk
 name: Cyberpunk
-version: 2.0.0
+version: 1.0.0
 schemaVersion: "0.1"
 defaultArtSet: standard
 entryTemplate: world.root
-description: "Three complete street campaigns: public utility repair, stolen
-  medical identities and consent at a haunted transit archive."
+description: Neon megacities, predatory corporations, street crews, dangerous code, and fragile humanity.
 publisher: MasterHost
 official: true
 contentRating: mature
