@@ -43,39 +43,6 @@ questions:
         label: Rationed
       - value: isolated
         label: Isolated
-  - id: world.pattern
-    label: Universe pattern
-    type: choice
-    default: voidwake-archipelago
-    options:
-      - value: voidwake-archipelago
-        label: Voidwake Archipelago
-      - value: sunforge-hegemony
-        label: Sunforge Hegemony
-      - value: nightglass-frontier
-        label: Nightglass Frontier
-  - id: world.campaignKit
-    label: Campaign Kit
-    type: choice
-    default: kit.voidwake-archipelago
-    options:
-      - value: kit.voidwake-archipelago
-        label: "Voidwake: The Broken Relay"
-      - value: kit.sunforge-hegemony
-        label: "Sunforge: The Sealed Treaty"
-      - value: kit.nightglass-frontier
-        label: "Nightglass: Tomorrow Changed"
-  - id: world.visualTheme
-    label: Visual theme
-    type: choice
-    default: visualThemes.1
-    options:
-      - value: visualThemes.1
-        label: Rescue Navigation
-      - value: visualThemes.2
-        label: Solar Protocol
-      - value: visualThemes.3
-        label: Quiet Star Chart
 generators:
   region.count:
     type: integer-range
@@ -386,46 +353,6 @@ characterCreation:
               label: Envoy
             - value: tech
               label: Tech
-        - id: archetype
-          label: Crew role
-          type: choice
-          required: true
-          default: archetypes.1
-          options:
-            - value: archetypes.1
-              label: Rescue Pilot
-            - value: archetypes.2
-              label: Neutral Inspector
-            - value: archetypes.3
-              label: Gate Surveyor
-            - value: archetypes.4
-              label: Habitat Engineer
-            - value: archetypes.5
-              label: Union Medic
-            - value: archetypes.6
-              label: Memory Archivist
-            - value: archetypes.7
-              label: Freewake Courier
-            - value: archetypes.8
-              label: Embassy Witness
-        - id: path
-          label: Progression path
-          type: choice
-          required: true
-          default: progressionPaths.1
-          options:
-            - value: progressionPaths.1
-              label: Route Steward
-            - value: progressionPaths.2
-              label: Treaty Mediator
-            - value: progressionPaths.3
-              label: Gate Custodian
-            - value: progressionPaths.4
-              label: Cooperative Captain
-            - value: progressionPaths.5
-              label: Independent Auditor
-            - value: progressionPaths.6
-              label: Frontier Cartographer
     - id: aptitudes
       title: Aptitudes
       fields:
@@ -483,12 +410,6 @@ characterCreation:
     progression:
       renown: 0
       experience: 0
-      progressionPaths.1: 0
-      progressionPaths.2: 0
-      progressionPaths.3: 0
-      progressionPaths.4: 0
-      progressionPaths.5: 0
-      progressionPaths.6: 0
     resources:
       integrity: 18
       focus: 10
@@ -524,62 +445,6 @@ characterCreation:
         when:
           field: calling
           equals: tech
-      - id: crew-archetypes.1
-        when:
-          field: archetype
-          equals: archetypes.1
-      - id: crew-archetypes.2
-        when:
-          field: archetype
-          equals: archetypes.2
-      - id: crew-archetypes.3
-        when:
-          field: archetype
-          equals: archetypes.3
-      - id: crew-archetypes.4
-        when:
-          field: archetype
-          equals: archetypes.4
-      - id: crew-archetypes.5
-        when:
-          field: archetype
-          equals: archetypes.5
-      - id: crew-archetypes.6
-        when:
-          field: archetype
-          equals: archetypes.6
-      - id: crew-archetypes.7
-        when:
-          field: archetype
-          equals: archetypes.7
-      - id: crew-archetypes.8
-        when:
-          field: archetype
-          equals: archetypes.8
-      - id: path-progressionPaths.1
-        when:
-          field: path
-          equals: progressionPaths.1
-      - id: path-progressionPaths.2
-        when:
-          field: path
-          equals: progressionPaths.2
-      - id: path-progressionPaths.3
-        when:
-          field: path
-          equals: progressionPaths.3
-      - id: path-progressionPaths.4
-        when:
-          field: path
-          equals: progressionPaths.4
-      - id: path-progressionPaths.5
-        when:
-          field: path
-          equals: progressionPaths.5
-      - id: path-progressionPaths.6
-        when:
-          field: path
-          equals: progressionPaths.6
     assets:
       - id: portrait
         value: assets/ui/portrait.svg
@@ -656,30 +521,6 @@ progression:
     default: 0
   experience:
     label: Experience
-    min: 0
-    default: 0
-  progressionPaths.1:
-    label: Route Steward
-    min: 0
-    default: 0
-  progressionPaths.2:
-    label: Treaty Mediator
-    min: 0
-    default: 0
-  progressionPaths.3:
-    label: Gate Custodian
-    min: 0
-    default: 0
-  progressionPaths.4:
-    label: Cooperative Captain
-    min: 0
-    default: 0
-  progressionPaths.5:
-    label: Independent Auditor
-    min: 0
-    default: 0
-  progressionPaths.6:
-    label: Frontier Cartographer
     min: 0
     default: 0
 locations:

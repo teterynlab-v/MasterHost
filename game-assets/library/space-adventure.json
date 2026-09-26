@@ -1,0 +1,2116 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.space.adventure",
+  "version": "1.0.0",
+  "type": "adventure",
+  "name": "Three Complete Sector Adventures",
+  "description": "Three Complete Sector Adventures for Voidwake Archipelago, Sunforge Hegemony, Nightglass Frontier. Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.",
+  "tags": [
+    "space-opera",
+    "voidwake-archipelago",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Three Complete Sector Adventures for Voidwake Archipelago, Sunforge Hegemony, Nightglass Frontier. Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.",
+    "highlights": [
+      "Three Complete Sector Adventures",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.space-opera"
+    ],
+    "requiresCapabilities": [
+      "world:space-opera",
+      "locations:space-opera",
+      "cast:space-opera",
+      "items:space-opera",
+      "rules:space-opera"
+    ],
+    "providesCapabilities": [
+      "adventure:space-opera"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.space.world-template",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.space.locations",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.space.cast",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.space.items",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.space.rules",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Space Opera original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.space.adventure"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 18,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.space.adventure",
+    "version": "1.0.0",
+    "name": "Three Complete Sector Adventures",
+    "description": "Three Complete Sector Adventures for Voidwake Archipelago, Sunforge Hegemony, Nightglass Frontier. Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.",
+    "provides": [
+      "adventure:space-opera"
+    ],
+    "requires": [
+      "world:space-opera",
+      "locations:space-opera",
+      "cast:space-opera",
+      "items:space-opera",
+      "rules:space-opera"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.scenes.1",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Signal in the Wreckage"
+            },
+            "description": {
+              "value": "Signal in the Wreckage: Objective: board the powerless tug. Tow it or seal its reactor; delay costs the safe docking window."
+            },
+            "deepId": {
+              "value": "scenes.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.scenes.2",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Quarantine at Sunforge"
+            },
+            "description": {
+              "value": "Quarantine at Sunforge: Objective: obtain medicine clearance. Inspect the hold or call a civilian hearing; delay worsens the workers' exposure."
+            },
+            "deepId": {
+              "value": "scenes.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.scenes.3",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Unlit Beacon"
+            },
+            "description": {
+              "value": "The Unlit Beacon: Objective: find the caller. Trace the signal or recover erased logs; delay activates the prediction loop."
+            },
+            "deepId": {
+              "value": "scenes.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.scenes.4",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Fuel Bargain"
+            },
+            "description": {
+              "value": "The Fuel Bargain: Objective: secure rescue cells. Trade salvage rights or expose the diversion; delay triggers the auction."
+            },
+            "deepId": {
+              "value": "scenes.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.scenes.5",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Contradictory Orders"
+            },
+            "description": {
+              "value": "Contradictory Orders: Objective: stop the blockade escalating. Compare signed directives or protect the neutral clerk; delay brings the cruiser."
+            },
+            "deepId": {
+              "value": "scenes.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.scenes.6",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Mirror Crossing"
+            },
+            "description": {
+              "value": "Mirror Crossing: Objective: find the return corridor. Use silence or anchor a beacon; delay releases an echo stalker."
+            },
+            "deepId": {
+              "value": "scenes.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.scenes.7",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "A Cable Under Fire"
+            },
+            "description": {
+              "value": "A Cable Under Fire: Objective: evacuate families. Hold off corsairs or rig a second towline; delay separates the rescue convoy."
+            },
+            "deepId": {
+              "value": "scenes.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.scenes.8",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Witness at the Ring"
+            },
+            "description": {
+              "value": "Witness at the Ring: Objective: preserve testimony. Escort the clerk or broadcast the original seal; delay allows its seizure."
+            },
+            "deepId": {
+              "value": "scenes.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.scenes.9",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Names Beneath"
+            },
+            "description": {
+              "value": "The Names Beneath: Objective: recover missing people. Restore name plates or negotiate with the sentinel; delay erases another record."
+            },
+            "deepId": {
+              "value": "scenes.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.scenes.10",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Civilian Tow"
+            },
+            "description": {
+              "value": "The Civilian Tow: Objective: save the relay. Share reserve power or persuade Ferry Nine to assist; delay destroys docking clamps."
+            },
+            "deepId": {
+              "value": "scenes.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.13"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.scenes.11",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Reactor Ward"
+            },
+            "description": {
+              "value": "The Reactor Ward: Objective: deliver treatment. Bargain with security or enter the maintenance shaft; delay quarantines the medical team."
+            },
+            "deepId": {
+              "value": "scenes.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.scenes.12",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "A Weapon in the Lens"
+            },
+            "description": {
+              "value": "A Weapon in the Lens: Objective: separate rescue knowledge from targeting data. Isolate the link or confront its researcher; delay publishes the coordinates."
+            },
+            "deepId": {
+              "value": "scenes.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.15"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.scenes.13",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Last Passenger"
+            },
+            "description": {
+              "value": "The Last Passenger: Objective: protect the last evacuation. Board the captain's tug or reroute the corsairs; delay sacrifices the chart."
+            },
+            "deepId": {
+              "value": "scenes.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.16"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.scenes.14",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Open Tribunal"
+            },
+            "description": {
+              "value": "The Open Tribunal: Objective: decide the treaty's fate. Present evidence or negotiate amnesty; delay lets the admiral close proceedings."
+            },
+            "deepId": {
+              "value": "scenes.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.17"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.scenes.15",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Caretaker's Price"
+            },
+            "description": {
+              "value": "The Caretaker's Price: Objective: secure a safe return. Trade a memory or rewrite the beacon contract; delay traps the expedition."
+            },
+            "deepId": {
+              "value": "scenes.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.scenes.16",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "A Route for Everyone"
+            },
+            "description": {
+              "value": "A Route for Everyone: Objective: settle ownership. Sign a habitat deed or create a courier cooperative; record who pays for repairs."
+            },
+            "deepId": {
+              "value": "scenes.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.scenes.17",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "A Quarantine Lifted"
+            },
+            "description": {
+              "value": "A Quarantine Lifted: Objective: settle responsibility. Demand reparations or accept a protected confession; record who can enter the docks."
+            },
+            "deepId": {
+              "value": "scenes.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.scenes.18",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Tomorrow Changed"
+            },
+            "description": {
+              "value": "Tomorrow Changed: Objective: choose the experiment's future. Preserve an open archive or dismantle prediction; record who keeps the recovered names."
+            },
+            "deepId": {
+              "value": "scenes.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.1",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Relief Signal"
+            },
+            "description": {
+              "value": "Relief Signal: the tug broadcasts for help as its captain refuses to abandon passengers."
+            },
+            "deepId": {
+              "value": "events.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.2",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Sealed Shipment"
+            },
+            "description": {
+              "value": "Sealed Shipment: the inspector holds medicine while an envoy offers a private waiver."
+            },
+            "deepId": {
+              "value": "events.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.3",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Future Distress"
+            },
+            "description": {
+              "value": "Future Distress: a beacon broadcasts a casualty list containing one crew member."
+            },
+            "deepId": {
+              "value": "events.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.4",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Fuel Auction"
+            },
+            "description": {
+              "value": "Fuel Auction: the broker opens bidding for cells already promised to rescue volunteers."
+            },
+            "deepId": {
+              "value": "events.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.5",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Order Collision"
+            },
+            "description": {
+              "value": "Order Collision: two patrols arrive with opposing instructions and demand the crew choose."
+            },
+            "deepId": {
+              "value": "events.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.6",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Missing Arrival"
+            },
+            "description": {
+              "value": "Missing Arrival: a gate sensor records a ship that nobody can see."
+            },
+            "deepId": {
+              "value": "events.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.7",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Air Ration"
+            },
+            "description": {
+              "value": "Air Ration: families ask the crew to witness an evacuation lottery."
+            },
+            "deepId": {
+              "value": "events.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.8",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Worker Collapse"
+            },
+            "description": {
+              "value": "Worker Collapse: a foundry medic exposes contamination before security seals the ward."
+            },
+            "deepId": {
+              "value": "events.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.9",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Names Return"
+            },
+            "description": {
+              "value": "Names Return: the archive announces people erased from every station register."
+            },
+            "deepId": {
+              "value": "events.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.10",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Cable Rupture"
+            },
+            "description": {
+              "value": "Cable Rupture: a rescue route breaks while the ferry crew debates turning back."
+            },
+            "deepId": {
+              "value": "events.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.11",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Public Hearing"
+            },
+            "description": {
+              "value": "Public Hearing: the clerk requests a neutral witness before reading the original manifest."
+            },
+            "deepId": {
+              "value": "events.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.12",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Silent Pursuit"
+            },
+            "description": {
+              "value": "Silent Pursuit: an echo stalker repeats the expedition's last movement."
+            },
+            "deepId": {
+              "value": "events.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.13",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Courier Offer"
+            },
+            "description": {
+              "value": "Courier Offer: a messenger proposes a safe route in exchange for permanent public access."
+            },
+            "deepId": {
+              "value": "events.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.14",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Embassy Siege"
+            },
+            "description": {
+              "value": "Embassy Siege: the defector seeks shelter as patrols surround the embassy."
+            },
+            "deepId": {
+              "value": "events.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.15",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Lens Alignment"
+            },
+            "description": {
+              "value": "Lens Alignment: an observation window reveals the beacon weapon link."
+            },
+            "deepId": {
+              "value": "events.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.16",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Tug Drift"
+            },
+            "description": {
+              "value": "Tug Drift: the powerless vessel moves toward a crowded habitat."
+            },
+            "deepId": {
+              "value": "events.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.17",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Treatment Deadline"
+            },
+            "description": {
+              "value": "Treatment Deadline: the medicine loses potency before the tribunal resumes."
+            },
+            "deepId": {
+              "value": "events.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.18",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Second Voice"
+            },
+            "description": {
+              "value": "Second Voice: a hidden signal asks the crew to rescue a memory rather than a body."
+            },
+            "deepId": {
+              "value": "events.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.19",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Salvage Claim"
+            },
+            "description": {
+              "value": "Salvage Claim: corsairs offer assistance if every rescued ship becomes their property."
+            },
+            "deepId": {
+              "value": "events.19"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.20",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Union Vote"
+            },
+            "description": {
+              "value": "Union Vote: dock workers vote to reopen if their exposure readings enter the public record."
+            },
+            "deepId": {
+              "value": "events.20"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.21",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Gate Warning"
+            },
+            "description": {
+              "value": "Gate Warning: a probe sends a map of a return corridor that has not yet formed."
+            },
+            "deepId": {
+              "value": "events.21"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.22",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Reserve Choice"
+            },
+            "description": {
+              "value": "Reserve Choice: the engineer can save the relay by exhausting a small habitat's cells."
+            },
+            "deepId": {
+              "value": "events.22"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.23",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Cruiser Arrival"
+            },
+            "description": {
+              "value": "Cruiser Arrival: the admiral suspends negotiations until neutral observers inspect the hold."
+            },
+            "deepId": {
+              "value": "events.23"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.24",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Archive Leak"
+            },
+            "description": {
+              "value": "Archive Leak: a targeting faction offers to purchase the recovered rescue data."
+            },
+            "deepId": {
+              "value": "events.24"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.25",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Towline Stand"
+            },
+            "description": {
+              "value": "Towline Stand: volunteers cross under attack while the captain asks who should go last."
+            },
+            "deepId": {
+              "value": "events.25"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.26",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Treaty Broadcast"
+            },
+            "description": {
+              "value": "Treaty Broadcast: the envoy gives the crew a one-use channel to every member world."
+            },
+            "deepId": {
+              "value": "events.26"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.27",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Memory Bargain"
+            },
+            "description": {
+              "value": "Memory Bargain: the warden asks one traveler to surrender a personal memory."
+            },
+            "deepId": {
+              "value": "events.27"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.28",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "New Route"
+            },
+            "description": {
+              "value": "New Route: survivors propose community ownership of the rescue corridor."
+            },
+            "deepId": {
+              "value": "events.28"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.29",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Open Docks"
+            },
+            "description": {
+              "value": "Open Docks: the assembly demands compensation for everyone denied treatment."
+            },
+            "deepId": {
+              "value": "events.29"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.events.30",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Beacon Rewritten"
+            },
+            "description": {
+              "value": "Beacon Rewritten: a final transmission reflects the crew's decision about the experiment."
+            },
+            "deepId": {
+              "value": "events.30"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-scenes-1": {
+            "template": "space.deep.scenes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-scenes-2": {
+            "template": "space.deep.scenes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-scenes-3": {
+            "template": "space.deep.scenes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-scenes-4": {
+            "template": "space.deep.scenes.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-scenes-5": {
+            "template": "space.deep.scenes.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-scenes-6": {
+            "template": "space.deep.scenes.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-scenes-7": {
+            "template": "space.deep.scenes.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-scenes-8": {
+            "template": "space.deep.scenes.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-scenes-9": {
+            "template": "space.deep.scenes.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-scenes-10": {
+            "template": "space.deep.scenes.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-scenes-11": {
+            "template": "space.deep.scenes.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-scenes-12": {
+            "template": "space.deep.scenes.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-scenes-13": {
+            "template": "space.deep.scenes.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-scenes-14": {
+            "template": "space.deep.scenes.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-scenes-15": {
+            "template": "space.deep.scenes.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-scenes-16": {
+            "template": "space.deep.scenes.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-scenes-17": {
+            "template": "space.deep.scenes.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-scenes-18": {
+            "template": "space.deep.scenes.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-events-1": {
+            "template": "space.deep.events.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-events-2": {
+            "template": "space.deep.events.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-events-3": {
+            "template": "space.deep.events.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-events-4": {
+            "template": "space.deep.events.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-events-5": {
+            "template": "space.deep.events.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-events-6": {
+            "template": "space.deep.events.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-events-7": {
+            "template": "space.deep.events.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-events-8": {
+            "template": "space.deep.events.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-events-9": {
+            "template": "space.deep.events.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-events-10": {
+            "template": "space.deep.events.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-events-11": {
+            "template": "space.deep.events.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-events-12": {
+            "template": "space.deep.events.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-events-13": {
+            "template": "space.deep.events.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-events-14": {
+            "template": "space.deep.events.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-events-15": {
+            "template": "space.deep.events.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-events-16": {
+            "template": "space.deep.events.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-events-17": {
+            "template": "space.deep.events.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-events-18": {
+            "template": "space.deep.events.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-events-19": {
+            "template": "space.deep.events.19",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-events-20": {
+            "template": "space.deep.events.20",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-events-21": {
+            "template": "space.deep.events.21",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-events-22": {
+            "template": "space.deep.events.22",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-events-23": {
+            "template": "space.deep.events.23",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-events-24": {
+            "template": "space.deep.events.24",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-events-25": {
+            "template": "space.deep.events.25",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-events-26": {
+            "template": "space.deep.events.26",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-events-27": {
+            "template": "space.deep.events.27",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-events-28": {
+            "template": "space.deep.events.28",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-events-29": {
+            "template": "space.deep.events.29",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-events-30": {
+            "template": "space.deep.events.30",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

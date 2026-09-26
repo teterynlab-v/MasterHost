@@ -1,0 +1,580 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.space.locations",
+  "version": "1.0.0",
+  "type": "locations",
+  "name": "Twelve Stations and Gate Sites",
+  "description": "Twelve Stations and Gate Sites for Voidwake Archipelago, Sunforge Hegemony, Nightglass Frontier. Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.",
+  "tags": [
+    "space-opera",
+    "voidwake-archipelago",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Twelve Stations and Gate Sites for Voidwake Archipelago, Sunforge Hegemony, Nightglass Frontier. Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.",
+    "highlights": [
+      "Twelve Stations and Gate Sites",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.space-opera"
+    ],
+    "requiresCapabilities": [
+      "world:space-opera"
+    ],
+    "providesCapabilities": [
+      "locations:space-opera"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.space.world-template",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Space Opera original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.space.locations"
+  },
+  "published": true,
+  "counts": {
+    "locations": 12,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.space.locations",
+    "version": "1.0.0",
+    "name": "Twelve Stations and Gate Sites",
+    "description": "Twelve Stations and Gate Sites for Voidwake Archipelago, Sunforge Hegemony, Nightglass Frontier. Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.",
+    "provides": [
+      "locations:space-opera"
+    ],
+    "requires": [
+      "world:space-opera"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.locations.1",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Lantern Relay"
+            },
+            "description": {
+              "value": "Lantern Relay: its docking clamps hold a powerless rescue tug while the reactor loses coolant."
+            },
+            "deepId": {
+              "value": "locations.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.locations.2",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Sunforge Customs Ring"
+            },
+            "description": {
+              "value": "Sunforge Customs Ring: two inspection teams enforce contradictory seals on the same medical cargo."
+            },
+            "deepId": {
+              "value": "locations.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.locations.3",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Unlit Beacon"
+            },
+            "description": {
+              "value": "Unlit Beacon: a silent control room plays a distress call dated one day ahead."
+            },
+            "deepId": {
+              "value": "locations.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.locations.4",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Tidebreak Habitat"
+            },
+            "description": {
+              "value": "Tidebreak Habitat: families ration air while a fuel broker auctions their evacuation slots."
+            },
+            "deepId": {
+              "value": "locations.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.locations.5",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Helios Tribunal"
+            },
+            "description": {
+              "value": "Helios Tribunal: delegates hear evidence through a firewall controlled by the accused directorate."
+            },
+            "deepId": {
+              "value": "locations.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.locations.6",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Mirror Gate"
+            },
+            "description": {
+              "value": "Mirror Gate: its return corridor records a second arrival that nobody remembers."
+            },
+            "deepId": {
+              "value": "locations.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.locations.7",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Cable Graveyard"
+            },
+            "description": {
+              "value": "Cable Graveyard: a broken courier line hides caches marked with living crew names."
+            },
+            "deepId": {
+              "value": "locations.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.locations.8",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Cinder Foundry"
+            },
+            "description": {
+              "value": "Cinder Foundry: workers salvage contaminated shielding while supervisors deny a leak."
+            },
+            "deepId": {
+              "value": "locations.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.locations.9",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Quiet Observatory"
+            },
+            "description": {
+              "value": "Quiet Observatory: a lens resolves cities abandoned before their foundations were built."
+            },
+            "deepId": {
+              "value": "locations.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.locations.10",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Ferry Nine"
+            },
+            "description": {
+              "value": "Ferry Nine: a civilian ship can tow the relay if its passengers accept the delay."
+            },
+            "deepId": {
+              "value": "locations.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.locations.11",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Embassy of Ash"
+            },
+            "description": {
+              "value": "Embassy of Ash: an envoy shelters defectors but refuses protection from armed patrols."
+            },
+            "deepId": {
+              "value": "locations.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.locations.12",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Echo Anchorage"
+            },
+            "description": {
+              "value": "Echo Anchorage: ships hear their own final logs before releasing their moorings."
+            },
+            "deepId": {
+              "value": "locations.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-locations-1": {
+            "template": "space.deep.locations.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-locations-2": {
+            "template": "space.deep.locations.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-locations-3": {
+            "template": "space.deep.locations.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-locations-4": {
+            "template": "space.deep.locations.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-locations-5": {
+            "template": "space.deep.locations.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-locations-6": {
+            "template": "space.deep.locations.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-locations-7": {
+            "template": "space.deep.locations.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-locations-8": {
+            "template": "space.deep.locations.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-locations-9": {
+            "template": "space.deep.locations.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-locations-10": {
+            "template": "space.deep.locations.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-locations-11": {
+            "template": "space.deep.locations.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-locations-12": {
+            "template": "space.deep.locations.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

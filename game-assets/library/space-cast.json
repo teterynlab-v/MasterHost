@@ -1,0 +1,1840 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.space.cast",
+  "version": "1.0.0",
+  "type": "cast",
+  "name": "Sector Crews and Threats",
+  "description": "Sector Crews and Threats for Voidwake Archipelago, Sunforge Hegemony, Nightglass Frontier. Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.",
+  "tags": [
+    "space-opera",
+    "voidwake-archipelago",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Sector Crews and Threats for Voidwake Archipelago, Sunforge Hegemony, Nightglass Frontier. Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.",
+    "highlights": [
+      "Sector Crews and Threats",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.space-opera"
+    ],
+    "requiresCapabilities": [
+      "world:space-opera"
+    ],
+    "providesCapabilities": [
+      "cast:space-opera"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.space.world-template",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Space Opera original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.space.cast"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 42,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.space.cast",
+    "version": "1.0.0",
+    "name": "Sector Crews and Threats",
+    "description": "Sector Crews and Threats for Voidwake Archipelago, Sunforge Hegemony, Nightglass Frontier. Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.",
+    "provides": [
+      "cast:space-opera"
+    ],
+    "requires": [
+      "world:space-opera"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.1",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Captain Nyra Vale"
+            },
+            "description": {
+              "value": "Captain Nyra Vale: will risk her tug to evacuate families if the crew returns her impounded route chart."
+            },
+            "deepId": {
+              "value": "npcs.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.2",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Inspector Sera Kest"
+            },
+            "description": {
+              "value": "Inspector Sera Kest: can clear the medicine but must explain an unsigned military order."
+            },
+            "deepId": {
+              "value": "npcs.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.3",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Surveyor Iven Orr"
+            },
+            "description": {
+              "value": "Surveyor Iven Orr: recorded the future distress call and suspects his missing partner sent it."
+            },
+            "deepId": {
+              "value": "npcs.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.4",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Broker Pell Varo"
+            },
+            "description": {
+              "value": "Broker Pell Varo: knows where fuel was diverted and asks immunity for his courier network."
+            },
+            "deepId": {
+              "value": "npcs.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.5",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Envoy Mara Sol"
+            },
+            "description": {
+              "value": "Envoy Mara Sol: offers treaty access if the crew protects a witness from both delegations."
+            },
+            "deepId": {
+              "value": "npcs.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.6",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Archivist Ren Koi"
+            },
+            "description": {
+              "value": "Archivist Ren Koi: recognizes erased voices and insists every rescued memory retain its name."
+            },
+            "deepId": {
+              "value": "npcs.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.7",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Engineer Tavi Sen"
+            },
+            "description": {
+              "value": "Engineer Tavi Sen: can stabilize the relay by sacrificing her home habitat's reserve cells."
+            },
+            "deepId": {
+              "value": "npcs.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.8",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Union Speaker Daro Ves"
+            },
+            "description": {
+              "value": "Union Speaker Daro Ves: will reopen the docks after an independent radiation reading."
+            },
+            "deepId": {
+              "value": "npcs.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.9",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Navigator Aya Noll"
+            },
+            "description": {
+              "value": "Navigator Aya Noll: can enter the mirror gate but refuses to repeat a route her log marks fatal."
+            },
+            "deepId": {
+              "value": "npcs.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.10",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Medic Oren Taal"
+            },
+            "description": {
+              "value": "Medic Oren Taal: has treatment for decompression victims but only enough for one docking bay."
+            },
+            "deepId": {
+              "value": "npcs.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.11",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Admiral Kiva Rell"
+            },
+            "description": {
+              "value": "Admiral Kiva Rell: will withdraw patrols if civilian inspection exposes the forged quarantine."
+            },
+            "deepId": {
+              "value": "npcs.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.12",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Drifter Ena Vos"
+            },
+            "description": {
+              "value": "Drifter Ena Vos: found a living garden on a dead station and wants its coordinates kept secret."
+            },
+            "deepId": {
+              "value": "npcs.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.13",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Courier Bex Orin"
+            },
+            "description": {
+              "value": "Courier Bex Orin: offers a fast crossing after the crew promises not to sell the route."
+            },
+            "deepId": {
+              "value": "npcs.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.14",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Clerk Nima Sar"
+            },
+            "description": {
+              "value": "Clerk Nima Sar: preserved an original manifest after every public copy was replaced."
+            },
+            "deepId": {
+              "value": "npcs.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.15",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Researcher Cira Wen"
+            },
+            "description": {
+              "value": "Researcher Cira Wen: believes the beacon is a rescue system rather than a weapon."
+            },
+            "deepId": {
+              "value": "npcs.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.16",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Pilot Hal Venn"
+            },
+            "description": {
+              "value": "Pilot Hal Venn: demands salvage shares yet secretly transports unpaid evacuees."
+            },
+            "deepId": {
+              "value": "npcs.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.17",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Diplomat Theo Aster"
+            },
+            "description": {
+              "value": "Diplomat Theo Aster: will mediate the dispute if both sides publicly admit their missing prisoners."
+            },
+            "deepId": {
+              "value": "npcs.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.18",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Listener Yu Senn"
+            },
+            "description": {
+              "value": "Listener Yu Senn: hears a second voice underneath the distress transmission."
+            },
+            "deepId": {
+              "value": "npcs.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.19",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Dockmaster Jori Pell"
+            },
+            "description": {
+              "value": "Dockmaster Jori Pell: knows which berth can isolate the leaking tug without abandoning its crew."
+            },
+            "deepId": {
+              "value": "npcs.19"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.20",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Commander Vela Iri"
+            },
+            "description": {
+              "value": "Commander Vela Iri: received a genuine order to enforce a quarantine based on false evidence."
+            },
+            "deepId": {
+              "value": "npcs.20"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.21",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Scavenger Rune Aki"
+            },
+            "description": {
+              "value": "Scavenger Rune Aki: will trade a gate key for the recovered name of their lost sibling."
+            },
+            "deepId": {
+              "value": "npcs.21"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.22",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Teacher Luma Rei"
+            },
+            "description": {
+              "value": "Teacher Luma Rei: organizes evacuation lists and refuses to rank families by wealth."
+            },
+            "deepId": {
+              "value": "npcs.22"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.23",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Defector Cael Noor"
+            },
+            "description": {
+              "value": "Defector Cael Noor: has treaty evidence but fears prosecution for the seizure they witnessed."
+            },
+            "deepId": {
+              "value": "npcs.23"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.npcs.24",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Caretaker Oshi Tan"
+            },
+            "description": {
+              "value": "Caretaker Oshi Tan: will open the archive only after the crew disconnects its predictive weapon link."
+            },
+            "deepId": {
+              "value": "npcs.24"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.adversaries.1",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Dock Breacher"
+            },
+            "description": {
+              "value": "Dock Breacher: cuts docking clamps to claim the tug; negotiation requires a public salvage receipt."
+            },
+            "deepId": {
+              "value": "adversaries.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.adversaries.2",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Quarantine Patrol"
+            },
+            "description": {
+              "value": "Quarantine Patrol: blocks the medical convoy with legal orders that can be challenged at the tribunal."
+            },
+            "deepId": {
+              "value": "adversaries.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.adversaries.3",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Echo Stalker"
+            },
+            "description": {
+              "value": "Echo Stalker: follows recorded movement; a deliberately altered route breaks its pursuit."
+            },
+            "deepId": {
+              "value": "adversaries.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.adversaries.4",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Fuel Leech Drone"
+            },
+            "description": {
+              "value": "Fuel Leech Drone: drains rescue cells and can be lured into an isolated maintenance socket."
+            },
+            "deepId": {
+              "value": "adversaries.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.adversaries.5",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Seal Enforcer"
+            },
+            "description": {
+              "value": "Seal Enforcer: confiscates unsigned cargo; witnessed authorization disables its warrant."
+            },
+            "deepId": {
+              "value": "adversaries.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.adversaries.6",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Mirror Doppel"
+            },
+            "description": {
+              "value": "Mirror Doppel: copies the last shouted command; silence prevents it coordinating an ambush."
+            },
+            "deepId": {
+              "value": "adversaries.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.adversaries.7",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Salvage Corsair"
+            },
+            "description": {
+              "value": "Salvage Corsair: boards isolated ferries but retreats when rescue craft arrive together."
+            },
+            "deepId": {
+              "value": "adversaries.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.adversaries.8",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Cinder Security Unit"
+            },
+            "description": {
+              "value": "Cinder Security Unit: protects the leaking reactor and mistakes treatment equipment for sabotage."
+            },
+            "deepId": {
+              "value": "adversaries.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.adversaries.9",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Archive Sentinel"
+            },
+            "description": {
+              "value": "Archive Sentinel: attacks erased identities; restored name records change its threat list."
+            },
+            "deepId": {
+              "value": "adversaries.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.adversaries.10",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Void Manta"
+            },
+            "description": {
+              "value": "Void Manta: nests around the relay heat plume; cooling one panel opens a safe approach."
+            },
+            "deepId": {
+              "value": "adversaries.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.adversaries.11",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Solar Lance Cruiser"
+            },
+            "description": {
+              "value": "Solar Lance Cruiser: threatens the union docks yet cannot fire while neutral observers are aboard."
+            },
+            "deepId": {
+              "value": "adversaries.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.adversaries.12",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Timefracture Swarm"
+            },
+            "description": {
+              "value": "Timefracture Swarm: repeats its first attack vector; forcing it through the gate seals the loop."
+            },
+            "deepId": {
+              "value": "adversaries.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.adversaries.13",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Ration Mutineer"
+            },
+            "description": {
+              "value": "Ration Mutineer: holds the air depot but will release it after a fair evacuation roster."
+            },
+            "deepId": {
+              "value": "adversaries.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.adversaries.14",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Treaty Assassin"
+            },
+            "description": {
+              "value": "Treaty Assassin: targets the defecting clerk and leaves false evidence implicating the envoy."
+            },
+            "deepId": {
+              "value": "adversaries.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.adversaries.15",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Unmoored Probe"
+            },
+            "description": {
+              "value": "Unmoored Probe: harvests memory signals; a false distress broadcast redirects it."
+            },
+            "deepId": {
+              "value": "adversaries.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.adversaries.16",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Cable Marauder"
+            },
+            "description": {
+              "value": "Cable Marauder: snaps rescue tethers to collect drifting cargo; spare tow lines deny the trap."
+            },
+            "deepId": {
+              "value": "adversaries.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.adversaries.17",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Ash Inquisitor"
+            },
+            "description": {
+              "value": "Ash Inquisitor: questions witnesses separately to hide contradictions in the quarantine story."
+            },
+            "deepId": {
+              "value": "adversaries.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.adversaries.18",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Beacon Warden"
+            },
+            "description": {
+              "value": "Beacon Warden: protects the experiment; separating rescue records from targeting data permits a truce."
+            },
+            "deepId": {
+              "value": "adversaries.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-npcs-1": {
+            "template": "space.deep.npcs.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-npcs-2": {
+            "template": "space.deep.npcs.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-npcs-3": {
+            "template": "space.deep.npcs.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-npcs-4": {
+            "template": "space.deep.npcs.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-npcs-5": {
+            "template": "space.deep.npcs.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-npcs-6": {
+            "template": "space.deep.npcs.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-npcs-7": {
+            "template": "space.deep.npcs.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-npcs-8": {
+            "template": "space.deep.npcs.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-npcs-9": {
+            "template": "space.deep.npcs.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-npcs-10": {
+            "template": "space.deep.npcs.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-npcs-11": {
+            "template": "space.deep.npcs.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-npcs-12": {
+            "template": "space.deep.npcs.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-npcs-13": {
+            "template": "space.deep.npcs.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-npcs-14": {
+            "template": "space.deep.npcs.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-npcs-15": {
+            "template": "space.deep.npcs.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-npcs-16": {
+            "template": "space.deep.npcs.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-npcs-17": {
+            "template": "space.deep.npcs.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-npcs-18": {
+            "template": "space.deep.npcs.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-npcs-19": {
+            "template": "space.deep.npcs.19",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-npcs-20": {
+            "template": "space.deep.npcs.20",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-npcs-21": {
+            "template": "space.deep.npcs.21",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-npcs-22": {
+            "template": "space.deep.npcs.22",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-npcs-23": {
+            "template": "space.deep.npcs.23",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-npcs-24": {
+            "template": "space.deep.npcs.24",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-adversaries-1": {
+            "template": "space.deep.adversaries.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-adversaries-2": {
+            "template": "space.deep.adversaries.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-adversaries-3": {
+            "template": "space.deep.adversaries.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-adversaries-4": {
+            "template": "space.deep.adversaries.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-adversaries-5": {
+            "template": "space.deep.adversaries.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-adversaries-6": {
+            "template": "space.deep.adversaries.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-adversaries-7": {
+            "template": "space.deep.adversaries.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-adversaries-8": {
+            "template": "space.deep.adversaries.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-adversaries-9": {
+            "template": "space.deep.adversaries.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-adversaries-10": {
+            "template": "space.deep.adversaries.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-adversaries-11": {
+            "template": "space.deep.adversaries.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-adversaries-12": {
+            "template": "space.deep.adversaries.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-adversaries-13": {
+            "template": "space.deep.adversaries.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-adversaries-14": {
+            "template": "space.deep.adversaries.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-adversaries-15": {
+            "template": "space.deep.adversaries.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-adversaries-16": {
+            "template": "space.deep.adversaries.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-adversaries-17": {
+            "template": "space.deep.adversaries.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-adversaries-18": {
+            "template": "space.deep.adversaries.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

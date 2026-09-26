@@ -35,7 +35,7 @@ export const DeepUniverseProfileSchema = z.object({
   campaignKits: z.array(CampaignKitSchema),
   content: z.object(Object.fromEntries(deepUniverseContentKinds.map(kind => [kind, z.array(DeepUniverseContentEntrySchema)])) as Record<DeepContentKind, z.ZodArray<typeof DeepUniverseContentEntrySchema>>).strict(),
   playToday: z.object({ patternId: Id, campaignKitId: Id, visualThemeId: Id }).strict(),
-  localization: z.object({ sourceLocale: Text, supportedLocales: z.array(Text).min(1), strings: z.record(z.string(), z.record(z.string(), Text)) }).strict(),
+  localization: z.object({ sourceLocale: Text, supportedLocales: z.array(Text).min(1), fallbackLocales: z.array(Text).optional(), strings: z.record(z.string(), z.record(z.string(), Text)) }).strict(),
 }).strict();
 
 export type DeepUniverseProfile = z.infer<typeof DeepUniverseProfileSchema>;
@@ -113,7 +113,7 @@ export function assessDeepUniverse(document: AssessmentDocument): DeepUniverseAs
       if (!media.alt.trim()) add("error", "deep-universe.media", `${path}.media`, `${media.asset} requires alternative text`);
       if (!document.assets?.[media.asset]) add("error", "deep-universe.media", `${path}.media`, `Missing Pack asset ${media.asset}`);
     }
-    for (const locale of profile.localization.supportedLocales) if (!profile.localization.strings[locale]?.[entry.localeKey]?.trim()) add("error", "deep-universe.locale", `${path}.localeKey`, `Missing ${locale} string for ${entry.localeKey}`);
+    for (const locale of profile.localization.supportedLocales) if (!profile.localization.strings[locale]?.[entry.localeKey]?.trim()) { const fallback = locale !== profile.localization.sourceLocale && profile.localization.fallbackLocales?.includes(locale) && !!profile.localization.strings[profile.localization.sourceLocale]?.[entry.localeKey]?.trim(); add(fallback ? "warning" : "error", fallback ? "deep-universe.locale-fallback" : "deep-universe.locale", `${path}.localeKey`, fallback ? `${locale} uses ${profile.localization.sourceLocale} fallback for ${entry.localeKey}; translation pending` : `Missing ${locale} string for ${entry.localeKey}`); }
   }
   for (const [description, entryIds] of descriptions) if (description && entryIds.length > 1) add("warning", "deep-universe.repetition", "universe.content", `Repeated description used by ${entryIds.join(", ")}`);
 

@@ -8,7 +8,7 @@ const brand = { terminology: { world: "World", character: "Character", gameMaste
 describe("M13 choice-rich asset library", () => {
   it("offers at least three compatible choices in every Quick category", async () => {
     const assets = await loadGameAssetRegistry(resolve("game-assets/library"));
-    for (const type of quickGameAssetTypes) expect(assets.filter(asset => asset.type === type && asset.compatibility.basePackIds.includes("masterhost.space-opera")), type).toHaveLength(3);
+    for (const type of quickGameAssetTypes) expect(assets.filter(asset => asset.type === type && asset.compatibility.basePackIds.includes("masterhost.space-opera")).length, type).toBeGreaterThanOrEqual(3);
   });
 
   it("composes two structurally and visually distinct valid games", async () => {

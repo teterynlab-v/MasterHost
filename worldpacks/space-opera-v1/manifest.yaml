@@ -1,11 +1,10 @@
 id: masterhost.space-opera
 name: Space Opera
-version: 2.0.0
+version: 1.0.0
 schemaVersion: "0.1"
 defaultArtSet: standard
 entryTemplate: world.root
-description: "Three complete interstellar campaigns: rescue routes, contested
-  quarantine and a predictive gate archive."
+description: A sweeping interstellar frontier of ancient gates, contested systems, daring crews, and impossible wonders.
 publisher: MasterHost
 official: true
 contentRating: teen

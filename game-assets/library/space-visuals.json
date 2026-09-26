@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.space.visuals",
+  "version": "1.0.0",
+  "type": "visuals",
+  "name": "Civilian Sector Schematics",
+  "description": "Civilian Sector Schematics for Voidwake Archipelago, Sunforge Hegemony, Nightglass Frontier. Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.",
+  "tags": [
+    "space-opera",
+    "voidwake-archipelago",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Civilian Sector Schematics for Voidwake Archipelago, Sunforge Hegemony, Nightglass Frontier. Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.",
+    "highlights": [
+      "Civilian Sector Schematics",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.space-opera"
+    ],
+    "requiresCapabilities": [
+      "setting:space-opera"
+    ],
+    "providesCapabilities": [
+      "visuals:space-opera"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.space.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Space Opera original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.space.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 6
+  },
+  "media": [
+    {
+      "name": "space-opera/space-background.svg",
+      "path": "media/space-background.svg",
+      "role": "background",
+      "mediaType": "image/svg+xml",
+      "checksum": "8c323029cfd374bfe573bf2e55507782c2d5e06f70875bc7fbeb1d386a650e33",
+      "size": 738
+    },
+    {
+      "name": "space-opera/space-portrait.svg",
+      "path": "media/space-portrait.svg",
+      "role": "portrait",
+      "mediaType": "image/svg+xml",
+      "checksum": "6a4b915eb9f0fdab57e68d77005df0253054d6ee585386a28d469eb73d2a6eda",
+      "size": 625
+    },
+    {
+      "name": "space-opera/space-creature.svg",
+      "path": "media/space-creature.svg",
+      "role": "token",
+      "mediaType": "image/svg+xml",
+      "checksum": "97c377d6eb2cbc490ec7225b95f0dcaf36f33380aeb797bbefdd50fe822bcf8d",
+      "size": 703
+    },
+    {
+      "name": "space-opera/space-item.svg",
+      "path": "media/space-item.svg",
+      "role": "item",
+      "mediaType": "image/svg+xml",
+      "checksum": "d6195de9209ebd77def6c2bb9ca31bee7982f7b6c5c9cb996019754adc169e55",
+      "size": 638
+    },
+    {
+      "name": "space-opera/space-location.svg",
+      "path": "media/space-location.svg",
+      "role": "location",
+      "mediaType": "image/svg+xml",
+      "checksum": "9c25af19829e3b99f830290b21ee91975ae6178df6fbaf908fe646626ee50362",
+      "size": 627
+    },
+    {
+      "name": "space-opera/space-map.svg",
+      "path": "media/space-map.svg",
+      "role": "map",
+      "mediaType": "image/svg+xml",
+      "checksum": "d91da5fe6887094354438f02f9c49b92e801a7740a839d3003bfa2dd547692aa",
+      "size": 2434
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.space.visuals",
+    "version": "1.0.0",
+    "name": "Civilian Sector Schematics",
+    "description": "Civilian Sector Schematics for Voidwake Archipelago, Sunforge Hegemony, Nightglass Frontier. Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.",
+    "provides": [
+      "visuals:space-opera"
+    ],
+    "requires": [
+      "setting:space-opera"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/space-deep",
+        "value": {
+          "id": "space-deep",
+          "name": "Sector Navigation",
+          "description": "Original Space Opera navigation schematics",
+          "defaults": {
+            "background": "assets/space-opera/space-background.svg",
+            "portrait": "assets/space-opera/space-portrait.svg",
+            "token": "assets/space-opera/space-creature.svg",
+            "item": "assets/space-opera/space-item.svg",
+            "location": "assets/space-opera/space-location.svg",
+            "map": "assets/space-opera/space-map.svg"
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "space-deep"
+  }
+}

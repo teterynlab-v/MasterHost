@@ -1,0 +1,3764 @@
+{
+  "schemaVersion": "1",
+  "id": "space-opera",
+  "genres": [
+    "science-fiction",
+    "adventure",
+    "political"
+  ],
+  "tones": [
+    "wondrous",
+    "tense",
+    "heroic"
+  ],
+  "complexity": "intermediate",
+  "recommendedPlayers": {
+    "min": 2,
+    "max": 6
+  },
+  "gameLoop": [
+    {
+      "id": "exploration",
+      "label": "Navigate a hazardous route and rescue stranded crews",
+      "ruleRefs": [
+        "check:insight",
+        "action:recover"
+      ]
+    },
+    {
+      "id": "diplomacy",
+      "label": "Resolve conflicting claims with evidence or force",
+      "ruleRefs": [
+        "check:command",
+        "action:basic-attack"
+      ]
+    },
+    {
+      "id": "discovery",
+      "label": "Separate useful knowledge from a dangerous weapon",
+      "ruleRefs": [
+        "check:nerve",
+        "action:hinder"
+      ]
+    },
+    {
+      "id": "sector-change",
+      "label": "Award salvage, renown and a public consequence",
+      "ruleRefs": [
+        "action:inspire",
+        "progression:renown"
+      ]
+    }
+  ],
+  "patterns": [
+    {
+      "id": "voidwake-archipelago",
+      "name": "Voidwake Archipelago",
+      "summary": "Independent stations depend on a failing relay. Rescue stranded crews, bargain for fuel and decide who controls the only safe route.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    },
+    {
+      "id": "sunforge-hegemony",
+      "name": "Sunforge Hegemony",
+      "summary": "A quarantine exposes the price of imperial stability. Inspect sealed cargo, negotiate conflicting orders and decide whether to reveal a dangerous treaty.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    },
+    {
+      "id": "nightglass-frontier",
+      "name": "Nightglass Frontier",
+      "summary": "A dead beacon transmits tomorrow's distress call. Explore abandoned gates, question unreliable records and choose what knowledge the frontier should inherit.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    }
+  ],
+  "campaignKits": [
+    {
+      "id": "kit.voidwake-archipelago",
+      "name": "Voidwake: The Broken Relay",
+      "summary": "A three to four hour Voidwake Archipelago game: Independent stations depend on a failing relay. Rescue stranded crews, bargain for fuel and decide who controls the only safe route.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "voidwake-archipelago"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.1",
+      "sceneIds": [
+        "scenes.1",
+        "scenes.4",
+        "scenes.7",
+        "scenes.10",
+        "scenes.13",
+        "scenes.16"
+      ],
+      "npcIds": [
+        "npcs.1",
+        "npcs.4",
+        "npcs.7"
+      ],
+      "locationIds": [
+        "locations.1",
+        "locations.4",
+        "locations.7"
+      ],
+      "rewardIds": [
+        "items.1",
+        "items.4"
+      ],
+      "gmGuidance": [
+        "Start with the tug drifting toward an occupied habitat.",
+        "Offer a fuel bargain whose cost is ownership, not simply money.",
+        "Let civilians propose alternatives to armed rescue.",
+        "Record who controls the repaired route and who pays its debts."
+      ],
+      "readyCharacterIds": [
+        "archetypes.1",
+        "archetypes.4"
+      ]
+    },
+    {
+      "id": "kit.sunforge-hegemony",
+      "name": "Sunforge: The Sealed Treaty",
+      "summary": "A three to four hour Sunforge Hegemony game: A quarantine exposes the price of imperial stability. Inspect sealed cargo, negotiate conflicting orders and decide whether to reveal a dangerous treaty.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "sunforge-hegemony"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.2",
+      "sceneIds": [
+        "scenes.2",
+        "scenes.5",
+        "scenes.8",
+        "scenes.11",
+        "scenes.14",
+        "scenes.17"
+      ],
+      "npcIds": [
+        "npcs.2",
+        "npcs.5",
+        "npcs.8"
+      ],
+      "locationIds": [
+        "locations.2",
+        "locations.5",
+        "locations.8"
+      ],
+      "rewardIds": [
+        "items.2",
+        "items.5"
+      ],
+      "gmGuidance": [
+        "Start with medicine sealed under contradictory orders.",
+        "Let the inspector be credible without making the military innocent.",
+        "Keep testimony, treatment and treaty access as separate objectives.",
+        "Record the agreement, reparations and anyone denied amnesty."
+      ],
+      "readyCharacterIds": [
+        "archetypes.2",
+        "archetypes.5"
+      ]
+    },
+    {
+      "id": "kit.nightglass-frontier",
+      "name": "Nightglass: Tomorrow Changed",
+      "summary": "A three to four hour Nightglass Frontier game: A dead beacon transmits tomorrow's distress call. Explore abandoned gates, question unreliable records and choose what knowledge the frontier should inherit.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "nightglass-frontier"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.3",
+      "sceneIds": [
+        "scenes.3",
+        "scenes.6",
+        "scenes.9",
+        "scenes.12",
+        "scenes.15",
+        "scenes.18"
+      ],
+      "npcIds": [
+        "npcs.3",
+        "npcs.6",
+        "npcs.9"
+      ],
+      "locationIds": [
+        "locations.3",
+        "locations.6",
+        "locations.9"
+      ],
+      "rewardIds": [
+        "items.3",
+        "items.6"
+      ],
+      "gmGuidance": [
+        "Play the future distress message before describing the empty beacon.",
+        "Distinguish rescued personal records from weapon targeting data.",
+        "Keep a stable return route available at a visible price.",
+        "Record which memories survive and who may access the archive."
+      ],
+      "readyCharacterIds": [
+        "archetypes.3",
+        "archetypes.6"
+      ]
+    }
+  ],
+  "content": {
+    "factions": [
+      {
+        "id": "factions.1",
+        "name": "Relay Cooperative",
+        "description": "Relay Cooperative: keeps rescue lanes open but needs an independent witness to expose diverted fuel.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "space.factions.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Relay Cooperative: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.2",
+        "name": "Solar Directorate",
+        "description": "Solar Directorate: offers quarantine clearance in exchange for surrendering the encrypted treaty.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "space.factions.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Solar Directorate: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.3",
+        "name": "Nightglass Survey",
+        "description": "Nightglass Survey: wants the beacon repaired before its forecasting experiment becomes public.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "space.factions.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Nightglass Survey: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.4",
+        "name": "Drift Salvagers",
+        "description": "Drift Salvagers: owns the stranded tug and demands payment before releasing its distress recording.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "space.factions.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Drift Salvagers: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.5",
+        "name": "Helios Assembly",
+        "description": "Helios Assembly: can overrule military orders if the crew produces unaltered cargo manifests.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "space.factions.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Helios Assembly: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.6",
+        "name": "Quiet Archive",
+        "description": "Quiet Archive: preserves the names erased from the beacon and refuses to destroy its memory.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "space.factions.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Quiet Archive: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.7",
+        "name": "Freewake Couriers",
+        "description": "Freewake Couriers: will carry relief supplies through the blockade if given a route nobody owns.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.7"
+          }
+        ],
+        "localeKey": "space.factions.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Freewake Couriers: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.8",
+        "name": "Cinder Labor Union",
+        "description": "Cinder Labor Union: threatens to stop the docks unless contaminated workers receive treatment.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.11"
+          }
+        ],
+        "localeKey": "space.factions.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Cinder Labor Union: map schematic"
+          }
+        ]
+      }
+    ],
+    "locations": [
+      {
+        "id": "locations.1",
+        "name": "Lantern Relay",
+        "description": "Lantern Relay: its docking clamps hold a powerless rescue tug while the reactor loses coolant.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "space.locations.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Lantern Relay: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.2",
+        "name": "Sunforge Customs Ring",
+        "description": "Sunforge Customs Ring: two inspection teams enforce contradictory seals on the same medical cargo.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "space.locations.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Sunforge Customs Ring: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.3",
+        "name": "Unlit Beacon",
+        "description": "Unlit Beacon: a silent control room plays a distress call dated one day ahead.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "space.locations.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Unlit Beacon: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.4",
+        "name": "Tidebreak Habitat",
+        "description": "Tidebreak Habitat: families ration air while a fuel broker auctions their evacuation slots.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "space.locations.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Tidebreak Habitat: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.5",
+        "name": "Helios Tribunal",
+        "description": "Helios Tribunal: delegates hear evidence through a firewall controlled by the accused directorate.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "space.locations.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Helios Tribunal: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.6",
+        "name": "Mirror Gate",
+        "description": "Mirror Gate: its return corridor records a second arrival that nobody remembers.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "space.locations.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Mirror Gate: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.7",
+        "name": "Cable Graveyard",
+        "description": "Cable Graveyard: a broken courier line hides caches marked with living crew names.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "space.locations.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Cable Graveyard: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.8",
+        "name": "Cinder Foundry",
+        "description": "Cinder Foundry: workers salvage contaminated shielding while supervisors deny a leak.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "space.locations.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Cinder Foundry: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.9",
+        "name": "Quiet Observatory",
+        "description": "Quiet Observatory: a lens resolves cities abandoned before their foundations were built.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.3"
+          }
+        ],
+        "localeKey": "space.locations.9",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Quiet Observatory: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.10",
+        "name": "Ferry Nine",
+        "description": "Ferry Nine: a civilian ship can tow the relay if its passengers accept the delay.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.4"
+          }
+        ],
+        "localeKey": "space.locations.10",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Ferry Nine: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.11",
+        "name": "Embassy of Ash",
+        "description": "Embassy of Ash: an envoy shelters defectors but refuses protection from armed patrols.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.8"
+          }
+        ],
+        "localeKey": "space.locations.11",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Embassy of Ash: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.12",
+        "name": "Echo Anchorage",
+        "description": "Echo Anchorage: ships hear their own final logs before releasing their moorings.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.12"
+          }
+        ],
+        "localeKey": "space.locations.12",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Echo Anchorage: location schematic"
+          }
+        ]
+      }
+    ],
+    "npcs": [
+      {
+        "id": "npcs.1",
+        "name": "Captain Nyra Vale",
+        "description": "Captain Nyra Vale: will risk her tug to evacuate families if the crew returns her impounded route chart.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "space.npcs.1",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Captain Nyra Vale: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.2",
+        "name": "Inspector Sera Kest",
+        "description": "Inspector Sera Kest: can clear the medicine but must explain an unsigned military order.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "space.npcs.2",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Inspector Sera Kest: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.3",
+        "name": "Surveyor Iven Orr",
+        "description": "Surveyor Iven Orr: recorded the future distress call and suspects his missing partner sent it.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "space.npcs.3",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Surveyor Iven Orr: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.4",
+        "name": "Broker Pell Varo",
+        "description": "Broker Pell Varo: knows where fuel was diverted and asks immunity for his courier network.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "space.npcs.4",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Broker Pell Varo: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.5",
+        "name": "Envoy Mara Sol",
+        "description": "Envoy Mara Sol: offers treaty access if the crew protects a witness from both delegations.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "space.npcs.5",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Envoy Mara Sol: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.6",
+        "name": "Archivist Ren Koi",
+        "description": "Archivist Ren Koi: recognizes erased voices and insists every rescued memory retain its name.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "space.npcs.6",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Archivist Ren Koi: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.7",
+        "name": "Engineer Tavi Sen",
+        "description": "Engineer Tavi Sen: can stabilize the relay by sacrificing her home habitat's reserve cells.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "space.npcs.7",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Engineer Tavi Sen: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.8",
+        "name": "Union Speaker Daro Ves",
+        "description": "Union Speaker Daro Ves: will reopen the docks after an independent radiation reading.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "space.npcs.8",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Union Speaker Daro Ves: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.9",
+        "name": "Navigator Aya Noll",
+        "description": "Navigator Aya Noll: can enter the mirror gate but refuses to repeat a route her log marks fatal.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "space.npcs.9",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Navigator Aya Noll: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.10",
+        "name": "Medic Oren Taal",
+        "description": "Medic Oren Taal: has treatment for decompression victims but only enough for one docking bay.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "space.npcs.10",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Medic Oren Taal: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.11",
+        "name": "Admiral Kiva Rell",
+        "description": "Admiral Kiva Rell: will withdraw patrols if civilian inspection exposes the forged quarantine.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "space.npcs.11",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Admiral Kiva Rell: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.12",
+        "name": "Drifter Ena Vos",
+        "description": "Drifter Ena Vos: found a living garden on a dead station and wants its coordinates kept secret.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "space.npcs.12",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Drifter Ena Vos: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.13",
+        "name": "Courier Bex Orin",
+        "description": "Courier Bex Orin: offers a fast crossing after the crew promises not to sell the route.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "space.npcs.13",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Courier Bex Orin: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.14",
+        "name": "Clerk Nima Sar",
+        "description": "Clerk Nima Sar: preserved an original manifest after every public copy was replaced.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "space.npcs.14",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Clerk Nima Sar: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.15",
+        "name": "Researcher Cira Wen",
+        "description": "Researcher Cira Wen: believes the beacon is a rescue system rather than a weapon.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "space.npcs.15",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Researcher Cira Wen: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.16",
+        "name": "Pilot Hal Venn",
+        "description": "Pilot Hal Venn: demands salvage shares yet secretly transports unpaid evacuees.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "space.npcs.16",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Pilot Hal Venn: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.17",
+        "name": "Diplomat Theo Aster",
+        "description": "Diplomat Theo Aster: will mediate the dispute if both sides publicly admit their missing prisoners.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "space.npcs.17",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Diplomat Theo Aster: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.18",
+        "name": "Listener Yu Senn",
+        "description": "Listener Yu Senn: hears a second voice underneath the distress transmission.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "space.npcs.18",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Listener Yu Senn: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.19",
+        "name": "Dockmaster Jori Pell",
+        "description": "Dockmaster Jori Pell: knows which berth can isolate the leaking tug without abandoning its crew.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "space.npcs.19",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Dockmaster Jori Pell: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.20",
+        "name": "Commander Vela Iri",
+        "description": "Commander Vela Iri: received a genuine order to enforce a quarantine based on false evidence.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "space.npcs.20",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Commander Vela Iri: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.21",
+        "name": "Scavenger Rune Aki",
+        "description": "Scavenger Rune Aki: will trade a gate key for the recovered name of their lost sibling.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "space.npcs.21",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Scavenger Rune Aki: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.22",
+        "name": "Teacher Luma Rei",
+        "description": "Teacher Luma Rei: organizes evacuation lists and refuses to rank families by wealth.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "space.npcs.22",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Teacher Luma Rei: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.23",
+        "name": "Defector Cael Noor",
+        "description": "Defector Cael Noor: has treaty evidence but fears prosecution for the seizure they witnessed.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "space.npcs.23",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Defector Cael Noor: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.24",
+        "name": "Caretaker Oshi Tan",
+        "description": "Caretaker Oshi Tan: will open the archive only after the crew disconnects its predictive weapon link.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "space.npcs.24",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Caretaker Oshi Tan: portrait schematic"
+          }
+        ]
+      }
+    ],
+    "adversaries": [
+      {
+        "id": "adversaries.1",
+        "name": "Dock Breacher",
+        "description": "Dock Breacher: cuts docking clamps to claim the tug; negotiation requires a public salvage receipt.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "space.adversaries.1",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Dock Breacher: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.2",
+        "name": "Quarantine Patrol",
+        "description": "Quarantine Patrol: blocks the medical convoy with legal orders that can be challenged at the tribunal.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "space.adversaries.2",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Quarantine Patrol: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.3",
+        "name": "Echo Stalker",
+        "description": "Echo Stalker: follows recorded movement; a deliberately altered route breaks its pursuit.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "space.adversaries.3",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Echo Stalker: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.4",
+        "name": "Fuel Leech Drone",
+        "description": "Fuel Leech Drone: drains rescue cells and can be lured into an isolated maintenance socket.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "space.adversaries.4",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Fuel Leech Drone: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.5",
+        "name": "Seal Enforcer",
+        "description": "Seal Enforcer: confiscates unsigned cargo; witnessed authorization disables its warrant.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "space.adversaries.5",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Seal Enforcer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.6",
+        "name": "Mirror Doppel",
+        "description": "Mirror Doppel: copies the last shouted command; silence prevents it coordinating an ambush.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "space.adversaries.6",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Mirror Doppel: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.7",
+        "name": "Salvage Corsair",
+        "description": "Salvage Corsair: boards isolated ferries but retreats when rescue craft arrive together.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.7"
+          }
+        ],
+        "localeKey": "space.adversaries.7",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Salvage Corsair: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.8",
+        "name": "Cinder Security Unit",
+        "description": "Cinder Security Unit: protects the leaking reactor and mistakes treatment equipment for sabotage.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.11"
+          }
+        ],
+        "localeKey": "space.adversaries.8",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Cinder Security Unit: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.9",
+        "name": "Archive Sentinel",
+        "description": "Archive Sentinel: attacks erased identities; restored name records change its threat list.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.3"
+          }
+        ],
+        "localeKey": "space.adversaries.9",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Archive Sentinel: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.10",
+        "name": "Void Manta",
+        "description": "Void Manta: nests around the relay heat plume; cooling one panel opens a safe approach.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.4"
+          }
+        ],
+        "localeKey": "space.adversaries.10",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Void Manta: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.11",
+        "name": "Solar Lance Cruiser",
+        "description": "Solar Lance Cruiser: threatens the union docks yet cannot fire while neutral observers are aboard.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.8"
+          }
+        ],
+        "localeKey": "space.adversaries.11",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Solar Lance Cruiser: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.12",
+        "name": "Timefracture Swarm",
+        "description": "Timefracture Swarm: repeats its first attack vector; forcing it through the gate seals the loop.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.12"
+          }
+        ],
+        "localeKey": "space.adversaries.12",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Timefracture Swarm: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.13",
+        "name": "Ration Mutineer",
+        "description": "Ration Mutineer: holds the air depot but will release it after a fair evacuation roster.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "space.adversaries.13",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Ration Mutineer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.14",
+        "name": "Treaty Assassin",
+        "description": "Treaty Assassin: targets the defecting clerk and leaves false evidence implicating the envoy.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "space.adversaries.14",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Treaty Assassin: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.15",
+        "name": "Unmoored Probe",
+        "description": "Unmoored Probe: harvests memory signals; a false distress broadcast redirects it.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "space.adversaries.15",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Unmoored Probe: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.16",
+        "name": "Cable Marauder",
+        "description": "Cable Marauder: snaps rescue tethers to collect drifting cargo; spare tow lines deny the trap.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "space.adversaries.16",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Cable Marauder: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.17",
+        "name": "Ash Inquisitor",
+        "description": "Ash Inquisitor: questions witnesses separately to hide contradictions in the quarantine story.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "space.adversaries.17",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Ash Inquisitor: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.18",
+        "name": "Beacon Warden",
+        "description": "Beacon Warden: protects the experiment; separating rescue records from targeting data permits a truce.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "space.adversaries.18",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Beacon Warden: creature schematic"
+          }
+        ]
+      }
+    ],
+    "items": [
+      {
+        "id": "items.1",
+        "name": "Rescue Tow Key",
+        "description": "Rescue Tow Key: unlocks the civilian ferry's clamps; its serial links the fuel seizure to a broker.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "space.items.1",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Rescue Tow Key: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.2",
+        "name": "Original Cargo Seal",
+        "description": "Original Cargo Seal: proves medicine left the foundry uncontaminated before military storage.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "space.items.2",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Original Cargo Seal: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.3",
+        "name": "Tomorrow's Log",
+        "description": "Tomorrow's Log: contains a future distress call that changes when a crew member chooses differently.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "space.items.3",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Tomorrow's Log: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.4",
+        "name": "Spare Air Cartridge",
+        "description": "Spare Air Cartridge: keeps one rescue team working while evacuees cross the damaged cable.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "space.items.4",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Spare Air Cartridge: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.5",
+        "name": "Treaty Cipher",
+        "description": "Treaty Cipher: opens the envoy's testimony but records the identity of every reader.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "space.items.5",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Treaty Cipher: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.6",
+        "name": "Mirror Compass",
+        "description": "Mirror Compass: points toward the gate's return path only while nobody speaks.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "space.items.6",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Mirror Compass: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.7",
+        "name": "Towline Spool",
+        "description": "Towline Spool: creates a second evacuation route if attached outside the tug's unstable heat plume.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "space.items.7",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Towline Spool: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.8",
+        "name": "Radiation Badge",
+        "description": "Radiation Badge: retains the first exposure reading even after a supervisor resets the display.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "space.items.8",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Radiation Badge: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.9",
+        "name": "Memory Lantern",
+        "description": "Memory Lantern: plays a rescued name and reveals the archive door associated with it.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.3"
+          }
+        ],
+        "localeKey": "space.items.9",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Memory Lantern: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.10",
+        "name": "Relay Fuel Cell",
+        "description": "Relay Fuel Cell: powers rescue lights or one emergency jump but cannot do both.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.4"
+          }
+        ],
+        "localeKey": "space.items.10",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Relay Fuel Cell: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.11",
+        "name": "Neutral Observer Tabard",
+        "description": "Neutral Observer Tabard: allows a civilian aboard the cruiser without accepting its allegiance.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.8"
+          }
+        ],
+        "localeKey": "space.items.11",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Neutral Observer Tabard: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.12",
+        "name": "Gate Glass Shard",
+        "description": "Gate Glass Shard: reflects an erased corridor and cuts anyone who follows the false reflection.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.12"
+          }
+        ],
+        "localeKey": "space.items.12",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Gate Glass Shard: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.13",
+        "name": "Courier Route Chart",
+        "description": "Courier Route Chart: shows a crossing outside the fuel monopoly and includes refugees' hiding places.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.13"
+          }
+        ],
+        "localeKey": "space.items.13",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Courier Route Chart: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.14",
+        "name": "Witness Recorder",
+        "description": "Witness Recorder: signs testimony with a hardware timestamp the tribunal cannot silently edit.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.17"
+          }
+        ],
+        "localeKey": "space.items.14",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Witness Recorder: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.15",
+        "name": "Blank Name Plate",
+        "description": "Blank Name Plate: lets an archive sentinel recognize a lost person after their name is restored.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.21"
+          }
+        ],
+        "localeKey": "space.items.15",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Blank Name Plate: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.16",
+        "name": "Thermal Patch Kit",
+        "description": "Thermal Patch Kit: seals the tug reactor long enough for a difficult civilian tow.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.22"
+          }
+        ],
+        "localeKey": "space.items.16",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Thermal Patch Kit: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.17",
+        "name": "Embassy Safeconduct",
+        "description": "Embassy Safeconduct: protects the witness until the next hearing and expires if used for smuggling.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.2"
+          }
+        ],
+        "localeKey": "space.items.17",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Embassy Safeconduct: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.18",
+        "name": "Survey Return Beacon",
+        "description": "Survey Return Beacon: marks a stable landing spot but broadcasts the expedition's coordinates.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.6"
+          }
+        ],
+        "localeKey": "space.items.18",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Survey Return Beacon: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.19",
+        "name": "Relief Voucher",
+        "description": "Relief Voucher: pays the broker's tow fee if the crew gives up its salvage claim.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.7"
+          }
+        ],
+        "localeKey": "space.items.19",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Relief Voucher: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.20",
+        "name": "Broken Directive",
+        "description": "Broken Directive: contains two valid signatures approving incompatible quarantine policies.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.11"
+          }
+        ],
+        "localeKey": "space.items.20",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Broken Directive: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.21",
+        "name": "Quiet Lens",
+        "description": "Quiet Lens: reveals memory echoes while blocking the weapon telemetry hidden beneath them.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.15"
+          }
+        ],
+        "localeKey": "space.items.21",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Quiet Lens: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.22",
+        "name": "Habitat Deed",
+        "description": "Habitat Deed: transfers ownership of the repaired relay to its residents rather than its creditors.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.16"
+          }
+        ],
+        "localeKey": "space.items.22",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Habitat Deed: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.23",
+        "name": "Medical Shipment Ledger",
+        "description": "Medical Shipment Ledger: lists patients the directorate excluded from the official casualty count.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.20"
+          }
+        ],
+        "localeKey": "space.items.23",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Medical Shipment Ledger: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.24",
+        "name": "Archive Charter",
+        "description": "Archive Charter: permits future expeditions only if their discoveries remain publicly accessible.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.24"
+          }
+        ],
+        "localeKey": "space.items.24",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Archive Charter: item schematic"
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "id": "events.1",
+        "name": "Relief Signal",
+        "description": "Relief Signal: the tug broadcasts for help as its captain refuses to abandon passengers.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "space.events.1",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Relief Signal: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.2",
+        "name": "Sealed Shipment",
+        "description": "Sealed Shipment: the inspector holds medicine while an envoy offers a private waiver.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "space.events.2",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Sealed Shipment: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.3",
+        "name": "Future Distress",
+        "description": "Future Distress: a beacon broadcasts a casualty list containing one crew member.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "space.events.3",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Future Distress: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.4",
+        "name": "Fuel Auction",
+        "description": "Fuel Auction: the broker opens bidding for cells already promised to rescue volunteers.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "space.events.4",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Fuel Auction: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.5",
+        "name": "Order Collision",
+        "description": "Order Collision: two patrols arrive with opposing instructions and demand the crew choose.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "space.events.5",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Order Collision: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.6",
+        "name": "Missing Arrival",
+        "description": "Missing Arrival: a gate sensor records a ship that nobody can see.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "space.events.6",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Missing Arrival: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.7",
+        "name": "Air Ration",
+        "description": "Air Ration: families ask the crew to witness an evacuation lottery.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "space.events.7",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Air Ration: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.8",
+        "name": "Worker Collapse",
+        "description": "Worker Collapse: a foundry medic exposes contamination before security seals the ward.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "space.events.8",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Worker Collapse: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.9",
+        "name": "Names Return",
+        "description": "Names Return: the archive announces people erased from every station register.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "space.events.9",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Names Return: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.10",
+        "name": "Cable Rupture",
+        "description": "Cable Rupture: a rescue route breaks while the ferry crew debates turning back.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "space.events.10",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Cable Rupture: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.11",
+        "name": "Public Hearing",
+        "description": "Public Hearing: the clerk requests a neutral witness before reading the original manifest.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "space.events.11",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Public Hearing: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.12",
+        "name": "Silent Pursuit",
+        "description": "Silent Pursuit: an echo stalker repeats the expedition's last movement.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "space.events.12",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Silent Pursuit: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.13",
+        "name": "Courier Offer",
+        "description": "Courier Offer: a messenger proposes a safe route in exchange for permanent public access.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "space.events.13",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Courier Offer: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.14",
+        "name": "Embassy Siege",
+        "description": "Embassy Siege: the defector seeks shelter as patrols surround the embassy.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "space.events.14",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Embassy Siege: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.15",
+        "name": "Lens Alignment",
+        "description": "Lens Alignment: an observation window reveals the beacon weapon link.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "space.events.15",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Lens Alignment: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.16",
+        "name": "Tug Drift",
+        "description": "Tug Drift: the powerless vessel moves toward a crowded habitat.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "space.events.16",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Tug Drift: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.17",
+        "name": "Treatment Deadline",
+        "description": "Treatment Deadline: the medicine loses potency before the tribunal resumes.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "space.events.17",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Treatment Deadline: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.18",
+        "name": "Second Voice",
+        "description": "Second Voice: a hidden signal asks the crew to rescue a memory rather than a body.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "space.events.18",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Second Voice: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.19",
+        "name": "Salvage Claim",
+        "description": "Salvage Claim: corsairs offer assistance if every rescued ship becomes their property.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "space.events.19",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Salvage Claim: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.20",
+        "name": "Union Vote",
+        "description": "Union Vote: dock workers vote to reopen if their exposure readings enter the public record.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "space.events.20",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Union Vote: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.21",
+        "name": "Gate Warning",
+        "description": "Gate Warning: a probe sends a map of a return corridor that has not yet formed.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "space.events.21",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Gate Warning: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.22",
+        "name": "Reserve Choice",
+        "description": "Reserve Choice: the engineer can save the relay by exhausting a small habitat's cells.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "space.events.22",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Reserve Choice: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.23",
+        "name": "Cruiser Arrival",
+        "description": "Cruiser Arrival: the admiral suspends negotiations until neutral observers inspect the hold.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "space.events.23",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Cruiser Arrival: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.24",
+        "name": "Archive Leak",
+        "description": "Archive Leak: a targeting faction offers to purchase the recovered rescue data.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "space.events.24",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Archive Leak: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.25",
+        "name": "Towline Stand",
+        "description": "Towline Stand: volunteers cross under attack while the captain asks who should go last.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "space.events.25",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Towline Stand: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.26",
+        "name": "Treaty Broadcast",
+        "description": "Treaty Broadcast: the envoy gives the crew a one-use channel to every member world.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "space.events.26",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Treaty Broadcast: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.27",
+        "name": "Memory Bargain",
+        "description": "Memory Bargain: the warden asks one traveler to surrender a personal memory.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "space.events.27",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Memory Bargain: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.28",
+        "name": "New Route",
+        "description": "New Route: survivors propose community ownership of the rescue corridor.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "space.events.28",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "New Route: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.29",
+        "name": "Open Docks",
+        "description": "Open Docks: the assembly demands compensation for everyone denied treatment.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "space.events.29",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Open Docks: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.30",
+        "name": "Beacon Rewritten",
+        "description": "Beacon Rewritten: a final transmission reflects the crew's decision about the experiment.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "space.events.30",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Beacon Rewritten: background schematic"
+          }
+        ]
+      }
+    ],
+    "scenes": [
+      {
+        "id": "scenes.1",
+        "name": "Signal in the Wreckage",
+        "description": "Signal in the Wreckage: Objective: board the powerless tug. Tow it or seal its reactor; delay costs the safe docking window.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.4"
+          }
+        ],
+        "localeKey": "space.scenes.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Signal in the Wreckage: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.2",
+        "name": "Quarantine at Sunforge",
+        "description": "Quarantine at Sunforge: Objective: obtain medicine clearance. Inspect the hold or call a civilian hearing; delay worsens the workers' exposure.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "space.scenes.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Quarantine at Sunforge: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.3",
+        "name": "The Unlit Beacon",
+        "description": "The Unlit Beacon: Objective: find the caller. Trace the signal or recover erased logs; delay activates the prediction loop.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.6"
+          }
+        ],
+        "localeKey": "space.scenes.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Unlit Beacon: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.4",
+        "name": "The Fuel Bargain",
+        "description": "The Fuel Bargain: Objective: secure rescue cells. Trade salvage rights or expose the diversion; delay triggers the auction.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.7"
+          }
+        ],
+        "localeKey": "space.scenes.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Fuel Bargain: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.5",
+        "name": "Contradictory Orders",
+        "description": "Contradictory Orders: Objective: stop the blockade escalating. Compare signed directives or protect the neutral clerk; delay brings the cruiser.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.8"
+          }
+        ],
+        "localeKey": "space.scenes.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Contradictory Orders: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.6",
+        "name": "Mirror Crossing",
+        "description": "Mirror Crossing: Objective: find the return corridor. Use silence or anchor a beacon; delay releases an echo stalker.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "space.scenes.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Mirror Crossing: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.7",
+        "name": "A Cable Under Fire",
+        "description": "A Cable Under Fire: Objective: evacuate families. Hold off corsairs or rig a second towline; delay separates the rescue convoy.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "space.scenes.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Cable Under Fire: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.8",
+        "name": "Witness at the Ring",
+        "description": "Witness at the Ring: Objective: preserve testimony. Escort the clerk or broadcast the original seal; delay allows its seizure.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.11"
+          }
+        ],
+        "localeKey": "space.scenes.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Witness at the Ring: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.9",
+        "name": "The Names Beneath",
+        "description": "The Names Beneath: Objective: recover missing people. Restore name plates or negotiate with the sentinel; delay erases another record.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.12"
+          }
+        ],
+        "localeKey": "space.scenes.9",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Names Beneath: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.10",
+        "name": "The Civilian Tow",
+        "description": "The Civilian Tow: Objective: save the relay. Share reserve power or persuade Ferry Nine to assist; delay destroys docking clamps.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.13"
+          }
+        ],
+        "localeKey": "space.scenes.10",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Civilian Tow: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.11",
+        "name": "The Reactor Ward",
+        "description": "The Reactor Ward: Objective: deliver treatment. Bargain with security or enter the maintenance shaft; delay quarantines the medical team.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "space.scenes.11",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Reactor Ward: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.12",
+        "name": "A Weapon in the Lens",
+        "description": "A Weapon in the Lens: Objective: separate rescue knowledge from targeting data. Isolate the link or confront its researcher; delay publishes the coordinates.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.15"
+          }
+        ],
+        "localeKey": "space.scenes.12",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Weapon in the Lens: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.13",
+        "name": "The Last Passenger",
+        "description": "The Last Passenger: Objective: protect the last evacuation. Board the captain's tug or reroute the corsairs; delay sacrifices the chart.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.16"
+          }
+        ],
+        "localeKey": "space.scenes.13",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Last Passenger: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.14",
+        "name": "The Open Tribunal",
+        "description": "The Open Tribunal: Objective: decide the treaty's fate. Present evidence or negotiate amnesty; delay lets the admiral close proceedings.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.17"
+          }
+        ],
+        "localeKey": "space.scenes.14",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Open Tribunal: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.15",
+        "name": "The Caretaker's Price",
+        "description": "The Caretaker's Price: Objective: secure a safe return. Trade a memory or rewrite the beacon contract; delay traps the expedition.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "space.scenes.15",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Caretaker's Price: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.16",
+        "name": "A Route for Everyone",
+        "description": "A Route for Everyone: Objective: settle ownership. Sign a habitat deed or create a courier cooperative; record who pays for repairs.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "space.scenes.16",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Route for Everyone: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.17",
+        "name": "A Quarantine Lifted",
+        "description": "A Quarantine Lifted: Objective: settle responsibility. Demand reparations or accept a protected confession; record who can enter the docks.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.2"
+          }
+        ],
+        "localeKey": "space.scenes.17",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Quarantine Lifted: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.18",
+        "name": "Tomorrow Changed",
+        "description": "Tomorrow Changed: Objective: choose the experiment's future. Preserve an open archive or dismantle prediction; record who keeps the recovered names.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.3"
+          }
+        ],
+        "localeKey": "space.scenes.18",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Tomorrow Changed: map schematic"
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "archetypes.1",
+        "name": "Rescue Pilot",
+        "description": "Rescue Pilot: flies a damaged civilian tug and owes its crew a safe return.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "space.archetypes.1",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Rescue Pilot: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.2",
+        "name": "Neutral Inspector",
+        "description": "Neutral Inspector: can read contradictory legal seals and has a relative in the sealed ward.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "space.archetypes.2",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Neutral Inspector: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.3",
+        "name": "Gate Surveyor",
+        "description": "Gate Surveyor: maps unstable corridors and recognizes their partner's voice in the signal.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "space.archetypes.3",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Gate Surveyor: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.4",
+        "name": "Habitat Engineer",
+        "description": "Habitat Engineer: repairs docking systems and protects a community's dwindling reserves.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "space.archetypes.4",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Habitat Engineer: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.5",
+        "name": "Union Medic",
+        "description": "Union Medic: treats radiation exposure and needs the original shipment released.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "space.archetypes.5",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Union Medic: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.6",
+        "name": "Memory Archivist",
+        "description": "Memory Archivist: restores lost identities and refuses to turn personal records into weapons.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "space.archetypes.6",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Memory Archivist: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.7",
+        "name": "Freewake Courier",
+        "description": "Freewake Courier: knows blockade routes and wants them shared instead of auctioned.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "space.archetypes.7",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Freewake Courier: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.8",
+        "name": "Embassy Witness",
+        "description": "Embassy Witness: preserves signed testimony and risks prosecution for an earlier seizure.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "space.archetypes.8",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Embassy Witness: portrait schematic"
+          }
+        ]
+      }
+    ],
+    "progressionPaths": [
+      {
+        "id": "progressionPaths.1",
+        "name": "Route Steward",
+        "description": "Route Steward: earns renown by keeping an evacuation route open; gain a courier contact and responsibility for repairs.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.1"
+          }
+        ],
+        "localeKey": "space.progressionPaths.1",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Route Steward: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.2",
+        "name": "Treaty Mediator",
+        "description": "Treaty Mediator: earns renown by securing treatment without suppressing evidence; gain hearing access and a public obligation.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.5"
+          }
+        ],
+        "localeKey": "space.progressionPaths.2",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Treaty Mediator: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.3",
+        "name": "Gate Custodian",
+        "description": "Gate Custodian: earns renown by recovering identities without leaking targeting data; gain archive access and consent duties.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.3"
+          }
+        ],
+        "localeKey": "space.progressionPaths.3",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Gate Custodian: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.4",
+        "name": "Cooperative Captain",
+        "description": "Cooperative Captain: earns renown by surrendering a profitable salvage claim; gain a civilian crew and their maintenance costs.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.1"
+          }
+        ],
+        "localeKey": "space.progressionPaths.4",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Cooperative Captain: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.5",
+        "name": "Independent Auditor",
+        "description": "Independent Auditor: earns renown by preserving disputed testimony; gain neutral inspection authority and political scrutiny.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.5"
+          }
+        ],
+        "localeKey": "space.progressionPaths.5",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Independent Auditor: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.6",
+        "name": "Frontier Cartographer",
+        "description": "Frontier Cartographer: earns renown by marking a safe return; gain survey support while publishing hazards honestly.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.6"
+          }
+        ],
+        "localeKey": "space.progressionPaths.6",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Frontier Cartographer: item schematic"
+          }
+        ]
+      }
+    ],
+    "visualThemes": [
+      {
+        "id": "visualThemes.1",
+        "name": "Rescue Navigation",
+        "description": "Rescue Navigation: amber civilian beacons, cyan tow lanes and dark blue habitat schematics distinguish shelter from hazards.",
+        "patternIds": [
+          "voidwake-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "space.visualThemes.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Rescue Navigation: map schematic"
+          },
+          {
+            "role": "ui",
+            "asset": "ui/background.svg",
+            "alt": "Sector navigation interface"
+          }
+        ]
+      },
+      {
+        "id": "visualThemes.2",
+        "name": "Solar Protocol",
+        "description": "Solar Protocol: white inspection grids and vermilion quarantine bands separate permitted routes from military boundaries.",
+        "patternIds": [
+          "sunforge-hegemony"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "space.visualThemes.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Solar Protocol: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "visualThemes.3",
+        "name": "Quiet Star Chart",
+        "description": "Quiet Star Chart: violet memory traces and pale gate rings distinguish recovered locations from unstable predictions.",
+        "patternIds": [
+          "nightglass-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "space.visualThemes.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Quiet Star Chart: map schematic"
+          }
+        ]
+      }
+    ]
+  },
+  "playToday": {
+    "patternId": "voidwake-archipelago",
+    "campaignKitId": "kit.voidwake-archipelago",
+    "visualThemeId": "visualThemes.1"
+  },
+  "localization": {
+    "sourceLocale": "en",
+    "supportedLocales": [
+      "en",
+      "ru",
+      "es",
+      "ja",
+      "zh-CN",
+      "ko"
+    ],
+    "strings": {
+      "en": {
+        "space.factions.1": "Relay Cooperative",
+        "space.factions.2": "Solar Directorate",
+        "space.factions.3": "Nightglass Survey",
+        "space.factions.4": "Drift Salvagers",
+        "space.factions.5": "Helios Assembly",
+        "space.factions.6": "Quiet Archive",
+        "space.factions.7": "Freewake Couriers",
+        "space.factions.8": "Cinder Labor Union",
+        "space.locations.1": "Lantern Relay",
+        "space.locations.2": "Sunforge Customs Ring",
+        "space.locations.3": "Unlit Beacon",
+        "space.locations.4": "Tidebreak Habitat",
+        "space.locations.5": "Helios Tribunal",
+        "space.locations.6": "Mirror Gate",
+        "space.locations.7": "Cable Graveyard",
+        "space.locations.8": "Cinder Foundry",
+        "space.locations.9": "Quiet Observatory",
+        "space.locations.10": "Ferry Nine",
+        "space.locations.11": "Embassy of Ash",
+        "space.locations.12": "Echo Anchorage",
+        "space.npcs.1": "Captain Nyra Vale",
+        "space.npcs.2": "Inspector Sera Kest",
+        "space.npcs.3": "Surveyor Iven Orr",
+        "space.npcs.4": "Broker Pell Varo",
+        "space.npcs.5": "Envoy Mara Sol",
+        "space.npcs.6": "Archivist Ren Koi",
+        "space.npcs.7": "Engineer Tavi Sen",
+        "space.npcs.8": "Union Speaker Daro Ves",
+        "space.npcs.9": "Navigator Aya Noll",
+        "space.npcs.10": "Medic Oren Taal",
+        "space.npcs.11": "Admiral Kiva Rell",
+        "space.npcs.12": "Drifter Ena Vos",
+        "space.npcs.13": "Courier Bex Orin",
+        "space.npcs.14": "Clerk Nima Sar",
+        "space.npcs.15": "Researcher Cira Wen",
+        "space.npcs.16": "Pilot Hal Venn",
+        "space.npcs.17": "Diplomat Theo Aster",
+        "space.npcs.18": "Listener Yu Senn",
+        "space.npcs.19": "Dockmaster Jori Pell",
+        "space.npcs.20": "Commander Vela Iri",
+        "space.npcs.21": "Scavenger Rune Aki",
+        "space.npcs.22": "Teacher Luma Rei",
+        "space.npcs.23": "Defector Cael Noor",
+        "space.npcs.24": "Caretaker Oshi Tan",
+        "space.adversaries.1": "Dock Breacher",
+        "space.adversaries.2": "Quarantine Patrol",
+        "space.adversaries.3": "Echo Stalker",
+        "space.adversaries.4": "Fuel Leech Drone",
+        "space.adversaries.5": "Seal Enforcer",
+        "space.adversaries.6": "Mirror Doppel",
+        "space.adversaries.7": "Salvage Corsair",
+        "space.adversaries.8": "Cinder Security Unit",
+        "space.adversaries.9": "Archive Sentinel",
+        "space.adversaries.10": "Void Manta",
+        "space.adversaries.11": "Solar Lance Cruiser",
+        "space.adversaries.12": "Timefracture Swarm",
+        "space.adversaries.13": "Ration Mutineer",
+        "space.adversaries.14": "Treaty Assassin",
+        "space.adversaries.15": "Unmoored Probe",
+        "space.adversaries.16": "Cable Marauder",
+        "space.adversaries.17": "Ash Inquisitor",
+        "space.adversaries.18": "Beacon Warden",
+        "space.items.1": "Rescue Tow Key",
+        "space.items.2": "Original Cargo Seal",
+        "space.items.3": "Tomorrow's Log",
+        "space.items.4": "Spare Air Cartridge",
+        "space.items.5": "Treaty Cipher",
+        "space.items.6": "Mirror Compass",
+        "space.items.7": "Towline Spool",
+        "space.items.8": "Radiation Badge",
+        "space.items.9": "Memory Lantern",
+        "space.items.10": "Relay Fuel Cell",
+        "space.items.11": "Neutral Observer Tabard",
+        "space.items.12": "Gate Glass Shard",
+        "space.items.13": "Courier Route Chart",
+        "space.items.14": "Witness Recorder",
+        "space.items.15": "Blank Name Plate",
+        "space.items.16": "Thermal Patch Kit",
+        "space.items.17": "Embassy Safeconduct",
+        "space.items.18": "Survey Return Beacon",
+        "space.items.19": "Relief Voucher",
+        "space.items.20": "Broken Directive",
+        "space.items.21": "Quiet Lens",
+        "space.items.22": "Habitat Deed",
+        "space.items.23": "Medical Shipment Ledger",
+        "space.items.24": "Archive Charter",
+        "space.events.1": "Relief Signal",
+        "space.events.2": "Sealed Shipment",
+        "space.events.3": "Future Distress",
+        "space.events.4": "Fuel Auction",
+        "space.events.5": "Order Collision",
+        "space.events.6": "Missing Arrival",
+        "space.events.7": "Air Ration",
+        "space.events.8": "Worker Collapse",
+        "space.events.9": "Names Return",
+        "space.events.10": "Cable Rupture",
+        "space.events.11": "Public Hearing",
+        "space.events.12": "Silent Pursuit",
+        "space.events.13": "Courier Offer",
+        "space.events.14": "Embassy Siege",
+        "space.events.15": "Lens Alignment",
+        "space.events.16": "Tug Drift",
+        "space.events.17": "Treatment Deadline",
+        "space.events.18": "Second Voice",
+        "space.events.19": "Salvage Claim",
+        "space.events.20": "Union Vote",
+        "space.events.21": "Gate Warning",
+        "space.events.22": "Reserve Choice",
+        "space.events.23": "Cruiser Arrival",
+        "space.events.24": "Archive Leak",
+        "space.events.25": "Towline Stand",
+        "space.events.26": "Treaty Broadcast",
+        "space.events.27": "Memory Bargain",
+        "space.events.28": "New Route",
+        "space.events.29": "Open Docks",
+        "space.events.30": "Beacon Rewritten",
+        "space.scenes.1": "Signal in the Wreckage",
+        "space.scenes.2": "Quarantine at Sunforge",
+        "space.scenes.3": "The Unlit Beacon",
+        "space.scenes.4": "The Fuel Bargain",
+        "space.scenes.5": "Contradictory Orders",
+        "space.scenes.6": "Mirror Crossing",
+        "space.scenes.7": "A Cable Under Fire",
+        "space.scenes.8": "Witness at the Ring",
+        "space.scenes.9": "The Names Beneath",
+        "space.scenes.10": "The Civilian Tow",
+        "space.scenes.11": "The Reactor Ward",
+        "space.scenes.12": "A Weapon in the Lens",
+        "space.scenes.13": "The Last Passenger",
+        "space.scenes.14": "The Open Tribunal",
+        "space.scenes.15": "The Caretaker's Price",
+        "space.scenes.16": "A Route for Everyone",
+        "space.scenes.17": "A Quarantine Lifted",
+        "space.scenes.18": "Tomorrow Changed",
+        "space.archetypes.1": "Rescue Pilot",
+        "space.archetypes.2": "Neutral Inspector",
+        "space.archetypes.3": "Gate Surveyor",
+        "space.archetypes.4": "Habitat Engineer",
+        "space.archetypes.5": "Union Medic",
+        "space.archetypes.6": "Memory Archivist",
+        "space.archetypes.7": "Freewake Courier",
+        "space.archetypes.8": "Embassy Witness",
+        "space.progressionPaths.1": "Route Steward",
+        "space.progressionPaths.2": "Treaty Mediator",
+        "space.progressionPaths.3": "Gate Custodian",
+        "space.progressionPaths.4": "Cooperative Captain",
+        "space.progressionPaths.5": "Independent Auditor",
+        "space.progressionPaths.6": "Frontier Cartographer",
+        "space.visualThemes.1": "Rescue Navigation",
+        "space.visualThemes.2": "Solar Protocol",
+        "space.visualThemes.3": "Quiet Star Chart"
+      }
+    },
+    "fallbackLocales": [
+      "ru",
+      "es",
+      "ja",
+      "zh-CN",
+      "ko"
+    ]
+  }
+}

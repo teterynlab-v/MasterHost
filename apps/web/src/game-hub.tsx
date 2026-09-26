@@ -1,12 +1,12 @@
 import React from "react";
 import { LanguageSwitcher, useI18n } from "./i18n/react.js";
 
-type Entity = { kind: string; values?: Record<string,{value?:unknown}>; tags?: string[] };
+type Entity = { id?:string; kind: string; values?: Record<string,{value?:unknown}>; tags?: string[] };
 type World = { id:string; name:string; entities?:Entity[] };
 const label = (entity:Entity|undefined) => String(entity?.values?.name?.value ?? "");
 
 export function gameOverview(world:World){
- const entities=world.entities??[],counts=Object.entries(entities.reduce<Record<string,number>>((all,entity)=>({...all,[entity.kind]:(all[entity.kind]??0)+1}),{})).sort((a,b)=>b[1]-a[1]),opening=entities.find(entity=>entity.tags?.includes("campaign-hook")||/(event|scene)/i.test(entity.kind)),kit=entities.find(entity=>entity.kind==="campaign-kit");
+ const entities=world.entities??[],counts=Object.entries(entities.reduce<Record<string,number>>((all,entity)=>({...all,[entity.kind]:(all[entity.kind]??0)+1}),{})).sort((a,b)=>b[1]-a[1]),kit=entities.find(entity=>entity.kind==="campaign-kit"),openingId=kit?.values?.openingSceneId?.value,opening=entities.find(entity=>typeof openingId==="string"&&(entity.id===openingId||entity.values?.deepId?.value===openingId))??entities.find(entity=>entity.kind==="scene")??entities.find(entity=>entity.tags?.includes("campaign-hook")||/(event|scene)/i.test(entity.kind));
  return{counts,opening:label(opening),kit:label(kit),total:entities.length};
 }
 export function GameHub({world,onStart,onEdit,onBack}:{world:World;onStart:()=>void;onEdit:()=>void;onBack:()=>void}){

@@ -659,8 +659,8 @@ The approved product expansion is defined in `docs/superpowers/specs/2026-09-22-
 |---|---|---|
 | M17 | Deep Universe Standard, Campaign Kits, quality gate, catalog and preview | Complete |
 | M18 | Deep Classic Fantasy | Complete; full gate and review corrections passed 2026-09-22 |
-| M19 | Deep Space Opera | Active after M18 completion |
-| M20 | Deep Cyberpunk | Planned |
+| M19 | Deep Space Opera | Complete engineering gate and review corrections 2026-09-27 |
+| M20 | Deep Cyberpunk | Active |
 | M21 | Deep Gothic Horror | Planned |
 | M22 | Deep Post-Apocalypse | Planned |
 | M23 | Deep Dark Fantasy | Planned |
