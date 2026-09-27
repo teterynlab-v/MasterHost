@@ -1,0 +1,529 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.mecha.setting",
+  "version": "1.0.0",
+  "type": "setting",
+  "name": "The Rainwall Accord",
+  "description": "The Rainwall Accord for Defense Metropolis, Colony Rebellion, Machine-Wreck Frontier. Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.",
+  "tags": [
+    "mecha-kaiju",
+    "defense-metropolis",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "The Rainwall Accord for Defense Metropolis, Colony Rebellion, Machine-Wreck Frontier. Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.",
+    "highlights": [
+      "The Rainwall Accord",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.mecha-kaiju"
+    ],
+    "requiresCapabilities": [],
+    "providesCapabilities": [
+      "setting:mecha-kaiju"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Mecha & Kaiju original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.mecha.setting"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.mecha.setting",
+    "version": "1.0.0",
+    "name": "The Rainwall Accord",
+    "description": "The Rainwall Accord for Defense Metropolis, Colony Rebellion, Machine-Wreck Frontier. Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.",
+    "provides": [
+      "setting:mecha-kaiju"
+    ],
+    "requires": [],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.factions.1",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Harbor Shield Assembly"
+            },
+            "description": {
+              "value": "Harbor Shield Assembly: must evacuate the lower city before firing a shield that floods its own shelters."
+            },
+            "deepId": {
+              "value": "factions.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.factions.2",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Free Orbit Union"
+            },
+            "description": {
+              "value": "Free Orbit Union: seeks civilian independence without burning the colony's shared oxygen plant."
+            },
+            "deepId": {
+              "value": "factions.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.factions.3",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Wreck Commons"
+            },
+            "description": {
+              "value": "Wreck Commons: salvages sleeping frames under an agreement to leave occupied wrecks intact."
+            },
+            "deepId": {
+              "value": "factions.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.factions.4",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "District Ferry Crew"
+            },
+            "description": {
+              "value": "District Ferry Crew: will open evacuation lanes if defense command shares its remaining shield capacity."
+            },
+            "deepId": {
+              "value": "factions.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.factions.5",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Life Support Cooperative"
+            },
+            "description": {
+              "value": "Life Support Cooperative: can verify oxygen quotas hidden in the military requisition."
+            },
+            "deepId": {
+              "value": "factions.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.factions.6",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Quiet Core Custodians"
+            },
+            "description": {
+              "value": "Quiet Core Custodians: recognizes that the largest wreck is still carrying a living crew."
+            },
+            "deepId": {
+              "value": "factions.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.factions.7",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Coastal Frame Command"
+            },
+            "description": {
+              "value": "Coastal Frame Command: holds an outdated targeting order that treats inhabited levees as expendable."
+            },
+            "deepId": {
+              "value": "factions.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.factions.8",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Independent Maintenance Circle"
+            },
+            "description": {
+              "value": "Independent Maintenance Circle: can repair either side's frames if pilots protect its neutral work bays."
+            },
+            "deepId": {
+              "value": "factions.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.visualThemes.1",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Rainwall Defense Grid"
+            },
+            "description": {
+              "value": "Rainwall Defense Grid: labels coastal shelters ferry lifts damaged pylons and safe firing arcs."
+            },
+            "deepId": {
+              "value": "visualThemes.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.visualThemes.2",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Orbital Air Network"
+            },
+            "description": {
+              "value": "Orbital Air Network: labels civilian reserves neutral work bays and witnessed convoy transfer points."
+            },
+            "deepId": {
+              "value": "visualThemes.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.visualThemes.3",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Living Wreck Signals"
+            },
+            "description": {
+              "value": "Living Wreck Signals: labels powered cabins isolated weapons and safe consensual salvage zones."
+            },
+            "deepId": {
+              "value": "visualThemes.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-factions-1": {
+            "template": "mecha.deep.factions.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-factions-2": {
+            "template": "mecha.deep.factions.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-factions-3": {
+            "template": "mecha.deep.factions.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-factions-4": {
+            "template": "mecha.deep.factions.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-factions-5": {
+            "template": "mecha.deep.factions.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-factions-6": {
+            "template": "mecha.deep.factions.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-factions-7": {
+            "template": "mecha.deep.factions.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-factions-8": {
+            "template": "mecha.deep.factions.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-visualThemes-1": {
+            "template": "mecha.deep.visualThemes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.1"
+              ]
+            }
+          },
+          "deep-visualThemes-2": {
+            "template": "mecha.deep.visualThemes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.2"
+              ]
+            }
+          },
+          "deep-visualThemes-3": {
+            "template": "mecha.deep.visualThemes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.3"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

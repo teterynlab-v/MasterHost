@@ -13,8 +13,8 @@
 - **M25 Weird West: engineering gate complete (2026-09-27).** New original 1.0.0 Pack, three road/ghost-railway/living-mine Kits, playable roles/resources/paths, clean transfer/runtime/restart and browser Quick/GM/player/action/reload. Evidence: `docs/M25_STATUS.md`.
 - **M26 Urban Fantasy: engineering gate complete (2026-09-27).** New original 1.0.0 Pack, three library/tower/public-route Kits, playable roles/resources/paths, clean transfer/runtime/restart and browser Quick/GM/player/action/reload. Evidence: `docs/M26_STATUS.md`.
 - **M27 Cosmic Investigation: engineering gate complete (2026-09-27).** New 1.0.0 Pack, three signal/geometry/recall Kits, explicit Exposure accumulation/reduction, clean transfer/runtime/restart and browser resource/check/scene/reload evidence. Evidence: `docs/M27_STATUS.md`.
-- **Active:** M29 Mecha & Kaiju; then M30 collection acceptance.
-- Ordinary clean installations now show eleven universes ready with deep content; Mecha & Kaiju remains planned.
+- **Active:** M30 whole-collection engineering and product acceptance.
+- Ordinary clean installations now show twelve universes ready with deep content.
 
 ## Post-M18 playability correction (2026-09-22)
 
@@ -181,3 +181,7 @@ The product Compose stack now provides private PostgreSQL/API services behind on
 ## M28 — Age of Sail
 
 Engineering gate and independent review passed: 151 entries, three Kits, nine assets, 219 tests, two clean PostgreSQL installations, portable-game transfer and restart. Browser verified late join, authoritative check, scene change and player reload. Human/editorial gates remain open; see `M28_STATUS.md`.
+
+## M29 — Mecha & Kaiju
+
+Engineering gate and independent review passed: 151 entries, three Kits, nine assets, 221 tests, two clean PostgreSQL installations, portable-game transfer, Heat actions and restart. Browser verified late join, Heat0→1→0, authoritative check, scene change and player reload. Human/editorial gates remain open; see `M29_STATUS.md`.

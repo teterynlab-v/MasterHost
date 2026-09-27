@@ -1,0 +1,878 @@
+questions:
+  - id: world.tone
+    label: Campaign tone
+    type: choice
+    default: heroic
+    options:
+      - value: heroic
+        label: Heroic
+      - value: tense
+        label: Tense
+      - value: tragic
+        label: Tragic
+  - id: world.threat
+    label: Threat level
+    type: choice
+    default: high
+    options:
+      - value: low
+        label: Low
+      - value: medium
+        label: Medium
+      - value: high
+        label: High
+  - id: world.environment
+    label: Dominant environment
+    type: choice
+    default: coast
+    options:
+      - value: coast
+        label: Free coast
+      - value: orbit
+        label: Orbital habitat
+      - value: wreck
+        label: Living wreck
+  - id: world.scarcity
+    label: Resource pressure
+    type: choice
+    default: strained
+    options:
+      - value: plentiful
+        label: Plentiful
+      - value: strained
+        label: Strained
+      - value: rare
+        label: Rare
+  - id: world.pattern
+    label: Universe pattern
+    type: choice
+    default: defense-metropolis
+    options:
+      - value: defense-metropolis
+        label: Defense Metropolis
+      - value: colony-rebellion
+        label: Colony Rebellion
+      - value: machine-wreck-frontier
+        label: Machine-Wreck Frontier
+  - id: world.campaignKit
+    label: Campaign Kit
+    type: choice
+    default: kit.defense-metropolis
+    options:
+      - value: kit.defense-metropolis
+        label: "Defense Metropolis: The Narrow Arc"
+      - value: kit.colony-rebellion
+        label: "Colony Rebellion: A Charter for Breath"
+      - value: kit.machine-wreck-frontier
+        label: "Machine-Wreck Frontier: The Giant Answers"
+  - id: world.visualTheme
+    label: Visual theme
+    type: choice
+    default: visualThemes.1
+    options:
+      - value: visualThemes.1
+        label: Rainwall Defense Grid
+      - value: visualThemes.2
+        label: Orbital Air Network
+      - value: visualThemes.3
+        label: Living Wreck Signals
+generators:
+  region.count:
+    type: integer-range
+    min: 2
+    max: 3
+  region.names:
+    type: values
+    values:
+      - Defense Metropolis
+      - Colony Rebellion
+      - Machine-Wreck Frontier
+  settlement.names:
+    type: values
+    values:
+      - Floodgate District
+      - Orbital Oxygen Dock
+      - Sleeping Frame Basin
+      - Ferry Lift Junction
+      - Quota Archive
+      - Crew Memory Vault
+      - Outer Shield Pylon
+      - Neutral Repair Bay
+  location.names:
+    type: values
+    values:
+      - Floodgate District
+      - Orbital Oxygen Dock
+      - Sleeping Frame Basin
+      - Ferry Lift Junction
+      - Quota Archive
+      - Crew Memory Vault
+      - Outer Shield Pylon
+      - Neutral Repair Bay
+  creature.names:
+    type: values
+    values:
+      - Breakwater Colossus
+      - Requisition Frame
+      - Claim Cutter
+      - Flood Patrol Drone
+      - Dock Clamp Walker
+      - Core Leech Swarm
+      - Battery Siege Frame
+      - Plant Boarding Rig
+  npc.names:
+    type: values
+    values:
+      - Pilot Ren Sable
+      - Mechanic Jo Venn
+      - Custodian Mira Coil
+      - Ferry Captain Nera
+      - Quota Clerk Tomas
+      - Salvager Ash Kit
+      - Shield Operator Lina
+      - Union Envoy Eri
+  faction.names:
+    type: values
+    values:
+      - Harbor Shield Assembly
+      - Free Orbit Union
+      - Wreck Commons
+      - District Ferry Crew
+      - Life Support Cooperative
+      - Quiet Core Custodians
+      - Coastal Frame Command
+      - Independent Maintenance Circle
+  event.names:
+    type: values
+    values:
+      - False Shelter Lock
+      - Missing Air Count
+      - Cabin Reply
+      - Ferry Lift Jam
+      - Fuel Label Challenge
+      - Forged Scrap Tag
+      - Shield Pulse Surge
+      - Plant Alarm
+  encounter.names:
+    type: values
+    values:
+      - Alarm below the Shield
+      - The Air Is Not Fuel
+      - Someone Lives in the Wreck
+      - Ferries before Batteries
+      - The Neutral Bay
+      - Wake without Weapons
+      - A Narrow Firing Arc
+      - Canisters in Public
+  item.names:
+    type: values
+    values:
+      - Shelter Boundary Beacon
+      - Duplicate Air Ledger
+      - Occupied Cabin Map
+      - Ferry Priority Token
+      - Pressure Test Seal
+      - Neutral Salvage Charter
+      - Low Power Lure
+      - Open Inspection Camera
+  economy:
+    type: weighted-table
+    entries:
+      - value: trade
+        weight: 35
+      - value: craft
+        weight: 30
+      - value: service
+        weight: 20
+      - value: smuggling
+        weight: 15
+  danger:
+    type: integer-range
+    min: 1
+    max: 5
+traits:
+  region.threatened:
+    id: region.threatened
+    when:
+      eq:
+        - descriptor: world.threat
+        - high
+    addTags:
+      - dangerous
+    set:
+      alert: true
+  location.scarce:
+    id: location.scarce
+    when:
+      ne:
+        - descriptor: world.scarcity
+        - plentiful
+    addTags:
+      - contested
+    set:
+      supplies: limited
+templates:
+  world.root:
+    kind: realm
+    values:
+      name:
+        value: The Rainwall Accord
+      tone:
+        descriptor: world.tone
+        default: heroic
+      environment:
+        descriptor: world.environment
+        default: pastoral
+      scarcity:
+        descriptor: world.scarcity
+        default: strained
+    components:
+      regions:
+        template: region.standard
+        count:
+          generator: region.count
+      faction:
+        template: faction.major
+      encounter:
+        template: encounter.signature
+      event:
+        template: event.opening
+  region.standard:
+    kind: province
+    traits:
+      - region.threatened
+    values:
+      name:
+        generator: region.names
+      threat:
+        descriptor: world.threat
+        default: high
+      danger:
+        generator: danger
+    components:
+      settlements:
+        template: settlement.standard
+        count: 2
+      locations:
+        template: location.standard
+        count: 2
+      creatures:
+        template: creature.standard
+        count: 2
+      npc:
+        template: npc.standard
+      item:
+        template: item.signature
+  settlement.standard:
+    kind: settlement
+    tags:
+      - community
+    values:
+      name:
+        generator: settlement.names
+      economy:
+        generator: economy
+      environment:
+        descriptor: world.environment
+        default: pastoral
+    components: {}
+  location.standard:
+    kind: location
+    tags:
+      - adventure-site
+    traits:
+      - location.scarce
+    values:
+      name:
+        generator: location.names
+      feature:
+        descriptor: world.environment
+        default: pastoral
+    components: {}
+  creature.standard:
+    kind: creature
+    tags:
+      - threat
+    values:
+      name:
+        generator: creature.names
+      danger:
+        generator: danger
+    components: {}
+  npc.standard:
+    kind: npc
+    tags:
+      - contact
+    values:
+      name:
+        generator: npc.names
+      agenda:
+        generator: economy
+    components: {}
+  item.signature:
+    kind: item
+    tags:
+      - treasure
+    values:
+      name:
+        generator: item.names
+      scarcity:
+        descriptor: world.scarcity
+        default: strained
+    components: {}
+  faction.major:
+    kind: faction
+    tags:
+      - major-faction
+    values:
+      name:
+        generator: faction.names
+      agenda:
+        generator: economy
+    components: {}
+  encounter.signature:
+    kind: encounter
+    tags:
+      - set-piece
+    values:
+      name:
+        generator: encounter.names
+      threat:
+        descriptor: world.threat
+        default: high
+    components: {}
+  event.opening:
+    kind: event
+    tags:
+      - campaign-hook
+    values:
+      name:
+        generator: event.names
+      tone:
+        descriptor: world.tone
+        default: heroic
+    components: {}
+relations:
+  - id: settlement-route
+    type: connectedTo
+    from:
+      kind: settlement
+    to:
+      kind: settlement
+    mode: chain
+    bidirectional: true
+  - id: faction-influence
+    type: influencedBy
+    from:
+      kind: province
+    to:
+      kind: faction
+      tags:
+        - major-faction
+    mode: each-to-first
+constraints:
+  - id: regional-depth
+    type: entity-count
+    query:
+      kind: province
+    min: 2
+  - id: adventure-sites
+    type: entity-count
+    query:
+      kind: location
+    min: 4
+  - id: routes-exist
+    type: relation-count
+    relation: connectedTo
+    min: 3
+dependencies: []
+characterCreation:
+  schemaVersion: "1"
+  steps:
+    - id: identity
+      title: Identity
+      fields:
+        - id: name
+          label: Name
+          type: text
+          required: true
+          minLength: 2
+          maxLength: 60
+    - id: calling
+      title: Calling
+      fields:
+        - id: calling
+          label: Calling
+          type: choice
+          required: true
+          options:
+            - value: ace
+              label: Ace
+            - value: mechanic
+              label: Mechanic
+            - value: liaison
+              label: Liaison
+        - id: archetype
+          label: Pilot role
+          type: choice
+          required: true
+          default: archetypes.1
+          options:
+            - value: archetypes.1
+              label: Evacuation Ace
+            - value: archetypes.2
+              label: Habitat Liaison
+            - value: archetypes.3
+              label: Wreck Listener
+            - value: archetypes.4
+              label: Shield Technician
+            - value: archetypes.5
+              label: Neutral Bay Mechanic
+            - value: archetypes.6
+              label: Consent Archivist
+            - value: archetypes.7
+              label: Coastal Rescue Pilot
+            - value: archetypes.8
+              label: Commons Rig Lead
+        - id: path
+          label: Progression path
+          type: choice
+          required: true
+          default: progressionPaths.1
+          options:
+            - value: progressionPaths.1
+              label: District Guardian
+            - value: progressionPaths.2
+              label: Air Charter Keeper
+            - value: progressionPaths.3
+              label: Living Wreck Advocate
+            - value: progressionPaths.4
+              label: Narrow Arc Specialist
+            - value: progressionPaths.5
+              label: Independent Dock Steward
+            - value: progressionPaths.6
+              label: Commons Pathmaker
+    - id: aptitudes
+      title: Aptitudes
+      fields:
+        - id: force
+          label: Force
+          type: number
+          min: -2
+          max: 5
+          default: 1
+        - id: systems
+          label: Systems
+          type: number
+          min: -2
+          max: 5
+          default: 1
+        - id: bond
+          label: Bond
+          type: number
+          min: -2
+          max: 5
+          default: 1
+    - id: signature
+      title: Signature
+      fields:
+        - id: signature
+          label: Signature approach
+          type: choice
+          required: true
+          default: bold
+          options:
+            - value: bold
+              label: Bold
+            - value: careful
+              label: Careful
+            - value: compassionate
+              label: Compassionate
+        - id: portrait
+          label: Portrait
+          type: asset
+          required: true
+          default: standard
+          options:
+            - value: standard
+              label: Mecha & Kaiju portrait
+            - value: silhouette
+              label: Silhouette
+  calculated:
+    - id: readiness
+      operation: sum
+      fields:
+        - force
+        - systems
+        - bond
+  starting:
+    progression:
+      renown: 0
+      experience: 0
+      progressionPaths.1: 0
+      progressionPaths.2: 0
+      progressionPaths.3: 0
+      progressionPaths.4: 0
+      progressionPaths.5: 0
+      progressionPaths.6: 0
+    resources:
+      hull: 18
+      shield: 10
+      reactor: 8
+      heat: 0
+    inventory:
+      - id: weapon
+        quantity: 1
+        when:
+          field: calling
+          equals: ace
+      - id: kit
+        quantity: 1
+        when:
+          field: calling
+          equals: mechanic
+      - id: relic
+        quantity: 1
+        when:
+          field: calling
+          equals: liaison
+      - id: supply
+        quantity: 2
+    traits:
+      - id: trained-ace
+        when:
+          field: calling
+          equals: ace
+      - id: trained-mechanic
+        when:
+          field: calling
+          equals: mechanic
+      - id: trained-liaison
+        when:
+          field: calling
+          equals: liaison
+      - id: role-archetypes.1
+        when:
+          field: archetype
+          equals: archetypes.1
+      - id: role-archetypes.2
+        when:
+          field: archetype
+          equals: archetypes.2
+      - id: role-archetypes.3
+        when:
+          field: archetype
+          equals: archetypes.3
+      - id: role-archetypes.4
+        when:
+          field: archetype
+          equals: archetypes.4
+      - id: role-archetypes.5
+        when:
+          field: archetype
+          equals: archetypes.5
+      - id: role-archetypes.6
+        when:
+          field: archetype
+          equals: archetypes.6
+      - id: role-archetypes.7
+        when:
+          field: archetype
+          equals: archetypes.7
+      - id: role-archetypes.8
+        when:
+          field: archetype
+          equals: archetypes.8
+      - id: path-progressionPaths.1
+        when:
+          field: path
+          equals: progressionPaths.1
+      - id: path-progressionPaths.2
+        when:
+          field: path
+          equals: progressionPaths.2
+      - id: path-progressionPaths.3
+        when:
+          field: path
+          equals: progressionPaths.3
+      - id: path-progressionPaths.4
+        when:
+          field: path
+          equals: progressionPaths.4
+      - id: path-progressionPaths.5
+        when:
+          field: path
+          equals: progressionPaths.5
+      - id: path-progressionPaths.6
+        when:
+          field: path
+          equals: progressionPaths.6
+    assets:
+      - id: portrait
+        value: assets/ui/portrait.svg
+  portability:
+    rules: []
+checks:
+  force:
+    label: Force
+    dice: 1d20
+    modifierField: force
+    criticalSuccess:
+      rollTotalAtLeast: 20
+    criticalFailure:
+      rollTotalAtMost: 1
+  systems:
+    label: Systems
+    dice: 2d6
+    modifierField: systems
+    criticalSuccess:
+      rollTotalAtLeast: 12
+    criticalFailure:
+      rollTotalAtMost: 2
+  bond:
+    label: Bond
+    dice: 1d20
+    modifierField: bond
+    criticalSuccess:
+      rollTotalAtLeast: 20
+    criticalFailure:
+      rollTotalAtMost: 1
+resources:
+  hull:
+    label: Hull
+    min: 0
+    max: 24
+    default: 18
+  shield:
+    label: Shield
+    min: 0
+    max: 16
+    default: 10
+  reactor:
+    label: Reactor
+    min: 0
+    max: 18
+    default: 8
+  heat:
+    label: Heat
+    min: 0
+    max: 12
+    default: 0
+items:
+  weapon:
+    label: Frame Cannon
+    stackLimit: 1
+  kit:
+    label: Repair Rig
+    stackLimit: 1
+  relic:
+    label: Link Core
+    stackLimit: 1
+  supply:
+    label: Coolant Cell
+    stackLimit: 10
+  armor:
+    label: Shield Plate
+    stackLimit: 1
+  tool:
+    label: Salvage Arm
+    stackLimit: 1
+  token:
+    label: Evacuation Beacon
+    stackLimit: 1
+progression:
+  renown:
+    label: Renown
+    min: 0
+    max: 100
+    default: 0
+  experience:
+    label: Experience
+    min: 0
+    default: 0
+  progressionPaths.1:
+    label: District Guardian
+    min: 0
+    default: 0
+  progressionPaths.2:
+    label: Air Charter Keeper
+    min: 0
+    default: 0
+  progressionPaths.3:
+    label: Living Wreck Advocate
+    min: 0
+    default: 0
+  progressionPaths.4:
+    label: Narrow Arc Specialist
+    min: 0
+    default: 0
+  progressionPaths.5:
+    label: Independent Dock Steward
+    min: 0
+    default: 0
+  progressionPaths.6:
+    label: Commons Pathmaker
+    min: 0
+    default: 0
+locations:
+  worldEntityKinds:
+    - settlement
+    - location
+actorTemplates:
+  adversary:
+    label: Requisition Frame
+    resources:
+      hull: 10
+      shield: 0
+      reactor: 0
+    attributes:
+      force: 2
+      systems: 0
+      bond: 1
+    inventory:
+      - itemId: weapon
+        quantity: 1
+    progression:
+      renown: 0
+      experience: 0
+    worldEntityKinds:
+      - creature
+  contact:
+    label: Support Frame
+    resources:
+      hull: 18
+      shield: 10
+      reactor: 8
+    attributes:
+      force: 0
+      systems: 2
+      bond: 2
+    inventory:
+      - itemId: kit
+        quantity: 1
+    progression:
+      renown: 5
+      experience: 0
+    worldEntityKinds:
+      - npc
+  elite:
+    label: Siege Kaiju
+    resources:
+      hull: 18
+      shield: 10
+      reactor: 8
+    attributes:
+      force: 3
+      systems: 2
+      bond: 2
+    inventory:
+      - itemId: relic
+        quantity: 1
+    progression:
+      renown: 10
+      experience: 5
+    worldEntityKinds:
+      - creature
+effects:
+  shaken:
+    label: Jammed
+    duration:
+      type: turns
+      value: 2
+    modifiers:
+      force: -2
+    blockedActions:
+      - inspire
+  blessed:
+    label: Synchronized
+    duration:
+      type: rounds
+      value: 2
+    modifiers:
+      systems: 2
+  guarded:
+    label: Shielded
+    duration:
+      type: turns
+      value: 1
+    modifiers:
+      bond: 2
+actions:
+  basic-attack:
+    label: Use Frame Cannon
+    target: single-actor
+    steps:
+      - check:
+          id: force
+          against: input.difficulty
+      - roll:
+          id: impact
+          dice: 1d6
+        when:
+          previousOutcome: success
+      - resource:
+          target: target
+          resource: hull
+          operation: subtract
+          value: impact.total
+        when:
+          previousOutcome: success
+  recover:
+    label: Recover Hull
+    kind: resource
+    target: self
+    resource: hull
+    operation: add
+    amount: 3
+  hinder:
+    label: Jammed
+    kind: effect
+    target: actor
+    effectId: shaken
+  inspire:
+    label: Synchronized
+    target: multiple-actors
+    steps:
+      - effect:
+          target: target
+          id: blessed
+  guard:
+    label: Shielded
+    kind: effect
+    target: self
+    effectId: guarded
+  signature-move:
+    label: Signature Move
+    target: single-actor
+    steps:
+      - check:
+          id: systems
+          against: input.difficulty
+      - effect:
+          target: target
+          id: shaken
+        when:
+          previousOutcome: success
+  pressure:
+    label: Spend Reactor
+    kind: resource
+    target: self
+    resource: reactor
+    operation: subtract
+    amount: 1
+  overdrive:
+    label: Overdrive
+    target: self
+    kind: resource
+    resource: heat
+    operation: add
+    amount: 1
+  cool-down:
+    label: Cool Down
+    target: self
+    kind: resource
+    resource: heat
+    operation: subtract
+    amount: 1
+encounter:
+  orderingPolicy: fixed

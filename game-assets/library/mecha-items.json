@@ -1,0 +1,1084 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.mecha.items",
+  "version": "1.0.0",
+  "type": "items",
+  "name": "Rescue Repair and Consent Tools",
+  "description": "Rescue Repair and Consent Tools for Defense Metropolis, Colony Rebellion, Machine-Wreck Frontier. Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.",
+  "tags": [
+    "mecha-kaiju",
+    "defense-metropolis",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Rescue Repair and Consent Tools for Defense Metropolis, Colony Rebellion, Machine-Wreck Frontier. Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.",
+    "highlights": [
+      "Rescue Repair and Consent Tools",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.mecha-kaiju"
+    ],
+    "requiresCapabilities": [
+      "setting:mecha-kaiju"
+    ],
+    "providesCapabilities": [
+      "items:mecha-kaiju"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.mecha.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Mecha & Kaiju original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.mecha.items"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 24,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.mecha.items",
+    "version": "1.0.0",
+    "name": "Rescue Repair and Consent Tools",
+    "description": "Rescue Repair and Consent Tools for Defense Metropolis, Colony Rebellion, Machine-Wreck Frontier. Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.",
+    "provides": [
+      "items:mecha-kaiju"
+    ],
+    "requires": [
+      "setting:mecha-kaiju"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.1",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Shelter Boundary Beacon"
+            },
+            "description": {
+              "value": "Shelter Boundary Beacon: marks the no-fire arc so a narrow shot can protect the evacuation route."
+            },
+            "deepId": {
+              "value": "items.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.2",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Duplicate Air Ledger"
+            },
+            "description": {
+              "value": "Duplicate Air Ledger: records civilian ownership of canisters labeled military fuel."
+            },
+            "deepId": {
+              "value": "items.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.3",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Occupied Cabin Map"
+            },
+            "description": {
+              "value": "Occupied Cabin Map: identifies sleeping crew sections that cannot safely be detached."
+            },
+            "deepId": {
+              "value": "items.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.4",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Ferry Priority Token"
+            },
+            "description": {
+              "value": "Ferry Priority Token: moves patients before ammunition if a dispatcher witnesses its use."
+            },
+            "deepId": {
+              "value": "items.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.5",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Pressure Test Seal"
+            },
+            "description": {
+              "value": "Pressure Test Seal: proves civilian canisters are safe without revealing a hidden habitat location."
+            },
+            "deepId": {
+              "value": "items.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.6",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Neutral Salvage Charter"
+            },
+            "description": {
+              "value": "Neutral Salvage Charter: allows unoccupied scrap removal while protecting powered cabins."
+            },
+            "deepId": {
+              "value": "items.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.7",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Low Power Lure"
+            },
+            "description": {
+              "value": "Low Power Lure: draws the coastal threat away without pulsing the whole shield."
+            },
+            "deepId": {
+              "value": "items.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.8",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Open Inspection Camera"
+            },
+            "description": {
+              "value": "Open Inspection Camera: lets both sides verify the same air manifest."
+            },
+            "deepId": {
+              "value": "items.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.9",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Core Cooling Hose"
+            },
+            "description": {
+              "value": "Core Cooling Hose: reduces heat while preserving crew life support."
+            },
+            "deepId": {
+              "value": "items.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.10",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Damaged Targeting Order"
+            },
+            "description": {
+              "value": "Damaged Targeting Order: shows that the old evacuation map no longer matches the city."
+            },
+            "deepId": {
+              "value": "items.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.11",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Civilian Dock Warrant"
+            },
+            "description": {
+              "value": "Civilian Dock Warrant: permits an independent convoy escort rather than forced military service."
+            },
+            "deepId": {
+              "value": "items.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.12",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Unarmed Access Key"
+            },
+            "description": {
+              "value": "Unarmed Access Key: opens the sleeping frame's bridge while leaving its weapons isolated."
+            },
+            "deepId": {
+              "value": "items.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.13",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Shield Bypass Coupler"
+            },
+            "description": {
+              "value": "Shield Bypass Coupler: restores the ferry corridor at the price of reduced outer field strength."
+            },
+            "deepId": {
+              "value": "items.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.13"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.14",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Habitat Transfer Harness"
+            },
+            "description": {
+              "value": "Habitat Transfer Harness: moves people through the repair ring without damaging the oxygen plant."
+            },
+            "deepId": {
+              "value": "items.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.17"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.15",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Crew Wake Protocol"
+            },
+            "description": {
+              "value": "Crew Wake Protocol: asks the sleepers for consent before rerouting their frame."
+            },
+            "deepId": {
+              "value": "items.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.21"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.16",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Highwater Medical Pack"
+            },
+            "description": {
+              "value": "Highwater Medical Pack: stabilizes shelter patients during the slower ferry crossing."
+            },
+            "deepId": {
+              "value": "items.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.22"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.17",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Shared Pump Spare"
+            },
+            "description": {
+              "value": "Shared Pump Spare: repairs life support if maintenance workers keep both armed crews outside."
+            },
+            "deepId": {
+              "value": "items.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.18",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Living Cabin Brace"
+            },
+            "description": {
+              "value": "Living Cabin Brace: supports an inhabited section during safe salvage work."
+            },
+            "deepId": {
+              "value": "items.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.19",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Rain Radar Lens"
+            },
+            "description": {
+              "value": "Rain Radar Lens: tracks the colossus without powering the old shield lure."
+            },
+            "deepId": {
+              "value": "items.19"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.20",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Canister Marking Chalk"
+            },
+            "description": {
+              "value": "Canister Marking Chalk: makes quota fraud visible during a public count."
+            },
+            "deepId": {
+              "value": "items.20"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.21",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Commons Signal Flag"
+            },
+            "description": {
+              "value": "Commons Signal Flag: calls a pause to salvage whenever a living cabin answers."
+            },
+            "deepId": {
+              "value": "items.21"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.15"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.22",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Coolant Cell"
+            },
+            "description": {
+              "value": "Coolant Cell: restores a spent reactor reserve but does not erase heat automatically."
+            },
+            "deepId": {
+              "value": "items.22"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.16"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.23",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Pressure Suit Patch"
+            },
+            "description": {
+              "value": "Pressure Suit Patch: allows one test dive before the docking deadline."
+            },
+            "deepId": {
+              "value": "items.23"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.20"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.items.24",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Rescue Tow Cable"
+            },
+            "description": {
+              "value": "Rescue Tow Cable: guides the sleeping frame through the signal yard without forcing its pilots."
+            },
+            "deepId": {
+              "value": "items.24"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.24"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-items-1": {
+            "template": "mecha.deep.items.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-items-2": {
+            "template": "mecha.deep.items.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-items-3": {
+            "template": "mecha.deep.items.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-items-4": {
+            "template": "mecha.deep.items.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-items-5": {
+            "template": "mecha.deep.items.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-items-6": {
+            "template": "mecha.deep.items.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-items-7": {
+            "template": "mecha.deep.items.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-items-8": {
+            "template": "mecha.deep.items.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-items-9": {
+            "template": "mecha.deep.items.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-items-10": {
+            "template": "mecha.deep.items.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-items-11": {
+            "template": "mecha.deep.items.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-items-12": {
+            "template": "mecha.deep.items.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-items-13": {
+            "template": "mecha.deep.items.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-items-14": {
+            "template": "mecha.deep.items.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-items-15": {
+            "template": "mecha.deep.items.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-items-16": {
+            "template": "mecha.deep.items.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-items-17": {
+            "template": "mecha.deep.items.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-items-18": {
+            "template": "mecha.deep.items.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-items-19": {
+            "template": "mecha.deep.items.19",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-items-20": {
+            "template": "mecha.deep.items.20",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-items-21": {
+            "template": "mecha.deep.items.21",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-items-22": {
+            "template": "mecha.deep.items.22",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-items-23": {
+            "template": "mecha.deep.items.23",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-items-24": {
+            "template": "mecha.deep.items.24",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

@@ -23,7 +23,7 @@ describe("M17 universe catalog", () => {
     expect(entries).toHaveLength(12);
     expect(new Set(entries.map(entry => entry.id)).size).toBe(12);
     expect(entries.find(entry => entry.id === "classic-fantasy")?.patterns.map(pattern => pattern.name)).toEqual(["Border Kingdoms", "War of Heirs", "Ruins of the Ancient Empire"]);
-    expect(entries.find(entry => entry.id === "mecha-kaiju")?.gameLoop).toEqual(["alarm", "machine preparation", "operation", "damage and pilot bonds"]);
+    expect(entries.find(entry => entry.id === "mecha-kaiju")?.gameLoop).toEqual(["alarm", "machine-preparation", "operation", "damage-and-bonds"]);
   });
 
   it("rejects duplicate universe and pattern identities", async () => {

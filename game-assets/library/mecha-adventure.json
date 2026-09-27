@@ -1,0 +1,2116 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.mecha.adventure",
+  "version": "1.0.0",
+  "type": "adventure",
+  "name": "Three Complete Frame Adventures",
+  "description": "Three Complete Frame Adventures for Defense Metropolis, Colony Rebellion, Machine-Wreck Frontier. Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.",
+  "tags": [
+    "mecha-kaiju",
+    "defense-metropolis",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Three Complete Frame Adventures for Defense Metropolis, Colony Rebellion, Machine-Wreck Frontier. Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.",
+    "highlights": [
+      "Three Complete Frame Adventures",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.mecha-kaiju"
+    ],
+    "requiresCapabilities": [
+      "world:mecha-kaiju",
+      "locations:mecha-kaiju",
+      "cast:mecha-kaiju",
+      "items:mecha-kaiju",
+      "rules:mecha-kaiju"
+    ],
+    "providesCapabilities": [
+      "adventure:mecha-kaiju"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.mecha.world-template",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.mecha.locations",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.mecha.cast",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.mecha.items",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.mecha.rules",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Mecha & Kaiju original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.mecha.adventure"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 18,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.mecha.adventure",
+    "version": "1.0.0",
+    "name": "Three Complete Frame Adventures",
+    "description": "Three Complete Frame Adventures for Defense Metropolis, Colony Rebellion, Machine-Wreck Frontier. Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.",
+    "provides": [
+      "adventure:mecha-kaiju"
+    ],
+    "requires": [
+      "world:mecha-kaiju",
+      "locations:mecha-kaiju",
+      "cast:mecha-kaiju",
+      "items:mecha-kaiju",
+      "rules:mecha-kaiju"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.scenes.1",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Alarm below the Shield"
+            },
+            "description": {
+              "value": "Alarm below the Shield: Objective: establish a safe civilian evacuation corridor. Show the obsolete shelter map and ferry demand; reroute ammunition or open the coastal ramp. Delay traps patients."
+            },
+            "deepId": {
+              "value": "scenes.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.scenes.2",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Air Is Not Fuel"
+            },
+            "description": {
+              "value": "The Air Is Not Fuel: Objective: verify civilian air ownership. Compare the duplicate ledger with canister seals or make a witnessed pressure test. Delay permits armed convoy departure."
+            },
+            "deepId": {
+              "value": "scenes.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.scenes.3",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Someone Lives in the Wreck"
+            },
+            "description": {
+              "value": "Someone Lives in the Wreck: Objective: stop unsafe salvage. Listen to cabin replies or inspect intact life support; isolate the cutting rig while keeping the core powered. Delay cuts an occupied section."
+            },
+            "deepId": {
+              "value": "scenes.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.scenes.4",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Ferries before Batteries"
+            },
+            "description": {
+              "value": "Ferries before Batteries: Objective: clear the shared lift. Negotiate cargo priority or manually release its jammed hoist with reactor expense. Delay strands the medical shelter."
+            },
+            "deepId": {
+              "value": "scenes.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.scenes.5",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Neutral Bay"
+            },
+            "description": {
+              "value": "The Neutral Bay: Objective: protect oxygen production. Clear armed frames from maintenance or move inspection into the transfer ring. Delay reduces air available for the vote."
+            },
+            "deepId": {
+              "value": "scenes.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.scenes.6",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Wake without Weapons"
+            },
+            "description": {
+              "value": "Wake without Weapons: Objective: ask the sleeping crew for consent. Use the unarmed access key or transmit the wake protocol; weapons stay isolated. Delay lets a rival claim abandoned status."
+            },
+            "deepId": {
+              "value": "scenes.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.scenes.7",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "A Narrow Firing Arc"
+            },
+            "description": {
+              "value": "A Narrow Firing Arc: Objective: redirect the coastal threat. Mark no-fire limits and use low-power lures or shield the ferry route while drawing it seaward. Delay damages the relay."
+            },
+            "deepId": {
+              "value": "scenes.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.scenes.8",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Canisters in Public"
+            },
+            "description": {
+              "value": "Canisters in Public: Objective: expose quota fraud safely. Count air with habitat witnesses or escort the clerk through neutral repairs. Delay leaves civilian ownership disputed."
+            },
+            "deepId": {
+              "value": "scenes.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.scenes.9",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Price of Scrap"
+            },
+            "description": {
+              "value": "The Price of Scrap: Objective: settle the rival claim without stripping living cabins. Offer verified unoccupied hull or a witnessed deferred debt. Delay brings a claim cutter."
+            },
+            "deepId": {
+              "value": "scenes.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.scenes.10",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Pylon Choice"
+            },
+            "description": {
+              "value": "The Pylon Choice: Objective: keep evacuation open before defense fires. Bypass the relay for reduced field strength or take the slower coastal escort. Delay closes the narrow-shot window."
+            },
+            "deepId": {
+              "value": "scenes.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.13"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.scenes.11",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "A Charter for Breath"
+            },
+            "description": {
+              "value": "A Charter for Breath: Objective: distribute air without forced military service. Agree to public quotas and an appeals path or temporary shared custody. Delay exhausts the waiting habitat."
+            },
+            "deepId": {
+              "value": "scenes.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.scenes.12",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Tow a Living Giant"
+            },
+            "description": {
+              "value": "Tow a Living Giant: Objective: move the frame on terms its crew accepts. Negotiate the signal yard crossing or brace safely until morning. Delay overheats exposed support rigs."
+            },
+            "deepId": {
+              "value": "scenes.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.15"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.scenes.13",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Last Shelter Count"
+            },
+            "description": {
+              "value": "The Last Shelter Count: Objective: account for all civilians before the shot. Reconcile manifests or send a rescue frame to the missing shelter. Delay permits command's obsolete order."
+            },
+            "deepId": {
+              "value": "scenes.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.16"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.scenes.14",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Independent Docking"
+            },
+            "description": {
+              "value": "Independent Docking: Objective: secure a neutral future air corridor. Test the agreed charter against a live convoy and remove armed oversight. Delay revives requisition priority."
+            },
+            "deepId": {
+              "value": "scenes.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.17"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.scenes.15",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Second Waking"
+            },
+            "description": {
+              "value": "The Second Waking: Objective: extend occupied protections to the neighboring giant. Relay the charter or offer an unarmed departure corridor. Delay risks two giants colliding."
+            },
+            "deepId": {
+              "value": "scenes.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.scenes.16",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Repair after the Alarm"
+            },
+            "description": {
+              "value": "Repair after the Alarm: Objective: record the actual cost of defending the city. Assign levee repairs and shelter restitution; reduce remaining battery capacity if needed. Delay leaves lower streets flooded."
+            },
+            "deepId": {
+              "value": "scenes.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.scenes.17",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Habitat Ledger"
+            },
+            "description": {
+              "value": "Habitat Ledger: Objective: verify air deliveries and civilian choice. Record each habitat's actual reserve and a visible appeal; let a minority retain independent custody. Delay hides a new shortage."
+            },
+            "deepId": {
+              "value": "scenes.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.scenes.18",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "What the Commons Keep"
+            },
+            "description": {
+              "value": "What the Commons Keep: Objective: define consensual salvage and crew autonomy. Mark powered exclusions and unoccupied claims; living frames choose their route. Delay starts the next scrap dispute."
+            },
+            "deepId": {
+              "value": "scenes.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.1",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "False Shelter Lock"
+            },
+            "description": {
+              "value": "False Shelter Lock: gates close in the lower district; open a safe lane or publicly change the evacuation order."
+            },
+            "deepId": {
+              "value": "events.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.2",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Missing Air Count"
+            },
+            "description": {
+              "value": "Missing Air Count: the convoy's civilian tally is short; witness inspection before armed docking begins."
+            },
+            "deepId": {
+              "value": "events.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.3",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Cabin Reply"
+            },
+            "description": {
+              "value": "Cabin Reply: a wreck assumed empty answers; stop cutting or isolate the endangered section."
+            },
+            "deepId": {
+              "value": "events.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.4",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Ferry Lift Jam"
+            },
+            "description": {
+              "value": "Ferry Lift Jam: ammunition blocks the evacuation lift; reroute cargo or spend reactor on a manual release."
+            },
+            "deepId": {
+              "value": "events.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.5",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Fuel Label Challenge"
+            },
+            "description": {
+              "value": "Fuel Label Challenge: a clerk identifies mislabeled canisters; compare originals or pressure-test a sample."
+            },
+            "deepId": {
+              "value": "events.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.6",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Forged Scrap Tag"
+            },
+            "description": {
+              "value": "Forged Scrap Tag: a salvage rival declares occupied cabins abandoned; produce the wake record or escort a witness."
+            },
+            "deepId": {
+              "value": "events.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.7",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Shield Pulse Surge"
+            },
+            "description": {
+              "value": "Shield Pulse Surge: a maximum shot will draw a second threat; narrow the arc or move the target into an empty basin."
+            },
+            "deepId": {
+              "value": "events.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.8",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Plant Alarm"
+            },
+            "description": {
+              "value": "Plant Alarm: armed docking shakes the oxygen pumps; require neutral repairs or split the convoy outside."
+            },
+            "deepId": {
+              "value": "events.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.9",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Core Heat Rise"
+            },
+            "description": {
+              "value": "Core Heat Rise: cutting tools overload life support; cool the core or pause salvage under guard."
+            },
+            "deepId": {
+              "value": "events.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.10",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Public Target Map"
+            },
+            "description": {
+              "value": "Public Target Map: residents demand the firing limits; disclose the safe arc or agree to civilian marking crews."
+            },
+            "deepId": {
+              "value": "events.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.11",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Dock Seal Dispute"
+            },
+            "description": {
+              "value": "Dock Seal Dispute: both military orders conflict; use a witnessed count or negotiate a shared temporary warrant."
+            },
+            "deepId": {
+              "value": "events.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.12",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Second Frame Answer"
+            },
+            "description": {
+              "value": "Second Frame Answer: a neighboring wreck wakes; relay the commons charter or provide an unarmed departure route."
+            },
+            "deepId": {
+              "value": "events.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.13",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Shelter Stair Collapse"
+            },
+            "description": {
+              "value": "Shelter Stair Collapse: patients cannot use the stairs; secure the ferry ramp or spend time carrying them individually."
+            },
+            "deepId": {
+              "value": "events.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.14",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Pressure Window"
+            },
+            "description": {
+              "value": "Pressure Window: the canisters can be tested now; assign a diver or trust a public cross-check of seals."
+            },
+            "deepId": {
+              "value": "events.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.15",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Memory Alarm"
+            },
+            "description": {
+              "value": "Memory Alarm: a abandoned tag triggers the sentry; remove it or replay the occupied-cabin protocol."
+            },
+            "deepId": {
+              "value": "events.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.16",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Rainfront Arrival"
+            },
+            "description": {
+              "value": "Rainfront Arrival: radar loses the threat; use low-power beacons or send a exposed observer frame."
+            },
+            "deepId": {
+              "value": "events.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.17",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Civilian Vote"
+            },
+            "description": {
+              "value": "Civilian Vote: habitats debate the charter; show actual air reserves or guarantee a neutral repair crew."
+            },
+            "deepId": {
+              "value": "events.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.18",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Salvage Debt Call"
+            },
+            "description": {
+              "value": "Salvage Debt Call: a rival demands promised scrap; offer verified unoccupied hull or repay later under witness."
+            },
+            "deepId": {
+              "value": "events.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.19",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Pylon Break"
+            },
+            "description": {
+              "value": "Pylon Break: the ferry field flickers; bypass the relay or escort boats through a slower coastal route."
+            },
+            "deepId": {
+              "value": "events.19"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.20",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Convoy Escape Order"
+            },
+            "description": {
+              "value": "Convoy Escape Order: a officer orders departure with the air; challenge authority or block the fuel lane without firing."
+            },
+            "deepId": {
+              "value": "events.20"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.21",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Coolant Offer"
+            },
+            "description": {
+              "value": "Coolant Offer: an old pilot brings supplies; record the debt or seek a slower free repair."
+            },
+            "deepId": {
+              "value": "events.21"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.22",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Threat Turns Inland"
+            },
+            "description": {
+              "value": "Threat Turns Inland: the lure overshoots; move the beacon or lower the shield under a rescue escort."
+            },
+            "deepId": {
+              "value": "events.22"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.23",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Pump Crew Walkout"
+            },
+            "description": {
+              "value": "Pump Crew Walkout: maintenance refuses armed oversight; clear the bay or demonstrate an enforceable neutral corridor."
+            },
+            "deepId": {
+              "value": "events.23"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.24",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Cabin Consent"
+            },
+            "description": {
+              "value": "Cabin Consent: woken crew rejects the tow plan; adapt the route or keep the giant safely stationary."
+            },
+            "deepId": {
+              "value": "events.24"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.25",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Final Evacuation Count"
+            },
+            "description": {
+              "value": "Final Evacuation Count: a shelter remains missing; verify ferry manifests before any large shot."
+            },
+            "deepId": {
+              "value": "events.25"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.26",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Air Sharing Deadline"
+            },
+            "description": {
+              "value": "Air Sharing Deadline: the habitats need a signed distribution order; publish quotas or delay military transfers."
+            },
+            "deepId": {
+              "value": "events.26"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.27",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Giant Departure"
+            },
+            "description": {
+              "value": "Giant Departure: the safe yard is crowded; negotiate right of passage or brace the wreck until morning."
+            },
+            "deepId": {
+              "value": "events.27"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.28",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Aftershock Flood"
+            },
+            "description": {
+              "value": "Aftershock Flood: the seawall leaks after the narrow shot; share repair frames or evacuate the lower streets."
+            },
+            "deepId": {
+              "value": "events.28"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.29",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Quota Witness Arrives"
+            },
+            "description": {
+              "value": "Quota Witness Arrives: the duplicate ledger becomes public; protect the clerk and establish a visible appeals process."
+            },
+            "deepId": {
+              "value": "events.29"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.events.30",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Commons Claims"
+            },
+            "description": {
+              "value": "Commons Claims: salvagers ask what remains available; mark occupied exclusions and agree to monitored future salvage."
+            },
+            "deepId": {
+              "value": "events.30"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-scenes-1": {
+            "template": "mecha.deep.scenes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-scenes-2": {
+            "template": "mecha.deep.scenes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-scenes-3": {
+            "template": "mecha.deep.scenes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-scenes-4": {
+            "template": "mecha.deep.scenes.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-scenes-5": {
+            "template": "mecha.deep.scenes.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-scenes-6": {
+            "template": "mecha.deep.scenes.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-scenes-7": {
+            "template": "mecha.deep.scenes.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-scenes-8": {
+            "template": "mecha.deep.scenes.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-scenes-9": {
+            "template": "mecha.deep.scenes.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-scenes-10": {
+            "template": "mecha.deep.scenes.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-scenes-11": {
+            "template": "mecha.deep.scenes.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-scenes-12": {
+            "template": "mecha.deep.scenes.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-scenes-13": {
+            "template": "mecha.deep.scenes.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-scenes-14": {
+            "template": "mecha.deep.scenes.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-scenes-15": {
+            "template": "mecha.deep.scenes.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-scenes-16": {
+            "template": "mecha.deep.scenes.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-scenes-17": {
+            "template": "mecha.deep.scenes.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-scenes-18": {
+            "template": "mecha.deep.scenes.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-events-1": {
+            "template": "mecha.deep.events.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-events-2": {
+            "template": "mecha.deep.events.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-events-3": {
+            "template": "mecha.deep.events.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-events-4": {
+            "template": "mecha.deep.events.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-events-5": {
+            "template": "mecha.deep.events.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-events-6": {
+            "template": "mecha.deep.events.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-events-7": {
+            "template": "mecha.deep.events.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-events-8": {
+            "template": "mecha.deep.events.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-events-9": {
+            "template": "mecha.deep.events.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-events-10": {
+            "template": "mecha.deep.events.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-events-11": {
+            "template": "mecha.deep.events.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-events-12": {
+            "template": "mecha.deep.events.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-events-13": {
+            "template": "mecha.deep.events.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-events-14": {
+            "template": "mecha.deep.events.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-events-15": {
+            "template": "mecha.deep.events.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-events-16": {
+            "template": "mecha.deep.events.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-events-17": {
+            "template": "mecha.deep.events.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-events-18": {
+            "template": "mecha.deep.events.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-events-19": {
+            "template": "mecha.deep.events.19",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-events-20": {
+            "template": "mecha.deep.events.20",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-events-21": {
+            "template": "mecha.deep.events.21",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-events-22": {
+            "template": "mecha.deep.events.22",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-events-23": {
+            "template": "mecha.deep.events.23",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-events-24": {
+            "template": "mecha.deep.events.24",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-events-25": {
+            "template": "mecha.deep.events.25",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-events-26": {
+            "template": "mecha.deep.events.26",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-events-27": {
+            "template": "mecha.deep.events.27",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-events-28": {
+            "template": "mecha.deep.events.28",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-events-29": {
+            "template": "mecha.deep.events.29",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-events-30": {
+            "template": "mecha.deep.events.30",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,3763 @@
+{
+  "schemaVersion": "1",
+  "id": "mecha-kaiju",
+  "genres": [
+    "science fiction",
+    "action"
+  ],
+  "tones": [
+    "heroic",
+    "intense",
+    "emotional"
+  ],
+  "complexity": "advanced",
+  "recommendedPlayers": {
+    "min": 2,
+    "max": 6
+  },
+  "gameLoop": [
+    {
+      "id": "alarm",
+      "label": "Identify threatened shelters missing air or inhabited wreck sections",
+      "ruleRefs": [
+        "check:systems",
+        "action:recover"
+      ]
+    },
+    {
+      "id": "machine-preparation",
+      "label": "Protect work bays and choose safe reactor and heat expenditure",
+      "ruleRefs": [
+        "check:force",
+        "action:overdrive"
+      ]
+    },
+    {
+      "id": "operation",
+      "label": "Evacuate verify air access or tow a consenting living frame",
+      "ruleRefs": [
+        "check:bond",
+        "resource:reactor"
+      ]
+    },
+    {
+      "id": "damage-and-bonds",
+      "label": "Record district repairs delivered reserves and protected crew choices",
+      "ruleRefs": [
+        "progression:renown",
+        "action:cool-down"
+      ]
+    }
+  ],
+  "patterns": [
+    {
+      "id": "defense-metropolis",
+      "name": "Defense Metropolis",
+      "summary": "A coastal shield threatens its own civilian shelters. Evacuate the lower city, mark a narrow firing arc and face the actual cost of defense.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    },
+    {
+      "id": "colony-rebellion",
+      "name": "Colony Rebellion",
+      "summary": "A fuel convoy conceals civilian air. Verify quotas, protect neutral repairs and win independent access without destroying shared life support.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    },
+    {
+      "id": "machine-wreck-frontier",
+      "name": "Machine-Wreck Frontier",
+      "summary": "A giant marked for scrap still carries living pilots. Wake its crew, negotiate salvage consent and find a route for two answering frames.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    }
+  ],
+  "campaignKits": [
+    {
+      "id": "kit.defense-metropolis",
+      "name": "Defense Metropolis: The Narrow Arc",
+      "summary": "A three to four hour Defense Metropolis game: A coastal shield threatens its own civilian shelters. Evacuate the lower city, mark a narrow firing arc and face the actual cost of defense.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "defense-metropolis"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.1",
+      "sceneIds": [
+        "scenes.1",
+        "scenes.4",
+        "scenes.7",
+        "scenes.10",
+        "scenes.13",
+        "scenes.16"
+      ],
+      "npcIds": [
+        "npcs.1",
+        "npcs.4",
+        "npcs.7"
+      ],
+      "locationIds": [
+        "locations.1",
+        "locations.4",
+        "locations.7"
+      ],
+      "rewardIds": [
+        "items.1",
+        "items.4"
+      ],
+      "gmGuidance": [
+        "Begin with shelter doors locked according to a obsolete map.",
+        "Show real ferry capacity ammunition traffic and no-fire boundaries.",
+        "Provide a narrow arc low-power lure and slower coastal escort.",
+        "Record who was saved and who repairs the damaged levee."
+      ],
+      "readyCharacterIds": [
+        "archetypes.1",
+        "archetypes.4"
+      ]
+    },
+    {
+      "id": "kit.colony-rebellion",
+      "name": "Colony Rebellion: A Charter for Breath",
+      "summary": "A three to four hour Colony Rebellion game: A fuel convoy conceals civilian air. Verify quotas, protect neutral repairs and win independent access without destroying shared life support.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "colony-rebellion"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.2",
+      "sceneIds": [
+        "scenes.2",
+        "scenes.5",
+        "scenes.8",
+        "scenes.11",
+        "scenes.14",
+        "scenes.17"
+      ],
+      "npcIds": [
+        "npcs.2",
+        "npcs.5",
+        "npcs.8"
+      ],
+      "locationIds": [
+        "locations.2",
+        "locations.5",
+        "locations.8"
+      ],
+      "rewardIds": [
+        "items.2",
+        "items.5"
+      ],
+      "gmGuidance": [
+        "Show a civilian air deficit while the convoy is labeled military fuel.",
+        "Make the duplicate ledger seals and pressure test equally valid evidence routes.",
+        "Protect neutral workers and do not require allegiance or plant destruction.",
+        "Record delivered reserves independent custody and a usable appeal."
+      ],
+      "readyCharacterIds": [
+        "archetypes.2",
+        "archetypes.5"
+      ]
+    },
+    {
+      "id": "kit.machine-wreck-frontier",
+      "name": "Machine-Wreck Frontier: The Giant Answers",
+      "summary": "A three to four hour Machine-Wreck Frontier game: A giant marked for scrap still carries living pilots. Wake its crew, negotiate salvage consent and find a route for two answering frames.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "machine-wreck-frontier"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.3",
+      "sceneIds": [
+        "scenes.3",
+        "scenes.6",
+        "scenes.9",
+        "scenes.12",
+        "scenes.15",
+        "scenes.18"
+      ],
+      "npcIds": [
+        "npcs.3",
+        "npcs.6",
+        "npcs.9"
+      ],
+      "locationIds": [
+        "locations.3",
+        "locations.6",
+        "locations.9"
+      ],
+      "rewardIds": [
+        "items.3",
+        "items.6"
+      ],
+      "gmGuidance": [
+        "Begin with a living cabin signal before the first salvage cut.",
+        "Mark occupied sections weapons and life support as separate systems.",
+        "Offer consented salvage deferred debts and a safe stationary alternative.",
+        "Let awakened crews choose routes and revocable commons terms."
+      ],
+      "readyCharacterIds": [
+        "archetypes.3",
+        "archetypes.6"
+      ]
+    }
+  ],
+  "content": {
+    "factions": [
+      {
+        "id": "factions.1",
+        "name": "Harbor Shield Assembly",
+        "description": "Harbor Shield Assembly: must evacuate the lower city before firing a shield that floods its own shelters.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "mecha.factions.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Harbor Shield Assembly: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.2",
+        "name": "Free Orbit Union",
+        "description": "Free Orbit Union: seeks civilian independence without burning the colony's shared oxygen plant.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "mecha.factions.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Free Orbit Union: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.3",
+        "name": "Wreck Commons",
+        "description": "Wreck Commons: salvages sleeping frames under an agreement to leave occupied wrecks intact.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "mecha.factions.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Wreck Commons: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.4",
+        "name": "District Ferry Crew",
+        "description": "District Ferry Crew: will open evacuation lanes if defense command shares its remaining shield capacity.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "mecha.factions.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "District Ferry Crew: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.5",
+        "name": "Life Support Cooperative",
+        "description": "Life Support Cooperative: can verify oxygen quotas hidden in the military requisition.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "mecha.factions.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Life Support Cooperative: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.6",
+        "name": "Quiet Core Custodians",
+        "description": "Quiet Core Custodians: recognizes that the largest wreck is still carrying a living crew.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "mecha.factions.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Quiet Core Custodians: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.7",
+        "name": "Coastal Frame Command",
+        "description": "Coastal Frame Command: holds an outdated targeting order that treats inhabited levees as expendable.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.7"
+          }
+        ],
+        "localeKey": "mecha.factions.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Coastal Frame Command: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.8",
+        "name": "Independent Maintenance Circle",
+        "description": "Independent Maintenance Circle: can repair either side's frames if pilots protect its neutral work bays.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.11"
+          }
+        ],
+        "localeKey": "mecha.factions.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Independent Maintenance Circle: map schematic"
+          }
+        ]
+      }
+    ],
+    "locations": [
+      {
+        "id": "locations.1",
+        "name": "Floodgate District",
+        "description": "Floodgate District: the first alarm closes shelter doors on the wrong side of the seawall.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "mecha.locations.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Floodgate District: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.2",
+        "name": "Orbital Oxygen Dock",
+        "description": "Orbital Oxygen Dock: a military fuel convoy masks missing civilian air canisters.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "mecha.locations.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Orbital Oxygen Dock: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.3",
+        "name": "Sleeping Frame Basin",
+        "description": "Sleeping Frame Basin: an apparently abandoned giant broadcasts an inhabited-cabin signal.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "mecha.locations.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Sleeping Frame Basin: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.4",
+        "name": "Ferry Lift Junction",
+        "description": "Ferry Lift Junction: evacuation competes with ammunition transport on the same lift.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "mecha.locations.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Ferry Lift Junction: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.5",
+        "name": "Quota Archive",
+        "description": "Quota Archive: air distribution records reveal why the colony can no longer breathe safely.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "mecha.locations.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Quota Archive: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.6",
+        "name": "Crew Memory Vault",
+        "description": "Crew Memory Vault: old rescue protocols prove the wreck inhabitants never consented to salvage.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "mecha.locations.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Crew Memory Vault: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.7",
+        "name": "Outer Shield Pylon",
+        "description": "Outer Shield Pylon: a damaged relay can be redirected away from inhabited lower streets.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "mecha.locations.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Outer Shield Pylon: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.8",
+        "name": "Neutral Repair Bay",
+        "description": "Neutral Repair Bay: both factions need its only pressure-tested docking arm.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "mecha.locations.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Neutral Repair Bay: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.9",
+        "name": "Core Access Bridge",
+        "description": "Core Access Bridge: salvagers can isolate weapons while leaving life support awake.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.3"
+          }
+        ],
+        "localeKey": "mecha.locations.9",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Core Access Bridge: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.10",
+        "name": "Highwater Shelter",
+        "description": "Highwater Shelter: the defense planner can see exactly whom a full-power shot would displace.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.4"
+          }
+        ],
+        "localeKey": "mecha.locations.10",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Highwater Shelter: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.11",
+        "name": "Habitat Transfer Ring",
+        "description": "Habitat Transfer Ring: civilian tug crews offer a third route beyond surrender or reactor sabotage.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.8"
+          }
+        ],
+        "localeKey": "mecha.locations.11",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Habitat Transfer Ring: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.12",
+        "name": "Sunken Signal Yard",
+        "description": "Sunken Signal Yard: the sleeping frame can depart after its inhabited sections are secured.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.12"
+          }
+        ],
+        "localeKey": "mecha.locations.12",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Sunken Signal Yard: location schematic"
+          }
+        ]
+      }
+    ],
+    "npcs": [
+      {
+        "id": "npcs.1",
+        "name": "Pilot Ren Sable",
+        "description": "Pilot Ren Sable: offers a narrow shot if someone independently marks the civilian shelter limits.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "mecha.npcs.1",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Pilot Ren Sable: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.2",
+        "name": "Mechanic Jo Venn",
+        "description": "Mechanic Jo Venn: can separate air freight from military fuel at the cost of a slower departure.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "mecha.npcs.2",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Mechanic Jo Venn: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.3",
+        "name": "Custodian Mira Coil",
+        "description": "Custodian Mira Coil: asks that the sleeping crew be awakened before their frame is dismantled.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "mecha.npcs.3",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Custodian Mira Coil: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.4",
+        "name": "Ferry Captain Nera",
+        "description": "Ferry Captain Nera: will carry evacuees first if pilots keep the ammunition road clear.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "mecha.npcs.4",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Ferry Captain Nera: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.5",
+        "name": "Quota Clerk Tomas",
+        "description": "Quota Clerk Tomas: kept a duplicate air ledger and needs a safe place to testify.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "mecha.npcs.5",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Quota Clerk Tomas: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.6",
+        "name": "Salvager Ash Kit",
+        "description": "Salvager Ash Kit: knows an unarmed core route but has already sold its coordinates.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "mecha.npcs.6",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Salvager Ash Kit: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.7",
+        "name": "Shield Operator Lina",
+        "description": "Shield Operator Lina: can lower the coastal field long enough for ferries to cross.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "mecha.npcs.7",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Shield Operator Lina: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.8",
+        "name": "Union Envoy Eri",
+        "description": "Union Envoy Eri: will negotiate verified civilian air access without pledging military allegiance.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "mecha.npcs.8",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Union Envoy Eri: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.9",
+        "name": "Wreck Resident Sol",
+        "description": "Wreck Resident Sol: can identify living cabins and false salvage markers.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "mecha.npcs.9",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Wreck Resident Sol: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.10",
+        "name": "Shelter Medic Dara",
+        "description": "Shelter Medic Dara: counts patients who cannot survive the emergency stair climb.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "mecha.npcs.10",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Shelter Medic Dara: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.11",
+        "name": "Convoy Pilot Ben",
+        "description": "Convoy Pilot Ben: mistook the requisition for a real civilian rescue order.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "mecha.npcs.11",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Convoy Pilot Ben: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.12",
+        "name": "Core Historian Uri",
+        "description": "Core Historian Uri: records why the giant was left sleeping rather than destroyed.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "mecha.npcs.12",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Core Historian Uri: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.13",
+        "name": "District Marshal Vale",
+        "description": "District Marshal Vale: accepts a witnessed evacuation plan over an obsolete targeting order.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "mecha.npcs.13",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "District Marshal Vale: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.14",
+        "name": "Plant Steward Noor",
+        "description": "Plant Steward Noor: can preserve oxygen output if both factions halt armed docking.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "mecha.npcs.14",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Plant Steward Noor: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.15",
+        "name": "Rigging Lead Tess",
+        "description": "Rigging Lead Tess: can move an occupied cabin intact if the frame stays powered.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "mecha.npcs.15",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Rigging Lead Tess: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.16",
+        "name": "Cadet Pax",
+        "description": "Cadet Pax: has the latest levee map that command discarded as incomplete.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "mecha.npcs.16",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Cadet Pax: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.17",
+        "name": "Habitat Teacher Aya",
+        "description": "Habitat Teacher Aya: organizes a civilian vote on the proposed air-sharing charter.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "mecha.npcs.17",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Habitat Teacher Aya: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.18",
+        "name": "Signal Listener Ivo",
+        "description": "Signal Listener Ivo: hears a second sleeping frame answer the first.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "mecha.npcs.18",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Signal Listener Ivo: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.19",
+        "name": "Radar Watcher Sen",
+        "description": "Radar Watcher Sen: can track the threat through rain without requiring a citywide blackout.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "mecha.npcs.19",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Radar Watcher Sen: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.20",
+        "name": "Dock Guard Mel",
+        "description": "Dock Guard Mel: will inspect canisters openly if civilian observers accompany the convoy.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "mecha.npcs.20",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Dock Guard Mel: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.21",
+        "name": "Old Pilot Kade",
+        "description": "Old Pilot Kade: offers reactor coolant but insists its use be recorded.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "mecha.npcs.21",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Old Pilot Kade: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.22",
+        "name": "Water Engineer Rem",
+        "description": "Water Engineer Rem: knows which gates can open without destroying the ferry route.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "mecha.npcs.22",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Water Engineer Rem: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.23",
+        "name": "Pressure Diver Fia",
+        "description": "Pressure Diver Fia: can prove the hidden canisters are safe with one costly suit dive.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "mecha.npcs.23",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Pressure Diver Fia: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.24",
+        "name": "Commons Witness Tal",
+        "description": "Commons Witness Tal: can bind salvage crews to the newly marked inhabited exclusion zones.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "mecha.npcs.24",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Commons Witness Tal: portrait schematic"
+          }
+        ]
+      }
+    ],
+    "adversaries": [
+      {
+        "id": "adversaries.1",
+        "name": "Breakwater Colossus",
+        "description": "Breakwater Colossus: follows power surges toward the shield relay and can be lured toward an empty basin.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "mecha.adversaries.1",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Breakwater Colossus: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.2",
+        "name": "Requisition Frame",
+        "description": "Requisition Frame: blocks civilian air traffic until its command seal is challenged.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "mecha.adversaries.2",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Requisition Frame: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.3",
+        "name": "Claim Cutter",
+        "description": "Claim Cutter: cuts sleeping cabins loose for scrap without checking occupancy.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "mecha.adversaries.3",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Claim Cutter: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.4",
+        "name": "Flood Patrol Drone",
+        "description": "Flood Patrol Drone: seals evacuation gates according to an obsolete flood map.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "mecha.adversaries.4",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Flood Patrol Drone: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.5",
+        "name": "Dock Clamp Walker",
+        "description": "Dock Clamp Walker: holds the oxygen convoy in place under military priority rules.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "mecha.adversaries.5",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Dock Clamp Walker: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.6",
+        "name": "Core Leech Swarm",
+        "description": "Core Leech Swarm: draws heat from living cabins and scatters when a safe coolant route opens.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "mecha.adversaries.6",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Core Leech Swarm: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.7",
+        "name": "Battery Siege Frame",
+        "description": "Battery Siege Frame: fires across ferry lanes unless its operators receive a verified safe arc.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.7"
+          }
+        ],
+        "localeKey": "mecha.adversaries.7",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Battery Siege Frame: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.8",
+        "name": "Plant Boarding Rig",
+        "description": "Plant Boarding Rig: threatens the air pumps that both factions need alive.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.11"
+          }
+        ],
+        "localeKey": "mecha.adversaries.8",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Plant Boarding Rig: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.9",
+        "name": "Salvage Anchor Beast",
+        "description": "Salvage Anchor Beast: pins the wreck to a hazardous dredging trench.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.3"
+          }
+        ],
+        "localeKey": "mecha.adversaries.9",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Salvage Anchor Beast: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.10",
+        "name": "Storm Echo Kaiju",
+        "description": "Storm Echo Kaiju: mistakes the shield pulse for a mating call and attacks the pylon.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.4"
+          }
+        ],
+        "localeKey": "mecha.adversaries.10",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Storm Echo Kaiju: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.11",
+        "name": "Quota Enforcement Suit",
+        "description": "Quota Enforcement Suit: seizes air canisters that the civilian ledger identifies as shared property.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.8"
+          }
+        ],
+        "localeKey": "mecha.adversaries.11",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Quota Enforcement Suit: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.12",
+        "name": "Memory Sentry",
+        "description": "Memory Sentry: attacks anyone carrying a forged abandoned-wreck tag.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.12"
+          }
+        ],
+        "localeKey": "mecha.adversaries.12",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Memory Sentry: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.13",
+        "name": "Levee Crusher",
+        "description": "Levee Crusher: breaks weak concrete but avoids the low-power channel beacons.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "mecha.adversaries.13",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Levee Crusher: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.14",
+        "name": "Convoy Pursuit Frame",
+        "description": "Convoy Pursuit Frame: can be delayed by neutral inspection instead of destroyed.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "mecha.adversaries.14",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Convoy Pursuit Frame: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.15",
+        "name": "Dormant Hull Guardian",
+        "description": "Dormant Hull Guardian: wakes if an occupied cabin loses its power feed.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "mecha.adversaries.15",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Dormant Hull Guardian: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.16",
+        "name": "Overcharged Shield Titan",
+        "description": "Overcharged Shield Titan: vents dangerous heat when command insists on maximum output.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "mecha.adversaries.16",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Overcharged Shield Titan: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.17",
+        "name": "Fuel Strike Drone",
+        "description": "Fuel Strike Drone: cannot distinguish fuel tanks from oxygen storage without an updated target list.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "mecha.adversaries.17",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Fuel Strike Drone: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.18",
+        "name": "Scrap Crown Giant",
+        "description": "Scrap Crown Giant: collects wreckage including inhabited sections unless its path is redirected.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "mecha.adversaries.18",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Scrap Crown Giant: creature schematic"
+          }
+        ]
+      }
+    ],
+    "items": [
+      {
+        "id": "items.1",
+        "name": "Shelter Boundary Beacon",
+        "description": "Shelter Boundary Beacon: marks the no-fire arc so a narrow shot can protect the evacuation route.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "mecha.items.1",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Shelter Boundary Beacon: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.2",
+        "name": "Duplicate Air Ledger",
+        "description": "Duplicate Air Ledger: records civilian ownership of canisters labeled military fuel.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "mecha.items.2",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Duplicate Air Ledger: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.3",
+        "name": "Occupied Cabin Map",
+        "description": "Occupied Cabin Map: identifies sleeping crew sections that cannot safely be detached.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "mecha.items.3",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Occupied Cabin Map: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.4",
+        "name": "Ferry Priority Token",
+        "description": "Ferry Priority Token: moves patients before ammunition if a dispatcher witnesses its use.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "mecha.items.4",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Ferry Priority Token: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.5",
+        "name": "Pressure Test Seal",
+        "description": "Pressure Test Seal: proves civilian canisters are safe without revealing a hidden habitat location.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "mecha.items.5",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Pressure Test Seal: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.6",
+        "name": "Neutral Salvage Charter",
+        "description": "Neutral Salvage Charter: allows unoccupied scrap removal while protecting powered cabins.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "mecha.items.6",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Neutral Salvage Charter: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.7",
+        "name": "Low Power Lure",
+        "description": "Low Power Lure: draws the coastal threat away without pulsing the whole shield.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "mecha.items.7",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Low Power Lure: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.8",
+        "name": "Open Inspection Camera",
+        "description": "Open Inspection Camera: lets both sides verify the same air manifest.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "mecha.items.8",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Open Inspection Camera: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.9",
+        "name": "Core Cooling Hose",
+        "description": "Core Cooling Hose: reduces heat while preserving crew life support.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.3"
+          }
+        ],
+        "localeKey": "mecha.items.9",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Core Cooling Hose: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.10",
+        "name": "Damaged Targeting Order",
+        "description": "Damaged Targeting Order: shows that the old evacuation map no longer matches the city.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.4"
+          }
+        ],
+        "localeKey": "mecha.items.10",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Damaged Targeting Order: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.11",
+        "name": "Civilian Dock Warrant",
+        "description": "Civilian Dock Warrant: permits an independent convoy escort rather than forced military service.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.8"
+          }
+        ],
+        "localeKey": "mecha.items.11",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Civilian Dock Warrant: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.12",
+        "name": "Unarmed Access Key",
+        "description": "Unarmed Access Key: opens the sleeping frame's bridge while leaving its weapons isolated.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.12"
+          }
+        ],
+        "localeKey": "mecha.items.12",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Unarmed Access Key: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.13",
+        "name": "Shield Bypass Coupler",
+        "description": "Shield Bypass Coupler: restores the ferry corridor at the price of reduced outer field strength.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.13"
+          }
+        ],
+        "localeKey": "mecha.items.13",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Shield Bypass Coupler: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.14",
+        "name": "Habitat Transfer Harness",
+        "description": "Habitat Transfer Harness: moves people through the repair ring without damaging the oxygen plant.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.17"
+          }
+        ],
+        "localeKey": "mecha.items.14",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Habitat Transfer Harness: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.15",
+        "name": "Crew Wake Protocol",
+        "description": "Crew Wake Protocol: asks the sleepers for consent before rerouting their frame.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.21"
+          }
+        ],
+        "localeKey": "mecha.items.15",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Crew Wake Protocol: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.16",
+        "name": "Highwater Medical Pack",
+        "description": "Highwater Medical Pack: stabilizes shelter patients during the slower ferry crossing.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.22"
+          }
+        ],
+        "localeKey": "mecha.items.16",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Highwater Medical Pack: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.17",
+        "name": "Shared Pump Spare",
+        "description": "Shared Pump Spare: repairs life support if maintenance workers keep both armed crews outside.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.2"
+          }
+        ],
+        "localeKey": "mecha.items.17",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Shared Pump Spare: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.18",
+        "name": "Living Cabin Brace",
+        "description": "Living Cabin Brace: supports an inhabited section during safe salvage work.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.6"
+          }
+        ],
+        "localeKey": "mecha.items.18",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Living Cabin Brace: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.19",
+        "name": "Rain Radar Lens",
+        "description": "Rain Radar Lens: tracks the colossus without powering the old shield lure.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.7"
+          }
+        ],
+        "localeKey": "mecha.items.19",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Rain Radar Lens: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.20",
+        "name": "Canister Marking Chalk",
+        "description": "Canister Marking Chalk: makes quota fraud visible during a public count.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.11"
+          }
+        ],
+        "localeKey": "mecha.items.20",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Canister Marking Chalk: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.21",
+        "name": "Commons Signal Flag",
+        "description": "Commons Signal Flag: calls a pause to salvage whenever a living cabin answers.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.15"
+          }
+        ],
+        "localeKey": "mecha.items.21",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Commons Signal Flag: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.22",
+        "name": "Coolant Cell",
+        "description": "Coolant Cell: restores a spent reactor reserve but does not erase heat automatically.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.16"
+          }
+        ],
+        "localeKey": "mecha.items.22",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Coolant Cell: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.23",
+        "name": "Pressure Suit Patch",
+        "description": "Pressure Suit Patch: allows one test dive before the docking deadline.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.20"
+          }
+        ],
+        "localeKey": "mecha.items.23",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Pressure Suit Patch: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.24",
+        "name": "Rescue Tow Cable",
+        "description": "Rescue Tow Cable: guides the sleeping frame through the signal yard without forcing its pilots.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.24"
+          }
+        ],
+        "localeKey": "mecha.items.24",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Rescue Tow Cable: item schematic"
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "id": "events.1",
+        "name": "False Shelter Lock",
+        "description": "False Shelter Lock: gates close in the lower district; open a safe lane or publicly change the evacuation order.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "mecha.events.1",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "False Shelter Lock: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.2",
+        "name": "Missing Air Count",
+        "description": "Missing Air Count: the convoy's civilian tally is short; witness inspection before armed docking begins.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "mecha.events.2",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Missing Air Count: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.3",
+        "name": "Cabin Reply",
+        "description": "Cabin Reply: a wreck assumed empty answers; stop cutting or isolate the endangered section.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "mecha.events.3",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Cabin Reply: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.4",
+        "name": "Ferry Lift Jam",
+        "description": "Ferry Lift Jam: ammunition blocks the evacuation lift; reroute cargo or spend reactor on a manual release.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "mecha.events.4",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Ferry Lift Jam: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.5",
+        "name": "Fuel Label Challenge",
+        "description": "Fuel Label Challenge: a clerk identifies mislabeled canisters; compare originals or pressure-test a sample.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "mecha.events.5",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Fuel Label Challenge: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.6",
+        "name": "Forged Scrap Tag",
+        "description": "Forged Scrap Tag: a salvage rival declares occupied cabins abandoned; produce the wake record or escort a witness.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "mecha.events.6",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Forged Scrap Tag: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.7",
+        "name": "Shield Pulse Surge",
+        "description": "Shield Pulse Surge: a maximum shot will draw a second threat; narrow the arc or move the target into an empty basin.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "mecha.events.7",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Shield Pulse Surge: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.8",
+        "name": "Plant Alarm",
+        "description": "Plant Alarm: armed docking shakes the oxygen pumps; require neutral repairs or split the convoy outside.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "mecha.events.8",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Plant Alarm: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.9",
+        "name": "Core Heat Rise",
+        "description": "Core Heat Rise: cutting tools overload life support; cool the core or pause salvage under guard.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "mecha.events.9",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Core Heat Rise: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.10",
+        "name": "Public Target Map",
+        "description": "Public Target Map: residents demand the firing limits; disclose the safe arc or agree to civilian marking crews.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "mecha.events.10",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Public Target Map: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.11",
+        "name": "Dock Seal Dispute",
+        "description": "Dock Seal Dispute: both military orders conflict; use a witnessed count or negotiate a shared temporary warrant.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "mecha.events.11",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Dock Seal Dispute: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.12",
+        "name": "Second Frame Answer",
+        "description": "Second Frame Answer: a neighboring wreck wakes; relay the commons charter or provide an unarmed departure route.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "mecha.events.12",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Second Frame Answer: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.13",
+        "name": "Shelter Stair Collapse",
+        "description": "Shelter Stair Collapse: patients cannot use the stairs; secure the ferry ramp or spend time carrying them individually.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "mecha.events.13",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Shelter Stair Collapse: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.14",
+        "name": "Pressure Window",
+        "description": "Pressure Window: the canisters can be tested now; assign a diver or trust a public cross-check of seals.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "mecha.events.14",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Pressure Window: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.15",
+        "name": "Memory Alarm",
+        "description": "Memory Alarm: a abandoned tag triggers the sentry; remove it or replay the occupied-cabin protocol.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "mecha.events.15",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Memory Alarm: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.16",
+        "name": "Rainfront Arrival",
+        "description": "Rainfront Arrival: radar loses the threat; use low-power beacons or send a exposed observer frame.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "mecha.events.16",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Rainfront Arrival: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.17",
+        "name": "Civilian Vote",
+        "description": "Civilian Vote: habitats debate the charter; show actual air reserves or guarantee a neutral repair crew.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "mecha.events.17",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Civilian Vote: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.18",
+        "name": "Salvage Debt Call",
+        "description": "Salvage Debt Call: a rival demands promised scrap; offer verified unoccupied hull or repay later under witness.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "mecha.events.18",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Salvage Debt Call: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.19",
+        "name": "Pylon Break",
+        "description": "Pylon Break: the ferry field flickers; bypass the relay or escort boats through a slower coastal route.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "mecha.events.19",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Pylon Break: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.20",
+        "name": "Convoy Escape Order",
+        "description": "Convoy Escape Order: a officer orders departure with the air; challenge authority or block the fuel lane without firing.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "mecha.events.20",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Convoy Escape Order: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.21",
+        "name": "Coolant Offer",
+        "description": "Coolant Offer: an old pilot brings supplies; record the debt or seek a slower free repair.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "mecha.events.21",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Coolant Offer: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.22",
+        "name": "Threat Turns Inland",
+        "description": "Threat Turns Inland: the lure overshoots; move the beacon or lower the shield under a rescue escort.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "mecha.events.22",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Threat Turns Inland: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.23",
+        "name": "Pump Crew Walkout",
+        "description": "Pump Crew Walkout: maintenance refuses armed oversight; clear the bay or demonstrate an enforceable neutral corridor.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "mecha.events.23",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Pump Crew Walkout: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.24",
+        "name": "Cabin Consent",
+        "description": "Cabin Consent: woken crew rejects the tow plan; adapt the route or keep the giant safely stationary.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "mecha.events.24",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Cabin Consent: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.25",
+        "name": "Final Evacuation Count",
+        "description": "Final Evacuation Count: a shelter remains missing; verify ferry manifests before any large shot.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "mecha.events.25",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Final Evacuation Count: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.26",
+        "name": "Air Sharing Deadline",
+        "description": "Air Sharing Deadline: the habitats need a signed distribution order; publish quotas or delay military transfers.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "mecha.events.26",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Air Sharing Deadline: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.27",
+        "name": "Giant Departure",
+        "description": "Giant Departure: the safe yard is crowded; negotiate right of passage or brace the wreck until morning.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "mecha.events.27",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Giant Departure: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.28",
+        "name": "Aftershock Flood",
+        "description": "Aftershock Flood: the seawall leaks after the narrow shot; share repair frames or evacuate the lower streets.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "mecha.events.28",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Aftershock Flood: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.29",
+        "name": "Quota Witness Arrives",
+        "description": "Quota Witness Arrives: the duplicate ledger becomes public; protect the clerk and establish a visible appeals process.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "mecha.events.29",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Quota Witness Arrives: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.30",
+        "name": "Commons Claims",
+        "description": "Commons Claims: salvagers ask what remains available; mark occupied exclusions and agree to monitored future salvage.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "mecha.events.30",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Commons Claims: background schematic"
+          }
+        ]
+      }
+    ],
+    "scenes": [
+      {
+        "id": "scenes.1",
+        "name": "Alarm below the Shield",
+        "description": "Alarm below the Shield: Objective: establish a safe civilian evacuation corridor. Show the obsolete shelter map and ferry demand; reroute ammunition or open the coastal ramp. Delay traps patients.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.4"
+          }
+        ],
+        "localeKey": "mecha.scenes.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Alarm below the Shield: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.2",
+        "name": "The Air Is Not Fuel",
+        "description": "The Air Is Not Fuel: Objective: verify civilian air ownership. Compare the duplicate ledger with canister seals or make a witnessed pressure test. Delay permits armed convoy departure.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "mecha.scenes.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Air Is Not Fuel: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.3",
+        "name": "Someone Lives in the Wreck",
+        "description": "Someone Lives in the Wreck: Objective: stop unsafe salvage. Listen to cabin replies or inspect intact life support; isolate the cutting rig while keeping the core powered. Delay cuts an occupied section.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.6"
+          }
+        ],
+        "localeKey": "mecha.scenes.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Someone Lives in the Wreck: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.4",
+        "name": "Ferries before Batteries",
+        "description": "Ferries before Batteries: Objective: clear the shared lift. Negotiate cargo priority or manually release its jammed hoist with reactor expense. Delay strands the medical shelter.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.7"
+          }
+        ],
+        "localeKey": "mecha.scenes.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Ferries before Batteries: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.5",
+        "name": "The Neutral Bay",
+        "description": "The Neutral Bay: Objective: protect oxygen production. Clear armed frames from maintenance or move inspection into the transfer ring. Delay reduces air available for the vote.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.8"
+          }
+        ],
+        "localeKey": "mecha.scenes.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Neutral Bay: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.6",
+        "name": "Wake without Weapons",
+        "description": "Wake without Weapons: Objective: ask the sleeping crew for consent. Use the unarmed access key or transmit the wake protocol; weapons stay isolated. Delay lets a rival claim abandoned status.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "mecha.scenes.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Wake without Weapons: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.7",
+        "name": "A Narrow Firing Arc",
+        "description": "A Narrow Firing Arc: Objective: redirect the coastal threat. Mark no-fire limits and use low-power lures or shield the ferry route while drawing it seaward. Delay damages the relay.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "mecha.scenes.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Narrow Firing Arc: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.8",
+        "name": "Canisters in Public",
+        "description": "Canisters in Public: Objective: expose quota fraud safely. Count air with habitat witnesses or escort the clerk through neutral repairs. Delay leaves civilian ownership disputed.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.11"
+          }
+        ],
+        "localeKey": "mecha.scenes.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Canisters in Public: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.9",
+        "name": "The Price of Scrap",
+        "description": "The Price of Scrap: Objective: settle the rival claim without stripping living cabins. Offer verified unoccupied hull or a witnessed deferred debt. Delay brings a claim cutter.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.12"
+          }
+        ],
+        "localeKey": "mecha.scenes.9",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Price of Scrap: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.10",
+        "name": "The Pylon Choice",
+        "description": "The Pylon Choice: Objective: keep evacuation open before defense fires. Bypass the relay for reduced field strength or take the slower coastal escort. Delay closes the narrow-shot window.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.13"
+          }
+        ],
+        "localeKey": "mecha.scenes.10",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Pylon Choice: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.11",
+        "name": "A Charter for Breath",
+        "description": "A Charter for Breath: Objective: distribute air without forced military service. Agree to public quotas and an appeals path or temporary shared custody. Delay exhausts the waiting habitat.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "mecha.scenes.11",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Charter for Breath: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.12",
+        "name": "Tow a Living Giant",
+        "description": "Tow a Living Giant: Objective: move the frame on terms its crew accepts. Negotiate the signal yard crossing or brace safely until morning. Delay overheats exposed support rigs.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.15"
+          }
+        ],
+        "localeKey": "mecha.scenes.12",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Tow a Living Giant: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.13",
+        "name": "The Last Shelter Count",
+        "description": "The Last Shelter Count: Objective: account for all civilians before the shot. Reconcile manifests or send a rescue frame to the missing shelter. Delay permits command's obsolete order.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.16"
+          }
+        ],
+        "localeKey": "mecha.scenes.13",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Last Shelter Count: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.14",
+        "name": "Independent Docking",
+        "description": "Independent Docking: Objective: secure a neutral future air corridor. Test the agreed charter against a live convoy and remove armed oversight. Delay revives requisition priority.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.17"
+          }
+        ],
+        "localeKey": "mecha.scenes.14",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Independent Docking: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.15",
+        "name": "The Second Waking",
+        "description": "The Second Waking: Objective: extend occupied protections to the neighboring giant. Relay the charter or offer an unarmed departure corridor. Delay risks two giants colliding.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "mecha.scenes.15",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Second Waking: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.16",
+        "name": "Repair after the Alarm",
+        "description": "Repair after the Alarm: Objective: record the actual cost of defending the city. Assign levee repairs and shelter restitution; reduce remaining battery capacity if needed. Delay leaves lower streets flooded.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "mecha.scenes.16",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Repair after the Alarm: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.17",
+        "name": "Habitat Ledger",
+        "description": "Habitat Ledger: Objective: verify air deliveries and civilian choice. Record each habitat's actual reserve and a visible appeal; let a minority retain independent custody. Delay hides a new shortage.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.2"
+          }
+        ],
+        "localeKey": "mecha.scenes.17",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Habitat Ledger: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.18",
+        "name": "What the Commons Keep",
+        "description": "What the Commons Keep: Objective: define consensual salvage and crew autonomy. Mark powered exclusions and unoccupied claims; living frames choose their route. Delay starts the next scrap dispute.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.3"
+          }
+        ],
+        "localeKey": "mecha.scenes.18",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "What the Commons Keep: map schematic"
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "archetypes.1",
+        "name": "Evacuation Ace",
+        "description": "Evacuation Ace: keeps a frame between rescue ferries and the threat while residents mark safe firing limits.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "mecha.archetypes.1",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Evacuation Ace: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.2",
+        "name": "Habitat Liaison",
+        "description": "Habitat Liaison: negotiates verified air access without pledging civilian crews to either armed faction.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "mecha.archetypes.2",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Habitat Liaison: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.3",
+        "name": "Wreck Listener",
+        "description": "Wreck Listener: identifies living cabins through reply patterns before a salvage tool touches the hull.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "mecha.archetypes.3",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Wreck Listener: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.4",
+        "name": "Shield Technician",
+        "description": "Shield Technician: trades maximum field strength for a evacuation corridor residents can actually cross.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "mecha.archetypes.4",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Shield Technician: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.5",
+        "name": "Neutral Bay Mechanic",
+        "description": "Neutral Bay Mechanic: repairs life support only under an enforceable clear-worksite agreement.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "mecha.archetypes.5",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Neutral Bay Mechanic: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.6",
+        "name": "Consent Archivist",
+        "description": "Consent Archivist: asks awakened pilots to choose a tow route and records revocable salvage terms.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "mecha.archetypes.6",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Consent Archivist: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.7",
+        "name": "Coastal Rescue Pilot",
+        "description": "Coastal Rescue Pilot: tracks missing shelters and accepts a delayed shot to finish the count.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "mecha.archetypes.7",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Coastal Rescue Pilot: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.8",
+        "name": "Commons Rig Lead",
+        "description": "Commons Rig Lead: braces inhabited frames and verifies which scrap is safe to remove.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "mecha.archetypes.8",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Commons Rig Lead: portrait schematic"
+          }
+        ]
+      }
+    ],
+    "progressionPaths": [
+      {
+        "id": "progressionPaths.1",
+        "name": "District Guardian",
+        "description": "District Guardian: advances through witnessed rescues and public accounting for defense damage.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.1"
+          }
+        ],
+        "localeKey": "mecha.progressionPaths.1",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "District Guardian: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.2",
+        "name": "Air Charter Keeper",
+        "description": "Air Charter Keeper: advances through verified deliveries and a usable civilian appeals path.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.5"
+          }
+        ],
+        "localeKey": "mecha.progressionPaths.2",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Air Charter Keeper: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.3",
+        "name": "Living Wreck Advocate",
+        "description": "Living Wreck Advocate: advances through consented salvage and preserved occupied cabins.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.3"
+          }
+        ],
+        "localeKey": "mecha.progressionPaths.3",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Living Wreck Advocate: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.4",
+        "name": "Narrow Arc Specialist",
+        "description": "Narrow Arc Specialist: advances by protecting ferry lanes without a maximum citywide pulse.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.1"
+          }
+        ],
+        "localeKey": "mecha.progressionPaths.4",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Narrow Arc Specialist: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.5",
+        "name": "Independent Dock Steward",
+        "description": "Independent Dock Steward: advances by maintaining neutral repairs across rival convoy demands.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.5"
+          }
+        ],
+        "localeKey": "mecha.progressionPaths.5",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Independent Dock Steward: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.6",
+        "name": "Commons Pathmaker",
+        "description": "Commons Pathmaker: advances by opening safe routes chosen by the giants' living crews.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.6"
+          }
+        ],
+        "localeKey": "mecha.progressionPaths.6",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Commons Pathmaker: item schematic"
+          }
+        ]
+      }
+    ],
+    "visualThemes": [
+      {
+        "id": "visualThemes.1",
+        "name": "Rainwall Defense Grid",
+        "description": "Rainwall Defense Grid: labels coastal shelters ferry lifts damaged pylons and safe firing arcs.",
+        "patternIds": [
+          "defense-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "mecha.visualThemes.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Rainwall Defense Grid: map schematic"
+          },
+          {
+            "role": "ui",
+            "asset": "ui/background.svg",
+            "alt": "Frame operations interface"
+          }
+        ]
+      },
+      {
+        "id": "visualThemes.2",
+        "name": "Orbital Air Network",
+        "description": "Orbital Air Network: labels civilian reserves neutral work bays and witnessed convoy transfer points.",
+        "patternIds": [
+          "colony-rebellion"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "mecha.visualThemes.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Orbital Air Network: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "visualThemes.3",
+        "name": "Living Wreck Signals",
+        "description": "Living Wreck Signals: labels powered cabins isolated weapons and safe consensual salvage zones.",
+        "patternIds": [
+          "machine-wreck-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "mecha.visualThemes.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Living Wreck Signals: map schematic"
+          }
+        ]
+      }
+    ]
+  },
+  "playToday": {
+    "patternId": "defense-metropolis",
+    "campaignKitId": "kit.defense-metropolis",
+    "visualThemeId": "visualThemes.1"
+  },
+  "localization": {
+    "sourceLocale": "en",
+    "supportedLocales": [
+      "en",
+      "ru",
+      "es",
+      "ja",
+      "zh-CN",
+      "ko"
+    ],
+    "strings": {
+      "en": {
+        "mecha.factions.1": "Harbor Shield Assembly",
+        "mecha.factions.2": "Free Orbit Union",
+        "mecha.factions.3": "Wreck Commons",
+        "mecha.factions.4": "District Ferry Crew",
+        "mecha.factions.5": "Life Support Cooperative",
+        "mecha.factions.6": "Quiet Core Custodians",
+        "mecha.factions.7": "Coastal Frame Command",
+        "mecha.factions.8": "Independent Maintenance Circle",
+        "mecha.locations.1": "Floodgate District",
+        "mecha.locations.2": "Orbital Oxygen Dock",
+        "mecha.locations.3": "Sleeping Frame Basin",
+        "mecha.locations.4": "Ferry Lift Junction",
+        "mecha.locations.5": "Quota Archive",
+        "mecha.locations.6": "Crew Memory Vault",
+        "mecha.locations.7": "Outer Shield Pylon",
+        "mecha.locations.8": "Neutral Repair Bay",
+        "mecha.locations.9": "Core Access Bridge",
+        "mecha.locations.10": "Highwater Shelter",
+        "mecha.locations.11": "Habitat Transfer Ring",
+        "mecha.locations.12": "Sunken Signal Yard",
+        "mecha.npcs.1": "Pilot Ren Sable",
+        "mecha.npcs.2": "Mechanic Jo Venn",
+        "mecha.npcs.3": "Custodian Mira Coil",
+        "mecha.npcs.4": "Ferry Captain Nera",
+        "mecha.npcs.5": "Quota Clerk Tomas",
+        "mecha.npcs.6": "Salvager Ash Kit",
+        "mecha.npcs.7": "Shield Operator Lina",
+        "mecha.npcs.8": "Union Envoy Eri",
+        "mecha.npcs.9": "Wreck Resident Sol",
+        "mecha.npcs.10": "Shelter Medic Dara",
+        "mecha.npcs.11": "Convoy Pilot Ben",
+        "mecha.npcs.12": "Core Historian Uri",
+        "mecha.npcs.13": "District Marshal Vale",
+        "mecha.npcs.14": "Plant Steward Noor",
+        "mecha.npcs.15": "Rigging Lead Tess",
+        "mecha.npcs.16": "Cadet Pax",
+        "mecha.npcs.17": "Habitat Teacher Aya",
+        "mecha.npcs.18": "Signal Listener Ivo",
+        "mecha.npcs.19": "Radar Watcher Sen",
+        "mecha.npcs.20": "Dock Guard Mel",
+        "mecha.npcs.21": "Old Pilot Kade",
+        "mecha.npcs.22": "Water Engineer Rem",
+        "mecha.npcs.23": "Pressure Diver Fia",
+        "mecha.npcs.24": "Commons Witness Tal",
+        "mecha.adversaries.1": "Breakwater Colossus",
+        "mecha.adversaries.2": "Requisition Frame",
+        "mecha.adversaries.3": "Claim Cutter",
+        "mecha.adversaries.4": "Flood Patrol Drone",
+        "mecha.adversaries.5": "Dock Clamp Walker",
+        "mecha.adversaries.6": "Core Leech Swarm",
+        "mecha.adversaries.7": "Battery Siege Frame",
+        "mecha.adversaries.8": "Plant Boarding Rig",
+        "mecha.adversaries.9": "Salvage Anchor Beast",
+        "mecha.adversaries.10": "Storm Echo Kaiju",
+        "mecha.adversaries.11": "Quota Enforcement Suit",
+        "mecha.adversaries.12": "Memory Sentry",
+        "mecha.adversaries.13": "Levee Crusher",
+        "mecha.adversaries.14": "Convoy Pursuit Frame",
+        "mecha.adversaries.15": "Dormant Hull Guardian",
+        "mecha.adversaries.16": "Overcharged Shield Titan",
+        "mecha.adversaries.17": "Fuel Strike Drone",
+        "mecha.adversaries.18": "Scrap Crown Giant",
+        "mecha.items.1": "Shelter Boundary Beacon",
+        "mecha.items.2": "Duplicate Air Ledger",
+        "mecha.items.3": "Occupied Cabin Map",
+        "mecha.items.4": "Ferry Priority Token",
+        "mecha.items.5": "Pressure Test Seal",
+        "mecha.items.6": "Neutral Salvage Charter",
+        "mecha.items.7": "Low Power Lure",
+        "mecha.items.8": "Open Inspection Camera",
+        "mecha.items.9": "Core Cooling Hose",
+        "mecha.items.10": "Damaged Targeting Order",
+        "mecha.items.11": "Civilian Dock Warrant",
+        "mecha.items.12": "Unarmed Access Key",
+        "mecha.items.13": "Shield Bypass Coupler",
+        "mecha.items.14": "Habitat Transfer Harness",
+        "mecha.items.15": "Crew Wake Protocol",
+        "mecha.items.16": "Highwater Medical Pack",
+        "mecha.items.17": "Shared Pump Spare",
+        "mecha.items.18": "Living Cabin Brace",
+        "mecha.items.19": "Rain Radar Lens",
+        "mecha.items.20": "Canister Marking Chalk",
+        "mecha.items.21": "Commons Signal Flag",
+        "mecha.items.22": "Coolant Cell",
+        "mecha.items.23": "Pressure Suit Patch",
+        "mecha.items.24": "Rescue Tow Cable",
+        "mecha.events.1": "False Shelter Lock",
+        "mecha.events.2": "Missing Air Count",
+        "mecha.events.3": "Cabin Reply",
+        "mecha.events.4": "Ferry Lift Jam",
+        "mecha.events.5": "Fuel Label Challenge",
+        "mecha.events.6": "Forged Scrap Tag",
+        "mecha.events.7": "Shield Pulse Surge",
+        "mecha.events.8": "Plant Alarm",
+        "mecha.events.9": "Core Heat Rise",
+        "mecha.events.10": "Public Target Map",
+        "mecha.events.11": "Dock Seal Dispute",
+        "mecha.events.12": "Second Frame Answer",
+        "mecha.events.13": "Shelter Stair Collapse",
+        "mecha.events.14": "Pressure Window",
+        "mecha.events.15": "Memory Alarm",
+        "mecha.events.16": "Rainfront Arrival",
+        "mecha.events.17": "Civilian Vote",
+        "mecha.events.18": "Salvage Debt Call",
+        "mecha.events.19": "Pylon Break",
+        "mecha.events.20": "Convoy Escape Order",
+        "mecha.events.21": "Coolant Offer",
+        "mecha.events.22": "Threat Turns Inland",
+        "mecha.events.23": "Pump Crew Walkout",
+        "mecha.events.24": "Cabin Consent",
+        "mecha.events.25": "Final Evacuation Count",
+        "mecha.events.26": "Air Sharing Deadline",
+        "mecha.events.27": "Giant Departure",
+        "mecha.events.28": "Aftershock Flood",
+        "mecha.events.29": "Quota Witness Arrives",
+        "mecha.events.30": "Commons Claims",
+        "mecha.scenes.1": "Alarm below the Shield",
+        "mecha.scenes.2": "The Air Is Not Fuel",
+        "mecha.scenes.3": "Someone Lives in the Wreck",
+        "mecha.scenes.4": "Ferries before Batteries",
+        "mecha.scenes.5": "The Neutral Bay",
+        "mecha.scenes.6": "Wake without Weapons",
+        "mecha.scenes.7": "A Narrow Firing Arc",
+        "mecha.scenes.8": "Canisters in Public",
+        "mecha.scenes.9": "The Price of Scrap",
+        "mecha.scenes.10": "The Pylon Choice",
+        "mecha.scenes.11": "A Charter for Breath",
+        "mecha.scenes.12": "Tow a Living Giant",
+        "mecha.scenes.13": "The Last Shelter Count",
+        "mecha.scenes.14": "Independent Docking",
+        "mecha.scenes.15": "The Second Waking",
+        "mecha.scenes.16": "Repair after the Alarm",
+        "mecha.scenes.17": "Habitat Ledger",
+        "mecha.scenes.18": "What the Commons Keep",
+        "mecha.archetypes.1": "Evacuation Ace",
+        "mecha.archetypes.2": "Habitat Liaison",
+        "mecha.archetypes.3": "Wreck Listener",
+        "mecha.archetypes.4": "Shield Technician",
+        "mecha.archetypes.5": "Neutral Bay Mechanic",
+        "mecha.archetypes.6": "Consent Archivist",
+        "mecha.archetypes.7": "Coastal Rescue Pilot",
+        "mecha.archetypes.8": "Commons Rig Lead",
+        "mecha.progressionPaths.1": "District Guardian",
+        "mecha.progressionPaths.2": "Air Charter Keeper",
+        "mecha.progressionPaths.3": "Living Wreck Advocate",
+        "mecha.progressionPaths.4": "Narrow Arc Specialist",
+        "mecha.progressionPaths.5": "Independent Dock Steward",
+        "mecha.progressionPaths.6": "Commons Pathmaker",
+        "mecha.visualThemes.1": "Rainwall Defense Grid",
+        "mecha.visualThemes.2": "Orbital Air Network",
+        "mecha.visualThemes.3": "Living Wreck Signals"
+      }
+    },
+    "fallbackLocales": [
+      "ru",
+      "es",
+      "ja",
+      "zh-CN",
+      "ko"
+    ]
+  }
+}

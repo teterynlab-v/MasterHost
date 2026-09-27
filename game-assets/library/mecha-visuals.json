@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.mecha.visuals",
+  "version": "1.0.0",
+  "type": "visuals",
+  "name": "Rainwall Frame Schematics",
+  "description": "Rainwall Frame Schematics for Defense Metropolis, Colony Rebellion, Machine-Wreck Frontier. Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.",
+  "tags": [
+    "mecha-kaiju",
+    "defense-metropolis",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Rainwall Frame Schematics for Defense Metropolis, Colony Rebellion, Machine-Wreck Frontier. Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.",
+    "highlights": [
+      "Rainwall Frame Schematics",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.mecha-kaiju"
+    ],
+    "requiresCapabilities": [
+      "setting:mecha-kaiju"
+    ],
+    "providesCapabilities": [
+      "visuals:mecha-kaiju"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.mecha.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Mecha & Kaiju original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.mecha.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 6
+  },
+  "media": [
+    {
+      "name": "mecha-kaiju/mecha-background.svg",
+      "path": "media/mecha-background.svg",
+      "role": "background",
+      "mediaType": "image/svg+xml",
+      "checksum": "1958b118e83b74e5a7e7b15293a643e9ac5ee5cc5a8892bdba8b1262f25f52c2",
+      "size": 744
+    },
+    {
+      "name": "mecha-kaiju/mecha-portrait.svg",
+      "path": "media/mecha-portrait.svg",
+      "role": "portrait",
+      "mediaType": "image/svg+xml",
+      "checksum": "a85052e186c8560a49eadc282265ebb279d4c075f4ad26583cc952dc979d102c",
+      "size": 631
+    },
+    {
+      "name": "mecha-kaiju/mecha-creature.svg",
+      "path": "media/mecha-creature.svg",
+      "role": "token",
+      "mediaType": "image/svg+xml",
+      "checksum": "e91b95eefa345e56efc1f9e917f8c4194a8f0c4e1c71ef09724a65dbd5cb194a",
+      "size": 709
+    },
+    {
+      "name": "mecha-kaiju/mecha-item.svg",
+      "path": "media/mecha-item.svg",
+      "role": "item",
+      "mediaType": "image/svg+xml",
+      "checksum": "17e98a8a4b4160ccacce06148df83778090c84fe05c55840e38e74a62a8abe10",
+      "size": 644
+    },
+    {
+      "name": "mecha-kaiju/mecha-location.svg",
+      "path": "media/mecha-location.svg",
+      "role": "location",
+      "mediaType": "image/svg+xml",
+      "checksum": "c2678fb791164aef1ec722577b765c704130abe748a58940509a40c2fccfc9a1",
+      "size": 633
+    },
+    {
+      "name": "mecha-kaiju/mecha-map.svg",
+      "path": "media/mecha-map.svg",
+      "role": "map",
+      "mediaType": "image/svg+xml",
+      "checksum": "9abaac62f38df0732c34ecdc2c743b1688a8ee4bf1fdf30b0e810da5562b8468",
+      "size": 2483
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.mecha.visuals",
+    "version": "1.0.0",
+    "name": "Rainwall Frame Schematics",
+    "description": "Rainwall Frame Schematics for Defense Metropolis, Colony Rebellion, Machine-Wreck Frontier. Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.",
+    "provides": [
+      "visuals:mecha-kaiju"
+    ],
+    "requires": [
+      "setting:mecha-kaiju"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/mecha-deep",
+        "value": {
+          "id": "mecha-deep",
+          "name": "Frame Operations",
+          "description": "Original Mecha & Kaiju operations schematics",
+          "defaults": {
+            "background": "assets/mecha-kaiju/mecha-background.svg",
+            "portrait": "assets/mecha-kaiju/mecha-portrait.svg",
+            "token": "assets/mecha-kaiju/mecha-creature.svg",
+            "item": "assets/mecha-kaiju/mecha-item.svg",
+            "location": "assets/mecha-kaiju/mecha-location.svg",
+            "map": "assets/mecha-kaiju/mecha-map.svg"
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "mecha-deep"
+  }
+}
