@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.urban.visuals",
+  "version": "1.0.0",
+  "type": "visuals",
+  "name": "After-hours Route Schematics",
+  "description": "After-hours Route Schematics for Hidden Courts, Monster Districts, Municipal Magic Conspiracy. Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.",
+  "tags": [
+    "urban-fantasy",
+    "hidden-courts",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "After-hours Route Schematics for Hidden Courts, Monster Districts, Municipal Magic Conspiracy. Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.",
+    "highlights": [
+      "After-hours Route Schematics",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.urban-fantasy"
+    ],
+    "requiresCapabilities": [
+      "setting:urban-fantasy"
+    ],
+    "providesCapabilities": [
+      "visuals:urban-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.urban.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Urban Fantasy original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.urban.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 6
+  },
+  "media": [
+    {
+      "name": "urban-fantasy/urban-background.svg",
+      "path": "media/urban-background.svg",
+      "role": "background",
+      "mediaType": "image/svg+xml",
+      "checksum": "bc9b7467ad0e0de29cf0a822d3a40817a9089e41500063f581f4fe0c9c884a8a",
+      "size": 740
+    },
+    {
+      "name": "urban-fantasy/urban-portrait.svg",
+      "path": "media/urban-portrait.svg",
+      "role": "portrait",
+      "mediaType": "image/svg+xml",
+      "checksum": "1715b84ca11682baaf32fa0a96a33ecacc117be7b956a280536231c305054f2a",
+      "size": 627
+    },
+    {
+      "name": "urban-fantasy/urban-creature.svg",
+      "path": "media/urban-creature.svg",
+      "role": "token",
+      "mediaType": "image/svg+xml",
+      "checksum": "074efe395487c522fa0476ceffc487653136400485880ed426fc951f333f9bf4",
+      "size": 705
+    },
+    {
+      "name": "urban-fantasy/urban-item.svg",
+      "path": "media/urban-item.svg",
+      "role": "item",
+      "mediaType": "image/svg+xml",
+      "checksum": "cc8ed046c9ea3909812185b27a27ddda34ae557e611d5714f8761e6a7a692637",
+      "size": 640
+    },
+    {
+      "name": "urban-fantasy/urban-location.svg",
+      "path": "media/urban-location.svg",
+      "role": "location",
+      "mediaType": "image/svg+xml",
+      "checksum": "22fdb9a257164be0a971ffe7a208be9759a4e53e258cbd26399b51f540c7ff1e",
+      "size": 629
+    },
+    {
+      "name": "urban-fantasy/urban-map.svg",
+      "path": "media/urban-map.svg",
+      "role": "map",
+      "mediaType": "image/svg+xml",
+      "checksum": "1e02d745c616d2ad7bea0fc87832862ec42d3f21b43dabed4ec13c79b99d4e23",
+      "size": 2462
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.urban.visuals",
+    "version": "1.0.0",
+    "name": "After-hours Route Schematics",
+    "description": "After-hours Route Schematics for Hidden Courts, Monster Districts, Municipal Magic Conspiracy. Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.",
+    "provides": [
+      "visuals:urban-fantasy"
+    ],
+    "requires": [
+      "setting:urban-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/urban-deep",
+        "value": {
+          "id": "urban-deep",
+          "name": "City Navigation",
+          "description": "Original Urban Fantasy navigation schematics",
+          "defaults": {
+            "background": "assets/urban-fantasy/urban-background.svg",
+            "portrait": "assets/urban-fantasy/urban-portrait.svg",
+            "token": "assets/urban-fantasy/urban-creature.svg",
+            "item": "assets/urban-fantasy/urban-item.svg",
+            "location": "assets/urban-fantasy/urban-location.svg",
+            "map": "assets/urban-fantasy/urban-map.svg"
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "urban-deep"
+  }
+}

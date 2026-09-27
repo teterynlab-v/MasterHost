@@ -24,7 +24,7 @@ describe("M17 universe catalog experience", () => {
   });
 
   it("filters generically by search, genre, tone, and complexity", () => {
-    expect(filterUniverseCatalog(items, { query: "machine", genre: "", tone: "", complexity: "" }).map(item => item.id)).toEqual(["urban-fantasy", "mecha-kaiju"]);
+    expect(filterUniverseCatalog(items, { query: "machine", genre: "", tone: "", complexity: "" }).map(item => item.id)).toEqual(["mecha-kaiju"]);
     expect(filterUniverseCatalog(items, { query: "", genre: "horror", tone: "", complexity: "advanced" }).map(item => item.id)).toEqual(["dark-fantasy", "cosmic-investigation"]);
   });
 
