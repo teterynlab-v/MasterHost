@@ -1,0 +1,178 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.waste.world-template",
+  "version": "1.0.0",
+  "type": "world-template",
+  "name": "Three Survival and Rebuilding Frames",
+  "description": "Three Survival and Rebuilding Frames for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+  "tags": [
+    "post-apocalypse",
+    "dustroad-convoy",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Three Survival and Rebuilding Frames for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+    "highlights": [
+      "Three Survival and Rebuilding Frames",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.post-apocalypse"
+    ],
+    "requiresCapabilities": [
+      "setting:post-apocalypse"
+    ],
+    "providesCapabilities": [
+      "world:post-apocalypse"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.waste.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Post-Apocalypse original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.waste.world-template"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.waste.world-template",
+    "version": "1.0.0",
+    "name": "Three Survival and Rebuilding Frames",
+    "description": "Three Survival and Rebuilding Frames for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+    "provides": [
+      "world:post-apocalypse"
+    ],
+    "requires": [
+      "setting:post-apocalypse"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.kit.dustroad-convoy",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "Dustroad: A Road Kept Open"
+            },
+            "kitId": {
+              "value": "kit.dustroad-convoy"
+            },
+            "openingSceneId": {
+              "value": "scenes.1"
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.kit.seed-vault",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "Seed Vault: The Next Season"
+            },
+            "kitId": {
+              "value": "kit.seed-vault"
+            },
+            "openingSceneId": {
+              "value": "scenes.2"
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.kit.last-grid",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "Last Grid: Both Hearths Warm"
+            },
+            "kitId": {
+              "value": "kit.last-grid"
+            },
+            "openingSceneId": {
+              "value": "scenes.3"
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-kit-dustroad-convoy": {
+            "template": "waste.deep.kit.dustroad-convoy",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.dustroad-convoy"
+              ]
+            }
+          },
+          "deep-kit-seed-vault": {
+            "template": "waste.deep.kit.seed-vault",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.seed-vault"
+              ]
+            }
+          },
+          "deep-kit-last-grid": {
+            "template": "waste.deep.kit.last-grid",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.last-grid"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

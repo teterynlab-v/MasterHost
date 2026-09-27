@@ -1,0 +1,1084 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.waste.items",
+  "version": "1.0.0",
+  "type": "items",
+  "name": "Reserve Evidence Seed and Repair Supplies",
+  "description": "Reserve Evidence Seed and Repair Supplies for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+  "tags": [
+    "post-apocalypse",
+    "dustroad-convoy",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Reserve Evidence Seed and Repair Supplies for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+    "highlights": [
+      "Reserve Evidence Seed and Repair Supplies",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.post-apocalypse"
+    ],
+    "requiresCapabilities": [
+      "setting:post-apocalypse"
+    ],
+    "providesCapabilities": [
+      "items:post-apocalypse"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.waste.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Post-Apocalypse original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.waste.items"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 24,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.waste.items",
+    "version": "1.0.0",
+    "name": "Reserve Evidence Seed and Repair Supplies",
+    "description": "Reserve Evidence Seed and Repair Supplies for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+    "provides": [
+      "items:post-apocalypse"
+    ],
+    "requires": [
+      "setting:post-apocalypse"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.1",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Reserve Ledger"
+            },
+            "description": {
+              "value": "Reserve Ledger: records buyers' bids and the camp's unpaid emergency needs."
+            },
+            "deepId": {
+              "value": "items.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.2",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Clean Seed Sample"
+            },
+            "description": {
+              "value": "Clean Seed Sample: can prove outdoor viability if tested without cross-contamination."
+            },
+            "deepId": {
+              "value": "items.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.3",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Demand Map"
+            },
+            "description": {
+              "value": "Demand Map: names the households omitted from the assembly's meters."
+            },
+            "deepId": {
+              "value": "items.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.4",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Bridge Brace"
+            },
+            "description": {
+              "value": "Bridge Brace: supports the truck only after travelers leave the weak span."
+            },
+            "deepId": {
+              "value": "items.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.5",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Filter Cartridge"
+            },
+            "description": {
+              "value": "Filter Cartridge: keeps the greenhouse clean while an evacuation gate stays open."
+            },
+            "deepId": {
+              "value": "items.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.6",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Bypass Handle"
+            },
+            "description": {
+              "value": "Bypass Handle: shuts unauthorized warehouse heat without stopping the main boiler."
+            },
+            "deepId": {
+              "value": "items.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.7",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Dust Masks"
+            },
+            "description": {
+              "value": "Dust Masks: protects the foot crossing but cannot cover the whole convoy."
+            },
+            "deepId": {
+              "value": "items.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.8",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Joint Planting Charter"
+            },
+            "description": {
+              "value": "Joint Planting Charter: gives outsiders a legal claim on the seed inheritance."
+            },
+            "deepId": {
+              "value": "items.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.9",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Return Cable Reel"
+            },
+            "description": {
+              "value": "Return Cable Reel: can warm Far Hearth if its route is repaired."
+            },
+            "deepId": {
+              "value": "items.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.10",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Passage Receipt"
+            },
+            "description": {
+              "value": "Passage Receipt: links the barricade broker to stolen community lumber."
+            },
+            "deepId": {
+              "value": "items.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.11",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Outdoor Trial Log"
+            },
+            "description": {
+              "value": "Outdoor Trial Log: shows which soil plots stayed clean before the protocol froze."
+            },
+            "deepId": {
+              "value": "items.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.12",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Repair Cell"
+            },
+            "description": {
+              "value": "Repair Cell: powers one diagnostic cycle or one night of emergency shelter."
+            },
+            "deepId": {
+              "value": "items.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.13",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Convoy Release"
+            },
+            "description": {
+              "value": "Convoy Release: defers the buyer's claim if witnessed by the caravan."
+            },
+            "deepId": {
+              "value": "items.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.13"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.14",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Heir Seed Box"
+            },
+            "description": {
+              "value": "Heir Seed Box: preserves a small strain even if the greenhouse burns."
+            },
+            "deepId": {
+              "value": "items.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.17"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.15",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Unmetered Petition"
+            },
+            "description": {
+              "value": "Unmetered Petition: can put Far Hearth residents on the heat assembly roll."
+            },
+            "deepId": {
+              "value": "items.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.21"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.16",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Silent Engine Kit"
+            },
+            "description": {
+              "value": "Silent Engine Kit: lets the truck cross without drawing the dust stalker."
+            },
+            "deepId": {
+              "value": "items.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.22"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.17",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Culture Divider"
+            },
+            "description": {
+              "value": "Culture Divider: separates useful seed from the filter bloom."
+            },
+            "deepId": {
+              "value": "items.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.18",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Warehouse Invoice"
+            },
+            "description": {
+              "value": "Warehouse Invoice: proves the warm store is taking a residential ration."
+            },
+            "deepId": {
+              "value": "items.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.19",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Camp Evacuation Map"
+            },
+            "description": {
+              "value": "Camp Evacuation Map: marks transport space and safe waiting shelters."
+            },
+            "deepId": {
+              "value": "items.19"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.20",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Open Soil Deed"
+            },
+            "description": {
+              "value": "Open Soil Deed: establishes shared planting with harvest accountability."
+            },
+            "deepId": {
+              "value": "items.20"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.21",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Manual Grid Key"
+            },
+            "description": {
+              "value": "Manual Grid Key: overrides dead industrial priorities with a witnessed schedule."
+            },
+            "deepId": {
+              "value": "items.21"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.15"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.22",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Auction Amnesty"
+            },
+            "description": {
+              "value": "Auction Amnesty: can secure the broker's confession at the price of a lighter sentence."
+            },
+            "deepId": {
+              "value": "items.22"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.16"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.23",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Harvest Ration"
+            },
+            "description": {
+              "value": "Harvest Ration: feeds people now while reducing next season's seed reserve."
+            },
+            "deepId": {
+              "value": "items.23"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.20"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.items.24",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Heat Covenant"
+            },
+            "description": {
+              "value": "Heat Covenant: records the final schedule and repair obligations for both settlements."
+            },
+            "deepId": {
+              "value": "items.24"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.24"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-items-1": {
+            "template": "waste.deep.items.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-items-2": {
+            "template": "waste.deep.items.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-items-3": {
+            "template": "waste.deep.items.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-items-4": {
+            "template": "waste.deep.items.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-items-5": {
+            "template": "waste.deep.items.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-items-6": {
+            "template": "waste.deep.items.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-items-7": {
+            "template": "waste.deep.items.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-items-8": {
+            "template": "waste.deep.items.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-items-9": {
+            "template": "waste.deep.items.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-items-10": {
+            "template": "waste.deep.items.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-items-11": {
+            "template": "waste.deep.items.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-items-12": {
+            "template": "waste.deep.items.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-items-13": {
+            "template": "waste.deep.items.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-items-14": {
+            "template": "waste.deep.items.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-items-15": {
+            "template": "waste.deep.items.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-items-16": {
+            "template": "waste.deep.items.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-items-17": {
+            "template": "waste.deep.items.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-items-18": {
+            "template": "waste.deep.items.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-items-19": {
+            "template": "waste.deep.items.19",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-items-20": {
+            "template": "waste.deep.items.20",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-items-21": {
+            "template": "waste.deep.items.21",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-items-22": {
+            "template": "waste.deep.items.22",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-items-23": {
+            "template": "waste.deep.items.23",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-items-24": {
+            "template": "waste.deep.items.24",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

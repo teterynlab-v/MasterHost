@@ -43,39 +43,6 @@ questions:
         label: Scarce
       - value: critical
         label: Critical
-  - id: world.pattern
-    label: Universe pattern
-    type: choice
-    default: dustroad-convoy
-    options:
-      - value: dustroad-convoy
-        label: Dustroad Convoy
-      - value: seed-vault
-        label: Seed Vault
-      - value: last-grid
-        label: Last Grid
-  - id: world.campaignKit
-    label: Campaign Kit
-    type: choice
-    default: kit.dustroad-convoy
-    options:
-      - value: kit.dustroad-convoy
-        label: "Dustroad: A Road Kept Open"
-      - value: kit.seed-vault
-        label: "Seed Vault: The Next Season"
-      - value: kit.last-grid
-        label: "Last Grid: Both Hearths Warm"
-  - id: world.visualTheme
-    label: Visual theme
-    type: choice
-    default: visualThemes.1
-    options:
-      - value: visualThemes.1
-        label: Dustroad Route
-      - value: visualThemes.2
-        label: Glassroot Trial
-      - value: visualThemes.3
-        label: Last Grid Ledger
 generators:
   region.count:
     type: integer-range
@@ -386,46 +353,6 @@ characterCreation:
               label: Tinker
             - value: warden
               label: Warden
-        - id: archetype
-          label: Survivor role
-          type: choice
-          required: true
-          default: archetypes.1
-          options:
-            - value: archetypes.1
-              label: Convoy Auditor
-            - value: archetypes.2
-              label: Seed Technician
-            - value: archetypes.3
-              label: Grid Engineer
-            - value: archetypes.4
-              label: Causeway Medic
-            - value: archetypes.5
-              label: Open Soil Grower
-            - value: archetypes.6
-              label: Far Hearth Courier
-            - value: archetypes.7
-              label: Road Mediator
-            - value: archetypes.8
-              label: Charter Archivist
-        - id: path
-          label: Progression path
-          type: choice
-          required: true
-          default: progressionPaths.1
-          options:
-            - value: progressionPaths.1
-              label: Reserve Steward
-            - value: progressionPaths.2
-              label: Seed Custodian
-            - value: progressionPaths.3
-              label: Heat Coordinator
-            - value: progressionPaths.4
-              label: Crossing Guardian
-            - value: progressionPaths.5
-              label: Harvest Witness
-            - value: progressionPaths.6
-              label: Return Warden
     - id: aptitudes
       title: Aptitudes
       fields:
@@ -483,12 +410,6 @@ characterCreation:
     progression:
       renown: 0
       experience: 0
-      progressionPaths.1: 0
-      progressionPaths.2: 0
-      progressionPaths.3: 0
-      progressionPaths.4: 0
-      progressionPaths.5: 0
-      progressionPaths.6: 0
     resources:
       health: 18
       water: 8
@@ -524,62 +445,6 @@ characterCreation:
         when:
           field: calling
           equals: warden
-      - id: role-archetypes.1
-        when:
-          field: archetype
-          equals: archetypes.1
-      - id: role-archetypes.2
-        when:
-          field: archetype
-          equals: archetypes.2
-      - id: role-archetypes.3
-        when:
-          field: archetype
-          equals: archetypes.3
-      - id: role-archetypes.4
-        when:
-          field: archetype
-          equals: archetypes.4
-      - id: role-archetypes.5
-        when:
-          field: archetype
-          equals: archetypes.5
-      - id: role-archetypes.6
-        when:
-          field: archetype
-          equals: archetypes.6
-      - id: role-archetypes.7
-        when:
-          field: archetype
-          equals: archetypes.7
-      - id: role-archetypes.8
-        when:
-          field: archetype
-          equals: archetypes.8
-      - id: path-progressionPaths.1
-        when:
-          field: path
-          equals: progressionPaths.1
-      - id: path-progressionPaths.2
-        when:
-          field: path
-          equals: progressionPaths.2
-      - id: path-progressionPaths.3
-        when:
-          field: path
-          equals: progressionPaths.3
-      - id: path-progressionPaths.4
-        when:
-          field: path
-          equals: progressionPaths.4
-      - id: path-progressionPaths.5
-        when:
-          field: path
-          equals: progressionPaths.5
-      - id: path-progressionPaths.6
-        when:
-          field: path
-          equals: progressionPaths.6
     assets:
       - id: portrait
         value: assets/ui/portrait.svg
@@ -656,30 +521,6 @@ progression:
     default: 0
   experience:
     label: Experience
-    min: 0
-    default: 0
-  progressionPaths.1:
-    label: Reserve Steward
-    min: 0
-    default: 0
-  progressionPaths.2:
-    label: Seed Custodian
-    min: 0
-    default: 0
-  progressionPaths.3:
-    label: Heat Coordinator
-    min: 0
-    default: 0
-  progressionPaths.4:
-    label: Crossing Guardian
-    min: 0
-    default: 0
-  progressionPaths.5:
-    label: Harvest Witness
-    min: 0
-    default: 0
-  progressionPaths.6:
-    label: Return Warden
     min: 0
     default: 0
 locations:

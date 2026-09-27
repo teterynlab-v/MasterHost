@@ -1,0 +1,670 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.waste.characters",
+  "version": "1.0.0",
+  "type": "characters",
+  "name": "Survivor Roles and Custodian Paths",
+  "description": "Survivor Roles and Custodian Paths for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+  "tags": [
+    "post-apocalypse",
+    "dustroad-convoy",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Survivor Roles and Custodian Paths for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+    "highlights": [
+      "Survivor Roles and Custodian Paths",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.post-apocalypse"
+    ],
+    "requiresCapabilities": [
+      "rules:post-apocalypse",
+      "items:post-apocalypse"
+    ],
+    "providesCapabilities": [
+      "characters:post-apocalypse"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.waste.rules",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.waste.items",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Post-Apocalypse original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.waste.characters"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 8,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.waste.characters",
+    "version": "1.0.0",
+    "name": "Survivor Roles and Custodian Paths",
+    "description": "Survivor Roles and Custodian Paths for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+    "provides": [
+      "characters:post-apocalypse"
+    ],
+    "requires": [
+      "rules:post-apocalypse",
+      "items:post-apocalypse"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.archetypes.1",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Convoy Auditor"
+            },
+            "description": {
+              "value": "Convoy Auditor: tracks reserves and protects travelers whose needs are unpaid."
+            },
+            "deepId": {
+              "value": "archetypes.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.archetypes.2",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Seed Technician"
+            },
+            "description": {
+              "value": "Seed Technician: separates viable cultures and refuses an unnecessary purge."
+            },
+            "deepId": {
+              "value": "archetypes.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.archetypes.3",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Grid Engineer"
+            },
+            "description": {
+              "value": "Grid Engineer: repairs controls and maps uncounted household demand."
+            },
+            "deepId": {
+              "value": "archetypes.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.archetypes.4",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Causeway Medic"
+            },
+            "description": {
+              "value": "Causeway Medic: stages evacuations and treats dust exposure."
+            },
+            "deepId": {
+              "value": "archetypes.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.archetypes.5",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Open Soil Grower"
+            },
+            "description": {
+              "value": "Open Soil Grower: tests outdoor crops and records failures honestly."
+            },
+            "deepId": {
+              "value": "archetypes.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.archetypes.6",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Far Hearth Courier"
+            },
+            "description": {
+              "value": "Far Hearth Courier: carries cells and negotiates shelter across the ridge."
+            },
+            "deepId": {
+              "value": "archetypes.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.archetypes.7",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Road Mediator"
+            },
+            "description": {
+              "value": "Road Mediator: can defer contracts without hiding emergency shortages."
+            },
+            "deepId": {
+              "value": "archetypes.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.archetypes.8",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Charter Archivist"
+            },
+            "description": {
+              "value": "Charter Archivist: preserves inherited rights and involves the named communities."
+            },
+            "deepId": {
+              "value": "archetypes.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.progressionPaths.1",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Reserve Steward"
+            },
+            "description": {
+              "value": "Reserve Steward: earn trust by protecting emergency supplies with honest accounts; gain convoy authority and delivery obligations."
+            },
+            "deepId": {
+              "value": "progressionPaths.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.progressionPaths.2",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Seed Custodian"
+            },
+            "description": {
+              "value": "Seed Custodian: earn trust by preserving crop and shared planting rights; gain vault access and testing duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.progressionPaths.3",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Heat Coordinator"
+            },
+            "description": {
+              "value": "Heat Coordinator: earn trust by including omitted homes in ration decisions; gain control access and public schedule duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.progressionPaths.4",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Crossing Guardian"
+            },
+            "description": {
+              "value": "Crossing Guardian: earn trust by evacuating travelers before moving freight; gain bridge crews and repair responsibilities."
+            },
+            "deepId": {
+              "value": "progressionPaths.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.progressionPaths.5",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Harvest Witness"
+            },
+            "description": {
+              "value": "Harvest Witness: earn trust by sharing clean trial evidence; gain grower support and contamination reporting duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.progressionPaths.6",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Return Warden"
+            },
+            "description": {
+              "value": "Return Warden: earn trust by keeping a rescue route supplied; gain courier support and shelter obligations."
+            },
+            "deepId": {
+              "value": "progressionPaths.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-archetypes-1": {
+            "template": "waste.deep.archetypes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-archetypes-2": {
+            "template": "waste.deep.archetypes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-archetypes-3": {
+            "template": "waste.deep.archetypes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-archetypes-4": {
+            "template": "waste.deep.archetypes.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-archetypes-5": {
+            "template": "waste.deep.archetypes.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-archetypes-6": {
+            "template": "waste.deep.archetypes.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-archetypes-7": {
+            "template": "waste.deep.archetypes.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-archetypes-8": {
+            "template": "waste.deep.archetypes.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-progressionPaths-1": {
+            "template": "waste.deep.progressionPaths.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-progressionPaths-2": {
+            "template": "waste.deep.progressionPaths.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-progressionPaths-3": {
+            "template": "waste.deep.progressionPaths.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-progressionPaths-4": {
+            "template": "waste.deep.progressionPaths.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-progressionPaths-5": {
+            "template": "waste.deep.progressionPaths.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-progressionPaths-6": {
+            "template": "waste.deep.progressionPaths.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

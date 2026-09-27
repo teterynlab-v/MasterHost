@@ -1,16 +1,14 @@
 id: masterhost.post-apocalypse
 name: Post-Apocalypse
-version: 2.0.0
+version: 1.0.0
 schemaVersion: "0.1"
 defaultArtSet: standard
 entryTemplate: world.root
-description: "Three complete rebuilding campaigns: convoy passage, shared seed
-  inheritance and heat for omitted households."
+description: Harsh roads, rebuilt enclaves, mutant wilds, buried technology, and communities worth defending.
 publisher: MasterHost
 official: true
 contentRating: teen
 license:
   spdx: CC-BY-4.0
-  attribution: Post-Apocalypse original setting content and artwork © MasterHost
-    contributors.
+  attribution: Post-Apocalypse original setting content and artwork © MasterHost contributors.
   source: https://creativecommons.org/licenses/by/4.0/

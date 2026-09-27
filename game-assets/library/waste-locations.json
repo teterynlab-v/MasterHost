@@ -1,0 +1,580 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.waste.locations",
+  "version": "1.0.0",
+  "type": "locations",
+  "name": "Twelve Road Vault and Grid Sites",
+  "description": "Twelve Road Vault and Grid Sites for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+  "tags": [
+    "post-apocalypse",
+    "dustroad-convoy",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Twelve Road Vault and Grid Sites for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+    "highlights": [
+      "Twelve Road Vault and Grid Sites",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.post-apocalypse"
+    ],
+    "requiresCapabilities": [
+      "world:post-apocalypse"
+    ],
+    "providesCapabilities": [
+      "locations:post-apocalypse"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.waste.world-template",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Post-Apocalypse original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.waste.locations"
+  },
+  "published": true,
+  "counts": {
+    "locations": 12,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.waste.locations",
+    "version": "1.0.0",
+    "name": "Twelve Road Vault and Grid Sites",
+    "description": "Twelve Road Vault and Grid Sites for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+    "provides": [
+      "locations:post-apocalypse"
+    ],
+    "requires": [
+      "world:post-apocalypse"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.locations.1",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Dustroad Depot"
+            },
+            "description": {
+              "value": "Dustroad Depot: the convoy's last water barrels are sealed for a distant buyer."
+            },
+            "deepId": {
+              "value": "locations.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.locations.2",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Glassroot Gate"
+            },
+            "description": {
+              "value": "Glassroot Gate: a greenhouse scanner rejects healthy people from outside."
+            },
+            "deepId": {
+              "value": "locations.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.locations.3",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Last Grid Control"
+            },
+            "description": {
+              "value": "Last Grid Control: a warm control room overlooks cold, uncounted houses."
+            },
+            "deepId": {
+              "value": "locations.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.locations.4",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Broken Causeway"
+            },
+            "description": {
+              "value": "Broken Causeway: the center span cannot support both the truck and stranded camp."
+            },
+            "deepId": {
+              "value": "locations.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.locations.5",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Clean Seed Room"
+            },
+            "description": {
+              "value": "Clean Seed Room: one living crop shares a filter with an untested culture."
+            },
+            "deepId": {
+              "value": "locations.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.locations.6",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Cinder Valve Hall"
+            },
+            "description": {
+              "value": "Cinder Valve Hall: a damaged bypass sends heat into the assembly's warehouse."
+            },
+            "deepId": {
+              "value": "locations.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.locations.7",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Windbreak Camp"
+            },
+            "description": {
+              "value": "Windbreak Camp: travelers shelter under a collapsed road sign with dwindling masks."
+            },
+            "deepId": {
+              "value": "locations.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.locations.8",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Open Soil Beds"
+            },
+            "description": {
+              "value": "Open Soil Beds: a small outdoor trial is thriving despite the vault's warnings."
+            },
+            "deepId": {
+              "value": "locations.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.locations.9",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Far Hearth"
+            },
+            "description": {
+              "value": "Far Hearth: the settlement's old people burn furniture while meters read no demand."
+            },
+            "deepId": {
+              "value": "locations.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.locations.10",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Auction Mile"
+            },
+            "description": {
+              "value": "Auction Mile: passage brokers sell access to a road maintained by community labor."
+            },
+            "deepId": {
+              "value": "locations.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.locations.11",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Inheritance Archive"
+            },
+            "description": {
+              "value": "Inheritance Archive: the planting charter names outsiders as joint custodians."
+            },
+            "deepId": {
+              "value": "locations.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.locations.12",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Return Cable"
+            },
+            "description": {
+              "value": "Return Cable: a spare line could reach Far Hearth if the main settlement shares its cells."
+            },
+            "deepId": {
+              "value": "locations.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-locations-1": {
+            "template": "waste.deep.locations.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-locations-2": {
+            "template": "waste.deep.locations.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-locations-3": {
+            "template": "waste.deep.locations.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-locations-4": {
+            "template": "waste.deep.locations.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-locations-5": {
+            "template": "waste.deep.locations.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-locations-6": {
+            "template": "waste.deep.locations.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-locations-7": {
+            "template": "waste.deep.locations.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-locations-8": {
+            "template": "waste.deep.locations.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-locations-9": {
+            "template": "waste.deep.locations.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-locations-10": {
+            "template": "waste.deep.locations.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-locations-11": {
+            "template": "waste.deep.locations.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-locations-12": {
+            "template": "waste.deep.locations.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

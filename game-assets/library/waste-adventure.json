@@ -1,0 +1,2116 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.waste.adventure",
+  "version": "1.0.0",
+  "type": "adventure",
+  "name": "Three Complete Rebuilding Adventures",
+  "description": "Three Complete Rebuilding Adventures for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+  "tags": [
+    "post-apocalypse",
+    "dustroad-convoy",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Three Complete Rebuilding Adventures for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+    "highlights": [
+      "Three Complete Rebuilding Adventures",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.post-apocalypse"
+    ],
+    "requiresCapabilities": [
+      "world:post-apocalypse",
+      "locations:post-apocalypse",
+      "cast:post-apocalypse",
+      "items:post-apocalypse",
+      "rules:post-apocalypse"
+    ],
+    "providesCapabilities": [
+      "adventure:post-apocalypse"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.waste.world-template",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.waste.locations",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.waste.cast",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.waste.items",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.waste.rules",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Post-Apocalypse original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.waste.adventure"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 18,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.waste.adventure",
+    "version": "1.0.0",
+    "name": "Three Complete Rebuilding Adventures",
+    "description": "Three Complete Rebuilding Adventures for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+    "provides": [
+      "adventure:post-apocalypse"
+    ],
+    "requires": [
+      "world:post-apocalypse",
+      "locations:post-apocalypse",
+      "cast:post-apocalypse",
+      "items:post-apocalypse",
+      "rules:post-apocalypse"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.scenes.1",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Barrels before the Storm"
+            },
+            "description": {
+              "value": "Barrels before the Storm: Objective: establish emergency reserves. Audit the bids or negotiate delayed delivery; delay strands the camp."
+            },
+            "deepId": {
+              "value": "scenes.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.scenes.2",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Sealed Harvest"
+            },
+            "description": {
+              "value": "The Sealed Harvest: Objective: find a safe way into the vault. Prove clean health or replace the gate filter; delay begins a purge."
+            },
+            "deepId": {
+              "value": "scenes.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.scenes.3",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Homes off the Roll"
+            },
+            "description": {
+              "value": "Homes off the Roll: Objective: identify uncounted demand. Map Far Hearth or recover the hidden ledger; delay brings forced evacuation."
+            },
+            "deepId": {
+              "value": "scenes.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.scenes.4",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "A Span for Everyone"
+            },
+            "description": {
+              "value": "A Span for Everyone: Objective: cross without losing travelers. Reinforce the beam or stage the foot route; delay draws the dust front."
+            },
+            "deepId": {
+              "value": "scenes.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.scenes.5",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Living Sample"
+            },
+            "description": {
+              "value": "The Living Sample: Objective: separate seed from contamination. Fit a culture divider or test outdoor shoots; delay burns the room."
+            },
+            "deepId": {
+              "value": "scenes.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.scenes.6",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Heat in the Warehouse"
+            },
+            "description": {
+              "value": "Heat in the Warehouse: Objective: stop unauthorized diversion. Close the bypass or secure a public inspection; delay drains repair cells."
+            },
+            "deepId": {
+              "value": "scenes.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.scenes.7",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Auction Mile"
+            },
+            "description": {
+              "value": "Auction Mile: Objective: reopen public passage. Expose stolen lumber or negotiate restitution; delay seizes the truck."
+            },
+            "deepId": {
+              "value": "scenes.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.scenes.8",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "An Inherited Garden"
+            },
+            "description": {
+              "value": "An Inherited Garden: Objective: establish planting rights. Recover the joint charter or convene the seed heirs; delay erases the archive."
+            },
+            "deepId": {
+              "value": "scenes.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.scenes.9",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Dead Factory"
+            },
+            "description": {
+              "value": "The Dead Factory: Objective: change grid priorities. Use the manual key or prove obsolete demand; delay shuts Far Hearth's line."
+            },
+            "deepId": {
+              "value": "scenes.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.scenes.10",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "A Camp on Wheels"
+            },
+            "description": {
+              "value": "A Camp on Wheels: Objective: evacuate vulnerable travelers. Share truck space or recruit a second carrier; delay closes the foot crossing."
+            },
+            "deepId": {
+              "value": "scenes.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.13"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.scenes.11",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Purger's Order"
+            },
+            "description": {
+              "value": "The Purger's Order: Objective: prevent unnecessary burning. Certify a sample or isolate the machine; delay destroys the viable strain."
+            },
+            "deepId": {
+              "value": "scenes.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.scenes.12",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Across the Cold Ridge"
+            },
+            "description": {
+              "value": "Across the Cold Ridge: Objective: repair the return cable. Escort cells or open the service tunnel; delay exhausts the shelter."
+            },
+            "deepId": {
+              "value": "scenes.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.15"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.scenes.13",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Reserve Hearing"
+            },
+            "description": {
+              "value": "The Reserve Hearing: Objective: settle the convoy's claim. Present bids and needs or witness deferred delivery; delay sells the remaining barrels."
+            },
+            "deepId": {
+              "value": "scenes.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.16"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.scenes.14",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Harvest beyond Glass"
+            },
+            "description": {
+              "value": "Harvest beyond Glass: Objective: set a safe planting policy. Establish monitored beds or distribute heir boxes; delay causes a food riot."
+            },
+            "deepId": {
+              "value": "scenes.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.17"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.scenes.15",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The One-use Override"
+            },
+            "description": {
+              "value": "The One-use Override: Objective: restart fair heat. Schedule shared cycles or form a joint repair team; delay freezes the control valves."
+            },
+            "deepId": {
+              "value": "scenes.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.scenes.16",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "A Road Kept Open"
+            },
+            "description": {
+              "value": "A Road Kept Open: Objective: choose passage governance. Create a road mutual or a bounded toll charter; record who funds repairs."
+            },
+            "deepId": {
+              "value": "scenes.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.scenes.17",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Next Season"
+            },
+            "description": {
+              "value": "The Next Season: Objective: divide food and seed fairly. Fund immediate rations or protect a witnessed reserve; record who can plant."
+            },
+            "deepId": {
+              "value": "scenes.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.scenes.18",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Both Hearths Warm"
+            },
+            "description": {
+              "value": "Both Hearths Warm: Objective: settle the heat covenant. Share shortages or guarantee a minimum ration; record who represents omitted homes."
+            },
+            "deepId": {
+              "value": "scenes.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.1",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Departure Alarm"
+            },
+            "description": {
+              "value": "Departure Alarm: the dust front advances before the last water barrels are counted."
+            },
+            "deepId": {
+              "value": "events.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.2",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Closed Greenhouse"
+            },
+            "description": {
+              "value": "Closed Greenhouse: a healthy traveler is denied entry while the seed room asks for labor."
+            },
+            "deepId": {
+              "value": "events.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.3",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Cold Roll Call"
+            },
+            "description": {
+              "value": "Cold Roll Call: Far Hearth names do not appear in the assembly's demand list."
+            },
+            "deepId": {
+              "value": "events.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.4",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Camp Signal"
+            },
+            "description": {
+              "value": "Camp Signal: a broken radio asks the convoy for space beside the causeway."
+            },
+            "deepId": {
+              "value": "events.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.5",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Bloom Warning"
+            },
+            "description": {
+              "value": "Bloom Warning: the purger declares every outdoor sample contaminated."
+            },
+            "deepId": {
+              "value": "events.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.6",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Warehouse Steam"
+            },
+            "description": {
+              "value": "Warehouse Steam: an unauthorized outlet glows while homes freeze."
+            },
+            "deepId": {
+              "value": "events.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.7",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Reserve Bid"
+            },
+            "description": {
+              "value": "Reserve Bid: a buyer offers repair parts in exchange for exclusive barrels."
+            },
+            "deepId": {
+              "value": "events.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.8",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Healthy Shoot"
+            },
+            "description": {
+              "value": "Healthy Shoot: an outdoor bed produces evidence the vault cannot easily dismiss."
+            },
+            "deepId": {
+              "value": "events.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.9",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Meter Seizure"
+            },
+            "description": {
+              "value": "Meter Seizure: a sheriff takes the only diagnostic cell from an unregistered home."
+            },
+            "deepId": {
+              "value": "events.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.10",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Bridge Crack"
+            },
+            "description": {
+              "value": "Bridge Crack: the heavy truck's crossing threatens stranded travelers."
+            },
+            "deepId": {
+              "value": "events.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.11",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Charter Discovery"
+            },
+            "description": {
+              "value": "Charter Discovery: the archive reveals the vault was intended to serve surrounding communities."
+            },
+            "deepId": {
+              "value": "events.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.12",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Old Priority"
+            },
+            "description": {
+              "value": "Old Priority: the grid sends another heat cycle to an empty factory."
+            },
+            "deepId": {
+              "value": "events.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.13",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Broker Barricade"
+            },
+            "description": {
+              "value": "Broker Barricade: Auction Mile charges passage after community labor repairs the road."
+            },
+            "deepId": {
+              "value": "events.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.14",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Filter Failure"
+            },
+            "description": {
+              "value": "Filter Failure: opening the gate now risks the viable crop unless a divider is fitted."
+            },
+            "deepId": {
+              "value": "events.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.15",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Return Petition"
+            },
+            "description": {
+              "value": "Return Petition: residents ask to share heat instead of accepting forced evacuation."
+            },
+            "deepId": {
+              "value": "events.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.16",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Mask Shortage"
+            },
+            "description": {
+              "value": "Mask Shortage: the foot crossing must be staged in smaller groups."
+            },
+            "deepId": {
+              "value": "events.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.17",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Heir Meeting"
+            },
+            "description": {
+              "value": "Heir Meeting: the seed heirs demand a voice in any changed planting agreement."
+            },
+            "deepId": {
+              "value": "events.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.18",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Repair Offer"
+            },
+            "description": {
+              "value": "Repair Offer: the assembly offers cells only if the omitted houses stay off the roll."
+            },
+            "deepId": {
+              "value": "events.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.19",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Buyer Arrival"
+            },
+            "description": {
+              "value": "Buyer Arrival: Tess reaches the depot before the reserve hearing."
+            },
+            "deepId": {
+              "value": "events.19"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.20",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Purger Countdown"
+            },
+            "description": {
+              "value": "Purger Countdown: the culture warden schedules a burn before independent testing."
+            },
+            "deepId": {
+              "value": "events.20"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.21",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Cable Fault"
+            },
+            "description": {
+              "value": "Cable Fault: the last return line fails when the main boiler warms up."
+            },
+            "deepId": {
+              "value": "events.21"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.22",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Camp Council"
+            },
+            "description": {
+              "value": "Camp Council: travelers decide who needs the first transport places."
+            },
+            "deepId": {
+              "value": "events.22"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.23",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Open Soil Hearing"
+            },
+            "description": {
+              "value": "Open Soil Hearing: a clean sample can overturn the protocol under public witness."
+            },
+            "deepId": {
+              "value": "events.23"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.24",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Ration Confession"
+            },
+            "description": {
+              "value": "Ration Confession: a worker admits the warehouse line was fitted during a prior freeze."
+            },
+            "deepId": {
+              "value": "events.24"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.25",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Quiet Crossing"
+            },
+            "description": {
+              "value": "Quiet Crossing: a silent truck route becomes available at the price of leaving a load."
+            },
+            "deepId": {
+              "value": "events.25"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.26",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "First Harvest"
+            },
+            "description": {
+              "value": "First Harvest: the crew chooses between immediate meals and next season's reserve."
+            },
+            "deepId": {
+              "value": "events.26"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.27",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Shared Override"
+            },
+            "description": {
+              "value": "Shared Override: the dispatcher offers one manual cycle if both settlements sign."
+            },
+            "deepId": {
+              "value": "events.27"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.28",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Road Reopened"
+            },
+            "description": {
+              "value": "Road Reopened: the convoy's reserve decision changes who can use the causeway."
+            },
+            "deepId": {
+              "value": "events.28"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.29",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Seeds Released"
+            },
+            "description": {
+              "value": "Seeds Released: the final charter defines who may plant and who must report failures."
+            },
+            "deepId": {
+              "value": "events.29"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.events.30",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Heat after Frost"
+            },
+            "description": {
+              "value": "Heat after Frost: the schedule reflects the crew's decision about omitted households."
+            },
+            "deepId": {
+              "value": "events.30"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-scenes-1": {
+            "template": "waste.deep.scenes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-scenes-2": {
+            "template": "waste.deep.scenes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-scenes-3": {
+            "template": "waste.deep.scenes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-scenes-4": {
+            "template": "waste.deep.scenes.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-scenes-5": {
+            "template": "waste.deep.scenes.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-scenes-6": {
+            "template": "waste.deep.scenes.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-scenes-7": {
+            "template": "waste.deep.scenes.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-scenes-8": {
+            "template": "waste.deep.scenes.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-scenes-9": {
+            "template": "waste.deep.scenes.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-scenes-10": {
+            "template": "waste.deep.scenes.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-scenes-11": {
+            "template": "waste.deep.scenes.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-scenes-12": {
+            "template": "waste.deep.scenes.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-scenes-13": {
+            "template": "waste.deep.scenes.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-scenes-14": {
+            "template": "waste.deep.scenes.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-scenes-15": {
+            "template": "waste.deep.scenes.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-scenes-16": {
+            "template": "waste.deep.scenes.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-scenes-17": {
+            "template": "waste.deep.scenes.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-scenes-18": {
+            "template": "waste.deep.scenes.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-events-1": {
+            "template": "waste.deep.events.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-events-2": {
+            "template": "waste.deep.events.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-events-3": {
+            "template": "waste.deep.events.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-events-4": {
+            "template": "waste.deep.events.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-events-5": {
+            "template": "waste.deep.events.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-events-6": {
+            "template": "waste.deep.events.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-events-7": {
+            "template": "waste.deep.events.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-events-8": {
+            "template": "waste.deep.events.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-events-9": {
+            "template": "waste.deep.events.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-events-10": {
+            "template": "waste.deep.events.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-events-11": {
+            "template": "waste.deep.events.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-events-12": {
+            "template": "waste.deep.events.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-events-13": {
+            "template": "waste.deep.events.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-events-14": {
+            "template": "waste.deep.events.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-events-15": {
+            "template": "waste.deep.events.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-events-16": {
+            "template": "waste.deep.events.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-events-17": {
+            "template": "waste.deep.events.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-events-18": {
+            "template": "waste.deep.events.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-events-19": {
+            "template": "waste.deep.events.19",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-events-20": {
+            "template": "waste.deep.events.20",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-events-21": {
+            "template": "waste.deep.events.21",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-events-22": {
+            "template": "waste.deep.events.22",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-events-23": {
+            "template": "waste.deep.events.23",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-events-24": {
+            "template": "waste.deep.events.24",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-events-25": {
+            "template": "waste.deep.events.25",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-events-26": {
+            "template": "waste.deep.events.26",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-events-27": {
+            "template": "waste.deep.events.27",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-events-28": {
+            "template": "waste.deep.events.28",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-events-29": {
+            "template": "waste.deep.events.29",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-events-30": {
+            "template": "waste.deep.events.30",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

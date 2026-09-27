@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.waste.visuals",
+  "version": "1.0.0",
+  "type": "visuals",
+  "name": "Rebuilding Route Schematics",
+  "description": "Rebuilding Route Schematics for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+  "tags": [
+    "post-apocalypse",
+    "dustroad-convoy",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Rebuilding Route Schematics for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+    "highlights": [
+      "Rebuilding Route Schematics",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.post-apocalypse"
+    ],
+    "requiresCapabilities": [
+      "setting:post-apocalypse"
+    ],
+    "providesCapabilities": [
+      "visuals:post-apocalypse"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.waste.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Post-Apocalypse original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.waste.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 6
+  },
+  "media": [
+    {
+      "name": "post-apocalypse/waste-background.svg",
+      "path": "media/waste-background.svg",
+      "role": "background",
+      "mediaType": "image/svg+xml",
+      "checksum": "58bb1ec10964b2f6912e55b41bf0d84703d160da54dd3d84a26ad4461d906005",
+      "size": 742
+    },
+    {
+      "name": "post-apocalypse/waste-portrait.svg",
+      "path": "media/waste-portrait.svg",
+      "role": "portrait",
+      "mediaType": "image/svg+xml",
+      "checksum": "2c676fff8ed2649d3fd8ce748352b83ddc7964364bf2825f84db195812a6536d",
+      "size": 629
+    },
+    {
+      "name": "post-apocalypse/waste-creature.svg",
+      "path": "media/waste-creature.svg",
+      "role": "token",
+      "mediaType": "image/svg+xml",
+      "checksum": "f7753d145f40c0a8a0431a6041f8bb2187a351cf844c1b4244f60386ffb145a3",
+      "size": 707
+    },
+    {
+      "name": "post-apocalypse/waste-item.svg",
+      "path": "media/waste-item.svg",
+      "role": "item",
+      "mediaType": "image/svg+xml",
+      "checksum": "e266102bd7c91f9f2da48f6023ed8d22b203d4d5414132dbc7979fa54863862c",
+      "size": 642
+    },
+    {
+      "name": "post-apocalypse/waste-location.svg",
+      "path": "media/waste-location.svg",
+      "role": "location",
+      "mediaType": "image/svg+xml",
+      "checksum": "aaf2541075a23bb3c8aefb8764dc13f612aa568c483ea6baca224979a68fbaaf",
+      "size": 631
+    },
+    {
+      "name": "post-apocalypse/waste-map.svg",
+      "path": "media/waste-map.svg",
+      "role": "map",
+      "mediaType": "image/svg+xml",
+      "checksum": "5fedafc7d91e609c9fd955fd31db87207bf977de01939a7b4cba24f245c604ea",
+      "size": 2438
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.waste.visuals",
+    "version": "1.0.0",
+    "name": "Rebuilding Route Schematics",
+    "description": "Rebuilding Route Schematics for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+    "provides": [
+      "visuals:post-apocalypse"
+    ],
+    "requires": [
+      "setting:post-apocalypse"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/waste-deep",
+        "value": {
+          "id": "waste-deep",
+          "name": "Recovery Navigation",
+          "description": "Original Post-Apocalypse navigation schematics",
+          "defaults": {
+            "background": "assets/post-apocalypse/waste-background.svg",
+            "portrait": "assets/post-apocalypse/waste-portrait.svg",
+            "token": "assets/post-apocalypse/waste-creature.svg",
+            "item": "assets/post-apocalypse/waste-item.svg",
+            "location": "assets/post-apocalypse/waste-location.svg",
+            "map": "assets/post-apocalypse/waste-map.svg"
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "waste-deep"
+  }
+}

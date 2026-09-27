@@ -1,0 +1,3763 @@
+{
+  "schemaVersion": "1",
+  "id": "post-apocalypse",
+  "genres": [
+    "survival",
+    "adventure",
+    "science-fiction"
+  ],
+  "tones": [
+    "harsh",
+    "communal",
+    "hopeful"
+  ],
+  "complexity": "intermediate",
+  "recommendedPlayers": {
+    "min": 2,
+    "max": 6
+  },
+  "gameLoop": [
+    {
+      "id": "route",
+      "label": "Keep vulnerable travelers safe before moving supplies",
+      "ruleRefs": [
+        "check:grit",
+        "action:recover"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Test seed and rebuild shared infrastructure",
+      "ruleRefs": [
+        "check:scavenge",
+        "action:inspire"
+      ]
+    },
+    {
+      "id": "share",
+      "label": "Negotiate reserves without excluding households",
+      "ruleRefs": [
+        "check:heart",
+        "resource:water"
+      ]
+    },
+    {
+      "id": "rebuild",
+      "label": "Record ownership, shortages and maintenance duties",
+      "ruleRefs": [
+        "progression:renown"
+      ]
+    }
+  ],
+  "patterns": [
+    {
+      "id": "dustroad-convoy",
+      "name": "Dustroad Convoy",
+      "summary": "A supply convoy must cross a broken causeway before a dust front. Rescue isolated travelers, bargain for passage and decide whether its reserves belong to buyers or communities.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    },
+    {
+      "id": "seed-vault",
+      "name": "Seed Vault",
+      "summary": "A sealed greenhouse offers a harvest at the price of an old isolation protocol. Recover clean seed, investigate contamination and decide who may plant beyond its walls.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    },
+    {
+      "id": "last-grid",
+      "name": "Last Grid",
+      "summary": "A failing power station can warm one settlement through the coming freeze. Repair its controls, expose unequal rationing and decide how the remaining heat is shared.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    }
+  ],
+  "campaignKits": [
+    {
+      "id": "kit.dustroad-convoy",
+      "name": "Dustroad: A Road Kept Open",
+      "summary": "A three to four hour Dustroad Convoy game: A supply convoy must cross a broken causeway before a dust front. Rescue isolated travelers, bargain for passage and decide whether its reserves belong to buyers or communities.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "dustroad-convoy"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.1",
+      "sceneIds": [
+        "scenes.1",
+        "scenes.4",
+        "scenes.7",
+        "scenes.10",
+        "scenes.13",
+        "scenes.16"
+      ],
+      "npcIds": [
+        "npcs.1",
+        "npcs.4",
+        "npcs.7"
+      ],
+      "locationIds": [
+        "locations.1",
+        "locations.4",
+        "locations.7"
+      ],
+      "rewardIds": [
+        "items.1",
+        "items.4"
+      ],
+      "gmGuidance": [
+        "Start with sealed barrels and a storm approaching the broken causeway.",
+        "State crossing capacity, masks and transport places before asking for choices.",
+        "Give contract holders needs of their own and allow witnessed delay.",
+        "Record who owns passage, pays repairs and receives emergency reserves."
+      ],
+      "readyCharacterIds": [
+        "archetypes.1",
+        "archetypes.4"
+      ]
+    },
+    {
+      "id": "kit.seed-vault",
+      "name": "Seed Vault: The Next Season",
+      "summary": "A three to four hour Seed Vault game: A sealed greenhouse offers a harvest at the price of an old isolation protocol. Recover clean seed, investigate contamination and decide who may plant beyond its walls.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "seed-vault"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.2",
+      "sceneIds": [
+        "scenes.2",
+        "scenes.5",
+        "scenes.8",
+        "scenes.11",
+        "scenes.14",
+        "scenes.17"
+      ],
+      "npcIds": [
+        "npcs.2",
+        "npcs.5",
+        "npcs.8"
+      ],
+      "locationIds": [
+        "locations.2",
+        "locations.5",
+        "locations.8"
+      ],
+      "rewardIds": [
+        "items.2",
+        "items.5"
+      ],
+      "gmGuidance": [
+        "Open with a healthy outsider rejected by an old isolation protocol.",
+        "Distinguish uncertain contamination from automatic guilt.",
+        "Offer a viable sample, independent testing and seed-heir participation.",
+        "Record immediate food, next season’s reserve and who may plant."
+      ],
+      "readyCharacterIds": [
+        "archetypes.2",
+        "archetypes.5"
+      ]
+    },
+    {
+      "id": "kit.last-grid",
+      "name": "Last Grid: Both Hearths Warm",
+      "summary": "A three to four hour Last Grid game: A failing power station can warm one settlement through the coming freeze. Repair its controls, expose unequal rationing and decide how the remaining heat is shared.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "last-grid"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.3",
+      "sceneIds": [
+        "scenes.3",
+        "scenes.6",
+        "scenes.9",
+        "scenes.12",
+        "scenes.15",
+        "scenes.18"
+      ],
+      "npcIds": [
+        "npcs.3",
+        "npcs.6",
+        "npcs.9"
+      ],
+      "locationIds": [
+        "locations.3",
+        "locations.6",
+        "locations.9"
+      ],
+      "rewardIds": [
+        "items.3",
+        "items.6"
+      ],
+      "gmGuidance": [
+        "Show warm warehouses and cold homes missing from the roll.",
+        "Make the old industrial priority a fixable process rather than magic.",
+        "Offer shared cycles and a manual override at visible costs.",
+        "Record household representation and responsibility for the return cable."
+      ],
+      "readyCharacterIds": [
+        "archetypes.3",
+        "archetypes.6"
+      ]
+    }
+  ],
+  "content": {
+    "factions": [
+      {
+        "id": "factions.1",
+        "name": "Road Mutual",
+        "description": "Road Mutual: runs the convoy and needs an honest accounting of emergency reserves.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "waste.factions.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Road Mutual: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.2",
+        "name": "Vault Keepers",
+        "description": "Vault Keepers: protects clean seed but refuses planting outside the sealed greenhouse.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "waste.factions.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Vault Keepers: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.3",
+        "name": "Heat Assembly",
+        "description": "Heat Assembly: allocates power through a ledger that omits distant homes.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "waste.factions.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Heat Assembly: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.4",
+        "name": "Causeway Camp",
+        "description": "Causeway Camp: offers bridge labor if the convoy evacuates its injured travelers.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "waste.factions.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Causeway Camp: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.5",
+        "name": "Open Soil Collective",
+        "description": "Open Soil Collective: has safe test beds and demands a share of the harvest.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "waste.factions.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Open Soil Collective: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.6",
+        "name": "Station Mechanics",
+        "description": "Station Mechanics: can restart the grid if the assembly releases repair cells.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "waste.factions.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Station Mechanics: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.7",
+        "name": "Caravan Witnesses",
+        "description": "Caravan Witnesses: knows which supply bids were forged before departure.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.7"
+          }
+        ],
+        "localeKey": "waste.factions.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Caravan Witnesses: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.8",
+        "name": "Seed Heirs",
+        "description": "Seed Heirs: holds original planting agreements signed before the collapse.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.11"
+          }
+        ],
+        "localeKey": "waste.factions.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Seed Heirs: map schematic"
+          }
+        ]
+      }
+    ],
+    "locations": [
+      {
+        "id": "locations.1",
+        "name": "Dustroad Depot",
+        "description": "Dustroad Depot: the convoy's last water barrels are sealed for a distant buyer.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "waste.locations.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Dustroad Depot: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.2",
+        "name": "Glassroot Gate",
+        "description": "Glassroot Gate: a greenhouse scanner rejects healthy people from outside.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "waste.locations.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Glassroot Gate: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.3",
+        "name": "Last Grid Control",
+        "description": "Last Grid Control: a warm control room overlooks cold, uncounted houses.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "waste.locations.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Last Grid Control: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.4",
+        "name": "Broken Causeway",
+        "description": "Broken Causeway: the center span cannot support both the truck and stranded camp.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "waste.locations.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Broken Causeway: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.5",
+        "name": "Clean Seed Room",
+        "description": "Clean Seed Room: one living crop shares a filter with an untested culture.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "waste.locations.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Clean Seed Room: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.6",
+        "name": "Cinder Valve Hall",
+        "description": "Cinder Valve Hall: a damaged bypass sends heat into the assembly's warehouse.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "waste.locations.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Cinder Valve Hall: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.7",
+        "name": "Windbreak Camp",
+        "description": "Windbreak Camp: travelers shelter under a collapsed road sign with dwindling masks.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "waste.locations.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Windbreak Camp: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.8",
+        "name": "Open Soil Beds",
+        "description": "Open Soil Beds: a small outdoor trial is thriving despite the vault's warnings.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "waste.locations.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Open Soil Beds: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.9",
+        "name": "Far Hearth",
+        "description": "Far Hearth: the settlement's old people burn furniture while meters read no demand.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.3"
+          }
+        ],
+        "localeKey": "waste.locations.9",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Far Hearth: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.10",
+        "name": "Auction Mile",
+        "description": "Auction Mile: passage brokers sell access to a road maintained by community labor.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.4"
+          }
+        ],
+        "localeKey": "waste.locations.10",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Auction Mile: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.11",
+        "name": "Inheritance Archive",
+        "description": "Inheritance Archive: the planting charter names outsiders as joint custodians.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.8"
+          }
+        ],
+        "localeKey": "waste.locations.11",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Inheritance Archive: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.12",
+        "name": "Return Cable",
+        "description": "Return Cable: a spare line could reach Far Hearth if the main settlement shares its cells.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.12"
+          }
+        ],
+        "localeKey": "waste.locations.12",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Return Cable: location schematic"
+          }
+        ]
+      }
+    ],
+    "npcs": [
+      {
+        "id": "npcs.1",
+        "name": "Driver Mara Axle",
+        "description": "Driver Mara Axle: will abandon the buyer contract if the crew offers a defensible reserve plan.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "waste.npcs.1",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Driver Mara Axle: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.2",
+        "name": "Keeper Ina Glassroot",
+        "description": "Keeper Ina Glassroot: knows the isolation protocol is outdated and fears losing the clean crop.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "waste.npcs.2",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Keeper Ina Glassroot: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.3",
+        "name": "Engineer Pell Heat",
+        "description": "Engineer Pell Heat: can repair the bypass but needs the uncounted homes mapped.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "waste.npcs.3",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Engineer Pell Heat: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.4",
+        "name": "Camper Juno Brace",
+        "description": "Camper Juno Brace: can lead bridge labor once injured travelers have transport.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "waste.npcs.4",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Camper Juno Brace: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.5",
+        "name": "Grower Dev Open",
+        "description": "Grower Dev Open: has clean outdoor shoots and offers a neutral contamination test.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "waste.npcs.5",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Grower Dev Open: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.6",
+        "name": "Clerk Sera Ember",
+        "description": "Clerk Sera Ember: keeps the omitted demand ledger hidden beneath an old heater.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "waste.npcs.6",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Clerk Sera Ember: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.7",
+        "name": "Medic Noa Filter",
+        "description": "Medic Noa Filter: has spare dust masks and must choose a safe evacuation route.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "waste.npcs.7",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Medic Noa Filter: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.8",
+        "name": "Archivist Ren Seed",
+        "description": "Archivist Ren Seed: holds the joint charter and wants the heirs involved in its renewal.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "waste.npcs.8",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Archivist Ren Seed: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.9",
+        "name": "Elder Bea Far",
+        "description": "Elder Bea Far: knows a working cable route through the old service tunnel.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "waste.npcs.9",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Elder Bea Far: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.10",
+        "name": "Broker Sol Passage",
+        "description": "Broker Sol Passage: bought the forged bids and will testify for a limited amnesty.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "waste.npcs.10",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Broker Sol Passage: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.11",
+        "name": "Technician Mei Culture",
+        "description": "Technician Mei Culture: can separate the viable strain without burning the entire seed room.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "waste.npcs.11",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Technician Mei Culture: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.12",
+        "name": "Worker Ash Cinder",
+        "description": "Worker Ash Cinder: can shut the warehouse valve before the repair crew enters.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "waste.npcs.12",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Worker Ash Cinder: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.13",
+        "name": "Child Len Route",
+        "description": "Child Len Route: marked a foot crossing the convoy's heavy trucks cannot use.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "waste.npcs.13",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Child Len Route: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.14",
+        "name": "Patient Rosa Root",
+        "description": "Patient Rosa Root: needs food now and refuses a harvest promise without a ration.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "waste.npcs.14",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Patient Rosa Root: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.15",
+        "name": "Courier Kai Hearth",
+        "description": "Courier Kai Hearth: can carry repair cells over the cold ridge if given shelter on return.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "waste.npcs.15",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Courier Kai Hearth: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.16",
+        "name": "Buyer Tess Reserve",
+        "description": "Buyer Tess Reserve: claims the barrels but will accept a witnessed delayed delivery.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "waste.npcs.16",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Buyer Tess Reserve: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.17",
+        "name": "Keeper Oren Seal",
+        "description": "Keeper Oren Seal: will open the gate if a safe filter replacement is demonstrated.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "waste.npcs.17",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Keeper Oren Seal: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.18",
+        "name": "Guardian Fia Wire",
+        "description": "Guardian Fia Wire: protects Far Hearth and suspects the crew only wants its spare cable.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "waste.npcs.18",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Guardian Fia Wire: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.19",
+        "name": "Mechanic Ivo Span",
+        "description": "Mechanic Ivo Span: can reinforce one bridge beam before the dust front arrives.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "waste.npcs.19",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Mechanic Ivo Span: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.20",
+        "name": "Grower Nessa Heir",
+        "description": "Grower Nessa Heir: wants seed rights to survive even if the greenhouse is lost.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "waste.npcs.20",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Grower Nessa Heir: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.21",
+        "name": "Organizer Bo Warm",
+        "description": "Organizer Bo Warm: can negotiate shared heat if the omitted residents get a vote.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "waste.npcs.21",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Organizer Bo Warm: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.22",
+        "name": "Scout Ada Mile",
+        "description": "Scout Ada Mile: saw the broker's barricade being built with stolen repair lumber.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "waste.npcs.22",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Scout Ada Mile: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.23",
+        "name": "Researcher Taro Field",
+        "description": "Researcher Taro Field: recorded old outdoor success trials that were suppressed.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "waste.npcs.23",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Researcher Taro Field: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.24",
+        "name": "Dispatcher Kira Last",
+        "description": "Dispatcher Kira Last: holds a one-use grid override and wants a public witness before using it.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "waste.npcs.24",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Dispatcher Kira Last: portrait schematic"
+          }
+        ]
+      }
+    ],
+    "adversaries": [
+      {
+        "id": "adversaries.1",
+        "name": "Passage Raiders",
+        "description": "Passage Raiders: demand the buyer's barrels and will accept supplies for wounded kin.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "waste.adversaries.1",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Passage Raiders: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.2",
+        "name": "Vault Purger",
+        "description": "Vault Purger: burns exposed cultures unless a verified clean sample is provided.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "waste.adversaries.2",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Vault Purger: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.3",
+        "name": "Heat Sheriff",
+        "description": "Heat Sheriff: seizes repair cells from anyone without an assembly meter.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "waste.adversaries.3",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Heat Sheriff: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.4",
+        "name": "Dust Stalker",
+        "description": "Dust Stalker: follows the convoy's engines and can be diverted by a quiet decoy.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "waste.adversaries.4",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Dust Stalker: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.5",
+        "name": "Filter Bloom",
+        "description": "Filter Bloom: clogs air channels but becomes harmless when separated from warm moisture.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "waste.adversaries.5",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Filter Bloom: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.6",
+        "name": "Warehouse Guard",
+        "description": "Warehouse Guard: protects an unauthorized heating line and hides its demand receipt.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "waste.adversaries.6",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Warehouse Guard: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.7",
+        "name": "Axle Gang",
+        "description": "Axle Gang: tries to seize the convoy truck while the crew repairs the span.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.7"
+          }
+        ],
+        "localeKey": "waste.adversaries.7",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Axle Gang: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.8",
+        "name": "Seal Drone",
+        "description": "Seal Drone: locks the greenhouse during an evacuation unless its protocol is amended.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.11"
+          }
+        ],
+        "localeKey": "waste.adversaries.8",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Seal Drone: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.9",
+        "name": "Cable Gnawer",
+        "description": "Cable Gnawer: a scavenging machine mistakes the return line for salvage.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.3"
+          }
+        ],
+        "localeKey": "waste.adversaries.9",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Cable Gnawer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.10",
+        "name": "Reserve Collector",
+        "description": "Reserve Collector: enforces the distant bid without acknowledging the stranded camp.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.4"
+          }
+        ],
+        "localeKey": "waste.adversaries.10",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Reserve Collector: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.11",
+        "name": "Culture Warden",
+        "description": "Culture Warden: destroys test beds while calling the destruction a safety inspection.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.8"
+          }
+        ],
+        "localeKey": "waste.adversaries.11",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Culture Warden: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.12",
+        "name": "Ration Informer",
+        "description": "Ration Informer: threatens residents who admit they bypassed broken meters.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.12"
+          }
+        ],
+        "localeKey": "waste.adversaries.12",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Ration Informer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.13",
+        "name": "Causeway Swarm",
+        "description": "Causeway Swarm: loose road machines react to bridge vibration and can be powered down.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "waste.adversaries.13",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Causeway Swarm: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.14",
+        "name": "Seed Thief",
+        "description": "Seed Thief: steals viable samples for a monopoly rather than immediate hunger.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "waste.adversaries.14",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Seed Thief: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.15",
+        "name": "Cold Patrol",
+        "description": "Cold Patrol: orders Far Hearth evacuated without arranging another shelter.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "waste.adversaries.15",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Cold Patrol: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.16",
+        "name": "Auction Enforcer",
+        "description": "Auction Enforcer: barricades the public road before the reserve hearing begins.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "waste.adversaries.16",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Auction Enforcer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.17",
+        "name": "Charter Eraser",
+        "description": "Charter Eraser: destroys evidence that planting rights were shared.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "waste.adversaries.17",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Charter Eraser: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.18",
+        "name": "Grid Echo",
+        "description": "Grid Echo: an old control process prioritizes a dead industrial district.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "waste.adversaries.18",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Grid Echo: creature schematic"
+          }
+        ]
+      }
+    ],
+    "items": [
+      {
+        "id": "items.1",
+        "name": "Reserve Ledger",
+        "description": "Reserve Ledger: records buyers' bids and the camp's unpaid emergency needs.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "waste.items.1",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Reserve Ledger: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.2",
+        "name": "Clean Seed Sample",
+        "description": "Clean Seed Sample: can prove outdoor viability if tested without cross-contamination.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "waste.items.2",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Clean Seed Sample: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.3",
+        "name": "Demand Map",
+        "description": "Demand Map: names the households omitted from the assembly's meters.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "waste.items.3",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Demand Map: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.4",
+        "name": "Bridge Brace",
+        "description": "Bridge Brace: supports the truck only after travelers leave the weak span.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "waste.items.4",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Bridge Brace: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.5",
+        "name": "Filter Cartridge",
+        "description": "Filter Cartridge: keeps the greenhouse clean while an evacuation gate stays open.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "waste.items.5",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Filter Cartridge: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.6",
+        "name": "Bypass Handle",
+        "description": "Bypass Handle: shuts unauthorized warehouse heat without stopping the main boiler.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "waste.items.6",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Bypass Handle: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.7",
+        "name": "Dust Masks",
+        "description": "Dust Masks: protects the foot crossing but cannot cover the whole convoy.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "waste.items.7",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Dust Masks: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.8",
+        "name": "Joint Planting Charter",
+        "description": "Joint Planting Charter: gives outsiders a legal claim on the seed inheritance.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "waste.items.8",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Joint Planting Charter: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.9",
+        "name": "Return Cable Reel",
+        "description": "Return Cable Reel: can warm Far Hearth if its route is repaired.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.3"
+          }
+        ],
+        "localeKey": "waste.items.9",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Return Cable Reel: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.10",
+        "name": "Passage Receipt",
+        "description": "Passage Receipt: links the barricade broker to stolen community lumber.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.4"
+          }
+        ],
+        "localeKey": "waste.items.10",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Passage Receipt: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.11",
+        "name": "Outdoor Trial Log",
+        "description": "Outdoor Trial Log: shows which soil plots stayed clean before the protocol froze.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.8"
+          }
+        ],
+        "localeKey": "waste.items.11",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Outdoor Trial Log: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.12",
+        "name": "Repair Cell",
+        "description": "Repair Cell: powers one diagnostic cycle or one night of emergency shelter.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.12"
+          }
+        ],
+        "localeKey": "waste.items.12",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Repair Cell: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.13",
+        "name": "Convoy Release",
+        "description": "Convoy Release: defers the buyer's claim if witnessed by the caravan.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.13"
+          }
+        ],
+        "localeKey": "waste.items.13",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Convoy Release: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.14",
+        "name": "Heir Seed Box",
+        "description": "Heir Seed Box: preserves a small strain even if the greenhouse burns.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.17"
+          }
+        ],
+        "localeKey": "waste.items.14",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Heir Seed Box: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.15",
+        "name": "Unmetered Petition",
+        "description": "Unmetered Petition: can put Far Hearth residents on the heat assembly roll.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.21"
+          }
+        ],
+        "localeKey": "waste.items.15",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Unmetered Petition: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.16",
+        "name": "Silent Engine Kit",
+        "description": "Silent Engine Kit: lets the truck cross without drawing the dust stalker.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.22"
+          }
+        ],
+        "localeKey": "waste.items.16",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Silent Engine Kit: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.17",
+        "name": "Culture Divider",
+        "description": "Culture Divider: separates useful seed from the filter bloom.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.2"
+          }
+        ],
+        "localeKey": "waste.items.17",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Culture Divider: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.18",
+        "name": "Warehouse Invoice",
+        "description": "Warehouse Invoice: proves the warm store is taking a residential ration.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.6"
+          }
+        ],
+        "localeKey": "waste.items.18",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Warehouse Invoice: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.19",
+        "name": "Camp Evacuation Map",
+        "description": "Camp Evacuation Map: marks transport space and safe waiting shelters.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.7"
+          }
+        ],
+        "localeKey": "waste.items.19",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Camp Evacuation Map: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.20",
+        "name": "Open Soil Deed",
+        "description": "Open Soil Deed: establishes shared planting with harvest accountability.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.11"
+          }
+        ],
+        "localeKey": "waste.items.20",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Open Soil Deed: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.21",
+        "name": "Manual Grid Key",
+        "description": "Manual Grid Key: overrides dead industrial priorities with a witnessed schedule.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.15"
+          }
+        ],
+        "localeKey": "waste.items.21",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Manual Grid Key: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.22",
+        "name": "Auction Amnesty",
+        "description": "Auction Amnesty: can secure the broker's confession at the price of a lighter sentence.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.16"
+          }
+        ],
+        "localeKey": "waste.items.22",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Auction Amnesty: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.23",
+        "name": "Harvest Ration",
+        "description": "Harvest Ration: feeds people now while reducing next season's seed reserve.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.20"
+          }
+        ],
+        "localeKey": "waste.items.23",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Harvest Ration: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.24",
+        "name": "Heat Covenant",
+        "description": "Heat Covenant: records the final schedule and repair obligations for both settlements.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.24"
+          }
+        ],
+        "localeKey": "waste.items.24",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Heat Covenant: item schematic"
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "id": "events.1",
+        "name": "Departure Alarm",
+        "description": "Departure Alarm: the dust front advances before the last water barrels are counted.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "waste.events.1",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Departure Alarm: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.2",
+        "name": "Closed Greenhouse",
+        "description": "Closed Greenhouse: a healthy traveler is denied entry while the seed room asks for labor.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "waste.events.2",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Closed Greenhouse: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.3",
+        "name": "Cold Roll Call",
+        "description": "Cold Roll Call: Far Hearth names do not appear in the assembly's demand list.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "waste.events.3",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Cold Roll Call: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.4",
+        "name": "Camp Signal",
+        "description": "Camp Signal: a broken radio asks the convoy for space beside the causeway.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "waste.events.4",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Camp Signal: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.5",
+        "name": "Bloom Warning",
+        "description": "Bloom Warning: the purger declares every outdoor sample contaminated.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "waste.events.5",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Bloom Warning: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.6",
+        "name": "Warehouse Steam",
+        "description": "Warehouse Steam: an unauthorized outlet glows while homes freeze.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "waste.events.6",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Warehouse Steam: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.7",
+        "name": "Reserve Bid",
+        "description": "Reserve Bid: a buyer offers repair parts in exchange for exclusive barrels.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "waste.events.7",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Reserve Bid: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.8",
+        "name": "Healthy Shoot",
+        "description": "Healthy Shoot: an outdoor bed produces evidence the vault cannot easily dismiss.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "waste.events.8",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Healthy Shoot: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.9",
+        "name": "Meter Seizure",
+        "description": "Meter Seizure: a sheriff takes the only diagnostic cell from an unregistered home.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "waste.events.9",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Meter Seizure: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.10",
+        "name": "Bridge Crack",
+        "description": "Bridge Crack: the heavy truck's crossing threatens stranded travelers.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "waste.events.10",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Bridge Crack: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.11",
+        "name": "Charter Discovery",
+        "description": "Charter Discovery: the archive reveals the vault was intended to serve surrounding communities.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "waste.events.11",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Charter Discovery: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.12",
+        "name": "Old Priority",
+        "description": "Old Priority: the grid sends another heat cycle to an empty factory.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "waste.events.12",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Old Priority: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.13",
+        "name": "Broker Barricade",
+        "description": "Broker Barricade: Auction Mile charges passage after community labor repairs the road.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "waste.events.13",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Broker Barricade: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.14",
+        "name": "Filter Failure",
+        "description": "Filter Failure: opening the gate now risks the viable crop unless a divider is fitted.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "waste.events.14",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Filter Failure: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.15",
+        "name": "Return Petition",
+        "description": "Return Petition: residents ask to share heat instead of accepting forced evacuation.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "waste.events.15",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Return Petition: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.16",
+        "name": "Mask Shortage",
+        "description": "Mask Shortage: the foot crossing must be staged in smaller groups.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "waste.events.16",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Mask Shortage: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.17",
+        "name": "Heir Meeting",
+        "description": "Heir Meeting: the seed heirs demand a voice in any changed planting agreement.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "waste.events.17",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Heir Meeting: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.18",
+        "name": "Repair Offer",
+        "description": "Repair Offer: the assembly offers cells only if the omitted houses stay off the roll.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "waste.events.18",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Repair Offer: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.19",
+        "name": "Buyer Arrival",
+        "description": "Buyer Arrival: Tess reaches the depot before the reserve hearing.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "waste.events.19",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Buyer Arrival: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.20",
+        "name": "Purger Countdown",
+        "description": "Purger Countdown: the culture warden schedules a burn before independent testing.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "waste.events.20",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Purger Countdown: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.21",
+        "name": "Cable Fault",
+        "description": "Cable Fault: the last return line fails when the main boiler warms up.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "waste.events.21",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Cable Fault: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.22",
+        "name": "Camp Council",
+        "description": "Camp Council: travelers decide who needs the first transport places.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "waste.events.22",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Camp Council: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.23",
+        "name": "Open Soil Hearing",
+        "description": "Open Soil Hearing: a clean sample can overturn the protocol under public witness.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "waste.events.23",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Open Soil Hearing: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.24",
+        "name": "Ration Confession",
+        "description": "Ration Confession: a worker admits the warehouse line was fitted during a prior freeze.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "waste.events.24",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Ration Confession: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.25",
+        "name": "Quiet Crossing",
+        "description": "Quiet Crossing: a silent truck route becomes available at the price of leaving a load.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "waste.events.25",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Quiet Crossing: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.26",
+        "name": "First Harvest",
+        "description": "First Harvest: the crew chooses between immediate meals and next season's reserve.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "waste.events.26",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "First Harvest: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.27",
+        "name": "Shared Override",
+        "description": "Shared Override: the dispatcher offers one manual cycle if both settlements sign.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "waste.events.27",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Shared Override: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.28",
+        "name": "Road Reopened",
+        "description": "Road Reopened: the convoy's reserve decision changes who can use the causeway.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "waste.events.28",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Road Reopened: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.29",
+        "name": "Seeds Released",
+        "description": "Seeds Released: the final charter defines who may plant and who must report failures.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "waste.events.29",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Seeds Released: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.30",
+        "name": "Heat after Frost",
+        "description": "Heat after Frost: the schedule reflects the crew's decision about omitted households.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "waste.events.30",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Heat after Frost: background schematic"
+          }
+        ]
+      }
+    ],
+    "scenes": [
+      {
+        "id": "scenes.1",
+        "name": "Barrels before the Storm",
+        "description": "Barrels before the Storm: Objective: establish emergency reserves. Audit the bids or negotiate delayed delivery; delay strands the camp.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.4"
+          }
+        ],
+        "localeKey": "waste.scenes.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Barrels before the Storm: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.2",
+        "name": "The Sealed Harvest",
+        "description": "The Sealed Harvest: Objective: find a safe way into the vault. Prove clean health or replace the gate filter; delay begins a purge.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "waste.scenes.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Sealed Harvest: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.3",
+        "name": "Homes off the Roll",
+        "description": "Homes off the Roll: Objective: identify uncounted demand. Map Far Hearth or recover the hidden ledger; delay brings forced evacuation.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.6"
+          }
+        ],
+        "localeKey": "waste.scenes.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Homes off the Roll: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.4",
+        "name": "A Span for Everyone",
+        "description": "A Span for Everyone: Objective: cross without losing travelers. Reinforce the beam or stage the foot route; delay draws the dust front.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.7"
+          }
+        ],
+        "localeKey": "waste.scenes.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Span for Everyone: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.5",
+        "name": "The Living Sample",
+        "description": "The Living Sample: Objective: separate seed from contamination. Fit a culture divider or test outdoor shoots; delay burns the room.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.8"
+          }
+        ],
+        "localeKey": "waste.scenes.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Living Sample: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.6",
+        "name": "Heat in the Warehouse",
+        "description": "Heat in the Warehouse: Objective: stop unauthorized diversion. Close the bypass or secure a public inspection; delay drains repair cells.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "waste.scenes.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Heat in the Warehouse: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.7",
+        "name": "Auction Mile",
+        "description": "Auction Mile: Objective: reopen public passage. Expose stolen lumber or negotiate restitution; delay seizes the truck.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "waste.scenes.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Auction Mile: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.8",
+        "name": "An Inherited Garden",
+        "description": "An Inherited Garden: Objective: establish planting rights. Recover the joint charter or convene the seed heirs; delay erases the archive.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.11"
+          }
+        ],
+        "localeKey": "waste.scenes.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "An Inherited Garden: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.9",
+        "name": "The Dead Factory",
+        "description": "The Dead Factory: Objective: change grid priorities. Use the manual key or prove obsolete demand; delay shuts Far Hearth's line.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.12"
+          }
+        ],
+        "localeKey": "waste.scenes.9",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Dead Factory: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.10",
+        "name": "A Camp on Wheels",
+        "description": "A Camp on Wheels: Objective: evacuate vulnerable travelers. Share truck space or recruit a second carrier; delay closes the foot crossing.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.13"
+          }
+        ],
+        "localeKey": "waste.scenes.10",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Camp on Wheels: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.11",
+        "name": "The Purger's Order",
+        "description": "The Purger's Order: Objective: prevent unnecessary burning. Certify a sample or isolate the machine; delay destroys the viable strain.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "waste.scenes.11",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Purger's Order: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.12",
+        "name": "Across the Cold Ridge",
+        "description": "Across the Cold Ridge: Objective: repair the return cable. Escort cells or open the service tunnel; delay exhausts the shelter.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.15"
+          }
+        ],
+        "localeKey": "waste.scenes.12",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Across the Cold Ridge: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.13",
+        "name": "The Reserve Hearing",
+        "description": "The Reserve Hearing: Objective: settle the convoy's claim. Present bids and needs or witness deferred delivery; delay sells the remaining barrels.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.16"
+          }
+        ],
+        "localeKey": "waste.scenes.13",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Reserve Hearing: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.14",
+        "name": "Harvest beyond Glass",
+        "description": "Harvest beyond Glass: Objective: set a safe planting policy. Establish monitored beds or distribute heir boxes; delay causes a food riot.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.17"
+          }
+        ],
+        "localeKey": "waste.scenes.14",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Harvest beyond Glass: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.15",
+        "name": "The One-use Override",
+        "description": "The One-use Override: Objective: restart fair heat. Schedule shared cycles or form a joint repair team; delay freezes the control valves.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "waste.scenes.15",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The One-use Override: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.16",
+        "name": "A Road Kept Open",
+        "description": "A Road Kept Open: Objective: choose passage governance. Create a road mutual or a bounded toll charter; record who funds repairs.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "waste.scenes.16",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Road Kept Open: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.17",
+        "name": "The Next Season",
+        "description": "The Next Season: Objective: divide food and seed fairly. Fund immediate rations or protect a witnessed reserve; record who can plant.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.2"
+          }
+        ],
+        "localeKey": "waste.scenes.17",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Next Season: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.18",
+        "name": "Both Hearths Warm",
+        "description": "Both Hearths Warm: Objective: settle the heat covenant. Share shortages or guarantee a minimum ration; record who represents omitted homes.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.3"
+          }
+        ],
+        "localeKey": "waste.scenes.18",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Both Hearths Warm: map schematic"
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "archetypes.1",
+        "name": "Convoy Auditor",
+        "description": "Convoy Auditor: tracks reserves and protects travelers whose needs are unpaid.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "waste.archetypes.1",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Convoy Auditor: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.2",
+        "name": "Seed Technician",
+        "description": "Seed Technician: separates viable cultures and refuses an unnecessary purge.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "waste.archetypes.2",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Seed Technician: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.3",
+        "name": "Grid Engineer",
+        "description": "Grid Engineer: repairs controls and maps uncounted household demand.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "waste.archetypes.3",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Grid Engineer: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.4",
+        "name": "Causeway Medic",
+        "description": "Causeway Medic: stages evacuations and treats dust exposure.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "waste.archetypes.4",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Causeway Medic: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.5",
+        "name": "Open Soil Grower",
+        "description": "Open Soil Grower: tests outdoor crops and records failures honestly.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "waste.archetypes.5",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Open Soil Grower: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.6",
+        "name": "Far Hearth Courier",
+        "description": "Far Hearth Courier: carries cells and negotiates shelter across the ridge.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "waste.archetypes.6",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Far Hearth Courier: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.7",
+        "name": "Road Mediator",
+        "description": "Road Mediator: can defer contracts without hiding emergency shortages.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "waste.archetypes.7",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Road Mediator: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.8",
+        "name": "Charter Archivist",
+        "description": "Charter Archivist: preserves inherited rights and involves the named communities.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "waste.archetypes.8",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Charter Archivist: portrait schematic"
+          }
+        ]
+      }
+    ],
+    "progressionPaths": [
+      {
+        "id": "progressionPaths.1",
+        "name": "Reserve Steward",
+        "description": "Reserve Steward: earn trust by protecting emergency supplies with honest accounts; gain convoy authority and delivery obligations.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.1"
+          }
+        ],
+        "localeKey": "waste.progressionPaths.1",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Reserve Steward: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.2",
+        "name": "Seed Custodian",
+        "description": "Seed Custodian: earn trust by preserving crop and shared planting rights; gain vault access and testing duties.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.5"
+          }
+        ],
+        "localeKey": "waste.progressionPaths.2",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Seed Custodian: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.3",
+        "name": "Heat Coordinator",
+        "description": "Heat Coordinator: earn trust by including omitted homes in ration decisions; gain control access and public schedule duties.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.3"
+          }
+        ],
+        "localeKey": "waste.progressionPaths.3",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Heat Coordinator: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.4",
+        "name": "Crossing Guardian",
+        "description": "Crossing Guardian: earn trust by evacuating travelers before moving freight; gain bridge crews and repair responsibilities.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.1"
+          }
+        ],
+        "localeKey": "waste.progressionPaths.4",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Crossing Guardian: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.5",
+        "name": "Harvest Witness",
+        "description": "Harvest Witness: earn trust by sharing clean trial evidence; gain grower support and contamination reporting duties.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.5"
+          }
+        ],
+        "localeKey": "waste.progressionPaths.5",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Harvest Witness: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.6",
+        "name": "Return Warden",
+        "description": "Return Warden: earn trust by keeping a rescue route supplied; gain courier support and shelter obligations.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.6"
+          }
+        ],
+        "localeKey": "waste.progressionPaths.6",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Return Warden: item schematic"
+          }
+        ]
+      }
+    ],
+    "visualThemes": [
+      {
+        "id": "visualThemes.1",
+        "name": "Dustroad Route",
+        "description": "Dustroad Route: ochre front lines and blue reserve marks distinguish safe crossings from paid barriers.",
+        "patternIds": [
+          "dustroad-convoy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "waste.visualThemes.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Dustroad Route: map schematic"
+          },
+          {
+            "role": "ui",
+            "asset": "ui/background.svg",
+            "alt": "Recovery navigation interface"
+          }
+        ]
+      },
+      {
+        "id": "visualThemes.2",
+        "name": "Glassroot Trial",
+        "description": "Glassroot Trial: green clean beds and red isolation bands mark viable seed and uncertain cultures.",
+        "patternIds": [
+          "seed-vault"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "waste.visualThemes.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Glassroot Trial: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "visualThemes.3",
+        "name": "Last Grid Ledger",
+        "description": "Last Grid Ledger: amber household lines and gray dead districts distinguish shared heat from obsolete demand.",
+        "patternIds": [
+          "last-grid"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "waste.visualThemes.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Last Grid Ledger: map schematic"
+          }
+        ]
+      }
+    ]
+  },
+  "playToday": {
+    "patternId": "dustroad-convoy",
+    "campaignKitId": "kit.dustroad-convoy",
+    "visualThemeId": "visualThemes.1"
+  },
+  "localization": {
+    "sourceLocale": "en",
+    "supportedLocales": [
+      "en",
+      "ru",
+      "es",
+      "ja",
+      "zh-CN",
+      "ko"
+    ],
+    "strings": {
+      "en": {
+        "waste.factions.1": "Road Mutual",
+        "waste.factions.2": "Vault Keepers",
+        "waste.factions.3": "Heat Assembly",
+        "waste.factions.4": "Causeway Camp",
+        "waste.factions.5": "Open Soil Collective",
+        "waste.factions.6": "Station Mechanics",
+        "waste.factions.7": "Caravan Witnesses",
+        "waste.factions.8": "Seed Heirs",
+        "waste.locations.1": "Dustroad Depot",
+        "waste.locations.2": "Glassroot Gate",
+        "waste.locations.3": "Last Grid Control",
+        "waste.locations.4": "Broken Causeway",
+        "waste.locations.5": "Clean Seed Room",
+        "waste.locations.6": "Cinder Valve Hall",
+        "waste.locations.7": "Windbreak Camp",
+        "waste.locations.8": "Open Soil Beds",
+        "waste.locations.9": "Far Hearth",
+        "waste.locations.10": "Auction Mile",
+        "waste.locations.11": "Inheritance Archive",
+        "waste.locations.12": "Return Cable",
+        "waste.npcs.1": "Driver Mara Axle",
+        "waste.npcs.2": "Keeper Ina Glassroot",
+        "waste.npcs.3": "Engineer Pell Heat",
+        "waste.npcs.4": "Camper Juno Brace",
+        "waste.npcs.5": "Grower Dev Open",
+        "waste.npcs.6": "Clerk Sera Ember",
+        "waste.npcs.7": "Medic Noa Filter",
+        "waste.npcs.8": "Archivist Ren Seed",
+        "waste.npcs.9": "Elder Bea Far",
+        "waste.npcs.10": "Broker Sol Passage",
+        "waste.npcs.11": "Technician Mei Culture",
+        "waste.npcs.12": "Worker Ash Cinder",
+        "waste.npcs.13": "Child Len Route",
+        "waste.npcs.14": "Patient Rosa Root",
+        "waste.npcs.15": "Courier Kai Hearth",
+        "waste.npcs.16": "Buyer Tess Reserve",
+        "waste.npcs.17": "Keeper Oren Seal",
+        "waste.npcs.18": "Guardian Fia Wire",
+        "waste.npcs.19": "Mechanic Ivo Span",
+        "waste.npcs.20": "Grower Nessa Heir",
+        "waste.npcs.21": "Organizer Bo Warm",
+        "waste.npcs.22": "Scout Ada Mile",
+        "waste.npcs.23": "Researcher Taro Field",
+        "waste.npcs.24": "Dispatcher Kira Last",
+        "waste.adversaries.1": "Passage Raiders",
+        "waste.adversaries.2": "Vault Purger",
+        "waste.adversaries.3": "Heat Sheriff",
+        "waste.adversaries.4": "Dust Stalker",
+        "waste.adversaries.5": "Filter Bloom",
+        "waste.adversaries.6": "Warehouse Guard",
+        "waste.adversaries.7": "Axle Gang",
+        "waste.adversaries.8": "Seal Drone",
+        "waste.adversaries.9": "Cable Gnawer",
+        "waste.adversaries.10": "Reserve Collector",
+        "waste.adversaries.11": "Culture Warden",
+        "waste.adversaries.12": "Ration Informer",
+        "waste.adversaries.13": "Causeway Swarm",
+        "waste.adversaries.14": "Seed Thief",
+        "waste.adversaries.15": "Cold Patrol",
+        "waste.adversaries.16": "Auction Enforcer",
+        "waste.adversaries.17": "Charter Eraser",
+        "waste.adversaries.18": "Grid Echo",
+        "waste.items.1": "Reserve Ledger",
+        "waste.items.2": "Clean Seed Sample",
+        "waste.items.3": "Demand Map",
+        "waste.items.4": "Bridge Brace",
+        "waste.items.5": "Filter Cartridge",
+        "waste.items.6": "Bypass Handle",
+        "waste.items.7": "Dust Masks",
+        "waste.items.8": "Joint Planting Charter",
+        "waste.items.9": "Return Cable Reel",
+        "waste.items.10": "Passage Receipt",
+        "waste.items.11": "Outdoor Trial Log",
+        "waste.items.12": "Repair Cell",
+        "waste.items.13": "Convoy Release",
+        "waste.items.14": "Heir Seed Box",
+        "waste.items.15": "Unmetered Petition",
+        "waste.items.16": "Silent Engine Kit",
+        "waste.items.17": "Culture Divider",
+        "waste.items.18": "Warehouse Invoice",
+        "waste.items.19": "Camp Evacuation Map",
+        "waste.items.20": "Open Soil Deed",
+        "waste.items.21": "Manual Grid Key",
+        "waste.items.22": "Auction Amnesty",
+        "waste.items.23": "Harvest Ration",
+        "waste.items.24": "Heat Covenant",
+        "waste.events.1": "Departure Alarm",
+        "waste.events.2": "Closed Greenhouse",
+        "waste.events.3": "Cold Roll Call",
+        "waste.events.4": "Camp Signal",
+        "waste.events.5": "Bloom Warning",
+        "waste.events.6": "Warehouse Steam",
+        "waste.events.7": "Reserve Bid",
+        "waste.events.8": "Healthy Shoot",
+        "waste.events.9": "Meter Seizure",
+        "waste.events.10": "Bridge Crack",
+        "waste.events.11": "Charter Discovery",
+        "waste.events.12": "Old Priority",
+        "waste.events.13": "Broker Barricade",
+        "waste.events.14": "Filter Failure",
+        "waste.events.15": "Return Petition",
+        "waste.events.16": "Mask Shortage",
+        "waste.events.17": "Heir Meeting",
+        "waste.events.18": "Repair Offer",
+        "waste.events.19": "Buyer Arrival",
+        "waste.events.20": "Purger Countdown",
+        "waste.events.21": "Cable Fault",
+        "waste.events.22": "Camp Council",
+        "waste.events.23": "Open Soil Hearing",
+        "waste.events.24": "Ration Confession",
+        "waste.events.25": "Quiet Crossing",
+        "waste.events.26": "First Harvest",
+        "waste.events.27": "Shared Override",
+        "waste.events.28": "Road Reopened",
+        "waste.events.29": "Seeds Released",
+        "waste.events.30": "Heat after Frost",
+        "waste.scenes.1": "Barrels before the Storm",
+        "waste.scenes.2": "The Sealed Harvest",
+        "waste.scenes.3": "Homes off the Roll",
+        "waste.scenes.4": "A Span for Everyone",
+        "waste.scenes.5": "The Living Sample",
+        "waste.scenes.6": "Heat in the Warehouse",
+        "waste.scenes.7": "Auction Mile",
+        "waste.scenes.8": "An Inherited Garden",
+        "waste.scenes.9": "The Dead Factory",
+        "waste.scenes.10": "A Camp on Wheels",
+        "waste.scenes.11": "The Purger's Order",
+        "waste.scenes.12": "Across the Cold Ridge",
+        "waste.scenes.13": "The Reserve Hearing",
+        "waste.scenes.14": "Harvest beyond Glass",
+        "waste.scenes.15": "The One-use Override",
+        "waste.scenes.16": "A Road Kept Open",
+        "waste.scenes.17": "The Next Season",
+        "waste.scenes.18": "Both Hearths Warm",
+        "waste.archetypes.1": "Convoy Auditor",
+        "waste.archetypes.2": "Seed Technician",
+        "waste.archetypes.3": "Grid Engineer",
+        "waste.archetypes.4": "Causeway Medic",
+        "waste.archetypes.5": "Open Soil Grower",
+        "waste.archetypes.6": "Far Hearth Courier",
+        "waste.archetypes.7": "Road Mediator",
+        "waste.archetypes.8": "Charter Archivist",
+        "waste.progressionPaths.1": "Reserve Steward",
+        "waste.progressionPaths.2": "Seed Custodian",
+        "waste.progressionPaths.3": "Heat Coordinator",
+        "waste.progressionPaths.4": "Crossing Guardian",
+        "waste.progressionPaths.5": "Harvest Witness",
+        "waste.progressionPaths.6": "Return Warden",
+        "waste.visualThemes.1": "Dustroad Route",
+        "waste.visualThemes.2": "Glassroot Trial",
+        "waste.visualThemes.3": "Last Grid Ledger"
+      }
+    },
+    "fallbackLocales": [
+      "ru",
+      "es",
+      "ja",
+      "zh-CN",
+      "ko"
+    ]
+  }
+}
