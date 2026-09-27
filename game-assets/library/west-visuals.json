@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.west.visuals",
+  "version": "1.0.0",
+  "type": "visuals",
+  "name": "Frontier Route Schematics",
+  "description": "Frontier Route Schematics for Cursed Frontier, Ghost Railway, Occult Boomtown. Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.",
+  "tags": [
+    "weird-west",
+    "cursed-frontier",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Frontier Route Schematics for Cursed Frontier, Ghost Railway, Occult Boomtown. Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.",
+    "highlights": [
+      "Frontier Route Schematics",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.weird-west"
+    ],
+    "requiresCapabilities": [
+      "setting:weird-west"
+    ],
+    "providesCapabilities": [
+      "visuals:weird-west"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.west.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Weird West original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.west.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 6
+  },
+  "media": [
+    {
+      "name": "weird-west/west-background.svg",
+      "path": "media/west-background.svg",
+      "role": "background",
+      "mediaType": "image/svg+xml",
+      "checksum": "c5ba45596670a8f7231bf81a336ce2328a053f220e802f989599b271fae33ca7",
+      "size": 737
+    },
+    {
+      "name": "weird-west/west-portrait.svg",
+      "path": "media/west-portrait.svg",
+      "role": "portrait",
+      "mediaType": "image/svg+xml",
+      "checksum": "6ae6509034862665063618b9a6ead302b1ff7a45673045b152402a32122a4f76",
+      "size": 624
+    },
+    {
+      "name": "weird-west/west-creature.svg",
+      "path": "media/west-creature.svg",
+      "role": "token",
+      "mediaType": "image/svg+xml",
+      "checksum": "8a49f3ccb37ff1483408535494e3ce295863f1e493a020bd7f7f83153c4d7545",
+      "size": 702
+    },
+    {
+      "name": "weird-west/west-item.svg",
+      "path": "media/west-item.svg",
+      "role": "item",
+      "mediaType": "image/svg+xml",
+      "checksum": "4a389de65c42153070b95e67f55b9fdf450d07a10e8320c01cf98bd8e4c0da62",
+      "size": 637
+    },
+    {
+      "name": "weird-west/west-location.svg",
+      "path": "media/west-location.svg",
+      "role": "location",
+      "mediaType": "image/svg+xml",
+      "checksum": "2ed39eb86992ef91a6873b61f1aaa0dba760e80a22cf531f84d621bf9d057755",
+      "size": 626
+    },
+    {
+      "name": "weird-west/west-map.svg",
+      "path": "media/west-map.svg",
+      "role": "map",
+      "mediaType": "image/svg+xml",
+      "checksum": "e76ff24c17f1375eef6b47431a090064747ecf9fdd4c3a55ed3876b2cb397b19",
+      "size": 2446
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.west.visuals",
+    "version": "1.0.0",
+    "name": "Frontier Route Schematics",
+    "description": "Frontier Route Schematics for Cursed Frontier, Ghost Railway, Occult Boomtown. Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.",
+    "provides": [
+      "visuals:weird-west"
+    ],
+    "requires": [
+      "setting:weird-west"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/west-deep",
+        "value": {
+          "id": "west-deep",
+          "name": "Frontier Navigation",
+          "description": "Original Weird West navigation schematics",
+          "defaults": {
+            "background": "assets/weird-west/west-background.svg",
+            "portrait": "assets/weird-west/west-portrait.svg",
+            "token": "assets/weird-west/west-creature.svg",
+            "item": "assets/weird-west/west-item.svg",
+            "location": "assets/weird-west/west-location.svg",
+            "map": "assets/weird-west/west-map.svg"
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "west-deep"
+  }
+}

@@ -1,0 +1,858 @@
+questions:
+  - id: world.tone
+    label: Campaign tone
+    type: choice
+    default: heroic
+    options:
+      - value: heroic
+        label: Heroic
+      - value: tense
+        label: Tense
+      - value: tragic
+        label: Tragic
+  - id: world.threat
+    label: Threat level
+    type: choice
+    default: high
+    options:
+      - value: low
+        label: Low
+      - value: medium
+        label: Medium
+      - value: high
+        label: High
+  - id: world.environment
+    label: Dominant environment
+    type: choice
+    default: crossing
+    options:
+      - value: crossing
+        label: River frontier
+      - value: railway
+        label: Ghost railway
+      - value: boomtown
+        label: Mining town
+  - id: world.scarcity
+    label: Resource pressure
+    type: choice
+    default: strained
+    options:
+      - value: plentiful
+        label: Plentiful
+      - value: strained
+        label: Strained
+      - value: rare
+        label: Rare
+  - id: world.pattern
+    label: Universe pattern
+    type: choice
+    default: cursed-frontier
+    options:
+      - value: cursed-frontier
+        label: Cursed Frontier
+      - value: ghost-railway
+        label: Ghost Railway
+      - value: occult-boomtown
+        label: Occult Boomtown
+  - id: world.campaignKit
+    label: Campaign Kit
+    type: choice
+    default: kit.cursed-frontier
+    options:
+      - value: kit.cursed-frontier
+        label: "Cursed Frontier: The Road after the Flood"
+      - value: kit.ghost-railway
+        label: "Ghost Railway: The Midnight Homecoming"
+      - value: kit.occult-boomtown
+        label: "Occult Boomtown: A Town above Ground"
+  - id: world.visualTheme
+    label: Visual theme
+    type: choice
+    default: visualThemes.1
+    options:
+      - value: visualThemes.1
+        label: Redwater Survey
+      - value: visualThemes.2
+        label: Midnight Timetable
+      - value: visualThemes.3
+        label: Deepgold Pulse
+generators:
+  region.count:
+    type: integer-range
+    min: 2
+    max: 3
+  region.names:
+    type: values
+    values:
+      - Cursed Frontier
+      - Ghost Railway
+      - Occult Boomtown
+  settlement.names:
+    type: values
+    values:
+      - Redwater Crossing
+      - Midnight Depot
+      - Deepgold Assay Hall
+      - Burial Road Stakes
+      - Platform Zero
+      - Listening Shaft
+      - County Survey Room
+      - Black Lantern Bridge
+  location.names:
+    type: values
+    values:
+      - Redwater Crossing
+      - Midnight Depot
+      - Deepgold Assay Hall
+      - Burial Road Stakes
+      - Platform Zero
+      - Listening Shaft
+      - County Survey Room
+      - Black Lantern Bridge
+  creature.names:
+    type: values
+    values:
+      - Flood Rider
+      - Wage Collector Shade
+      - Heartgold Sentinel
+      - Fence Enforcer
+      - Timetable Clerk
+      - Assay Blackmailer
+      - Stake Hound
+      - Brake Wraith
+  npc.names:
+    type: values
+    values:
+      - Rider Mara Reed
+      - Conductor Ivo Bell
+      - Assayer Tessa Flint
+      - Surveyor Ren Pike
+      - Lampkeeper Bea Zero
+      - Miner Juno Deep
+      - Witness Noa River
+      - Engineer Kai Lantern
+  faction.names:
+    type: values
+    values:
+      - Redwater Neighbors
+      - Midnight Railway Crew
+      - Deepgold Prospectors
+      - Boundary Riders
+      - Platform Watch
+      - Well Cooperative
+      - River Witnesses
+      - Black Lantern Union
+  event.names:
+    type: values
+    values:
+      - Fence at Dawn
+      - Extra Carriage
+      - Assay Heartbeat
+      - Stakes Advance
+      - Unprinted Stop
+      - Well Taste
+      - Agreement Missing
+      - Lantern Failure
+  encounter.names:
+    type: values
+    values:
+      - A Fence across the Mourning Road
+      - One Carriage Too Many
+      - Gold with a Heartbeat
+      - The Survey's Missing Leaf
+      - The Station that Was Erased
+      - Voices in the Listening Shaft
+      - Dry Ground before Judgment
+      - The Brake Lantern Bridge
+  item.names:
+    type: values
+    values:
+      - Shared Passage Copy
+      - Missing Wage Book
+      - Pulsing Nugget
+      - Survey Stake Puller
+      - Brake Lantern
+      - Clean Reserve Jar
+      - Two-bank Witness Slip
+      - Platform Zero Ticket
+  economy:
+    type: weighted-table
+    entries:
+      - value: trade
+        weight: 35
+      - value: craft
+        weight: 30
+      - value: service
+        weight: 20
+      - value: smuggling
+        weight: 15
+  danger:
+    type: integer-range
+    min: 1
+    max: 5
+traits:
+  region.threatened:
+    id: region.threatened
+    when:
+      eq:
+        - descriptor: world.threat
+        - high
+    addTags:
+      - dangerous
+    set:
+      alert: true
+  location.scarce:
+    id: location.scarce
+    when:
+      ne:
+        - descriptor: world.scarcity
+        - plentiful
+    addTags:
+      - contested
+    set:
+      supplies: limited
+templates:
+  world.root:
+    kind: realm
+    values:
+      name:
+        value: The Black Lantern Frontier
+      tone:
+        descriptor: world.tone
+        default: heroic
+      environment:
+        descriptor: world.environment
+        default: pastoral
+      scarcity:
+        descriptor: world.scarcity
+        default: strained
+    components:
+      regions:
+        template: region.standard
+        count:
+          generator: region.count
+      faction:
+        template: faction.major
+      encounter:
+        template: encounter.signature
+      event:
+        template: event.opening
+  region.standard:
+    kind: province
+    traits:
+      - region.threatened
+    values:
+      name:
+        generator: region.names
+      threat:
+        descriptor: world.threat
+        default: high
+      danger:
+        generator: danger
+    components:
+      settlements:
+        template: settlement.standard
+        count: 2
+      locations:
+        template: location.standard
+        count: 2
+      creatures:
+        template: creature.standard
+        count: 2
+      npc:
+        template: npc.standard
+      item:
+        template: item.signature
+  settlement.standard:
+    kind: settlement
+    tags:
+      - community
+    values:
+      name:
+        generator: settlement.names
+      economy:
+        generator: economy
+      environment:
+        descriptor: world.environment
+        default: pastoral
+    components: {}
+  location.standard:
+    kind: location
+    tags:
+      - adventure-site
+    traits:
+      - location.scarce
+    values:
+      name:
+        generator: location.names
+      feature:
+        descriptor: world.environment
+        default: pastoral
+    components: {}
+  creature.standard:
+    kind: creature
+    tags:
+      - threat
+    values:
+      name:
+        generator: creature.names
+      danger:
+        generator: danger
+    components: {}
+  npc.standard:
+    kind: npc
+    tags:
+      - contact
+    values:
+      name:
+        generator: npc.names
+      agenda:
+        generator: economy
+    components: {}
+  item.signature:
+    kind: item
+    tags:
+      - treasure
+    values:
+      name:
+        generator: item.names
+      scarcity:
+        descriptor: world.scarcity
+        default: strained
+    components: {}
+  faction.major:
+    kind: faction
+    tags:
+      - major-faction
+    values:
+      name:
+        generator: faction.names
+      agenda:
+        generator: economy
+    components: {}
+  encounter.signature:
+    kind: encounter
+    tags:
+      - set-piece
+    values:
+      name:
+        generator: encounter.names
+      threat:
+        descriptor: world.threat
+        default: high
+    components: {}
+  event.opening:
+    kind: event
+    tags:
+      - campaign-hook
+    values:
+      name:
+        generator: event.names
+      tone:
+        descriptor: world.tone
+        default: heroic
+    components: {}
+relations:
+  - id: settlement-route
+    type: connectedTo
+    from:
+      kind: settlement
+    to:
+      kind: settlement
+    mode: chain
+    bidirectional: true
+  - id: faction-influence
+    type: influencedBy
+    from:
+      kind: province
+    to:
+      kind: faction
+      tags:
+        - major-faction
+    mode: each-to-first
+constraints:
+  - id: regional-depth
+    type: entity-count
+    query:
+      kind: province
+    min: 2
+  - id: adventure-sites
+    type: entity-count
+    query:
+      kind: location
+    min: 4
+  - id: routes-exist
+    type: relation-count
+    relation: connectedTo
+    min: 3
+dependencies: []
+characterCreation:
+  schemaVersion: "1"
+  steps:
+    - id: identity
+      title: Identity
+      fields:
+        - id: name
+          label: Name
+          type: text
+          required: true
+          minLength: 2
+          maxLength: 60
+    - id: calling
+      title: Calling
+      fields:
+        - id: calling
+          label: Calling
+          type: choice
+          required: true
+          options:
+            - value: marshal
+              label: Marshal
+            - value: scout
+              label: Scout
+            - value: medium
+              label: Medium
+        - id: archetype
+          label: Frontier role
+          type: choice
+          required: true
+          default: archetypes.1
+          options:
+            - value: archetypes.1
+              label: River Guide
+            - value: archetypes.2
+              label: Railway Witness
+            - value: archetypes.3
+              label: Pulse Assayer
+            - value: archetypes.4
+              label: Boundary Deputy
+            - value: archetypes.5
+              label: Brake Engineer
+            - value: archetypes.6
+              label: Well Doctor
+            - value: archetypes.7
+              label: County Archivist
+            - value: archetypes.8
+              label: Surface Organizer
+        - id: path
+          label: Progression path
+          type: choice
+          required: true
+          default: progressionPaths.1
+          options:
+            - value: progressionPaths.1
+              label: Crossing Keeper
+            - value: progressionPaths.2
+              label: Midnight Steward
+            - value: progressionPaths.3
+              label: Clean Well Guardian
+            - value: progressionPaths.4
+              label: Hearing Marshal
+            - value: progressionPaths.5
+              label: Lantern Navigator
+            - value: progressionPaths.6
+              label: Surface Builder
+    - id: aptitudes
+      title: Aptitudes
+      fields:
+        - id: grit
+          label: Grit
+          type: number
+          min: -2
+          max: 5
+          default: 1
+        - id: wits
+          label: Wits
+          type: number
+          min: -2
+          max: 5
+          default: 1
+        - id: spirit
+          label: Spirit
+          type: number
+          min: -2
+          max: 5
+          default: 1
+    - id: signature
+      title: Signature
+      fields:
+        - id: signature
+          label: Signature approach
+          type: choice
+          required: true
+          default: bold
+          options:
+            - value: bold
+              label: Bold
+            - value: careful
+              label: Careful
+            - value: compassionate
+              label: Compassionate
+        - id: portrait
+          label: Portrait
+          type: asset
+          required: true
+          default: standard
+          options:
+            - value: standard
+              label: Weird West portrait
+            - value: silhouette
+              label: Silhouette
+  calculated:
+    - id: readiness
+      operation: sum
+      fields:
+        - grit
+        - wits
+        - spirit
+  starting:
+    progression:
+      renown: 0
+      experience: 0
+      progressionPaths.1: 0
+      progressionPaths.2: 0
+      progressionPaths.3: 0
+      progressionPaths.4: 0
+      progressionPaths.5: 0
+      progressionPaths.6: 0
+    resources:
+      health: 18
+      nerve: 10
+      hex: 8
+    inventory:
+      - id: weapon
+        quantity: 1
+        when:
+          field: calling
+          equals: marshal
+      - id: kit
+        quantity: 1
+        when:
+          field: calling
+          equals: scout
+      - id: relic
+        quantity: 1
+        when:
+          field: calling
+          equals: medium
+      - id: supply
+        quantity: 2
+    traits:
+      - id: trained-marshal
+        when:
+          field: calling
+          equals: marshal
+      - id: trained-scout
+        when:
+          field: calling
+          equals: scout
+      - id: trained-medium
+        when:
+          field: calling
+          equals: medium
+      - id: role-archetypes.1
+        when:
+          field: archetype
+          equals: archetypes.1
+      - id: role-archetypes.2
+        when:
+          field: archetype
+          equals: archetypes.2
+      - id: role-archetypes.3
+        when:
+          field: archetype
+          equals: archetypes.3
+      - id: role-archetypes.4
+        when:
+          field: archetype
+          equals: archetypes.4
+      - id: role-archetypes.5
+        when:
+          field: archetype
+          equals: archetypes.5
+      - id: role-archetypes.6
+        when:
+          field: archetype
+          equals: archetypes.6
+      - id: role-archetypes.7
+        when:
+          field: archetype
+          equals: archetypes.7
+      - id: role-archetypes.8
+        when:
+          field: archetype
+          equals: archetypes.8
+      - id: path-progressionPaths.1
+        when:
+          field: path
+          equals: progressionPaths.1
+      - id: path-progressionPaths.2
+        when:
+          field: path
+          equals: progressionPaths.2
+      - id: path-progressionPaths.3
+        when:
+          field: path
+          equals: progressionPaths.3
+      - id: path-progressionPaths.4
+        when:
+          field: path
+          equals: progressionPaths.4
+      - id: path-progressionPaths.5
+        when:
+          field: path
+          equals: progressionPaths.5
+      - id: path-progressionPaths.6
+        when:
+          field: path
+          equals: progressionPaths.6
+    assets:
+      - id: portrait
+        value: assets/ui/portrait.svg
+  portability:
+    rules: []
+checks:
+  grit:
+    label: Grit
+    dice: 1d20
+    modifierField: grit
+    criticalSuccess:
+      rollTotalAtLeast: 20
+    criticalFailure:
+      rollTotalAtMost: 1
+  wits:
+    label: Wits
+    dice: 2d6
+    modifierField: wits
+    criticalSuccess:
+      rollTotalAtLeast: 12
+    criticalFailure:
+      rollTotalAtMost: 2
+  spirit:
+    label: Spirit
+    dice: 1d20
+    modifierField: spirit
+    criticalSuccess:
+      rollTotalAtLeast: 20
+    criticalFailure:
+      rollTotalAtMost: 1
+resources:
+  health:
+    label: Health
+    min: 0
+    max: 24
+    default: 18
+  nerve:
+    label: Nerve
+    min: 0
+    max: 16
+    default: 10
+  hex:
+    label: Hex
+    min: 0
+    max: 18
+    default: 8
+items:
+  weapon:
+    label: Frontier Carbine
+    stackLimit: 1
+  kit:
+    label: Trail Satchel
+    stackLimit: 1
+  relic:
+    label: Witness Charm
+    stackLimit: 1
+  supply:
+    label: Clean Tonic
+    stackLimit: 10
+  armor:
+    label: Trail Coat
+    stackLimit: 1
+  tool:
+    label: Brake Tools
+    stackLimit: 1
+  token:
+    label: Survey Badge
+    stackLimit: 1
+progression:
+  renown:
+    label: Renown
+    min: 0
+    max: 100
+    default: 0
+  experience:
+    label: Experience
+    min: 0
+    default: 0
+  progressionPaths.1:
+    label: Crossing Keeper
+    min: 0
+    default: 0
+  progressionPaths.2:
+    label: Midnight Steward
+    min: 0
+    default: 0
+  progressionPaths.3:
+    label: Clean Well Guardian
+    min: 0
+    default: 0
+  progressionPaths.4:
+    label: Hearing Marshal
+    min: 0
+    default: 0
+  progressionPaths.5:
+    label: Lantern Navigator
+    min: 0
+    default: 0
+  progressionPaths.6:
+    label: Surface Builder
+    min: 0
+    default: 0
+locations:
+  worldEntityKinds:
+    - settlement
+    - location
+actorTemplates:
+  adversary:
+    label: Flood Rider
+    resources:
+      health: 10
+      nerve: 0
+      hex: 0
+    attributes:
+      grit: 2
+      wits: 0
+      spirit: 1
+    inventory:
+      - itemId: weapon
+        quantity: 1
+    progression:
+      renown: 0
+      experience: 0
+    worldEntityKinds:
+      - creature
+  contact:
+    label: Elara the Bold
+    resources:
+      health: 18
+      nerve: 10
+      hex: 8
+    attributes:
+      grit: 0
+      wits: 2
+      spirit: 2
+    inventory:
+      - itemId: kit
+        quantity: 1
+    progression:
+      renown: 5
+      experience: 0
+    worldEntityKinds:
+      - npc
+  elite:
+    label: Wyvern
+    resources:
+      health: 18
+      nerve: 10
+      hex: 8
+    attributes:
+      grit: 3
+      wits: 2
+      spirit: 2
+    inventory:
+      - itemId: relic
+        quantity: 1
+    progression:
+      renown: 10
+      experience: 5
+    worldEntityKinds:
+      - creature
+effects:
+  shaken:
+    label: Shaken
+    duration:
+      type: turns
+      value: 2
+    modifiers:
+      grit: -2
+    blockedActions:
+      - inspire
+  blessed:
+    label: Blessed
+    duration:
+      type: rounds
+      value: 2
+    modifiers:
+      wits: 2
+  guarded:
+    label: Guarded
+    duration:
+      type: turns
+      value: 1
+    modifiers:
+      spirit: 2
+actions:
+  basic-attack:
+    label: Use Frontier Carbine
+    target: single-actor
+    steps:
+      - check:
+          id: grit
+          against: input.difficulty
+      - roll:
+          id: impact
+          dice: 1d6
+        when:
+          previousOutcome: success
+      - resource:
+          target: target
+          resource: health
+          operation: subtract
+          value: impact.total
+        when:
+          previousOutcome: success
+  recover:
+    label: Recover Health
+    kind: resource
+    target: self
+    resource: health
+    operation: add
+    amount: 3
+  hinder:
+    label: Shaken
+    kind: effect
+    target: actor
+    effectId: shaken
+  inspire:
+    label: Blessed
+    target: multiple-actors
+    steps:
+      - effect:
+          target: target
+          id: blessed
+  guard:
+    label: Guarded
+    kind: effect
+    target: self
+    effectId: guarded
+  signature-move:
+    label: Signature Move
+    target: single-actor
+    steps:
+      - check:
+          id: wits
+          against: input.difficulty
+      - effect:
+          target: target
+          id: shaken
+        when:
+          previousOutcome: success
+  pressure:
+    label: Spend Hex
+    kind: resource
+    target: self
+    resource: hex
+    operation: subtract
+    amount: 1
+encounter:
+  orderingPolicy: fixed

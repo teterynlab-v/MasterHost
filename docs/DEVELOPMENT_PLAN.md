@@ -665,8 +665,8 @@ The approved product expansion is defined in `docs/superpowers/specs/2026-09-22-
 | M22 | Deep Post-Apocalypse | Complete engineering gate 2026-09-27 |
 | M23 | Deep Dark Fantasy | Complete engineering gate 2026-09-27 |
 | M24 | Mythic Antiquity | Complete engineering gate 2026-09-27 |
-| M25 | Weird West | Active |
-| M26 | Urban Fantasy | Planned |
+| M25 | Weird West | Complete engineering gate 2026-09-27 |
+| M26 | Urban Fantasy | Active |
 | M27 | Cosmic Investigation | Planned |
 | M28 | Age of Sail | Planned |
 | M29 | Mecha & Kaiju | Planned |

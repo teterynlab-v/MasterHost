@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.west.rules",
+  "version": "1.0.0",
+  "type": "rules",
+  "name": "Crossing Railway and Living Ore Rules",
+  "description": "Crossing Railway and Living Ore Rules for Cursed Frontier, Ghost Railway, Occult Boomtown. Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.",
+  "tags": [
+    "weird-west",
+    "cursed-frontier",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Crossing Railway and Living Ore Rules for Cursed Frontier, Ghost Railway, Occult Boomtown. Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.",
+    "highlights": [
+      "Crossing Railway and Living Ore Rules",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.weird-west"
+    ],
+    "requiresCapabilities": [
+      "setting:weird-west"
+    ],
+    "providesCapabilities": [
+      "rules:weird-west"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.west.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Weird West original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.west.rules"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 6,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.west.rules",
+    "version": "1.0.0",
+    "name": "Crossing Railway and Living Ore Rules",
+    "description": "Crossing Railway and Living Ore Rules for Cursed Frontier, Ghost Railway, Occult Boomtown. Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.",
+    "provides": [
+      "rules:weird-west"
+    ],
+    "requires": [
+      "setting:weird-west"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/actions/west-read-survey",
+        "value": {
+          "label": "Read Survey",
+          "target": "self",
+          "kind": "check",
+          "checkId": "wits"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/west-escort-wagon",
+        "value": {
+          "label": "Escort Wagon",
+          "target": "self",
+          "kind": "check",
+          "checkId": "grit"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/west-repair-brake",
+        "value": {
+          "label": "Repair Brake",
+          "target": "self",
+          "kind": "check",
+          "checkId": "wits"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/west-name-passenger",
+        "value": {
+          "label": "Name Passenger",
+          "target": "self",
+          "kind": "check",
+          "checkId": "spirit"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/west-test-ore",
+        "value": {
+          "label": "Test Ore",
+          "target": "self",
+          "kind": "check",
+          "checkId": "wits"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/west-seal-fault",
+        "value": {
+          "label": "Seal Fault",
+          "target": "self",
+          "kind": "check",
+          "checkId": "grit"
+        }
+      }
+    ]
+  }
+}

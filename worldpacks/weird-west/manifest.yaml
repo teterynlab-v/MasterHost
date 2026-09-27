@@ -1,0 +1,16 @@
+id: masterhost.weird-west
+name: Weird West
+version: 1.0.0
+schemaVersion: "0.1"
+defaultArtSet: standard
+entryTemplate: world.root
+description: "Three original frontier campaigns: a flood curse across a stolen
+  road, a ghost train with erased workers and a gold vein poisoning the town
+  well."
+publisher: MasterHost
+official: true
+contentRating: everyone
+license:
+  spdx: CC-BY-4.0
+  attribution: Weird West original setting content and artwork © MasterHost contributors.
+  source: https://creativecommons.org/licenses/by/4.0/
