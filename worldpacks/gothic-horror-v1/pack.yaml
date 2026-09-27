@@ -43,39 +43,6 @@ questions:
         label: Fading
       - value: destitute
         label: Destitute
-  - id: world.pattern
-    label: Universe pattern
-    type: choice
-    default: mourning-county
-    options:
-      - value: mourning-county
-        label: Mourning County
-      - value: velvet-court
-        label: Velvet Court
-      - value: drowned-choir
-        label: Drowned Choir
-  - id: world.campaignKit
-    label: Campaign Kit
-    type: choice
-    default: kit.mourning-county
-    options:
-      - value: kit.mourning-county
-        label: "Ashwake: A Quiet Inheritance"
-      - value: kit.velvet-court
-        label: "Velvet Court: Charity after Midnight"
-      - value: kit.drowned-choir
-        label: "Drowned Choir: A Parish Remembered"
-  - id: world.visualTheme
-    label: Visual theme
-    type: choice
-    default: visualThemes.1
-    options:
-      - value: visualThemes.1
-        label: Ashwake Mourning
-      - value: visualThemes.2
-        label: Velvet Testimony
-      - value: visualThemes.3
-        label: Reservoir Hymn
 generators:
   region.count:
     type: integer-range
@@ -386,46 +353,6 @@ characterCreation:
               label: Medium
             - value: hunter
               label: Hunter
-        - id: archetype
-          label: Investigative role
-          type: choice
-          required: true
-          default: archetypes.1
-          options:
-            - value: archetypes.1
-              label: Estate Witness
-            - value: archetypes.2
-              label: Night Clinician
-            - value: archetypes.3
-              label: Reservoir Diver
-            - value: archetypes.4
-              label: Bellfounder
-            - value: archetypes.5
-              label: Court Petitioner
-            - value: archetypes.6
-              label: Choir Archivist
-            - value: archetypes.7
-              label: Tenant Advocate
-            - value: archetypes.8
-              label: Care Trustee
-        - id: path
-          label: Progression path
-          type: choice
-          required: true
-          default: progressionPaths.1
-          options:
-            - value: progressionPaths.1
-              label: Promise Keeper
-            - value: progressionPaths.2
-              label: Care Guardian
-            - value: progressionPaths.3
-              label: Remembrance Steward
-            - value: progressionPaths.4
-              label: Bell Custodian
-            - value: progressionPaths.5
-              label: Witness Protector
-            - value: progressionPaths.6
-              label: Water Warden
     - id: aptitudes
       title: Aptitudes
       fields:
@@ -483,12 +410,6 @@ characterCreation:
     progression:
       renown: 0
       experience: 0
-      progressionPaths.1: 0
-      progressionPaths.2: 0
-      progressionPaths.3: 0
-      progressionPaths.4: 0
-      progressionPaths.5: 0
-      progressionPaths.6: 0
     resources:
       health: 14
       composure: 10
@@ -524,62 +445,6 @@ characterCreation:
         when:
           field: calling
           equals: hunter
-      - id: role-archetypes.1
-        when:
-          field: archetype
-          equals: archetypes.1
-      - id: role-archetypes.2
-        when:
-          field: archetype
-          equals: archetypes.2
-      - id: role-archetypes.3
-        when:
-          field: archetype
-          equals: archetypes.3
-      - id: role-archetypes.4
-        when:
-          field: archetype
-          equals: archetypes.4
-      - id: role-archetypes.5
-        when:
-          field: archetype
-          equals: archetypes.5
-      - id: role-archetypes.6
-        when:
-          field: archetype
-          equals: archetypes.6
-      - id: role-archetypes.7
-        when:
-          field: archetype
-          equals: archetypes.7
-      - id: role-archetypes.8
-        when:
-          field: archetype
-          equals: archetypes.8
-      - id: path-progressionPaths.1
-        when:
-          field: path
-          equals: progressionPaths.1
-      - id: path-progressionPaths.2
-        when:
-          field: path
-          equals: progressionPaths.2
-      - id: path-progressionPaths.3
-        when:
-          field: path
-          equals: progressionPaths.3
-      - id: path-progressionPaths.4
-        when:
-          field: path
-          equals: progressionPaths.4
-      - id: path-progressionPaths.5
-        when:
-          field: path
-          equals: progressionPaths.5
-      - id: path-progressionPaths.6
-        when:
-          field: path
-          equals: progressionPaths.6
     assets:
       - id: portrait
         value: assets/ui/portrait.svg
@@ -656,30 +521,6 @@ progression:
     default: 0
   experience:
     label: Experience
-    min: 0
-    default: 0
-  progressionPaths.1:
-    label: Promise Keeper
-    min: 0
-    default: 0
-  progressionPaths.2:
-    label: Care Guardian
-    min: 0
-    default: 0
-  progressionPaths.3:
-    label: Remembrance Steward
-    min: 0
-    default: 0
-  progressionPaths.4:
-    label: Bell Custodian
-    min: 0
-    default: 0
-  progressionPaths.5:
-    label: Witness Protector
-    min: 0
-    default: 0
-  progressionPaths.6:
-    label: Water Warden
     min: 0
     default: 0
 locations:

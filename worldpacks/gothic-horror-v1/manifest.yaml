@@ -1,11 +1,10 @@
 id: masterhost.gothic-horror
 name: Gothic Horror
-version: 2.0.0
+version: 1.0.0
 schemaVersion: "0.1"
 defaultArtSet: standard
 entryTemplate: world.root
-description: "Three complete intimate horror campaigns: an inherited funeral
-  promise, a blood-bound charity and the rescue of a drowned parish."
+description: Stormbound estates, secret societies, tragic monsters, occult investigations, and candlelit dread.
 publisher: MasterHost
 official: true
 contentRating: mature

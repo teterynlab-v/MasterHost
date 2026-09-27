@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.gothic.visuals",
+  "version": "1.0.0",
+  "type": "visuals",
+  "name": "Haunted Community Schematics",
+  "description": "Haunted Community Schematics for Mourning County, Velvet Court, Drowned Choir. Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.",
+  "tags": [
+    "gothic-horror",
+    "mourning-county",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Haunted Community Schematics for Mourning County, Velvet Court, Drowned Choir. Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.",
+    "highlights": [
+      "Haunted Community Schematics",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.gothic-horror"
+    ],
+    "requiresCapabilities": [
+      "setting:gothic-horror"
+    ],
+    "providesCapabilities": [
+      "visuals:gothic-horror"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.gothic.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Gothic Horror original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.gothic.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 6
+  },
+  "media": [
+    {
+      "name": "gothic-horror/gothic-background.svg",
+      "path": "media/gothic-background.svg",
+      "role": "background",
+      "mediaType": "image/svg+xml",
+      "checksum": "feca9229a04b404c3466cb11b2d8619e86d6da0d986541ecc9b5c4ba12fa94bf",
+      "size": 740
+    },
+    {
+      "name": "gothic-horror/gothic-portrait.svg",
+      "path": "media/gothic-portrait.svg",
+      "role": "portrait",
+      "mediaType": "image/svg+xml",
+      "checksum": "d9c39c7b546191c5f61926f802bc94eb7a1fab451388954f025e4d894b346338",
+      "size": 627
+    },
+    {
+      "name": "gothic-horror/gothic-creature.svg",
+      "path": "media/gothic-creature.svg",
+      "role": "token",
+      "mediaType": "image/svg+xml",
+      "checksum": "ec3ae928e020d44766b7c4f6692288611022993d3b4c07fdd678510f4d850ed9",
+      "size": 705
+    },
+    {
+      "name": "gothic-horror/gothic-item.svg",
+      "path": "media/gothic-item.svg",
+      "role": "item",
+      "mediaType": "image/svg+xml",
+      "checksum": "d0bd0b859f51195d63b5d7eae26a513ce8f8946cae99da116f40259510c5127f",
+      "size": 640
+    },
+    {
+      "name": "gothic-horror/gothic-location.svg",
+      "path": "media/gothic-location.svg",
+      "role": "location",
+      "mediaType": "image/svg+xml",
+      "checksum": "665103451e38ad611d59caf129e4321cee99b9ad5a31e49d60746c119e550408",
+      "size": 629
+    },
+    {
+      "name": "gothic-horror/gothic-map.svg",
+      "path": "media/gothic-map.svg",
+      "role": "map",
+      "mediaType": "image/svg+xml",
+      "checksum": "795c100fb91c155265fba9b655b8f3b8ab94dfe953519c6ccaf1371afa317178",
+      "size": 2423
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.gothic.visuals",
+    "version": "1.0.0",
+    "name": "Haunted Community Schematics",
+    "description": "Haunted Community Schematics for Mourning County, Velvet Court, Drowned Choir. Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.",
+    "provides": [
+      "visuals:gothic-horror"
+    ],
+    "requires": [
+      "setting:gothic-horror"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/gothic-deep",
+        "value": {
+          "id": "gothic-deep",
+          "name": "Haunted Navigation",
+          "description": "Original Gothic Horror navigation schematics",
+          "defaults": {
+            "background": "assets/gothic-horror/gothic-background.svg",
+            "portrait": "assets/gothic-horror/gothic-portrait.svg",
+            "token": "assets/gothic-horror/gothic-creature.svg",
+            "item": "assets/gothic-horror/gothic-item.svg",
+            "location": "assets/gothic-horror/gothic-location.svg",
+            "map": "assets/gothic-horror/gothic-map.svg"
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "gothic-deep"
+  }
+}

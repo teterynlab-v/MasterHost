@@ -1,0 +1,529 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.gothic.setting",
+  "version": "1.0.0",
+  "type": "setting",
+  "name": "Mourning County and Secret Patrons",
+  "description": "Mourning County and Secret Patrons for Mourning County, Velvet Court, Drowned Choir. Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.",
+  "tags": [
+    "gothic-horror",
+    "mourning-county",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Mourning County and Secret Patrons for Mourning County, Velvet Court, Drowned Choir. Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.",
+    "highlights": [
+      "Mourning County and Secret Patrons",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.gothic-horror"
+    ],
+    "requiresCapabilities": [],
+    "providesCapabilities": [
+      "setting:gothic-horror"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Gothic Horror original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.gothic.setting"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.gothic.setting",
+    "version": "1.0.0",
+    "name": "Mourning County and Secret Patrons",
+    "description": "Mourning County and Secret Patrons for Mourning County, Velvet Court, Drowned Choir. Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.",
+    "provides": [
+      "setting:gothic-horror"
+    ],
+    "requires": [],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.factions.1",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "County Mourning Guild"
+            },
+            "description": {
+              "value": "County Mourning Guild: protects bereaved families but hides the estate's unpaid funeral contract."
+            },
+            "deepId": {
+              "value": "factions.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.factions.2",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Velvet Patrons"
+            },
+            "description": {
+              "value": "Velvet Patrons: funds the infirmary with a debt paid by unnamed residents."
+            },
+            "deepId": {
+              "value": "factions.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.factions.3",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Reservoir Wardens"
+            },
+            "description": {
+              "value": "Reservoir Wardens: keeps water flowing while concealing the drowned parish."
+            },
+            "deepId": {
+              "value": "factions.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.factions.4",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Estate Tenants"
+            },
+            "description": {
+              "value": "Estate Tenants: will testify if the heirs promise safe housing after the curse ends."
+            },
+            "deepId": {
+              "value": "factions.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.factions.5",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Night Charity"
+            },
+            "description": {
+              "value": "Night Charity: offers treatment without asking who supplies its patrons."
+            },
+            "deepId": {
+              "value": "factions.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.factions.6",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Choir Remembrance"
+            },
+            "description": {
+              "value": "Choir Remembrance: wants every lost singer named before the bells fall silent."
+            },
+            "deepId": {
+              "value": "factions.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.factions.7",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Bellfounders Union"
+            },
+            "description": {
+              "value": "Bellfounders Union: can unmake the tolling bell if the village pays its workers fairly."
+            },
+            "deepId": {
+              "value": "factions.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.factions.8",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Court Petitioners"
+            },
+            "description": {
+              "value": "Court Petitioners: can annul the debt when three witnesses speak openly."
+            },
+            "deepId": {
+              "value": "factions.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.visualThemes.1",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Ashwake Mourning"
+            },
+            "description": {
+              "value": "Ashwake Mourning: candle-gold witness marks and black carriage routes separate shelter from binding graves."
+            },
+            "deepId": {
+              "value": "visualThemes.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.visualThemes.2",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Velvet Testimony"
+            },
+            "description": {
+              "value": "Velvet Testimony: wine-red seals and pale mirrors separate public evidence from private patient records."
+            },
+            "deepId": {
+              "value": "visualThemes.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.visualThemes.3",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Reservoir Hymn"
+            },
+            "description": {
+              "value": "Reservoir Hymn: blue depth bands and silver name ribbons mark safe water and drowned remembrance."
+            },
+            "deepId": {
+              "value": "visualThemes.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-factions-1": {
+            "template": "gothic.deep.factions.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-factions-2": {
+            "template": "gothic.deep.factions.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-factions-3": {
+            "template": "gothic.deep.factions.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-factions-4": {
+            "template": "gothic.deep.factions.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-factions-5": {
+            "template": "gothic.deep.factions.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-factions-6": {
+            "template": "gothic.deep.factions.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-factions-7": {
+            "template": "gothic.deep.factions.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-factions-8": {
+            "template": "gothic.deep.factions.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-visualThemes-1": {
+            "template": "gothic.deep.visualThemes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.1"
+              ]
+            }
+          },
+          "deep-visualThemes-2": {
+            "template": "gothic.deep.visualThemes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.2"
+              ]
+            }
+          },
+          "deep-visualThemes-3": {
+            "template": "gothic.deep.visualThemes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.3"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

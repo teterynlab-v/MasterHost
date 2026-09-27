@@ -1,0 +1,3763 @@
+{
+  "schemaVersion": "1",
+  "id": "gothic-horror",
+  "genres": [
+    "horror",
+    "adventure",
+    "mystery"
+  ],
+  "tones": [
+    "intimate",
+    "uncanny",
+    "tragic"
+  ],
+  "complexity": "intermediate",
+  "recommendedPlayers": {
+    "min": 2,
+    "max": 6
+  },
+  "gameLoop": [
+    {
+      "id": "investigate",
+      "label": "Recover a witnessed promise or original contract",
+      "ruleRefs": [
+        "check:reason",
+        "action:inspire"
+      ]
+    },
+    {
+      "id": "protect",
+      "label": "Keep witnesses, patients and tenants safe from collection",
+      "ruleRefs": [
+        "check:nerve",
+        "action:recover"
+      ]
+    },
+    {
+      "id": "release",
+      "label": "Confront a binding debt through a witnessed choice",
+      "ruleRefs": [
+        "check:occult",
+        "action:hinder"
+      ]
+    },
+    {
+      "id": "remember",
+      "label": "Record who owes care, wages and remembrance",
+      "ruleRefs": [
+        "progression:renown"
+      ]
+    }
+  ],
+  "patterns": [
+    {
+      "id": "mourning-county",
+      "name": "Mourning County",
+      "summary": "A village inherits an estate whose funeral bells ring for living heirs. Investigate a buried promise, protect the named families and choose how to end its obligation.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    },
+    {
+      "id": "velvet-court",
+      "name": "Velvet Court",
+      "summary": "A respectable court conceals a blood debt behind invitations and charitable care. Preserve witnesses, confront its patrons and decide whether a public confession can break the contract.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    },
+    {
+      "id": "drowned-choir",
+      "name": "Drowned Choir",
+      "summary": "A cathedral beneath the reservoir sings through the town's wells. Find the missing choir, restore a safe water route and decide who must remember the drowned parish.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    }
+  ],
+  "campaignKits": [
+    {
+      "id": "kit.mourning-county",
+      "name": "Ashwake: A Quiet Inheritance",
+      "summary": "A three to four hour Mourning County game: A village inherits an estate whose funeral bells ring for living heirs. Investigate a buried promise, protect the named families and choose how to end its obligation.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "mourning-county"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.1",
+      "sceneIds": [
+        "scenes.1",
+        "scenes.4",
+        "scenes.7",
+        "scenes.10",
+        "scenes.13",
+        "scenes.16"
+      ],
+      "npcIds": [
+        "npcs.1",
+        "npcs.4",
+        "npcs.7"
+      ],
+      "locationIds": [
+        "locations.1",
+        "locations.4",
+        "locations.7"
+      ],
+      "rewardIds": [
+        "items.1",
+        "items.4"
+      ],
+      "gmGuidance": [
+        "Begin with a funeral carriage waiting for a living heir.",
+        "Show that the curse comes from a real unpaid obligation.",
+        "Keep tenant testimony and shelter available as alternatives to violence.",
+        "Record who pays the inherited wages and maintains the estate."
+      ],
+      "readyCharacterIds": [
+        "archetypes.1",
+        "archetypes.4"
+      ]
+    },
+    {
+      "id": "kit.velvet-court",
+      "name": "Velvet Court: Charity after Midnight",
+      "summary": "A three to four hour Velvet Court game: A respectable court conceals a blood debt behind invitations and charitable care. Preserve witnesses, confront its patrons and decide whether a public confession can break the contract.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "velvet-court"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.2",
+      "sceneIds": [
+        "scenes.2",
+        "scenes.5",
+        "scenes.8",
+        "scenes.11",
+        "scenes.14",
+        "scenes.17"
+      ],
+      "npcIds": [
+        "npcs.2",
+        "npcs.5",
+        "npcs.8"
+      ],
+      "locationIds": [
+        "locations.2",
+        "locations.5",
+        "locations.8"
+      ],
+      "rewardIds": [
+        "items.2",
+        "items.5"
+      ],
+      "gmGuidance": [
+        "Begin at the infirmary with a recovered patient and a vanished donor.",
+        "Give charitable care real value without excusing its hidden price.",
+        "Separate public testimony from intimate patient records.",
+        "Record the honest care fund’s limits and the remaining obligations."
+      ],
+      "readyCharacterIds": [
+        "archetypes.2",
+        "archetypes.5"
+      ]
+    },
+    {
+      "id": "kit.drowned-choir",
+      "name": "Drowned Choir: A Parish Remembered",
+      "summary": "A three to four hour Drowned Choir game: A cathedral beneath the reservoir sings through the town's wells. Find the missing choir, restore a safe water route and decide who must remember the drowned parish.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "drowned-choir"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.3",
+      "sceneIds": [
+        "scenes.3",
+        "scenes.6",
+        "scenes.9",
+        "scenes.12",
+        "scenes.15",
+        "scenes.18"
+      ],
+      "npcIds": [
+        "npcs.3",
+        "npcs.6",
+        "npcs.9"
+      ],
+      "locationIds": [
+        "locations.3",
+        "locations.6",
+        "locations.9"
+      ],
+      "rewardIds": [
+        "items.3",
+        "items.6"
+      ],
+      "gmGuidance": [
+        "Open with a hymn through the town’s morning water draw.",
+        "State the pumping interval and rescue capacity clearly.",
+        "Give the missing servants names and a reason to demand remembrance.",
+        "Record the complete parish roll and the safe water agreement."
+      ],
+      "readyCharacterIds": [
+        "archetypes.3",
+        "archetypes.6"
+      ]
+    }
+  ],
+  "content": {
+    "factions": [
+      {
+        "id": "factions.1",
+        "name": "County Mourning Guild",
+        "description": "County Mourning Guild: protects bereaved families but hides the estate's unpaid funeral contract.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "gothic.factions.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "County Mourning Guild: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.2",
+        "name": "Velvet Patrons",
+        "description": "Velvet Patrons: funds the infirmary with a debt paid by unnamed residents.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "gothic.factions.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Velvet Patrons: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.3",
+        "name": "Reservoir Wardens",
+        "description": "Reservoir Wardens: keeps water flowing while concealing the drowned parish.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "gothic.factions.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Reservoir Wardens: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.4",
+        "name": "Estate Tenants",
+        "description": "Estate Tenants: will testify if the heirs promise safe housing after the curse ends.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "gothic.factions.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Estate Tenants: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.5",
+        "name": "Night Charity",
+        "description": "Night Charity: offers treatment without asking who supplies its patrons.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "gothic.factions.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Night Charity: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.6",
+        "name": "Choir Remembrance",
+        "description": "Choir Remembrance: wants every lost singer named before the bells fall silent.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "gothic.factions.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Choir Remembrance: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.7",
+        "name": "Bellfounders Union",
+        "description": "Bellfounders Union: can unmake the tolling bell if the village pays its workers fairly.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.7"
+          }
+        ],
+        "localeKey": "gothic.factions.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Bellfounders Union: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.8",
+        "name": "Court Petitioners",
+        "description": "Court Petitioners: can annul the debt when three witnesses speak openly.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.11"
+          }
+        ],
+        "localeKey": "gothic.factions.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Court Petitioners: map schematic"
+          }
+        ]
+      }
+    ],
+    "locations": [
+      {
+        "id": "locations.1",
+        "name": "Ashwake Gate",
+        "description": "Ashwake Gate: an unopened funeral carriage waits for an heir who is still alive.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "gothic.locations.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Ashwake Gate: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.2",
+        "name": "Velvet Infirmary",
+        "description": "Velvet Infirmary: patients recover while unfamiliar names vanish from their records.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "gothic.locations.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Velvet Infirmary: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.3",
+        "name": "Reservoir Well",
+        "description": "Reservoir Well: a wet hymn interrupts the town's morning water draw.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "gothic.locations.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Reservoir Well: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.4",
+        "name": "Hollow Chapel",
+        "description": "Hollow Chapel: the estate register contains a promise in a living witness's handwriting.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "gothic.locations.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Hollow Chapel: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.5",
+        "name": "Patron Ballroom",
+        "description": "Patron Ballroom: mirrors show the people whose care paid for the guests' youth.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "gothic.locations.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Patron Ballroom: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.6",
+        "name": "Sunken Steps",
+        "description": "Sunken Steps: a submerged stair is accessible only during the pumping interval.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "gothic.locations.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Sunken Steps: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.7",
+        "name": "Tenant Orchard",
+        "description": "Tenant Orchard: fresh graves mark homes scheduled for eviction.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "gothic.locations.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Tenant Orchard: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.8",
+        "name": "Contract Salon",
+        "description": "Contract Salon: a blood-sealed deed lists debts as charitable subscriptions.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "gothic.locations.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Contract Salon: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.9",
+        "name": "Choir Loft",
+        "description": "Choir Loft: a trapped air pocket holds music and a surviving singer.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.3"
+          }
+        ],
+        "localeKey": "gothic.locations.9",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Choir Loft: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.10",
+        "name": "Bellfoundry",
+        "description": "Bellfoundry: molten metal remembers the names spoken during casting.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.4"
+          }
+        ],
+        "localeKey": "gothic.locations.10",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Bellfoundry: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.11",
+        "name": "Petition Hall",
+        "description": "Petition Hall: an old judge will hear testimony before the patrons' procession.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.8"
+          }
+        ],
+        "localeKey": "gothic.locations.11",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Petition Hall: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.12",
+        "name": "Old Water Gate",
+        "description": "Old Water Gate: opening the safe bypass reveals the parish the town abandoned.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.12"
+          }
+        ],
+        "localeKey": "gothic.locations.12",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Old Water Gate: location schematic"
+          }
+        ]
+      }
+    ],
+    "npcs": [
+      {
+        "id": "npcs.1",
+        "name": "Mira Ashwake",
+        "description": "Mira Ashwake: a living heir wants the carriage gone but refuses to evict the tenants.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "gothic.npcs.1",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Mira Ashwake: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.2",
+        "name": "Matron Elise Velvet",
+        "description": "Matron Elise Velvet: knows the charity's debt and can keep patients safe during disclosure.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "gothic.npcs.2",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Matron Elise Velvet: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.3",
+        "name": "Singer Tom Lowwater",
+        "description": "Singer Tom Lowwater: survived in an air pocket and needs someone to record the missing names.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "gothic.npcs.3",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Singer Tom Lowwater: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.4",
+        "name": "Gravedigger Ren Vale",
+        "description": "Gravedigger Ren Vale: keeps a burial ledger that contradicts the estate's register.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "gothic.npcs.4",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Gravedigger Ren Vale: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.5",
+        "name": "Petitioner Ada Thorn",
+        "description": "Petitioner Ada Thorn: can name a creditor if the crew protects her family.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "gothic.npcs.5",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Petitioner Ada Thorn: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.6",
+        "name": "Warden Pell Reed",
+        "description": "Warden Pell Reed: will lower the reservoir if the town receives another water supply.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "gothic.npcs.6",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Warden Pell Reed: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.7",
+        "name": "Tenant Jonah Branch",
+        "description": "Tenant Jonah Branch: signed the old promise to prevent hunger and fears public blame.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "gothic.npcs.7",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Tenant Jonah Branch: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.8",
+        "name": "Patron Lucien Pale",
+        "description": "Patron Lucien Pale: offers to renounce one debt while demanding another remains secret.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "gothic.npcs.8",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Patron Lucien Pale: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.9",
+        "name": "Boatkeeper Nessa Moor",
+        "description": "Boatkeeper Nessa Moor: knows the pumping intervals but has lost a sibling below.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "gothic.npcs.9",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Boatkeeper Nessa Moor: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.10",
+        "name": "Founder Mara Kiln",
+        "description": "Founder Mara Kiln: can recast the bell without its command if paid before the hearing.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "gothic.npcs.10",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Founder Mara Kiln: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.11",
+        "name": "Judge Ivo Candor",
+        "description": "Judge Ivo Candor: needs three independent testimonies to void the subscription.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "gothic.npcs.11",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Judge Ivo Candor: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.12",
+        "name": "Archivist Sera Hymn",
+        "description": "Archivist Sera Hymn: can reconstruct the choir roll from scattered parish receipts.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "gothic.npcs.12",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Archivist Sera Hymn: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.13",
+        "name": "Child Len Orchard",
+        "description": "Child Len Orchard: hears the carriage horses before a name appears in the register.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "gothic.npcs.13",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Child Len Orchard: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.14",
+        "name": "Patient Rosa Borrow",
+        "description": "Patient Rosa Borrow: wants treatment to continue after the patrons lose their influence.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "gothic.npcs.14",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Patient Rosa Borrow: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.15",
+        "name": "Diver Kai Breath",
+        "description": "Diver Kai Breath: can carry two singers upward and needs a second rope team.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "gothic.npcs.15",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Diver Kai Breath: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.16",
+        "name": "Steward Oren Ash",
+        "description": "Steward Oren Ash: hid the unpaid wages and knows why the bell names tenants.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "gothic.npcs.16",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Steward Oren Ash: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.17",
+        "name": "Court Musician Fia Glass",
+        "description": "Court Musician Fia Glass: recognizes the debt song behind the ballroom dance.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "gothic.npcs.17",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Court Musician Fia Glass: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.18",
+        "name": "Engineer Dev Sluice",
+        "description": "Engineer Dev Sluice: can repair the bypass without draining the town's reserves.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "gothic.npcs.18",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Engineer Dev Sluice: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.19",
+        "name": "Widow Bea Candle",
+        "description": "Widow Bea Candle: keeps an earlier heir's confession in a locked mourning box.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "gothic.npcs.19",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Widow Bea Candle: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.20",
+        "name": "Clerk Noa Seal",
+        "description": "Clerk Noa Seal: will certify a revoked contract if their own signature is spared.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "gothic.npcs.20",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Clerk Noa Seal: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.21",
+        "name": "Choirmaster Ina Deep",
+        "description": "Choirmaster Ina Deep: refuses to leave until the drowned names are remembered.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "gothic.npcs.21",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Choirmaster Ina Deep: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.22",
+        "name": "Courier Sol Rook",
+        "description": "Courier Sol Rook: can deliver a summons before the carriage crosses the bridge.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "gothic.npcs.22",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Courier Sol Rook: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.23",
+        "name": "Donor Tess Quiet",
+        "description": "Donor Tess Quiet: offers honest care funds but cannot replace all the patrons' gifts.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "gothic.npcs.23",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Donor Tess Quiet: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.24",
+        "name": "Child Mei Shore",
+        "description": "Child Mei Shore: draws the sunken parish as it was before the flood.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "gothic.npcs.24",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Child Mei Shore: portrait schematic"
+          }
+        ]
+      }
+    ],
+    "adversaries": [
+      {
+        "id": "adversaries.1",
+        "name": "Funeral Driver",
+        "description": "Funeral Driver: enforces the register and must accept a witnessed release.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "gothic.adversaries.1",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Funeral Driver: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.2",
+        "name": "Velvet Collector",
+        "description": "Velvet Collector: takes unnamed debtors while calling the seizure a charitable visit.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "gothic.adversaries.2",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Velvet Collector: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.3",
+        "name": "Well Cantor",
+        "description": "Well Cantor: lures listeners below and can be answered with a restored name.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "gothic.adversaries.3",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Well Cantor: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.4",
+        "name": "Orchard Shade",
+        "description": "Orchard Shade: guards an unpaid tenant's grave and attacks anyone carrying eviction seals.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "gothic.adversaries.4",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Orchard Shade: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.5",
+        "name": "Mirror Guest",
+        "description": "Mirror Guest: borrows a patient's face until the original person is acknowledged.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "gothic.adversaries.5",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Mirror Guest: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.6",
+        "name": "Sluice Guardian",
+        "description": "Sluice Guardian: closes the stair unless the bypass is flowing.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "gothic.adversaries.6",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Sluice Guardian: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.7",
+        "name": "Ash Hounds",
+        "description": "Ash Hounds: pursue a named heir but pause when the true burial bell sounds.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.7"
+          }
+        ],
+        "localeKey": "gothic.adversaries.7",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Ash Hounds: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.8",
+        "name": "Subscription Broker",
+        "description": "Subscription Broker: tries to buy witnesses' silence with renewed treatment.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.11"
+          }
+        ],
+        "localeKey": "gothic.adversaries.8",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Subscription Broker: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.9",
+        "name": "Choir Echo",
+        "description": "Choir Echo: repeats a false roll that excludes the parish's poorest singers.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.3"
+          }
+        ],
+        "localeKey": "gothic.adversaries.9",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Choir Echo: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.10",
+        "name": "Grave Bailiff",
+        "description": "Grave Bailiff: seizes tenant homes as payment for the estate's forgotten wages.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.4"
+          }
+        ],
+        "localeKey": "gothic.adversaries.10",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Grave Bailiff: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.11",
+        "name": "Patron's Duelist",
+        "description": "Patron's Duelist: challenges the crew to turn a public hearing into a private death.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.8"
+          }
+        ],
+        "localeKey": "gothic.adversaries.11",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Patron's Duelist: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.12",
+        "name": "Drowned Usher",
+        "description": "Drowned Usher: blocks rescuers who carry no token of parish remembrance.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.12"
+          }
+        ],
+        "localeKey": "gothic.adversaries.12",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Drowned Usher: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.13",
+        "name": "Bell Wraith",
+        "description": "Bell Wraith: rings for another heir whenever a promised wage is denied.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "gothic.adversaries.13",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Bell Wraith: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.14",
+        "name": "Court Whisperer",
+        "description": "Court Whisperer: turns an intimate confession into a weapon against patients.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "gothic.adversaries.14",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Court Whisperer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.15",
+        "name": "Reservoir Hunger",
+        "description": "Reservoir Hunger: a current drags the last rope toward the choir loft.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "gothic.adversaries.15",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Reservoir Hunger: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.16",
+        "name": "Carriage Inspector",
+        "description": "Carriage Inspector: declares a release invalid if nobody living signs it.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "gothic.adversaries.16",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Carriage Inspector: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.17",
+        "name": "Seal Leech",
+        "description": "Seal Leech: feeds on amended contracts and reveals the concealed original.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "gothic.adversaries.17",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Seal Leech: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.18",
+        "name": "Nameless Soloist",
+        "description": "Nameless Soloist: will let the choir leave only when their stolen name returns.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "gothic.adversaries.18",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Nameless Soloist: creature schematic"
+          }
+        ]
+      }
+    ],
+    "items": [
+      {
+        "id": "items.1",
+        "name": "Funeral Register",
+        "description": "Funeral Register: lists the next living heir and the wage promise that binds them.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "gothic.items.1",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Funeral Register: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.2",
+        "name": "Patient Receipt",
+        "description": "Patient Receipt: proves care was purchased with an unnamed resident's debt.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "gothic.items.2",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Patient Receipt: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.3",
+        "name": "Choir Roll",
+        "description": "Choir Roll: names the lost singers but omits the parish servants.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "gothic.items.3",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Choir Roll: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.4",
+        "name": "Witness Candle",
+        "description": "Witness Candle: allows a dead tenant's testimony to be heard once.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "gothic.items.4",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Witness Candle: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.5",
+        "name": "Unsealed Petition",
+        "description": "Unsealed Petition: can begin a public hearing if three people sign.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "gothic.items.5",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Unsealed Petition: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.6",
+        "name": "Pumping Chart",
+        "description": "Pumping Chart: marks a safe diving interval before the gate closes.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "gothic.items.6",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Pumping Chart: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.7",
+        "name": "Mourning Box",
+        "description": "Mourning Box: holds an earlier confession and a tenant housing pledge.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "gothic.items.7",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Mourning Box: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.8",
+        "name": "Patron Mirror",
+        "description": "Patron Mirror: shows a creditor's stolen years beside the patients they supported.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "gothic.items.8",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Patron Mirror: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.9",
+        "name": "Parish Medal",
+        "description": "Parish Medal: lets the drowned usher recognize a rescue party.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.3"
+          }
+        ],
+        "localeKey": "gothic.items.9",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Parish Medal: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.10",
+        "name": "Bell Wage Ledger",
+        "description": "Bell Wage Ledger: proves who paid for casting and who went unpaid.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.4"
+          }
+        ],
+        "localeKey": "gothic.items.10",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Bell Wage Ledger: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.11",
+        "name": "Revocation Seal",
+        "description": "Revocation Seal: ends one subscription without discharging innocent patients.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.8"
+          }
+        ],
+        "localeKey": "gothic.items.11",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Revocation Seal: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.12",
+        "name": "Breathing Lantern",
+        "description": "Breathing Lantern: keeps an air pocket lit but its wick lasts one scene.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.12"
+          }
+        ],
+        "localeKey": "gothic.items.12",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Breathing Lantern: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.13",
+        "name": "Carriage Release",
+        "description": "Carriage Release: needs a living signature and a paid obligation to hold.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.13"
+          }
+        ],
+        "localeKey": "gothic.items.13",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Carriage Release: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.14",
+        "name": "Charity Fund Deed",
+        "description": "Charity Fund Deed: transfers care to an honest donor with limited resources.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.17"
+          }
+        ],
+        "localeKey": "gothic.items.14",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Charity Fund Deed: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.15",
+        "name": "Bypass Key",
+        "description": "Bypass Key: opens a dry route if the upper town reduces consumption.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.21"
+          }
+        ],
+        "localeKey": "gothic.items.15",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Bypass Key: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.16",
+        "name": "Tenant Orchard Map",
+        "description": "Tenant Orchard Map: shows safe homes that need not be surrendered.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.22"
+          }
+        ],
+        "localeKey": "gothic.items.16",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Tenant Orchard Map: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.17",
+        "name": "Private Confession",
+        "description": "Private Confession: can expose the patron but also identifies vulnerable patients.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.2"
+          }
+        ],
+        "localeKey": "gothic.items.17",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Private Confession: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.18",
+        "name": "Lost Name Ribbon",
+        "description": "Lost Name Ribbon: returns a singer's name if their story is spoken accurately.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.6"
+          }
+        ],
+        "localeKey": "gothic.items.18",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Lost Name Ribbon: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.19",
+        "name": "Founder Hammer",
+        "description": "Founder Hammer: can break the bell or reshape its command while it is hot.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.7"
+          }
+        ],
+        "localeKey": "gothic.items.19",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Founder Hammer: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.20",
+        "name": "Three Witness Ring",
+        "description": "Three Witness Ring: records independent testimony without revealing medical records.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.11"
+          }
+        ],
+        "localeKey": "gothic.items.20",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Three Witness Ring: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.21",
+        "name": "Rescue Rope",
+        "description": "Rescue Rope: supports two divers and one singer at a time.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.15"
+          }
+        ],
+        "localeKey": "gothic.items.21",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Rescue Rope: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.22",
+        "name": "Estate Settlement",
+        "description": "Estate Settlement: pays wages while retaining a shared housing obligation.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.16"
+          }
+        ],
+        "localeKey": "gothic.items.22",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Estate Settlement: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.23",
+        "name": "Care Guarantee",
+        "description": "Care Guarantee: preserves treatment after the court loses its charter.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.20"
+          }
+        ],
+        "localeKey": "gothic.items.23",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Care Guarantee: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.24",
+        "name": "Remembrance Book",
+        "description": "Remembrance Book: holds the drowned parish roll in a public, durable record.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.24"
+          }
+        ],
+        "localeKey": "gothic.items.24",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Remembrance Book: item schematic"
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "id": "events.1",
+        "name": "Living Funeral",
+        "description": "Living Funeral: the carriage announces an heir's burial before sunset.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "gothic.events.1",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Living Funeral: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.2",
+        "name": "Charity Invitation",
+        "description": "Charity Invitation: the crew is offered care in exchange for unnamed signatures.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "gothic.events.2",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Charity Invitation: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.3",
+        "name": "Water Hymn",
+        "description": "Water Hymn: the town's wells repeat a singer's plea for a rope.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "gothic.events.3",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Water Hymn: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.4",
+        "name": "Register Addition",
+        "description": "Register Addition: another tenant's name appears beneath the living heir.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "gothic.events.4",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Register Addition: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.5",
+        "name": "Patient Recovery",
+        "description": "Patient Recovery: a patient wakes younger while a donor disappears.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "gothic.events.5",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Patient Recovery: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.6",
+        "name": "Pump Halt",
+        "description": "Pump Halt: a frightened warden stops the only safe diving interval.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "gothic.events.6",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Pump Halt: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.7",
+        "name": "Orchard Eviction",
+        "description": "Orchard Eviction: bailiffs bring a seal issued before the previous heir died.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "gothic.events.7",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Orchard Eviction: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.8",
+        "name": "Mirror Accusation",
+        "description": "Mirror Accusation: a reflection reveals someone in the ballroom as a creditor.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "gothic.events.8",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Mirror Accusation: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.9",
+        "name": "Loft Signal",
+        "description": "Loft Signal: Tom lights a lamp below the reservoir's surface.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "gothic.events.9",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Loft Signal: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.10",
+        "name": "Wage Demand",
+        "description": "Wage Demand: the bellfounders refuse a repair that repeats the old exploitation.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "gothic.events.10",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Wage Demand: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.11",
+        "name": "Witness Offer",
+        "description": "Witness Offer: a petitioner agrees to speak if private records stay sealed.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "gothic.events.11",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Witness Offer: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.12",
+        "name": "Bypass Leak",
+        "description": "Bypass Leak: engineers ask the crew to choose which neighborhood loses water.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "gothic.events.12",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Bypass Leak: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.13",
+        "name": "Carriage Crossing",
+        "description": "Carriage Crossing: the horses approach the bridge carrying an empty coffin.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "gothic.events.13",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Carriage Crossing: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.14",
+        "name": "Contract Amendment",
+        "description": "Contract Amendment: the broker offers a smaller debt that still binds an innocent family.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "gothic.events.14",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Contract Amendment: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.15",
+        "name": "Choir Dispute",
+        "description": "Choir Dispute: two surviving rolls disagree about a servant's name.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "gothic.events.15",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Choir Dispute: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.16",
+        "name": "Estate Confession",
+        "description": "Estate Confession: the steward admits wages were withheld to protect the heirs.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "gothic.events.16",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Estate Confession: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.17",
+        "name": "Charter Threat",
+        "description": "Charter Threat: the patrons threaten to close care before the hearing begins.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "gothic.events.17",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Charter Threat: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.18",
+        "name": "Rope Break",
+        "description": "Rope Break: a diver needs aid while the choir's last air pocket shrinks.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "gothic.events.18",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Rope Break: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.19",
+        "name": "Foundry Opening",
+        "description": "Foundry Opening: the hot bell can be reshaped during one public witness window.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "gothic.events.19",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Foundry Opening: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.20",
+        "name": "Third Witness",
+        "description": "Third Witness: a patient will testify if treatment remains guaranteed.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "gothic.events.20",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Third Witness: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.21",
+        "name": "Sluice Arrival",
+        "description": "Sluice Arrival: the final pump interval reveals the old water gate.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "gothic.events.21",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Sluice Arrival: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.22",
+        "name": "Tenant Council",
+        "description": "Tenant Council: families decide whether to accept joint responsibility for repairs.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "gothic.events.22",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Tenant Council: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.23",
+        "name": "Public Procession",
+        "description": "Public Procession: the court moves to bury the petition under a grand ceremony.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "gothic.events.23",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Public Procession: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.24",
+        "name": "Nameless Verse",
+        "description": "Nameless Verse: the choir refuses evacuation until the omitted servant is remembered.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "gothic.events.24",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Nameless Verse: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.25",
+        "name": "Paid Promise",
+        "description": "Paid Promise: the carriage waits for proof that wages reached the living families.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "gothic.events.25",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Paid Promise: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.26",
+        "name": "Care Without Debt",
+        "description": "Care Without Debt: an honest fund offers limited beds and transparent obligations.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "gothic.events.26",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Care Without Debt: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.27",
+        "name": "Water Returned",
+        "description": "Water Returned: the upper town sees the cost of the reservoir agreement.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "gothic.events.27",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Water Returned: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.28",
+        "name": "Quiet Bell",
+        "description": "Quiet Bell: a new toll reflects the crew's settlement of the funeral promise.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "gothic.events.28",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Quiet Bell: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.29",
+        "name": "Open Charter",
+        "description": "Open Charter: the court's confession changes who governs charitable care.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "gothic.events.29",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Open Charter: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.30",
+        "name": "Remembered Parish",
+        "description": "Remembered Parish: the final hymn names those the town chose to preserve.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "gothic.events.30",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Remembered Parish: background schematic"
+          }
+        ]
+      }
+    ],
+    "scenes": [
+      {
+        "id": "scenes.1",
+        "name": "A Funeral for the Living",
+        "description": "A Funeral for the Living: Objective: stop the first seizure. Challenge the register or shelter the heir; delay brings the carriage to the bridge.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.4"
+          }
+        ],
+        "localeKey": "gothic.scenes.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Funeral for the Living: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.2",
+        "name": "An Invitation in Velvet",
+        "description": "An Invitation in Velvet: Objective: identify the charity's creditor. Examine receipts or interview a recovering patient; delay takes another donor.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "gothic.scenes.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "An Invitation in Velvet: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.3",
+        "name": "The Well that Sings",
+        "description": "The Well that Sings: Objective: find the trapped choir. Follow the pumping chart or answer its verse; delay closes the safe stair.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.6"
+          }
+        ],
+        "localeKey": "gothic.scenes.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Well that Sings: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.4",
+        "name": "The Orchard Graves",
+        "description": "The Orchard Graves: Objective: preserve tenant testimony. Protect the graves or negotiate an eviction stay; delay scatters the witnesses.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.7"
+          }
+        ],
+        "localeKey": "gothic.scenes.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Orchard Graves: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.5",
+        "name": "Mirrors at Supper",
+        "description": "Mirrors at Supper: Objective: establish the debt's original terms. Question the patron or recover a mirror; delay renews a subscription.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.8"
+          }
+        ],
+        "localeKey": "gothic.scenes.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Mirrors at Supper: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.6",
+        "name": "An Air Pocket Below",
+        "description": "An Air Pocket Below: Objective: reach Tom. Send a rope team or restore the bypass; delay extinguishes his lantern.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "gothic.scenes.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "An Air Pocket Below: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.7",
+        "name": "The Unpaid Foundry",
+        "description": "The Unpaid Foundry: Objective: secure the bell repair. Pay the cast workers or recover withheld wages; delay sets another name ringing.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "gothic.scenes.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Unpaid Foundry: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.8",
+        "name": "A Petition with Names",
+        "description": "A Petition with Names: Objective: gather three independent witnesses. Protect public speakers or preserve sealed testimony; delay closes the hearing.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.11"
+          }
+        ],
+        "localeKey": "gothic.scenes.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Petition with Names: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.9",
+        "name": "The Missing Verse",
+        "description": "The Missing Verse: Objective: recover the omitted singer. Restore the servants' roll or bargain with the soloist; delay divides the choir.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.12"
+          }
+        ],
+        "localeKey": "gothic.scenes.9",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Missing Verse: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.10",
+        "name": "The Steward's Promise",
+        "description": "The Steward's Promise: Objective: settle the binding obligation. Recover the old confession or renegotiate the estate pledge; delay authorizes eviction.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.13"
+          }
+        ],
+        "localeKey": "gothic.scenes.10",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Steward's Promise: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.11",
+        "name": "Care Under Threat",
+        "description": "Care Under Threat: Objective: preserve treatment during disclosure. Fund neutral beds or limit the charter transfer; delay abandons patients.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "gothic.scenes.11",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Care Under Threat: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.12",
+        "name": "The Last Rope",
+        "description": "The Last Rope: Objective: evacuate singers. Hold the gate or reduce upper-town water use; delay floods the loft.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.15"
+          }
+        ],
+        "localeKey": "gothic.scenes.12",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Last Rope: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.13",
+        "name": "At the Carriage Bridge",
+        "description": "At the Carriage Bridge: Objective: stop the final funeral. Present a witnessed release or reshape the bell; delay takes the heir.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.16"
+          }
+        ],
+        "localeKey": "gothic.scenes.13",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "At the Carriage Bridge: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.14",
+        "name": "The Open Hearing",
+        "description": "The Open Hearing: Objective: end the blood debt. Revoke the subscription or compel confession; delay lets patrons bind a new donor.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.17"
+          }
+        ],
+        "localeKey": "gothic.scenes.14",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Open Hearing: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.15",
+        "name": "The Water Gate",
+        "description": "The Water Gate: Objective: guarantee safe return. Open the bypass or settle a shared reservoir duty; delay traps the rescue crew.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "gothic.scenes.15",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Water Gate: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.16",
+        "name": "A Quiet Inheritance",
+        "description": "A Quiet Inheritance: Objective: decide estate governance. Protect tenant housing or establish a wage trust; record who holds the promise.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "gothic.scenes.16",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Quiet Inheritance: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.17",
+        "name": "Charity after Midnight",
+        "description": "Charity after Midnight: Objective: choose honest care. Transfer the charter or establish patient oversight; record whose debts remain.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.2"
+          }
+        ],
+        "localeKey": "gothic.scenes.17",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Charity after Midnight: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.18",
+        "name": "A Parish Remembered",
+        "description": "A Parish Remembered: Objective: decide how remembrance survives. Publish the complete roll or appoint custodians; record who maintains the safe water route.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.3"
+          }
+        ],
+        "localeKey": "gothic.scenes.18",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Parish Remembered: map schematic"
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "archetypes.1",
+        "name": "Estate Witness",
+        "description": "Estate Witness: can authenticate old promises and protects a tenant family.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "gothic.archetypes.1",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Estate Witness: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.2",
+        "name": "Night Clinician",
+        "description": "Night Clinician: keeps patients safe while confronting the charity's creditor.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "gothic.archetypes.2",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Night Clinician: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.3",
+        "name": "Reservoir Diver",
+        "description": "Reservoir Diver: knows the safe stair and has a loved one in the lost parish.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "gothic.archetypes.3",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Reservoir Diver: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.4",
+        "name": "Bellfounder",
+        "description": "Bellfounder: reshapes binding metal and refuses unpaid work.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "gothic.archetypes.4",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Bellfounder: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.5",
+        "name": "Court Petitioner",
+        "description": "Court Petitioner: preserves testimony without exploiting private suffering.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "gothic.archetypes.5",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Court Petitioner: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.6",
+        "name": "Choir Archivist",
+        "description": "Choir Archivist: reconstructs lost names and keeps the rescue roll.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "gothic.archetypes.6",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Choir Archivist: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.7",
+        "name": "Tenant Advocate",
+        "description": "Tenant Advocate: can negotiate housing duties with the living heirs.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "gothic.archetypes.7",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Tenant Advocate: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.8",
+        "name": "Care Trustee",
+        "description": "Care Trustee: can fund honest treatment and account for its limits.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "gothic.archetypes.8",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Care Trustee: portrait schematic"
+          }
+        ]
+      }
+    ],
+    "progressionPaths": [
+      {
+        "id": "progressionPaths.1",
+        "name": "Promise Keeper",
+        "description": "Promise Keeper: earn trust by paying an inherited obligation without sacrificing tenants; gain estate access and upkeep duties.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.1"
+          }
+        ],
+        "localeKey": "gothic.progressionPaths.1",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Promise Keeper: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.2",
+        "name": "Care Guardian",
+        "description": "Care Guardian: earn trust by ending debt without abandoning patients; gain a clinic contact and treatment oversight.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.5"
+          }
+        ],
+        "localeKey": "gothic.progressionPaths.2",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Care Guardian: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.3",
+        "name": "Remembrance Steward",
+        "description": "Remembrance Steward: earn trust by naming the omitted dead; gain parish access and public record duties.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.3"
+          }
+        ],
+        "localeKey": "gothic.progressionPaths.3",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Remembrance Steward: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.4",
+        "name": "Bell Custodian",
+        "description": "Bell Custodian: earn trust by reshaping the toll through paid work; gain foundry support and wage obligations.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.1"
+          }
+        ],
+        "localeKey": "gothic.progressionPaths.4",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Bell Custodian: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.5",
+        "name": "Witness Protector",
+        "description": "Witness Protector: earn trust by separating confession from private harm; gain hearing access and confidentiality duties.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.5"
+          }
+        ],
+        "localeKey": "gothic.progressionPaths.5",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Witness Protector: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.6",
+        "name": "Water Warden",
+        "description": "Water Warden: earn trust by preserving both rescue and town supply; gain sluice authority and shared maintenance duties.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.6"
+          }
+        ],
+        "localeKey": "gothic.progressionPaths.6",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Water Warden: item schematic"
+          }
+        ]
+      }
+    ],
+    "visualThemes": [
+      {
+        "id": "visualThemes.1",
+        "name": "Ashwake Mourning",
+        "description": "Ashwake Mourning: candle-gold witness marks and black carriage routes separate shelter from binding graves.",
+        "patternIds": [
+          "mourning-county"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "gothic.visualThemes.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Ashwake Mourning: map schematic"
+          },
+          {
+            "role": "ui",
+            "asset": "ui/background.svg",
+            "alt": "Haunted navigation interface"
+          }
+        ]
+      },
+      {
+        "id": "visualThemes.2",
+        "name": "Velvet Testimony",
+        "description": "Velvet Testimony: wine-red seals and pale mirrors separate public evidence from private patient records.",
+        "patternIds": [
+          "velvet-court"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "gothic.visualThemes.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Velvet Testimony: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "visualThemes.3",
+        "name": "Reservoir Hymn",
+        "description": "Reservoir Hymn: blue depth bands and silver name ribbons mark safe water and drowned remembrance.",
+        "patternIds": [
+          "drowned-choir"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "gothic.visualThemes.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Reservoir Hymn: map schematic"
+          }
+        ]
+      }
+    ]
+  },
+  "playToday": {
+    "patternId": "mourning-county",
+    "campaignKitId": "kit.mourning-county",
+    "visualThemeId": "visualThemes.1"
+  },
+  "localization": {
+    "sourceLocale": "en",
+    "supportedLocales": [
+      "en",
+      "ru",
+      "es",
+      "ja",
+      "zh-CN",
+      "ko"
+    ],
+    "strings": {
+      "en": {
+        "gothic.factions.1": "County Mourning Guild",
+        "gothic.factions.2": "Velvet Patrons",
+        "gothic.factions.3": "Reservoir Wardens",
+        "gothic.factions.4": "Estate Tenants",
+        "gothic.factions.5": "Night Charity",
+        "gothic.factions.6": "Choir Remembrance",
+        "gothic.factions.7": "Bellfounders Union",
+        "gothic.factions.8": "Court Petitioners",
+        "gothic.locations.1": "Ashwake Gate",
+        "gothic.locations.2": "Velvet Infirmary",
+        "gothic.locations.3": "Reservoir Well",
+        "gothic.locations.4": "Hollow Chapel",
+        "gothic.locations.5": "Patron Ballroom",
+        "gothic.locations.6": "Sunken Steps",
+        "gothic.locations.7": "Tenant Orchard",
+        "gothic.locations.8": "Contract Salon",
+        "gothic.locations.9": "Choir Loft",
+        "gothic.locations.10": "Bellfoundry",
+        "gothic.locations.11": "Petition Hall",
+        "gothic.locations.12": "Old Water Gate",
+        "gothic.npcs.1": "Mira Ashwake",
+        "gothic.npcs.2": "Matron Elise Velvet",
+        "gothic.npcs.3": "Singer Tom Lowwater",
+        "gothic.npcs.4": "Gravedigger Ren Vale",
+        "gothic.npcs.5": "Petitioner Ada Thorn",
+        "gothic.npcs.6": "Warden Pell Reed",
+        "gothic.npcs.7": "Tenant Jonah Branch",
+        "gothic.npcs.8": "Patron Lucien Pale",
+        "gothic.npcs.9": "Boatkeeper Nessa Moor",
+        "gothic.npcs.10": "Founder Mara Kiln",
+        "gothic.npcs.11": "Judge Ivo Candor",
+        "gothic.npcs.12": "Archivist Sera Hymn",
+        "gothic.npcs.13": "Child Len Orchard",
+        "gothic.npcs.14": "Patient Rosa Borrow",
+        "gothic.npcs.15": "Diver Kai Breath",
+        "gothic.npcs.16": "Steward Oren Ash",
+        "gothic.npcs.17": "Court Musician Fia Glass",
+        "gothic.npcs.18": "Engineer Dev Sluice",
+        "gothic.npcs.19": "Widow Bea Candle",
+        "gothic.npcs.20": "Clerk Noa Seal",
+        "gothic.npcs.21": "Choirmaster Ina Deep",
+        "gothic.npcs.22": "Courier Sol Rook",
+        "gothic.npcs.23": "Donor Tess Quiet",
+        "gothic.npcs.24": "Child Mei Shore",
+        "gothic.adversaries.1": "Funeral Driver",
+        "gothic.adversaries.2": "Velvet Collector",
+        "gothic.adversaries.3": "Well Cantor",
+        "gothic.adversaries.4": "Orchard Shade",
+        "gothic.adversaries.5": "Mirror Guest",
+        "gothic.adversaries.6": "Sluice Guardian",
+        "gothic.adversaries.7": "Ash Hounds",
+        "gothic.adversaries.8": "Subscription Broker",
+        "gothic.adversaries.9": "Choir Echo",
+        "gothic.adversaries.10": "Grave Bailiff",
+        "gothic.adversaries.11": "Patron's Duelist",
+        "gothic.adversaries.12": "Drowned Usher",
+        "gothic.adversaries.13": "Bell Wraith",
+        "gothic.adversaries.14": "Court Whisperer",
+        "gothic.adversaries.15": "Reservoir Hunger",
+        "gothic.adversaries.16": "Carriage Inspector",
+        "gothic.adversaries.17": "Seal Leech",
+        "gothic.adversaries.18": "Nameless Soloist",
+        "gothic.items.1": "Funeral Register",
+        "gothic.items.2": "Patient Receipt",
+        "gothic.items.3": "Choir Roll",
+        "gothic.items.4": "Witness Candle",
+        "gothic.items.5": "Unsealed Petition",
+        "gothic.items.6": "Pumping Chart",
+        "gothic.items.7": "Mourning Box",
+        "gothic.items.8": "Patron Mirror",
+        "gothic.items.9": "Parish Medal",
+        "gothic.items.10": "Bell Wage Ledger",
+        "gothic.items.11": "Revocation Seal",
+        "gothic.items.12": "Breathing Lantern",
+        "gothic.items.13": "Carriage Release",
+        "gothic.items.14": "Charity Fund Deed",
+        "gothic.items.15": "Bypass Key",
+        "gothic.items.16": "Tenant Orchard Map",
+        "gothic.items.17": "Private Confession",
+        "gothic.items.18": "Lost Name Ribbon",
+        "gothic.items.19": "Founder Hammer",
+        "gothic.items.20": "Three Witness Ring",
+        "gothic.items.21": "Rescue Rope",
+        "gothic.items.22": "Estate Settlement",
+        "gothic.items.23": "Care Guarantee",
+        "gothic.items.24": "Remembrance Book",
+        "gothic.events.1": "Living Funeral",
+        "gothic.events.2": "Charity Invitation",
+        "gothic.events.3": "Water Hymn",
+        "gothic.events.4": "Register Addition",
+        "gothic.events.5": "Patient Recovery",
+        "gothic.events.6": "Pump Halt",
+        "gothic.events.7": "Orchard Eviction",
+        "gothic.events.8": "Mirror Accusation",
+        "gothic.events.9": "Loft Signal",
+        "gothic.events.10": "Wage Demand",
+        "gothic.events.11": "Witness Offer",
+        "gothic.events.12": "Bypass Leak",
+        "gothic.events.13": "Carriage Crossing",
+        "gothic.events.14": "Contract Amendment",
+        "gothic.events.15": "Choir Dispute",
+        "gothic.events.16": "Estate Confession",
+        "gothic.events.17": "Charter Threat",
+        "gothic.events.18": "Rope Break",
+        "gothic.events.19": "Foundry Opening",
+        "gothic.events.20": "Third Witness",
+        "gothic.events.21": "Sluice Arrival",
+        "gothic.events.22": "Tenant Council",
+        "gothic.events.23": "Public Procession",
+        "gothic.events.24": "Nameless Verse",
+        "gothic.events.25": "Paid Promise",
+        "gothic.events.26": "Care Without Debt",
+        "gothic.events.27": "Water Returned",
+        "gothic.events.28": "Quiet Bell",
+        "gothic.events.29": "Open Charter",
+        "gothic.events.30": "Remembered Parish",
+        "gothic.scenes.1": "A Funeral for the Living",
+        "gothic.scenes.2": "An Invitation in Velvet",
+        "gothic.scenes.3": "The Well that Sings",
+        "gothic.scenes.4": "The Orchard Graves",
+        "gothic.scenes.5": "Mirrors at Supper",
+        "gothic.scenes.6": "An Air Pocket Below",
+        "gothic.scenes.7": "The Unpaid Foundry",
+        "gothic.scenes.8": "A Petition with Names",
+        "gothic.scenes.9": "The Missing Verse",
+        "gothic.scenes.10": "The Steward's Promise",
+        "gothic.scenes.11": "Care Under Threat",
+        "gothic.scenes.12": "The Last Rope",
+        "gothic.scenes.13": "At the Carriage Bridge",
+        "gothic.scenes.14": "The Open Hearing",
+        "gothic.scenes.15": "The Water Gate",
+        "gothic.scenes.16": "A Quiet Inheritance",
+        "gothic.scenes.17": "Charity after Midnight",
+        "gothic.scenes.18": "A Parish Remembered",
+        "gothic.archetypes.1": "Estate Witness",
+        "gothic.archetypes.2": "Night Clinician",
+        "gothic.archetypes.3": "Reservoir Diver",
+        "gothic.archetypes.4": "Bellfounder",
+        "gothic.archetypes.5": "Court Petitioner",
+        "gothic.archetypes.6": "Choir Archivist",
+        "gothic.archetypes.7": "Tenant Advocate",
+        "gothic.archetypes.8": "Care Trustee",
+        "gothic.progressionPaths.1": "Promise Keeper",
+        "gothic.progressionPaths.2": "Care Guardian",
+        "gothic.progressionPaths.3": "Remembrance Steward",
+        "gothic.progressionPaths.4": "Bell Custodian",
+        "gothic.progressionPaths.5": "Witness Protector",
+        "gothic.progressionPaths.6": "Water Warden",
+        "gothic.visualThemes.1": "Ashwake Mourning",
+        "gothic.visualThemes.2": "Velvet Testimony",
+        "gothic.visualThemes.3": "Reservoir Hymn"
+      }
+    },
+    "fallbackLocales": [
+      "ru",
+      "es",
+      "ja",
+      "zh-CN",
+      "ko"
+    ]
+  }
+}

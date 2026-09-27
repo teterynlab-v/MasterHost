@@ -1,0 +1,2116 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.gothic.adventure",
+  "version": "1.0.0",
+  "type": "adventure",
+  "name": "Three Complete Intimate Horror Adventures",
+  "description": "Three Complete Intimate Horror Adventures for Mourning County, Velvet Court, Drowned Choir. Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.",
+  "tags": [
+    "gothic-horror",
+    "mourning-county",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Three Complete Intimate Horror Adventures for Mourning County, Velvet Court, Drowned Choir. Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.",
+    "highlights": [
+      "Three Complete Intimate Horror Adventures",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.gothic-horror"
+    ],
+    "requiresCapabilities": [
+      "world:gothic-horror",
+      "locations:gothic-horror",
+      "cast:gothic-horror",
+      "items:gothic-horror",
+      "rules:gothic-horror"
+    ],
+    "providesCapabilities": [
+      "adventure:gothic-horror"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.gothic.world-template",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.gothic.locations",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.gothic.cast",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.gothic.items",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.gothic.rules",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Gothic Horror original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.gothic.adventure"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 18,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.gothic.adventure",
+    "version": "1.0.0",
+    "name": "Three Complete Intimate Horror Adventures",
+    "description": "Three Complete Intimate Horror Adventures for Mourning County, Velvet Court, Drowned Choir. Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.",
+    "provides": [
+      "adventure:gothic-horror"
+    ],
+    "requires": [
+      "world:gothic-horror",
+      "locations:gothic-horror",
+      "cast:gothic-horror",
+      "items:gothic-horror",
+      "rules:gothic-horror"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.scenes.1",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "A Funeral for the Living"
+            },
+            "description": {
+              "value": "A Funeral for the Living: Objective: stop the first seizure. Challenge the register or shelter the heir; delay brings the carriage to the bridge."
+            },
+            "deepId": {
+              "value": "scenes.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.scenes.2",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "An Invitation in Velvet"
+            },
+            "description": {
+              "value": "An Invitation in Velvet: Objective: identify the charity's creditor. Examine receipts or interview a recovering patient; delay takes another donor."
+            },
+            "deepId": {
+              "value": "scenes.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.scenes.3",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Well that Sings"
+            },
+            "description": {
+              "value": "The Well that Sings: Objective: find the trapped choir. Follow the pumping chart or answer its verse; delay closes the safe stair."
+            },
+            "deepId": {
+              "value": "scenes.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.scenes.4",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Orchard Graves"
+            },
+            "description": {
+              "value": "The Orchard Graves: Objective: preserve tenant testimony. Protect the graves or negotiate an eviction stay; delay scatters the witnesses."
+            },
+            "deepId": {
+              "value": "scenes.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.scenes.5",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Mirrors at Supper"
+            },
+            "description": {
+              "value": "Mirrors at Supper: Objective: establish the debt's original terms. Question the patron or recover a mirror; delay renews a subscription."
+            },
+            "deepId": {
+              "value": "scenes.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.scenes.6",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "An Air Pocket Below"
+            },
+            "description": {
+              "value": "An Air Pocket Below: Objective: reach Tom. Send a rope team or restore the bypass; delay extinguishes his lantern."
+            },
+            "deepId": {
+              "value": "scenes.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.scenes.7",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Unpaid Foundry"
+            },
+            "description": {
+              "value": "The Unpaid Foundry: Objective: secure the bell repair. Pay the cast workers or recover withheld wages; delay sets another name ringing."
+            },
+            "deepId": {
+              "value": "scenes.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.scenes.8",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "A Petition with Names"
+            },
+            "description": {
+              "value": "A Petition with Names: Objective: gather three independent witnesses. Protect public speakers or preserve sealed testimony; delay closes the hearing."
+            },
+            "deepId": {
+              "value": "scenes.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.scenes.9",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Missing Verse"
+            },
+            "description": {
+              "value": "The Missing Verse: Objective: recover the omitted singer. Restore the servants' roll or bargain with the soloist; delay divides the choir."
+            },
+            "deepId": {
+              "value": "scenes.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.scenes.10",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Steward's Promise"
+            },
+            "description": {
+              "value": "The Steward's Promise: Objective: settle the binding obligation. Recover the old confession or renegotiate the estate pledge; delay authorizes eviction."
+            },
+            "deepId": {
+              "value": "scenes.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.13"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.scenes.11",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Care Under Threat"
+            },
+            "description": {
+              "value": "Care Under Threat: Objective: preserve treatment during disclosure. Fund neutral beds or limit the charter transfer; delay abandons patients."
+            },
+            "deepId": {
+              "value": "scenes.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.scenes.12",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Last Rope"
+            },
+            "description": {
+              "value": "The Last Rope: Objective: evacuate singers. Hold the gate or reduce upper-town water use; delay floods the loft."
+            },
+            "deepId": {
+              "value": "scenes.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.15"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.scenes.13",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "At the Carriage Bridge"
+            },
+            "description": {
+              "value": "At the Carriage Bridge: Objective: stop the final funeral. Present a witnessed release or reshape the bell; delay takes the heir."
+            },
+            "deepId": {
+              "value": "scenes.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.16"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.scenes.14",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Open Hearing"
+            },
+            "description": {
+              "value": "The Open Hearing: Objective: end the blood debt. Revoke the subscription or compel confession; delay lets patrons bind a new donor."
+            },
+            "deepId": {
+              "value": "scenes.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.17"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.scenes.15",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Water Gate"
+            },
+            "description": {
+              "value": "The Water Gate: Objective: guarantee safe return. Open the bypass or settle a shared reservoir duty; delay traps the rescue crew."
+            },
+            "deepId": {
+              "value": "scenes.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.scenes.16",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "A Quiet Inheritance"
+            },
+            "description": {
+              "value": "A Quiet Inheritance: Objective: decide estate governance. Protect tenant housing or establish a wage trust; record who holds the promise."
+            },
+            "deepId": {
+              "value": "scenes.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.scenes.17",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Charity after Midnight"
+            },
+            "description": {
+              "value": "Charity after Midnight: Objective: choose honest care. Transfer the charter or establish patient oversight; record whose debts remain."
+            },
+            "deepId": {
+              "value": "scenes.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.scenes.18",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "A Parish Remembered"
+            },
+            "description": {
+              "value": "A Parish Remembered: Objective: decide how remembrance survives. Publish the complete roll or appoint custodians; record who maintains the safe water route."
+            },
+            "deepId": {
+              "value": "scenes.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.1",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Living Funeral"
+            },
+            "description": {
+              "value": "Living Funeral: the carriage announces an heir's burial before sunset."
+            },
+            "deepId": {
+              "value": "events.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.2",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Charity Invitation"
+            },
+            "description": {
+              "value": "Charity Invitation: the crew is offered care in exchange for unnamed signatures."
+            },
+            "deepId": {
+              "value": "events.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.3",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Water Hymn"
+            },
+            "description": {
+              "value": "Water Hymn: the town's wells repeat a singer's plea for a rope."
+            },
+            "deepId": {
+              "value": "events.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.4",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Register Addition"
+            },
+            "description": {
+              "value": "Register Addition: another tenant's name appears beneath the living heir."
+            },
+            "deepId": {
+              "value": "events.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.5",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Patient Recovery"
+            },
+            "description": {
+              "value": "Patient Recovery: a patient wakes younger while a donor disappears."
+            },
+            "deepId": {
+              "value": "events.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.6",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Pump Halt"
+            },
+            "description": {
+              "value": "Pump Halt: a frightened warden stops the only safe diving interval."
+            },
+            "deepId": {
+              "value": "events.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.7",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Orchard Eviction"
+            },
+            "description": {
+              "value": "Orchard Eviction: bailiffs bring a seal issued before the previous heir died."
+            },
+            "deepId": {
+              "value": "events.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.8",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Mirror Accusation"
+            },
+            "description": {
+              "value": "Mirror Accusation: a reflection reveals someone in the ballroom as a creditor."
+            },
+            "deepId": {
+              "value": "events.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.9",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Loft Signal"
+            },
+            "description": {
+              "value": "Loft Signal: Tom lights a lamp below the reservoir's surface."
+            },
+            "deepId": {
+              "value": "events.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.10",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Wage Demand"
+            },
+            "description": {
+              "value": "Wage Demand: the bellfounders refuse a repair that repeats the old exploitation."
+            },
+            "deepId": {
+              "value": "events.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.11",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Witness Offer"
+            },
+            "description": {
+              "value": "Witness Offer: a petitioner agrees to speak if private records stay sealed."
+            },
+            "deepId": {
+              "value": "events.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.12",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Bypass Leak"
+            },
+            "description": {
+              "value": "Bypass Leak: engineers ask the crew to choose which neighborhood loses water."
+            },
+            "deepId": {
+              "value": "events.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.13",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Carriage Crossing"
+            },
+            "description": {
+              "value": "Carriage Crossing: the horses approach the bridge carrying an empty coffin."
+            },
+            "deepId": {
+              "value": "events.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.14",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Contract Amendment"
+            },
+            "description": {
+              "value": "Contract Amendment: the broker offers a smaller debt that still binds an innocent family."
+            },
+            "deepId": {
+              "value": "events.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.15",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Choir Dispute"
+            },
+            "description": {
+              "value": "Choir Dispute: two surviving rolls disagree about a servant's name."
+            },
+            "deepId": {
+              "value": "events.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.16",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Estate Confession"
+            },
+            "description": {
+              "value": "Estate Confession: the steward admits wages were withheld to protect the heirs."
+            },
+            "deepId": {
+              "value": "events.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.17",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Charter Threat"
+            },
+            "description": {
+              "value": "Charter Threat: the patrons threaten to close care before the hearing begins."
+            },
+            "deepId": {
+              "value": "events.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.18",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Rope Break"
+            },
+            "description": {
+              "value": "Rope Break: a diver needs aid while the choir's last air pocket shrinks."
+            },
+            "deepId": {
+              "value": "events.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.19",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Foundry Opening"
+            },
+            "description": {
+              "value": "Foundry Opening: the hot bell can be reshaped during one public witness window."
+            },
+            "deepId": {
+              "value": "events.19"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.20",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Third Witness"
+            },
+            "description": {
+              "value": "Third Witness: a patient will testify if treatment remains guaranteed."
+            },
+            "deepId": {
+              "value": "events.20"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.21",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Sluice Arrival"
+            },
+            "description": {
+              "value": "Sluice Arrival: the final pump interval reveals the old water gate."
+            },
+            "deepId": {
+              "value": "events.21"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.22",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Tenant Council"
+            },
+            "description": {
+              "value": "Tenant Council: families decide whether to accept joint responsibility for repairs."
+            },
+            "deepId": {
+              "value": "events.22"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.23",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Public Procession"
+            },
+            "description": {
+              "value": "Public Procession: the court moves to bury the petition under a grand ceremony."
+            },
+            "deepId": {
+              "value": "events.23"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.24",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Nameless Verse"
+            },
+            "description": {
+              "value": "Nameless Verse: the choir refuses evacuation until the omitted servant is remembered."
+            },
+            "deepId": {
+              "value": "events.24"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.25",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Paid Promise"
+            },
+            "description": {
+              "value": "Paid Promise: the carriage waits for proof that wages reached the living families."
+            },
+            "deepId": {
+              "value": "events.25"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.26",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Care Without Debt"
+            },
+            "description": {
+              "value": "Care Without Debt: an honest fund offers limited beds and transparent obligations."
+            },
+            "deepId": {
+              "value": "events.26"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.27",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Water Returned"
+            },
+            "description": {
+              "value": "Water Returned: the upper town sees the cost of the reservoir agreement."
+            },
+            "deepId": {
+              "value": "events.27"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.28",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Quiet Bell"
+            },
+            "description": {
+              "value": "Quiet Bell: a new toll reflects the crew's settlement of the funeral promise."
+            },
+            "deepId": {
+              "value": "events.28"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.29",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Open Charter"
+            },
+            "description": {
+              "value": "Open Charter: the court's confession changes who governs charitable care."
+            },
+            "deepId": {
+              "value": "events.29"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.events.30",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Remembered Parish"
+            },
+            "description": {
+              "value": "Remembered Parish: the final hymn names those the town chose to preserve."
+            },
+            "deepId": {
+              "value": "events.30"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-scenes-1": {
+            "template": "gothic.deep.scenes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-scenes-2": {
+            "template": "gothic.deep.scenes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-scenes-3": {
+            "template": "gothic.deep.scenes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-scenes-4": {
+            "template": "gothic.deep.scenes.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-scenes-5": {
+            "template": "gothic.deep.scenes.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-scenes-6": {
+            "template": "gothic.deep.scenes.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-scenes-7": {
+            "template": "gothic.deep.scenes.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-scenes-8": {
+            "template": "gothic.deep.scenes.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-scenes-9": {
+            "template": "gothic.deep.scenes.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-scenes-10": {
+            "template": "gothic.deep.scenes.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-scenes-11": {
+            "template": "gothic.deep.scenes.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-scenes-12": {
+            "template": "gothic.deep.scenes.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-scenes-13": {
+            "template": "gothic.deep.scenes.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-scenes-14": {
+            "template": "gothic.deep.scenes.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-scenes-15": {
+            "template": "gothic.deep.scenes.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-scenes-16": {
+            "template": "gothic.deep.scenes.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-scenes-17": {
+            "template": "gothic.deep.scenes.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-scenes-18": {
+            "template": "gothic.deep.scenes.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-events-1": {
+            "template": "gothic.deep.events.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-events-2": {
+            "template": "gothic.deep.events.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-events-3": {
+            "template": "gothic.deep.events.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-events-4": {
+            "template": "gothic.deep.events.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-events-5": {
+            "template": "gothic.deep.events.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-events-6": {
+            "template": "gothic.deep.events.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-events-7": {
+            "template": "gothic.deep.events.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-events-8": {
+            "template": "gothic.deep.events.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-events-9": {
+            "template": "gothic.deep.events.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-events-10": {
+            "template": "gothic.deep.events.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-events-11": {
+            "template": "gothic.deep.events.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-events-12": {
+            "template": "gothic.deep.events.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-events-13": {
+            "template": "gothic.deep.events.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-events-14": {
+            "template": "gothic.deep.events.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-events-15": {
+            "template": "gothic.deep.events.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-events-16": {
+            "template": "gothic.deep.events.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-events-17": {
+            "template": "gothic.deep.events.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-events-18": {
+            "template": "gothic.deep.events.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-events-19": {
+            "template": "gothic.deep.events.19",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-events-20": {
+            "template": "gothic.deep.events.20",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-events-21": {
+            "template": "gothic.deep.events.21",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-events-22": {
+            "template": "gothic.deep.events.22",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-events-23": {
+            "template": "gothic.deep.events.23",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-events-24": {
+            "template": "gothic.deep.events.24",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-events-25": {
+            "template": "gothic.deep.events.25",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-events-26": {
+            "template": "gothic.deep.events.26",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-events-27": {
+            "template": "gothic.deep.events.27",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-events-28": {
+            "template": "gothic.deep.events.28",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-events-29": {
+            "template": "gothic.deep.events.29",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-events-30": {
+            "template": "gothic.deep.events.30",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

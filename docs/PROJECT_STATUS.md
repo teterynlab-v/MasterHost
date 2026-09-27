@@ -6,8 +6,9 @@
 - **M18 Deep Classic Fantasy: complete (2026-09-22).** Exact 1.0.0 retention beside the installed 2.0.0 Pack, three materially different patterns/Kits, the 151-entry profile, nine content-producing Quick/Advanced assets, Descriptor-backed Play Today choices, `.mhgame` transfer, full table flow, browser acceptance and restart readback are recorded in `docs/M18_STATUS.md`.
 - **M19 Deep Space Opera: engineering gate complete (2026-09-27).** Three authored patterns/Kits, 151 entries, nine assets, eight selectable roles, six progression tracks, exact legacy retention, clean two-installation transfer/runtime/restart and browser late-join/action proof. Independent review corrections resolved false translation coverage and narrative-only roles. Evidence: `docs/M19_STATUS.md`.
 - **M20 Deep Cyberpunk: engineering gate complete (2026-09-27).** Three original district/consent/memory Campaign Kits, playable roles and paths, nine assets, clean transfer/runtime/restart and browser Quick/GM/player/action proof. Generic corrections retain game names and display authoritative action results. Evidence: `docs/M20_STATUS.md`.
-- **Active:** M21 Deep Gothic Horror; M22–M29 follow in order, then M30 collection acceptance.
-- Ordinary clean installations now show Classic Fantasy, Space Opera and Cyberpunk ready; the remaining nine universes are planned.
+- **M21 Deep Gothic Horror: engineering gate complete (2026-09-27).** Three original inheritance/charity/drowned-parish Kits, playable roles/paths, nine assets and clean transfer/runtime/restart plus browser GM/player/server-check evidence. Evidence: `docs/M21_STATUS.md`.
+- **Active:** M22 Deep Post-Apocalypse; M23–M29 follow in order, then M30 collection acceptance.
+- Ordinary clean installations now show Classic Fantasy, Space Opera, Cyberpunk and Gothic Horror ready; the remaining eight universes are planned.
 
 ## Post-M18 playability correction (2026-09-22)
 

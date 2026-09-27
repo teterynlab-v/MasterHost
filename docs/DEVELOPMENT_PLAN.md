@@ -661,8 +661,8 @@ The approved product expansion is defined in `docs/superpowers/specs/2026-09-22-
 | M18 | Deep Classic Fantasy | Complete; full gate and review corrections passed 2026-09-22 |
 | M19 | Deep Space Opera | Complete engineering gate and review corrections 2026-09-27 |
 | M20 | Deep Cyberpunk | Complete engineering gate 2026-09-27 |
-| M21 | Deep Gothic Horror | Active |
-| M22 | Deep Post-Apocalypse | Planned |
+| M21 | Deep Gothic Horror | Complete engineering gate 2026-09-27 |
+| M22 | Deep Post-Apocalypse | Active |
 | M23 | Deep Dark Fantasy | Planned |
 | M24 | Mythic Antiquity | Planned |
 | M25 | Weird West | Planned |
