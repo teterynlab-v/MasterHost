@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.myth.visuals",
+  "version": "1.0.0",
+  "type": "visuals",
+  "name": "Mythic Route Schematics",
+  "description": "Mythic Route Schematics for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+  "tags": [
+    "mythic-antiquity",
+    "warring-poleis",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Mythic Route Schematics for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+    "highlights": [
+      "Mythic Route Schematics",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.mythic-antiquity"
+    ],
+    "requiresCapabilities": [
+      "setting:mythic-antiquity"
+    ],
+    "providesCapabilities": [
+      "visuals:mythic-antiquity"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.myth.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Mythic Antiquity original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.myth.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 6
+  },
+  "media": [
+    {
+      "name": "mythic-antiquity/myth-background.svg",
+      "path": "media/myth-background.svg",
+      "role": "background",
+      "mediaType": "image/svg+xml",
+      "checksum": "09db8ed7b5df37596aad8c7d5da4c512940c21534da00494ce572bcff6989908",
+      "size": 743
+    },
+    {
+      "name": "mythic-antiquity/myth-portrait.svg",
+      "path": "media/myth-portrait.svg",
+      "role": "portrait",
+      "mediaType": "image/svg+xml",
+      "checksum": "0990a2af48447eeb39f946eddcbefd6e5be50e698ad6f26b8157dc51df4734cc",
+      "size": 630
+    },
+    {
+      "name": "mythic-antiquity/myth-creature.svg",
+      "path": "media/myth-creature.svg",
+      "role": "token",
+      "mediaType": "image/svg+xml",
+      "checksum": "fc44b3c5fe31267f33ba80ce1298da988f470dfeb266c600b6ab84761e81d563",
+      "size": 708
+    },
+    {
+      "name": "mythic-antiquity/myth-item.svg",
+      "path": "media/myth-item.svg",
+      "role": "item",
+      "mediaType": "image/svg+xml",
+      "checksum": "eae49eab50590f718743cce695c10ebbd3e7e55f2e4c69f14666a69d0d01b034",
+      "size": 643
+    },
+    {
+      "name": "mythic-antiquity/myth-location.svg",
+      "path": "media/myth-location.svg",
+      "role": "location",
+      "mediaType": "image/svg+xml",
+      "checksum": "e58ab11a023957c6d62d4f217b6810d21fd2a15db98cab9c7fa03c7d8f6d590e",
+      "size": 632
+    },
+    {
+      "name": "mythic-antiquity/myth-map.svg",
+      "path": "media/myth-map.svg",
+      "role": "map",
+      "mediaType": "image/svg+xml",
+      "checksum": "21f13183eb41d57a8ec09946af198d3c0952bc000ac806fe07671a39c0ebb64f",
+      "size": 2462
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.myth.visuals",
+    "version": "1.0.0",
+    "name": "Mythic Route Schematics",
+    "description": "Mythic Route Schematics for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+    "provides": [
+      "visuals:mythic-antiquity"
+    ],
+    "requires": [
+      "setting:mythic-antiquity"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/myth-deep",
+        "value": {
+          "id": "myth-deep",
+          "name": "Mythic Navigation",
+          "description": "Original Mythic Antiquity navigation schematics",
+          "defaults": {
+            "background": "assets/mythic-antiquity/myth-background.svg",
+            "portrait": "assets/mythic-antiquity/myth-portrait.svg",
+            "token": "assets/mythic-antiquity/myth-creature.svg",
+            "item": "assets/mythic-antiquity/myth-item.svg",
+            "location": "assets/mythic-antiquity/myth-location.svg",
+            "map": "assets/mythic-antiquity/myth-map.svg"
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "myth-deep"
+  }
+}

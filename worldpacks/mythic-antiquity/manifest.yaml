@@ -1,0 +1,16 @@
+id: masterhost.mythic-antiquity
+name: Mythic Antiquity
+version: 1.0.0
+schemaVersion: "0.1"
+defaultArtSet: standard
+entryTemplate: world.root
+description: "Three original mythic campaigns: a rescue prophecy, a truthful
+  homecoming and a voluntary farewell at death’s border."
+publisher: MasterHost
+official: true
+contentRating: everyone
+license:
+  spdx: CC-BY-4.0
+  attribution: Mythic Antiquity original setting content and artwork © MasterHost
+    contributors.
+  source: https://creativecommons.org/licenses/by/4.0/

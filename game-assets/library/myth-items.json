@@ -1,0 +1,1084 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.myth.items",
+  "version": "1.0.0",
+  "type": "items",
+  "name": "Omen Voyage and Farewell Tools",
+  "description": "Omen Voyage and Farewell Tools for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+  "tags": [
+    "mythic-antiquity",
+    "warring-poleis",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Omen Voyage and Farewell Tools for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+    "highlights": [
+      "Omen Voyage and Farewell Tools",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.mythic-antiquity"
+    ],
+    "requiresCapabilities": [
+      "setting:mythic-antiquity"
+    ],
+    "providesCapabilities": [
+      "items:mythic-antiquity"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.myth.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Mythic Antiquity original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.myth.items"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 24,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.myth.items",
+    "version": "1.0.0",
+    "name": "Omen Voyage and Farewell Tools",
+    "description": "Omen Voyage and Farewell Tools for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+    "provides": [
+      "items:mythic-antiquity"
+    ],
+    "requires": [
+      "setting:mythic-antiquity"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.1",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Conditional Omen Tablet"
+            },
+            "description": {
+              "value": "Conditional Omen Tablet: reveals that rescue rather than victory restores the river."
+            },
+            "deepId": {
+              "value": "items.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.2",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Lost Sailor's Bowl"
+            },
+            "description": {
+              "value": "Lost Sailor's Bowl: holds the meal that lets the crew name the abandoned companion."
+            },
+            "deepId": {
+              "value": "items.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.3",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Unfinished Deed Token"
+            },
+            "description": {
+              "value": "Unfinished Deed Token: shows a dead person's request without granting a right to command the living."
+            },
+            "deepId": {
+              "value": "items.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.4",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Lowered Standard"
+            },
+            "description": {
+              "value": "Lowered Standard: can signal a shared truce if displayed from both banks."
+            },
+            "deepId": {
+              "value": "items.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.5",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Storm Jar Shackle"
+            },
+            "description": {
+              "value": "Storm Jar Shackle: holds the squall until the anchorage is safely evacuated."
+            },
+            "deepId": {
+              "value": "items.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.6",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Borrowed Day Thread"
+            },
+            "description": {
+              "value": "Borrowed Day Thread: records a memory willingly offered for a farewell."
+            },
+            "deepId": {
+              "value": "items.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.7",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Envoy Laurel Seal"
+            },
+            "description": {
+              "value": "Envoy Laurel Seal: authenticates the truce proposal ignored by the assembly."
+            },
+            "deepId": {
+              "value": "items.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.8",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Pearl Anchor Stone"
+            },
+            "description": {
+              "value": "Pearl Anchor Stone: steadies a diver at the altar when the storm is released."
+            },
+            "deepId": {
+              "value": "items.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.9",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Village Promise Record"
+            },
+            "description": {
+              "value": "Village Promise Record: gives humble tasks standing before the silent judges."
+            },
+            "deepId": {
+              "value": "items.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.10",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Rescue Hook"
+            },
+            "description": {
+              "value": "Rescue Hook: converts the shield foundry's labor into help for stranded river people."
+            },
+            "deepId": {
+              "value": "items.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.11",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Missing Song Verse"
+            },
+            "description": {
+              "value": "Missing Song Verse: restores the sailor's place in the homeward beacon story."
+            },
+            "deepId": {
+              "value": "items.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.12",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Quiet Ferry Coin"
+            },
+            "description": {
+              "value": "Quiet Ferry Coin: buys passage only after a completed deed is witnessed."
+            },
+            "deepId": {
+              "value": "items.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.13",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Scraped Tablet Rubbing"
+            },
+            "description": {
+              "value": "Scraped Tablet Rubbing: preserves the hidden omen if the decree is destroyed."
+            },
+            "deepId": {
+              "value": "items.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.13"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.14",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Evacuation Shell"
+            },
+            "description": {
+              "value": "Evacuation Shell: calls island hearths away from the squall's return path."
+            },
+            "deepId": {
+              "value": "items.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.17"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.15",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Farewell Candle"
+            },
+            "description": {
+              "value": "Farewell Candle: allows a dead sibling to speak without binding them to return."
+            },
+            "deepId": {
+              "value": "items.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.21"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.16",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Two-bank Truce Cord"
+            },
+            "description": {
+              "value": "Two-bank Truce Cord: joins standards while requiring both parties to keep watch."
+            },
+            "deepId": {
+              "value": "items.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.22"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.17",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Diver's Air Reed"
+            },
+            "description": {
+              "value": "Diver's Air Reed: permits one longer descent but cannot support the whole crew."
+            },
+            "deepId": {
+              "value": "items.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.18",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Garden Consent Knot"
+            },
+            "description": {
+              "value": "Garden Consent Knot: marks a borrowed day as voluntary and reversible before use."
+            },
+            "deepId": {
+              "value": "items.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.19",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "River Rescue Map"
+            },
+            "description": {
+              "value": "River Rescue Map: shows the people the war prophecy failed to name."
+            },
+            "deepId": {
+              "value": "items.19"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.20",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Crew Admission Log"
+            },
+            "description": {
+              "value": "Crew Admission Log: records abandonment without replacing it with a victory tale."
+            },
+            "deepId": {
+              "value": "items.20"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.21",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Completed Errand Basket"
+            },
+            "description": {
+              "value": "Completed Errand Basket: carries proof of the deed asked at death's border."
+            },
+            "deepId": {
+              "value": "items.21"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.15"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.22",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Bronze Repair Plan"
+            },
+            "description": {
+              "value": "Bronze Repair Plan: defines how the ford will be rebuilt after the flood."
+            },
+            "deepId": {
+              "value": "items.22"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.16"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.23",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Homeward Flame Cup"
+            },
+            "description": {
+              "value": "Homeward Flame Cup: carries the beacon once every companion is remembered."
+            },
+            "deepId": {
+              "value": "items.23"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.20"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.items.24",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Return Witness Slip"
+            },
+            "description": {
+              "value": "Return Witness Slip: allows the living visitor to leave after fulfilling the named task."
+            },
+            "deepId": {
+              "value": "items.24"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.24"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-items-1": {
+            "template": "myth.deep.items.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-items-2": {
+            "template": "myth.deep.items.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-items-3": {
+            "template": "myth.deep.items.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-items-4": {
+            "template": "myth.deep.items.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-items-5": {
+            "template": "myth.deep.items.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-items-6": {
+            "template": "myth.deep.items.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-items-7": {
+            "template": "myth.deep.items.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-items-8": {
+            "template": "myth.deep.items.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-items-9": {
+            "template": "myth.deep.items.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-items-10": {
+            "template": "myth.deep.items.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-items-11": {
+            "template": "myth.deep.items.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-items-12": {
+            "template": "myth.deep.items.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-items-13": {
+            "template": "myth.deep.items.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-items-14": {
+            "template": "myth.deep.items.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-items-15": {
+            "template": "myth.deep.items.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-items-16": {
+            "template": "myth.deep.items.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-items-17": {
+            "template": "myth.deep.items.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-items-18": {
+            "template": "myth.deep.items.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-items-19": {
+            "template": "myth.deep.items.19",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-items-20": {
+            "template": "myth.deep.items.20",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-items-21": {
+            "template": "myth.deep.items.21",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-items-22": {
+            "template": "myth.deep.items.22",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-items-23": {
+            "template": "myth.deep.items.23",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-items-24": {
+            "template": "myth.deep.items.24",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

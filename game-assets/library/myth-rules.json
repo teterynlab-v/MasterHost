@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.myth.rules",
+  "version": "1.0.0",
+  "type": "rules",
+  "name": "Prophecy Ordeal and Farewell Rules",
+  "description": "Prophecy Ordeal and Farewell Rules for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+  "tags": [
+    "mythic-antiquity",
+    "warring-poleis",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Prophecy Ordeal and Farewell Rules for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+    "highlights": [
+      "Prophecy Ordeal and Farewell Rules",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.mythic-antiquity"
+    ],
+    "requiresCapabilities": [
+      "setting:mythic-antiquity"
+    ],
+    "providesCapabilities": [
+      "rules:mythic-antiquity"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.myth.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Mythic Antiquity original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.myth.rules"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 6,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.myth.rules",
+    "version": "1.0.0",
+    "name": "Prophecy Ordeal and Farewell Rules",
+    "description": "Prophecy Ordeal and Farewell Rules for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+    "provides": [
+      "rules:mythic-antiquity"
+    ],
+    "requires": [
+      "setting:mythic-antiquity"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/actions/myth-read-omen",
+        "value": {
+          "label": "Read Omen",
+          "target": "self",
+          "kind": "check",
+          "checkId": "wits"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/myth-hold-ford",
+        "value": {
+          "label": "Hold Ford",
+          "target": "self",
+          "kind": "check",
+          "checkId": "might"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/myth-dive-altar",
+        "value": {
+          "label": "Dive Altar",
+          "target": "self",
+          "kind": "check",
+          "checkId": "might"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/myth-remember-crew",
+        "value": {
+          "label": "Remember Crew",
+          "target": "self",
+          "kind": "check",
+          "checkId": "spirit"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/myth-witness-farewell",
+        "value": {
+          "label": "Witness Farewell",
+          "target": "self",
+          "kind": "check",
+          "checkId": "spirit"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/myth-guide-return",
+        "value": {
+          "label": "Guide Return",
+          "target": "self",
+          "kind": "check",
+          "checkId": "wits"
+        }
+      }
+    ]
+  }
+}

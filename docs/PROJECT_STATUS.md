@@ -9,8 +9,9 @@
 - **M21 Deep Gothic Horror: engineering gate complete (2026-09-27).** Three original inheritance/charity/drowned-parish Kits, playable roles/paths, nine assets and clean transfer/runtime/restart plus browser GM/player/server-check evidence. Evidence: `docs/M21_STATUS.md`.
 - **M22 Deep Post-Apocalypse: engineering gate complete (2026-09-27).** Three original convoy/seed/heat Kits, playable roles/paths, nine assets and clean transfer/runtime/restart plus browser late-join/action/scene/reload. Evidence: `docs/M22_STATUS.md`.
 - **M23 Deep Dark Fantasy: engineering gate complete (2026-09-27).** Three original defense/naming/voluntary-cure Kits, playable roles/paths, clean transfer/runtime/restart and browser Quick/GM/player/action/reload. Evidence: `docs/M23_STATUS.md`.
-- **Active:** M24 Mythic Antiquity; M25–M29 follow in order, then M30 collection acceptance.
-- Ordinary clean installations now show all six original universes ready with deep content; the remaining six universes are planned.
+- **M24 Mythic Antiquity: engineering gate complete (2026-09-27).** New original 1.0.0 Pack, three prophecy/voyage/threshold Kits, playable roles/resources/paths, clean transfer/runtime/restart and browser Quick/GM/player/action/reload. Evidence: `docs/M24_STATUS.md`.
+- **Active:** M25 Weird West; M26–M29 follow in order, then M30 collection acceptance.
+- Ordinary clean installations now show all six original universes and Mythic Antiquity ready with deep content; the remaining five universes are planned.
 
 ## Post-M18 playability correction (2026-09-22)
 
