@@ -1,0 +1,60 @@
+292|Обратное течение|Inversión del Río|川の逆流|河流倒转|강의 역류
+d293|обе армии читают знамение как разрешение на вторжение.|ambos ejércitos interpretan el presagio como permiso para invadir.|両軍が兆しを侵略の許可と解釈する。|两军都将预兆解读为入侵许可。|양쪽 군대가 징조를 침략 허가로 해석한다.
+295|Пропавший голос|Voz Desaparecida|失われた声|失踪之声|사라진 목소리
+d296|остров повторяет приказ голосом брошенного моряка.|la isla repite una orden con la voz del marinero abandonado.|島が見捨てられた船員の声で命令を返す。|岛屿以被遗弃水手的声音回响命令。|섬이 버림받은 선원의 목소리로 명령을 되풀이한다.
+298|Очередь незавершённого|Cola de lo Pendiente|未完の列|未竟之队|미완의 대기줄
+d299|царская тень требует пропустить её перед деревенским скорбящим.|la sombra real exige prioridad sobre un doliente aldeano.|王族の亡霊が村の弔う者より先に通せと要求する。|王族幽魂要求排在乡村哀悼者之前。|왕족 망령이 마을 애도자보다 먼저 가겠다고 요구한다.
+301|Соскоб на табличке|Raspadura de la Tablilla|板の削り跡|泥板刮痕|서판의 긁힌 자국
+d302|ребёнок замечает следы под публичным указом о войне.|un niño ve marcas bajo el decreto público de guerra.|子どもが公示された戦争の勅令の下に跡を見つける。|一个孩子发现公开战争诏令下的痕迹。|아이가 공개 전쟁 포고문 아래 흔적을 발견한다.
+304|Натяжение цепи|Tensión de la Cadena|鎖の張力|锁链绷紧|사슬의 긴장
+d305|пленённая буря тянет стоящий на якоре корабль к скалам.|la tormenta cautiva arrastra un barco anclado hacia las rocas.|囚われた嵐が停泊中の船を岩へ引っ張る。|被囚风暴把锚泊的船只拉向礁石。|갇힌 폭풍이 정박한 배를 바위로 끌어당긴다.
+307|Предложенный день|Día Ofrecido|差し出す一日|献出一天|하루의 제안
+d308|сад просит добровольно отданное воспоминание перед прощанием.|el jardín pide un recuerdo entregado libremente antes de la despedida.|庭が別れの前に、自発的に差し出す記憶を求める。|花园要求在告别前自愿献出一段记忆。|정원이 작별 전에 자발적으로 준 기억을 요청한다.
+310|Прибытие перемирия|Llegada de la Tregua|休戦の到来|停战到来|휴전의 도착
+d311|лавровые послы ждут, пока оба берега поднимают знамёна.|los enviados del Laurel esperan mientras ambas orillas alzan sus estandartes.|両岸が旗を掲げる中、月桂樹の使節は待つ。|两岸举起旗帜时，月桂使者仍在等待。|양쪽 강둑이 깃발을 올리는 동안 월계수 사절들이 기다린다.
+313|Предупреждение ныряльщика|Advertencia del Buceador|潜水士の警告|潜水者警告|잠수부의 경고
+d314|алтарь не может принять бурю до эвакуации очагов.|el altar no puede recibir la borrasca antes de evacuar los hogares.|炉辺の人々が避難するまで、祭壇は突風を受け入れられない。|在炉火住户疏散之前，祭坛无法接纳暴风。|화롯가 사람들이 대피하기 전에 제단이 돌풍을 받아들일 수 없다.
+316|Скромное свидетельство|Testimonio Humilde|ささやかな証言|平凡证词|소박한 증언
+d317|деревенское обещание оспаривает судейский порядок, основанный на дарах.|una promesa aldeana cuestiona la clasificación del juez basada en regalos.|村の約束が、供物による裁判官の順位付けに異議を唱える。|一个乡村承诺挑战判官以贡品为基础的排序。|마을의 약속이 선물에 따른 심판관의 순위에 이의를 제기한다.
+319|Прошение литейной|Petición de la Fundición|鋳造所の請願|铸造厂请愿|주조소의 청원
+d320|кузнецы предлагают спасательные крюки вместо очередного сбора оружия.|los herreros ofrecen ganchos de rescate en vez de otra leva de armas.|鍛冶師たちが追加の武器徴発の代わりに救助用の鉤を提供する。|铁匠提出提供救援钩，而不是再次征集武器。|대장장이들이 추가 무기 징발 대신 구조 갈고리를 제공한다.
+322|Забытая миска|Cuenco Olvidado|忘れられた椀|被遗忘的碗|잊힌 그릇
+d323|кок спрашивает, почему одного товарища нет ни в одном тосте.|la cocinera pregunta por qué un compañero falta en todos los brindis.|料理人が、どの乾杯にも一人の仲間が出てこない理由を問う。|厨师询问为何每次祝酒都没有提到一位同伴。|요리사가 왜 모든 건배에서 한 동료가 빠지는지 묻는다.
+325|Вопрос перевозчика|Pregunta del Barquero|渡し守の問い|摆渡人之问|뱃사공의 질문
+d326|перевозчик спрашивает, какое дело привело живого посетителя вниз.|el barquero pregunta qué tarea trajo al visitante vivo al mundo inferior.|渡し守が、どんな仕事が生者を下界へ導いたのか尋ねる。|摆渡人询问是什么任务将这位生者带到冥界。|뱃사공이 무슨 일 때문에 살아 있는 방문자가 아래로 왔는지 묻는다.
+328|Бык у брода|Toro en el Vado|浅瀬の雄牛|浅滩之牛|여울의 황소
+d329|поднятые знамёна притягивают речного стража в толпу.|los estandartes alzados atraen al guardián fluvial hacia la multitud.|掲げられた旗が川の守護者を群衆へ引き寄せる。|高举的旗帜把河流守护者引入人群。|높이 든 깃발이 강의 수호자를 군중으로 끌어들인다.
+331|Сделка о тишине|Trato de Calma|凪の取引|平静交易|고요한 거래
+d332|ростовщик сосуда предлагает путь домой ценой вечного плена бури.|el usurero de la vasija ofrece una ruta a casa a cambio del cautiverio perpetuo de la tormenta.|壺の高利貸しが、永久の囚われを代償に帰り道を提案する。|风暴罐高利贷商以永久囚禁为代价提供归乡之路。|항아리 고리대금업자가 영원한 감금을 대가로 귀향길을 제안한다.
+334|Потеря памяти|Pérdida de Memoria|記憶の喪失|记忆流失|기억 상실
+d335|отнятый у посетителя день исчезает до записи согласия.|el día tomado al visitante desaparece antes de registrar su consentimiento.|訪問者から取られた一日が、同意の記録前に消える。|访客被拿走的一天在同意记录完成前消失。|방문자에게서 가져간 하루가 동의를 기록하기 전에 사라진다.
+337|Обмен дозоров|Intercambio de Guardias|見張りの交換|守卫交换|경비 교환
+d338|два солдата думают, не опустить ли знамёна одновременно.|dos soldados consideran bajar juntos los estandartes.|二人の兵士が共に旗を下ろすことを考える。|两名士兵考虑同时降下旗帜。|두 병사가 함께 깃발을 내릴지 고민한다.
+340|Жемчужное погружение|Descenso de Perla|真珠への潜水|珍珠下潜|진주 잠수
+d341|ныряльщик достигает алтаря, когда скованная буря пробуждается.|el buceador alcanza el altar mientras despierta la borrasca encadenada.|鎖につながれた突風が目覚める中、潜水士が祭壇に到達する。|被锁链束缚的暴风苏醒时，潜水者抵达祭坛。|묶인 돌풍이 깨어날 때 잠수부가 제단에 도착한다.
+343|Снятая маска|Máscara Retirada|外された仮面|面具摘下|벗겨진 가면
+d344|хор показывает, как погребальное богатство искажает суд.|el coro revela cómo la riqueza funeraria distorsiona el juicio.|合唱団が墓の富による裁きの歪みを暴く。|合唱团揭露陪葬财富如何扭曲裁决。|합창단이 무덤의 부가 심판을 왜곡하는 방식을 드러낸다.
+346|Знамение спасения|Presagio de Rescate|救助の兆し|救援预兆|구조의 징조
+d347|скрытая табличка называет отрезанных людей, а не завоёванный город.|la tablilla oculta nombra a personas aisladas, no a una ciudad conquistada.|隠された板が名を挙げるのは、征服する都市ではなく取り残された人々だ。|隐藏泥板提到的是受困的人们，而非被征服的城市。|숨겨진 서판이 이름을 밝힌 것은 정복할 도시가 아니라 고립된 사람들이다.
+349|Признание экипажа|Confesión de la Tripulación|船員の告白|船员坦白|선원들의 고백
+d350|капитан признаёт, что дорога домой началась с оставления товарища.|el capitán admite que la ruta de regreso comenzó con un abandono.|船長が、帰郷の航路は仲間を見捨てることで始まったと認める。|船长承认归乡之路始于遗弃同伴。|선장이 귀향길이 동료를 버리는 일로 시작되었다고 인정한다.
+352|Просьба брата|Petición del Hermano|きょうだいの願い|手足之请|형제의 부탁
+d353|Даро просит передать послание и отказывается возвращаться к смертной жизни.|Daro pide entregar un mensaje y rechaza volver a la vida mortal.|ダロは伝言を頼み、人間の生への帰還を断る。|达罗请求传递口信，并拒绝重返凡人的生活。|다로가 전갈을 부탁하고 필멸자의 삶으로 돌아가기를 거부한다.
+355|Подъём воды|Crecida de la Inundación|洪水の上昇|洪水上涨|홍수 상승
+d356|вода достигает нового спасательного снаряжения кузнецов.|el agua alcanza el nuevo equipo de rescate de los herreros.|水が鍛冶師たちの新しい救助器具に届く。|洪水涨到铁匠新制的救援装备旁。|물이 대장장이들의 새 구조 장비까지 차오른다.
+358|Эвакуация острова|Evacuación de la Isla|島の避難|岛屿疏散|섬 대피
+d359|очаги соглашаются временно переселиться до освобождения бури.|los hogares aceptan mudarse temporalmente antes de liberar la tormenta.|炉辺の人々が嵐の解放前の一時移住に同意する。|炉火住户同意在释放风暴前暂时迁离。|화롯가 사람들이 폭풍을 풀기 전에 임시 이주를 받아들인다.
+361|Свидетель поручения|Testigo del Encargo|用事の証人|委托见证|심부름의 증인
+d362|скорбящий может доказать, что просьба выполнена.|un doliente puede demostrar que la tarea solicitada está cumplida.|弔う者が、頼まれた行いが完了したと証明できる。|哀悼者能够证明所请求的行动已完成。|애도자가 부탁받은 일을 마쳤음을 증명할 수 있다.
+364|Общий брод|Vado Compartido|共有の浅瀬|共同浅滩|공동 여울
+d365|оба берега предлагают труд после завершения спасения.|ambas orillas ofrecen mano de obra tras completar el rescate.|救助が終わると、両岸が労働力を提供する。|救援完成后，两岸都提供劳力。|구조가 끝나면 양쪽 강둑이 노동력을 제공한다.
+367|Песня маяка|Canción del Faro|灯台の歌|灯塔之歌|등대의 노래
+d368|история возвращения должна включать последний куплет потерянного моряка.|el relato del regreso debe incluir la última estrofa del marinero perdido.|帰郷の物語には、失われた船員の最後の一節を含めなければならない。|归乡故事必须包含失踪水手的最后一段歌词。|귀향 이야기에는 잃어버린 선원의 마지막 절이 들어가야 한다.
+370|Одолженное прощание|Despedida Prestada|借りた別れ|借日告别|빌린 작별
+d371|посетитель может потратить день или уйти из сада без разговора.|un visitante puede gastar un día o salir del jardín sin hablar.|訪問者は一日を使うことも、話さずに庭を去ることもできる。|访客可以花费一天，也可以不交谈就离开花园。|방문자는 하루를 쓰거나 말하지 않고 정원을 떠날 수 있다.
+373|Исполненное пророчество|Profecía Cumplida|成就した予言|预言兑现|이루어진 예언
+d374|река возвращается после выбранного спасения и перемирия.|el río vuelve a su curso tras el rescate y la tregua elegidos.|選んだ救助と休戦の後、川が元に戻る。|在选择的救援与停战完成后，河流恢复正常。|선택한 구조와 휴전 뒤 강이 돌아온다.
+376|Освобождённая погода|Clima Desencadenado|解き放たれた天候|解链的天气|풀려난 날씨
+d377|экипаж оставляет свободную бурю и восстановленную стоянку.|la tripulación deja una tormenta libre y un fondeadero reconstruido.|船員たちは自由な嵐と修復された停泊地を残して去る。|船员离开时，留下自由的风暴和修复的锚地。|선원들은 자유로운 폭풍과 재건한 정박지를 남기고 떠난다.
+379|Возвращение живого|Regreso del Vivo|生者の帰還|生者归来|산 자의 귀환
+d380|переправа возвращает посетителя, выполнившего просьбу.|el transbordador devuelve al visitante con la petición cumplida.|願いを果たした訪問者を渡し舟が連れ帰る。|渡船载回已完成请求的访客。|나룻배가 부탁을 마친 방문자를 데리고 돌아온다.

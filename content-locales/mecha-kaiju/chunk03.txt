@@ -1,0 +1,84 @@
+166|Колосс волнолома|Coloso del Rompeolas|防波堤の巨人|防波堤巨兽|방파제 거신
+d167|идёт за всплесками мощности к ретранслятору щита; его можно заманить в пустой бассейн.|sigue picos de energía al relé del escudo y puede atraerse a una cuenca vacía.|電力の急増を追って盾の中継器へ向かい、空の盆地へ誘導できる。|追随能量波动前往护盾中继器，可被引向空盆地。|출력 급증을 따라 방패 중계기로 향하며 빈 분지로 유인할 수 있다.
+169|Реквизиционная машина|Estructura de Requisición|徴発機体|征用机体|징발 기체
+d170|блокирует гражданское воздушное сообщение до оспаривания командной печати.|bloquea tráfico civil de aire hasta impugnar su sello de mando.|指令の封印に異議が出るまで民間の空気輸送を阻む。|在指挥封印被质疑前阻挡平民空气运输。|명령 인장에 이의를 제기할 때까지 민간 공기 교통을 막는다.
+172|Резак претензий|Cortador de Reclamaciones|権利主張の切断機|索赔切割者|권리 주장 절단기
+d173|отрезает спящие кабины на лом, не проверяя, есть ли внутри люди.|corta cabinas dormidas como chatarra sin comprobar ocupación.|有人か確認せず眠る操縦室をくずとして切り離す。|不检查是否有人，就将沉睡驾驶舱切下作废料。|사람이 있는지 확인하지 않고 잠든 조종실을 고철로 잘라 낸다.
+175|Дрон патруля наводнения|Dron de Patrulla de Inundación|洪水巡回ドローン|洪水巡逻无人机|홍수 순찰 드론
+d176|запечатывает эвакуационные шлюзы по устаревшей карте наводнения.|sella puertas de evacuación según un mapa de inundación obsoleto.|古い洪水地図に従って避難門を封じる。|按过时洪水地图封住疏散闸门。|낡은 홍수 지도에 따라 대피 수문을 봉한다.
+178|Шагающий доковый зажим|Caminante de Abrazaderas del Muelle|ドッククランプ歩行機|码头夹具步行机|부두 클램프 보행기
+d179|удерживает кислородный конвой по правилам военного приоритета.|retiene el convoy de oxígeno bajo reglas de prioridad militar.|軍事優先規則で酸素輸送隊を拘束する。|依据军事优先规则固定住氧气护航队。|군 우선 규칙으로 산소 수송대를 붙잡는다.
+181|Рой пиявок ядра|Enjambre de Sanguijuelas del Núcleo|コアヒルの群れ|核心水蛭群|코어 거머리 떼
+d182|вытягивает тепло из живых кабин и рассеивается при открытии безопасного пути охладителя.|extrae calor de cabinas vivas y se dispersa al abrir una ruta segura de refrigerante.|生きた操縦室から熱を吸い、安全な冷却材経路が開くと散る。|吸取活人驾驶舱热量，安全冷却路径开启后散开。|살아 있는 조종실의 열을 빨고 안전 냉각제 경로가 열리면 흩어진다.
+184|Осадная батарейная машина|Estructura de Batería de Asedio|攻城砲台機体|攻城炮台机体|포대 공성 기체
+d185|стреляет поперёк паромных путей, если операторы не получили проверенный безопасный сектор.|dispara sobre vías de ferris salvo que sus operadores reciban un arco seguro verificado.|操作員が検証した安全射界を受け取らない限り渡し船の道を横切って撃つ。|若操作员未收到经核验安全射界，就会向渡船通道开火。|운용자가 검증 안전 범위를 받지 않으면 페리 길을 가로질러 발사한다.
+187|Абордажный заводской механизм|Equipo de Abordaje de la Planta|工場制圧リグ|工厂登舰装置|시설 승선 장비
+d188|угрожает воздушным насосам, работа которых нужна обеим фракциям.|amenaza bombas de aire que ambas facciones necesitan activas.|両陣営に必要な稼働中の空気ポンプを脅かす。|威胁双方都需要运行的空气泵。|양쪽 세력이 가동을 필요로 하는 공기 펌프를 위협한다.
+190|Якорный зверь утилизации|Bestia de Anclaje de Recuperación|回収錨の獣|回收锚兽|인양 닻 짐승
+d191|прижимает обломок к опасной землечерпальной траншее.|sujeta el pecio a una peligrosa zanja de dragado.|危険な浚渫溝に残骸を押さえつける。|将机骸钉在危险疏浚沟中。|위험한 준설 도랑에 잔해를 고정한다.
+193|Кайдзю грозового эха|Kaiju del Eco de Tormenta|嵐のこだま怪獣|风暴回声怪兽|폭풍 메아리 괴수
+d194|принимает импульс щита за брачный зов и атакует пилон.|confunde el pulso del escudo con una llamada de apareamiento y ataca el pilón.|盾の脈動を求愛の声と誤解し支柱を襲う。|把护盾脉冲误当求偶信号，攻击护盾塔。|방패 맥동을 구애 신호로 착각하고 지주를 공격한다.
+196|Костюм принудительных квот|Traje de Ejecución de Cuotas|割当執行スーツ|配额执法装甲|할당 집행 슈트
+d197|изымает баллоны, обозначенные в гражданской книге как общая собственность.|confisca recipientes que el registro civil identifica como propiedad compartida.|民間台帳が共有財産とする空気容器を押収する。|没收平民台账标为共有财产的气罐。|민간 장부가 공동 재산이라 기록한 공기통을 압수한다.
+199|Часовой памяти|Centinela de Memoria|記憶の歩哨|记忆哨兵|기억 파수꾼
+d200|нападает на любого с поддельной меткой заброшенного обломка.|ataca a quien lleve una etiqueta falsa de pecio abandonado.|偽の放棄残骸札を持つ者を襲う。|攻击携带伪造废弃机骸标签的人。|위조한 폐기 잔해 태그를 가진 누구든 공격한다.
+202|Крушитель дамб|Triturador de Diques|堤防砕き|堤坝粉碎者|제방 분쇄자
+d203|ломает слабый бетон, но избегает маломощных канальных маяков.|rompe hormigón débil, pero evita balizas de canal de baja potencia.|弱いコンクリートを壊すが低出力の水路標識を避ける。|破坏脆弱混凝土，却避开低功率水道信标。|약한 콘크리트를 부수지만 저출력 수로 비컨은 피한다.
+205|Машина преследования конвоя|Estructura de Persecución de Convoy|輸送隊追跡機体|护航队追击机体|수송대 추격 기체
+d206|может быть задержана нейтральной инспекцией вместо уничтожения.|puede demorarse con inspección neutral en vez de destruirse.|破壊せず中立検査で遅らせられる。|可通过中立检查拖延，而无需摧毁。|파괴 대신 중립 검사로 지연시킬 수 있다.
+208|Спящий хранитель корпуса|Guardián del Casco Dormido|休眠船体の守護者|休眠机壳守护者|휴면 선체 수호자
+d209|просыпается, если обитаемая кабина теряет питание.|despierta si una cabina habitada pierde alimentación.|有人操縦室の電力が失われると目覚める。|有人驾驶舱失去供电时苏醒。|사람 있는 조종실의 전원이 끊기면 깨어난다.
+211|Перезаряженный титан щита|Titán del Escudo Sobrecargado|過充電の盾の巨人|过载护盾泰坦|과충전 방패 거신
+d212|выбрасывает опасный жар, когда командование требует максимальной мощности.|expulsa calor peligroso cuando el mando exige potencia máxima.|司令部が最大出力を求めると危険な熱を放出する。|指挥部坚持最大输出时排放危险热量。|사령부가 최대 출력을 고집하면 위험한 열을 배출한다.
+214|Дрон удара по топливу|Dron de Ataque al Combustible|燃料攻撃ドローン|燃料打击无人机|연료 타격 드론
+d215|без обновлённого списка целей не отличает топливные баки от кислородных хранилищ.|no distingue tanques de combustible de almacenes de oxígeno sin objetivos actualizados.|更新目標一覧なしでは燃料タンクと酸素庫を区別できない。|没有更新目标清单就无法区分燃料箱与氧气储存设施。|최신 표적 목록 없이는 연료 탱크와 산소 저장고를 구별 못 한다.
+217|Великан короны лома|Gigante de la Corona de Chatarra|くず冠の巨人|废料王冠巨机|고철 왕관 거인
+d218|собирает обломки вместе с обитаемыми секциями, если его не перенаправить.|recoge restos incluidos sectores habitados salvo que se desvíe su ruta.|道を変えないと有人区画も含めて残骸を集める。|若不改向，就会收集包括有人舱段的残骸。|경로를 바꾸지 않으면 거주 구획까지 잔해를 수집한다.
+220|Маяк границы убежища|Baliza del Límite del Refugio|避難所境界の標識|避难所边界信标|대피소 경계 비컨
+d221|отмечает сектор запрета огня, позволяя узкому выстрелу защитить путь эвакуации.|marca el arco de no disparo para que un tiro estrecho proteja la evacuación.|射撃禁止範囲を示し、狭い射撃が避難路を守れるようにする。|标明禁射范围，让窄角射击保护疏散路线。|사격 금지 범위를 표시해 좁은 발사가 대피로를 지키게 한다.
+223|Дубликат воздушной книги|Registro de Aire Duplicado|空気台帳の複本|空气台账副本|공기 장부 사본
+d224|записывает гражданскую собственность на баллоны с маркировкой военного топлива.|registra propiedad civil de recipientes etiquetados como combustible militar.|軍用燃料と表示した容器の民間所有権を記録する。|记录被标为军用燃料气罐的平民所有权。|군 연료로 표시된 공기통의 민간 소유권을 기록한다.
+226|Карта обитаемых кабин|Mapa de Cabinas Habitadas|有人操縦室の地図|有人驾驶舱图|거주 조종실 지도
+d227|указывает отсеки спящего экипажа, которые нельзя безопасно отделить.|identifica secciones de tripulación dormida que no se separan a salvo.|安全には切り離せない眠る乗員の区画を特定する。|标出无法安全分离的沉睡乘员舱段。|안전하게 분리할 수 없는 잠든 승무원 구획을 식별한다.
+229|Жетон приоритета парома|Ficha de Prioridad del Ferri|渡し船優先の証|渡船优先令牌|페리 우선 토큰
+d230|перевозит пациентов раньше боеприпасов, если диспетчер засвидетельствует применение.|mueve pacientes antes de municiones si un operador atestigua su uso.|通信係が使用を証言すれば弾薬より先に患者を運ぶ。|若调度员见证使用，就能先运病人再运弹药。|상황 요원이 사용을 증언하면 탄약보다 환자를 먼저 옮긴다.
+232|Печать испытания давления|Sello de Prueba de Presión|圧力試験の封印|压力测试封印|압력 검사 봉인
+d233|доказывает безопасность гражданских баллонов, не раскрывая местоположение скрытого поселения.|prueba seguridad de recipientes civiles sin revelar un hábitat oculto.|隠れた居住区の場所を明かさず民間容器の安全を証明する。|证明平民气罐安全，不暴露隐藏居住区位置。|숨겨진 거주지 위치 없이 민간 공기통 안전을 증명한다.
+235|Хартия нейтральной утилизации|Carta de Recuperación Neutral|中立回収憲章|中立回收宪章|중립 인양 헌장
+d236|разрешает убрать необитаемый лом, защищая кабины с питанием.|permite retirar chatarra deshabitada protegiendo cabinas alimentadas.|電力のある操縦室を守りつつ無人のくず除去を認める。|允许移除无人废料，同时保护通电驾驶舱。|전원이 있는 조종실을 보호하며 무인 고철 제거를 허용한다.
+238|Маломощная приманка|Señuelo de Baja Potencia|低出力の囮|低功率诱饵|저출력 미끼
+d239|уводит прибрежную угрозу без импульса всего щита.|desvía la amenaza costera sin pulsar todo el escudo.|盾全体を脈動させず沿岸の脅威を引き離す。|不触发整个护盾脉冲就引开海岸威胁。|전체 방패 맥동 없이 해안 위협을 끌어낸다.
+241|Камера открытой инспекции|Cámara de Inspección Abierta|公開検査カメラ|公开检查摄像机|공개 검사 카메라
+d242|позволяет обеим сторонам проверить один воздушный манифест.|deja a ambos bandos verificar el mismo manifiesto de aire.|両側が同じ空気積荷目録を検証できる。|让双方核验同一空气货单。|양쪽이 같은 공기 적하 목록을 확인하게 한다.
+244|Шланг охлаждения ядра|Manguera de Refrigeración del Núcleo|コア冷却ホース|核心冷却软管|코어 냉각 호스
+d245|снижает жар, сохраняя жизнеобеспечение экипажа.|reduce calor conservando soporte vital de la tripulación.|乗員の生命維持を保ちながら熱を減らす。|降低热量，同时保留乘员生命维持。|승무원 생명 유지를 보존하며 열을 줄인다.
+247|Повреждённый приказ наведения|Orden de Tiro Dañada|損傷した照準命令|受损瞄准令|손상 조준 명령
+d248|показывает, что старая карта эвакуации уже не соответствует городу.|muestra que el mapa antiguo de evacuación ya no coincide con la ciudad.|古い避難地図が都市と合わないと示す。|显示旧疏散地图已不符合城市实况。|옛 대피 지도가 더는 도시와 맞지 않음을 보여 준다.
+250|Гражданский доковый ордер|Orden de Muelle Civil|民間ドック令状|平民码头授权令|민간 부두 영장
+d251|разрешает независимый эскорт конвоя вместо принудительной военной службы.|permite escolta independiente en vez de servicio militar forzado.|強制軍務の代わりに独立した輸送隊護衛を認める。|准许独立护送护航队，而非强制服兵役。|강제 군 복무 대신 독립 수송대 호위를 허용한다.
+253|Ключ безоружного доступа|Llave de Acceso Desarmado|非武装アクセス鍵|无武装通行钥匙|비무장 접근 열쇠
+d254|открывает мост спящей машины, оставляя её оружие изолированным.|abre el puente de la estructura dormida con sus armas aisladas.|武器を隔離したまま眠る機体のブリッジを開く。|打开沉睡机体舰桥，同时保持武器隔离。|무기를 격리한 채 잠든 기체 함교를 연다.
+256|Муфта обхода щита|Acoplador de Desvío del Escudo|盾迂回カプラー|护盾旁路接头|방패 우회 연결기
+d257|восстанавливает паромный коридор ценой ослабления внешнего поля.|restaura el corredor de ferris a costa de debilitar el campo exterior.|外側の場の弱体化を代償に渡し船回廊を復旧する。|以削弱外围力场为代价恢复渡船走廊。|바깥 장이 약해지는 대가로 페리 통로를 복구한다.
+259|Упряжь пересадки поселения|Arnés de Transferencia del Hábitat|居住区移送ハーネス|居住区转运吊具|거주지 이동 하네스
+d260|перемещает людей через ремонтное кольцо, не повреждая кислородный завод.|mueve gente por el anillo de reparación sin dañar la planta de oxígeno.|酸素工場を傷つけず修理リングを通じて人を運ぶ。|运人穿过维修环，不损坏氧气工厂。|산소 시설을 손상하지 않고 수리 링으로 사람을 옮긴다.
+262|Протокол пробуждения экипажа|Protocolo de Despertar de Tripulación|乗員覚醒手順|乘员唤醒协议|승무원 각성 절차
+d263|просит согласия спящих до изменения пути их машины.|pide consentimiento antes de cambiar la ruta de la estructura.|機体の道を変える前に眠る者へ同意を求める。|改变机体路线前，向沉睡者征求同意。|기체 경로 변경 전에 잠든 이들에게 동의를 구한다.
+265|Медицинский набор высокой воды|Equipo Médico de Aguas Altas|高水位の医療キット|高水医疗包|높은 물 의료 도구
+d266|стабилизирует пациентов убежища при медленной паромной переправе.|estabiliza pacientes en el cruce más lento del ferri.|遅い渡し船の横断中に避難所患者を安定させる。|在较慢渡船通行期间稳定避难所病人。|느린 페리 도하 중 대피소 환자를 안정시킨다.
+268|Запчасть общего насоса|Repuesto de Bomba Compartida|共有ポンプの予備部品|共享泵备件|공동 펌프 부품
+d269|чинит жизнеобеспечение, если ремонтники не пускают обе вооружённые команды.|repara soporte vital si mantenimiento deja fuera a ambos grupos armados.|整備員が両武装班を外に置けば生命維持を修理する。|若维修工把双方武装队留在外面，就能修复生命维持。|정비사가 양쪽 무장 대원을 밖에 두면 생명 유지를 고친다.
+271|Распорка живой кабины|Refuerzo de Cabina Viva|生きた操縦室の支え|活人驾驶舱支架|살아 있는 조종실 버팀대
+d272|поддерживает обитаемую секцию при безопасной утилизации.|sostiene una sección habitada durante recuperación segura.|安全な回収作業中に有人区画を支える。|在安全回收期间支撑有人舱段。|안전 인양 중 사람이 있는 구획을 받친다.
+274|Линза дождевого радара|Lente del Radar de Lluvia|雨用レーダーレンズ|雨中雷达镜片|우천 레이더 렌즈
+d275|отслеживает колосса без включения старой приманки щита.|rastrea el coloso sin encender el viejo señuelo de escudo.|古い盾の囮を起動せず巨人を追跡する。|追踪巨兽而不启动旧护盾诱饵。|옛 방패 미끼에 전원을 주지 않고 거신을 추적한다.
+277|Мел маркировки баллонов|Tiza para Marcar Recipientes|容器表示チョーク|气罐标记粉笔|공기통 표시 분필
+d278|делает мошенничество с квотами заметным при публичном подсчёте.|hace visible el fraude de cuotas durante un recuento público.|公開集計で割当詐欺を見えるようにする。|在公开清点中使配额欺诈可见。|공개 집계 중 할당 사기를 눈에 보이게 한다.
+280|Сигнальный флаг сообщества|Bandera de Señal de la Comunidad|共有組合の信号旗|公社信号旗|공동체 신호 깃발
+d281|призывает приостановить утилизацию каждый раз, когда отвечает живая кабина.|pide detener recuperación siempre que responde una cabina viva.|生きた操縦室が答えるたび回収の停止を呼びかける。|每当活人驾驶舱回应时，呼吁暂停回收。|살아 있는 조종실이 답하면 인양 중단을 알린다.
+283|Элемент охладителя|Celda de Refrigerante|冷却材セル|冷却剂电池|냉각제 셀
+d284|восстанавливает истраченный резерв реактора, но не убирает жар автоматически.|restaura reserva gastada de reactor sin borrar calor automáticamente.|消費した炉備蓄を戻すが熱は自動で消さない。|恢复耗尽反应堆储备，但不自动消除热量。|소모 원자로 비축을 회복하지만 열을 자동으로 없애지는 않는다.
+286|Заплата скафандра давления|Parche del Traje de Presión|圧力スーツの補修材|压力潜水服补丁|압력 잠수복 패치
+d287|позволяет одно испытательное погружение до срока стыковки.|permite una inmersión de prueba antes del plazo de atraque.|係留期限前の一度の試験潜水を可能にする。|允许在对接期限前进行一次测试下潜。|도킹 기한 전에 한 번 시험 잠수를 허용한다.
+289|Спасательный буксировочный трос|Cable de Remolque de Rescate|救助曳航ケーブル|救援拖缆|구조 예인 케이블
+d290|ведёт спящую машину через сигнальный двор, не принуждая пилотов.|guía la estructura dormida por el patio de señales sin forzar a sus pilotos.|操縦士を強制せず眠る機体を信号ヤードへ導く。|引导沉睡机体穿过信号场，不强迫驾驶员。|조종사 강요 없이 잠든 기체를 신호 작업장으로 안내한다.

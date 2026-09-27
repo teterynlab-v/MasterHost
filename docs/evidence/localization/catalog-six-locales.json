@@ -1,0 +1,110 @@
+[
+  {
+    "code": "ru",
+    "headings": [
+      "Классическое фэнтези",
+      "Тёмное фэнтези",
+      "Космическая опера",
+      "Киберпанк",
+      "Постапокалипсис",
+      "Готический ужас",
+      "Мифическая античность",
+      "Мистический Дикий Запад",
+      "Городское фэнтези",
+      "Космическое расследование",
+      "Эпоха парусов",
+      "Мехи и кайдзю"
+    ],
+    "url": "http://127.0.0.1:8246/?realm=default&lang=ru#universes"
+  },
+  {
+    "code": "es",
+    "headings": [
+      "Fantasía Clásica",
+      "Fantasía Oscura",
+      "Ópera espacial",
+      "Ciberpunk",
+      "Posapocalipsis",
+      "Horror Gótico",
+      "Antigüedad mítica",
+      "Extraño Oeste",
+      "Fantasía Urbana",
+      "Investigación Cósmica",
+      "Era de la Vela",
+      "Mechas y Kaiju"
+    ],
+    "url": "http://127.0.0.1:8246/?realm=default&lang=es#universes"
+  },
+  {
+    "code": "ja",
+    "headings": [
+      "王道ファンタジー",
+      "ダークファンタジー",
+      "スペースオペラ",
+      "サイバーパンク",
+      "ポストアポカリプス",
+      "ゴシックホラー",
+      "神話の古代",
+      "怪異の西部",
+      "アーバンファンタジー",
+      "宇宙的調査",
+      "大航海時代",
+      "メカと怪獣"
+    ],
+    "url": "http://127.0.0.1:8246/?realm=default&lang=ja#universes"
+  },
+  {
+    "code": "zh-CN",
+    "headings": [
+      "经典奇幻",
+      "黑暗奇幻",
+      "太空歌剧",
+      "赛博朋克",
+      "后末日",
+      "哥特恐怖",
+      "神话古代",
+      "诡秘西部",
+      "都市奇幻",
+      "宇宙诡秘调查",
+      "风帆时代",
+      "机甲与怪兽"
+    ],
+    "url": "http://127.0.0.1:8246/?realm=default&lang=zh-CN#universes"
+  },
+  {
+    "code": "ko",
+    "headings": [
+      "정통 판타지",
+      "다크 판타지",
+      "스페이스 오페라",
+      "사이버펑크",
+      "포스트 아포칼립스",
+      "고딕 호러",
+      "신화 속 고대",
+      "기묘한 서부",
+      "도시 판타지",
+      "우주적 조사",
+      "범선 시대",
+      "메카와 괴수"
+    ],
+    "url": "http://127.0.0.1:8246/?realm=default&lang=ko#universes"
+  },
+  {
+    "code": "en",
+    "headings": [
+      "Classic Fantasy",
+      "Dark Fantasy",
+      "Space Opera",
+      "Cyberpunk",
+      "Post-Apocalypse",
+      "Gothic Horror",
+      "Mythic Antiquity",
+      "Weird West",
+      "Urban Fantasy",
+      "Cosmic Investigation",
+      "Age of Sail",
+      "Mecha & Kaiju"
+    ],
+    "url": "http://127.0.0.1:8246/?realm=default&lang=en#universes"
+  }
+]

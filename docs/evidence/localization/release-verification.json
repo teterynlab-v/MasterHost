@@ -1,0 +1,20 @@
+{
+  "version": "0.2.1-content-localization",
+  "sourceStrings": 7427,
+  "universes": 12,
+  "targetLocales": ["ru", "es", "ja", "zh-CN", "ko"],
+  "requiredTranslations": 37135,
+  "typecheck": "pass",
+  "cleanPostgreSqlTestFiles": 79,
+  "cleanPostgreSqlTests": 293,
+  "skippedTests": 0,
+  "webProductionBuild": "pass",
+  "releaseArchiveChecksums": "pass",
+  "releaseArchiveComposeBuild": "pass",
+  "thirdPartyLicenseRecords": 197,
+  "retainedDemoWorldsBefore": 30,
+  "retainedDemoWorldsAfter": 30,
+  "retainedDemoWorldDataHashesUnchanged": true,
+  "humanEditorialAcceptance": "open",
+  "humanGameAcceptance": "open"
+}

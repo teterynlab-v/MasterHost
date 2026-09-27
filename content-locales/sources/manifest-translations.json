@@ -1,0 +1,231 @@
+{
+  "classic-fantasy": {
+    "ru": {
+      "Heroic kingdoms, old roads, rival crowns, monsters, magic, and bright fellowship.": "Героические королевства, древние дороги, соперничающие короны, чудовища, магия и светлое товарищество."
+    },
+    "es": {
+      "Heroic kingdoms, old roads, rival crowns, monsters, magic, and bright fellowship.": "Reinos heroicos, caminos antiguos, coronas rivales, monstruos, magia y una luminosa camaradería."
+    },
+    "ja": {
+      "Heroic kingdoms, old roads, rival crowns, monsters, magic, and bright fellowship.": "英雄的な王国、古い街道、争う王冠、怪物、魔法、そして希望に満ちた仲間の絆。"
+    },
+    "zh-CN": {
+      "Heroic kingdoms, old roads, rival crowns, monsters, magic, and bright fellowship.": "英雄王国、古老道路、相争的王冠、怪物、魔法，以及光明的伙伴情谊。"
+    },
+    "ko": {
+      "Heroic kingdoms, old roads, rival crowns, monsters, magic, and bright fellowship.": "영웅적인 왕국, 옛길, 경쟁하는 왕관, 괴물, 마법, 그리고 밝은 동료애."
+    }
+  },
+  "dark-fantasy": {
+    "ru": {
+      "Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.": "Три полные мрачные кампании: совместная оборона под угасающим солнцем, имена, освобождённые от унаследованного выкупа, и исцеление без владения пленниками.",
+      "Cursed borderlands where desperate houses bargain with old powers beneath a dying sun.": "Проклятые пограничные земли, где отчаявшиеся дома торгуются с древними силами под угасающим солнцем."
+    },
+    "es": {
+      "Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.": "Tres campañas oscuras completas: defensa común bajo un sol moribundo, nombres liberados de un rescate heredado y una cura sin poseer cautivos.",
+      "Cursed borderlands where desperate houses bargain with old powers beneath a dying sun.": "Tierras fronterizas malditas donde casas desesperadas pactan con poderes antiguos bajo un sol moribundo."
+    },
+    "ja": {
+      "Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.": "三つの完全なダークキャンペーン：滅びゆく太陽の下での共同防衛、相続された身代金の束縛から解放される名前、捕らわれた者を所有しない治療。",
+      "Cursed borderlands where desperate houses bargain with old powers beneath a dying sun.": "滅びゆく太陽の下、絶望した家門が古き力と取引する呪われた国境地帯。"
+    },
+    "zh-CN": {
+      "Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.": "三场完整的黑暗战役：垂死太阳下的共同防御、摆脱世代相传赎金束缚的姓名，以及不以占有俘虏为条件的治愈。",
+      "Cursed borderlands where desperate houses bargain with old powers beneath a dying sun.": "被诅咒的边境之地，绝望的家族在垂死的太阳下与古老力量交易。"
+    },
+    "ko": {
+      "Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.": "세 가지 완성된 어둠의 캠페인: 죽어 가는 태양 아래의 공동 방어, 대물림된 몸값에서 풀려난 이름, 포로를 소유하지 않는 치유.",
+      "Cursed borderlands where desperate houses bargain with old powers beneath a dying sun.": "죽어 가는 태양 아래 절박한 가문들이 오래된 힘과 거래하는 저주받은 변방."
+    }
+  },
+  "space-opera": {
+    "ru": {
+      "Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.": "Три полные межзвёздные кампании: спасательные маршруты, спорный карантин и предсказывающий архив врат.",
+      "A sweeping interstellar frontier of ancient gates, contested systems, daring crews, and impossible wonders.": "Обширный межзвёздный фронтир древних врат, спорных систем, отважных команд и невозможных чудес."
+    },
+    "es": {
+      "Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.": "Tres campañas interestelares completas: rutas de rescate, cuarentena disputada y un archivo predictivo de portales.",
+      "A sweeping interstellar frontier of ancient gates, contested systems, daring crews, and impossible wonders.": "Una vasta frontera interestelar de portales antiguos, sistemas disputados, tripulaciones audaces y maravillas imposibles."
+    },
+    "ja": {
+      "Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.": "三つの完全な星間キャンペーン：救助航路、争われる検疫、予測するゲート記録庫。",
+      "A sweeping interstellar frontier of ancient gates, contested systems, daring crews, and impossible wonders.": "古代のゲート、争われる星系、勇敢な乗組員、あり得ない驚異が広がる壮大な星間辺境。"
+    },
+    "zh-CN": {
+      "Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.": "三场完整的星际战役：救援航路、有争议的隔离，以及具有预测能力的星门档案库。",
+      "A sweeping interstellar frontier of ancient gates, contested systems, daring crews, and impossible wonders.": "辽阔的星际边疆，遍布古老星门、争议星系、勇敢船员与不可思议的奇观。"
+    },
+    "ko": {
+      "Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.": "세 가지 완성된 성간 캠페인: 구조 항로, 분쟁 중인 검역, 예측하는 관문 기록보관소.",
+      "A sweeping interstellar frontier of ancient gates, contested systems, daring crews, and impossible wonders.": "고대 관문, 분쟁 중인 항성계, 대담한 승무원, 불가능한 경이로움이 펼쳐지는 광활한 성간 변경."
+    }
+  },
+  "cyberpunk": {
+    "ru": {
+      "Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.": "Три полные уличные кампании: ремонт общественных сетей, украденные медицинские личности и согласие в призрачном транспортном архиве.",
+      "Neon megacities, predatory corporations, street crews, dangerous code, and fragile humanity.": "Неоновые мегаполисы, хищные корпорации, уличные команды, опасный код и хрупкая человечность."
+    },
+    "es": {
+      "Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.": "Tres campañas callejeras completas: reparación de servicios públicos, identidades médicas robadas y consentimiento en un archivo de tránsito embrujado.",
+      "Neon megacities, predatory corporations, street crews, dangerous code, and fragile humanity.": "Megaciudades de neón, corporaciones depredadoras, bandas callejeras, código peligroso y una humanidad frágil."
+    },
+    "ja": {
+      "Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.": "三つの完全なストリートキャンペーン：公共設備の修理、盗まれた医療上の身元、幽霊の出る交通記録庫での同意。",
+      "Neon megacities, predatory corporations, street crews, dangerous code, and fragile humanity.": "ネオンの巨大都市、搾取的な企業、街の仲間、危険なコード、脆い人間性。"
+    },
+    "zh-CN": {
+      "Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.": "三场完整的街头战役：公共设施维修、被盗的医疗身份，以及闹鬼交通档案库中的同意问题。",
+      "Neon megacities, predatory corporations, street crews, dangerous code, and fragile humanity.": "霓虹巨城、掠夺性企业、街头团队、危险代码与脆弱的人性。"
+    },
+    "ko": {
+      "Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.": "세 가지 완성된 거리 캠페인: 공공시설 수리, 도난당한 의료 신원, 유령이 출몰하는 교통 기록보관소에서의 동의.",
+      "Neon megacities, predatory corporations, street crews, dangerous code, and fragile humanity.": "네온 거대도시, 약탈적인 기업, 거리 팀, 위험한 코드, 연약한 인간성."
+    }
+  },
+  "post-apocalypse": {
+    "ru": {
+      "Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.": "Три полные кампании восстановления: проход конвоя, общее наследие семян и тепло для забытых домохозяйств.",
+      "Harsh roads, rebuilt enclaves, mutant wilds, buried technology, and communities worth defending.": "Суровые дороги, восстановленные анклавы, мутировавшие пустоши, погребённые технологии и общины, которые стоит защищать."
+    },
+    "es": {
+      "Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.": "Tres campañas completas de reconstrucción: paso de convoyes, herencia compartida de semillas y calor para hogares omitidos.",
+      "Harsh roads, rebuilt enclaves, mutant wilds, buried technology, and communities worth defending.": "Caminos hostiles, enclaves reconstruidos, tierras salvajes mutantes, tecnología enterrada y comunidades que merecen ser defendidas."
+    },
+    "ja": {
+      "Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.": "三つの完全な再建キャンペーン：輸送隊の通行、共有される種子の継承、取り残された世帯への暖房。",
+      "Harsh roads, rebuilt enclaves, mutant wilds, buried technology, and communities worth defending.": "過酷な道、再建された飛び地、変異した荒野、埋もれた技術、守る価値のある共同体。"
+    },
+    "zh-CN": {
+      "Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.": "三场完整的重建战役：护送车队通行、共享种子遗产，以及为被遗漏的家庭提供温暖。",
+      "Harsh roads, rebuilt enclaves, mutant wilds, buried technology, and communities worth defending.": "险恶道路、重建聚居地、变异荒野、埋藏技术，以及值得守护的社区。"
+    },
+    "ko": {
+      "Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.": "세 가지 완성된 재건 캠페인: 수송대 통과, 공유하는 씨앗 유산, 누락된 가구를 위한 난방.",
+      "Harsh roads, rebuilt enclaves, mutant wilds, buried technology, and communities worth defending.": "험난한 길, 재건된 거점, 돌연변이 황야, 묻힌 기술, 지킬 가치가 있는 공동체."
+    }
+  },
+  "gothic-horror": {
+    "ru": {
+      "Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.": "Три полные камерные хоррор-кампании: унаследованное погребальное обещание, благотворительность на кровном договоре и спасение затонувшего прихода.",
+      "Stormbound estates, secret societies, tragic monsters, occult investigations, and candlelit dread.": "Поместья в плену бурь, тайные общества, трагические чудовища, оккультные расследования и ужас при свечах."
+    },
+    "es": {
+      "Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.": "Tres campañas completas de horror íntimo: una promesa funeraria heredada, una obra benéfica ligada por sangre y el rescate de una parroquia sumergida.",
+      "Stormbound estates, secret societies, tragic monsters, occult investigations, and candlelit dread.": "Mansiones atrapadas por tormentas, sociedades secretas, monstruos trágicos, investigaciones ocultistas y terror a la luz de las velas."
+    },
+    "ja": {
+      "Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.": "三つの完全な親密な恐怖のキャンペーン：受け継がれた葬儀の約束、血で結ばれた慈善事業、水没した教区の救出。",
+      "Stormbound estates, secret societies, tragic monsters, occult investigations, and candlelit dread.": "嵐に閉ざされた屋敷、秘密結社、悲劇的な怪物、オカルト調査、ろうそくの光の中の恐怖。"
+    },
+    "zh-CN": {
+      "Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.": "三场完整的私密恐怖战役：继承的葬礼承诺、以血为契的慈善事业，以及营救沉没教区。",
+      "Stormbound estates, secret societies, tragic monsters, occult investigations, and candlelit dread.": "风暴困住的庄园、秘密结社、悲剧怪物、神秘学调查，以及烛光下的恐惧。"
+    },
+    "ko": {
+      "Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.": "세 가지 완성된 내밀한 공포 캠페인: 대물림된 장례 약속, 피로 묶인 자선, 물에 잠긴 교구의 구조.",
+      "Stormbound estates, secret societies, tragic monsters, occult investigations, and candlelit dread.": "폭풍에 갇힌 저택, 비밀 결사, 비극적인 괴물, 오컬트 조사, 촛불 속 공포."
+    }
+  },
+  "mythic-antiquity": {
+    "ru": {
+      "Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.": "Три оригинальные мифические кампании: пророчество о спасении, правдивое возвращение домой и добровольное прощание на границе смерти."
+    },
+    "es": {
+      "Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.": "Tres campañas míticas originales: una profecía de rescate, un regreso veraz al hogar y una despedida voluntaria en la frontera de la muerte."
+    },
+    "ja": {
+      "Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.": "三つのオリジナル神話キャンペーン：救出の予言、偽りのない帰郷、死の境での自発的な別れ。"
+    },
+    "zh-CN": {
+      "Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.": "三场原创神话战役：救援预言、真实的归乡，以及死亡边界上自愿的告别。"
+    },
+    "ko": {
+      "Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.": "세 가지 오리지널 신화 캠페인: 구조 예언, 진실한 귀향, 죽음의 경계에서의 자발적인 작별."
+    }
+  },
+  "weird-west": {
+    "ru": {
+      "Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.": "Три оригинальные кампании фронтира: проклятие наводнения на украденной дороге, поезд-призрак со стёртыми рабочими и золотая жила, отравляющая городской колодец."
+    },
+    "es": {
+      "Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.": "Tres campañas originales de frontera: una maldición de inundación sobre un camino robado, un tren fantasma con trabajadores borrados y una veta de oro que envenena el pozo del pueblo."
+    },
+    "ja": {
+      "Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.": "三つのオリジナル辺境キャンペーン：奪われた道を襲う洪水の呪い、存在を消された労働者を乗せる幽霊列車、町の井戸を毒する金鉱脈。"
+    },
+    "zh-CN": {
+      "Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.": "三场原创边疆战役：被夺走的道路上的洪水诅咒、载着被抹去工人的幽灵列车，以及毒害镇上水井的金矿脉。"
+    },
+    "ko": {
+      "Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.": "세 가지 오리지널 변경 캠페인: 빼앗긴 길을 덮치는 홍수 저주, 지워진 노동자들이 탄 유령 열차, 마을 우물을 오염시키는 금맥."
+    }
+  },
+  "urban-fantasy": {
+    "ru": {
+      "Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.": "Три оригинальные городские кампании: читатели, задержанные тайными судами, ночные дома перед дневной инспекцией и улицы, стёртые частным магическим договором."
+    },
+    "es": {
+      "Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.": "Tres campañas urbanas originales: lectores detenidos por tribunales ocultos, hogares nocturnos ante una inspección diurna y calles borradas por un contrato mágico privado."
+    },
+    "ja": {
+      "Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.": "三つのオリジナル都市キャンペーン：隠れた法廷に拘束された読者、昼間の検査に直面する夜の住居、私的な魔法契約で消された通り。"
+    },
+    "zh-CN": {
+      "Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.": "三场原创城市战役：被隐秘法庭拘留的读者、面临白昼检查的夜间住所，以及被私人法术契约抹去的街道。"
+    },
+    "ko": {
+      "Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.": "세 가지 오리지널 도시 캠페인: 숨은 법정에 구금된 독자, 낮의 검사를 앞둔 야간 주거지, 사적 마법 계약으로 지워진 거리."
+    }
+  },
+  "cosmic-investigation": {
+    "ru": {
+      "Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.": "Три оригинальных расследования: вредоносный университетский сигнал, тёплая геометрическая полость и стирающая городская трансляция воспоминаний."
+    },
+    "es": {
+      "Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.": "Tres investigaciones originales: una señal universitaria dañina, una cavidad geométrica cálida y una transmisión metropolitana de recuerdos que borra."
+    },
+    "ja": {
+      "Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.": "三つのオリジナル調査：有害な大学の信号、温かい幾何学的空洞、消去をもたらす大都市の記憶配信。"
+    },
+    "zh-CN": {
+      "Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.": "三场原创调查：有害的大学信号、温暖的几何空腔，以及具有抹除作用的都市记忆推送。"
+    },
+    "ko": {
+      "Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.": "세 가지 오리지널 조사: 해로운 대학 신호, 따뜻한 기하학적 공동, 삭제를 일으키는 대도시 기억 송출."
+    }
+  },
+  "age-of-sail": {
+    "ru": {
+      "Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.": "Три оригинальные морские кампании: спасение в свободной бухте, нейтральный медицинский груз сквозь поддельные приказы о блокаде и движущийся остров, выбирающий свой горизонт."
+    },
+    "es": {
+      "Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.": "Tres campañas marítimas originales: un rescate en una cala libre, carga médica neutral a través de órdenes de bloqueo falsificadas y una isla móvil que elige su propio horizonte."
+    },
+    "ja": {
+      "Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.": "三つのオリジナル航海キャンペーン：自由な入り江での救出、偽造された封鎖命令を越える中立の治療貨物、自らの地平線を選ぶ動く島。"
+    },
+    "zh-CN": {
+      "Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.": "三场原创航海战役：自由海湾救援、穿越伪造封锁令的中立医疗货物，以及自行选择地平线的移动岛屿。"
+    },
+    "ko": {
+      "Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.": "세 가지 오리지널 항해 캠페인: 자유 만에서의 구조, 위조된 봉쇄 명령을 뚫는 중립 의료 화물, 자신의 지평선을 선택하는 움직이는 섬."
+    }
+  },
+  "mecha-kaiju": {
+    "ru": {
+      "Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.": "Три оригинальные кампании боевых рам: эвакуация побережья под узким сектором обстрела, независимый доступ гражданских к кислороду и разбор живых гигантов с их согласия."
+    },
+    "es": {
+      "Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.": "Tres campañas originales de unidades mecha: evacuación costera bajo un arco de fuego estrecho, acceso civil independiente al oxígeno y salvamento de gigantes vivos con su consentimiento."
+    },
+    "ja": {
+      "Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.": "三つのオリジナル機体キャンペーン：狭い射界の下での沿岸避難、民間人の独立した酸素アクセス、生きた巨人の同意を得た回収。"
+    },
+    "zh-CN": {
+      "Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.": "三场原创机体战役：狭窄射界下的沿海撤离、平民独立获取氧气，以及经活体巨兽同意进行的打捞。"
+    },
+    "ko": {
+      "Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.": "세 가지 오리지널 프레임 캠페인: 좁은 사격 구역 아래의 해안 대피, 민간인의 독립적인 산소 접근, 살아 있는 거인들의 동의를 얻은 회수."
+    }
+  }
+}

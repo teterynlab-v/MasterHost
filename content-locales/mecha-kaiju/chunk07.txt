@@ -1,0 +1,18 @@
+s0|Соглашение дождевой стены|El Acuerdo del Muro de Lluvia|雨壁協定|雨墙协定|비벽 협정
+s3|Три полных приключения машин|Tres Aventuras Completas de Estructuras|三つの完全な機体の冒険|三个完整机体冒险|세 가지 완성된 기체 모험
+s8|Пилоты, экипажи, соперники и колоссальные угрозы|Pilotos, Tripulaciones, Rivales y Amenazas Colosales|操縦士、乗員、競争相手、巨大な脅威|驾驶员、乘员、对手与巨型威胁|조종사, 승무원, 경쟁자와 거대한 위협
+s11|Роли пилотов и пути связи с сообществом|Roles de Piloto y Rutas de Vínculo Comunitario|操縦士の役割と共同体の絆の道|驾驶员角色与社区羁绊路线|조종사 역할과 공동체 유대 경로
+s14|Средства спасения, ремонта и согласия|Herramientas de Rescate, Reparación y Consentimiento|救助・修理・同意の道具|救援、维修与同意工具|구조, 수리, 동의 도구
+s17|Двенадцать мест районов, доков и обломков|Doce Lugares de Distritos, Muelles y Restos|地区・ドック・残骸の十二の場所|十二处地区、码头与机骸地点|지구, 부두, 잔해의 열두 장소
+s20|Правила эвакуации, инспекции и утилизации|Reglas de Evacuación, Inspección y Recuperación|避難・検査・回収のルール|疏散、检查与回收规则|대피, 검사, 인양 규칙
+s21|Отметить безопасный сектор|Marcar Arco Seguro|安全射界を示す|标明安全射界|안전 범위 표시
+s22|Поднять паром|Elevar Ferri|渡し船を上げる|升起渡船|페리 올리기
+s23|Проверить квоты|Verificar Cuotas|割当を検証|核验配额|할당 확인
+s24|Договориться о воздухе|Negociar Aire|空気を交渉|协商空气|공기 협상
+s25|Укрепить кабину|Reforzar Cabina|操縦室を支える|支撑驾驶舱|조종실 받치기
+s26|Передать согласие|Transmitir Consentimiento|同意を中継|转达同意|동의 중계
+s31|Схемы машин дождевой стены|Esquemas de Estructuras del Muro de Lluvia|雨壁機体図|雨墙机体示意图|비벽 기체 개략도
+s32|Иллюстрированные мехи и кайдзю|Mechas y Kaiju Ilustrados|イラスト付きメカと怪獣|插画机甲与怪兽|삽화 메카와 괴수
+s34|Операции машин|Operaciones de Estructuras|機体作戦|机体行动|기체 작전
+s35|Оригинальные схемы операций мехов и кайдзю|Esquemas originales de operaciones de Mechas y Kaiju|メカと怪獣の独自作戦図|机甲与怪兽原创行动示意图|메카와 괴수의 독창적인 작전 개략도
+s38|Три фронта операций машин|Tres Frentes de Operaciones de Estructuras|三つの機体作戦戦線|三个机体行动战线|세 가지 기체 작전 전선

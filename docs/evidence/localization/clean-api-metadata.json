@@ -1,0 +1,12 @@
+{
+  "packId": "masterhost.classic-fantasy",
+  "worldId": "0ca00661-5d71-43df-8a75-7e129865c92e",
+  "universeId": "classic-fantasy",
+  "metadataFields": [
+    "id",
+    "localization"
+  ],
+  "canonicalWorldUnchanged": false,
+  "characterSchemaAvailable": true,
+  "definitionLabelsAvailable": true
+}

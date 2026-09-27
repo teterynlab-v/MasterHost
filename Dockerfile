@@ -7,6 +7,7 @@ COPY packages packages
 COPY worldpacks worldpacks
 COPY game-assets game-assets
 COPY universe-catalog universe-catalog
+COPY content-locales content-locales
 RUN pnpm install --frozen-lockfile
 
 FROM source AS server

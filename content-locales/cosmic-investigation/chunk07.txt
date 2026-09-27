@@ -1,0 +1,18 @@
+s0|Тихий меридиан|El Meridiano Silencioso|静かな子午線|静默子午线|고요한 자오선
+s3|Три полных космических расследования|Tres Investigaciones Cósmicas Completas|三つの完全な宇宙的調査|三个完整宇宙调查|세 가지 완성된 우주적 조사
+s8|Исследователи, команды, свидетели и угрозы|Investigadores, Equipos, Testigos y Amenazas|研究者、隊員、証人、脅威|研究员、队员、见证者与威胁|연구자, 대원, 증인과 위협
+s11|Роли исследователей и пути доказательств|Roles de Investigador y Rutas de Pruebas|調査者の役割と証拠の道|调查员角色与证据路线|조사자 역할과 증거 경로
+s14|Средства контроля, хранения и изоляции|Herramientas de Control, Custodia y Contención|対照・保管・封じ込めの道具|对照、保管与收容工具|대조, 보관, 억제 도구
+s17|Двенадцать мест приливов, льда и памяти|Doce Lugares de Mareas, Hielo y Memoria|潮汐・氷・記憶の十二の場所|十二处潮汐、冰与记忆地点|조수, 얼음, 기억의 열두 장소
+s20|Правила сравнения, воздействия и изоляции|Reglas de Comparación, Exposición y Contención|比較・曝露・封じ込めのルール|比较、暴露与收容规则|비교, 노출, 억제 규칙
+s21|Сравнить запись|Comparar Registro|記録を比較|比较记录|기록 비교
+s22|Измерить границу|Medir Límite|境界を測定|测量边界|경계 측정
+s23|Проверить образец|Probar Muestra|試料を検査|检验样本|표본 검사
+s24|Изолировать канал|Aislar Flujo|供給を隔離|隔离供给|공급 격리
+s25|Сопроводить свидетеля|Escoltar Testigo|証人を護衛|护送证人|증인 호위
+s26|Сохранить доказательства|Conservar Pruebas|証拠を保存|保留证据|증거 보존
+s31|Схемы независимых доказательств|Esquemas de Pruebas Independientes|独立した証拠の図|独立证据示意图|독립 증거 개략도
+s32|Иллюстрированное космическое расследование|Investigación Cósmica Ilustrada|イラスト付き宇宙的調査|插画宇宙诡秘调查|삽화 우주적 조사
+s34|Навигация доказательств|Navegación de Pruebas|証拠のナビゲーション|证据导航|증거 항해
+s35|Оригинальные схемы навигации космического расследования|Esquemas originales de navegación de Investigación Cósmica|宇宙的調査の独自経路図|宇宙诡秘调查原创导航示意图|우주적 조사의 독창적인 항해 개략도
+s38|Три структуры невозможных доказательств|Tres Marcos de Pruebas Imposibles|三つのあり得ない証拠の枠組み|三种不可能证据框架|세 가지 불가능한 증거 틀

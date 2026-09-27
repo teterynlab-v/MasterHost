@@ -1,7 +1,8 @@
+import {useContentI18n} from './i18n/content-react.js';
 import React from"react";import{LanguageSwitcher,useI18n}from"./i18n/react.js";
 type World={id:string;name:string;revision:number;packId:string;packVersion:string;entities?:unknown[]};
-export function ProductHome({realm,pack,worlds,currentWorld,onRun,onEdit}:{realm:any;pack:any;worlds:World[];currentWorld?:World;onRun:(world:World)=>void;onEdit:(world:World)=>void}){const{t}=useI18n(),preferred=currentWorld??worlds[0];return <main className="productHome">
- <header className="productHeader"><div className="realmIdentity">{realm.assets?.logo&&<img src={`${(import.meta as any).env?.VITE_API_URL??"http://localhost:8080/api"}/cdn/${realm.assets.logo.checksum}`} alt=""/>}<div><strong>{realm.name}</strong><small>{pack.manifest.name}</small></div></div><LanguageSwitcher/></header>
+export function ProductHome({realm,pack,worlds,currentWorld,onRun,onEdit}:{realm:any;pack:any;worlds:World[];currentWorld?:World;onRun:(world:World)=>void;onEdit:(world:World)=>void}){const{c}=useContentI18n(pack),{t}=useI18n(),preferred=currentWorld??worlds[0];return <main className="productHome">
+ <header className="productHeader"><div className="realmIdentity">{realm.assets?.logo&&<img src={`${(import.meta as any).env?.VITE_API_URL??"http://localhost:8080/api"}/cdn/${realm.assets.logo.checksum}`} alt=""/>}<div><strong>{realm.name}</strong><small>{c(pack.manifest.name)}</small></div></div><LanguageSwitcher/></header>
  <section className="homeHero"><p className="eyebrow">{t("home.eyebrow")}</p><h1>{t("home.title")}</h1><p>{t("home.subtitle")}</p></section>
  <section className="homeChoices">
   <article><span className="homeIcon">♛</span><h2>{t("home.run")}</h2><p>{t("home.runHint")}</p><button disabled={!preferred} onClick={()=>preferred&&onRun(preferred)}>{t("home.choose")}</button></article>

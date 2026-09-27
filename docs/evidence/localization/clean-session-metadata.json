@@ -1,0 +1,30 @@
+{
+  "sessionId": "0163b624-2d5d-4f3d-9de5-19c43dc7b069",
+  "universeId": "classic-fantasy",
+  "sceneSources": [
+    "generated",
+    "generated",
+    "generated",
+    "generated",
+    "generated",
+    "generated",
+    "generated",
+    "generated",
+    "generated",
+    "generated"
+  ],
+  "mapSources": [
+    "generated",
+    "generated",
+    "generated",
+    "generated",
+    "generated",
+    "generated",
+    "generated",
+    "generated"
+  ],
+  "customNpcLabelPreserved": true,
+  "attributeOnlyEditPreservesAuthoredLabel": true,
+  "campaignNameUnchanged": true,
+  "storedWorldUnchanged": true
+}

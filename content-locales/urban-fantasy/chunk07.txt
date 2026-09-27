@@ -1,0 +1,20 @@
+s0|Город после закрытия|La Ciudad Fuera de Horario|閉館後の都市|闭馆后的城市|폐관 후 도시
+s3|Три полных приключения тайного города|Tres Aventuras Completas de la Ciudad Oculta|三つの完全な隠れた都市の冒険|三个完整隐秘城市冒险|세 가지 완성된 숨겨진 도시 모험
+s4|Иллюстрированная вселенная v1|Universo Ilustrado v1|イラスト付きユニバース v1|插画世界 v1|삽화 세계 v1
+s5|Стандарт глубокой вселенной v1|Estándar de Universo Profundo v1|深みのあるユニバース標準 v1|深度世界标准 v1|심층 세계 표준 v1
+s8|Читатели, жильцы, городские рабочие и угрозы|Lectores, Inquilinos, Trabajadores Cívicos y Amenazas|読者、住人、市の職員、脅威|读者、住户、市政工人与威胁|독자, 세입자, 도시 노동자와 위협
+s11|Городские роли и пути к общему|Roles Urbanos y Rutas de Acuerdo|都市の役割と共通の基盤への道|城市角色与共同基础路线|도시 역할과 공통 기반 경로
+s14|Средства договора, штор и общественных маршрутов|Herramientas de Tratado, Pantallas y Rutas Públicas|条約・遮光・公共経路の道具|条约、遮光与公共路线工具|조약, 차광, 공공 경로 도구
+s17|Двенадцать мест библиотеки, башни и улиц|Doce Lugares de Biblioteca, Torre y Calle|図書館・塔・街路の十二の場所|十二处图书馆、塔楼与街道地点|도서관, 탑, 거리의 열두 장소
+s20|Правила дворов, штор и городских заклинаний|Reglas de Cortes, Pantallas y Hechizos Cívicos|宮廷・遮光・市の呪文のルール|宫廷、遮光与市政法术规则|궁정, 차광, 도시 주문 규칙
+s21|Прочесть договор|Leer Tratado|条約を読む|解读条约|조약 읽기
+s22|Вернуть страницу|Devolver Página|頁を返す|归还页面|페이지 반환
+s23|Починить шторы|Reparar Pantallas|遮光を修理|修复遮光|차광 수리
+s24|Засвидетельствовать инспекцию|Atestiguar Inspección|検査を証言|见证检查|점검 증언
+s25|Проверить заклинание|Auditar Hechizo|呪文を監査|审计法术|주문 감사
+s26|Восстановить маршрут|Restaurar Ruta|経路を復旧|恢复路线|경로 복구
+s31|Схемы маршрутов после закрытия|Esquemas de Rutas Fuera de Horario|閉館後の経路図|闭馆后路线示意图|폐관 후 경로 개략도
+s32|Иллюстрированное городское фэнтези|Fantasía Urbana Ilustrada|イラスト付きアーバンファンタジー|插画都市奇幻|삽화 도시 판타지
+s34|Городская навигация|Navegación Urbana|都市のナビゲーション|城市导航|도시 항해
+s35|Оригинальные схемы навигации городского фэнтези|Esquemas originales de navegación de Fantasía Urbana|アーバンファンタジーの独自経路図|都市奇幻原创导航示意图|도시 판타지의 독창적인 항해 개략도
+s38|Три структуры тайного города|Tres Marcos de Ciudad Oculta|三つの隠れた都市の枠組み|三种隐秘城市框架|세 가지 숨겨진 도시 틀

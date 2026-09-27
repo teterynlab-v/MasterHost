@@ -1,0 +1,60 @@
+292|Задержание при закрытии|Detención al Cierre|閉館時の拘束|闭馆扣留|폐관 구금
+d293|библиотека запечатывает двери из-за пропавшей концовки договора.|la biblioteca sella puertas al faltar el final del tratado.|条約の結末がないため図書館が扉を封じる。|条约结尾失踪时，图书馆封住大门。|조약 결말이 없어 도서관이 문을 봉한다.
+295|Уведомление о рассвете|Aviso del Amanecer|夜明けの通知|黎明通知|새벽 통지
+d296|башня получает время обязательной дневной инспекции.|la torre recibe una hora obligatoria de inspección diurna.|塔に昼間の強制検査の時刻が通知される。|塔楼收到强制白天检查的时间安排。|탑에 의무 주간 점검 시간이 통지된다.
+298|Ошибка адреса|Fallo de Dirección|住所の障害|地址故障|주소 오류
+d299|вызов спасателей не удаётся разместить на карте заклинания.|una llamada de rescate no puede situarse en el mapa del hechizo.|救助通報の場所が呪文地図に載せられない。|救援来电无法定位到法术地图上。|구조 신고를 주문 지도에 표시할 수 없다.
+301|Требование памяти|Exigencia de Recuerdos|記憶の要求|记忆要求|기억 요구
+d302|пристав полей называет цену выхода первого читателя.|el alguacil del margen fija el precio de salida del primer lector.|余白の執行官が最初の読者の退出料を告げる。|页边执达官说出第一位读者的离馆代价。|여백 집행관이 첫 독자의 출구 대가를 밝힌다.
+304|Отключение штор|Apagón de Pantallas|遮光の停止|遮光停摆|차광 중단
+d305|одна площадка теряет защиту до начала ремонта крыши.|un rellano pierde protección antes de iniciar la reparación de azotea.|屋上修理の前に一つの踊り場が保護を失う。|屋顶维修开始前，一个楼梯平台失去防护。|옥상 수리 전에 한 층계가 보호를 잃는다.
+307|Продление договора|Renovación del Contrato|契約更新|合同续期|계약 갱신
+d308|частное расширение незаметно удаляет ещё одну улицу.|la extensión privada elimina otra calle en silencio.|私的な拡張が静かに別の街路を消す。|私有扩展悄然删除另一条街道。|사설 확장이 조용히 거리를 하나 더 지운다.
+310|Эхо возврата|Eco de Devolución|返却のこだま|归还回声|반납 메아리
+d311|книжный желоб объявляет срок возврата из завтрашнего дня.|el conducto anuncia un vencimiento del mañana.|返却口が明日からの返却期限を告げる。|还书通道宣布来自明天的归还期限。|도서 통로가 내일의 반납 기한을 알린다.
+313|Ночное предложение|Propuesta Nocturna|夜の提案|夜间提议|야간 제안
+d314|Сол предлагает безопасную инспекцию, если жильцы покажут ремонт.|Sol ofrece inspección más segura si muestran las reparaciones.|住人が修理を示せば、ソルは安全な検査を提案する。|若住户展示修复成果，索尔就提供更安全检查。|세입자가 수리를 보여 주면 솔이 안전한 점검을 제안한다.
+316|Бумажный маршрут|Ruta en Papel|紙の経路|纸质路线|종이 경로
+d317|фельдшер достигает потерянного перекрёстка по автономному описанию.|una paramédica llega al cruce perdido con una descripción sin conexión.|救急隊員がオフラインの説明で失われた交差点へ着く。|急救员凭离线描述抵达失落路口。|구급대원이 오프라인 설명으로 사라진 교차로에 도착한다.
+319|Пометка заёмщика|Nota del Prestatario|借り手の注記|借阅者批注|대출자 메모
+d320|последняя страница содержит пометку, которую один двор хочет стереть.|la página final tiene una anotación que una corte quiere borrar.|最終頁には一方の宮廷が消したい注記がある。|最后一页含有一宫廷想抹去的注释。|마지막 페이지에 한 궁정이 지우려는 주석이 있다.
+322|Соседский ужин|Cena de Vecinos|隣人の夕食|邻里晚餐|이웃 저녁 식사
+d323|обычные и ночные жильцы обмениваются доказательствами на кухне.|residentes ordinarios y nocturnos comparten pruebas en la cocina.|普通の住人と夜の住人が台所で証拠を共有する。|普通与夜行居民在厨房交流证据。|일반 주민과 야행성 주민이 부엌에서 증거를 나눈다.
+325|Находка аудита|Hallazgo de Auditoría|監査の発見|审计发现|감사 발견
+d326|след бюджета называет тех, кто оплатил исчезновение маршрутов.|el presupuesto revela quién pagó las rutas desaparecidas.|予算の流れが消えた経路への支払い主を明かす。|预算链揭露谁支付了消失路线的费用。|예산 내역이 사라진 경로에 누가 지급했는지 밝힌다.
+328|Питание мотылька|Alimentación de la Polilla|蛾の食事|飞蛾进食|나방의 먹이
+d329|в записи выдачи начинают исчезать даты.|el registro de préstamo empieza a perder fechas.|貸出記録から日付が消え始める。|借阅记录开始丢失日期。|대출 기록의 날짜가 사라지기 시작한다.
+331|Крыша заперта|Azotea Cerrada|閉ざされた屋上|屋顶上锁|옥상 잠김
+d332|автоматическая блокировка не пускает законную ремонтную бригаду жильцов.|una retención automática bloquea al equipo de reparación autorizado.|自動停止命令が正当な住人の修理班を止める。|自动封锁阻挡合法的住户维修队。|자동 보류가 유효한 세입자 수리반을 막는다.
+334|Дубликат перекрёстка|Cruce Duplicado|複製の交差点|重复路口|복제 교차로
+d335|отражение маршрута уводит вторую скорую.|el reflejo de ruta desvía una segunda ambulancia.|経路の反射が二台目の救急車を逸らす。|路线倒影引开第二辆救护车。|경로 반영이 두 번째 구급차를 돌린다.
+337|Вспомнившаяся фраза|Frase Recordada|思い出した文|句子想起|기억난 문장
+d338|Юнона произносит достаточно концовки, чтобы остановить изъятие памяти.|Juno dice suficiente del final para impedir un embargo de memoria.|ジュノが結末を十分に唱え、記憶の押収を止める。|朱诺说出足够的结尾，阻止记忆被夺。|주노가 결말을 충분히 말해 기억 압수를 막는다.
+340|Свидетель инспекции|Testigo de Inspección|検査の証人|检查见证|점검 증인
+d341|Кира предлагает подтверждённую безопасность без частных имён жильцов.|Kira ofrece seguridad documentada sin nombres privados de residentes.|キラが住人の私的な名前なしで記録された安全を提示する。|基拉提供安全记录，不含居民私人姓名。|키라가 주민의 사적 이름 없이 기록된 안전을 제시한다.
+343|Канал отключён|Suministro Cortado|供給の切断|供给切断|공급 차단
+d344|изоляция расширения временно прерывает одну общественную службу.|aislar la extensión interrumpe temporalmente un servicio público.|拡張の隔離が一つの公共設備を一時停止させる。|隔离扩展暂时中断一项公共服务。|확장 격리로 공공시설 하나가 잠시 끊긴다.
+346|Возврат читателя|Devolución del Lector|読者への返却|读者归还|독자 반환
+d347|украденное воспоминание можно вернуть до переплёта договора.|puede recuperarse un recuerdo robado antes de reencuadernar el tratado.|条約を綴じ直す前に盗まれた記憶を取り戻せる。|重新装订条约前可以追回被盗记忆。|조약을 다시 제본하기 전에 훔친 기억을 되찾을 수 있다.
+349|Предложение обхода|Oferta de Puenteo|迂回の提案|旁路提议|우회 제안
+d350|мастер штор предлагает быстрый ремонт с оговорённым риском пожара.|una técnica ofrece reparación rápida con riesgo de incendio declarado.|遮光技師が明示した火災リスクで速い修理を提案する。|遮光技师提出快速维修，并明确火灾风险。|차광 기술자가 명시된 화재 위험의 빠른 수리를 제안한다.
+352|Жители собираются|Residentes Reunidos|集まる住人|居民集会|주민 집회
+d353|соседи выбирают названия и права на исправление восстановленных улиц.|los vecinos eligen nombres y derechos de corrección de calles restauradas.|隣人が復元する街路の名前と修正権を選ぶ。|邻居选择恢复街道的名称与更正权利。|이웃들이 복구 거리의 이름과 수정 권리를 고른다.
+355|Встреча обоих дворов|Reunión de Ambas Cortes|両宮廷の会合|两宫廷会面|양쪽 궁정 회동
+d356|спор о выдаче можно решить без замены страницы.|la disputa de préstamo puede resolverse sin sustituir la página.|頁を置き換えずに貸出紛争を解決できる。|借阅争议可以不替换页面就解决。|페이지를 대체하지 않고 대출 분쟁을 해결할 수 있다.
+358|Безопасная площадка|Rellano Seguro|安全な踊り場|安全平台|안전한 층계
+d359|один починенный этаж позволяет дневную эвакуацию уязвимых жильцов.|un piso reparado permite evacuar de día a residentes vulnerables.|一階分の修理が弱い住人の昼間の避難を可能にする。|一个修好的楼层使脆弱居民可在白天疏散。|수리한 한 층이 취약한 주민의 주간 대피를 가능하게 한다.
+361|Прекращение расширения|Terminación de la Extensión|拡張の終了|扩展终止|확장 종료
+d362|отражение договора требует явного уведомления до отключения.|el reflejo del contrato exige aviso explícito antes de apagarse.|契約の反射が停止前に明示的な通知を要求する。|合同倒影要求明确通知后才关闭。|계약 반영이 종료 전에 명시적 통지를 요구한다.
+364|Желоб снова открыт|Conducto Reabierto|再び開く返却口|通道重开|통로 재개
+d365|заёмщик достигает настоящего с пропавшей концовкой.|el prestatario llega al presente con el final perdido.|借り手が失われた結末を持って現在へ着く。|借阅者携失踪结尾回到现在。|대출자가 사라진 결말을 가지고 현재에 도착한다.
+367|Вечерняя инспекция|Inspección Vespertina|夕方の検査|傍晚检查|저녁 점검
+d368|безопасная альтернатива оценивается по видимому ремонту, а не слухам.|la alternativa segura se juzga por reparaciones visibles, no rumores.|安全な別案は噂ではなく目に見える修理で判断される。|安全替代方案按可见修复而非谣言评估。|안전한 대안을 소문이 아니라 눈에 보이는 수리로 판단한다.
+370|Улица подключена|Calle Reconectada|再接続した街路|街道重连|거리 재연결
+d371|экстренные маршруты возвращаются по общественной карте при свидетелях.|las rutas de emergencia regresan bajo un mapa público con testigos.|証人付きの公共地図の下で救急経路が戻る。|应急路线在有见证的公共地图上恢复。|증인이 있는 공공 지도 아래 응급 경로가 돌아온다.
+373|Выход из библиотеки|Salida de la Biblioteca|図書館の出口|图书馆出口|도서관 출구
+d374|посетители уходят с сохранёнными воспоминаниями по восстановленному договору.|los usuarios salen con sus recuerdos bajo el tratado restaurado.|利用者は復旧した条約の下、記憶を保持して退出する。|读者根据恢复条约离开，并保留记忆。|이용자들이 복구 조약 아래 기억을 보존하고 떠난다.
+376|Башня после рассвета|Torre tras el Amanecer|夜明け後の塔|黎明后的塔楼|새벽 뒤의 탑
+d377|договор жильцов о шторах устанавливает условия будущих инспекций.|el pacto de pantallas establece futuras condiciones de inspección.|住人の遮光協定が今後の検査条件を定める。|住户遮光协议设定未来检查条件。|세입자 차광 협정이 향후 점검 조건을 정한다.
+379|Общие названия|Nombres en Común|共有の名前|共同街名|공동 이름
+d380|городская карта отражает окончательный выбор маршрутов жителями.|el mapa urbano refleja las elecciones finales de rutas de residentes.|市の地図が住人の最終的な経路の選択を反映する。|城市地图反映居民最终的路线选择。|도시 지도에 주민의 최종 경로 선택이 반영된다.

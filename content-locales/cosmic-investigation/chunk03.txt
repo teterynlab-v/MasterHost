@@ -1,0 +1,84 @@
+166|Хранитель линзы|Custodio de la Lente|レンズの管理人|镜片保管者|렌즈 관리자
+d167|навязывает новый цикл совмещения, игнорируя бумажную запись удалений.|impone otro ciclo ignorando el registro de borrados en papel.|紙の消去記録を無視して次の整列周期を強制する。|无视纸质删除记录，强制进行下一轮对准。|종이 삭제 기록을 무시하고 다음 정렬 주기를 강요한다.
+169|Эхо тёплой геометрии|Eco de Geometría Cálida|暖かな幾何学のこだま|温暖几何回声|따뜻한 기하학 메아리
+d170|копирует голос спасателя изнутри неизмеренного интервала.|copia una voz de rescate desde el intervalo no medido.|未計測の間隔の中から救助者の声を写す。|从未测量间隔内复制救援者的声音。|측정 못 한 간격 안에서 구조자의 목소리를 복제한다.
+172|Агент памяти|Agente de Memoria|記憶の代理人|记忆代理者|기억 요원
+d173|стирает адреса вне повторяющегося канала и объявляет звонящих ошибающимися.|borra direcciones fuera del flujo y dice que los llamantes se equivocan.|反復供給外の住所を消し、通報者が間違っていると主張する。|抹去重复供给外的地址，并声称来电者有误。|반복 공급 밖의 주소를 지우고 신고자가 틀렸다고 주장한다.
+175|Архивный планер|Planeador del Archivo|記録庫の滑空者|档案滑翔者|기록 활공자
+d176|движется по связанным с сигналом полкам, но не пересекает бумажный корпус.|recorre estantes ligados a la señal, pero no cruza el anexo de papel.|信号につながる棚を移動するが紙の別館を渡れない。|沿关联信号的书架移动，却无法越过纸质附馆。|신호 연결 서가를 다니지만 종이 별관을 넘지 못한다.
+178|Защитник тепла|Defensor del Calor|熱の擁護者|热量倡导者|열 옹호자
+d179|запирает эвакуационное топливо в сундуке распределения эксперимента.|encierra combustible de evacuación en el cofre del experimento.|避難燃料を実験の配給箱に閉じ込める。|将疏散燃料锁进实验配给箱。|대피 연료를 실험 배정 상자에 잠근다.
+181|Двойник станции|Doble de la Estación|駅の分身|车站替身|역 도플갱어
+d182|предлагает знакомую платформу, чьё расписание заканчивается до прибытия пассажиров.|ofrece un andén familiar cuyo horario termina antes de la llegada de pasajeros.|乗客の到着前に時刻表が終わる見覚えのあるホームを示す。|提供熟悉站台，其时刻表在乘客到达前已结束。|승객 도착 전에 시간표가 끝나는 익숙한 승강장을 제안한다.
+184|Страж передатчика|Centinela del Transmisor|送信機の歩哨|发射器哨兵|송신기 파수꾼
+d185|защищает недавний ремонт по неподписанному приказу безопасности.|defiende la reparación bajo una orden de seguridad sin firma.|署名のない安全命令で最近の修理を守る。|依据未签署安全令维护近期维修。|서명 없는 안전 명령에 따라 최근 수리를 지킨다.
+187|Рой ледовых часов|Enjambre de Relojes de Hielo|氷時計の群れ|冰钟群|얼음 시계 떼
+d188|синхронизирует цифровые таймеры, пока независимая механическая метка не прервёт его.|sincroniza temporizadores digitales hasta una marca mecánica independiente.|独立した機械的な印が止めるまでデジタル計時器を同期する。|同步数字计时器，直至独立机械标记中断。|독립 기계 표시가 막을 때까지 디지털 타이머를 동기화한다.
+190|Переключатель памяти|Interruptor de Memoria|記憶のスイッチ|记忆开关|기억 스위치
+d191|при опросе через канал заменяет названных свидетелей анонимными звонками.|reemplaza testigos nombrados por llamadas anónimas al interrogarlo por el flujo.|供給を通じて尋ねると、名のある証人を匿名通報に変える。|经供给询问时，将具名证人替换为匿名来电。|공급을 통해 질문하면 이름 있는 증인을 익명 전화로 바꾼다.
+193|Шантажист публикации|Extorsionador de Publicación|発表の脅迫者|发表勒索者|발표 협박자
+d194|предлагает тихое отключение, только если университет отдаст все доказательства.|ofrece apagado discreto solo si la universidad entrega toda prueba.|大学が全証拠を渡す場合のみ静かな停止を提案する。|仅在大学交出全部证据时才提议静默停机。|대학이 모든 증거를 내야만 조용한 종료를 제안한다.
+196|Отражение керна|Reflejo del Núcleo|コアの反射|冰芯倒影|빙핵 반영
+d197|воспроизводит вид тёплого образца, но не его записанный вес.|reproduce apariencia de la muestra cálida, pero no su peso registrado.|暖かな試料の外見を再現するが記録重量は再現しない。|重现温暖样本外观，却没有记录中的重量。|따뜻한 표본 모습은 재현하지만 기록된 무게는 없다.
+199|Измельчитель хранилища|Triturador de la Bóveda|保管庫の裁断者|记忆库粉碎者|금고 파쇄기
+d200|уничтожает бумажные адреса, повторяя ложное правило хранения.|destruye direcciones en papel repitiendo una regla falsa de retención.|偽の保存規則を繰り返しながら紙の住所を壊す。|重复虚假留存规则，毁掉纸质地址。|거짓 보존 규칙을 반복하며 종이 주소를 파괴한다.
+202|Почитатель совмещения|Devoto de la Alineación|整列の信徒|对准信徒|정렬 신봉자
+d203|настаивает, что ещё одна пропавшая страница докажет открытие без сомнений.|insiste en que otra página perdida probará el hallazgo sin duda.|次の頁の消失で発見が疑いなく証明されると主張する。|坚持认为再消失一页就能无疑证明发现。|페이지가 하나 더 사라지면 발견을 의심 없이 증명한다고 우긴다.
+205|Фигура порога|Figura del Umbral|境界の姿|边界身影|문턱 형상
+d206|появляется за парными часами и подражает пропавшей минуте.|aparece tras los relojes emparejados e imita el minuto perdido.|一組の時計の先に現れ、失われた一分を真似る。|出现在双时钟之外，模仿消失的一分钟。|한 쌍 시계 너머에 나타나 사라진 1분을 흉내 낸다.
+208|Незарегистрированный инспектор|Inspector no Registrado|名簿にない検査官|未列名检查员|미등록 점검관
+d209|изымает билеты свидетелей на станцию, отсутствующую в списке города.|confisca billetes de testigos para una estación no listada.|市の一覧にない駅への証人の切符を押収する。|没收证人前往城市清单中不存在车站的车票。|도시 목록에 없는 역의 증인 승차권을 압수한다.
+211|Подражатель прилива|Imitador de Mareas|潮汐の擬態者|潮汐模仿者|조수 흉내꾼
+d212|накладывает естественную кривую прилива на искусственное расписание передатчика.|superpone una curva natural al calendario artificial del transmisor.|送信機の人工的な予定に自然の潮汐曲線を重ねる。|在发射器人为时间表上覆盖自然潮汐曲线。|송신기 인위 일정 위에 자연 조수 곡선을 덮는다.
+214|Петля меридиана|Bucle del Meridiano|子午線のループ|子午线循环|자오선 반복
+d215|повторяет карту выхода, ведущую назад к расширяющейся тёплой границе.|repite un mapa de salida que vuelve al límite cálido creciente.|拡大する暖かな境界へ戻す脱出地図を繰り返す。|重复一张返回扩张温暖边界的出口地图。|커지는 따뜻한 경계로 되돌아가는 출구 지도를 반복한다.
+217|Хор памяти|Coro de Memoria|記憶の合唱|记忆合唱团|기억 합창단
+d218|требует единой общей памяти там, где свидетели всё ещё расходятся.|exige una memoria común donde los testigos aún discrepan.|証人がまだ不一致なのに一つの共通記憶を要求する。|证人仍意见不一时，要求单一共同记忆。|증인이 여전히 불일치하는데 하나의 공동 기억을 요구한다.
+220|Журнал предсказаний|Registro de Predicciones|予測記録|预测日志|예측 기록
+d221|связывает каждый цикл совмещения с пропажей конкретной архивной страницы.|vincula cada ciclo a una página de archivo identificada perdida.|各整列周期を特定の記録頁の消失に結びつける。|将每轮对准与一张指定档案页消失关联。|각 정렬 주기와 특정 기록 페이지 소멸을 연결한다.
+223|Независимый образец керна|Muestra Independiente de Núcleo|独立コア試料|独立冰芯样本|독립 빙핵 표본
+d224|даёт холодное сравнение вне тёплой геометрии.|ofrece una comparación fría fuera de la geometría cálida.|暖かな幾何学の外に冷たい比較を提供する。|在温暖几何之外提供寒冷比较。|따뜻한 기하학 밖에 차가운 비교군을 제공한다.
+226|Бумажный трамвайный билет|Billete de Tranvía en Papel|紙の路面電車切符|纸质电车票|종이 전차 승차권
+d227|доказывает использование забытой станции пассажиром в записанное время.|prueba que un pasajero usó la estación olvidada a una hora registrada.|乗客が記録時刻に忘れられた駅を使ったと証明する。|证明乘客在记录时间使用了被遗忘车站。|승객이 기록 시간에 잊힌 역을 이용했음을 증명한다.
+229|Несвязанные записи приливов|Registro de Mareas no Vinculado|非接続の潮汐記録|未关联潮汐记录|연결되지 않은 조수 기록
+d230|отличает искусственное совмещение от обычного движения воды.|distingue alineación artificial de movimiento normal del agua.|人工の整列と通常の水の動きを区別する。|区分人为对准与正常水流运动。|인위 정렬과 정상 물의 움직임을 구분한다.
+232|Парные механические часы|Relojes Mecánicos Emparejados|一組の機械式時計|成对机械时钟|한 쌍의 기계식 시계
+d233|измеряет потерянную у тёплого порога минуту.|mide el minuto perdido en el umbral cálido.|暖かな境界で失われる一分を測る。|测量温暖边界遗失的一分钟。|따뜻한 문턱에서 잃은 1분을 측정한다.
+235|Физическая адресная книга|Registro Físico de Direcciones|物理的な住所台帳|实体地址台账|물리 주소 장부
+d236|сохраняет возможность опознать жителей вне канала памяти.|mantiene identificables a residentes fuera del flujo de memoria.|記憶の供給外でも住人を識別可能にする。|在记忆供给外保持居民可识别。|기억 공급 밖에서도 주민을 식별하게 한다.
+238|Копия ремонтной метки|Copia de Etiqueta de Reparación|修理札の写し|维修标签副本|수리 태그 사본
+d239|связывает затопленный передатчик с недавним приказом университета.|vincula el transmisor sumergido con una orden universitaria reciente.|水中の送信機を最近の大学の命令に結びつける。|将水下发射器与大学近期指令关联。|잠긴 송신기와 최근 대학 명령을 연결한다.
+241|Выделение эвакуационного топлива|Liberación de Combustible de Evacuación|避難燃料の解放|疏散燃料释放|대피 연료 해제
+d242|выводит транспортные возможности из-под контроля эксперимента.|quita capacidad de transporte al control del experimento.|輸送能力を実験の支配から外す。|将运输能力移出实验控制。|운송 능력을 실험 통제에서 빼낸다.
+244|Книга поездок свидетелей|Libro de Viajes de Testigos|証人の旅の本|见证行程簿|증인 여정 책
+d245|записывает различающиеся воспоминания без навязывания официальной версии.|registra recuerdos distintos sin imponer una versión oficial.|公式の一版を強制せず異なる記憶を記録する。|记录不同记忆，不强迫统一官方版本。|공식 한 버전 강요 없이 다른 기억을 기록한다.
+247|Схема прерывания линзы|Diagrama de Interrupción de la Lente|レンズ中断図|镜片中断图|렌즈 중단 도표
+d248|показывает обратимый путь прерывания с сохранением доказательств.|muestra una interrupción reversible que conserva pruebas.|証拠を残す可逆的な中断方法を示す。|显示保留证据的可逆中断路线。|증거를 보존하는 가역 중단 경로를 보여 준다.
+250|Расписка веса керна|Comprobante de Peso del Núcleo|コア重量票|冰芯重量凭条|빙핵 무게 확인서
+d251|выявляет отражение, воспроизводящее вид, но не массу.|detecta un reflejo que copia apariencia, no masa.|外見だけで質量を再現しない反射を検出する。|检测重现外观而非质量的倒影。|모습만 재현하고 질량은 없는 반영을 탐지한다.
+253|Метка изоляции сигнала|Etiqueta de Aislamiento de Señal|信号隔離の札|信号隔离标签|신호 격리 표지
+d254|отмечает канал, отключённый от хранилища общественной памяти.|marca el flujo desconectado de la bóveda de memoria pública.|公共記憶保管庫から切断した供給を示す。|标记与公共记忆库断开的供给。|공공 기억 금고에서 끊은 공급을 표시한다.
+256|Конверт архивного хранения|Sobre de Custodia del Archivo|記録保管の封筒|档案保管信封|기록 보관 봉투
+d257|защищает подлинные журналы до университетского рассмотрения.|protege registros originales antes de la revisión universitaria.|大学の審査前に原本の記録を守る。|在大学审查前保护原始日志。|대학 검토 전에 원본 기록을 보호한다.
+259|Флаги холодного пути|Banderas de la Ruta Fría|冷たい道の旗|寒冷路线旗|차가운 경로 깃발
+d260|ведёт эвакуацию без следования зацикленной цифровой карте.|guía evacuación sin seguir el mapa digital en bucle.|ループするデジタル地図を追わず避難を導く。|不跟随循环数字地图，指引疏散。|반복 디지털 지도를 따르지 않고 대피를 안내한다.
+262|Пара фотографий станции|Par de Fotos de la Estación|駅の写真一組|车站照片对|한 쌍의 역 사진
+d263|сравнивает платформу до и после интервала памяти.|compara el andén antes y después del intervalo de memoria.|記憶の間隔前後のホームを比べる。|比较记忆间隔前后的站台。|기억 간격 전후의 승강장을 비교한다.
+265|Инструмент отключения передатчика|Herramienta de Desconexión del Transmisor|送信機切断工具|发射器断开工具|송신기 차단 도구
+d266|прерывает совмещение при отливе в ограниченное безопасное окно.|corta alineación en bajamar dentro de una ventana segura limitada.|限られた安全時間内の干潮時に整列を切れる。|可在有限安全窗口内于低潮切断对准。|제한 안전 시간 내 썰물에 정렬을 끊을 수 있다.
+268|Диаграмма наблюдения воздействия|Gráfico de Observación de Exposición|曝露観察図|暴露观察图|노출 관찰 도표
+d269|сопоставляет симптомы со временем внутри полости.|relaciona síntomas con tiempo en la cavidad.|空洞内の時間と症状を照合する。|按空腔内停留时间追踪症状。|공동 내 시간과 증상을 대조한다.
+271|Список согласий жителей|Lista de Consentimiento de Residentes|住人の同意一覧|居民同意清单|주민 동의 목록
+d272|ограничивает личные адресные данные, которые вправе восстановить хранилище свидетелей.|limita datos de direcciones que la bóveda testigo puede restaurar.|証人保管庫が復元できる個人住所データを制限する。|限定见证库可以恢复的个人地址数据。|증인 금고가 복구할 개인 주소 데이터 범위를 정한다.
+274|Оттиск контрольного расписания|Calco del Calendario de Control|制御予定の拓本|控制时间表拓本|제어 일정 탁본
+d275|доказывает следование линзы навязанным часам, а не природному знамению.|prueba que la lente sigue un reloj impuesto, no un presagio natural.|レンズが自然の兆しでなく強制された時計に従うと証明する。|证明镜片遵循强加时钟，而非自然预兆。|렌즈가 자연 징조보다 강제 시계를 따름을 증명한다.
+277|Пересчёт запасов лагеря|Recuento de Provisiones del Campamento|野営物資の数|营地物资清点|야영지 보급품 집계
+d278|называет людей, стёртых из цифрового списка экспедиции.|nombra a personas borradas del listado digital.|探検のデジタル名簿から消えた人の名を挙げる。|列出被考察数字名册抹去的人。|탐사 디지털 명단에서 지워진 사람 이름을 밝힌다.
+280|Метка независимого секундомера|Marca de Cronómetro Independiente|独立ストップウォッチの印|独立秒表标记|독립 초시계 표시
+d281|прерывает синхронизированные таймеры ритмом при внешнем свидетеле.|rompe temporizadores sincronizados con un pulso testificado desde fuera.|外の証人が確認する拍子で同期計時器を止める。|用外部见证的节拍打断同步计时器。|외부 증인이 확인한 박자로 동기 타이머를 끊는다.
+283|Уведомление об изоляции|Aviso de Contención|封じ込め通知|收容通知|억제 통지
+d284|обозначает известные пределы сигнала, не объявляя феномен объяснённым.|declara límites conocidos sin afirmar explicado el fenómeno.|現象を説明したとせず信号の既知の限界を述べる。|说明信号已知限度，不宣称现象已被解释。|현상을 설명했다고 하지 않고 알려진 신호 한계를 밝힌다.
+286|Коробка переноса образца|Caja de Traslado de Muestra|試料移送箱|样本转运箱|표본 이동 상자
+d287|держит тёплый керн отдельно от транспортных часов.|separa el núcleo cálido de relojes de transporte.|暖かなコアを輸送時計から隔離する。|使温暖冰芯与运输时钟保持分离。|따뜻한 빙핵을 운송 시계와 분리한다.
+289|Общественный реестр свидетелей|Registro Público de Testigos|公共の証人登録簿|公共见证登记簿|공공 증인 등록부
+d290|позволяет восстановленным жителям оспаривать записи и сохранять бумажный маршрут.|permite a residentes restaurados disputar entradas y conservar rutas en papel.|復元された住人が記入に異議を唱え、紙の道を保てるようにする。|让恢复的居民质疑条目并保留纸质路线。|복구된 주민이 기록을 다투고 종이 경로를 유지하게 한다.

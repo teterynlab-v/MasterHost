@@ -8,7 +8,7 @@ All twelve catalog targets resolve exact deep Packs with 151 entries each, three
 
 Characters compatible with the game appear first, with schema-provided labels. Other-game Characters sit in a closed disclosure; if none are compatible, creation opens immediately. Traits already explained by selected schema fields no longer expose redundant internal IDs. Custom traits remain visible. Play Today activation failures now show an actionable access message instead of silently leaving the user on the catalog. Closing an unmounted client no longer signals revoked credentials: network failures retry; server policy rejection still clears removed-player access.
 
-Mythic Antiquity, Weird West and Urban Fantasy publish corrected base Actor labels as 1.0.1. Their complete previous 1.0.0 files are retained byte-for-byte in `*-v1`; assets remain immutable 1.0.0 because their content did not change. Old Worlds retain their resolved documents. Non-English preview explicitly identifies source-language fallback; this does not claim a reviewed content translation.
+Mythic Antiquity, Weird West and Urban Fantasy publish corrected base Actor labels as 1.0.1. Their complete previous 1.0.0 files are retained byte-for-byte in `*-v1`; assets remain immutable 1.0.0 because their content did not change. Old Worlds retain their resolved documents. The subsequent official content-localization increment supplies full inventoried source-string coverage in five target languages; it does not claim native editorial review. See `CONTENT_LOCALIZATION_STATUS.md`.
 
 ## Automated and PostgreSQL evidence
 
@@ -22,7 +22,7 @@ Retained demo API8245/web8246: twelve playable catalog cards, combined genre/ton
 
 ## Human gate and remaining limits
 
-M30 still requires several full human games across different universes, editorial feedback from actual GMs/players, native review of Russian/Spanish/Japanese/Chinese/Korean adventure content, and human accessibility review. Content currently uses declared English fallback; source proper names and generation/editor tools are not fully localized. Schematics are usable reference shapes rather than polished illustrations. Deep material is additive to retained base roots. Vehicle, naval, social and cosmic consequences remain generic Actions plus GM adjudication, not dedicated simulations.
+M30 still requires several full human games across different universes, editorial feedback from actual GMs/players, native review of Russian/Spanish/Japanese/Chinese/Korean adventure content, and human accessibility review. Official universe content now has complete inventoried source-string coverage, while user-authored text and non-universe administration tools are not translated by this increment. Schematics are usable reference shapes rather than polished illustrations. Deep material is additive to retained base roots. Vehicle, naval, social and cosmic consequences remain generic Actions plus GM adjudication, not dedicated simulations.
 
 Do not label the product accepted or all M17–M30 complete until these gates have actual evidence. No deployment, external service change or PR was performed.
 

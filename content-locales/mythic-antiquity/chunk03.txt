@@ -1,0 +1,84 @@
+166|Почитатель войны|Devoto de la Guerra|戦争の信徒|战争信徒|전쟁 신봉자
+d167|требует битвы у брода и скрывает условие таблички.|exige una batalla en el vado y oculta la condición de la tablilla.|浅瀬での戦いを要求し、板の条件を隠す。|要求在浅滩交战，并隐瞒泥板上的条件。|여울에서의 전투를 요구하며 서판의 조건을 숨긴다.
+169|Сирена эха|Sirena del Eco|こだまのセイレーン|回声海妖|메아리 세이렌
+d170|предлагает безболезненное возвращение домой ценой стирания брошенного моряка.|ofrece un regreso sin dolor borrando al marinero abandonado.|見捨てた船員を消すことで、苦しみのない帰郷を提案する。|提议抹去被遗弃的水手，以换取毫无痛苦的归乡。|버림받은 선원을 지워 고통 없는 귀향을 제안한다.
+172|Царская тень|Sombra Real|王族の亡霊|王族幽魂|왕족 망령
+d173|требует привилегированного возвращения, пока остальные ждут с невыполненными поручениями.|reclama un regreso privilegiado mientras otros esperan con tareas pendientes.|他者が未完の仕事を抱えて待つ間、特権的な帰還を主張する。|其他人带着未完成的任务等待时，要求优先返回。|다른 이들이 미완의 과업을 들고 기다리는 동안 특권적인 귀환을 요구한다.
+175|Бронзовый речной бык|Toro Fluvial de Bronce|青銅の川の雄牛|青铜河牛|청동 강 황소
+d176|бросается на поднятые знамёна, но успокаивается, когда оба опущены.|embiste estandartes alzados, pero se calma cuando bajan ambos.|掲げられた旗に突進するが、双方が旗を下ろすと落ち着く。|冲向高举的旗帜，双方降旗后便平静下来。|높이 든 깃발에 돌진하지만 양쪽 모두 내리면 진정한다.
+178|Страж цепей бури|Centinela de las Cadenas de Tormenta|嵐の鎖の歩哨|风暴锁链哨兵|폭풍 사슬 파수꾼
+d179|атакует ныряльщиков, ослабляющих сосуд без предупреждения островитян.|ataca a buceadores que aflojan la vasija sin avisar a la isla.|島に警告せず壺の拘束を緩める潜水士を襲う。|袭击未通知岛民就松开风暴罐的潜水者。|섬에 경고하지 않고 항아리를 풀려는 잠수부를 공격한다.
+181|Мотылёк памяти|Polilla de los Recuerdos|記憶の蛾|记忆飞蛾|기억 나방
+d182|поглощает невысказанные воспоминания в саду одолженных дней.|consume recuerdos no expresados en el jardín de los días prestados.|借りた日々の庭で、語られない記憶を食らう。|吞食借日花园里未曾说出的记忆。|빌린 날들의 정원에서 말하지 않은 기억을 먹는다.
+184|Страж указа|Guardia del Decreto|勅令の守衛|诏令守卫|포고문 경비병
+d185|изымает подлинную табличку до публичного чтения.|confisca la tablilla original antes de su lectura pública.|公開朗読の前に原本の板を押収する。|在公开宣读前夺走原始泥板。|공개 낭독 전에 원본 서판을 압수한다.
+187|Жемчужная пасть|Fauces de Perla|真珠の大口|珍珠巨口|진주 아귀
+d188|охраняет подводный алтарь, но отвлекается на раковину-приманку.|custodia el altar sumergido, pero sigue una concha señuelo ofrecida como sacrificio.|水中の祭壇を守るが、犠牲として差し出された囮の貝を追う。|守卫水下祭坛，但会追随献祭用的诱饵贝壳。|수중 제단을 지키지만 희생물로 바친 미끼 조개를 따라간다.
+190|Пёс ворот|Sabueso de la Puerta|門の猟犬|门卫猎犬|문지기 사냥개
+d191|не пропускает посетителей, отказывающихся назвать свой долг.|bloquea a visitantes que se niegan a nombrar su propia deuda.|自分の負債を明かすことを拒む訪問者を阻む。|阻挡不肯说出自身债务的访客。|자신의 빚을 밝히기를 거부하는 방문자를 막는다.
+193|Копейщик славы|Lancero de la Gloria|栄光の槍兵|荣耀枪兵|영광의 창병
+d194|пытается спровоцировать послов перемирия на поединок.|intenta provocar a los enviados de la tregua para que se batan en duelo.|休戦の使節を挑発して決闘させようとする。|试图激怒停战使者，诱使其决斗。|휴전 사절들을 도발해 결투로 끌어들이려 한다.
+196|Ложный штурман|Falso Navegante|偽りの航海士|假领航员|가짜 항해사
+d197|подражает голосу потерянного моряка, направляя корабль к сосуду бури.|imita la voz del marinero perdido para dirigir el barco hacia la vasija de tormenta.|失われた船員の声を真似て、嵐の壺へ船を誘導する。|模仿失踪水手的声音，将船引向风暴罐。|잃어버린 선원의 목소리를 흉내 내어 폭풍 항아리로 이끈다.
+199|Маска суда|Máscara del Juicio|裁きの仮面|审判面具|심판의 가면
+d200|ставит погребальные дары выше деяний, пока хор не снимет её.|valora los regalos funerarios por encima de los actos hasta que el coro la retira.|合唱団が外すまで、行いよりも墓の供物を高く評価する。|在合唱团摘下面具之前，将陪葬品排在行动之上。|합창단이 벗기기 전까지 행위보다 부장품을 높이 평가한다.
+202|Колосс наводнения|Coloso de la Inundación|洪水の巨像|洪水巨像|홍수 거신
+d203|поднимается из брода, когда знамение речного спасения не исполнено.|surge del vado cuando no se cumple el presagio del rescate fluvial.|川の救助の兆しが果たされないと浅瀬から現れる。|河流救援预兆未获兑现时，从浅滩升起。|강의 구조 징조를 이루지 못하면 여울에서 솟아오른다.
+205|Ростовщик сосуда|Usurero de la Vasija|壺の高利貸し|风暴罐高利贷商|항아리 고리대금업자
+d206|продаёт тихую погоду, пока гавань остаётся прикованной к буре.|vende tiempo en calma mientras el puerto sigue encadenado a la borrasca.|港が突風に鎖でつながれたまま、穏やかな天候を売る。|港口仍被锁链系于暴风时，兜售晴好天气。|항구가 돌풍에 묶여 있는 동안 잔잔한 날씨를 판다.
+208|Сборщик дней|Recaudador de Días|日々の徴収者|日子收取者|날짜 징수자
+d209|берёт воспоминания в плату без добровольного согласия посетителя.|cobra recuerdos sin el consentimiento voluntario del visitante.|訪問者の自発的な同意なしに、記憶を支払いとして取る。|未经访客自愿同意就收取记忆作为代价。|방문자의 자발적인 동의 없이 기억을 대가로 가져간다.
+211|Похититель знамён|Ladrón de Estandartes|旗の盗人|盗旗者|깃발 도둑
+d212|крадёт опущенные знамёна, чтобы возобновить конфликт.|roba los estandartes bajados para reiniciar el conflicto.|争いを再開させるため、下ろされた旗を盗む。|偷走降下的旗帜，意图重启冲突。|갈등을 다시 일으키려고 내려 둔 깃발을 훔친다.
+214|Тень маяка|Sombra del Faro|灯台の亡霊|灯塔幽魂|등대 망령
+d215|гасит огонь возвращения, когда экипаж умалчивает о потерянном товарище.|apaga la llama del regreso cuando la tripulación omite al compañero perdido.|船員たちが失われた仲間を語らないと、帰郷の炎を消す。|船员遗漏失去的同伴时，熄灭归乡之火。|선원들이 잃어버린 동료를 빼놓으면 귀향의 불꽃을 끈다.
+217|Молчаливый пристав|Alguacil Silencioso|沈黙の執行官|沉默执达官|침묵의 집행관
+d218|стирает обещанное прощание из списка пассажиров переправы.|borra una despedida prometida de la lista de pasajeros del transbordador.|渡し舟の乗客名簿から約束された別れを消す。|从渡船乘客名单中抹去一次承诺的告别。|나룻배 승객 명단에서 약속된 작별을 지운다.
+220|Табличка условного знамения|Tablilla del Presagio Condicional|条件付きの兆しの板|有条件预兆泥板|조건부 징조 서판
+d221|показывает, что реку восстанавливает спасение, а не победа.|revela que el rescate, y no la victoria, restaura el río.|川を元に戻すのは勝利ではなく救助であると示す。|揭示恢复河流的是救援，而非胜利。|강을 회복시키는 것은 승리가 아니라 구조임을 드러낸다.
+223|Миска потерянного моряка|Cuenco del Marinero Perdido|失われた船員の椀|失踪水手的碗|잃어버린 선원의 그릇
+d224|хранит еду, позволяющую экипажу назвать брошенного товарища.|contiene la comida que permite a la tripulación nombrar al compañero abandonado.|船員たちが見捨てた仲間の名を呼べるようにする食事が入っている。|盛放着一份食物，使船员得以说出被遗弃同伴的名字。|버린 동료의 이름을 선원들이 말할 수 있게 하는 식사를 담고 있다.
+226|Жетон незавершённого дела|Ficha de Tarea Pendiente|未完の行いの証|未竟之事信物|미완의 일 증표
+d227|показывает просьбу умершего, не давая ему права повелевать живыми.|muestra la petición de un muerto sin otorgarle derecho a mandar sobre los vivos.|生者を命令する権利を与えずに、死者の願いを示す。|显示死者的请求，却不授予其命令生者的权利。|산 자에게 명령할 권리를 부여하지 않고 죽은 이의 부탁을 보여 준다.
+229|Опущенное знамя|Estandarte Bajado|下ろされた旗|降下的旗帜|내린 깃발
+d230|может обозначать общее перемирие, если выставлено на обоих берегах.|puede señalar una tregua compartida si se muestra en ambas orillas.|両岸で掲げれば、共同の休戦を示せる。|若两岸都展示，便能标示共同停战。|양쪽 강둑에 보이면 공동 휴전을 알릴 수 있다.
+232|Оковы сосуда бури|Grillete de la Vasija de Tormenta|嵐の壺の枷|风暴罐镣铐|폭풍 항아리 족쇄
+d233|удерживает бурю, пока якорная стоянка не будет безопасно эвакуирована.|retiene la borrasca hasta evacuar el fondeadero con seguridad.|停泊地が安全に避難するまで突風を閉じ込める。|在锚地完成安全疏散之前束缚暴风。|정박지를 안전하게 대피시킬 때까지 돌풍을 붙잡아 둔다.
+235|Нить одолженного дня|Hilo del Día Prestado|借りた一日の糸|借日之线|빌린 하루의 실
+d236|записывает воспоминание, добровольно отданное ради прощания.|registra un recuerdo ofrecido voluntariamente para una despedida.|別れのために自発的に差し出された記憶を記録する。|记录为告别而自愿献出的记忆。|작별을 위해 자발적으로 내어 준 기억을 기록한다.
+238|Лавровая печать посла|Sello de Laurel del Enviado|使節の月桂樹の印|使者月桂印章|사절의 월계수 인장
+d239|подтверждает подлинность предложения о перемирии, проигнорированного собранием.|autentica la propuesta de tregua que la asamblea ignoró.|議会が無視した休戦案の真正性を証明する。|验证被议会忽视的停战提议的真实性。|의회가 무시한 휴전 제안의 진위를 증명한다.
+241|Жемчужный якорный камень|Piedra de Anclaje de Perla|真珠の錨石|珍珠锚石|진주 닻돌
+d242|удерживает ныряльщика у алтаря при освобождении бури.|estabiliza al buceador en el altar cuando se libera la tormenta.|嵐を解放する際、祭壇で潜水士を安定させる。|释放风暴时，在祭坛旁稳住潜水者。|폭풍을 풀 때 제단에서 잠수부를 안정시킨다.
+244|Запись деревенского обещания|Registro de la Promesa Aldeana|村の約束の記録|乡村承诺记录|마을 약속 기록
+d245|придаёт вес скромным делам перед молчаливыми судьями.|da validez a tareas humildes ante los jueces silenciosos.|沈黙の裁判官の前で、ささやかな仕事に評価される資格を与える。|使平凡的任务在沉默判官面前获得认可。|침묵의 심판관 앞에서 소박한 일의 가치를 인정받게 한다.
+247|Спасательный крюк|Gancho de Rescate|救助用の鉤|救援钩|구조 갈고리
+d248|направляет труд литейной щитов на помощь людям, отрезанным рекой.|convierte el trabajo de la fundición de escudos en ayuda para personas aisladas por el río.|盾の鋳造所の労働を、川で取り残された人々への援助に変える。|把盾牌铸造厂的劳力转为帮助被河流困住的人们。|방패 주조소의 노동을 강에 고립된 사람을 돕는 일로 바꾼다.
+250|Недостающий куплет|Estrofa Perdida|失われた歌の一節|缺失的歌段|빠진 노랫절
+d251|возвращает моряку место в истории маяка возвращения.|restituye al marinero su lugar en la historia del faro del regreso.|帰郷の灯台の物語に、船員の居場所を取り戻す。|让水手在归乡灯塔的故事中重获位置。|귀향 등대의 이야기 속에 선원의 자리를 되찾아 준다.
+253|Монета тихой переправы|Moneda del Transbordador Silencioso|静かな渡し舟の硬貨|静默渡船钱币|고요한 나룻배 동전
+d254|покупает проход, только когда завершённое дело подтверждено свидетелем.|compra el paso solo después de que alguien atestigüe la tarea cumplida.|完了した行いに証人がいる場合のみ、通行を買える。|只有完成的行动得到见证后，才能买到通行。|마친 일에 대한 증인이 있어야만 통행료가 된다.
+256|Оттиск соскобленной таблички|Calco de la Tablilla Raspada|削られた板の拓本|刮痕泥板拓本|긁힌 서판 탁본
+d257|сохраняет скрытое знамение, если указ уничтожат.|preserva el presagio oculto si destruyen el decreto.|勅令が破壊されても、隠された兆しを保存する。|即使诏令被毁，也能保留隐藏的预兆。|포고문이 파괴되어도 숨겨진 징조를 보존한다.
+259|Раковина эвакуации|Concha de Evacuación|避難の貝笛|疏散贝笛|대피 소라
+d260|зовёт островные очаги уйти с пути возвращающейся бури.|llama a los hogares isleños a apartarse del camino de la borrasca que regresa.|島の炉辺の人々に、戻る突風の進路から離れるよう呼びかける。|召唤岛屿炉火的人们离开暴风回归的路径。|섬의 화롯가 사람들을 돌풍이 돌아오는 길에서 물러나게 부른다.
+262|Свеча прощания|Vela de Despedida|別れのろうそく|告别蜡烛|작별 촛불
+d263|позволяет умершему брату или сестре говорить, не обязывая их возвращаться.|permite hablar a un hermano muerto sin obligarlo a regresar.|死んだきょうだいが、帰還を強いられずに話せるようにする。|让逝去的手足能够说话，而不强迫其返回。|죽은 형제자매에게 귀환을 강요하지 않고 말하게 한다.
+265|Шнур перемирия двух берегов|Cordón de Tregua de Ambas Orillas|両岸の休戦の紐|两岸停战绳|양안 휴전 끈
+d266|соединяет знамёна и требует, чтобы обе стороны несли дозор.|une los estandartes y exige que ambas partes mantengan la guardia.|旗を結び、双方に見張りを続けることを求める。|连接两面旗帜，并要求双方共同值守。|깃발을 잇고 양측 모두 경계 근무를 서도록 요구한다.
+268|Дыхательный тростник ныряльщика|Caña de Aire del Buceador|潜水士の呼吸管|潜水者呼吸芦管|잠수부의 숨 갈대
+d269|позволяет одно более долгое погружение, но не обеспечит весь экипаж.|permite un descenso más largo, pero no abastece a toda la tripulación.|一度だけ長めの潜水ができるが、船員全員は支えられない。|可支持一次较长的下潜，但无法供整个船队使用。|한 번 더 오래 잠수할 수 있지만 모든 선원을 지원하지는 못한다.
+271|Садовый узел согласия|Nudo de Consentimiento del Jardín|庭の同意の結び目|花园同意结|정원의 동의 매듭
+d272|обозначает, что одолженный день дан добровольно и может быть отозван до использования.|marca el día prestado como voluntario y revocable antes de usarlo.|借りた日が自発的で、使用前には撤回可能であると示す。|标明借日出于自愿，并可在使用前撤销。|빌린 하루가 자발적이며 사용 전에 되돌릴 수 있음을 표시한다.
+274|Карта речного спасения|Mapa de Rescate Fluvial|川の救助地図|河流救援地图|강 구조 지도
+d275|показывает людей, не названных в военном пророчестве.|muestra a quienes la profecía bélica no nombró.|戦の予言が名を挙げなかった人々を示す。|显示战争预言没有提及的人们。|전쟁 예언이 이름을 밝히지 않은 사람들을 보여 준다.
+277|Журнал признания экипажа|Diario de la Confesión de la Tripulación|船員の告白日誌|船员承认日志|선원 인정 일지
+d278|записывает факт оставления товарища, не подменяя его историей победы.|registra el abandono sin sustituirlo por un relato de victoria.|見捨てた事実を勝利の物語で置き換えずに記録する。|记录遗弃事实，不以胜利故事代替。|버린 사실을 승리담으로 대체하지 않고 기록한다.
+280|Корзина выполненного поручения|Cesta del Encargo Cumplido|果たした用事の籠|已完委托篮|완료한 심부름 바구니
+d281|несёт доказательство дела, о котором просили у границы смерти.|lleva la prueba de la tarea pedida en la frontera de la muerte.|死の境界で頼まれた行いの証拠を運ぶ。|携带在死亡边界处所请求行动的完成证明。|죽음의 경계에서 부탁받은 일을 마친 증거를 담는다.
+283|План бронзового ремонта|Plan de Reparación de Bronce|青銅の修復計画|青铜修复计划|청동 수리 계획
+d284|определяет, как восстановить брод после наводнения.|define cómo reconstruir el vado después de la inundación.|洪水後に浅瀬をどう修復するか定める。|规定洪水后如何修复浅滩。|홍수 뒤 여울을 복구할 방법을 정한다.
+286|Чаша огня возвращения|Copa de la Llama del Regreso|帰郷の炎の杯|归乡火杯|귀향 불꽃 잔
+d287|несёт огонь маяка, когда вспомнили каждого товарища.|transporta la luz del faro una vez recordados todos los compañeros.|すべての仲間を思い出した後、灯台の火を運ぶ。|当每一位同伴都被记起后，承载灯塔之火。|모든 동료를 기억하면 등대의 불을 담아 나른다.
+289|Расписка свидетеля возвращения|Comprobante del Testigo del Regreso|帰還の証人票|归来见证凭条|귀환 증인 확인서
+d290|позволяет живому посетителю уйти после выполнения названного поручения.|permite partir al visitante vivo tras cumplir la tarea identificada.|名を挙げた仕事を果たした生者の訪問者が立ち去れるようにする。|允许生者访客在完成指定任务后离开。|살아 있는 방문자가 지정된 일을 마치면 떠날 수 있게 한다.

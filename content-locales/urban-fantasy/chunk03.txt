@@ -1,0 +1,84 @@
+166|Пристав полей|Alguacil del Margen|余白の執行官|页边执达官|여백 집행관
+d167|берёт воспоминания в плату за выход, если концовка договора не восстановлена.|cobra recuerdos por salir salvo que se restaure el final del tratado.|条約の結末が復旧しない限り、退出料として記憶を取る。|条约结尾未恢复时，收取记忆作为离馆费用。|조약 결말을 복구하지 않으면 출구 대가로 기억을 받는다.
+169|Бригада дневного обхода|Equipo de Redada Diurna|昼間の一斉検査班|白天巡查队|주간 일제 점검반
+d170|вскрывает двери на рассвете вопреки предложению безопасной инспекции.|fuerza puertas al alba pese a una propuesta de inspección más segura.|より安全な検査案があるのに夜明けに扉をこじ開ける。|无视更安全检查提议，在黎明强行开门。|더 안전한 점검 제안에도 새벽에 문을 강제로 연다.
+172|Стиратель улиц|Borrador de Calles|街路消し|街道抹除者|거리 지우개
+d173|навязывает частное расширение заклинания общественным экстренным маршрутам.|impone una extensión privada de hechizo sobre rutas públicas de emergencia.|公共の救急経路に私的な呪文拡張を強制する。|将私有法术扩展强加于公共应急路线。|공공 응급 경로에 사설 주문 확장을 강요한다.
+175|Мотылёк указателя|Polilla del Índice|索引の蛾|索引飞蛾|색인 나방
+d176|поедает запись возврата и отступает перед полной произнесённой фразой.|devora el registro de devolución y retrocede ante una frase completa pronunciada.|返却記録を食らい、完全な文が唱えられると退く。|吞食归还记录，听到完整句子时退缩。|반납 기록을 먹고 완전한 문장을 말하면 물러난다.
+178|Саботажник штор|Saboteador de Pantallas|遮光の破壊者|遮光破坏者|차광 파괴자
+d179|перекрывает доступ к крыше ради прибыли от провала инспекции башни.|corta el acceso a la azotea para lucrarse del fallo de inspección.|塔の検査失敗で儲けるため屋上への道を遮断する。|封锁屋顶通道，借塔楼检查失败牟利。|탑 점검 실패로 이익을 얻으려 옥상 접근을 막는다.
+181|Силовик разрешений|Ejecutor de Permisos|許可の執行者|许可证执法者|허가 집행자
+d182|изымает автономный список как несанкционированную карту.|confisca la lista sin conexión como mapa no autorizado.|オフラインの一覧を無許可の地図として押収する。|把离线清单当作未经授权地图予以没收。|오프라인 목록을 무단 지도로 압수한다.
+184|Библиотекарь завтрашнего дня|Bibliotecario del Mañana|明日の司書|明日图书管理员|내일의 사서
+d185|держит страницу после закрытия, пока не покажут настоящий срок возврата.|retiene la página tras el cierre hasta mostrar su vencimiento verdadero.|本当の返却期限が示されるまで閉館後も頁を保持する。|在真正到期日被出示前，闭馆后仍扣留页面。|진짜 반납 기한을 보일 때까지 폐관 후에도 페이지를 붙잡는다.
+187|Солнечный страж|Centinela Soleado|日光の歩哨|日照哨兵|햇빛 파수꾼
+d188|охраняет лестницу, не отличая жильцов от угроз.|vigila escaleras sin distinguir residentes de amenazas.|住人と脅威を区別せず階段を守る。|守卫楼梯，却不区分居民与威胁。|주민과 위협을 구분하지 않고 계단을 지킨다.
+190|Двойник маршрута|Doble de la Ruta|経路の分身|路线替身|경로 도플갱어
+d191|отправляет спасателей к дубликату перекрёстка, отсутствующему на бумажной карте.|envía rescatadores a un cruce duplicado ausente del mapa en papel.|紙の地図にない複製の交差点へ救助隊を送る。|将救援者送往纸质地图上不存在的重复路口。|종이 지도에 없는 복제 교차로로 구조대를 보낸다.
+193|Ростовщик двора|Usurero de la Corte|宮廷の高利貸し|宫廷高利贷者|궁정 고리대금업자
+d194|предлагает новую концовку ценой постоянной дани читателей.|ofrece un final sustituto a cambio de tributo perpetuo de lectores.|読者の永久の貢ぎ物を代償に代わりの結末を提案する。|以读者永久纳贡为代价提供替代结尾。|영구적인 독자 공물을 대가로 새 결말을 제안한다.
+196|Ложный смотритель|Falso Conserje|偽の管理人|假管理员|가짜 관리인
+d197|предлагает ремонт штор, запирающий всех жильцов внутри.|ofrece una reparación de pantallas que encierra a todos los inquilinos.|全住人を中に閉じ込める遮光修理を提案する。|提出一种会把所有住户锁在内部的遮光维修。|모든 세입자를 안에 가두는 차광 수리를 제안한다.
+199|Призрак бюджета|Espectro del Presupuesto|予算の亡霊|预算幽灵|예산 망령
+d200|прячет след платежей расширения заклинания в повторяющихся счетах.|oculta los pagos de la extensión en facturas repetidas.|繰り返す請求書に呪文拡張の支払いを隠す。|在重复发票中隐藏法术扩展付款链。|반복 청구서에 주문 확장의 지급 경로를 숨긴다.
+202|Тень одолженной памяти|Sombra del Recuerdo Prestado|借りた記憶の亡霊|借记忆幽魂|빌린 기억 망령
+d203|подражает утраченному воспоминанию, уводя читателя от свидетелей.|imita el recuerdo perdido para alejar al lector de testigos.|失われた記憶を真似て読者を証人から誘い離す。|模仿遗失记忆，引诱读者远离见证者。|잃은 기억을 흉내 내 독자를 증인에게서 유인한다.
+205|Автомат замка крыши|Autómata de la Cerradura de Azotea|屋上錠の自動人形|屋顶门锁自动机|옥상 자물쇠 자동인형
+d206|отказывает законным жильцам в доступе, подчиняясь устаревшей инспекционной блокировке.|rechaza acceso válido obedeciendo una retención de inspección obsoleta.|古い検査停止命令に従って正当な住人の立ち入りを拒む。|服从过时检查封锁令，拒绝合法住户通行。|낡은 점검 보류에 따라 유효한 세입자 접근을 거부한다.
+208|Измельчитель архива|Triturador del Archivo|記録の裁断者|档案粉碎者|기록 파쇄기
+d209|уничтожает улицы, удалённые из частного указателя.|destruye calles retiradas del índice privado.|私的な索引から削除された街路を破壊する。|摧毁被私人索引删除的街道。|사설 색인에서 제거한 거리를 파괴한다.
+211|Эхо колокола закрытия|Eco de la Campana de Cierre|閉館の鐘のこだま|闭馆钟回声|폐관 종의 메아리
+d212|повторяет правило задержания библиотеки после восстановления договора.|repite la regla de detención tras completarse el tratado.|条約が完全になった後も図書館の拘束規則を繰り返す。|条约完整后仍重复图书馆扣留规则。|조약이 완전해진 뒤에도 도서관 구금 규칙을 반복한다.
+214|Слух об инспекции|Rumor de Inspección|検査の噂|检查谣言|점검 소문
+d215|настраивает обычных соседей против ночных семей ложными заявлениями об опасности.|enfrenta vecinos ordinarios con hogares nocturnos mediante falsas afirmaciones de seguridad.|偽の安全情報で普通の隣人を夜の家庭に敵対させる。|以虚假安全说法煽动普通邻居反对夜行家庭。|거짓 안전 주장으로 일반 이웃을 야행성 가구와 맞서게 한다.
+217|Отражение договора|Reflejo del Contrato|契約の反射|合同倒影|계약의 반영
+d218|воссоздаёт канал стёртых улиц, если расширение явно не прекращено.|recrea el suministro de calles borradas salvo que se termine explícitamente la extensión.|拡張を明示的に終えないと、消された街路の供給系統を再現する。|若未明确终止扩展，就会重建抹除街道的供给。|확장을 명시적으로 끝내지 않으면 지워진 거리 공급을 재생한다.
+220|Концовка договора|Final del Tratado|条約の結末|条约结尾|조약의 결말
+d221|определяет право читателя уйти без платы воспоминанием.|define el derecho a salir sin pagar recuerdos.|記憶を支払わず退出する読者の権利を定める。|规定读者无需支付记忆即可离开的权利。|기억 대가 없이 떠날 독자의 권리를 정한다.
+223|Предложение вечерней инспекции|Propuesta de Inspección Vespertina|夕方の検査案|傍晚检查提议|저녁 점검 제안
+d224|перечисляет свидетелей и ремонт, достаточные для безопасного ночного визита.|enumera testigos y reparaciones suficientes para una visita nocturna segura.|安全な夜間訪問に十分な証人と修理を列挙する。|列出足以确保安全夜访的见证者与修复项。|안전한 야간 방문에 충분한 증인과 수리를 나열한다.
+226|Автономный список адресов|Lista de Direcciones sin Conexión|オフラインの住所一覧|离线地址清单|오프라인 주소 목록
+d227|даёт экстренным службам настоящие маршруты вне карты частного заклинания.|da rutas reales a emergencias fuera del mapa de hechizo privado.|私的な呪文地図の外の実際の道を救急隊に与える。|为应急队伍提供私人法术地图之外的真实路线。|사설 주문 지도 밖의 실제 경로를 응급대에 준다.
+229|Запись о выдаче|Registro de Préstamo|貸出記録|借阅记录|대출 기록
+d230|доказывает, что право двора полей на задержание истекло.|prueba que caducó la reclamación de detención de la corte del margen.|余白の宮廷の拘束請求が期限切れだと証明する。|证明页边宫廷扣留索求已过期。|여백 궁정의 구금 청구가 만료됨을 증명한다.
+232|Элемент ремонта штор|Celda de Reparación de Pantallas|遮光修理セル|遮光维修电池|차광 수리 셀
+d233|питает цепь достаточно долго для защиты эвакуации на рассвете.|alimenta el circuito el tiempo necesario para proteger la evacuación al alba.|夜明けの避難を守るのに十分な時間、回路に電力を与える。|为电路供电足够久，以保护黎明疏散。|새벽 대피를 보호할 만큼 오래 회로에 전력을 준다.
+235|Счёт за расширение|Factura de la Extensión|拡張の請求書|扩展发票|확장 청구서
+d236|связывает исчезнувшие улицы с частным договором городского заклинания.|vincula calles desaparecidas con un contrato privado de hechizo cívico.|消えた街路と私的な市の呪文契約を結びつける。|将消失街道与私有市政法术合同关联。|사라진 거리와 사설 도시 주문 계약을 연결한다.
+238|Билет возврата в настоящее|Billete de Devolución al Presente|現在への返却券|现在归还票|현재 반납권
+d239|открывает желоб, ведущий к заёмщику у стойки завтрашнего дня.|abre el conducto al prestatario en el Mostrador del Mañana.|明日の窓口の借り手へ通じる返却口を開く。|打开通往明日柜台借阅者的通道。|내일의 데스크에 있는 대출자로 향하는 통로를 연다.
+241|Пропуск на крышу|Pase de Acceso a la Azotea|屋上通行票|屋顶通行凭条|옥상 출입증
+d242|позволяет жильцам ремонтировать свою систему затемнения.|permite reparar el sistema de oscurecimiento a los inquilinos.|住人が自分たちの遮光装置を修理できるようにする。|允许住户修复自己的遮光系统。|세입자가 자기 차광 시스템을 고치게 한다.
+244|Мел экстренного маршрута|Tiza de Ruta de Emergencia|救急経路のチョーク|应急路线粉笔|응급 경로 분필
+d245|отмечает один безопасный путь при отсутствии цифрового указателя заклинания.|marca un camino seguro mientras falta el índice digital de hechizo.|呪文のデジタル索引がない間、安全な道を一つ示す。|数字法术索引缺失时标明一条安全路径。|디지털 주문 색인이 없을 때 안전한 길 하나를 표시한다.
+247|Пометка читателя|Anotación del Lector|読者の注記|读者注释|독자 주석
+d248|сохраняет выбранную заёмщиком запись при ремонте договора.|preserva la nota elegida por el prestatario al reparar el tratado.|条約修復の際に借り手が選んだ注記を保つ。|修复条约时保留借阅者选择的批注。|조약 수리 중 대출자가 고른 메모를 보존한다.
+250|Список общей кухни|Lista de la Cocina Común|共同台所の名簿|公共厨房名单|공동 부엌 명단
+d251|координирует соседей, не требуя раскрытия сверхъестественной природы.|coordina vecinos sin exigir revelar lo sobrenatural.|超自然の身元の開示を求めずに隣人を調整する。|协调邻里，不要求披露超自然身份。|초자연적 신원 공개 없이 이웃을 조율한다.
+253|Свидетельская копия общественной карты|Copia Testificada del Mapa Público|公共地図の証人付き写し|公共地图见证副本|공공 지도 증인 사본
+d254|может подключить улицы после одобрения жителями их названий.|reconecta calles tras aprobar los residentes sus nombres.|住人が名前を承認すると街路を再接続できる。|居民批准街名后，可重新连接街道。|주민이 이름을 승인하면 거리를 다시 연결한다.
+256|Произнесённая последняя фраза|Frase Final Pronunciada|唱えた最後の文|说出的最后一句|말한 마지막 문장
+d257|отгоняет мотылька указателя, пока ищут подлинную страницу.|repele la polilla del índice mientras se recupera la página original.|原本の頁を取り戻す間、索引の蛾を追い払う。|找回原始页面期间驱退索引飞蛾。|원본 페이지를 찾는 동안 색인 나방을 쫓는다.
+259|Схема цепи штор|Diagrama del Circuito de Pantallas|遮光回路図|遮光电路图|차광 회로도
+d260|показывает безопасный обход и альтернативу с риском пожара.|muestra el puente seguro y su alternativa con riesgo de incendio.|安全な迂回と火災リスクのある別案を示す。|显示安全旁路及存在火灾风险的替代方案。|안전한 우회와 화재 위험 대안을 보여 준다.
+262|Метка изоляции канала|Etiqueta de Aislamiento del Suministro|供給隔離の札|供给隔离标签|공급 격리 태그
+d263|останавливает частное расширение, не отключая все городские службы.|detiene la extensión privada sin cortar todos los servicios urbanos.|市の全設備を止めずに私的拡張を停止する。|停止私有扩展，不切断全部城市公用设施。|도시 공공시설 전체를 끊지 않고 사설 확장을 멈춘다.
+265|Лента согласия дворов|Cinta de Consentimiento de las Cortes|宮廷の同意のリボン|宫廷同意缎带|궁정 동의 리본
+d266|записывает согласие обоих дворов на новый срок выдачи.|registra el acuerdo de ambas cortes sobre un plazo nuevo.|両宮廷の新たな貸出期限への合意を記録する。|记录两宫廷对新借阅期限的同意。|양쪽 궁정의 새 대출 기한 합의를 기록한다.
+268|Значок ночного свидетеля|Insignia del Testigo Nocturno|夜の証人の徽章|夜间见证徽章|야간 증인 배지
+d269|подтверждает факты инспекции, защищая личности жильцов.|confirma hechos de inspección protegiendo identidades.|住人の身元を守りながら検査の事実を確認する。|确认检查事实，同时保护居民身份。|주민 신원을 보호하면서 점검 사실을 확인한다.
+271|Прошение исчезнувшей улицы|Petición de la Calle Desaparecida|消えた街路の請願|消失街道请愿|사라진 거리 청원
+d272|позволяет жителям выбрать названия, возвращаемые на общественную карту.|permite elegir nombres restaurados al mapa público.|公共地図へ戻す名前を住人が選べるようにする。|让居民选择恢复到公共地图上的名称。|주민이 공공 지도에 복구할 이름을 고르게 한다.
+274|Конверт возврата памяти|Sobre de Devolución de Recuerdos|記憶返却の封筒|记忆归还信封|기억 반환 봉투
+d275|хранит воспоминание, освобождённое двором полей.|contiene el recuerdo liberado por la corte del margen.|余白の宮廷が解放した記憶を入れる。|保存页边宫廷释放的记忆。|여백 궁정이 풀어 준 기억을 담는다.
+277|Комплект безопасности затемнения|Equipo de Seguridad de Oscurecimiento|遮光安全キット|遮光安全套件|차광 안전 도구
+d278|обеспечивает эвакуацию при истощении ремонтных элементов.|apoya la evacuación si se agotan las celdas de reparación.|修理用セルが尽きた場合の避難を支える。|维修电池耗尽时支持疏散。|수리 셀이 떨어지면 대피를 지원한다.
+280|Аудит коммунальных платежей|Auditoría de Pagos de Servicios|公共設備支払い監査|公用事业付款审计|공공시설 지급 감사
+d281|доказывает, что расширение продолжалось после прекращения общественных полномочий.|prueba que la extensión continuó tras acabar su autoridad pública.|公的権限が終わった後も拡張が続いたと証明する。|证明扩展在公共授权终止后仍继续运行。|공공 권한이 끝난 뒤에도 확장이 계속됐음을 증명한다.
+283|Непереплетённая копия договора|Copia Suelta del Tratado|綴じられない条約の写し|散页条约副本|제본 없는 조약 사본
+d284|делает права читателей на выход независимыми от одной физической страницы.|independiza el derecho de salida de una sola página física.|読者の退出権を一枚の物理的な頁から独立させる。|使读者离馆权不依赖单张实体页面。|독자의 출구 권리를 한 장의 물리적 페이지와 독립시킨다.
+286|Договор штор жильцов|Pacto de Pantallas de Inquilinos|住人の遮光盟約|住户遮光契约|세입자 차광 협약
+d287|записывает обязанности ремонта и безопасный доступ для будущей инспекции.|registra deberes de reparación y acceso seguro para futuras inspecciones.|今後の検査の修理義務と安全な立ち入りを記録する。|记录维修职责与未来检查的安全通行。|향후 점검을 위한 수리 의무와 안전 접근을 기록한다.
+289|Реестр выбранных адресов|Registro de Direcciones Elegidas|選ばれた住所の登録簿|选定地址登记簿|선택한 주소 등록부
+d290|хранит одобренные жителями маршруты с процедурой исправления.|guarda rutas aprobadas por residentes con proceso de corrección.|住人が承認した経路と修正手続きを保管する。|保存居民批准的路线，并设有更正流程。|수정 절차와 함께 주민이 승인한 경로를 보관한다.
