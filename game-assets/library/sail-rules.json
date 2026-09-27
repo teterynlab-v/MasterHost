@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.sail.rules",
+  "version": "1.0.0",
+  "type": "rules",
+  "name": "Sounding Transfer and Anchor Rules",
+  "description": "Sounding Transfer and Anchor Rules for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+  "tags": [
+    "age-of-sail",
+    "pirate-archipelago",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Sounding Transfer and Anchor Rules for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+    "highlights": [
+      "Sounding Transfer and Anchor Rules",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.age-of-sail"
+    ],
+    "requiresCapabilities": [
+      "setting:age-of-sail"
+    ],
+    "providesCapabilities": [
+      "rules:age-of-sail"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.sail.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Age of Sail original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.sail.rules"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 6,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.sail.rules",
+    "version": "1.0.0",
+    "name": "Sounding Transfer and Anchor Rules",
+    "description": "Sounding Transfer and Anchor Rules for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+    "provides": [
+      "rules:age-of-sail"
+    ],
+    "requires": [
+      "setting:age-of-sail"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/actions/sail-sound-reef",
+        "value": {
+          "label": "Sound Reef",
+          "target": "self",
+          "kind": "check",
+          "checkId": "seamanship"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/sail-launch-rescue",
+        "value": {
+          "label": "Launch Rescue",
+          "target": "self",
+          "kind": "check",
+          "checkId": "brawn"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/sail-read-order",
+        "value": {
+          "label": "Read Order",
+          "target": "self",
+          "kind": "check",
+          "checkId": "seamanship"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/sail-inspect-cargo",
+        "value": {
+          "label": "Inspect Cargo",
+          "target": "self",
+          "kind": "check",
+          "checkId": "charm"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/sail-release-anchor",
+        "value": {
+          "label": "Release Anchor",
+          "target": "self",
+          "kind": "check",
+          "checkId": "brawn"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/sail-sing-route",
+        "value": {
+          "label": "Sing Route",
+          "target": "self",
+          "kind": "check",
+          "checkId": "charm"
+        }
+      }
+    ]
+  }
+}

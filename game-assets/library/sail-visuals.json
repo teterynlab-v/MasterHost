@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.sail.visuals",
+  "version": "1.0.0",
+  "type": "visuals",
+  "name": "Unfixed Sea Schematics",
+  "description": "Unfixed Sea Schematics for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+  "tags": [
+    "age-of-sail",
+    "pirate-archipelago",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Unfixed Sea Schematics for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+    "highlights": [
+      "Unfixed Sea Schematics",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.age-of-sail"
+    ],
+    "requiresCapabilities": [
+      "setting:age-of-sail"
+    ],
+    "providesCapabilities": [
+      "visuals:age-of-sail"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.sail.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Age of Sail original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.sail.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 6
+  },
+  "media": [
+    {
+      "name": "age-of-sail/sail-background.svg",
+      "path": "media/sail-background.svg",
+      "role": "background",
+      "mediaType": "image/svg+xml",
+      "checksum": "4c9521bb4c1ab9947a5c029ffb743514778f7aee4f334b79bb8db3058a7936b3",
+      "size": 738
+    },
+    {
+      "name": "age-of-sail/sail-portrait.svg",
+      "path": "media/sail-portrait.svg",
+      "role": "portrait",
+      "mediaType": "image/svg+xml",
+      "checksum": "e510c67280e81fafd12da4659fed92ddc671c15908ac8199bec426f88b3d69ba",
+      "size": 625
+    },
+    {
+      "name": "age-of-sail/sail-creature.svg",
+      "path": "media/sail-creature.svg",
+      "role": "token",
+      "mediaType": "image/svg+xml",
+      "checksum": "b5817a7cb53359a80044b5b21001fe0f1a2cf71bd933005514be3203ee63b6bb",
+      "size": 703
+    },
+    {
+      "name": "age-of-sail/sail-item.svg",
+      "path": "media/sail-item.svg",
+      "role": "item",
+      "mediaType": "image/svg+xml",
+      "checksum": "be538a3e2365bf623115a181145a5f06067852f70a034af6d11f6f0f8307bbbb",
+      "size": 638
+    },
+    {
+      "name": "age-of-sail/sail-location.svg",
+      "path": "media/sail-location.svg",
+      "role": "location",
+      "mediaType": "image/svg+xml",
+      "checksum": "20164795740dc0191d8a14ad3711708aa44f2e4e24f836be8bad69f07d8ef132",
+      "size": 627
+    },
+    {
+      "name": "age-of-sail/sail-map.svg",
+      "path": "media/sail-map.svg",
+      "role": "map",
+      "mediaType": "image/svg+xml",
+      "checksum": "532bdb623a8052a9d52c9aef47f697d2b4edade2c6353ec11dc4800b1ea455fc",
+      "size": 2464
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.sail.visuals",
+    "version": "1.0.0",
+    "name": "Unfixed Sea Schematics",
+    "description": "Unfixed Sea Schematics for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+    "provides": [
+      "visuals:age-of-sail"
+    ],
+    "requires": [
+      "setting:age-of-sail"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/sail-deep",
+        "value": {
+          "id": "sail-deep",
+          "name": "Voyage Navigation",
+          "description": "Original Age of Sail navigation schematics",
+          "defaults": {
+            "background": "assets/age-of-sail/sail-background.svg",
+            "portrait": "assets/age-of-sail/sail-portrait.svg",
+            "token": "assets/age-of-sail/sail-creature.svg",
+            "item": "assets/age-of-sail/sail-item.svg",
+            "location": "assets/age-of-sail/sail-location.svg",
+            "map": "assets/age-of-sail/sail-map.svg"
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "sail-deep"
+  }
+}

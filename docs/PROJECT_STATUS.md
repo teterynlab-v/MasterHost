@@ -13,8 +13,8 @@
 - **M25 Weird West: engineering gate complete (2026-09-27).** New original 1.0.0 Pack, three road/ghost-railway/living-mine Kits, playable roles/resources/paths, clean transfer/runtime/restart and browser Quick/GM/player/action/reload. Evidence: `docs/M25_STATUS.md`.
 - **M26 Urban Fantasy: engineering gate complete (2026-09-27).** New original 1.0.0 Pack, three library/tower/public-route Kits, playable roles/resources/paths, clean transfer/runtime/restart and browser Quick/GM/player/action/reload. Evidence: `docs/M26_STATUS.md`.
 - **M27 Cosmic Investigation: engineering gate complete (2026-09-27).** New 1.0.0 Pack, three signal/geometry/recall Kits, explicit Exposure accumulation/reduction, clean transfer/runtime/restart and browser resource/check/scene/reload evidence. Evidence: `docs/M27_STATUS.md`.
-- **Active:** M28 Age of Sail; M29 follows, then M30 collection acceptance.
-- Ordinary clean installations now show ten universes ready with deep content; Age of Sail and Mecha & Kaiju remain planned universes are planned.
+- **Active:** M29 Mecha & Kaiju; then M30 collection acceptance.
+- Ordinary clean installations now show eleven universes ready with deep content; Mecha & Kaiju remains planned.
 
 ## Post-M18 playability correction (2026-09-22)
 
@@ -177,3 +177,7 @@ The reproducible gate passed TypeScript, 146 ordinary tests, 2 live PostgreSQL t
 **Status: in progress; approved product UX, localization and local release engineering verified.** The engineering-first landing page has been replaced by a clear Run / Join / Create home. Campaign setup and lobby make invitation and Session start explicit, the GM table is organized around Table, Checks & Actions, Encounter, Party and Journal, and the player view prioritizes required actions with phone navigation. Typed application catalogs cover the home, setup, lobby, Character creation shell, GM table and core player controls in English, Russian, Spanish, Japanese, Simplified Chinese and Korean while Pack-authored content keeps its source language. The Quick Builder and detailed GM mechanic forms still need localization.
 
 The product Compose stack now provides private PostgreSQL/API services behind one Nginx browser origin, requires explicit secrets and has working diagnostics plus validated backup/restore. A checksummed source archive excludes backups and local state while including required install files, operator guides and 197 dependency-license records. The reproducible release gate passed TypeScript, 157 ordinary tests, production build, clean Compose, the complete M15 rehearsal and M15/M16 browser flows over the public HTTP/WebSocket proxy, live PostgreSQL restore, automated accessibility/responsive checks, exact archive verification and a fresh Compose image build from the extracted archive. See `M16_STATUS.md`. The complete milestone remains open pending a real three-to-four-hour multiplayer game, independent installation on another machine, human accessibility/localization review and an explicitly authorized public release.
+
+## M28 — Age of Sail
+
+Engineering gate and independent review passed: 151 entries, three Kits, nine assets, 219 tests, two clean PostgreSQL installations, portable-game transfer and restart. Browser verified late join, authoritative check, scene change and player reload. Human/editorial gates remain open; see `M28_STATUS.md`.

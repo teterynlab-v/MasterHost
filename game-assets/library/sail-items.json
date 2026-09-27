@@ -1,0 +1,1084 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.sail.items",
+  "version": "1.0.0",
+  "type": "items",
+  "name": "Rescue Cargo and Route Tools",
+  "description": "Rescue Cargo and Route Tools for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+  "tags": [
+    "age-of-sail",
+    "pirate-archipelago",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Rescue Cargo and Route Tools for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+    "highlights": [
+      "Rescue Cargo and Route Tools",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.age-of-sail"
+    ],
+    "requiresCapabilities": [
+      "setting:age-of-sail"
+    ],
+    "providesCapabilities": [
+      "items:age-of-sail"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.sail.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Age of Sail original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.sail.items"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 24,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.sail.items",
+    "version": "1.0.0",
+    "name": "Rescue Cargo and Route Tools",
+    "description": "Rescue Cargo and Route Tools for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+    "provides": [
+      "items:age-of-sail"
+    ],
+    "requires": [
+      "setting:age-of-sail"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.1",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Unrescued Crew List"
+            },
+            "description": {
+              "value": "Unrescued Crew List: names people erased from the prize ledger's profitable account."
+            },
+            "deepId": {
+              "value": "items.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "pirate-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.2",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Authentic Transfer Order"
+            },
+            "description": {
+              "value": "Authentic Transfer Order: permits inspected civilian cargo without military escort."
+            },
+            "deepId": {
+              "value": "items.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "imperial-trade-war"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.3",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Offered Route Verse"
+            },
+            "description": {
+              "value": "Offered Route Verse: guides the island using names willingly given by its sailors."
+            },
+            "deepId": {
+              "value": "items.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "mythic-ocean"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.4",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Boat Chain Key"
+            },
+            "description": {
+              "value": "Boat Chain Key: frees low-draft lifeboats after the rescue debt is witnessed."
+            },
+            "deepId": {
+              "value": "items.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "pirate-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.5",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Two-shore Treatment Inventory"
+            },
+            "description": {
+              "value": "Two-shore Treatment Inventory: shows whom the cargo can treat on both rival banks."
+            },
+            "deepId": {
+              "value": "items.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "imperial-trade-war"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.6",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Anchor Release Plan"
+            },
+            "description": {
+              "value": "Anchor Release Plan: marks a safe lower-shackle cut before the current turns."
+            },
+            "deepId": {
+              "value": "items.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "mythic-ocean"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.7",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Repaired Lead Line"
+            },
+            "description": {
+              "value": "Repaired Lead Line: tests the shallow reef route without risking a loaded rescue boat."
+            },
+            "deepId": {
+              "value": "items.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "pirate-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.8",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Seal Date Rubbing"
+            },
+            "description": {
+              "value": "Seal Date Rubbing: proves the harbor order predates the declared blockade."
+            },
+            "deepId": {
+              "value": "items.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "imperial-trade-war"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.9",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Borrowed Name Ribbon"
+            },
+            "description": {
+              "value": "Borrowed Name Ribbon: identifies a sailor bound into the island course without consent."
+            },
+            "deepId": {
+              "value": "items.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "mythic-ocean"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.10",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Earlier Wreck Testimony"
+            },
+            "description": {
+              "value": "Earlier Wreck Testimony: can restore rescue duties to the captain's prize ledger."
+            },
+            "deepId": {
+              "value": "items.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "pirate-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.11",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Neutral Inspection Slip"
+            },
+            "description": {
+              "value": "Neutral Inspection Slip: records civilian cargo under witnesses from both shores."
+            },
+            "deepId": {
+              "value": "items.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "imperial-trade-war"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.12",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Living Tide Chart"
+            },
+            "description": {
+              "value": "Living Tide Chart: changes according to the choir's offered current verse."
+            },
+            "deepId": {
+              "value": "items.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "mythic-ocean"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.13",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Reef Signal Oil"
+            },
+            "description": {
+              "value": "Reef Signal Oil: keeps the stranded crew's light visible through the squall."
+            },
+            "deepId": {
+              "value": "items.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.13"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "pirate-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.14",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Open Water Cradle"
+            },
+            "description": {
+              "value": "Open Water Cradle: moves treatment crates without placing soldiers aboard."
+            },
+            "deepId": {
+              "value": "items.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.17"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "imperial-trade-war"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.15",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Lower Shackle Tool"
+            },
+            "description": {
+              "value": "Lower Shackle Tool: releases the private anchor during a limited diving window."
+            },
+            "deepId": {
+              "value": "items.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.21"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "mythic-ocean"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.16",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Rescue Duty Covenant"
+            },
+            "description": {
+              "value": "Rescue Duty Covenant: requires prize crews to fund future lifesaving work."
+            },
+            "deepId": {
+              "value": "items.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.22"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "pirate-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.17",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Harbor Copy Comparison"
+            },
+            "description": {
+              "value": "Harbor Copy Comparison: separates authentic orders from the forged war extension."
+            },
+            "deepId": {
+              "value": "items.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "imperial-trade-war"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.18",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Name Release Knot"
+            },
+            "description": {
+              "value": "Name Release Knot: withdraws a borrowed name before a new route is sung."
+            },
+            "deepId": {
+              "value": "items.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "mythic-ocean"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.19",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Low-draft Boat Map"
+            },
+            "description": {
+              "value": "Low-draft Boat Map: assigns rescue places and safe tide crossings."
+            },
+            "deepId": {
+              "value": "items.19"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "pirate-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.20",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Civilian Cargo Receipt"
+            },
+            "description": {
+              "value": "Civilian Cargo Receipt: prevents inspected crates from becoming a captured prize."
+            },
+            "deepId": {
+              "value": "items.20"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "imperial-trade-war"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.21",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Choir Course Witness"
+            },
+            "description": {
+              "value": "Choir Course Witness: records the island's choice without claiming ownership of its horizon."
+            },
+            "deepId": {
+              "value": "items.21"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.15"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "mythic-ocean"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.22",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Revised Prize Ledger"
+            },
+            "description": {
+              "value": "Revised Prize Ledger: accounts for lost crews and rescue costs as well as spoils."
+            },
+            "deepId": {
+              "value": "items.22"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.16"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "pirate-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.23",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Two-shore Delivery Record"
+            },
+            "description": {
+              "value": "Two-shore Delivery Record: documents treatment delivered without surrendering crew independence."
+            },
+            "deepId": {
+              "value": "items.23"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.20"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "imperial-trade-war"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.items.24",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Unowned Horizon Chart"
+            },
+            "description": {
+              "value": "Unowned Horizon Chart: keeps navigation knowledge open to correction as the island moves."
+            },
+            "deepId": {
+              "value": "items.24"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.24"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "mythic-ocean"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-items-1": {
+            "template": "sail.deep.items.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "pirate-archipelago"
+              ]
+            }
+          },
+          "deep-items-2": {
+            "template": "sail.deep.items.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "imperial-trade-war"
+              ]
+            }
+          },
+          "deep-items-3": {
+            "template": "sail.deep.items.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mythic-ocean"
+              ]
+            }
+          },
+          "deep-items-4": {
+            "template": "sail.deep.items.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "pirate-archipelago"
+              ]
+            }
+          },
+          "deep-items-5": {
+            "template": "sail.deep.items.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "imperial-trade-war"
+              ]
+            }
+          },
+          "deep-items-6": {
+            "template": "sail.deep.items.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mythic-ocean"
+              ]
+            }
+          },
+          "deep-items-7": {
+            "template": "sail.deep.items.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "pirate-archipelago"
+              ]
+            }
+          },
+          "deep-items-8": {
+            "template": "sail.deep.items.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "imperial-trade-war"
+              ]
+            }
+          },
+          "deep-items-9": {
+            "template": "sail.deep.items.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mythic-ocean"
+              ]
+            }
+          },
+          "deep-items-10": {
+            "template": "sail.deep.items.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "pirate-archipelago"
+              ]
+            }
+          },
+          "deep-items-11": {
+            "template": "sail.deep.items.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "imperial-trade-war"
+              ]
+            }
+          },
+          "deep-items-12": {
+            "template": "sail.deep.items.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mythic-ocean"
+              ]
+            }
+          },
+          "deep-items-13": {
+            "template": "sail.deep.items.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "pirate-archipelago"
+              ]
+            }
+          },
+          "deep-items-14": {
+            "template": "sail.deep.items.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "imperial-trade-war"
+              ]
+            }
+          },
+          "deep-items-15": {
+            "template": "sail.deep.items.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mythic-ocean"
+              ]
+            }
+          },
+          "deep-items-16": {
+            "template": "sail.deep.items.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "pirate-archipelago"
+              ]
+            }
+          },
+          "deep-items-17": {
+            "template": "sail.deep.items.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "imperial-trade-war"
+              ]
+            }
+          },
+          "deep-items-18": {
+            "template": "sail.deep.items.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mythic-ocean"
+              ]
+            }
+          },
+          "deep-items-19": {
+            "template": "sail.deep.items.19",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "pirate-archipelago"
+              ]
+            }
+          },
+          "deep-items-20": {
+            "template": "sail.deep.items.20",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "imperial-trade-war"
+              ]
+            }
+          },
+          "deep-items-21": {
+            "template": "sail.deep.items.21",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mythic-ocean"
+              ]
+            }
+          },
+          "deep-items-22": {
+            "template": "sail.deep.items.22",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "pirate-archipelago"
+              ]
+            }
+          },
+          "deep-items-23": {
+            "template": "sail.deep.items.23",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "imperial-trade-war"
+              ]
+            }
+          },
+          "deep-items-24": {
+            "template": "sail.deep.items.24",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mythic-ocean"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

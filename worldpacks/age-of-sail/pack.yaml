@@ -1,0 +1,858 @@
+questions:
+  - id: world.tone
+    label: Campaign tone
+    type: choice
+    default: heroic
+    options:
+      - value: heroic
+        label: Heroic
+      - value: tense
+        label: Tense
+      - value: tragic
+        label: Tragic
+  - id: world.threat
+    label: Threat level
+    type: choice
+    default: high
+    options:
+      - value: low
+        label: Low
+      - value: medium
+        label: Medium
+      - value: high
+        label: High
+  - id: world.environment
+    label: Dominant environment
+    type: choice
+    default: coves
+    options:
+      - value: coves
+        label: Free coves
+      - value: blockade
+        label: Neutral trade route
+      - value: moving-island
+        label: Living ocean
+  - id: world.scarcity
+    label: Resource pressure
+    type: choice
+    default: strained
+    options:
+      - value: plentiful
+        label: Plentiful
+      - value: strained
+        label: Strained
+      - value: rare
+        label: Rare
+  - id: world.pattern
+    label: Universe pattern
+    type: choice
+    default: pirate-archipelago
+    options:
+      - value: pirate-archipelago
+        label: Pirate Archipelago
+      - value: imperial-trade-war
+        label: Imperial Trade War
+      - value: mythic-ocean
+        label: Mythic Ocean
+  - id: world.campaignKit
+    label: Campaign Kit
+    type: choice
+    default: kit.pirate-archipelago
+    options:
+      - value: kit.pirate-archipelago
+        label: "Pirate Archipelago: Boats for the Next Storm"
+      - value: kit.imperial-trade-war
+        label: "Imperial Trade War: Neither Navy's Prize"
+      - value: kit.mythic-ocean
+        label: "Mythic Ocean: An Island with Its Own Horizon"
+  - id: world.visualTheme
+    label: Visual theme
+    type: choice
+    default: visualThemes.1
+    options:
+      - value: visualThemes.1
+        label: Free Cove Rescue
+      - value: visualThemes.2
+        label: Neutral Cargo Chart
+      - value: visualThemes.3
+        label: Unfixed Horizon Song
+generators:
+  region.count:
+    type: integer-range
+    min: 2
+    max: 3
+  region.names:
+    type: values
+    values:
+      - Pirate Archipelago
+      - Imperial Trade War
+      - Mythic Ocean
+  settlement.names:
+    type: values
+    values:
+      - Free Cove Signal Tower
+      - Neutral Quay
+      - Walking Island Beach
+      - Salvage Basin
+      - Surgeons' Warehouse
+      - Storm Broker Anchorage
+      - Broken Reef Channel
+      - Blockade Flagship
+  location.names:
+    type: values
+    values:
+      - Free Cove Signal Tower
+      - Neutral Quay
+      - Walking Island Beach
+      - Salvage Basin
+      - Surgeons' Warehouse
+      - Storm Broker Anchorage
+      - Broken Reef Channel
+      - Blockade Flagship
+  creature.names:
+    type: values
+    values:
+      - Prize Enforcer
+      - Forged Seal Patrol
+      - Anchor Warden
+      - Reef Corsair
+      - Blockade Informer
+      - Name Harpooner
+      - Salvage Shark
+      - Quay Gun Crew
+  npc.names:
+    type: values
+    values:
+      - Captain Mara Cove
+      - Pilot Kai Neutral
+      - Singer Ren Drift
+      - Salvager Tessa Basin
+      - Surgeon Ivo Quay
+      - Helmswoman Bea Storm
+      - Keeper Neri Signal
+      - Commander Sol Flag
+  faction.names:
+    type: values
+    values:
+      - Free Cove Captains
+      - Neutral Cargo League
+      - Drifting Island Choir
+      - Reef Salvagers
+      - Harbor Surgeons
+      - Storm Watch Crew
+      - Cove Signal Keepers
+      - Tide Chart Guild
+  event.names:
+    type: values
+    values:
+      - Reef Distress
+      - Seal at the Quay
+      - Borrowed Name Song
+      - Wreck Debt
+      - Treatment Count
+      - Current Turn
+      - Shallow Sounding
+      - Order Comparison
+  encounter.names:
+    type: values
+    values:
+      - Lifeboats behind Chains
+      - A Seal with the Wrong Date
+      - The Island Sings Your Name
+      - The Wreck before This Wreck
+      - Inspection without Impressment
+      - An Anchor the Island Never Chose
+      - Soundings through Broken Reef
+      - Orders aboard the Flagship
+  item.names:
+    type: values
+    values:
+      - Unrescued Crew List
+      - Authentic Transfer Order
+      - Offered Route Verse
+      - Boat Chain Key
+      - Two-shore Treatment Inventory
+      - Anchor Release Plan
+      - Repaired Lead Line
+      - Seal Date Rubbing
+  economy:
+    type: weighted-table
+    entries:
+      - value: trade
+        weight: 35
+      - value: craft
+        weight: 30
+      - value: service
+        weight: 20
+      - value: smuggling
+        weight: 15
+  danger:
+    type: integer-range
+    min: 1
+    max: 5
+traits:
+  region.threatened:
+    id: region.threatened
+    when:
+      eq:
+        - descriptor: world.threat
+        - high
+    addTags:
+      - dangerous
+    set:
+      alert: true
+  location.scarce:
+    id: location.scarce
+    when:
+      ne:
+        - descriptor: world.scarcity
+        - plentiful
+    addTags:
+      - contested
+    set:
+      supplies: limited
+templates:
+  world.root:
+    kind: realm
+    values:
+      name:
+        value: The Unfixed Sea
+      tone:
+        descriptor: world.tone
+        default: heroic
+      environment:
+        descriptor: world.environment
+        default: pastoral
+      scarcity:
+        descriptor: world.scarcity
+        default: strained
+    components:
+      regions:
+        template: region.standard
+        count:
+          generator: region.count
+      faction:
+        template: faction.major
+      encounter:
+        template: encounter.signature
+      event:
+        template: event.opening
+  region.standard:
+    kind: province
+    traits:
+      - region.threatened
+    values:
+      name:
+        generator: region.names
+      threat:
+        descriptor: world.threat
+        default: high
+      danger:
+        generator: danger
+    components:
+      settlements:
+        template: settlement.standard
+        count: 2
+      locations:
+        template: location.standard
+        count: 2
+      creatures:
+        template: creature.standard
+        count: 2
+      npc:
+        template: npc.standard
+      item:
+        template: item.signature
+  settlement.standard:
+    kind: settlement
+    tags:
+      - community
+    values:
+      name:
+        generator: settlement.names
+      economy:
+        generator: economy
+      environment:
+        descriptor: world.environment
+        default: pastoral
+    components: {}
+  location.standard:
+    kind: location
+    tags:
+      - adventure-site
+    traits:
+      - location.scarce
+    values:
+      name:
+        generator: location.names
+      feature:
+        descriptor: world.environment
+        default: pastoral
+    components: {}
+  creature.standard:
+    kind: creature
+    tags:
+      - threat
+    values:
+      name:
+        generator: creature.names
+      danger:
+        generator: danger
+    components: {}
+  npc.standard:
+    kind: npc
+    tags:
+      - contact
+    values:
+      name:
+        generator: npc.names
+      agenda:
+        generator: economy
+    components: {}
+  item.signature:
+    kind: item
+    tags:
+      - treasure
+    values:
+      name:
+        generator: item.names
+      scarcity:
+        descriptor: world.scarcity
+        default: strained
+    components: {}
+  faction.major:
+    kind: faction
+    tags:
+      - major-faction
+    values:
+      name:
+        generator: faction.names
+      agenda:
+        generator: economy
+    components: {}
+  encounter.signature:
+    kind: encounter
+    tags:
+      - set-piece
+    values:
+      name:
+        generator: encounter.names
+      threat:
+        descriptor: world.threat
+        default: high
+    components: {}
+  event.opening:
+    kind: event
+    tags:
+      - campaign-hook
+    values:
+      name:
+        generator: event.names
+      tone:
+        descriptor: world.tone
+        default: heroic
+    components: {}
+relations:
+  - id: settlement-route
+    type: connectedTo
+    from:
+      kind: settlement
+    to:
+      kind: settlement
+    mode: chain
+    bidirectional: true
+  - id: faction-influence
+    type: influencedBy
+    from:
+      kind: province
+    to:
+      kind: faction
+      tags:
+        - major-faction
+    mode: each-to-first
+constraints:
+  - id: regional-depth
+    type: entity-count
+    query:
+      kind: province
+    min: 2
+  - id: adventure-sites
+    type: entity-count
+    query:
+      kind: location
+    min: 4
+  - id: routes-exist
+    type: relation-count
+    relation: connectedTo
+    min: 3
+dependencies: []
+characterCreation:
+  schemaVersion: "1"
+  steps:
+    - id: identity
+      title: Identity
+      fields:
+        - id: name
+          label: Name
+          type: text
+          required: true
+          minLength: 2
+          maxLength: 60
+    - id: calling
+      title: Calling
+      fields:
+        - id: calling
+          label: Calling
+          type: choice
+          required: true
+          options:
+            - value: duelist
+              label: Duelist
+            - value: navigator
+              label: Navigator
+            - value: storyteller
+              label: Storyteller
+        - id: archetype
+          label: Crew role
+          type: choice
+          required: true
+          default: archetypes.1
+          options:
+            - value: archetypes.1
+              label: Reef Pilot
+            - value: archetypes.2
+              label: Neutral Quartermaster
+            - value: archetypes.3
+              label: Choir Navigator
+            - value: archetypes.4
+              label: Wreck Witness
+            - value: archetypes.5
+              label: Two-shore Envoy
+            - value: archetypes.6
+              label: Anchor Diver
+            - value: archetypes.7
+              label: Signal Keeper
+            - value: archetypes.8
+              label: Living Chartwright
+        - id: path
+          label: Progression path
+          type: choice
+          required: true
+          default: progressionPaths.1
+          options:
+            - value: progressionPaths.1
+              label: Free Cove Rescuer
+            - value: progressionPaths.2
+              label: Civilian Passage Keeper
+            - value: progressionPaths.3
+              label: Unfixed Horizon Guide
+            - value: progressionPaths.4
+              label: Wreck Account Steward
+            - value: progressionPaths.5
+              label: Open Water Mediator
+            - value: progressionPaths.6
+              label: Storm Release Diver
+    - id: aptitudes
+      title: Aptitudes
+      fields:
+        - id: brawn
+          label: Brawn
+          type: number
+          min: -2
+          max: 5
+          default: 1
+        - id: seamanship
+          label: Seamanship
+          type: number
+          min: -2
+          max: 5
+          default: 1
+        - id: charm
+          label: Charm
+          type: number
+          min: -2
+          max: 5
+          default: 1
+    - id: signature
+      title: Signature
+      fields:
+        - id: signature
+          label: Signature approach
+          type: choice
+          required: true
+          default: bold
+          options:
+            - value: bold
+              label: Bold
+            - value: careful
+              label: Careful
+            - value: compassionate
+              label: Compassionate
+        - id: portrait
+          label: Portrait
+          type: asset
+          required: true
+          default: standard
+          options:
+            - value: standard
+              label: Age of Sail portrait
+            - value: silhouette
+              label: Silhouette
+  calculated:
+    - id: readiness
+      operation: sum
+      fields:
+        - brawn
+        - seamanship
+        - charm
+  starting:
+    progression:
+      renown: 0
+      experience: 0
+      progressionPaths.1: 0
+      progressionPaths.2: 0
+      progressionPaths.3: 0
+      progressionPaths.4: 0
+      progressionPaths.5: 0
+      progressionPaths.6: 0
+    resources:
+      health: 18
+      morale: 10
+      provisions: 8
+    inventory:
+      - id: weapon
+        quantity: 1
+        when:
+          field: calling
+          equals: duelist
+      - id: kit
+        quantity: 1
+        when:
+          field: calling
+          equals: navigator
+      - id: relic
+        quantity: 1
+        when:
+          field: calling
+          equals: storyteller
+      - id: supply
+        quantity: 2
+    traits:
+      - id: trained-duelist
+        when:
+          field: calling
+          equals: duelist
+      - id: trained-navigator
+        when:
+          field: calling
+          equals: navigator
+      - id: trained-storyteller
+        when:
+          field: calling
+          equals: storyteller
+      - id: role-archetypes.1
+        when:
+          field: archetype
+          equals: archetypes.1
+      - id: role-archetypes.2
+        when:
+          field: archetype
+          equals: archetypes.2
+      - id: role-archetypes.3
+        when:
+          field: archetype
+          equals: archetypes.3
+      - id: role-archetypes.4
+        when:
+          field: archetype
+          equals: archetypes.4
+      - id: role-archetypes.5
+        when:
+          field: archetype
+          equals: archetypes.5
+      - id: role-archetypes.6
+        when:
+          field: archetype
+          equals: archetypes.6
+      - id: role-archetypes.7
+        when:
+          field: archetype
+          equals: archetypes.7
+      - id: role-archetypes.8
+        when:
+          field: archetype
+          equals: archetypes.8
+      - id: path-progressionPaths.1
+        when:
+          field: path
+          equals: progressionPaths.1
+      - id: path-progressionPaths.2
+        when:
+          field: path
+          equals: progressionPaths.2
+      - id: path-progressionPaths.3
+        when:
+          field: path
+          equals: progressionPaths.3
+      - id: path-progressionPaths.4
+        when:
+          field: path
+          equals: progressionPaths.4
+      - id: path-progressionPaths.5
+        when:
+          field: path
+          equals: progressionPaths.5
+      - id: path-progressionPaths.6
+        when:
+          field: path
+          equals: progressionPaths.6
+    assets:
+      - id: portrait
+        value: assets/ui/portrait.svg
+  portability:
+    rules: []
+checks:
+  brawn:
+    label: Brawn
+    dice: 1d20
+    modifierField: brawn
+    criticalSuccess:
+      rollTotalAtLeast: 20
+    criticalFailure:
+      rollTotalAtMost: 1
+  seamanship:
+    label: Seamanship
+    dice: 2d6
+    modifierField: seamanship
+    criticalSuccess:
+      rollTotalAtLeast: 12
+    criticalFailure:
+      rollTotalAtMost: 2
+  charm:
+    label: Charm
+    dice: 1d20
+    modifierField: charm
+    criticalSuccess:
+      rollTotalAtLeast: 20
+    criticalFailure:
+      rollTotalAtMost: 1
+resources:
+  health:
+    label: Health
+    min: 0
+    max: 24
+    default: 18
+  morale:
+    label: Morale
+    min: 0
+    max: 16
+    default: 10
+  provisions:
+    label: Provisions
+    min: 0
+    max: 18
+    default: 8
+items:
+  weapon:
+    label: Boarding Sabre
+    stackLimit: 1
+  kit:
+    label: Navigator Kit
+    stackLimit: 1
+  relic:
+    label: Living Chart
+    stackLimit: 1
+  supply:
+    label: Rest Ration
+    stackLimit: 10
+  armor:
+    label: Deck Coat
+    stackLimit: 1
+  tool:
+    label: Rigging Tools
+    stackLimit: 1
+  token:
+    label: Harbor Seal
+    stackLimit: 1
+progression:
+  renown:
+    label: Renown
+    min: 0
+    max: 100
+    default: 0
+  experience:
+    label: Experience
+    min: 0
+    default: 0
+  progressionPaths.1:
+    label: Free Cove Rescuer
+    min: 0
+    default: 0
+  progressionPaths.2:
+    label: Civilian Passage Keeper
+    min: 0
+    default: 0
+  progressionPaths.3:
+    label: Unfixed Horizon Guide
+    min: 0
+    default: 0
+  progressionPaths.4:
+    label: Wreck Account Steward
+    min: 0
+    default: 0
+  progressionPaths.5:
+    label: Open Water Mediator
+    min: 0
+    default: 0
+  progressionPaths.6:
+    label: Storm Release Diver
+    min: 0
+    default: 0
+locations:
+  worldEntityKinds:
+    - settlement
+    - location
+actorTemplates:
+  adversary:
+    label: Prize Enforcer
+    resources:
+      health: 10
+      morale: 0
+      provisions: 0
+    attributes:
+      brawn: 2
+      seamanship: 0
+      charm: 1
+    inventory:
+      - itemId: weapon
+        quantity: 1
+    progression:
+      renown: 0
+      experience: 0
+    worldEntityKinds:
+      - creature
+  contact:
+    label: Harbor Pilot
+    resources:
+      health: 18
+      morale: 10
+      provisions: 8
+    attributes:
+      brawn: 0
+      seamanship: 2
+      charm: 2
+    inventory:
+      - itemId: kit
+        quantity: 1
+    progression:
+      renown: 5
+      experience: 0
+    worldEntityKinds:
+      - npc
+  elite:
+    label: Anchor Warden
+    resources:
+      health: 18
+      morale: 10
+      provisions: 8
+    attributes:
+      brawn: 3
+      seamanship: 2
+      charm: 2
+    inventory:
+      - itemId: relic
+        quantity: 1
+    progression:
+      renown: 10
+      experience: 5
+    worldEntityKinds:
+      - creature
+effects:
+  shaken:
+    label: Rattled
+    duration:
+      type: turns
+      value: 2
+    modifiers:
+      brawn: -2
+    blockedActions:
+      - inspire
+  blessed:
+    label: Fair Wind
+    duration:
+      type: rounds
+      value: 2
+    modifiers:
+      seamanship: 2
+  guarded:
+    label: Braced
+    duration:
+      type: turns
+      value: 1
+    modifiers:
+      charm: 2
+actions:
+  basic-attack:
+    label: Use Boarding Sabre
+    target: single-actor
+    steps:
+      - check:
+          id: brawn
+          against: input.difficulty
+      - roll:
+          id: impact
+          dice: 1d6
+        when:
+          previousOutcome: success
+      - resource:
+          target: target
+          resource: health
+          operation: subtract
+          value: impact.total
+        when:
+          previousOutcome: success
+  recover:
+    label: Recover Health
+    kind: resource
+    target: self
+    resource: health
+    operation: add
+    amount: 3
+  hinder:
+    label: Rattled
+    kind: effect
+    target: actor
+    effectId: shaken
+  inspire:
+    label: Fair Wind
+    target: multiple-actors
+    steps:
+      - effect:
+          target: target
+          id: blessed
+  guard:
+    label: Braced
+    kind: effect
+    target: self
+    effectId: guarded
+  signature-move:
+    label: Signature Move
+    target: single-actor
+    steps:
+      - check:
+          id: seamanship
+          against: input.difficulty
+      - effect:
+          target: target
+          id: shaken
+        when:
+          previousOutcome: success
+  pressure:
+    label: Spend Provisions
+    kind: resource
+    target: self
+    resource: provisions
+    operation: subtract
+    amount: 1
+encounter:
+  orderingPolicy: fixed

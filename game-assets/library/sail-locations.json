@@ -1,0 +1,580 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.sail.locations",
+  "version": "1.0.0",
+  "type": "locations",
+  "name": "Twelve Cove Quay and Living Island Sites",
+  "description": "Twelve Cove Quay and Living Island Sites for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+  "tags": [
+    "age-of-sail",
+    "pirate-archipelago",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Twelve Cove Quay and Living Island Sites for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+    "highlights": [
+      "Twelve Cove Quay and Living Island Sites",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.age-of-sail"
+    ],
+    "requiresCapabilities": [
+      "world:age-of-sail"
+    ],
+    "providesCapabilities": [
+      "locations:age-of-sail"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.sail.world-template",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Age of Sail original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.sail.locations"
+  },
+  "published": true,
+  "counts": {
+    "locations": 12,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.sail.locations",
+    "version": "1.0.0",
+    "name": "Twelve Cove Quay and Living Island Sites",
+    "description": "Twelve Cove Quay and Living Island Sites for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+    "provides": [
+      "locations:age-of-sail"
+    ],
+    "requires": [
+      "world:age-of-sail"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.locations.1",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Free Cove Signal Tower"
+            },
+            "description": {
+              "value": "Free Cove Signal Tower: a reef light calls for rescue while the harbor's lifeboats are locked."
+            },
+            "deepId": {
+              "value": "locations.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "pirate-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.locations.2",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Neutral Quay"
+            },
+            "description": {
+              "value": "Neutral Quay: medical crates wait beneath a blockade seal with the wrong signing date."
+            },
+            "deepId": {
+              "value": "locations.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "imperial-trade-war"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.locations.3",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Walking Island Beach"
+            },
+            "description": {
+              "value": "Walking Island Beach: the shoreline moves when the crew sings a name nobody volunteered."
+            },
+            "deepId": {
+              "value": "locations.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "mythic-ocean"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.locations.4",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Salvage Basin"
+            },
+            "description": {
+              "value": "Salvage Basin: stolen boats are chained beside cargo taken from an earlier wreck."
+            },
+            "deepId": {
+              "value": "locations.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "pirate-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.locations.5",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Surgeons' Warehouse"
+            },
+            "description": {
+              "value": "Surgeons' Warehouse: treatment inventory proves the cargo is for both rival shores."
+            },
+            "deepId": {
+              "value": "locations.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "imperial-trade-war"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.locations.6",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Storm Broker Anchorage"
+            },
+            "description": {
+              "value": "Storm Broker Anchorage: a private anchor forces the moving island into a dangerous current."
+            },
+            "deepId": {
+              "value": "locations.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "mythic-ocean"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.locations.7",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Broken Reef Channel"
+            },
+            "description": {
+              "value": "Broken Reef Channel: a rescue route needs low-draft boats and witnessed soundings."
+            },
+            "deepId": {
+              "value": "locations.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "pirate-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.locations.8",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Blockade Flagship"
+            },
+            "description": {
+              "value": "Blockade Flagship: its captain's orders differ from the forged harbor copies."
+            },
+            "deepId": {
+              "value": "locations.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "imperial-trade-war"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.locations.9",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Choir Ridge"
+            },
+            "description": {
+              "value": "Choir Ridge: the island can choose another course after its borrowed names are released."
+            },
+            "deepId": {
+              "value": "locations.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "mythic-ocean"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.locations.10",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Prize Ledger Cabin"
+            },
+            "description": {
+              "value": "Prize Ledger Cabin: the free captain erased rescue duties from a list of profitable captures."
+            },
+            "deepId": {
+              "value": "locations.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "pirate-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.locations.11",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Open Water Transfer"
+            },
+            "description": {
+              "value": "Open Water Transfer: neutral crews can move treatment crates without accepting military escort."
+            },
+            "deepId": {
+              "value": "locations.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "imperial-trade-war"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.locations.12",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Unfixed Horizon"
+            },
+            "description": {
+              "value": "Unfixed Horizon: the chart changes safely when sailors offer their own route verse."
+            },
+            "deepId": {
+              "value": "locations.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "mythic-ocean"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-locations-1": {
+            "template": "sail.deep.locations.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "pirate-archipelago"
+              ]
+            }
+          },
+          "deep-locations-2": {
+            "template": "sail.deep.locations.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "imperial-trade-war"
+              ]
+            }
+          },
+          "deep-locations-3": {
+            "template": "sail.deep.locations.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mythic-ocean"
+              ]
+            }
+          },
+          "deep-locations-4": {
+            "template": "sail.deep.locations.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "pirate-archipelago"
+              ]
+            }
+          },
+          "deep-locations-5": {
+            "template": "sail.deep.locations.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "imperial-trade-war"
+              ]
+            }
+          },
+          "deep-locations-6": {
+            "template": "sail.deep.locations.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mythic-ocean"
+              ]
+            }
+          },
+          "deep-locations-7": {
+            "template": "sail.deep.locations.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "pirate-archipelago"
+              ]
+            }
+          },
+          "deep-locations-8": {
+            "template": "sail.deep.locations.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "imperial-trade-war"
+              ]
+            }
+          },
+          "deep-locations-9": {
+            "template": "sail.deep.locations.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mythic-ocean"
+              ]
+            }
+          },
+          "deep-locations-10": {
+            "template": "sail.deep.locations.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "pirate-archipelago"
+              ]
+            }
+          },
+          "deep-locations-11": {
+            "template": "sail.deep.locations.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "imperial-trade-war"
+              ]
+            }
+          },
+          "deep-locations-12": {
+            "template": "sail.deep.locations.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mythic-ocean"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

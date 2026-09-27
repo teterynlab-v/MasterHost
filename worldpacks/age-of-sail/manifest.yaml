@@ -1,0 +1,16 @@
+id: masterhost.age-of-sail
+name: Age of Sail
+version: 1.0.0
+schemaVersion: "0.1"
+defaultArtSet: standard
+entryTemplate: world.root
+description: "Three original seafaring campaigns: a free-cove rescue, neutral
+  treatment cargo through forged blockade orders and a moving island choosing
+  its own horizon."
+publisher: MasterHost
+official: true
+contentRating: everyone
+license:
+  spdx: CC-BY-4.0
+  attribution: Age of Sail original setting content and artwork © MasterHost contributors.
+  source: https://creativecommons.org/licenses/by/4.0/

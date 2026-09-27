@@ -1,0 +1,670 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.sail.characters",
+  "version": "1.0.0",
+  "type": "characters",
+  "name": "Crew Roles and Sea Reputation Paths",
+  "description": "Crew Roles and Sea Reputation Paths for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+  "tags": [
+    "age-of-sail",
+    "pirate-archipelago",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Crew Roles and Sea Reputation Paths for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+    "highlights": [
+      "Crew Roles and Sea Reputation Paths",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.age-of-sail"
+    ],
+    "requiresCapabilities": [
+      "rules:age-of-sail",
+      "items:age-of-sail"
+    ],
+    "providesCapabilities": [
+      "characters:age-of-sail"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.sail.rules",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.sail.items",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Age of Sail original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.sail.characters"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 8,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.sail.characters",
+    "version": "1.0.0",
+    "name": "Crew Roles and Sea Reputation Paths",
+    "description": "Crew Roles and Sea Reputation Paths for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+    "provides": [
+      "characters:age-of-sail"
+    ],
+    "requires": [
+      "rules:age-of-sail",
+      "items:age-of-sail"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.archetypes.1",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Reef Pilot"
+            },
+            "description": {
+              "value": "Reef Pilot: tests rescue routes and counts crew places before loading cargo."
+            },
+            "deepId": {
+              "value": "archetypes.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "pirate-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.archetypes.2",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Neutral Quartermaster"
+            },
+            "description": {
+              "value": "Neutral Quartermaster: keeps treatment cargo independent of military prize claims."
+            },
+            "deepId": {
+              "value": "archetypes.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "imperial-trade-war"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.archetypes.3",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Choir Navigator"
+            },
+            "description": {
+              "value": "Choir Navigator: uses route names offered by their holders."
+            },
+            "deepId": {
+              "value": "archetypes.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "mythic-ocean"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.archetypes.4",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Wreck Witness"
+            },
+            "description": {
+              "value": "Wreck Witness: restores rescue duties concealed by profitable accounts."
+            },
+            "deepId": {
+              "value": "archetypes.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "pirate-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.archetypes.5",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Two-shore Envoy"
+            },
+            "description": {
+              "value": "Two-shore Envoy: makes civilian inspection possible without impressment."
+            },
+            "deepId": {
+              "value": "archetypes.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "imperial-trade-war"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.archetypes.6",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Anchor Diver"
+            },
+            "description": {
+              "value": "Anchor Diver: plans a bounded safe release for a moving island."
+            },
+            "deepId": {
+              "value": "archetypes.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "mythic-ocean"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.archetypes.7",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Signal Keeper"
+            },
+            "description": {
+              "value": "Signal Keeper: keeps lost crews visible after a harbor closes."
+            },
+            "deepId": {
+              "value": "archetypes.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "pirate-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.archetypes.8",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Living Chartwright"
+            },
+            "description": {
+              "value": "Living Chartwright: records changing routes without claiming their permanent ownership."
+            },
+            "deepId": {
+              "value": "archetypes.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "imperial-trade-war"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.progressionPaths.1",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Free Cove Rescuer"
+            },
+            "description": {
+              "value": "Free Cove Rescuer: earn standing by bringing stranded crews home; gain lifeboat access and watch duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "pirate-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.progressionPaths.2",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Civilian Passage Keeper"
+            },
+            "description": {
+              "value": "Civilian Passage Keeper: earn trust through independent treatment delivery; gain neutral quays and inspection duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "imperial-trade-war"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.progressionPaths.3",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Unfixed Horizon Guide"
+            },
+            "description": {
+              "value": "Unfixed Horizon Guide: earn welcome through volunteered navigation; gain choir routes and correction obligations."
+            },
+            "deepId": {
+              "value": "progressionPaths.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "mythic-ocean"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.progressionPaths.4",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Wreck Account Steward"
+            },
+            "description": {
+              "value": "Wreck Account Steward: earn legitimacy by counting losses alongside spoils; gain survivor witnesses and rescue costs."
+            },
+            "deepId": {
+              "value": "progressionPaths.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "pirate-archipelago"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.progressionPaths.5",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Open Water Mediator"
+            },
+            "description": {
+              "value": "Open Water Mediator: earn confidence through two-shore transfer; gain inspection crews and delivery accountability."
+            },
+            "deepId": {
+              "value": "progressionPaths.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "imperial-trade-war"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.progressionPaths.6",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Storm Release Diver"
+            },
+            "description": {
+              "value": "Storm Release Diver: earn respect through safe anchor work; gain chart support and evacuation duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "mythic-ocean"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-archetypes-1": {
+            "template": "sail.deep.archetypes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "pirate-archipelago"
+              ]
+            }
+          },
+          "deep-archetypes-2": {
+            "template": "sail.deep.archetypes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "imperial-trade-war"
+              ]
+            }
+          },
+          "deep-archetypes-3": {
+            "template": "sail.deep.archetypes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mythic-ocean"
+              ]
+            }
+          },
+          "deep-archetypes-4": {
+            "template": "sail.deep.archetypes.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "pirate-archipelago"
+              ]
+            }
+          },
+          "deep-archetypes-5": {
+            "template": "sail.deep.archetypes.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "imperial-trade-war"
+              ]
+            }
+          },
+          "deep-archetypes-6": {
+            "template": "sail.deep.archetypes.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mythic-ocean"
+              ]
+            }
+          },
+          "deep-archetypes-7": {
+            "template": "sail.deep.archetypes.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "pirate-archipelago"
+              ]
+            }
+          },
+          "deep-archetypes-8": {
+            "template": "sail.deep.archetypes.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "imperial-trade-war"
+              ]
+            }
+          },
+          "deep-progressionPaths-1": {
+            "template": "sail.deep.progressionPaths.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "pirate-archipelago"
+              ]
+            }
+          },
+          "deep-progressionPaths-2": {
+            "template": "sail.deep.progressionPaths.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "imperial-trade-war"
+              ]
+            }
+          },
+          "deep-progressionPaths-3": {
+            "template": "sail.deep.progressionPaths.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mythic-ocean"
+              ]
+            }
+          },
+          "deep-progressionPaths-4": {
+            "template": "sail.deep.progressionPaths.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "pirate-archipelago"
+              ]
+            }
+          },
+          "deep-progressionPaths-5": {
+            "template": "sail.deep.progressionPaths.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "imperial-trade-war"
+              ]
+            }
+          },
+          "deep-progressionPaths-6": {
+            "template": "sail.deep.progressionPaths.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mythic-ocean"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

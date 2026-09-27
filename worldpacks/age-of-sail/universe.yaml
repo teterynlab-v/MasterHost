@@ -1,0 +1,3762 @@
+{
+  "schemaVersion": "1",
+  "id": "age-of-sail",
+  "genres": [
+    "historical fantasy",
+    "adventure"
+  ],
+  "tones": [
+    "swashbuckling",
+    "perilous",
+    "romantic"
+  ],
+  "complexity": "intermediate",
+  "recommendedPlayers": {
+    "min": 2,
+    "max": 6
+  },
+  "gameLoop": [
+    {
+      "id": "rumor",
+      "label": "Follow the distress light forged order or borrowed route name",
+      "ruleRefs": [
+        "check:seamanship",
+        "action:recover"
+      ]
+    },
+    {
+      "id": "voyage",
+      "label": "Sound the route and protect crew capacity",
+      "ruleRefs": [
+        "check:brawn",
+        "action:inspire"
+      ]
+    },
+    {
+      "id": "discovery",
+      "label": "Confront a prize claim blockade or captive living island",
+      "ruleRefs": [
+        "check:charm",
+        "resource:provisions"
+      ]
+    },
+    {
+      "id": "reputation",
+      "label": "Record rescue duties neutral cargo and chosen horizons",
+      "ruleRefs": [
+        "progression:renown"
+      ]
+    }
+  ],
+  "patterns": [
+    {
+      "id": "pirate-archipelago",
+      "name": "Pirate Archipelago",
+      "summary": "Free captains hold lifeboats needed by a stranded reef crew. Settle an earlier wreck debt, launch a rescue and choose whether spoils include future lifesaving duties.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    },
+    {
+      "id": "imperial-trade-war",
+      "name": "Imperial Trade War",
+      "summary": "Civilian treatment crates face a blockade backed by forged papers. Compare orders, deliver to both rival shores and preserve a neutral crew from forced military service.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    },
+    {
+      "id": "mythic-ocean",
+      "name": "Mythic Ocean",
+      "summary": "A moving island sings names its sailors never offered while a private anchor drags it toward a storm. Free borrowed names, cut the anchor and chart a course the island chooses.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    }
+  ],
+  "campaignKits": [
+    {
+      "id": "kit.pirate-archipelago",
+      "name": "Pirate Archipelago: Boats for the Next Storm",
+      "summary": "A three to four hour Pirate Archipelago game: Free captains hold lifeboats needed by a stranded reef crew. Settle an earlier wreck debt, launch a rescue and choose whether spoils include future lifesaving duties.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "pirate-archipelago"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.1",
+      "sceneIds": [
+        "scenes.1",
+        "scenes.4",
+        "scenes.7",
+        "scenes.10",
+        "scenes.13",
+        "scenes.16"
+      ],
+      "npcIds": [
+        "npcs.1",
+        "npcs.4",
+        "npcs.7"
+      ],
+      "locationIds": [
+        "locations.1",
+        "locations.4",
+        "locations.7"
+      ],
+      "rewardIds": [
+        "items.1",
+        "items.4"
+      ],
+      "gmGuidance": [
+        "Start with a distress light while usable lifeboats remain chained.",
+        "State tide depth rescue places and cargo capacity before a voyage.",
+        "Let earlier survivors and the prize ledger reveal why the boats are withheld.",
+        "Record saved crews losses and future rescue obligations."
+      ],
+      "readyCharacterIds": [
+        "archetypes.1",
+        "archetypes.4"
+      ]
+    },
+    {
+      "id": "kit.imperial-trade-war",
+      "name": "Imperial Trade War: Neither Navy's Prize",
+      "summary": "A three to four hour Imperial Trade War game: Civilian treatment crates face a blockade backed by forged papers. Compare orders, deliver to both rival shores and preserve a neutral crew from forced military service.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "imperial-trade-war"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.2",
+      "sceneIds": [
+        "scenes.2",
+        "scenes.5",
+        "scenes.8",
+        "scenes.11",
+        "scenes.14",
+        "scenes.17"
+      ],
+      "npcIds": [
+        "npcs.2",
+        "npcs.5",
+        "npcs.8"
+      ],
+      "locationIds": [
+        "locations.2",
+        "locations.5",
+        "locations.8"
+      ],
+      "rewardIds": [
+        "items.2",
+        "items.5"
+      ],
+      "gmGuidance": [
+        "Open with treatment crates and an order whose date is visibly wrong.",
+        "Make both shores’ needs concrete without requiring military allegiance.",
+        "Offer order comparison neutral inspection and open-water transfer.",
+        "Record independent crew status and actual civilian deliveries."
+      ],
+      "readyCharacterIds": [
+        "archetypes.2",
+        "archetypes.5"
+      ]
+    },
+    {
+      "id": "kit.mythic-ocean",
+      "name": "Mythic Ocean: An Island with Its Own Horizon",
+      "summary": "A three to four hour Mythic Ocean game: A moving island sings names its sailors never offered while a private anchor drags it toward a storm. Free borrowed names, cut the anchor and chart a course the island chooses.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "mythic-ocean"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.3",
+      "sceneIds": [
+        "scenes.3",
+        "scenes.6",
+        "scenes.9",
+        "scenes.12",
+        "scenes.15",
+        "scenes.18"
+      ],
+      "npcIds": [
+        "npcs.3",
+        "npcs.6",
+        "npcs.9"
+      ],
+      "locationIds": [
+        "locations.3",
+        "locations.6",
+        "locations.9"
+      ],
+      "rewardIds": [
+        "items.3",
+        "items.6"
+      ],
+      "gmGuidance": [
+        "Ask which route names were offered and which were borrowed.",
+        "State the safe-current choice and the limited lower-shackle dive window.",
+        "Provide name release anchor plans and a voluntarily offered route verse.",
+        "Record the living island’s chosen course and revocable travel terms."
+      ],
+      "readyCharacterIds": [
+        "archetypes.3",
+        "archetypes.6"
+      ]
+    }
+  ],
+  "content": {
+    "factions": [
+      {
+        "id": "factions.1",
+        "name": "Free Cove Captains",
+        "description": "Free Cove Captains: needs a rescue flotilla while rivals hold the archipelago's stolen lifeboats.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "sail.factions.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Free Cove Captains: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.2",
+        "name": "Neutral Cargo League",
+        "description": "Neutral Cargo League: carries treatment supplies through a blockade enforced by forged war papers.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "sail.factions.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Neutral Cargo League: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.3",
+        "name": "Drifting Island Choir",
+        "description": "Drifting Island Choir: keeps a moving island on course through names its sailors willingly sing.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "sail.factions.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Drifting Island Choir: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.4",
+        "name": "Reef Salvagers",
+        "description": "Reef Salvagers: can release the boats if a captain settles an older rescue debt.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "sail.factions.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Reef Salvagers: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.5",
+        "name": "Harbor Surgeons",
+        "description": "Harbor Surgeons: will testify that the cargo serves civilians on both sides.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "sail.factions.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Harbor Surgeons: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.6",
+        "name": "Storm Watch Crew",
+        "description": "Storm Watch Crew: can chart the island's safe route without binding it to a private anchor.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "sail.factions.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Storm Watch Crew: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.7",
+        "name": "Cove Signal Keepers",
+        "description": "Cove Signal Keepers: tracks stranded sailors ignored by the captain's prize ledger.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.7"
+          }
+        ],
+        "localeKey": "sail.factions.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Cove Signal Keepers: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.8",
+        "name": "Tide Chart Guild",
+        "description": "Tide Chart Guild: holds a living route book whose last entry was taken by a storm broker.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.11"
+          }
+        ],
+        "localeKey": "sail.factions.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Tide Chart Guild: map schematic"
+          }
+        ]
+      }
+    ],
+    "locations": [
+      {
+        "id": "locations.1",
+        "name": "Free Cove Signal Tower",
+        "description": "Free Cove Signal Tower: a reef light calls for rescue while the harbor's lifeboats are locked.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "sail.locations.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Free Cove Signal Tower: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.2",
+        "name": "Neutral Quay",
+        "description": "Neutral Quay: medical crates wait beneath a blockade seal with the wrong signing date.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "sail.locations.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Neutral Quay: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.3",
+        "name": "Walking Island Beach",
+        "description": "Walking Island Beach: the shoreline moves when the crew sings a name nobody volunteered.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "sail.locations.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Walking Island Beach: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.4",
+        "name": "Salvage Basin",
+        "description": "Salvage Basin: stolen boats are chained beside cargo taken from an earlier wreck.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "sail.locations.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Salvage Basin: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.5",
+        "name": "Surgeons' Warehouse",
+        "description": "Surgeons' Warehouse: treatment inventory proves the cargo is for both rival shores.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "sail.locations.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Surgeons' Warehouse: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.6",
+        "name": "Storm Broker Anchorage",
+        "description": "Storm Broker Anchorage: a private anchor forces the moving island into a dangerous current.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "sail.locations.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Storm Broker Anchorage: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.7",
+        "name": "Broken Reef Channel",
+        "description": "Broken Reef Channel: a rescue route needs low-draft boats and witnessed soundings.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "sail.locations.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Broken Reef Channel: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.8",
+        "name": "Blockade Flagship",
+        "description": "Blockade Flagship: its captain's orders differ from the forged harbor copies.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "sail.locations.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Blockade Flagship: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.9",
+        "name": "Choir Ridge",
+        "description": "Choir Ridge: the island can choose another course after its borrowed names are released.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.3"
+          }
+        ],
+        "localeKey": "sail.locations.9",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Choir Ridge: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.10",
+        "name": "Prize Ledger Cabin",
+        "description": "Prize Ledger Cabin: the free captain erased rescue duties from a list of profitable captures.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.4"
+          }
+        ],
+        "localeKey": "sail.locations.10",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Prize Ledger Cabin: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.11",
+        "name": "Open Water Transfer",
+        "description": "Open Water Transfer: neutral crews can move treatment crates without accepting military escort.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.8"
+          }
+        ],
+        "localeKey": "sail.locations.11",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Open Water Transfer: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.12",
+        "name": "Unfixed Horizon",
+        "description": "Unfixed Horizon: the chart changes safely when sailors offer their own route verse.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.12"
+          }
+        ],
+        "localeKey": "sail.locations.12",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Unfixed Horizon: location schematic"
+          }
+        ]
+      }
+    ],
+    "npcs": [
+      {
+        "id": "npcs.1",
+        "name": "Captain Mara Cove",
+        "description": "Captain Mara Cove: will return the lifeboats if the earlier wreck's survivors receive acknowledgment.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "sail.npcs.1",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Captain Mara Cove: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.2",
+        "name": "Pilot Kai Neutral",
+        "description": "Pilot Kai Neutral: can carry treatment through the channel if the forged seal is challenged.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "sail.npcs.2",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Pilot Kai Neutral: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.3",
+        "name": "Singer Ren Drift",
+        "description": "Singer Ren Drift: knows the island's route verse includes unwillingly borrowed names.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "sail.npcs.3",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Singer Ren Drift: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.4",
+        "name": "Salvager Tessa Basin",
+        "description": "Salvager Tessa Basin: holds the rescue boats as security for the captain's unpaid rescue debt.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "sail.npcs.4",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Salvager Tessa Basin: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.5",
+        "name": "Surgeon Ivo Quay",
+        "description": "Surgeon Ivo Quay: can verify the crates before the blockade commander arrives.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "sail.npcs.5",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Surgeon Ivo Quay: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.6",
+        "name": "Helmswoman Bea Storm",
+        "description": "Helmswoman Bea Storm: can cut the private anchor if the choir first chooses a safe current.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "sail.npcs.6",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Helmswoman Bea Storm: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.7",
+        "name": "Keeper Neri Signal",
+        "description": "Keeper Neri Signal: recorded every stranded sailor still waiting beyond the reef.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "sail.npcs.7",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Keeper Neri Signal: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.8",
+        "name": "Commander Sol Flag",
+        "description": "Commander Sol Flag: will permit neutral transfer under authentic orders and public witnesses.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "sail.npcs.8",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Commander Sol Flag: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.9",
+        "name": "Chanter Fia Ridge",
+        "description": "Chanter Fia Ridge: wants the island's course chosen without permanent ownership.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "sail.npcs.9",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Chanter Fia Ridge: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.10",
+        "name": "Sounder Juno Reef",
+        "description": "Sounder Juno Reef: knows a shallow rescue route but needs a repaired lead line.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "sail.npcs.10",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Sounder Juno Reef: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.11",
+        "name": "Quartermaster Mei Crate",
+        "description": "Quartermaster Mei Crate: can show supplies for both shores despite the forged war claim.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "sail.npcs.11",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Quartermaster Mei Crate: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.12",
+        "name": "Chartwright Oren Horizon",
+        "description": "Chartwright Oren Horizon: can write an offered route without copying another sailor's name.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "sail.npcs.12",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Chartwright Oren Horizon: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.13",
+        "name": "Witness Dev Wreck",
+        "description": "Witness Dev Wreck: survived the earlier capture and wants rescue duties restored to the ledger.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "sail.npcs.13",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Witness Dev Wreck: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.14",
+        "name": "Courier Noa Open",
+        "description": "Courier Noa Open: can move the authentic order between ships before the tide turns.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "sail.npcs.14",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Courier Noa Open: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.15",
+        "name": "Broker Rosa Anchor",
+        "description": "Broker Rosa Anchor: profits from a fixed island berth and hides its risk to the choir.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "sail.npcs.15",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Broker Rosa Anchor: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.16",
+        "name": "Rigger Ada Rope",
+        "description": "Rigger Ada Rope: can release chained boats after a witnessed debt settlement.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "sail.npcs.16",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Rigger Ada Rope: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.17",
+        "name": "Porter Pell Shore",
+        "description": "Porter Pell Shore: will unload treatment on either bank if soldiers stay off the transfer boat.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "sail.npcs.17",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Porter Pell Shore: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.18",
+        "name": "Sailor Ash Name",
+        "description": "Sailor Ash Name: heard their name sung into the island course without permission.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "sail.npcs.18",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Sailor Ash Name: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.19",
+        "name": "Lookout Len Light",
+        "description": "Lookout Len Light: can keep the reef signal visible through the coming squall.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "sail.npcs.19",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Lookout Len Light: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.20",
+        "name": "Clerk Kira Date",
+        "description": "Clerk Kira Date: knows the forged blockade seal was signed before the declared conflict.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "sail.npcs.20",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Clerk Kira Date: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.21",
+        "name": "Diver Taro Chain",
+        "description": "Diver Taro Chain: can reach the anchor's lower shackle during one calm-water window.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "sail.npcs.21",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Diver Taro Chain: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.22",
+        "name": "Mate Siva Prize",
+        "description": "Mate Siva Prize: will revise the ledger if all prize crews share rescue obligations.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "sail.npcs.22",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Mate Siva Prize: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.23",
+        "name": "Envoy Tess Two",
+        "description": "Envoy Tess Two: offers inspection by both shores instead of a military escort.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "sail.npcs.23",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Envoy Tess Two: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.24",
+        "name": "Navigator Eri Verse",
+        "description": "Navigator Eri Verse: can lead a new course using only volunteered names.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "sail.npcs.24",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Navigator Eri Verse: portrait schematic"
+          }
+        ]
+      }
+    ],
+    "adversaries": [
+      {
+        "id": "adversaries.1",
+        "name": "Prize Enforcer",
+        "description": "Prize Enforcer: locks rescue boats to preserve a profitable capture claim.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "sail.adversaries.1",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Prize Enforcer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.2",
+        "name": "Forged Seal Patrol",
+        "description": "Forged Seal Patrol: seizes civilian treatment under an unsigned war extension.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "sail.adversaries.2",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Forged Seal Patrol: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.3",
+        "name": "Anchor Warden",
+        "description": "Anchor Warden: holds the island in a current the choir never chose.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "sail.adversaries.3",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Anchor Warden: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.4",
+        "name": "Reef Corsair",
+        "description": "Reef Corsair: attacks sounders but may stand down for a share of witnessed rescue work.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "sail.adversaries.4",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Reef Corsair: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.5",
+        "name": "Blockade Informer",
+        "description": "Blockade Informer: hides neutral cargo records to force military escort.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "sail.adversaries.5",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Blockade Informer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.6",
+        "name": "Name Harpooner",
+        "description": "Name Harpooner: binds a sailor's name to the island without an offered verse.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "sail.adversaries.6",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Name Harpooner: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.7",
+        "name": "Salvage Shark",
+        "description": "Salvage Shark: guards the low-draft route and follows discarded wreck iron.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.7"
+          }
+        ],
+        "localeKey": "sail.adversaries.7",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Salvage Shark: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.8",
+        "name": "Quay Gun Crew",
+        "description": "Quay Gun Crew: prepares to fire on a transfer boat unless authentic orders arrive.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.11"
+          }
+        ],
+        "localeKey": "sail.adversaries.8",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Quay Gun Crew: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.9",
+        "name": "Storm Mouth",
+        "description": "Storm Mouth: swallows fixed routes but opens around a voluntarily chosen current.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.3"
+          }
+        ],
+        "localeKey": "sail.adversaries.9",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Storm Mouth: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.10",
+        "name": "Debt Blackmailer",
+        "description": "Debt Blackmailer: offers boat release only if the earlier survivors stay silent.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.4"
+          }
+        ],
+        "localeKey": "sail.adversaries.10",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Debt Blackmailer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.11",
+        "name": "False Courier",
+        "description": "False Courier: replaces a lawful transfer order with the harbor's forged copy.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.8"
+          }
+        ],
+        "localeKey": "sail.adversaries.11",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "False Courier: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.12",
+        "name": "Chart Leech",
+        "description": "Chart Leech: copies the last route entry and drains the sailor whose name it carries.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.12"
+          }
+        ],
+        "localeKey": "sail.adversaries.12",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Chart Leech: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.13",
+        "name": "Signal Saboteur",
+        "description": "Signal Saboteur: quenches the reef light to hide unrescued people from the prize ledger.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "sail.adversaries.13",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Signal Saboteur: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.14",
+        "name": "Escort Press Gang",
+        "description": "Escort Press Gang: forces neutral sailors into service after a cargo inspection.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "sail.adversaries.14",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Escort Press Gang: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.15",
+        "name": "Island Chain Giant",
+        "description": "Island Chain Giant: rises when a private anchor drags across the choir ridge.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "sail.adversaries.15",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Island Chain Giant: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.16",
+        "name": "Prize Mutineer",
+        "description": "Prize Mutineer: tries to preserve capture wealth by abandoning the rescue flotilla.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "sail.adversaries.16",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Prize Mutineer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.17",
+        "name": "Seal Echo",
+        "description": "Seal Echo: repeats the revoked blockade extension through unattended signal flags.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "sail.adversaries.17",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Seal Echo: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.18",
+        "name": "Horizon Broker",
+        "description": "Horizon Broker: sells permanent navigation rights over an island that keeps moving.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "sail.adversaries.18",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Horizon Broker: creature schematic"
+          }
+        ]
+      }
+    ],
+    "items": [
+      {
+        "id": "items.1",
+        "name": "Unrescued Crew List",
+        "description": "Unrescued Crew List: names people erased from the prize ledger's profitable account.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "sail.items.1",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Unrescued Crew List: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.2",
+        "name": "Authentic Transfer Order",
+        "description": "Authentic Transfer Order: permits inspected civilian cargo without military escort.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "sail.items.2",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Authentic Transfer Order: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.3",
+        "name": "Offered Route Verse",
+        "description": "Offered Route Verse: guides the island using names willingly given by its sailors.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "sail.items.3",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Offered Route Verse: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.4",
+        "name": "Boat Chain Key",
+        "description": "Boat Chain Key: frees low-draft lifeboats after the rescue debt is witnessed.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "sail.items.4",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Boat Chain Key: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.5",
+        "name": "Two-shore Treatment Inventory",
+        "description": "Two-shore Treatment Inventory: shows whom the cargo can treat on both rival banks.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "sail.items.5",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Two-shore Treatment Inventory: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.6",
+        "name": "Anchor Release Plan",
+        "description": "Anchor Release Plan: marks a safe lower-shackle cut before the current turns.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "sail.items.6",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Anchor Release Plan: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.7",
+        "name": "Repaired Lead Line",
+        "description": "Repaired Lead Line: tests the shallow reef route without risking a loaded rescue boat.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "sail.items.7",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Repaired Lead Line: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.8",
+        "name": "Seal Date Rubbing",
+        "description": "Seal Date Rubbing: proves the harbor order predates the declared blockade.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "sail.items.8",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Seal Date Rubbing: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.9",
+        "name": "Borrowed Name Ribbon",
+        "description": "Borrowed Name Ribbon: identifies a sailor bound into the island course without consent.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.3"
+          }
+        ],
+        "localeKey": "sail.items.9",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Borrowed Name Ribbon: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.10",
+        "name": "Earlier Wreck Testimony",
+        "description": "Earlier Wreck Testimony: can restore rescue duties to the captain's prize ledger.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.4"
+          }
+        ],
+        "localeKey": "sail.items.10",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Earlier Wreck Testimony: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.11",
+        "name": "Neutral Inspection Slip",
+        "description": "Neutral Inspection Slip: records civilian cargo under witnesses from both shores.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.8"
+          }
+        ],
+        "localeKey": "sail.items.11",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Neutral Inspection Slip: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.12",
+        "name": "Living Tide Chart",
+        "description": "Living Tide Chart: changes according to the choir's offered current verse.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.12"
+          }
+        ],
+        "localeKey": "sail.items.12",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Living Tide Chart: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.13",
+        "name": "Reef Signal Oil",
+        "description": "Reef Signal Oil: keeps the stranded crew's light visible through the squall.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.13"
+          }
+        ],
+        "localeKey": "sail.items.13",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Reef Signal Oil: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.14",
+        "name": "Open Water Cradle",
+        "description": "Open Water Cradle: moves treatment crates without placing soldiers aboard.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.17"
+          }
+        ],
+        "localeKey": "sail.items.14",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Open Water Cradle: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.15",
+        "name": "Lower Shackle Tool",
+        "description": "Lower Shackle Tool: releases the private anchor during a limited diving window.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.21"
+          }
+        ],
+        "localeKey": "sail.items.15",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Lower Shackle Tool: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.16",
+        "name": "Rescue Duty Covenant",
+        "description": "Rescue Duty Covenant: requires prize crews to fund future lifesaving work.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.22"
+          }
+        ],
+        "localeKey": "sail.items.16",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Rescue Duty Covenant: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.17",
+        "name": "Harbor Copy Comparison",
+        "description": "Harbor Copy Comparison: separates authentic orders from the forged war extension.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.2"
+          }
+        ],
+        "localeKey": "sail.items.17",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Harbor Copy Comparison: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.18",
+        "name": "Name Release Knot",
+        "description": "Name Release Knot: withdraws a borrowed name before a new route is sung.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.6"
+          }
+        ],
+        "localeKey": "sail.items.18",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Name Release Knot: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.19",
+        "name": "Low-draft Boat Map",
+        "description": "Low-draft Boat Map: assigns rescue places and safe tide crossings.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.7"
+          }
+        ],
+        "localeKey": "sail.items.19",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Low-draft Boat Map: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.20",
+        "name": "Civilian Cargo Receipt",
+        "description": "Civilian Cargo Receipt: prevents inspected crates from becoming a captured prize.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.11"
+          }
+        ],
+        "localeKey": "sail.items.20",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Civilian Cargo Receipt: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.21",
+        "name": "Choir Course Witness",
+        "description": "Choir Course Witness: records the island's choice without claiming ownership of its horizon.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.15"
+          }
+        ],
+        "localeKey": "sail.items.21",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Choir Course Witness: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.22",
+        "name": "Revised Prize Ledger",
+        "description": "Revised Prize Ledger: accounts for lost crews and rescue costs as well as spoils.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.16"
+          }
+        ],
+        "localeKey": "sail.items.22",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Revised Prize Ledger: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.23",
+        "name": "Two-shore Delivery Record",
+        "description": "Two-shore Delivery Record: documents treatment delivered without surrendering crew independence.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.20"
+          }
+        ],
+        "localeKey": "sail.items.23",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Two-shore Delivery Record: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.24",
+        "name": "Unowned Horizon Chart",
+        "description": "Unowned Horizon Chart: keeps navigation knowledge open to correction as the island moves.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.24"
+          }
+        ],
+        "localeKey": "sail.items.24",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Unowned Horizon Chart: item schematic"
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "id": "events.1",
+        "name": "Reef Distress",
+        "description": "Reef Distress: a stranded crew signals while free captains argue over locked boats.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "sail.events.1",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Reef Distress: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.2",
+        "name": "Seal at the Quay",
+        "description": "Seal at the Quay: treatment crates receive a suspicious blockade claim.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "sail.events.2",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Seal at the Quay: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.3",
+        "name": "Borrowed Name Song",
+        "description": "Borrowed Name Song: the moving island repeats a sailor's unoffered name.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "sail.events.3",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Borrowed Name Song: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.4",
+        "name": "Wreck Debt",
+        "description": "Wreck Debt: survivors of an older capture ask why rescue duties vanished.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "sail.events.4",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Wreck Debt: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.5",
+        "name": "Treatment Count",
+        "description": "Treatment Count: the inventory shows urgent need on both rival shores.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "sail.events.5",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Treatment Count: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.6",
+        "name": "Current Turn",
+        "description": "Current Turn: the private anchor pulls the island toward a storm mouth.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "sail.events.6",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Current Turn: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.7",
+        "name": "Shallow Sounding",
+        "description": "Shallow Sounding: a low-draft rescue route appears before the tide rises.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "sail.events.7",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Shallow Sounding: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.8",
+        "name": "Order Comparison",
+        "description": "Order Comparison: the flagship copy contradicts the harbor's forged extension.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "sail.events.8",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Order Comparison: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.9",
+        "name": "Choir Petition",
+        "description": "Choir Petition: islanders ask to choose a course without permanent navigation rights.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "sail.events.9",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Choir Petition: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.10",
+        "name": "Signal Darkens",
+        "description": "Signal Darkens: a saboteur removes oil from the reef tower.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "sail.events.10",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Signal Darkens: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.11",
+        "name": "Inspection Offer",
+        "description": "Inspection Offer: both shores propose neutral witnesses instead of soldiers.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "sail.events.11",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Inspection Offer: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.12",
+        "name": "Released Name",
+        "description": "Released Name: a withdrawn ribbon makes the island pause before its next verse.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "sail.events.12",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Released Name: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.13",
+        "name": "Boat Bargain",
+        "description": "Boat Bargain: Tessa offers chain release under a witnessed rescue settlement.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "sail.events.13",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Boat Bargain: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.14",
+        "name": "Courier Race",
+        "description": "Courier Race: the authentic order must cross open water before the gun crew fires.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "sail.events.14",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Courier Race: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.15",
+        "name": "Calm Window",
+        "description": "Calm Window: the lower anchor shackle becomes reachable for one short dive.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "sail.events.15",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Calm Window: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.16",
+        "name": "Crew Places",
+        "description": "Crew Places: the flotilla must choose cargo capacity and rescue seats openly.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "sail.events.16",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Crew Places: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.17",
+        "name": "Press Gang",
+        "description": "Press Gang: an escort officer claims the neutral transfer requires crew service.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "sail.events.17",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Press Gang: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.18",
+        "name": "Living Chart",
+        "description": "Living Chart: the next route entry changes when a sailor offers their own verse.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "sail.events.18",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Living Chart: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.19",
+        "name": "Survivor Hearing",
+        "description": "Survivor Hearing: Dev names people missing from the captain's prize account.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "sail.events.19",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Survivor Hearing: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.20",
+        "name": "Treatment Loaded",
+        "description": "Treatment Loaded: the crates leave under a two-shore civilian receipt.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "sail.events.20",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Treatment Loaded: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.21",
+        "name": "Storm Opens",
+        "description": "Storm Opens: the mouth allows a route sung without stolen names.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "sail.events.21",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Storm Opens: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.22",
+        "name": "Last Rescue",
+        "description": "Last Rescue: the reef signal locates a final group after the harbor closes.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "sail.events.22",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Last Rescue: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.23",
+        "name": "Extension Revoked",
+        "description": "Extension Revoked: the commander withdraws the forged blockade claim publicly.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "sail.events.23",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Extension Revoked: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.24",
+        "name": "Anchor Cut",
+        "description": "Anchor Cut: the island enters the chosen current without a private berth.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "sail.events.24",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Anchor Cut: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.25",
+        "name": "Ledger Revised",
+        "description": "Ledger Revised: prize crews accept or refuse future rescue duties.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "sail.events.25",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Ledger Revised: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.26",
+        "name": "Both Shores Served",
+        "description": "Both Shores Served: neutral deliveries change who trusts the free crews.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "sail.events.26",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Both Shores Served: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.27",
+        "name": "Choir Departure",
+        "description": "Choir Departure: the moving island chooses who may travel with its song.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "sail.events.27",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Choir Departure: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.28",
+        "name": "Boats for the Next Storm",
+        "description": "Boats for the Next Storm: the rescue covenant sets access after the current crisis.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "sail.events.28",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Boats for the Next Storm: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.29",
+        "name": "A Cargo Still Civilian",
+        "description": "A Cargo Still Civilian: inspection records preserve the transfer's independent purpose.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "sail.events.29",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "A Cargo Still Civilian: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.30",
+        "name": "The Unfixed Horizon",
+        "description": "The Unfixed Horizon: the chart follows a living island rather than owning its route.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "sail.events.30",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "The Unfixed Horizon: background schematic"
+          }
+        ]
+      }
+    ],
+    "scenes": [
+      {
+        "id": "scenes.1",
+        "name": "Lifeboats behind Chains",
+        "description": "Lifeboats behind Chains: Objective: launch the reef rescue. Settle the older wreck debt or free boats under witnesses; delay strands more sailors.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.4"
+          }
+        ],
+        "localeKey": "sail.scenes.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Lifeboats behind Chains: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.2",
+        "name": "A Seal with the Wrong Date",
+        "description": "A Seal with the Wrong Date: Objective: establish civilian cargo rights. Compare authentic orders or verify treatment inventory; delay claims the crates as prizes.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "sail.scenes.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Seal with the Wrong Date: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.3",
+        "name": "The Island Sings Your Name",
+        "description": "The Island Sings Your Name: Objective: identify an unwilling route bond. Read name ribbons or ask the choir; delay drags the beach toward the storm.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.6"
+          }
+        ],
+        "localeKey": "sail.scenes.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Island Sings Your Name: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.4",
+        "name": "The Wreck before This Wreck",
+        "description": "The Wreck before This Wreck: Objective: restore forgotten rescue duties. Hear survivors or recover the prize account; delay divides the flotilla.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.7"
+          }
+        ],
+        "localeKey": "sail.scenes.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Wreck before This Wreck: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.5",
+        "name": "Inspection without Impressment",
+        "description": "Inspection without Impressment: Objective: move cargo under neutral witnesses. Gather both-shore inspectors or open a water transfer; delay forces crew service.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.8"
+          }
+        ],
+        "localeKey": "sail.scenes.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Inspection without Impressment: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.6",
+        "name": "An Anchor the Island Never Chose",
+        "description": "An Anchor the Island Never Chose: Objective: plan safe release. Mark the lower shackle or let the choir choose a current; delay wakes the chain giant.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "sail.scenes.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "An Anchor the Island Never Chose: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.7",
+        "name": "Soundings through Broken Reef",
+        "description": "Soundings through Broken Reef: Objective: reach stranded crews. Repair the lead line or stage low-draft crossings; delay raises the tide.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "sail.scenes.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Soundings through Broken Reef: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.8",
+        "name": "Orders aboard the Flagship",
+        "description": "Orders aboard the Flagship: Objective: stop unlawful seizure. Deliver the authentic order or expose the false copy; delay authorizes the gun crew.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.11"
+          }
+        ],
+        "localeKey": "sail.scenes.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Orders aboard the Flagship: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.9",
+        "name": "The Borrowed Verse",
+        "description": "The Borrowed Verse: Objective: release unoffered names. Withdraw ribbons or preserve only volunteered route words; delay feeds the chart leech.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.12"
+          }
+        ],
+        "localeKey": "sail.scenes.9",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Borrowed Verse: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.10",
+        "name": "The Light that Must Stay Lit",
+        "description": "The Light that Must Stay Lit: Objective: locate the last rescue group. Restore signal oil or post a witnessed lookout; delay hides survivors from the ledger.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.13"
+          }
+        ],
+        "localeKey": "sail.scenes.10",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Light that Must Stay Lit: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.11",
+        "name": "Crates across Open Water",
+        "description": "Crates across Open Water: Objective: deliver to both shores safely. Use the neutral cradle or accept bounded inspection; delay loses a treatment window.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "sail.scenes.11",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Crates across Open Water: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.12",
+        "name": "Under the Moving Keel",
+        "description": "Under the Moving Keel: Objective: cut the private anchor. Use the calm dive or release its deck lock; delay closes the safe current.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.15"
+          }
+        ],
+        "localeKey": "sail.scenes.12",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Under the Moving Keel: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.13",
+        "name": "Spoils after Rescue",
+        "description": "Spoils after Rescue: Objective: revise crew obligations. Fund shared lifeboats or bind a witnessed rescue covenant; delay renews the prize dispute.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.16"
+          }
+        ],
+        "localeKey": "sail.scenes.13",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Spoils after Rescue: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.14",
+        "name": "A Transfer Worth Defending",
+        "description": "A Transfer Worth Defending: Objective: preserve civilian independence. Record both-shore deliveries or reject forced escort terms; delay presses another crew.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.17"
+          }
+        ],
+        "localeKey": "sail.scenes.14",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Transfer Worth Defending: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.15",
+        "name": "The Course Offered Freely",
+        "description": "The Course Offered Freely: Objective: navigate without stolen names. Sing a volunteered verse or follow the choir's witness chart; delay sells the island's route.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "sail.scenes.15",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Course Offered Freely: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.16",
+        "name": "Boats for the Next Storm",
+        "description": "Boats for the Next Storm: Objective: settle the free cove's future. Share rescue access or assign accountable watch crews; record costs and survivors.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "sail.scenes.16",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Boats for the Next Storm: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.17",
+        "name": "Neither Navy's Prize",
+        "description": "Neither Navy's Prize: Objective: settle the cargo legacy. Maintain neutral inspection or independent delivery records; record both shores' needs.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.2"
+          }
+        ],
+        "localeKey": "sail.scenes.17",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Neither Navy's Prize: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.18",
+        "name": "An Island with Its Own Horizon",
+        "description": "An Island with Its Own Horizon: Objective: settle living navigation. Keep an unowned chart or a revocable voyage pact; record the choir's chosen course.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.3"
+          }
+        ],
+        "localeKey": "sail.scenes.18",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "An Island with Its Own Horizon: map schematic"
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "archetypes.1",
+        "name": "Reef Pilot",
+        "description": "Reef Pilot: tests rescue routes and counts crew places before loading cargo.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "sail.archetypes.1",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Reef Pilot: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.2",
+        "name": "Neutral Quartermaster",
+        "description": "Neutral Quartermaster: keeps treatment cargo independent of military prize claims.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "sail.archetypes.2",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Neutral Quartermaster: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.3",
+        "name": "Choir Navigator",
+        "description": "Choir Navigator: uses route names offered by their holders.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "sail.archetypes.3",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Choir Navigator: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.4",
+        "name": "Wreck Witness",
+        "description": "Wreck Witness: restores rescue duties concealed by profitable accounts.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "sail.archetypes.4",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Wreck Witness: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.5",
+        "name": "Two-shore Envoy",
+        "description": "Two-shore Envoy: makes civilian inspection possible without impressment.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "sail.archetypes.5",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Two-shore Envoy: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.6",
+        "name": "Anchor Diver",
+        "description": "Anchor Diver: plans a bounded safe release for a moving island.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "sail.archetypes.6",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Anchor Diver: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.7",
+        "name": "Signal Keeper",
+        "description": "Signal Keeper: keeps lost crews visible after a harbor closes.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "sail.archetypes.7",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Signal Keeper: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.8",
+        "name": "Living Chartwright",
+        "description": "Living Chartwright: records changing routes without claiming their permanent ownership.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "sail.archetypes.8",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Living Chartwright: portrait schematic"
+          }
+        ]
+      }
+    ],
+    "progressionPaths": [
+      {
+        "id": "progressionPaths.1",
+        "name": "Free Cove Rescuer",
+        "description": "Free Cove Rescuer: earn standing by bringing stranded crews home; gain lifeboat access and watch duties.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.1"
+          }
+        ],
+        "localeKey": "sail.progressionPaths.1",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Free Cove Rescuer: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.2",
+        "name": "Civilian Passage Keeper",
+        "description": "Civilian Passage Keeper: earn trust through independent treatment delivery; gain neutral quays and inspection duties.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.5"
+          }
+        ],
+        "localeKey": "sail.progressionPaths.2",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Civilian Passage Keeper: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.3",
+        "name": "Unfixed Horizon Guide",
+        "description": "Unfixed Horizon Guide: earn welcome through volunteered navigation; gain choir routes and correction obligations.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.3"
+          }
+        ],
+        "localeKey": "sail.progressionPaths.3",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Unfixed Horizon Guide: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.4",
+        "name": "Wreck Account Steward",
+        "description": "Wreck Account Steward: earn legitimacy by counting losses alongside spoils; gain survivor witnesses and rescue costs.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.1"
+          }
+        ],
+        "localeKey": "sail.progressionPaths.4",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Wreck Account Steward: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.5",
+        "name": "Open Water Mediator",
+        "description": "Open Water Mediator: earn confidence through two-shore transfer; gain inspection crews and delivery accountability.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.5"
+          }
+        ],
+        "localeKey": "sail.progressionPaths.5",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Open Water Mediator: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.6",
+        "name": "Storm Release Diver",
+        "description": "Storm Release Diver: earn respect through safe anchor work; gain chart support and evacuation duties.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.6"
+          }
+        ],
+        "localeKey": "sail.progressionPaths.6",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Storm Release Diver: item schematic"
+          }
+        ]
+      }
+    ],
+    "visualThemes": [
+      {
+        "id": "visualThemes.1",
+        "name": "Free Cove Rescue",
+        "description": "Free Cove Rescue: blue soundings and amber distress lights distinguish rescue capacity from locked prizes.",
+        "patternIds": [
+          "pirate-archipelago"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "sail.visualThemes.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Free Cove Rescue: map schematic"
+          },
+          {
+            "role": "ui",
+            "asset": "ui/background.svg",
+            "alt": "Voyage navigation interface"
+          }
+        ]
+      },
+      {
+        "id": "visualThemes.2",
+        "name": "Neutral Cargo Chart",
+        "description": "Neutral Cargo Chart: green civilian routes and red forged seals distinguish inspected delivery from military seizure.",
+        "patternIds": [
+          "imperial-trade-war"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "sail.visualThemes.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Neutral Cargo Chart: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "visualThemes.3",
+        "name": "Unfixed Horizon Song",
+        "description": "Unfixed Horizon Song: teal offered currents and violet borrowed names distinguish a living route from private captivity.",
+        "patternIds": [
+          "mythic-ocean"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "sail.visualThemes.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Unfixed Horizon Song: map schematic"
+          }
+        ]
+      }
+    ]
+  },
+  "playToday": {
+    "patternId": "pirate-archipelago",
+    "campaignKitId": "kit.pirate-archipelago",
+    "visualThemeId": "visualThemes.1"
+  },
+  "localization": {
+    "sourceLocale": "en",
+    "supportedLocales": [
+      "en",
+      "ru",
+      "es",
+      "ja",
+      "zh-CN",
+      "ko"
+    ],
+    "strings": {
+      "en": {
+        "sail.factions.1": "Free Cove Captains",
+        "sail.factions.2": "Neutral Cargo League",
+        "sail.factions.3": "Drifting Island Choir",
+        "sail.factions.4": "Reef Salvagers",
+        "sail.factions.5": "Harbor Surgeons",
+        "sail.factions.6": "Storm Watch Crew",
+        "sail.factions.7": "Cove Signal Keepers",
+        "sail.factions.8": "Tide Chart Guild",
+        "sail.locations.1": "Free Cove Signal Tower",
+        "sail.locations.2": "Neutral Quay",
+        "sail.locations.3": "Walking Island Beach",
+        "sail.locations.4": "Salvage Basin",
+        "sail.locations.5": "Surgeons' Warehouse",
+        "sail.locations.6": "Storm Broker Anchorage",
+        "sail.locations.7": "Broken Reef Channel",
+        "sail.locations.8": "Blockade Flagship",
+        "sail.locations.9": "Choir Ridge",
+        "sail.locations.10": "Prize Ledger Cabin",
+        "sail.locations.11": "Open Water Transfer",
+        "sail.locations.12": "Unfixed Horizon",
+        "sail.npcs.1": "Captain Mara Cove",
+        "sail.npcs.2": "Pilot Kai Neutral",
+        "sail.npcs.3": "Singer Ren Drift",
+        "sail.npcs.4": "Salvager Tessa Basin",
+        "sail.npcs.5": "Surgeon Ivo Quay",
+        "sail.npcs.6": "Helmswoman Bea Storm",
+        "sail.npcs.7": "Keeper Neri Signal",
+        "sail.npcs.8": "Commander Sol Flag",
+        "sail.npcs.9": "Chanter Fia Ridge",
+        "sail.npcs.10": "Sounder Juno Reef",
+        "sail.npcs.11": "Quartermaster Mei Crate",
+        "sail.npcs.12": "Chartwright Oren Horizon",
+        "sail.npcs.13": "Witness Dev Wreck",
+        "sail.npcs.14": "Courier Noa Open",
+        "sail.npcs.15": "Broker Rosa Anchor",
+        "sail.npcs.16": "Rigger Ada Rope",
+        "sail.npcs.17": "Porter Pell Shore",
+        "sail.npcs.18": "Sailor Ash Name",
+        "sail.npcs.19": "Lookout Len Light",
+        "sail.npcs.20": "Clerk Kira Date",
+        "sail.npcs.21": "Diver Taro Chain",
+        "sail.npcs.22": "Mate Siva Prize",
+        "sail.npcs.23": "Envoy Tess Two",
+        "sail.npcs.24": "Navigator Eri Verse",
+        "sail.adversaries.1": "Prize Enforcer",
+        "sail.adversaries.2": "Forged Seal Patrol",
+        "sail.adversaries.3": "Anchor Warden",
+        "sail.adversaries.4": "Reef Corsair",
+        "sail.adversaries.5": "Blockade Informer",
+        "sail.adversaries.6": "Name Harpooner",
+        "sail.adversaries.7": "Salvage Shark",
+        "sail.adversaries.8": "Quay Gun Crew",
+        "sail.adversaries.9": "Storm Mouth",
+        "sail.adversaries.10": "Debt Blackmailer",
+        "sail.adversaries.11": "False Courier",
+        "sail.adversaries.12": "Chart Leech",
+        "sail.adversaries.13": "Signal Saboteur",
+        "sail.adversaries.14": "Escort Press Gang",
+        "sail.adversaries.15": "Island Chain Giant",
+        "sail.adversaries.16": "Prize Mutineer",
+        "sail.adversaries.17": "Seal Echo",
+        "sail.adversaries.18": "Horizon Broker",
+        "sail.items.1": "Unrescued Crew List",
+        "sail.items.2": "Authentic Transfer Order",
+        "sail.items.3": "Offered Route Verse",
+        "sail.items.4": "Boat Chain Key",
+        "sail.items.5": "Two-shore Treatment Inventory",
+        "sail.items.6": "Anchor Release Plan",
+        "sail.items.7": "Repaired Lead Line",
+        "sail.items.8": "Seal Date Rubbing",
+        "sail.items.9": "Borrowed Name Ribbon",
+        "sail.items.10": "Earlier Wreck Testimony",
+        "sail.items.11": "Neutral Inspection Slip",
+        "sail.items.12": "Living Tide Chart",
+        "sail.items.13": "Reef Signal Oil",
+        "sail.items.14": "Open Water Cradle",
+        "sail.items.15": "Lower Shackle Tool",
+        "sail.items.16": "Rescue Duty Covenant",
+        "sail.items.17": "Harbor Copy Comparison",
+        "sail.items.18": "Name Release Knot",
+        "sail.items.19": "Low-draft Boat Map",
+        "sail.items.20": "Civilian Cargo Receipt",
+        "sail.items.21": "Choir Course Witness",
+        "sail.items.22": "Revised Prize Ledger",
+        "sail.items.23": "Two-shore Delivery Record",
+        "sail.items.24": "Unowned Horizon Chart",
+        "sail.events.1": "Reef Distress",
+        "sail.events.2": "Seal at the Quay",
+        "sail.events.3": "Borrowed Name Song",
+        "sail.events.4": "Wreck Debt",
+        "sail.events.5": "Treatment Count",
+        "sail.events.6": "Current Turn",
+        "sail.events.7": "Shallow Sounding",
+        "sail.events.8": "Order Comparison",
+        "sail.events.9": "Choir Petition",
+        "sail.events.10": "Signal Darkens",
+        "sail.events.11": "Inspection Offer",
+        "sail.events.12": "Released Name",
+        "sail.events.13": "Boat Bargain",
+        "sail.events.14": "Courier Race",
+        "sail.events.15": "Calm Window",
+        "sail.events.16": "Crew Places",
+        "sail.events.17": "Press Gang",
+        "sail.events.18": "Living Chart",
+        "sail.events.19": "Survivor Hearing",
+        "sail.events.20": "Treatment Loaded",
+        "sail.events.21": "Storm Opens",
+        "sail.events.22": "Last Rescue",
+        "sail.events.23": "Extension Revoked",
+        "sail.events.24": "Anchor Cut",
+        "sail.events.25": "Ledger Revised",
+        "sail.events.26": "Both Shores Served",
+        "sail.events.27": "Choir Departure",
+        "sail.events.28": "Boats for the Next Storm",
+        "sail.events.29": "A Cargo Still Civilian",
+        "sail.events.30": "The Unfixed Horizon",
+        "sail.scenes.1": "Lifeboats behind Chains",
+        "sail.scenes.2": "A Seal with the Wrong Date",
+        "sail.scenes.3": "The Island Sings Your Name",
+        "sail.scenes.4": "The Wreck before This Wreck",
+        "sail.scenes.5": "Inspection without Impressment",
+        "sail.scenes.6": "An Anchor the Island Never Chose",
+        "sail.scenes.7": "Soundings through Broken Reef",
+        "sail.scenes.8": "Orders aboard the Flagship",
+        "sail.scenes.9": "The Borrowed Verse",
+        "sail.scenes.10": "The Light that Must Stay Lit",
+        "sail.scenes.11": "Crates across Open Water",
+        "sail.scenes.12": "Under the Moving Keel",
+        "sail.scenes.13": "Spoils after Rescue",
+        "sail.scenes.14": "A Transfer Worth Defending",
+        "sail.scenes.15": "The Course Offered Freely",
+        "sail.scenes.16": "Boats for the Next Storm",
+        "sail.scenes.17": "Neither Navy's Prize",
+        "sail.scenes.18": "An Island with Its Own Horizon",
+        "sail.archetypes.1": "Reef Pilot",
+        "sail.archetypes.2": "Neutral Quartermaster",
+        "sail.archetypes.3": "Choir Navigator",
+        "sail.archetypes.4": "Wreck Witness",
+        "sail.archetypes.5": "Two-shore Envoy",
+        "sail.archetypes.6": "Anchor Diver",
+        "sail.archetypes.7": "Signal Keeper",
+        "sail.archetypes.8": "Living Chartwright",
+        "sail.progressionPaths.1": "Free Cove Rescuer",
+        "sail.progressionPaths.2": "Civilian Passage Keeper",
+        "sail.progressionPaths.3": "Unfixed Horizon Guide",
+        "sail.progressionPaths.4": "Wreck Account Steward",
+        "sail.progressionPaths.5": "Open Water Mediator",
+        "sail.progressionPaths.6": "Storm Release Diver",
+        "sail.visualThemes.1": "Free Cove Rescue",
+        "sail.visualThemes.2": "Neutral Cargo Chart",
+        "sail.visualThemes.3": "Unfixed Horizon Song"
+      }
+    },
+    "fallbackLocales": [
+      "ru",
+      "es",
+      "ja",
+      "zh-CN",
+      "ko"
+    ]
+  }
+}
