@@ -8,8 +8,9 @@
 - **M20 Deep Cyberpunk: engineering gate complete (2026-09-27).** Three original district/consent/memory Campaign Kits, playable roles and paths, nine assets, clean transfer/runtime/restart and browser Quick/GM/player/action proof. Generic corrections retain game names and display authoritative action results. Evidence: `docs/M20_STATUS.md`.
 - **M21 Deep Gothic Horror: engineering gate complete (2026-09-27).** Three original inheritance/charity/drowned-parish Kits, playable roles/paths, nine assets and clean transfer/runtime/restart plus browser GM/player/server-check evidence. Evidence: `docs/M21_STATUS.md`.
 - **M22 Deep Post-Apocalypse: engineering gate complete (2026-09-27).** Three original convoy/seed/heat Kits, playable roles/paths, nine assets and clean transfer/runtime/restart plus browser late-join/action/scene/reload. Evidence: `docs/M22_STATUS.md`.
-- **Active:** M23 Deep Dark Fantasy; M24–M29 follow in order, then M30 collection acceptance.
-- Ordinary clean installations now show Classic Fantasy, Space Opera, Cyberpunk, Gothic Horror and Post-Apocalypse ready; the remaining seven universes are planned.
+- **M23 Deep Dark Fantasy: engineering gate complete (2026-09-27).** Three original defense/naming/voluntary-cure Kits, playable roles/paths, clean transfer/runtime/restart and browser Quick/GM/player/action/reload. Evidence: `docs/M23_STATUS.md`.
+- **Active:** M24 Mythic Antiquity; M25–M29 follow in order, then M30 collection acceptance.
+- Ordinary clean installations now show all six original universes ready with deep content; the remaining six universes are planned.
 
 ## Post-M18 playability correction (2026-09-22)
 

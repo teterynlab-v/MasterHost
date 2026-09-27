@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.dusk.visuals",
+  "version": "1.0.0",
+  "type": "visuals",
+  "name": "Dark Bargain Schematics",
+  "description": "Dark Bargain Schematics for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+  "tags": [
+    "dark-fantasy",
+    "dying-marches",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Dark Bargain Schematics for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+    "highlights": [
+      "Dark Bargain Schematics",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.dark-fantasy"
+    ],
+    "requiresCapabilities": [
+      "setting:dark-fantasy"
+    ],
+    "providesCapabilities": [
+      "visuals:dark-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.dusk.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Dark Fantasy original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.dusk.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 6
+  },
+  "media": [
+    {
+      "name": "dark-fantasy/dusk-background.svg",
+      "path": "media/dusk-background.svg",
+      "role": "background",
+      "mediaType": "image/svg+xml",
+      "checksum": "48e3b913f94b3823b82a9c0c6019152954c54820a1ddad90580228ccc7830b2f",
+      "size": 739
+    },
+    {
+      "name": "dark-fantasy/dusk-portrait.svg",
+      "path": "media/dusk-portrait.svg",
+      "role": "portrait",
+      "mediaType": "image/svg+xml",
+      "checksum": "01f0795ae7fb17852bbabee4c0cf04fd1afb9b436443beee453f77402a1ceb49",
+      "size": 626
+    },
+    {
+      "name": "dark-fantasy/dusk-creature.svg",
+      "path": "media/dusk-creature.svg",
+      "role": "token",
+      "mediaType": "image/svg+xml",
+      "checksum": "168915526b91f0881471288071767e90531710dae7baee69973902112f176d70",
+      "size": 704
+    },
+    {
+      "name": "dark-fantasy/dusk-item.svg",
+      "path": "media/dusk-item.svg",
+      "role": "item",
+      "mediaType": "image/svg+xml",
+      "checksum": "d660f56a256563d8ad4ffc7ff579207707eda6e04df955252d400473adca99cd",
+      "size": 639
+    },
+    {
+      "name": "dark-fantasy/dusk-location.svg",
+      "path": "media/dusk-location.svg",
+      "role": "location",
+      "mediaType": "image/svg+xml",
+      "checksum": "d83ed766ffe9bfb3a2a43e4302f507f2a33b21abfcb4005ee6c4658c9051783f",
+      "size": 628
+    },
+    {
+      "name": "dark-fantasy/dusk-map.svg",
+      "path": "media/dusk-map.svg",
+      "role": "map",
+      "mediaType": "image/svg+xml",
+      "checksum": "d73e3d3ab74563b892b6021be4d169f9d51b7a24fe569c8b2ab406f07721c75f",
+      "size": 2430
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.dusk.visuals",
+    "version": "1.0.0",
+    "name": "Dark Bargain Schematics",
+    "description": "Dark Bargain Schematics for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+    "provides": [
+      "visuals:dark-fantasy"
+    ],
+    "requires": [
+      "setting:dark-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/dusk-deep",
+        "value": {
+          "id": "dusk-deep",
+          "name": "Bargain Navigation",
+          "description": "Original Dark Fantasy navigation schematics",
+          "defaults": {
+            "background": "assets/dark-fantasy/dusk-background.svg",
+            "portrait": "assets/dark-fantasy/dusk-portrait.svg",
+            "token": "assets/dark-fantasy/dusk-creature.svg",
+            "item": "assets/dark-fantasy/dusk-item.svg",
+            "location": "assets/dark-fantasy/dusk-location.svg",
+            "map": "assets/dark-fantasy/dusk-map.svg"
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "dusk-deep"
+  }
+}

@@ -1,11 +1,10 @@
 id: masterhost.dark-fantasy
 name: Dark Fantasy
-version: 2.0.0
+version: 1.0.0
 schemaVersion: "0.1"
 defaultArtSet: standard
 entryTemplate: world.root
-description: "Three complete dark campaigns: common defense under a dying sun,
-  names freed from inherited ransom and a cure without captive ownership."
+description: Cursed borderlands where desperate houses bargain with old powers beneath a dying sun.
 publisher: MasterHost
 official: true
 contentRating: mature

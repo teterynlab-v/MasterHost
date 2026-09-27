@@ -1,0 +1,3763 @@
+{
+  "schemaVersion": "1",
+  "id": "dark-fantasy",
+  "genres": [
+    "fantasy",
+    "horror",
+    "mystery"
+  ],
+  "tones": [
+    "grim",
+    "defiant",
+    "tragic"
+  ],
+  "complexity": "advanced",
+  "recommendedPlayers": {
+    "min": 2,
+    "max": 6
+  },
+  "gameLoop": [
+    {
+      "id": "defend",
+      "label": "Protect excluded residents without signing away their harvest",
+      "ruleRefs": [
+        "check:steel",
+        "action:recover"
+      ]
+    },
+    {
+      "id": "uncover",
+      "label": "Expose broken promises and imposed penance",
+      "ruleRefs": [
+        "check:guile",
+        "action:inspire"
+      ]
+    },
+    {
+      "id": "witness",
+      "label": "Renew bargains under accountable shared witnesses",
+      "ruleRefs": [
+        "check:will",
+        "resource:hope"
+      ]
+    },
+    {
+      "id": "release",
+      "label": "Record chosen identities, fair defense and voluntary care",
+      "ruleRefs": [
+        "progression:renown"
+      ]
+    }
+  ],
+  "patterns": [
+    {
+      "id": "dying-marches",
+      "name": "Dying Marches",
+      "summary": "A sunless border holds its harvest behind oath-bound gates. Recover a stolen dawn bell, expose the cost of protection and choose who may claim the last safe fields.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    },
+    {
+      "id": "witch-principalities",
+      "name": "Witch Principalities",
+      "summary": "Three witch houses divide a valley by inherited curses. Investigate a broken naming pact, rescue its unnamed children and decide whether the houses retain their bargains.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    },
+    {
+      "id": "plague-pilgrimage",
+      "name": "Plague Pilgrimage",
+      "summary": "A procession seeks a cure carried by a living saint. Separate disease from imposed penance, protect the sick and choose the conditions under which the cure is shared.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    }
+  ],
+  "campaignKits": [
+    {
+      "id": "kit.dying-marches",
+      "name": "Dying Marches: Dawn for Everyone",
+      "summary": "A three to four hour Dying Marches game: A sunless border holds its harvest behind oath-bound gates. Recover a stolen dawn bell, expose the cost of protection and choose who may claim the last safe fields.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "dying-marches"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.1",
+      "sceneIds": [
+        "scenes.1",
+        "scenes.4",
+        "scenes.7",
+        "scenes.10",
+        "scenes.13",
+        "scenes.16"
+      ],
+      "npcIds": [
+        "npcs.1",
+        "npcs.4",
+        "npcs.7"
+      ],
+      "locationIds": [
+        "locations.1",
+        "locations.4",
+        "locations.7"
+      ],
+      "rewardIds": [
+        "items.1",
+        "items.4"
+      ],
+      "gmGuidance": [
+        "Open with a silent bell and tenant grain being seized.",
+        "Distinguish a real defense need from the captain’s private levy.",
+        "Offer contract witnesses, patrol repair and a decoy route at visible costs.",
+        "Record who controls the bell, pays defense and keeps harvest."
+      ],
+      "readyCharacterIds": [
+        "archetypes.1",
+        "archetypes.4"
+      ]
+    },
+    {
+      "id": "kit.witch-principalities",
+      "name": "Witch Principalities: The Released Pact",
+      "summary": "A three to four hour Witch Principalities game: Three witch houses divide a valley by inherited curses. Investigate a broken naming pact, rescue its unnamed children and decide whether the houses retain their bargains.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "witch-principalities"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.2",
+      "sceneIds": [
+        "scenes.2",
+        "scenes.5",
+        "scenes.8",
+        "scenes.11",
+        "scenes.14",
+        "scenes.17"
+      ],
+      "npcIds": [
+        "npcs.2",
+        "npcs.5",
+        "npcs.8"
+      ],
+      "locationIds": [
+        "locations.2",
+        "locations.5",
+        "locations.8"
+      ],
+      "rewardIds": [
+        "items.2",
+        "items.5"
+      ],
+      "gmGuidance": [
+        "Use gestures and mirrors to communicate with erased children.",
+        "Never assume adult representatives may choose the children’s identities.",
+        "Offer the heir’s testimony, shared witnesses and an unowned registry.",
+        "Record each child’s chosen name and the houses’ remaining obligations."
+      ],
+      "readyCharacterIds": [
+        "archetypes.2",
+        "archetypes.5"
+      ]
+    },
+    {
+      "id": "kit.plague-pilgrimage",
+      "name": "Plague Pilgrimage: The Bearer's Road",
+      "summary": "A three to four hour Plague Pilgrimage game: A procession seeks a cure carried by a living saint. Separate disease from imposed penance, protect the sick and choose the conditions under which the cure is shared.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "plague-pilgrimage"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.3",
+      "sceneIds": [
+        "scenes.3",
+        "scenes.6",
+        "scenes.9",
+        "scenes.12",
+        "scenes.15",
+        "scenes.18"
+      ],
+      "npcIds": [
+        "npcs.3",
+        "npcs.6",
+        "npcs.9"
+      ],
+      "locationIds": [
+        "locations.3",
+        "locations.6",
+        "locations.9"
+      ],
+      "rewardIds": [
+        "items.3",
+        "items.6"
+      ],
+      "gmGuidance": [
+        "Open at the penance gate with a patient who needs food and care.",
+        "Distinguish symptoms, irritant smoke and imposed moral judgments.",
+        "Offer water testing, measured doses and a voluntary care rotation.",
+        "Record treatment priority, cure knowledge and the bearer’s right to leave."
+      ],
+      "readyCharacterIds": [
+        "archetypes.3",
+        "archetypes.6"
+      ]
+    }
+  ],
+  "content": {
+    "factions": [
+      {
+        "id": "factions.1",
+        "name": "Dawn Wardens",
+        "description": "Dawn Wardens: guard the fields with a bell they cannot ring without another household oath.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "dusk.factions.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Dawn Wardens: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.2",
+        "name": "Nameless House",
+        "description": "Nameless House: shelters children erased by the valley's naming pact.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "dusk.factions.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Nameless House: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.3",
+        "name": "Pilgrim Kitchen",
+        "description": "Pilgrim Kitchen: feeds the sick and rejects proof of penitence as a ration condition.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "dusk.factions.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Pilgrim Kitchen: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.4",
+        "name": "March Freeholders",
+        "description": "March Freeholders: will repair the gates if tenants gain a voice in the wardens' levy.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "dusk.factions.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "March Freeholders: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.5",
+        "name": "Thorn Court",
+        "description": "Thorn Court: enforces naming debts while concealing its own broken promise.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "dusk.factions.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Thorn Court: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.6",
+        "name": "Ash Hospice",
+        "description": "Ash Hospice: knows which symptoms respond to the saint's cure.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "dusk.factions.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Ash Hospice: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.7",
+        "name": "Bell Witnesses",
+        "description": "Bell Witnesses: holds the first contract granting dawn protection to every resident.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.7"
+          }
+        ],
+        "localeKey": "dusk.factions.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Bell Witnesses: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.8",
+        "name": "River Coven",
+        "description": "River Coven: offers to release names if the houses accept a common witness.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.11"
+          }
+        ],
+        "localeKey": "dusk.factions.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "River Coven: map schematic"
+          }
+        ]
+      }
+    ],
+    "locations": [
+      {
+        "id": "locations.1",
+        "name": "Sunless Granary",
+        "description": "Sunless Granary: seed remains sound but the wardens reserve it for sworn households.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "dusk.locations.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Sunless Granary: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.2",
+        "name": "House without Doors",
+        "description": "House without Doors: children enter freely but their written names vanish at the threshold.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "dusk.locations.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "House without Doors: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.3",
+        "name": "Pilgrim Causeway",
+        "description": "Pilgrim Causeway: feverish travelers queue beneath a gate demanding penance tokens.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "dusk.locations.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Pilgrim Causeway: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.4",
+        "name": "Bell Tower",
+        "description": "Bell Tower: the missing clapper has been hidden inside a levy chest.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "dusk.locations.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Bell Tower: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.5",
+        "name": "Thorn Registry",
+        "description": "Thorn Registry: a naming ledger lists children as collateral for adult bargains.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "dusk.locations.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Thorn Registry: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.6",
+        "name": "Ash Hospice",
+        "description": "Ash Hospice: a patient improves without reciting the prescribed confession.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "dusk.locations.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Ash Hospice: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.7",
+        "name": "Tenant Furrows",
+        "description": "Tenant Furrows: unsworn farmers grow a crop beyond the protected boundary.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "dusk.locations.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Tenant Furrows: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.8",
+        "name": "River Naming Stone",
+        "description": "River Naming Stone: the original pact can be spoken by a witness of all three houses.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "dusk.locations.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "River Naming Stone: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.9",
+        "name": "Saint's Rest",
+        "description": "Saint's Rest: the living bearer cannot cure another crowd without sleep.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.3"
+          }
+        ],
+        "localeKey": "dusk.locations.9",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Saint's Rest: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.10",
+        "name": "Oath Hearing Yard",
+        "description": "Oath Hearing Yard: wardens must answer the freeholders in front of the old contract.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.4"
+          }
+        ],
+        "localeKey": "dusk.locations.10",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Oath Hearing Yard: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.11",
+        "name": "Mirror Nursery",
+        "description": "Mirror Nursery: the children remember each other's names through reflected signs.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.8"
+          }
+        ],
+        "localeKey": "dusk.locations.11",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Mirror Nursery: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.12",
+        "name": "Open Well",
+        "description": "Open Well: the cure can be diluted into safe doses if its water is tested.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.12"
+          }
+        ],
+        "localeKey": "dusk.locations.12",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Open Well: location schematic"
+          }
+        ]
+      }
+    ],
+    "npcs": [
+      {
+        "id": "npcs.1",
+        "name": "Warden Elian Rook",
+        "description": "Warden Elian Rook: will ring for unsworn households if the bell contract is proved.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "dusk.npcs.1",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Warden Elian Rook: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.2",
+        "name": "Caretaker Siva Blank",
+        "description": "Caretaker Siva Blank: knows every child's gesture and refuses another naming ransom.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "dusk.npcs.2",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Caretaker Siva Blank: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.3",
+        "name": "Cook Mara Ash",
+        "description": "Cook Mara Ash: has enough food for the sick if soldiers stop taking penance rations.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "dusk.npcs.3",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Cook Mara Ash: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.4",
+        "name": "Farmer Ivo Reed",
+        "description": "Farmer Ivo Reed: can lead gate repairs after tenant losses are publicly acknowledged.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "dusk.npcs.4",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Farmer Ivo Reed: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.5",
+        "name": "Witch Tessa Thorn",
+        "description": "Witch Tessa Thorn: broke the pact to spare her heir and hid the debt in the registry.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "dusk.npcs.5",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Witch Tessa Thorn: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.6",
+        "name": "Healer Ren Cinder",
+        "description": "Healer Ren Cinder: recorded recoveries unrelated to confession and seeks a witness.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "dusk.npcs.6",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Healer Ren Cinder: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.7",
+        "name": "Bellkeeper Ada Vane",
+        "description": "Bellkeeper Ada Vane: saw the levy captain conceal the clapper before the famine.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "dusk.npcs.7",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Bellkeeper Ada Vane: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.8",
+        "name": "Child Neri Glass",
+        "description": "Child Neri Glass: can map the nursery by reflections but fears forgetting the others.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "dusk.npcs.8",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Child Neri Glass: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.9",
+        "name": "Saint Oren Vale",
+        "description": "Saint Oren Vale: wants rest and refuses to become a permanent captive cure.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "dusk.npcs.9",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Saint Oren Vale: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.10",
+        "name": "Captain Pell Dusk",
+        "description": "Captain Pell Dusk: claims extra oaths fund defense but keeps their grain for his guard.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "dusk.npcs.10",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Captain Pell Dusk: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.11",
+        "name": "Witness Fia River",
+        "description": "Witness Fia River: can renew the pact only if children speak for themselves.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "dusk.npcs.11",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Witness Fia River: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.12",
+        "name": "Porter Juno Moss",
+        "description": "Porter Juno Moss: knows a safe route for patients barred from the procession.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "dusk.npcs.12",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Porter Juno Moss: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.13",
+        "name": "Archivist Bea Soot",
+        "description": "Archivist Bea Soot: holds the original universal protection clause beneath a funeral record.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "dusk.npcs.13",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Archivist Bea Soot: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.14",
+        "name": "Tutor Kai Mirror",
+        "description": "Tutor Kai Mirror: teaches sign names immune to the court's written erasure.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "dusk.npcs.14",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Tutor Kai Mirror: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.15",
+        "name": "Patient Rosa Fen",
+        "description": "Patient Rosa Fen: recovered after clean water and asks why penance is still demanded.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "dusk.npcs.15",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Patient Rosa Fen: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.16",
+        "name": "Messenger Sol Furrow",
+        "description": "Messenger Sol Furrow: can carry the contract to the hearing before soldiers burn it.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "dusk.npcs.16",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Messenger Sol Furrow: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.17",
+        "name": "Heir Mei Briar",
+        "description": "Heir Mei Briar: will confess the house's debt if her guardian promises no child ransom.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "dusk.npcs.17",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Heir Mei Briar: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.18",
+        "name": "Herbalist Noa Well",
+        "description": "Herbalist Noa Well: can stretch the cure but needs a contamination test.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "dusk.npcs.18",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Herbalist Noa Well: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.19",
+        "name": "Miller Len Dusk",
+        "description": "Miller Len Dusk: hid tenant seed and will release it for a witnessed planting agreement.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "dusk.npcs.19",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Miller Len Dusk: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.20",
+        "name": "Mediator Dev Name",
+        "description": "Mediator Dev Name: offers a common registry outside house ownership.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "dusk.npcs.20",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Mediator Dev Name: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.21",
+        "name": "Guard Tess Gate",
+        "description": "Guard Tess Gate: will stop seizing rations if given lawful protection against the captain.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "dusk.npcs.21",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Guard Tess Gate: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.22",
+        "name": "Scout Ash Lamp",
+        "description": "Scout Ash Lamp: marked a defense route that does not require the tenant fields.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "dusk.npcs.22",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Scout Ash Lamp: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.23",
+        "name": "Singer Kira Reed",
+        "description": "Singer Kira Reed: remembers an older naming verse heard before the houses divided.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "dusk.npcs.23",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Singer Kira Reed: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.24",
+        "name": "Pilgrim Taro Rest",
+        "description": "Pilgrim Taro Rest: can organize rotating care so Oren may leave the procession.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "dusk.npcs.24",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Pilgrim Taro Rest: portrait schematic"
+          }
+        ]
+      }
+    ],
+    "adversaries": [
+      {
+        "id": "adversaries.1",
+        "name": "Levy Knight",
+        "description": "Levy Knight: confiscates unsworn harvest and may stand down before the first contract.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "dusk.adversaries.1",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Levy Knight: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.2",
+        "name": "Name Collector",
+        "description": "Name Collector: seizes children's signs unless the court's broken debt is exposed.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "dusk.adversaries.2",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Name Collector: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.3",
+        "name": "Penance Marshal",
+        "description": "Penance Marshal: withholds hospice food until a confession token is surrendered.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "dusk.adversaries.3",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Penance Marshal: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.4",
+        "name": "Hollow Sun Hound",
+        "description": "Hollow Sun Hound: hunts unlit fields but follows a decoy lantern away from workers.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "dusk.adversaries.4",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Hollow Sun Hound: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.5",
+        "name": "Thorn Bailiff",
+        "description": "Thorn Bailiff: seals the registry to prevent testimony about the heir.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "dusk.adversaries.5",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Thorn Bailiff: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.6",
+        "name": "Ash Censer",
+        "description": "Ash Censer: spreads irritant smoke mistaken for the returning plague.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "dusk.adversaries.6",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Ash Censer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.7",
+        "name": "Gate Revenant",
+        "description": "Gate Revenant: enforces the old boundary while ignoring its universal protection clause.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.7"
+          }
+        ],
+        "localeKey": "dusk.adversaries.7",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Gate Revenant: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.8",
+        "name": "Mirror Leech",
+        "description": "Mirror Leech: feeds on erased memories and retreats from shared spoken names.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.11"
+          }
+        ],
+        "localeKey": "dusk.adversaries.8",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Mirror Leech: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.9",
+        "name": "Pilgrim Extortioner",
+        "description": "Pilgrim Extortioner: sells counterfeit cures to travelers barred at the gate.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.3"
+          }
+        ],
+        "localeKey": "dusk.adversaries.9",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Pilgrim Extortioner: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.10",
+        "name": "Granary Guard",
+        "description": "Granary Guard: defends the captain's private seed cache under a false defense order.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.4"
+          }
+        ],
+        "localeKey": "dusk.adversaries.10",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Granary Guard: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.11",
+        "name": "Pact Eraser",
+        "description": "Pact Eraser: burns signs that prove the court rather than children broke the promise.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.8"
+          }
+        ],
+        "localeKey": "dusk.adversaries.11",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Pact Eraser: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.12",
+        "name": "Saint's Jailer",
+        "description": "Saint's Jailer: claims the bearer cannot leave until every pilgrim is purified.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.12"
+          }
+        ],
+        "localeKey": "dusk.adversaries.12",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Saint's Jailer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.13",
+        "name": "Dusk Swarm",
+        "description": "Dusk Swarm: follows the bell's cracked rhythm and can be drawn beyond the fields.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "dusk.adversaries.13",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Dusk Swarm: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.14",
+        "name": "House Usurer",
+        "description": "House Usurer: offers name restoration in return for perpetual nursery labor.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "dusk.adversaries.14",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "House Usurer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.15",
+        "name": "Token Forger",
+        "description": "Token Forger: profits from the gate's penance system and holds a list of buyers.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "dusk.adversaries.15",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Token Forger: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.16",
+        "name": "Oath Devourer",
+        "description": "Oath Devourer: consumes promises forced on hungry farmers but weakens before voluntary repair.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "dusk.adversaries.16",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Oath Devourer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.17",
+        "name": "Thorn Wraith",
+        "description": "Thorn Wraith: guards a suppressed verse naming the houses as accountable parties.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "dusk.adversaries.17",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Thorn Wraith: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.18",
+        "name": "Procession Echo",
+        "description": "Procession Echo: an inherited rule repeats penance demands after their cure purpose has ended.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "dusk.adversaries.18",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Procession Echo: creature schematic"
+          }
+        ]
+      }
+    ],
+    "items": [
+      {
+        "id": "items.1",
+        "name": "First Bell Contract",
+        "description": "First Bell Contract: promises protection to all residents rather than sworn owners alone.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "dusk.items.1",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "First Bell Contract: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.2",
+        "name": "Child Sign Book",
+        "description": "Child Sign Book: preserves gestures while the court erases written names.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "dusk.items.2",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Child Sign Book: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.3",
+        "name": "Recovery Record",
+        "description": "Recovery Record: separates clean-water improvements from imposed confessions.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "dusk.items.3",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Recovery Record: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.4",
+        "name": "Dawn Clapper",
+        "description": "Dawn Clapper: can restore the warning bell after its theft is witnessed.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "dusk.items.4",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Dawn Clapper: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.5",
+        "name": "Broken Pact Seal",
+        "description": "Broken Pact Seal: proves the heir was spared at the children's expense.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "dusk.items.5",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Broken Pact Seal: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.6",
+        "name": "Hospice Ration Key",
+        "description": "Hospice Ration Key: opens a store seized by the penance marshal.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "dusk.items.6",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Hospice Ration Key: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.7",
+        "name": "Tenant Seed Sack",
+        "description": "Tenant Seed Sack: allows planting outside the levy if defense is arranged.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "dusk.items.7",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Tenant Seed Sack: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.8",
+        "name": "Common Naming Verse",
+        "description": "Common Naming Verse: can restore names without assigning them to a house.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "dusk.items.8",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Common Naming Verse: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.9",
+        "name": "Rest Charter",
+        "description": "Rest Charter: guarantees the saint safe rest and the right to leave.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.3"
+          }
+        ],
+        "localeKey": "dusk.items.9",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Rest Charter: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.10",
+        "name": "Levy Chest Receipt",
+        "description": "Levy Chest Receipt: links confiscated grain to the captain's private guard.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.4"
+          }
+        ],
+        "localeKey": "dusk.items.10",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Levy Chest Receipt: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.11",
+        "name": "Mirror Chalk",
+        "description": "Mirror Chalk: lets children mark their route without written names.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.8"
+          }
+        ],
+        "localeKey": "dusk.items.11",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Mirror Chalk: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.12",
+        "name": "Well Test Strip",
+        "description": "Well Test Strip: identifies irritant contamination before cure dilution.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.12"
+          }
+        ],
+        "localeKey": "dusk.items.12",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Well Test Strip: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.13",
+        "name": "Repair Covenant",
+        "description": "Repair Covenant: exchanges tenant gate work for an accountable defense schedule.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.13"
+          }
+        ],
+        "localeKey": "dusk.items.13",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Repair Covenant: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.14",
+        "name": "River Witness Cord",
+        "description": "River Witness Cord: binds three representatives without transferring children's debts.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.17"
+          }
+        ],
+        "localeKey": "dusk.items.14",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "River Witness Cord: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.15",
+        "name": "Rotating Care List",
+        "description": "Rotating Care List: keeps treatment available while the bearer rests.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.21"
+          }
+        ],
+        "localeKey": "dusk.items.15",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Rotating Care List: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.16",
+        "name": "Decoy Dawn Lantern",
+        "description": "Decoy Dawn Lantern: draws the sun hound away from the planting crews.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.22"
+          }
+        ],
+        "localeKey": "dusk.items.16",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Decoy Dawn Lantern: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.17",
+        "name": "Heir Testimony",
+        "description": "Heir Testimony: can expose the broken promise without naming another child as collateral.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.2"
+          }
+        ],
+        "localeKey": "dusk.items.17",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Heir Testimony: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.18",
+        "name": "Smoke Filter",
+        "description": "Smoke Filter: protects hospice patients from the ash censer.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.6"
+          }
+        ],
+        "localeKey": "dusk.items.18",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Smoke Filter: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.19",
+        "name": "Universal Protection Copy",
+        "description": "Universal Protection Copy: can survive destruction of the bell archive.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.7"
+          }
+        ],
+        "localeKey": "dusk.items.19",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Universal Protection Copy: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.20",
+        "name": "Nursery Petition",
+        "description": "Nursery Petition: states the children's own conditions for name restoration.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.11"
+          }
+        ],
+        "localeKey": "dusk.items.20",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Nursery Petition: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.21",
+        "name": "Clean Dose Flask",
+        "description": "Clean Dose Flask: offers a measured cure instead of a confession payment.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.15"
+          }
+        ],
+        "localeKey": "dusk.items.21",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Clean Dose Flask: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.22",
+        "name": "Defense Route Map",
+        "description": "Defense Route Map: marks patrols that leave tenant furrows intact.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.16"
+          }
+        ],
+        "localeKey": "dusk.items.22",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Defense Route Map: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.23",
+        "name": "Unowned Name Register",
+        "description": "Unowned Name Register: records identities with the right to revise or remove them.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.20"
+          }
+        ],
+        "localeKey": "dusk.items.23",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Unowned Name Register: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.24",
+        "name": "Open Cure Agreement",
+        "description": "Open Cure Agreement: sets treatment priority and prevents captive ownership of the bearer.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.24"
+          }
+        ],
+        "localeKey": "dusk.items.24",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Open Cure Agreement: item schematic"
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "id": "events.1",
+        "name": "Silent Dawn",
+        "description": "Silent Dawn: the bell fails while levy soldiers demand fresh oaths.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "dusk.events.1",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Silent Dawn: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.2",
+        "name": "Forgotten Child",
+        "description": "Forgotten Child: a mother cannot read the name she wrote moments earlier.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "dusk.events.2",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Forgotten Child: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.3",
+        "name": "Denied Ration",
+        "description": "Denied Ration: the marshal turns away a feverish traveler without a penance token.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "dusk.events.3",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Denied Ration: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.4",
+        "name": "Seed Seizure",
+        "description": "Seed Seizure: the captain orders tenant grain moved into his chest.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "dusk.events.4",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Seed Seizure: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.5",
+        "name": "Heir Recognition",
+        "description": "Heir Recognition: an erased child recognizes the witch's heir from the old nursery.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "dusk.events.5",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Heir Recognition: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.6",
+        "name": "Unconfessed Recovery",
+        "description": "Unconfessed Recovery: a patient improves after clean water and rest.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "dusk.events.6",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Unconfessed Recovery: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.7",
+        "name": "Warning Rhythm",
+        "description": "Warning Rhythm: the cracked bell attracts hounds rather than driving them away.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "dusk.events.7",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Warning Rhythm: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.8",
+        "name": "Nursery Message",
+        "description": "Nursery Message: children communicate through mirror signs the court cannot erase.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "dusk.events.8",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Nursery Message: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.9",
+        "name": "Bearer Exhaustion",
+        "description": "Bearer Exhaustion: Oren collapses after a forced public cure.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "dusk.events.9",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Bearer Exhaustion: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.10",
+        "name": "Contract Found",
+        "description": "Contract Found: the universal protection clause appears in a funeral archive.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "dusk.events.10",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Contract Found: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.11",
+        "name": "Registry Lock",
+        "description": "Registry Lock: the bailiff seals records before the children can testify.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "dusk.events.11",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Registry Lock: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.12",
+        "name": "Smoke Diagnosis",
+        "description": "Smoke Diagnosis: the censer's irritant is identified as a source of false symptoms.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "dusk.events.12",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Smoke Diagnosis: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.13",
+        "name": "Tenant Assembly",
+        "description": "Tenant Assembly: farmers offer repair labor if levy rules are made public.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "dusk.events.13",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Tenant Assembly: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.14",
+        "name": "House Threat",
+        "description": "House Threat: Tessa threatens a new curse if her broken promise is exposed.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "dusk.events.14",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "House Threat: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.15",
+        "name": "Rest Refusal",
+        "description": "Rest Refusal: the jailer blocks a care rotation and calls it desertion.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "dusk.events.15",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Rest Refusal: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.16",
+        "name": "Field Decoy",
+        "description": "Field Decoy: a lantern route can draw the hounds away at the price of a watch crew.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "dusk.events.16",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Field Decoy: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.17",
+        "name": "Old Verse",
+        "description": "Old Verse: Kira recalls a naming formula accountable to shared witnesses.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "dusk.events.17",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Old Verse: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.18",
+        "name": "Dose Trial",
+        "description": "Dose Trial: a diluted cure works when the well water is clean.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "dusk.events.18",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Dose Trial: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.19",
+        "name": "Clapper Return",
+        "description": "Clapper Return: the keeper reveals where the captain hid the bell's voice.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "dusk.events.19",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Clapper Return: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.20",
+        "name": "Mirror Breach",
+        "description": "Mirror Breach: a leech enters the nursery through an isolated child's reflection.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "dusk.events.20",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Mirror Breach: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.21",
+        "name": "Food Hearing",
+        "description": "Food Hearing: the kitchen demands that treatment and hunger be separated from guilt.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "dusk.events.21",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Food Hearing: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.22",
+        "name": "Gate Repair",
+        "description": "Gate Repair: freeholders must choose a defense schedule before the dusk swarm returns.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "dusk.events.22",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Gate Repair: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.23",
+        "name": "Heir Confession",
+        "description": "Heir Confession: Mei offers testimony with a promise that no child replaces her debt.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "dusk.events.23",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Heir Confession: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.24",
+        "name": "Bearer Petition",
+        "description": "Bearer Petition: Oren asks for the right to travel after the cure is shared.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "dusk.events.24",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Bearer Petition: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.25",
+        "name": "Oath Reckoning",
+        "description": "Oath Reckoning: the captain offers defense in exchange for permanent grain control.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "dusk.events.25",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Oath Reckoning: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.26",
+        "name": "Names Spoken",
+        "description": "Names Spoken: the children can decide who witnesses their restored identities.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "dusk.events.26",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Names Spoken: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.27",
+        "name": "Cure Queue",
+        "description": "Cure Queue: the hospice chooses priority by need rather than token ownership.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "dusk.events.27",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Cure Queue: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.28",
+        "name": "Dawn for Tenants",
+        "description": "Dawn for Tenants: the bell's new schedule reflects the final protection agreement.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "dusk.events.28",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Dawn for Tenants: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.29",
+        "name": "Pact Released",
+        "description": "Pact Released: the register changes according to the children's chosen terms.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "dusk.events.29",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Pact Released: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.30",
+        "name": "Pilgrimage Ends",
+        "description": "Pilgrimage Ends: the bearer leaves or stays under an agreement he helped write.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "dusk.events.30",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Pilgrimage Ends: background schematic"
+          }
+        ]
+      }
+    ],
+    "scenes": [
+      {
+        "id": "scenes.1",
+        "name": "The Bell that Failed",
+        "description": "The Bell that Failed: Objective: find the missing dawn voice. Search the levy chest or win the keeper's testimony; delay costs tenant seed.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.4"
+          }
+        ],
+        "localeKey": "dusk.scenes.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Bell that Failed: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.2",
+        "name": "Names at the Threshold",
+        "description": "Names at the Threshold: Objective: contact the erased children. Learn their signs or follow reflected marks; delay isolates one child.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "dusk.scenes.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Names at the Threshold: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.3",
+        "name": "The Penance Gate",
+        "description": "The Penance Gate: Objective: admit the sick safely. Challenge the token rule or escort the hospice route; delay exhausts a patient.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.6"
+          }
+        ],
+        "localeKey": "dusk.scenes.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Penance Gate: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.4",
+        "name": "Grain under Guard",
+        "description": "Grain under Guard: Objective: recover shared reserves. Prove the false defense order or negotiate witnessed release; delay empties tenant stores.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.7"
+          }
+        ],
+        "localeKey": "dusk.scenes.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Grain under Guard: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.5",
+        "name": "The House's Own Debt",
+        "description": "The House's Own Debt: Objective: identify who broke the pact. Read the registry or protect the heir's testimony; delay burns the ledger.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.8"
+          }
+        ],
+        "localeKey": "dusk.scenes.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The House's Own Debt: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.6",
+        "name": "Smoke in the Hospice",
+        "description": "Smoke in the Hospice: Objective: separate disease from imposed harm. Test the censer or compare recovery records; delay creates false cases.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "dusk.scenes.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Smoke in the Hospice: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.7",
+        "name": "Fields beyond the Oath",
+        "description": "Fields beyond the Oath: Objective: protect unsworn farmers. Repair a patrol route or draw the hounds away; delay destroys the next harvest.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "dusk.scenes.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Fields beyond the Oath: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.8",
+        "name": "The Mirror Nursery",
+        "description": "The Mirror Nursery: Objective: keep children's memories intact. Share spoken signs or isolate the leech; delay erases a bond.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.11"
+          }
+        ],
+        "localeKey": "dusk.scenes.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Mirror Nursery: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.9",
+        "name": "A Saint who Must Sleep",
+        "description": "A Saint who Must Sleep: Objective: protect the bearer's agency. Form a care rotation or enforce a rest charter; delay prevents another safe dose.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.12"
+          }
+        ],
+        "localeKey": "dusk.scenes.9",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Saint who Must Sleep: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.10",
+        "name": "The First Contract",
+        "description": "The First Contract: Objective: establish universal protection. Recover the archive or call contract witnesses; delay strengthens the captain's claim.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.13"
+          }
+        ],
+        "localeKey": "dusk.scenes.10",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The First Contract: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.11",
+        "name": "Three Houses at the River",
+        "description": "Three Houses at the River: Objective: renew names without ransom. Convene shared witnesses or restore the older verse; delay divides the children.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "dusk.scenes.11",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Three Houses at the River: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.12",
+        "name": "Water before Confession",
+        "description": "Water before Confession: Objective: produce a safe shared cure. Test diluted doses or clean the well; delay feeds the counterfeit market.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.15"
+          }
+        ],
+        "localeKey": "dusk.scenes.12",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Water before Confession: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.13",
+        "name": "A Defense Worth Paying",
+        "description": "A Defense Worth Paying: Objective: set a fair levy. Compare patrol needs or accept bounded repair obligations; delay leaves a gate undefended.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.16"
+          }
+        ],
+        "localeKey": "dusk.scenes.13",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Defense Worth Paying: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.14",
+        "name": "A Name of One's Own",
+        "description": "A Name of One's Own: Objective: give children control of identity. Create an unowned register or witness individual names; delay replaces the old debt.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.17"
+          }
+        ],
+        "localeKey": "dusk.scenes.14",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Name of One's Own: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.15",
+        "name": "The Queue by Need",
+        "description": "The Queue by Need: Objective: allocate treatment fairly. Use hospice triage or a rotating public list; delay harms the weakest patients.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "dusk.scenes.15",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Queue by Need: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.16",
+        "name": "Dawn for Everyone",
+        "description": "Dawn for Everyone: Objective: settle field protection. Fund common defense or a witnessed tenant covenant; record who controls the bell.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "dusk.scenes.16",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Dawn for Everyone: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.17",
+        "name": "The Released Pact",
+        "description": "The Released Pact: Objective: end inherited naming ransom. Dissolve the house claim or bind accountable witnesses; record children's chosen terms.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.2"
+          }
+        ],
+        "localeKey": "dusk.scenes.17",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Released Pact: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.18",
+        "name": "The Bearer's Road",
+        "description": "The Bearer's Road: Objective: settle the cure agreement. Share dosage knowledge or maintain voluntary rotating care; record the bearer's right to leave.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.3"
+          }
+        ],
+        "localeKey": "dusk.scenes.18",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Bearer's Road: map schematic"
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "archetypes.1",
+        "name": "Bell Advocate",
+        "description": "Bell Advocate: tests defense claims and protects residents excluded from oaths.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "dusk.archetypes.1",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Bell Advocate: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.2",
+        "name": "Name Witness",
+        "description": "Name Witness: learns erased signs and protects children's control of identity.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "dusk.archetypes.2",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Name Witness: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.3",
+        "name": "Hospice Examiner",
+        "description": "Hospice Examiner: separates symptoms from imposed penance.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "dusk.archetypes.3",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Hospice Examiner: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.4",
+        "name": "Furrow Guardian",
+        "description": "Furrow Guardian: keeps workers safe without granting permanent harvest control.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "dusk.archetypes.4",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Furrow Guardian: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.5",
+        "name": "River Mediator",
+        "description": "River Mediator: renews promises under witnesses rather than hereditary ransom.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "dusk.archetypes.5",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "River Mediator: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.6",
+        "name": "Bearer Companion",
+        "description": "Bearer Companion: protects a healer's rest and right to leave.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "dusk.archetypes.6",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Bearer Companion: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.7",
+        "name": "Contract Archivist",
+        "description": "Contract Archivist: preserves original protections against convenient reinterpretation.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "dusk.archetypes.7",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Contract Archivist: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.8",
+        "name": "Mirror Tutor",
+        "description": "Mirror Tutor: restores shared memory without replacing the children's own names.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "dusk.archetypes.8",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Mirror Tutor: portrait schematic"
+          }
+        ]
+      }
+    ],
+    "progressionPaths": [
+      {
+        "id": "progressionPaths.1",
+        "name": "Dawn Steward",
+        "description": "Dawn Steward: earn trust through accountable common defense; gain bell authority and patrol obligations.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.1"
+          }
+        ],
+        "localeKey": "dusk.progressionPaths.1",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Dawn Steward: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.2",
+        "name": "Pact Liberator",
+        "description": "Pact Liberator: earn trust by ending inherited ransom; gain shared witnesses and registry duties.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.5"
+          }
+        ],
+        "localeKey": "dusk.progressionPaths.2",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Pact Liberator: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.3",
+        "name": "Cure Custodian",
+        "description": "Cure Custodian: earn trust through safe treatment by need; gain hospice access and dosage records.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.3"
+          }
+        ],
+        "localeKey": "dusk.progressionPaths.3",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Cure Custodian: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.4",
+        "name": "Tenant Defender",
+        "description": "Tenant Defender: earn trust by preserving harvest and fair repair; gain freeholder crews and levy scrutiny.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.1"
+          }
+        ],
+        "localeKey": "dusk.progressionPaths.4",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Tenant Defender: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.5",
+        "name": "Name Guardian",
+        "description": "Name Guardian: earn trust through identities chosen by their holders; gain nursery access and consent duties.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.5"
+          }
+        ],
+        "localeKey": "dusk.progressionPaths.5",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Name Guardian: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.6",
+        "name": "Road Companion",
+        "description": "Road Companion: earn trust by keeping care voluntary; gain pilgrim support and rest obligations.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.6"
+          }
+        ],
+        "localeKey": "dusk.progressionPaths.6",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Road Companion: item schematic"
+          }
+        ]
+      }
+    ],
+    "visualThemes": [
+      {
+        "id": "visualThemes.1",
+        "name": "Last Dawn Chart",
+        "description": "Last Dawn Chart: gold protection routes and black confiscation marks distinguish defense from levy control.",
+        "patternIds": [
+          "dying-marches"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "dusk.visualThemes.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Last Dawn Chart: map schematic"
+          },
+          {
+            "role": "ui",
+            "asset": "ui/background.svg",
+            "alt": "Dark bargain navigation interface"
+          }
+        ]
+      },
+      {
+        "id": "visualThemes.2",
+        "name": "River Pact Chart",
+        "description": "River Pact Chart: violet house claims and silver common witnesses distinguish ransom from chosen identity.",
+        "patternIds": [
+          "witch-principalities"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "dusk.visualThemes.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "River Pact Chart: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "visualThemes.3",
+        "name": "Ash Pilgrim Chart",
+        "description": "Ash Pilgrim Chart: green tested water and rust penance barriers distinguish treatment from imposed guilt.",
+        "patternIds": [
+          "plague-pilgrimage"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "dusk.visualThemes.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Ash Pilgrim Chart: map schematic"
+          }
+        ]
+      }
+    ]
+  },
+  "playToday": {
+    "patternId": "dying-marches",
+    "campaignKitId": "kit.dying-marches",
+    "visualThemeId": "visualThemes.1"
+  },
+  "localization": {
+    "sourceLocale": "en",
+    "supportedLocales": [
+      "en",
+      "ru",
+      "es",
+      "ja",
+      "zh-CN",
+      "ko"
+    ],
+    "strings": {
+      "en": {
+        "dusk.factions.1": "Dawn Wardens",
+        "dusk.factions.2": "Nameless House",
+        "dusk.factions.3": "Pilgrim Kitchen",
+        "dusk.factions.4": "March Freeholders",
+        "dusk.factions.5": "Thorn Court",
+        "dusk.factions.6": "Ash Hospice",
+        "dusk.factions.7": "Bell Witnesses",
+        "dusk.factions.8": "River Coven",
+        "dusk.locations.1": "Sunless Granary",
+        "dusk.locations.2": "House without Doors",
+        "dusk.locations.3": "Pilgrim Causeway",
+        "dusk.locations.4": "Bell Tower",
+        "dusk.locations.5": "Thorn Registry",
+        "dusk.locations.6": "Ash Hospice",
+        "dusk.locations.7": "Tenant Furrows",
+        "dusk.locations.8": "River Naming Stone",
+        "dusk.locations.9": "Saint's Rest",
+        "dusk.locations.10": "Oath Hearing Yard",
+        "dusk.locations.11": "Mirror Nursery",
+        "dusk.locations.12": "Open Well",
+        "dusk.npcs.1": "Warden Elian Rook",
+        "dusk.npcs.2": "Caretaker Siva Blank",
+        "dusk.npcs.3": "Cook Mara Ash",
+        "dusk.npcs.4": "Farmer Ivo Reed",
+        "dusk.npcs.5": "Witch Tessa Thorn",
+        "dusk.npcs.6": "Healer Ren Cinder",
+        "dusk.npcs.7": "Bellkeeper Ada Vane",
+        "dusk.npcs.8": "Child Neri Glass",
+        "dusk.npcs.9": "Saint Oren Vale",
+        "dusk.npcs.10": "Captain Pell Dusk",
+        "dusk.npcs.11": "Witness Fia River",
+        "dusk.npcs.12": "Porter Juno Moss",
+        "dusk.npcs.13": "Archivist Bea Soot",
+        "dusk.npcs.14": "Tutor Kai Mirror",
+        "dusk.npcs.15": "Patient Rosa Fen",
+        "dusk.npcs.16": "Messenger Sol Furrow",
+        "dusk.npcs.17": "Heir Mei Briar",
+        "dusk.npcs.18": "Herbalist Noa Well",
+        "dusk.npcs.19": "Miller Len Dusk",
+        "dusk.npcs.20": "Mediator Dev Name",
+        "dusk.npcs.21": "Guard Tess Gate",
+        "dusk.npcs.22": "Scout Ash Lamp",
+        "dusk.npcs.23": "Singer Kira Reed",
+        "dusk.npcs.24": "Pilgrim Taro Rest",
+        "dusk.adversaries.1": "Levy Knight",
+        "dusk.adversaries.2": "Name Collector",
+        "dusk.adversaries.3": "Penance Marshal",
+        "dusk.adversaries.4": "Hollow Sun Hound",
+        "dusk.adversaries.5": "Thorn Bailiff",
+        "dusk.adversaries.6": "Ash Censer",
+        "dusk.adversaries.7": "Gate Revenant",
+        "dusk.adversaries.8": "Mirror Leech",
+        "dusk.adversaries.9": "Pilgrim Extortioner",
+        "dusk.adversaries.10": "Granary Guard",
+        "dusk.adversaries.11": "Pact Eraser",
+        "dusk.adversaries.12": "Saint's Jailer",
+        "dusk.adversaries.13": "Dusk Swarm",
+        "dusk.adversaries.14": "House Usurer",
+        "dusk.adversaries.15": "Token Forger",
+        "dusk.adversaries.16": "Oath Devourer",
+        "dusk.adversaries.17": "Thorn Wraith",
+        "dusk.adversaries.18": "Procession Echo",
+        "dusk.items.1": "First Bell Contract",
+        "dusk.items.2": "Child Sign Book",
+        "dusk.items.3": "Recovery Record",
+        "dusk.items.4": "Dawn Clapper",
+        "dusk.items.5": "Broken Pact Seal",
+        "dusk.items.6": "Hospice Ration Key",
+        "dusk.items.7": "Tenant Seed Sack",
+        "dusk.items.8": "Common Naming Verse",
+        "dusk.items.9": "Rest Charter",
+        "dusk.items.10": "Levy Chest Receipt",
+        "dusk.items.11": "Mirror Chalk",
+        "dusk.items.12": "Well Test Strip",
+        "dusk.items.13": "Repair Covenant",
+        "dusk.items.14": "River Witness Cord",
+        "dusk.items.15": "Rotating Care List",
+        "dusk.items.16": "Decoy Dawn Lantern",
+        "dusk.items.17": "Heir Testimony",
+        "dusk.items.18": "Smoke Filter",
+        "dusk.items.19": "Universal Protection Copy",
+        "dusk.items.20": "Nursery Petition",
+        "dusk.items.21": "Clean Dose Flask",
+        "dusk.items.22": "Defense Route Map",
+        "dusk.items.23": "Unowned Name Register",
+        "dusk.items.24": "Open Cure Agreement",
+        "dusk.events.1": "Silent Dawn",
+        "dusk.events.2": "Forgotten Child",
+        "dusk.events.3": "Denied Ration",
+        "dusk.events.4": "Seed Seizure",
+        "dusk.events.5": "Heir Recognition",
+        "dusk.events.6": "Unconfessed Recovery",
+        "dusk.events.7": "Warning Rhythm",
+        "dusk.events.8": "Nursery Message",
+        "dusk.events.9": "Bearer Exhaustion",
+        "dusk.events.10": "Contract Found",
+        "dusk.events.11": "Registry Lock",
+        "dusk.events.12": "Smoke Diagnosis",
+        "dusk.events.13": "Tenant Assembly",
+        "dusk.events.14": "House Threat",
+        "dusk.events.15": "Rest Refusal",
+        "dusk.events.16": "Field Decoy",
+        "dusk.events.17": "Old Verse",
+        "dusk.events.18": "Dose Trial",
+        "dusk.events.19": "Clapper Return",
+        "dusk.events.20": "Mirror Breach",
+        "dusk.events.21": "Food Hearing",
+        "dusk.events.22": "Gate Repair",
+        "dusk.events.23": "Heir Confession",
+        "dusk.events.24": "Bearer Petition",
+        "dusk.events.25": "Oath Reckoning",
+        "dusk.events.26": "Names Spoken",
+        "dusk.events.27": "Cure Queue",
+        "dusk.events.28": "Dawn for Tenants",
+        "dusk.events.29": "Pact Released",
+        "dusk.events.30": "Pilgrimage Ends",
+        "dusk.scenes.1": "The Bell that Failed",
+        "dusk.scenes.2": "Names at the Threshold",
+        "dusk.scenes.3": "The Penance Gate",
+        "dusk.scenes.4": "Grain under Guard",
+        "dusk.scenes.5": "The House's Own Debt",
+        "dusk.scenes.6": "Smoke in the Hospice",
+        "dusk.scenes.7": "Fields beyond the Oath",
+        "dusk.scenes.8": "The Mirror Nursery",
+        "dusk.scenes.9": "A Saint who Must Sleep",
+        "dusk.scenes.10": "The First Contract",
+        "dusk.scenes.11": "Three Houses at the River",
+        "dusk.scenes.12": "Water before Confession",
+        "dusk.scenes.13": "A Defense Worth Paying",
+        "dusk.scenes.14": "A Name of One's Own",
+        "dusk.scenes.15": "The Queue by Need",
+        "dusk.scenes.16": "Dawn for Everyone",
+        "dusk.scenes.17": "The Released Pact",
+        "dusk.scenes.18": "The Bearer's Road",
+        "dusk.archetypes.1": "Bell Advocate",
+        "dusk.archetypes.2": "Name Witness",
+        "dusk.archetypes.3": "Hospice Examiner",
+        "dusk.archetypes.4": "Furrow Guardian",
+        "dusk.archetypes.5": "River Mediator",
+        "dusk.archetypes.6": "Bearer Companion",
+        "dusk.archetypes.7": "Contract Archivist",
+        "dusk.archetypes.8": "Mirror Tutor",
+        "dusk.progressionPaths.1": "Dawn Steward",
+        "dusk.progressionPaths.2": "Pact Liberator",
+        "dusk.progressionPaths.3": "Cure Custodian",
+        "dusk.progressionPaths.4": "Tenant Defender",
+        "dusk.progressionPaths.5": "Name Guardian",
+        "dusk.progressionPaths.6": "Road Companion",
+        "dusk.visualThemes.1": "Last Dawn Chart",
+        "dusk.visualThemes.2": "River Pact Chart",
+        "dusk.visualThemes.3": "Ash Pilgrim Chart"
+      }
+    },
+    "fallbackLocales": [
+      "ru",
+      "es",
+      "ja",
+      "zh-CN",
+      "ko"
+    ]
+  }
+}
