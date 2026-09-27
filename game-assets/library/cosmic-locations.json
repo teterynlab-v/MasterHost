@@ -1,0 +1,580 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.cosmic.locations",
+  "version": "1.0.0",
+  "type": "locations",
+  "name": "Twelve Tide Ice and Recall Sites",
+  "description": "Twelve Tide Ice and Recall Sites for Coastal University, Polar Expedition, Decaying Metropolis. Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.",
+  "tags": [
+    "cosmic-investigation",
+    "coastal-university",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Twelve Tide Ice and Recall Sites for Coastal University, Polar Expedition, Decaying Metropolis. Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.",
+    "highlights": [
+      "Twelve Tide Ice and Recall Sites",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.cosmic-investigation"
+    ],
+    "requiresCapabilities": [
+      "world:cosmic-investigation"
+    ],
+    "providesCapabilities": [
+      "locations:cosmic-investigation"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.cosmic.world-template",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Cosmic Investigation original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.cosmic.locations"
+  },
+  "published": true,
+  "counts": {
+    "locations": 12,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.cosmic.locations",
+    "version": "1.0.0",
+    "name": "Twelve Tide Ice and Recall Sites",
+    "description": "Twelve Tide Ice and Recall Sites for Coastal University, Polar Expedition, Decaying Metropolis. Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.",
+    "provides": [
+      "locations:cosmic-investigation"
+    ],
+    "requires": [
+      "world:cosmic-investigation"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.locations.1",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Tide Observatory"
+            },
+            "description": {
+              "value": "Tide Observatory: a lens aligns before the archive loses another named page."
+            },
+            "deepId": {
+              "value": "locations.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.locations.2",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Warm Ice Bore"
+            },
+            "description": {
+              "value": "Warm Ice Bore: a perfect cavity radiates heat without melting its angular walls."
+            },
+            "deepId": {
+              "value": "locations.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.locations.3",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Forgotten Station"
+            },
+            "description": {
+              "value": "Forgotten Station: a platform carries passengers no municipal map will name."
+            },
+            "deepId": {
+              "value": "locations.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "decaying-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.locations.4",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Paper Archive Annex"
+            },
+            "description": {
+              "value": "Paper Archive Annex: uncorrupted tide logs show the signal followed an artificial schedule."
+            },
+            "deepId": {
+              "value": "locations.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.locations.5",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Meridian Core Store"
+            },
+            "description": {
+              "value": "Meridian Core Store: a control sample remains cold while the cavity core alters recorded dates."
+            },
+            "deepId": {
+              "value": "locations.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.locations.6",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Recall Switchboard"
+            },
+            "description": {
+              "value": "Recall Switchboard: calls from missing buildings share an impossible repeating interval."
+            },
+            "deepId": {
+              "value": "locations.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "decaying-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.locations.7",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Quiet Lens Chamber"
+            },
+            "description": {
+              "value": "Quiet Lens Chamber: the alignment can be interrupted without destroying the original data."
+            },
+            "deepId": {
+              "value": "locations.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.locations.8",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Outer Ice Camp"
+            },
+            "description": {
+              "value": "Outer Ice Camp: a safe exit needs fuel no longer assigned to the warm experiment."
+            },
+            "deepId": {
+              "value": "locations.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.locations.9",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Witness Tram"
+            },
+            "description": {
+              "value": "Witness Tram: riders retain names while comparing handwritten journeys."
+            },
+            "deepId": {
+              "value": "locations.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "decaying-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.locations.10",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Low Tide Stair"
+            },
+            "description": {
+              "value": "Low Tide Stair: a submerged transmitter bears a recent university repair tag."
+            },
+            "deepId": {
+              "value": "locations.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.locations.11",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Geometry Threshold"
+            },
+            "description": {
+              "value": "Geometry Threshold: crossing the warm boundary erases a minute from every recording device."
+            },
+            "deepId": {
+              "value": "locations.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.locations.12",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Public Memory Vault"
+            },
+            "description": {
+              "value": "Public Memory Vault: a physical ledger may restore addresses if the signal feed is isolated."
+            },
+            "deepId": {
+              "value": "locations.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "decaying-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-locations-1": {
+            "template": "cosmic.deep.locations.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-locations-2": {
+            "template": "cosmic.deep.locations.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-locations-3": {
+            "template": "cosmic.deep.locations.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "decaying-metropolis"
+              ]
+            }
+          },
+          "deep-locations-4": {
+            "template": "cosmic.deep.locations.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-locations-5": {
+            "template": "cosmic.deep.locations.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-locations-6": {
+            "template": "cosmic.deep.locations.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "decaying-metropolis"
+              ]
+            }
+          },
+          "deep-locations-7": {
+            "template": "cosmic.deep.locations.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-locations-8": {
+            "template": "cosmic.deep.locations.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-locations-9": {
+            "template": "cosmic.deep.locations.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "decaying-metropolis"
+              ]
+            }
+          },
+          "deep-locations-10": {
+            "template": "cosmic.deep.locations.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-locations-11": {
+            "template": "cosmic.deep.locations.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-locations-12": {
+            "template": "cosmic.deep.locations.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "decaying-metropolis"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

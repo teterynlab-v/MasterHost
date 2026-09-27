@@ -1,0 +1,178 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.cosmic.world-template",
+  "version": "1.0.0",
+  "type": "world-template",
+  "name": "Three Impossible Evidence Frames",
+  "description": "Three Impossible Evidence Frames for Coastal University, Polar Expedition, Decaying Metropolis. Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.",
+  "tags": [
+    "cosmic-investigation",
+    "coastal-university",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Three Impossible Evidence Frames for Coastal University, Polar Expedition, Decaying Metropolis. Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.",
+    "highlights": [
+      "Three Impossible Evidence Frames",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.cosmic-investigation"
+    ],
+    "requiresCapabilities": [
+      "setting:cosmic-investigation"
+    ],
+    "providesCapabilities": [
+      "world:cosmic-investigation"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.cosmic.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Cosmic Investigation original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.cosmic.world-template"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.cosmic.world-template",
+    "version": "1.0.0",
+    "name": "Three Impossible Evidence Frames",
+    "description": "Three Impossible Evidence Frames for Coastal University, Polar Expedition, Decaying Metropolis. Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.",
+    "provides": [
+      "world:cosmic-investigation"
+    ],
+    "requires": [
+      "setting:cosmic-investigation"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.kit.coastal-university",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "Coastal University: Evidence without Another Victim"
+            },
+            "kitId": {
+              "value": "kit.coastal-university"
+            },
+            "openingSceneId": {
+              "value": "scenes.1"
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.kit.polar-expedition",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "Polar Expedition: A Cold Route Home"
+            },
+            "kitId": {
+              "value": "kit.polar-expedition"
+            },
+            "openingSceneId": {
+              "value": "scenes.2"
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.kit.decaying-metropolis",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "Decaying Metropolis: The City Remembers Differently"
+            },
+            "kitId": {
+              "value": "kit.decaying-metropolis"
+            },
+            "openingSceneId": {
+              "value": "scenes.3"
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-kit-coastal-university": {
+            "template": "cosmic.deep.kit.coastal-university",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.coastal-university"
+              ]
+            }
+          },
+          "deep-kit-polar-expedition": {
+            "template": "cosmic.deep.kit.polar-expedition",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.polar-expedition"
+              ]
+            }
+          },
+          "deep-kit-decaying-metropolis": {
+            "template": "cosmic.deep.kit.decaying-metropolis",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.decaying-metropolis"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

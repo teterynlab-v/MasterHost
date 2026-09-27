@@ -1,0 +1,670 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.cosmic.characters",
+  "version": "1.0.0",
+  "type": "characters",
+  "name": "Investigator Roles and Evidence Paths",
+  "description": "Investigator Roles and Evidence Paths for Coastal University, Polar Expedition, Decaying Metropolis. Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.",
+  "tags": [
+    "cosmic-investigation",
+    "coastal-university",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Investigator Roles and Evidence Paths for Coastal University, Polar Expedition, Decaying Metropolis. Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.",
+    "highlights": [
+      "Investigator Roles and Evidence Paths",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.cosmic-investigation"
+    ],
+    "requiresCapabilities": [
+      "rules:cosmic-investigation",
+      "items:cosmic-investigation"
+    ],
+    "providesCapabilities": [
+      "characters:cosmic-investigation"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.cosmic.rules",
+      "version": "1.0.0"
+    },
+    {
+      "id": "masterhost.asset.cosmic.items",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Cosmic Investigation original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.cosmic.characters"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 8,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.cosmic.characters",
+    "version": "1.0.0",
+    "name": "Investigator Roles and Evidence Paths",
+    "description": "Investigator Roles and Evidence Paths for Coastal University, Polar Expedition, Decaying Metropolis. Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.",
+    "provides": [
+      "characters:cosmic-investigation"
+    ],
+    "requires": [
+      "rules:cosmic-investigation",
+      "items:cosmic-investigation"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.archetypes.1",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Signal Analyst"
+            },
+            "description": {
+              "value": "Signal Analyst: compares predictions with independent records before accepting an explanation."
+            },
+            "deepId": {
+              "value": "archetypes.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.archetypes.2",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Polar Surveyor"
+            },
+            "description": {
+              "value": "Polar Surveyor: measures dangerous boundaries through external clocks and control samples."
+            },
+            "deepId": {
+              "value": "archetypes.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.archetypes.3",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Recall Operator"
+            },
+            "description": {
+              "value": "Recall Operator: keeps emergency callers connected outside an erasing feed."
+            },
+            "deepId": {
+              "value": "archetypes.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "decaying-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.archetypes.4",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Archive Custodian"
+            },
+            "description": {
+              "value": "Archive Custodian: protects original evidence without granting it unchecked authority."
+            },
+            "deepId": {
+              "value": "archetypes.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.archetypes.5",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Exposure Medic"
+            },
+            "description": {
+              "value": "Exposure Medic: tracks measured changes and insists on practical evacuation limits."
+            },
+            "deepId": {
+              "value": "archetypes.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.archetypes.6",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Transit Witness"
+            },
+            "description": {
+              "value": "Transit Witness: compares journeys while preserving disagreements between passengers."
+            },
+            "deepId": {
+              "value": "archetypes.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "decaying-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.archetypes.7",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Low Tide Technician"
+            },
+            "description": {
+              "value": "Low Tide Technician: interrupts a harmful process without destroying its testable record."
+            },
+            "deepId": {
+              "value": "archetypes.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.archetypes.8",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Cold Route Pilot"
+            },
+            "description": {
+              "value": "Cold Route Pilot: moves the whole crew including people absent from official rosters."
+            },
+            "deepId": {
+              "value": "archetypes.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.progressionPaths.1",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Independent Investigator"
+            },
+            "description": {
+              "value": "Independent Investigator: earn trust through falsifiable comparisons; gain lab access and custody duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.progressionPaths.2",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Measured Boundary Keeper"
+            },
+            "description": {
+              "value": "Measured Boundary Keeper: earn confidence through safe limits; gain survey crews and exposure watch duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.progressionPaths.3",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Witness Relay Steward"
+            },
+            "description": {
+              "value": "Witness Relay Steward: earn support by connecting erased callers; gain paper routes and correction duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "decaying-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.progressionPaths.4",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Evidence Guardian"
+            },
+            "description": {
+              "value": "Evidence Guardian: earn authority through preserved accountable originals; gain archives and access review duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.progressionPaths.5",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Evacuation Coordinator"
+            },
+            "description": {
+              "value": "Evacuation Coordinator: earn respect by counting everyone; gain transport supplies and crew obligations."
+            },
+            "deepId": {
+              "value": "progressionPaths.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.progressionPaths.6",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Quiet Containment Analyst"
+            },
+            "description": {
+              "value": "Quiet Containment Analyst: earn legitimacy through reversible interruption; gain control access and uncertainty reporting duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "decaying-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-archetypes-1": {
+            "template": "cosmic.deep.archetypes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-archetypes-2": {
+            "template": "cosmic.deep.archetypes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-archetypes-3": {
+            "template": "cosmic.deep.archetypes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "decaying-metropolis"
+              ]
+            }
+          },
+          "deep-archetypes-4": {
+            "template": "cosmic.deep.archetypes.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-archetypes-5": {
+            "template": "cosmic.deep.archetypes.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-archetypes-6": {
+            "template": "cosmic.deep.archetypes.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "decaying-metropolis"
+              ]
+            }
+          },
+          "deep-archetypes-7": {
+            "template": "cosmic.deep.archetypes.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-archetypes-8": {
+            "template": "cosmic.deep.archetypes.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-progressionPaths-1": {
+            "template": "cosmic.deep.progressionPaths.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-progressionPaths-2": {
+            "template": "cosmic.deep.progressionPaths.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-progressionPaths-3": {
+            "template": "cosmic.deep.progressionPaths.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "decaying-metropolis"
+              ]
+            }
+          },
+          "deep-progressionPaths-4": {
+            "template": "cosmic.deep.progressionPaths.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-progressionPaths-5": {
+            "template": "cosmic.deep.progressionPaths.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-progressionPaths-6": {
+            "template": "cosmic.deep.progressionPaths.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "decaying-metropolis"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

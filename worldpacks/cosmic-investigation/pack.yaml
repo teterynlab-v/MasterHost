@@ -1,0 +1,865 @@
+questions:
+  - id: world.tone
+    label: Campaign tone
+    type: choice
+    default: heroic
+    options:
+      - value: heroic
+        label: Heroic
+      - value: tense
+        label: Tense
+      - value: tragic
+        label: Tragic
+  - id: world.threat
+    label: Threat level
+    type: choice
+    default: high
+    options:
+      - value: low
+        label: Low
+      - value: medium
+        label: Medium
+      - value: high
+        label: High
+  - id: world.environment
+    label: Dominant environment
+    type: choice
+    default: coast
+    options:
+      - value: coast
+        label: Coastal university
+      - value: ice
+        label: Polar station
+      - value: city
+        label: Decaying metropolis
+  - id: world.scarcity
+    label: Resource pressure
+    type: choice
+    default: strained
+    options:
+      - value: plentiful
+        label: Plentiful
+      - value: strained
+        label: Strained
+      - value: rare
+        label: Rare
+  - id: world.pattern
+    label: Universe pattern
+    type: choice
+    default: coastal-university
+    options:
+      - value: coastal-university
+        label: Coastal University
+      - value: polar-expedition
+        label: Polar Expedition
+      - value: decaying-metropolis
+        label: Decaying Metropolis
+  - id: world.campaignKit
+    label: Campaign Kit
+    type: choice
+    default: kit.coastal-university
+    options:
+      - value: kit.coastal-university
+        label: "Coastal University: Evidence without Another Victim"
+      - value: kit.polar-expedition
+        label: "Polar Expedition: A Cold Route Home"
+      - value: kit.decaying-metropolis
+        label: "Decaying Metropolis: The City Remembers Differently"
+  - id: world.visualTheme
+    label: Visual theme
+    type: choice
+    default: visualThemes.1
+    options:
+      - value: visualThemes.1
+        label: Quiet Tide Evidence
+      - value: visualThemes.2
+        label: White Meridian Survey
+      - value: visualThemes.3
+        label: Recall Witness Map
+generators:
+  region.count:
+    type: integer-range
+    min: 2
+    max: 3
+  region.names:
+    type: values
+    values:
+      - Coastal University
+      - Polar Expedition
+      - Decaying Metropolis
+  settlement.names:
+    type: values
+    values:
+      - Tide Observatory
+      - Warm Ice Bore
+      - Forgotten Station
+      - Paper Archive Annex
+      - Meridian Core Store
+      - Recall Switchboard
+      - Quiet Lens Chamber
+      - Outer Ice Camp
+  location.names:
+    type: values
+    values:
+      - Tide Observatory
+      - Warm Ice Bore
+      - Forgotten Station
+      - Paper Archive Annex
+      - Meridian Core Store
+      - Recall Switchboard
+      - Quiet Lens Chamber
+      - Outer Ice Camp
+  creature.names:
+    type: values
+    values:
+      - Lens Custodian
+      - Warm Geometry Echo
+      - Recall Agent
+      - Archive Glider
+      - Heat Advocate
+      - Station Doppelganger
+      - Transmitter Sentinel
+      - Ice Clock Swarm
+  npc.names:
+    type: values
+    values:
+      - Researcher Mara Lens
+      - Surveyor Kai Meridian
+      - Operator Ren Recall
+      - Archivist Tessa Paper
+      - Medic Ivo Ice
+      - Conductor Bea Tram
+      - Technician Neri Tide
+      - Pilot Sol Outer
+  faction.names:
+    type: values
+    values:
+      - Tide Research Circle
+      - White Meridian Expedition
+      - City Recall Service
+      - Coastal Archivists
+      - Polar Safety Crew
+      - Transit Witness Group
+      - Quiet Lens Lab
+      - Independent Survey Team
+  event.names:
+    type: values
+    values:
+      - Predicted Deletion
+      - Warm Discovery
+      - Forgotten Call
+      - Paper Disagreement
+      - Missing Minute
+      - Ticket Comparison
+      - Repair Order
+      - Fuel Hold
+  encounter.names:
+    type: values
+    values:
+      - The Page Lost on Schedule
+      - Heat beneath Unmelted Ice
+      - A Call from Nowhere
+      - The Artificial Tide
+      - One Minute without a Record
+      - The Station in the Photograph
+      - A Reversible Silence
+      - A Core that Keeps Its Weight
+  item.names:
+    type: values
+    values:
+      - Prediction Log
+      - Independent Core Sample
+      - Paper Tram Ticket
+      - Unlinked Tide Record
+      - Paired Mechanical Clocks
+      - Physical Address Ledger
+      - Repair Tag Copy
+      - Evacuation Fuel Release
+  economy:
+    type: weighted-table
+    entries:
+      - value: trade
+        weight: 35
+      - value: craft
+        weight: 30
+      - value: service
+        weight: 20
+      - value: smuggling
+        weight: 15
+  danger:
+    type: integer-range
+    min: 1
+    max: 5
+traits:
+  region.threatened:
+    id: region.threatened
+    when:
+      eq:
+        - descriptor: world.threat
+        - high
+    addTags:
+      - dangerous
+    set:
+      alert: true
+  location.scarce:
+    id: location.scarce
+    when:
+      ne:
+        - descriptor: world.scarcity
+        - plentiful
+    addTags:
+      - contested
+    set:
+      supplies: limited
+templates:
+  world.root:
+    kind: realm
+    values:
+      name:
+        value: The Quiet Meridian
+      tone:
+        descriptor: world.tone
+        default: heroic
+      environment:
+        descriptor: world.environment
+        default: pastoral
+      scarcity:
+        descriptor: world.scarcity
+        default: strained
+    components:
+      regions:
+        template: region.standard
+        count:
+          generator: region.count
+      faction:
+        template: faction.major
+      encounter:
+        template: encounter.signature
+      event:
+        template: event.opening
+  region.standard:
+    kind: province
+    traits:
+      - region.threatened
+    values:
+      name:
+        generator: region.names
+      threat:
+        descriptor: world.threat
+        default: high
+      danger:
+        generator: danger
+    components:
+      settlements:
+        template: settlement.standard
+        count: 2
+      locations:
+        template: location.standard
+        count: 2
+      creatures:
+        template: creature.standard
+        count: 2
+      npc:
+        template: npc.standard
+      item:
+        template: item.signature
+  settlement.standard:
+    kind: settlement
+    tags:
+      - community
+    values:
+      name:
+        generator: settlement.names
+      economy:
+        generator: economy
+      environment:
+        descriptor: world.environment
+        default: pastoral
+    components: {}
+  location.standard:
+    kind: location
+    tags:
+      - adventure-site
+    traits:
+      - location.scarce
+    values:
+      name:
+        generator: location.names
+      feature:
+        descriptor: world.environment
+        default: pastoral
+    components: {}
+  creature.standard:
+    kind: creature
+    tags:
+      - threat
+    values:
+      name:
+        generator: creature.names
+      danger:
+        generator: danger
+    components: {}
+  npc.standard:
+    kind: npc
+    tags:
+      - contact
+    values:
+      name:
+        generator: npc.names
+      agenda:
+        generator: economy
+    components: {}
+  item.signature:
+    kind: item
+    tags:
+      - treasure
+    values:
+      name:
+        generator: item.names
+      scarcity:
+        descriptor: world.scarcity
+        default: strained
+    components: {}
+  faction.major:
+    kind: faction
+    tags:
+      - major-faction
+    values:
+      name:
+        generator: faction.names
+      agenda:
+        generator: economy
+    components: {}
+  encounter.signature:
+    kind: encounter
+    tags:
+      - set-piece
+    values:
+      name:
+        generator: encounter.names
+      threat:
+        descriptor: world.threat
+        default: high
+    components: {}
+  event.opening:
+    kind: event
+    tags:
+      - campaign-hook
+    values:
+      name:
+        generator: event.names
+      tone:
+        descriptor: world.tone
+        default: heroic
+    components: {}
+relations:
+  - id: settlement-route
+    type: connectedTo
+    from:
+      kind: settlement
+    to:
+      kind: settlement
+    mode: chain
+    bidirectional: true
+  - id: faction-influence
+    type: influencedBy
+    from:
+      kind: province
+    to:
+      kind: faction
+      tags:
+        - major-faction
+    mode: each-to-first
+constraints:
+  - id: regional-depth
+    type: entity-count
+    query:
+      kind: province
+    min: 2
+  - id: adventure-sites
+    type: entity-count
+    query:
+      kind: location
+    min: 4
+  - id: routes-exist
+    type: relation-count
+    relation: connectedTo
+    min: 3
+dependencies: []
+characterCreation:
+  schemaVersion: "1"
+  steps:
+    - id: identity
+      title: Identity
+      fields:
+        - id: name
+          label: Name
+          type: text
+          required: true
+          minLength: 2
+          maxLength: 60
+    - id: calling
+      title: Calling
+      fields:
+        - id: calling
+          label: Calling
+          type: choice
+          required: true
+          options:
+            - value: fieldworker
+              label: Fieldworker
+            - value: observer
+              label: Observer
+            - value: researcher
+              label: Researcher
+        - id: archetype
+          label: Investigator role
+          type: choice
+          required: true
+          default: archetypes.1
+          options:
+            - value: archetypes.1
+              label: Signal Analyst
+            - value: archetypes.2
+              label: Polar Surveyor
+            - value: archetypes.3
+              label: Recall Operator
+            - value: archetypes.4
+              label: Archive Custodian
+            - value: archetypes.5
+              label: Exposure Medic
+            - value: archetypes.6
+              label: Transit Witness
+            - value: archetypes.7
+              label: Low Tide Technician
+            - value: archetypes.8
+              label: Cold Route Pilot
+        - id: path
+          label: Progression path
+          type: choice
+          required: true
+          default: progressionPaths.1
+          options:
+            - value: progressionPaths.1
+              label: Independent Investigator
+            - value: progressionPaths.2
+              label: Measured Boundary Keeper
+            - value: progressionPaths.3
+              label: Witness Relay Steward
+            - value: progressionPaths.4
+              label: Evidence Guardian
+            - value: progressionPaths.5
+              label: Evacuation Coordinator
+            - value: progressionPaths.6
+              label: Quiet Containment Analyst
+    - id: aptitudes
+      title: Aptitudes
+      fields:
+        - id: endurance
+          label: Endurance
+          type: number
+          min: -2
+          max: 5
+          default: 1
+        - id: reason
+          label: Reason
+          type: number
+          min: -2
+          max: 5
+          default: 1
+        - id: insight
+          label: Insight
+          type: number
+          min: -2
+          max: 5
+          default: 1
+    - id: signature
+      title: Signature
+      fields:
+        - id: signature
+          label: Signature approach
+          type: choice
+          required: true
+          default: bold
+          options:
+            - value: bold
+              label: Bold
+            - value: careful
+              label: Careful
+            - value: compassionate
+              label: Compassionate
+        - id: portrait
+          label: Portrait
+          type: asset
+          required: true
+          default: standard
+          options:
+            - value: standard
+              label: Cosmic Investigation portrait
+            - value: silhouette
+              label: Silhouette
+  calculated:
+    - id: readiness
+      operation: sum
+      fields:
+        - endurance
+        - reason
+        - insight
+  starting:
+    progression:
+      renown: 0
+      experience: 0
+      progressionPaths.1: 0
+      progressionPaths.2: 0
+      progressionPaths.3: 0
+      progressionPaths.4: 0
+      progressionPaths.5: 0
+      progressionPaths.6: 0
+    resources:
+      health: 18
+      composure: 10
+      exposure: 0
+    inventory:
+      - id: weapon
+        quantity: 1
+        when:
+          field: calling
+          equals: fieldworker
+      - id: kit
+        quantity: 1
+        when:
+          field: calling
+          equals: observer
+      - id: relic
+        quantity: 1
+        when:
+          field: calling
+          equals: researcher
+      - id: supply
+        quantity: 2
+    traits:
+      - id: trained-fieldworker
+        when:
+          field: calling
+          equals: fieldworker
+      - id: trained-observer
+        when:
+          field: calling
+          equals: observer
+      - id: trained-researcher
+        when:
+          field: calling
+          equals: researcher
+      - id: role-archetypes.1
+        when:
+          field: archetype
+          equals: archetypes.1
+      - id: role-archetypes.2
+        when:
+          field: archetype
+          equals: archetypes.2
+      - id: role-archetypes.3
+        when:
+          field: archetype
+          equals: archetypes.3
+      - id: role-archetypes.4
+        when:
+          field: archetype
+          equals: archetypes.4
+      - id: role-archetypes.5
+        when:
+          field: archetype
+          equals: archetypes.5
+      - id: role-archetypes.6
+        when:
+          field: archetype
+          equals: archetypes.6
+      - id: role-archetypes.7
+        when:
+          field: archetype
+          equals: archetypes.7
+      - id: role-archetypes.8
+        when:
+          field: archetype
+          equals: archetypes.8
+      - id: path-progressionPaths.1
+        when:
+          field: path
+          equals: progressionPaths.1
+      - id: path-progressionPaths.2
+        when:
+          field: path
+          equals: progressionPaths.2
+      - id: path-progressionPaths.3
+        when:
+          field: path
+          equals: progressionPaths.3
+      - id: path-progressionPaths.4
+        when:
+          field: path
+          equals: progressionPaths.4
+      - id: path-progressionPaths.5
+        when:
+          field: path
+          equals: progressionPaths.5
+      - id: path-progressionPaths.6
+        when:
+          field: path
+          equals: progressionPaths.6
+    assets:
+      - id: portrait
+        value: assets/ui/portrait.svg
+  portability:
+    rules: []
+checks:
+  endurance:
+    label: Endurance
+    dice: 1d20
+    modifierField: endurance
+    criticalSuccess:
+      rollTotalAtLeast: 20
+    criticalFailure:
+      rollTotalAtMost: 1
+  reason:
+    label: Reason
+    dice: 2d6
+    modifierField: reason
+    criticalSuccess:
+      rollTotalAtLeast: 12
+    criticalFailure:
+      rollTotalAtMost: 2
+  insight:
+    label: Insight
+    dice: 1d20
+    modifierField: insight
+    criticalSuccess:
+      rollTotalAtLeast: 20
+    criticalFailure:
+      rollTotalAtMost: 1
+resources:
+  health:
+    label: Health
+    min: 0
+    max: 24
+    default: 18
+  composure:
+    label: Composure
+    min: 0
+    max: 16
+    default: 10
+  exposure:
+    label: Exposure
+    min: 0
+    max: 18
+    default: 0
+items:
+  weapon:
+    label: Field Baton
+    stackLimit: 1
+  kit:
+    label: Survey Kit
+    stackLimit: 1
+  relic:
+    label: Control Sample
+    stackLimit: 1
+  supply:
+    label: Rest Supply
+    stackLimit: 10
+  armor:
+    label: Cold Coat
+    stackLimit: 1
+  tool:
+    label: Isolation Tools
+    stackLimit: 1
+  token:
+    label: Custody Seal
+    stackLimit: 1
+progression:
+  renown:
+    label: Renown
+    min: 0
+    max: 100
+    default: 0
+  experience:
+    label: Experience
+    min: 0
+    default: 0
+  progressionPaths.1:
+    label: Independent Investigator
+    min: 0
+    default: 0
+  progressionPaths.2:
+    label: Measured Boundary Keeper
+    min: 0
+    default: 0
+  progressionPaths.3:
+    label: Witness Relay Steward
+    min: 0
+    default: 0
+  progressionPaths.4:
+    label: Evidence Guardian
+    min: 0
+    default: 0
+  progressionPaths.5:
+    label: Evacuation Coordinator
+    min: 0
+    default: 0
+  progressionPaths.6:
+    label: Quiet Containment Analyst
+    min: 0
+    default: 0
+locations:
+  worldEntityKinds:
+    - settlement
+    - location
+actorTemplates:
+  adversary:
+    label: Lens Custodian
+    resources:
+      health: 10
+      composure: 0
+      exposure: 0
+    attributes:
+      endurance: 2
+      reason: 0
+      insight: 1
+    inventory:
+      - itemId: weapon
+        quantity: 1
+    progression:
+      renown: 0
+      experience: 0
+    worldEntityKinds:
+      - creature
+  contact:
+    label: Tide Technician
+    resources:
+      health: 18
+      composure: 10
+      exposure: 8
+    attributes:
+      endurance: 0
+      reason: 2
+      insight: 2
+    inventory:
+      - itemId: kit
+        quantity: 1
+    progression:
+      renown: 5
+      experience: 0
+    worldEntityKinds:
+      - npc
+  elite:
+    label: Threshold Figure
+    resources:
+      health: 18
+      composure: 10
+      exposure: 8
+    attributes:
+      endurance: 3
+      reason: 2
+      insight: 2
+    inventory:
+      - itemId: relic
+        quantity: 1
+    progression:
+      renown: 10
+      experience: 5
+    worldEntityKinds:
+      - creature
+effects:
+  shaken:
+    label: Unsettled
+    duration:
+      type: turns
+      value: 2
+    modifiers:
+      endurance: -2
+    blockedActions:
+      - inspire
+  blessed:
+    label: Grounded
+    duration:
+      type: rounds
+      value: 2
+    modifiers:
+      reason: 2
+  guarded:
+    label: Prepared
+    duration:
+      type: turns
+      value: 1
+    modifiers:
+      insight: 2
+actions:
+  basic-attack:
+    label: Use Field Baton
+    target: single-actor
+    steps:
+      - check:
+          id: endurance
+          against: input.difficulty
+      - roll:
+          id: impact
+          dice: 1d6
+        when:
+          previousOutcome: success
+      - resource:
+          target: target
+          resource: health
+          operation: subtract
+          value: impact.total
+        when:
+          previousOutcome: success
+  recover:
+    label: Recover Health
+    kind: resource
+    target: self
+    resource: health
+    operation: add
+    amount: 3
+  hinder:
+    label: Unsettled
+    kind: effect
+    target: actor
+    effectId: shaken
+  inspire:
+    label: Grounded
+    target: multiple-actors
+    steps:
+      - effect:
+          target: target
+          id: blessed
+  guard:
+    label: Prepared
+    kind: effect
+    target: self
+    effectId: guarded
+  signature-move:
+    label: Signature Move
+    target: single-actor
+    steps:
+      - check:
+          id: reason
+          against: input.difficulty
+      - effect:
+          target: target
+          id: shaken
+        when:
+          previousOutcome: success
+  pressure:
+    label: Mark Exposure
+    kind: resource
+    target: self
+    resource: exposure
+    operation: add
+    amount: 1
+  contain-exposure:
+    label: Reduce Exposure
+    kind: resource
+    target: self
+    resource: exposure
+    operation: subtract
+    amount: 1
+encounter:
+  orderingPolicy: fixed

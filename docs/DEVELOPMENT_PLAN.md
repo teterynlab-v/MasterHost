@@ -667,8 +667,8 @@ The approved product expansion is defined in `docs/superpowers/specs/2026-09-22-
 | M24 | Mythic Antiquity | Complete engineering gate 2026-09-27 |
 | M25 | Weird West | Complete engineering gate 2026-09-27 |
 | M26 | Urban Fantasy | Complete engineering gate 2026-09-27 |
-| M27 | Cosmic Investigation | Active |
-| M28 | Age of Sail | Planned |
+| M27 | Cosmic Investigation | Complete engineering gate 2026-09-27 |
+| M28 | Age of Sail | Active |
 | M29 | Mecha & Kaiju | Planned |
 | M30 | Whole-collection compatibility, localization, release and product acceptance | Planned |
 

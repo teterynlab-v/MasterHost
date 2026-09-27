@@ -1,0 +1,27 @@
+id: standard
+name: Cosmic Investigation Standard
+description: Official Cosmic Investigation visual language.
+defaults:
+  background: assets/ui/background.svg
+  portrait: assets/ui/portrait.svg
+  card: assets/ui/background.svg
+  ui: assets/ui/background.svg
+  map: assets/ui/map.svg
+  token: assets/ui/creature.svg
+types:
+  location:
+    location: assets/ui/location.svg
+    background: assets/ui/background.svg
+  creature:
+    token: assets/ui/creature.svg
+    portrait: assets/ui/creature.svg
+  npc:
+    portrait: assets/ui/portrait.svg
+    token: assets/ui/portrait.svg
+  item:
+    item: assets/ui/item.svg
+    card: assets/ui/item.svg
+  encounter:
+    background: assets/ui/background.svg
+  event:
+    card: assets/ui/background.svg

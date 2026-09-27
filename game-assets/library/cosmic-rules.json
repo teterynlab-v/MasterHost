@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.cosmic.rules",
+  "version": "1.0.0",
+  "type": "rules",
+  "name": "Comparison Exposure and Containment Rules",
+  "description": "Comparison Exposure and Containment Rules for Coastal University, Polar Expedition, Decaying Metropolis. Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.",
+  "tags": [
+    "cosmic-investigation",
+    "coastal-university",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Comparison Exposure and Containment Rules for Coastal University, Polar Expedition, Decaying Metropolis. Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.",
+    "highlights": [
+      "Comparison Exposure and Containment Rules",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.cosmic-investigation"
+    ],
+    "requiresCapabilities": [
+      "setting:cosmic-investigation"
+    ],
+    "providesCapabilities": [
+      "rules:cosmic-investigation"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.cosmic.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Cosmic Investigation original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.cosmic.rules"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 6,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.cosmic.rules",
+    "version": "1.0.0",
+    "name": "Comparison Exposure and Containment Rules",
+    "description": "Comparison Exposure and Containment Rules for Coastal University, Polar Expedition, Decaying Metropolis. Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.",
+    "provides": [
+      "rules:cosmic-investigation"
+    ],
+    "requires": [
+      "setting:cosmic-investigation"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/actions/cosmic-compare-record",
+        "value": {
+          "label": "Compare Record",
+          "target": "self",
+          "kind": "check",
+          "checkId": "reason"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/cosmic-measure-boundary",
+        "value": {
+          "label": "Measure Boundary",
+          "target": "self",
+          "kind": "check",
+          "checkId": "insight"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/cosmic-test-sample",
+        "value": {
+          "label": "Test Sample",
+          "target": "self",
+          "kind": "check",
+          "checkId": "reason"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/cosmic-isolate-feed",
+        "value": {
+          "label": "Isolate Feed",
+          "target": "self",
+          "kind": "check",
+          "checkId": "insight"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/cosmic-escort-witness",
+        "value": {
+          "label": "Escort Witness",
+          "target": "self",
+          "kind": "check",
+          "checkId": "endurance"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/cosmic-preserve-evidence",
+        "value": {
+          "label": "Preserve Evidence",
+          "target": "self",
+          "kind": "check",
+          "checkId": "reason"
+        }
+      }
+    ]
+  }
+}

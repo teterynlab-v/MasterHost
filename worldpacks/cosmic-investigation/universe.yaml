@@ -1,0 +1,3762 @@
+{
+  "schemaVersion": "1",
+  "id": "cosmic-investigation",
+  "genres": [
+    "horror",
+    "investigation"
+  ],
+  "tones": [
+    "uncanny",
+    "cerebral",
+    "tense"
+  ],
+  "complexity": "advanced",
+  "recommendedPlayers": {
+    "min": 2,
+    "max": 6
+  },
+  "gameLoop": [
+    {
+      "id": "investigate",
+      "label": "Compare independent evidence before accepting a pattern",
+      "ruleRefs": [
+        "check:reason",
+        "action:recover"
+      ]
+    },
+    {
+      "id": "knowledge",
+      "label": "Test signal geometry or recall with measured controls",
+      "ruleRefs": [
+        "check:insight",
+        "action:inspire"
+      ]
+    },
+    {
+      "id": "pressure",
+      "label": "Track exposure and protect an exit for every witness",
+      "ruleRefs": [
+        "check:endurance",
+        "resource:composure"
+      ]
+    },
+    {
+      "id": "contain",
+      "label": "Interrupt harm while preserving accountable evidence and uncertainty",
+      "ruleRefs": [
+        "progression:renown"
+      ]
+    }
+  ],
+  "patterns": [
+    {
+      "id": "coastal-university",
+      "name": "Coastal University",
+      "summary": "An observatory predicts the disappearance of named archive pages. Compare independent tide records, trace a recent transmitter repair and stop harmful alignment without destroying proof.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    },
+    {
+      "id": "polar-expedition",
+      "name": "Polar Expedition",
+      "summary": "A warm geometric cavity beneath unmelted ice erases measured time. Use control samples and external clocks, count the unlisted crew and find a cold route out.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    },
+    {
+      "id": "decaying-metropolis",
+      "name": "Decaying Metropolis",
+      "summary": "An emergency switchboard forgets streets at a repeating interval. Compare passenger journeys, isolate the erasing feed and restore routes without forcing one shared memory.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    }
+  ],
+  "campaignKits": [
+    {
+      "id": "kit.coastal-university",
+      "name": "Coastal University: Evidence without Another Victim",
+      "summary": "A three to four hour Coastal University game: An observatory predicts the disappearance of named archive pages. Compare independent tide records, trace a recent transmitter repair and stop harmful alignment without destroying proof.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "coastal-university"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.1",
+      "sceneIds": [
+        "scenes.1",
+        "scenes.4",
+        "scenes.7",
+        "scenes.10",
+        "scenes.13",
+        "scenes.16"
+      ],
+      "npcIds": [
+        "npcs.1",
+        "npcs.4",
+        "npcs.7"
+      ],
+      "locationIds": [
+        "locations.1",
+        "locations.4",
+        "locations.7"
+      ],
+      "rewardIds": [
+        "items.1",
+        "items.4"
+      ],
+      "gmGuidance": [
+        "Show a predicted deletion before asking players to explain it.",
+        "Provide unlinked tides, repair tags and a schedule as independent clue routes.",
+        "An interrupted lens and a low-tide disconnect both preserve testable proof.",
+        "Record custody, victims and known limits without declaring the phenomenon solved."
+      ],
+      "readyCharacterIds": [
+        "archetypes.1",
+        "archetypes.4"
+      ]
+    },
+    {
+      "id": "kit.polar-expedition",
+      "name": "Polar Expedition: A Cold Route Home",
+      "summary": "A three to four hour Polar Expedition game: A warm geometric cavity beneath unmelted ice erases measured time. Use control samples and external clocks, count the unlisted crew and find a cold route out.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "polar-expedition"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.2",
+      "sceneIds": [
+        "scenes.2",
+        "scenes.5",
+        "scenes.8",
+        "scenes.11",
+        "scenes.14",
+        "scenes.17"
+      ],
+      "npcIds": [
+        "npcs.2",
+        "npcs.5",
+        "npcs.8"
+      ],
+      "locationIds": [
+        "locations.2",
+        "locations.5",
+        "locations.8"
+      ],
+      "rewardIds": [
+        "items.2",
+        "items.5"
+      ],
+      "gmGuidance": [
+        "State the warm threshold and paired clock discrepancy before another descent.",
+        "Count the unlisted crew; a digital roster is evidence rather than truth.",
+        "Offer cold controls, weight tests and an external flagged evacuation route.",
+        "Record measured exposure limits and the separated sample’s final containment."
+      ],
+      "readyCharacterIds": [
+        "archetypes.2",
+        "archetypes.5"
+      ]
+    },
+    {
+      "id": "kit.decaying-metropolis",
+      "name": "Decaying Metropolis: The City Remembers Differently",
+      "summary": "A three to four hour Decaying Metropolis game: An emergency switchboard forgets streets at a repeating interval. Compare passenger journeys, isolate the erasing feed and restore routes without forcing one shared memory.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "decaying-metropolis"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.3",
+      "sceneIds": [
+        "scenes.3",
+        "scenes.6",
+        "scenes.9",
+        "scenes.12",
+        "scenes.15",
+        "scenes.18"
+      ],
+      "npcIds": [
+        "npcs.3",
+        "npcs.6",
+        "npcs.9"
+      ],
+      "locationIds": [
+        "locations.3",
+        "locations.6",
+        "locations.9"
+      ],
+      "rewardIds": [
+        "items.3",
+        "items.6"
+      ],
+      "gmGuidance": [
+        "Start with a caller who needs a real emergency route.",
+        "Compare tickets, photographs and paper addresses while allowing disagreement.",
+        "Use feed isolation and consented restoration rather than forcing shared memory.",
+        "Record correction rights and independent routes after the switchboard goes quiet."
+      ],
+      "readyCharacterIds": [
+        "archetypes.3",
+        "archetypes.6"
+      ]
+    }
+  ],
+  "content": {
+    "factions": [
+      {
+        "id": "factions.1",
+        "name": "Tide Research Circle",
+        "description": "Tide Research Circle: studies an observatory signal that predicts missing archive pages.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "cosmic.factions.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Tide Research Circle: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.2",
+        "name": "White Meridian Expedition",
+        "description": "White Meridian Expedition: found a warm geometric cavity beneath an ice core.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "cosmic.factions.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "White Meridian Expedition: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.3",
+        "name": "City Recall Service",
+        "description": "City Recall Service: records buildings whose occupants vanish from public memory.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "cosmic.factions.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "City Recall Service: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.4",
+        "name": "Coastal Archivists",
+        "description": "Coastal Archivists: keeps paper copies outside the signal-linked university network.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "cosmic.factions.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Coastal Archivists: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.5",
+        "name": "Polar Safety Crew",
+        "description": "Polar Safety Crew: can evacuate the cavity if the expedition abandons its impossible heat source.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "cosmic.factions.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Polar Safety Crew: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.6",
+        "name": "Transit Witness Group",
+        "description": "Transit Witness Group: maps real passenger journeys through forgotten stations.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "cosmic.factions.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Transit Witness Group: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.7",
+        "name": "Quiet Lens Lab",
+        "description": "Quiet Lens Lab: wants the signal shut down but fears losing proof of the discovery.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.7"
+          }
+        ],
+        "localeKey": "cosmic.factions.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Quiet Lens Lab: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.8",
+        "name": "Independent Survey Team",
+        "description": "Independent Survey Team: offers a comparison core and a route beyond the warm ice.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.11"
+          }
+        ],
+        "localeKey": "cosmic.factions.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Independent Survey Team: map schematic"
+          }
+        ]
+      }
+    ],
+    "locations": [
+      {
+        "id": "locations.1",
+        "name": "Tide Observatory",
+        "description": "Tide Observatory: a lens aligns before the archive loses another named page.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "cosmic.locations.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Tide Observatory: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.2",
+        "name": "Warm Ice Bore",
+        "description": "Warm Ice Bore: a perfect cavity radiates heat without melting its angular walls.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "cosmic.locations.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Warm Ice Bore: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.3",
+        "name": "Forgotten Station",
+        "description": "Forgotten Station: a platform carries passengers no municipal map will name.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "cosmic.locations.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Forgotten Station: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.4",
+        "name": "Paper Archive Annex",
+        "description": "Paper Archive Annex: uncorrupted tide logs show the signal followed an artificial schedule.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "cosmic.locations.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Paper Archive Annex: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.5",
+        "name": "Meridian Core Store",
+        "description": "Meridian Core Store: a control sample remains cold while the cavity core alters recorded dates.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "cosmic.locations.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Meridian Core Store: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.6",
+        "name": "Recall Switchboard",
+        "description": "Recall Switchboard: calls from missing buildings share an impossible repeating interval.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "cosmic.locations.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Recall Switchboard: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.7",
+        "name": "Quiet Lens Chamber",
+        "description": "Quiet Lens Chamber: the alignment can be interrupted without destroying the original data.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "cosmic.locations.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Quiet Lens Chamber: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.8",
+        "name": "Outer Ice Camp",
+        "description": "Outer Ice Camp: a safe exit needs fuel no longer assigned to the warm experiment.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "cosmic.locations.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Outer Ice Camp: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.9",
+        "name": "Witness Tram",
+        "description": "Witness Tram: riders retain names while comparing handwritten journeys.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.3"
+          }
+        ],
+        "localeKey": "cosmic.locations.9",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Witness Tram: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.10",
+        "name": "Low Tide Stair",
+        "description": "Low Tide Stair: a submerged transmitter bears a recent university repair tag.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.4"
+          }
+        ],
+        "localeKey": "cosmic.locations.10",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Low Tide Stair: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.11",
+        "name": "Geometry Threshold",
+        "description": "Geometry Threshold: crossing the warm boundary erases a minute from every recording device.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.8"
+          }
+        ],
+        "localeKey": "cosmic.locations.11",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Geometry Threshold: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.12",
+        "name": "Public Memory Vault",
+        "description": "Public Memory Vault: a physical ledger may restore addresses if the signal feed is isolated.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.12"
+          }
+        ],
+        "localeKey": "cosmic.locations.12",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Public Memory Vault: location schematic"
+          }
+        ]
+      }
+    ],
+    "npcs": [
+      {
+        "id": "npcs.1",
+        "name": "Researcher Mara Lens",
+        "description": "Researcher Mara Lens: has a prediction log but refuses to call the missing pages coincidence.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "cosmic.npcs.1",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Researcher Mara Lens: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.2",
+        "name": "Surveyor Kai Meridian",
+        "description": "Surveyor Kai Meridian: can recover the warm core if another person keeps time outside the cavity.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "cosmic.npcs.2",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Surveyor Kai Meridian: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.3",
+        "name": "Operator Ren Recall",
+        "description": "Operator Ren Recall: records callers while the official switchboard deletes their addresses.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "cosmic.npcs.3",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Operator Ren Recall: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.4",
+        "name": "Archivist Tessa Paper",
+        "description": "Archivist Tessa Paper: keeps the control logs hidden from a signal-linked audit.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "cosmic.npcs.4",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Archivist Tessa Paper: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.5",
+        "name": "Medic Ivo Ice",
+        "description": "Medic Ivo Ice: can track exposure symptoms if the crew stops using warmth as proof of safety.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "cosmic.npcs.5",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Medic Ivo Ice: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.6",
+        "name": "Conductor Bea Tram",
+        "description": "Conductor Bea Tram: remembers a vanished station through passengers' paper tickets.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "cosmic.npcs.6",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Conductor Bea Tram: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.7",
+        "name": "Technician Neri Tide",
+        "description": "Technician Neri Tide: installed the recent transmitter repair without knowing its alignment purpose.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "cosmic.npcs.7",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Technician Neri Tide: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.8",
+        "name": "Pilot Sol Outer",
+        "description": "Pilot Sol Outer: can evacuate everyone if the experiment releases its assigned fuel.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "cosmic.npcs.8",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Pilot Sol Outer: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.9",
+        "name": "Witness Fia Name",
+        "description": "Witness Fia Name: remembers a missing neighbor and needs evidence others can compare.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "cosmic.npcs.9",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Witness Fia Name: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.10",
+        "name": "Analyst Juno Quiet",
+        "description": "Analyst Juno Quiet: found the artificial schedule and wants the lens interrupted intact.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "cosmic.npcs.10",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Analyst Juno Quiet: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.11",
+        "name": "Driller Mei Core",
+        "description": "Driller Mei Core: can retrieve the comparison sample before the warm threshold expands.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "cosmic.npcs.11",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Driller Mei Core: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.12",
+        "name": "Auditor Oren Vault",
+        "description": "Auditor Oren Vault: holds a physical address ledger outside the recall feed.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "cosmic.npcs.12",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Auditor Oren Vault: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.13",
+        "name": "Student Dev Interval",
+        "description": "Student Dev Interval: noticed that deletion follows a clock interval rather than tidal height.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "cosmic.npcs.13",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Student Dev Interval: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.14",
+        "name": "Cook Noa Camp",
+        "description": "Cook Noa Camp: counted supplies for people the expedition roster no longer contains.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "cosmic.npcs.14",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Cook Noa Camp: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.15",
+        "name": "Reporter Rosa Stop",
+        "description": "Reporter Rosa Stop: has photographs of a station the city says was never built.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "cosmic.npcs.15",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Reporter Rosa Stop: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.16",
+        "name": "Professor Ada Signal",
+        "description": "Professor Ada Signal: fears public containment will erase her discovery and conceal its victims.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "cosmic.npcs.16",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Professor Ada Signal: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.17",
+        "name": "Engineer Pell Clock",
+        "description": "Engineer Pell Clock: can build an independent timer using mechanical marks.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "cosmic.npcs.17",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Engineer Pell Clock: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.18",
+        "name": "Resident Ash Window",
+        "description": "Resident Ash Window: describes a house missing from every digital image.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "cosmic.npcs.18",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Resident Ash Window: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.19",
+        "name": "Keeper Len Tag",
+        "description": "Keeper Len Tag: knows who signed the transmitter repair order.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "cosmic.npcs.19",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Keeper Len Tag: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.20",
+        "name": "Navigator Kira White",
+        "description": "Navigator Kira White: marked the cold exit route before maps began repeating the cavity.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "cosmic.npcs.20",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Navigator Kira White: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.21",
+        "name": "Clerk Taro Ledger",
+        "description": "Clerk Taro Ledger: can reconcile paper addresses if witnesses choose what may be disclosed.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "cosmic.npcs.21",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Clerk Taro Ledger: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.22",
+        "name": "Diver Siva Low",
+        "description": "Diver Siva Low: can disconnect the transmitter at low tide without entering the lens chamber.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "cosmic.npcs.22",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Diver Siva Low: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.23",
+        "name": "Observer Tess Edge",
+        "description": "Observer Tess Edge: keeps paired clocks at the warm boundary and offers a tested safe limit.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "cosmic.npcs.23",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Observer Tess Edge: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.24",
+        "name": "Volunteer Eri Return",
+        "description": "Volunteer Eri Return: organizes a witness journey to keep forgotten residents connected.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "cosmic.npcs.24",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Volunteer Eri Return: portrait schematic"
+          }
+        ]
+      }
+    ],
+    "adversaries": [
+      {
+        "id": "adversaries.1",
+        "name": "Lens Custodian",
+        "description": "Lens Custodian: forces another alignment cycle while ignoring the paper deletion record.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "cosmic.adversaries.1",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Lens Custodian: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.2",
+        "name": "Warm Geometry Echo",
+        "description": "Warm Geometry Echo: copies a rescuers' voice from inside the unmeasured interval.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "cosmic.adversaries.2",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Warm Geometry Echo: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.3",
+        "name": "Recall Agent",
+        "description": "Recall Agent: erases addresses outside the repeating feed and claims the callers are mistaken.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "cosmic.adversaries.3",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Recall Agent: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.4",
+        "name": "Archive Glider",
+        "description": "Archive Glider: moves along signal-linked shelves but cannot cross the paper annex.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "cosmic.adversaries.4",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Archive Glider: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.5",
+        "name": "Heat Advocate",
+        "description": "Heat Advocate: locks evacuation fuel inside the experiment's allocation chest.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "cosmic.adversaries.5",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Heat Advocate: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.6",
+        "name": "Station Doppelganger",
+        "description": "Station Doppelganger: offers a familiar platform whose timetable ends before its passengers arrived.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "cosmic.adversaries.6",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Station Doppelganger: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.7",
+        "name": "Transmitter Sentinel",
+        "description": "Transmitter Sentinel: defends the recent repair under an unsigned safety order.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.7"
+          }
+        ],
+        "localeKey": "cosmic.adversaries.7",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Transmitter Sentinel: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.8",
+        "name": "Ice Clock Swarm",
+        "description": "Ice Clock Swarm: synchronizes digital timers until an independent mechanical mark interrupts it.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.11"
+          }
+        ],
+        "localeKey": "cosmic.adversaries.8",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Ice Clock Swarm: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.9",
+        "name": "Memory Switch",
+        "description": "Memory Switch: replaces named witnesses with anonymous calls when questioned through the feed.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.3"
+          }
+        ],
+        "localeKey": "cosmic.adversaries.9",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Memory Switch: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.10",
+        "name": "Publication Extorter",
+        "description": "Publication Extorter: offers quiet shutdown only if the university surrenders all evidence.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.4"
+          }
+        ],
+        "localeKey": "cosmic.adversaries.10",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Publication Extorter: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.11",
+        "name": "Core Reflection",
+        "description": "Core Reflection: returns the warm sample's appearance without its recorded weight.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.8"
+          }
+        ],
+        "localeKey": "cosmic.adversaries.11",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Core Reflection: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.12",
+        "name": "Vault Shredder",
+        "description": "Vault Shredder: destroys paper addresses while repeating a false retention rule.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.12"
+          }
+        ],
+        "localeKey": "cosmic.adversaries.12",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Vault Shredder: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.13",
+        "name": "Alignment Votary",
+        "description": "Alignment Votary: insists another missing page will prove the discovery beyond doubt.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "cosmic.adversaries.13",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Alignment Votary: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.14",
+        "name": "Threshold Figure",
+        "description": "Threshold Figure: appears beyond the paired clocks and mimics the missing minute.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "cosmic.adversaries.14",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Threshold Figure: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.15",
+        "name": "Unlisted Inspector",
+        "description": "Unlisted Inspector: seizes witness tickets for a station absent from the city list.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "cosmic.adversaries.15",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Unlisted Inspector: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.16",
+        "name": "Tide Mimic",
+        "description": "Tide Mimic: plays a natural tide curve over the transmitter's artificial schedule.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "cosmic.adversaries.16",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Tide Mimic: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.17",
+        "name": "Meridian Loop",
+        "description": "Meridian Loop: repeats an exit map that leads back to the expanding warm boundary.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "cosmic.adversaries.17",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Meridian Loop: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.18",
+        "name": "Recall Chorus",
+        "description": "Recall Chorus: demands a single shared memory where witnesses still disagree.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "cosmic.adversaries.18",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Recall Chorus: creature schematic"
+          }
+        ]
+      }
+    ],
+    "items": [
+      {
+        "id": "items.1",
+        "name": "Prediction Log",
+        "description": "Prediction Log: links each alignment cycle to a missing named archive page.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "cosmic.items.1",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Prediction Log: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.2",
+        "name": "Independent Core Sample",
+        "description": "Independent Core Sample: provides a cold comparison outside the warm geometry.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "cosmic.items.2",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Independent Core Sample: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.3",
+        "name": "Paper Tram Ticket",
+        "description": "Paper Tram Ticket: proves a passenger used the forgotten station at a recorded time.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "cosmic.items.3",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Paper Tram Ticket: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.4",
+        "name": "Unlinked Tide Record",
+        "description": "Unlinked Tide Record: distinguishes artificial alignment from normal water movement.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "cosmic.items.4",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Unlinked Tide Record: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.5",
+        "name": "Paired Mechanical Clocks",
+        "description": "Paired Mechanical Clocks: measures the minute lost at the warm threshold.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "cosmic.items.5",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Paired Mechanical Clocks: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.6",
+        "name": "Physical Address Ledger",
+        "description": "Physical Address Ledger: keeps residents identifiable outside the recall feed.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "cosmic.items.6",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Physical Address Ledger: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.7",
+        "name": "Repair Tag Copy",
+        "description": "Repair Tag Copy: links the submerged transmitter to a recent university order.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "cosmic.items.7",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Repair Tag Copy: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.8",
+        "name": "Evacuation Fuel Release",
+        "description": "Evacuation Fuel Release: moves transport capacity out of the experiment's control.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "cosmic.items.8",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Evacuation Fuel Release: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.9",
+        "name": "Witness Journey Book",
+        "description": "Witness Journey Book: records differing memories without forcing one official version.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.3"
+          }
+        ],
+        "localeKey": "cosmic.items.9",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Witness Journey Book: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.10",
+        "name": "Lens Break Diagram",
+        "description": "Lens Break Diagram: shows a reversible interruption route that retains evidence.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.4"
+          }
+        ],
+        "localeKey": "cosmic.items.10",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Lens Break Diagram: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.11",
+        "name": "Core Weight Slip",
+        "description": "Core Weight Slip: detects a reflection that reproduces appearance but not mass.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.8"
+          }
+        ],
+        "localeKey": "cosmic.items.11",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Core Weight Slip: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.12",
+        "name": "Signal Isolation Label",
+        "description": "Signal Isolation Label: marks the feed disconnected from the public memory vault.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.12"
+          }
+        ],
+        "localeKey": "cosmic.items.12",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Signal Isolation Label: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.13",
+        "name": "Archive Custody Envelope",
+        "description": "Archive Custody Envelope: protects original logs before the university review.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.13"
+          }
+        ],
+        "localeKey": "cosmic.items.13",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Archive Custody Envelope: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.14",
+        "name": "Cold Route Flags",
+        "description": "Cold Route Flags: guides evacuation without following the looping digital map.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.17"
+          }
+        ],
+        "localeKey": "cosmic.items.14",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Cold Route Flags: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.15",
+        "name": "Station Photo Pair",
+        "description": "Station Photo Pair: compares the platform before and after the recall interval.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.21"
+          }
+        ],
+        "localeKey": "cosmic.items.15",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Station Photo Pair: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.16",
+        "name": "Transmitter Disconnect Tool",
+        "description": "Transmitter Disconnect Tool: can cut alignment at low tide with a limited safe window.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.22"
+          }
+        ],
+        "localeKey": "cosmic.items.16",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Transmitter Disconnect Tool: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.17",
+        "name": "Exposure Observation Chart",
+        "description": "Exposure Observation Chart: tracks symptoms against time inside the cavity.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.2"
+          }
+        ],
+        "localeKey": "cosmic.items.17",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Exposure Observation Chart: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.18",
+        "name": "Resident Consent List",
+        "description": "Resident Consent List: bounds what personal address data the witness vault may restore.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.6"
+          }
+        ],
+        "localeKey": "cosmic.items.18",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Resident Consent List: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.19",
+        "name": "Control Schedule Rubbing",
+        "description": "Control Schedule Rubbing: proves the lens follows an imposed clock rather than a natural omen.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.7"
+          }
+        ],
+        "localeKey": "cosmic.items.19",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Control Schedule Rubbing: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.20",
+        "name": "Camp Supply Count",
+        "description": "Camp Supply Count: names people erased from the expedition's digital roster.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.11"
+          }
+        ],
+        "localeKey": "cosmic.items.20",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Camp Supply Count: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.21",
+        "name": "Independent Stopwatch Mark",
+        "description": "Independent Stopwatch Mark: breaks synchronized timers with an externally witnessed beat.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.15"
+          }
+        ],
+        "localeKey": "cosmic.items.21",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Independent Stopwatch Mark: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.22",
+        "name": "Containment Notice",
+        "description": "Containment Notice: states the known signal limits without claiming the phenomenon explained.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.16"
+          }
+        ],
+        "localeKey": "cosmic.items.22",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Containment Notice: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.23",
+        "name": "Sample Transfer Box",
+        "description": "Sample Transfer Box: keeps the warm core separated from transport clocks.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.20"
+          }
+        ],
+        "localeKey": "cosmic.items.23",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Sample Transfer Box: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.24",
+        "name": "Public Witness Register",
+        "description": "Public Witness Register: lets restored residents dispute entries and keep a paper route.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.24"
+          }
+        ],
+        "localeKey": "cosmic.items.24",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Public Witness Register: item schematic"
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "id": "events.1",
+        "name": "Predicted Deletion",
+        "description": "Predicted Deletion: an archive page vanishes at the logged alignment time.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "cosmic.events.1",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Predicted Deletion: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.2",
+        "name": "Warm Discovery",
+        "description": "Warm Discovery: the expedition finds a cavity that violates its temperature model.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "cosmic.events.2",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Warm Discovery: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.3",
+        "name": "Forgotten Call",
+        "description": "Forgotten Call: a caller describes an address absent from the city map.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "cosmic.events.3",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Forgotten Call: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.4",
+        "name": "Paper Disagreement",
+        "description": "Paper Disagreement: an unlinked tide record contradicts the signal's natural explanation.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "cosmic.events.4",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Paper Disagreement: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.5",
+        "name": "Missing Minute",
+        "description": "Missing Minute: paired devices disagree after crossing the warm boundary.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "cosmic.events.5",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Missing Minute: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.6",
+        "name": "Ticket Comparison",
+        "description": "Ticket Comparison: tram riders find identical gaps in otherwise different journeys.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "cosmic.events.6",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Ticket Comparison: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.7",
+        "name": "Repair Order",
+        "description": "Repair Order: a recent university signature appears on the submerged transmitter.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "cosmic.events.7",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Repair Order: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.8",
+        "name": "Fuel Hold",
+        "description": "Fuel Hold: the experiment reserves evacuation supplies for another core descent.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "cosmic.events.8",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Fuel Hold: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.9",
+        "name": "Address Revision",
+        "description": "Address Revision: the switchboard silently replaces a resident's name with a number.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "cosmic.events.9",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Address Revision: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.10",
+        "name": "Lens Cycle",
+        "description": "Lens Cycle: the next alignment approaches before custody copies are complete.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "cosmic.events.10",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Lens Cycle: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.11",
+        "name": "Cold Control",
+        "description": "Cold Control: the comparison sample preserves dates while the warm sample changes them.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "cosmic.events.11",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Cold Control: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.12",
+        "name": "Witness Photograph",
+        "description": "Witness Photograph: an old platform image survives only in a physical album.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "cosmic.events.12",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Witness Photograph: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.13",
+        "name": "Quiet Publication",
+        "description": "Quiet Publication: the professor offers shutdown if every victim record stays private.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "cosmic.events.13",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Quiet Publication: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.14",
+        "name": "Exposure Rise",
+        "description": "Exposure Rise: medics record a repeatable change after time inside the cavity.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "cosmic.events.14",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Exposure Rise: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.15",
+        "name": "Vault Link",
+        "description": "Vault Link: the memory ledger's scanner begins receiving the repeating feed.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "cosmic.events.15",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Vault Link: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.16",
+        "name": "Low Tide Window",
+        "description": "Low Tide Window: the transmitter can be disconnected before the stair submerges.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "cosmic.events.16",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Low Tide Window: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.17",
+        "name": "Uncounted Meal",
+        "description": "Uncounted Meal: Noa finds enough meals for people absent from the official roster.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "cosmic.events.17",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Uncounted Meal: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.18",
+        "name": "Route Loop",
+        "description": "Route Loop: the digital exit sends an evacuation crew back to the threshold.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "cosmic.events.18",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Route Loop: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.19",
+        "name": "Custody Challenge",
+        "description": "Custody Challenge: two labs dispute who may preserve the original prediction data.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "cosmic.events.19",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Custody Challenge: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.20",
+        "name": "Threshold Expansion",
+        "description": "Threshold Expansion: the warm boundary advances toward the outer camp.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "cosmic.events.20",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Threshold Expansion: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.21",
+        "name": "Passenger Assembly",
+        "description": "Passenger Assembly: riders compare memories without agreeing on one vanished station story.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "cosmic.events.21",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Passenger Assembly: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.22",
+        "name": "Timer Break",
+        "description": "Timer Break: an external mechanical beat interrupts the clock swarm.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "cosmic.events.22",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Timer Break: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.23",
+        "name": "Fuel Release",
+        "description": "Fuel Release: the pilot can move everyone if the experiment yields its allocation.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "cosmic.events.23",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Fuel Release: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.24",
+        "name": "Address Witness",
+        "description": "Address Witness: residents choose which ledger entries may be restored publicly.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "cosmic.events.24",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Address Witness: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.25",
+        "name": "Alignment Stopped",
+        "description": "Alignment Stopped: the lens holds while the original records remain intact.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "cosmic.events.25",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Alignment Stopped: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.26",
+        "name": "Cold Exit",
+        "description": "Cold Exit: the expedition carries a separated sample along its flagged escape route.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "cosmic.events.26",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Cold Exit: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.27",
+        "name": "Recall Interrupted",
+        "description": "Recall Interrupted: the switchboard stops deleting callers after feed isolation.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "cosmic.events.27",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Recall Interrupted: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.28",
+        "name": "Evidence after Silence",
+        "description": "Evidence after Silence: the university must decide custody without another harmful cycle.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "cosmic.events.28",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Evidence after Silence: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.29",
+        "name": "Heat Left Below",
+        "description": "Heat Left Below: the expedition chooses containment instead of relying on the impossible warmth.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "cosmic.events.29",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Heat Left Below: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.30",
+        "name": "A City with Witnesses",
+        "description": "A City with Witnesses: paper routes and correction rights survive the disconnected feed.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "cosmic.events.30",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "A City with Witnesses: background schematic"
+          }
+        ]
+      }
+    ],
+    "scenes": [
+      {
+        "id": "scenes.1",
+        "name": "The Page Lost on Schedule",
+        "description": "The Page Lost on Schedule: Objective: establish a testable signal link. Compare prediction logs or unlinked tides; delay deletes another record.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.4"
+          }
+        ],
+        "localeKey": "cosmic.scenes.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Page Lost on Schedule: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.2",
+        "name": "Heat beneath Unmelted Ice",
+        "description": "Heat beneath Unmelted Ice: Objective: measure the cavity safely. Use paired clocks or recover a cold control; delay expands the threshold.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "cosmic.scenes.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Heat beneath Unmelted Ice: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.3",
+        "name": "A Call from Nowhere",
+        "description": "A Call from Nowhere: Objective: reach the missing resident. Follow paper tickets or a witness journey; delay erases another address.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.6"
+          }
+        ],
+        "localeKey": "cosmic.scenes.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Call from Nowhere: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.4",
+        "name": "The Artificial Tide",
+        "description": "The Artificial Tide: Objective: identify the imposed alignment. Inspect the repair tag or compare the schedule; delay authorizes another lens cycle.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.7"
+          }
+        ],
+        "localeKey": "cosmic.scenes.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Artificial Tide: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.5",
+        "name": "One Minute without a Record",
+        "description": "One Minute without a Record: Objective: set a safe exposure limit. Measure outside the boundary or use the observation chart; delay loses a crew member's time.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.8"
+          }
+        ],
+        "localeKey": "cosmic.scenes.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "One Minute without a Record: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.6",
+        "name": "The Station in the Photograph",
+        "description": "The Station in the Photograph: Objective: preserve independent evidence. Compare image pairs or gather rider tickets; delay reaches the vault scanner.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "cosmic.scenes.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Station in the Photograph: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.7",
+        "name": "A Reversible Silence",
+        "description": "A Reversible Silence: Objective: interrupt the lens without erasing proof. Isolate its feed or disconnect the low-tide transmitter; delay destroys another named page.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "cosmic.scenes.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Reversible Silence: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.8",
+        "name": "A Core that Keeps Its Weight",
+        "description": "A Core that Keeps Its Weight: Objective: distinguish sample from reflection. Weigh the transfer box or retrieve a second control; delay confuses evacuation equipment.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.11"
+          }
+        ],
+        "localeKey": "cosmic.scenes.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Core that Keeps Its Weight: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.9",
+        "name": "The Switchboard's Interval",
+        "description": "The Switchboard's Interval: Objective: stop automated erasure. Trace calls offline or label the repeating feed; delay replaces witnesses with numbers.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.12"
+          }
+        ],
+        "localeKey": "cosmic.scenes.9",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Switchboard's Interval: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.10",
+        "name": "Who Holds the Original Log",
+        "description": "Who Holds the Original Log: Objective: preserve accountable custody. Seal copies under witnesses or split lab access; delay trades proof for quiet publication.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.13"
+          }
+        ],
+        "localeKey": "cosmic.scenes.10",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Who Holds the Original Log: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.11",
+        "name": "Fuel for the People Still Here",
+        "description": "Fuel for the People Still Here: Objective: evacuate the full crew. Release supplies or use the cold flagged route; delay strands unlisted members.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "cosmic.scenes.11",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Fuel for the People Still Here: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.12",
+        "name": "Addresses by Their Holders",
+        "description": "Addresses by Their Holders: Objective: restore residents without forcing disclosure. Use consented ledger entries or a paper service; delay feeds the vault link.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.15"
+          }
+        ],
+        "localeKey": "cosmic.scenes.12",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Addresses by Their Holders: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.13",
+        "name": "The Last Alignment Window",
+        "description": "The Last Alignment Window: Objective: prevent another harmful cycle. Stop the transmitter or hold the lens chamber; delay repeats deletion.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.16"
+          }
+        ],
+        "localeKey": "cosmic.scenes.13",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Last Alignment Window: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.14",
+        "name": "Beyond the Repeating Exit",
+        "description": "Beyond the Repeating Exit: Objective: leave the warm boundary. Follow external flags or maintain the paired clock watch; delay loops the rescue route.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.17"
+          }
+        ],
+        "localeKey": "cosmic.scenes.14",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Beyond the Repeating Exit: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.15",
+        "name": "The Feed Goes Quiet",
+        "description": "The Feed Goes Quiet: Objective: contain the recall process. Isolate the switchboard or keep independent witness relays; delay resumes deletion.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "cosmic.scenes.15",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Feed Goes Quiet: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.16",
+        "name": "Evidence without Another Victim",
+        "description": "Evidence without Another Victim: Objective: settle discovery custody. Preserve tests and known limits or maintain witnessed quarantine; record what remains unexplained.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "cosmic.scenes.16",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Evidence without Another Victim: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.17",
+        "name": "A Cold Route Home",
+        "description": "A Cold Route Home: Objective: settle the expedition's legacy. Contain the core or return it under measured isolation; record the crew and exposure limits.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.2"
+          }
+        ],
+        "localeKey": "cosmic.scenes.17",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Cold Route Home: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.18",
+        "name": "The City Remembers Differently",
+        "description": "The City Remembers Differently: Objective: keep restored routes accountable. Maintain correction rights or independent paper relays; record witnesses' differing accounts.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.3"
+          }
+        ],
+        "localeKey": "cosmic.scenes.18",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The City Remembers Differently: map schematic"
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "archetypes.1",
+        "name": "Signal Analyst",
+        "description": "Signal Analyst: compares predictions with independent records before accepting an explanation.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "cosmic.archetypes.1",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Signal Analyst: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.2",
+        "name": "Polar Surveyor",
+        "description": "Polar Surveyor: measures dangerous boundaries through external clocks and control samples.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "cosmic.archetypes.2",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Polar Surveyor: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.3",
+        "name": "Recall Operator",
+        "description": "Recall Operator: keeps emergency callers connected outside an erasing feed.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "cosmic.archetypes.3",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Recall Operator: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.4",
+        "name": "Archive Custodian",
+        "description": "Archive Custodian: protects original evidence without granting it unchecked authority.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "cosmic.archetypes.4",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Archive Custodian: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.5",
+        "name": "Exposure Medic",
+        "description": "Exposure Medic: tracks measured changes and insists on practical evacuation limits.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "cosmic.archetypes.5",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Exposure Medic: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.6",
+        "name": "Transit Witness",
+        "description": "Transit Witness: compares journeys while preserving disagreements between passengers.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "cosmic.archetypes.6",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Transit Witness: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.7",
+        "name": "Low Tide Technician",
+        "description": "Low Tide Technician: interrupts a harmful process without destroying its testable record.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "cosmic.archetypes.7",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Low Tide Technician: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.8",
+        "name": "Cold Route Pilot",
+        "description": "Cold Route Pilot: moves the whole crew including people absent from official rosters.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "cosmic.archetypes.8",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Cold Route Pilot: portrait schematic"
+          }
+        ]
+      }
+    ],
+    "progressionPaths": [
+      {
+        "id": "progressionPaths.1",
+        "name": "Independent Investigator",
+        "description": "Independent Investigator: earn trust through falsifiable comparisons; gain lab access and custody duties.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.1"
+          }
+        ],
+        "localeKey": "cosmic.progressionPaths.1",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Independent Investigator: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.2",
+        "name": "Measured Boundary Keeper",
+        "description": "Measured Boundary Keeper: earn confidence through safe limits; gain survey crews and exposure watch duties.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.5"
+          }
+        ],
+        "localeKey": "cosmic.progressionPaths.2",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Measured Boundary Keeper: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.3",
+        "name": "Witness Relay Steward",
+        "description": "Witness Relay Steward: earn support by connecting erased callers; gain paper routes and correction duties.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.3"
+          }
+        ],
+        "localeKey": "cosmic.progressionPaths.3",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Witness Relay Steward: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.4",
+        "name": "Evidence Guardian",
+        "description": "Evidence Guardian: earn authority through preserved accountable originals; gain archives and access review duties.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.1"
+          }
+        ],
+        "localeKey": "cosmic.progressionPaths.4",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Evidence Guardian: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.5",
+        "name": "Evacuation Coordinator",
+        "description": "Evacuation Coordinator: earn respect by counting everyone; gain transport supplies and crew obligations.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.5"
+          }
+        ],
+        "localeKey": "cosmic.progressionPaths.5",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Evacuation Coordinator: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.6",
+        "name": "Quiet Containment Analyst",
+        "description": "Quiet Containment Analyst: earn legitimacy through reversible interruption; gain control access and uncertainty reporting duties.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.6"
+          }
+        ],
+        "localeKey": "cosmic.progressionPaths.6",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Quiet Containment Analyst: item schematic"
+          }
+        ]
+      }
+    ],
+    "visualThemes": [
+      {
+        "id": "visualThemes.1",
+        "name": "Quiet Tide Evidence",
+        "description": "Quiet Tide Evidence: blue control records and violet alignment cycles distinguish tests from imposed schedules.",
+        "patternIds": [
+          "coastal-university"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "cosmic.visualThemes.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Quiet Tide Evidence: map schematic"
+          },
+          {
+            "role": "ui",
+            "asset": "ui/background.svg",
+            "alt": "Investigation navigation interface"
+          }
+        ]
+      },
+      {
+        "id": "visualThemes.2",
+        "name": "White Meridian Survey",
+        "description": "White Meridian Survey: white cold routes and amber warm boundaries distinguish measured exits from looping maps.",
+        "patternIds": [
+          "polar-expedition"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "cosmic.visualThemes.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "White Meridian Survey: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "visualThemes.3",
+        "name": "Recall Witness Map",
+        "description": "Recall Witness Map: green paper connections and gray repeating feeds distinguish residents from erased addresses.",
+        "patternIds": [
+          "decaying-metropolis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "cosmic.visualThemes.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Recall Witness Map: map schematic"
+          }
+        ]
+      }
+    ]
+  },
+  "playToday": {
+    "patternId": "coastal-university",
+    "campaignKitId": "kit.coastal-university",
+    "visualThemeId": "visualThemes.1"
+  },
+  "localization": {
+    "sourceLocale": "en",
+    "supportedLocales": [
+      "en",
+      "ru",
+      "es",
+      "ja",
+      "zh-CN",
+      "ko"
+    ],
+    "strings": {
+      "en": {
+        "cosmic.factions.1": "Tide Research Circle",
+        "cosmic.factions.2": "White Meridian Expedition",
+        "cosmic.factions.3": "City Recall Service",
+        "cosmic.factions.4": "Coastal Archivists",
+        "cosmic.factions.5": "Polar Safety Crew",
+        "cosmic.factions.6": "Transit Witness Group",
+        "cosmic.factions.7": "Quiet Lens Lab",
+        "cosmic.factions.8": "Independent Survey Team",
+        "cosmic.locations.1": "Tide Observatory",
+        "cosmic.locations.2": "Warm Ice Bore",
+        "cosmic.locations.3": "Forgotten Station",
+        "cosmic.locations.4": "Paper Archive Annex",
+        "cosmic.locations.5": "Meridian Core Store",
+        "cosmic.locations.6": "Recall Switchboard",
+        "cosmic.locations.7": "Quiet Lens Chamber",
+        "cosmic.locations.8": "Outer Ice Camp",
+        "cosmic.locations.9": "Witness Tram",
+        "cosmic.locations.10": "Low Tide Stair",
+        "cosmic.locations.11": "Geometry Threshold",
+        "cosmic.locations.12": "Public Memory Vault",
+        "cosmic.npcs.1": "Researcher Mara Lens",
+        "cosmic.npcs.2": "Surveyor Kai Meridian",
+        "cosmic.npcs.3": "Operator Ren Recall",
+        "cosmic.npcs.4": "Archivist Tessa Paper",
+        "cosmic.npcs.5": "Medic Ivo Ice",
+        "cosmic.npcs.6": "Conductor Bea Tram",
+        "cosmic.npcs.7": "Technician Neri Tide",
+        "cosmic.npcs.8": "Pilot Sol Outer",
+        "cosmic.npcs.9": "Witness Fia Name",
+        "cosmic.npcs.10": "Analyst Juno Quiet",
+        "cosmic.npcs.11": "Driller Mei Core",
+        "cosmic.npcs.12": "Auditor Oren Vault",
+        "cosmic.npcs.13": "Student Dev Interval",
+        "cosmic.npcs.14": "Cook Noa Camp",
+        "cosmic.npcs.15": "Reporter Rosa Stop",
+        "cosmic.npcs.16": "Professor Ada Signal",
+        "cosmic.npcs.17": "Engineer Pell Clock",
+        "cosmic.npcs.18": "Resident Ash Window",
+        "cosmic.npcs.19": "Keeper Len Tag",
+        "cosmic.npcs.20": "Navigator Kira White",
+        "cosmic.npcs.21": "Clerk Taro Ledger",
+        "cosmic.npcs.22": "Diver Siva Low",
+        "cosmic.npcs.23": "Observer Tess Edge",
+        "cosmic.npcs.24": "Volunteer Eri Return",
+        "cosmic.adversaries.1": "Lens Custodian",
+        "cosmic.adversaries.2": "Warm Geometry Echo",
+        "cosmic.adversaries.3": "Recall Agent",
+        "cosmic.adversaries.4": "Archive Glider",
+        "cosmic.adversaries.5": "Heat Advocate",
+        "cosmic.adversaries.6": "Station Doppelganger",
+        "cosmic.adversaries.7": "Transmitter Sentinel",
+        "cosmic.adversaries.8": "Ice Clock Swarm",
+        "cosmic.adversaries.9": "Memory Switch",
+        "cosmic.adversaries.10": "Publication Extorter",
+        "cosmic.adversaries.11": "Core Reflection",
+        "cosmic.adversaries.12": "Vault Shredder",
+        "cosmic.adversaries.13": "Alignment Votary",
+        "cosmic.adversaries.14": "Threshold Figure",
+        "cosmic.adversaries.15": "Unlisted Inspector",
+        "cosmic.adversaries.16": "Tide Mimic",
+        "cosmic.adversaries.17": "Meridian Loop",
+        "cosmic.adversaries.18": "Recall Chorus",
+        "cosmic.items.1": "Prediction Log",
+        "cosmic.items.2": "Independent Core Sample",
+        "cosmic.items.3": "Paper Tram Ticket",
+        "cosmic.items.4": "Unlinked Tide Record",
+        "cosmic.items.5": "Paired Mechanical Clocks",
+        "cosmic.items.6": "Physical Address Ledger",
+        "cosmic.items.7": "Repair Tag Copy",
+        "cosmic.items.8": "Evacuation Fuel Release",
+        "cosmic.items.9": "Witness Journey Book",
+        "cosmic.items.10": "Lens Break Diagram",
+        "cosmic.items.11": "Core Weight Slip",
+        "cosmic.items.12": "Signal Isolation Label",
+        "cosmic.items.13": "Archive Custody Envelope",
+        "cosmic.items.14": "Cold Route Flags",
+        "cosmic.items.15": "Station Photo Pair",
+        "cosmic.items.16": "Transmitter Disconnect Tool",
+        "cosmic.items.17": "Exposure Observation Chart",
+        "cosmic.items.18": "Resident Consent List",
+        "cosmic.items.19": "Control Schedule Rubbing",
+        "cosmic.items.20": "Camp Supply Count",
+        "cosmic.items.21": "Independent Stopwatch Mark",
+        "cosmic.items.22": "Containment Notice",
+        "cosmic.items.23": "Sample Transfer Box",
+        "cosmic.items.24": "Public Witness Register",
+        "cosmic.events.1": "Predicted Deletion",
+        "cosmic.events.2": "Warm Discovery",
+        "cosmic.events.3": "Forgotten Call",
+        "cosmic.events.4": "Paper Disagreement",
+        "cosmic.events.5": "Missing Minute",
+        "cosmic.events.6": "Ticket Comparison",
+        "cosmic.events.7": "Repair Order",
+        "cosmic.events.8": "Fuel Hold",
+        "cosmic.events.9": "Address Revision",
+        "cosmic.events.10": "Lens Cycle",
+        "cosmic.events.11": "Cold Control",
+        "cosmic.events.12": "Witness Photograph",
+        "cosmic.events.13": "Quiet Publication",
+        "cosmic.events.14": "Exposure Rise",
+        "cosmic.events.15": "Vault Link",
+        "cosmic.events.16": "Low Tide Window",
+        "cosmic.events.17": "Uncounted Meal",
+        "cosmic.events.18": "Route Loop",
+        "cosmic.events.19": "Custody Challenge",
+        "cosmic.events.20": "Threshold Expansion",
+        "cosmic.events.21": "Passenger Assembly",
+        "cosmic.events.22": "Timer Break",
+        "cosmic.events.23": "Fuel Release",
+        "cosmic.events.24": "Address Witness",
+        "cosmic.events.25": "Alignment Stopped",
+        "cosmic.events.26": "Cold Exit",
+        "cosmic.events.27": "Recall Interrupted",
+        "cosmic.events.28": "Evidence after Silence",
+        "cosmic.events.29": "Heat Left Below",
+        "cosmic.events.30": "A City with Witnesses",
+        "cosmic.scenes.1": "The Page Lost on Schedule",
+        "cosmic.scenes.2": "Heat beneath Unmelted Ice",
+        "cosmic.scenes.3": "A Call from Nowhere",
+        "cosmic.scenes.4": "The Artificial Tide",
+        "cosmic.scenes.5": "One Minute without a Record",
+        "cosmic.scenes.6": "The Station in the Photograph",
+        "cosmic.scenes.7": "A Reversible Silence",
+        "cosmic.scenes.8": "A Core that Keeps Its Weight",
+        "cosmic.scenes.9": "The Switchboard's Interval",
+        "cosmic.scenes.10": "Who Holds the Original Log",
+        "cosmic.scenes.11": "Fuel for the People Still Here",
+        "cosmic.scenes.12": "Addresses by Their Holders",
+        "cosmic.scenes.13": "The Last Alignment Window",
+        "cosmic.scenes.14": "Beyond the Repeating Exit",
+        "cosmic.scenes.15": "The Feed Goes Quiet",
+        "cosmic.scenes.16": "Evidence without Another Victim",
+        "cosmic.scenes.17": "A Cold Route Home",
+        "cosmic.scenes.18": "The City Remembers Differently",
+        "cosmic.archetypes.1": "Signal Analyst",
+        "cosmic.archetypes.2": "Polar Surveyor",
+        "cosmic.archetypes.3": "Recall Operator",
+        "cosmic.archetypes.4": "Archive Custodian",
+        "cosmic.archetypes.5": "Exposure Medic",
+        "cosmic.archetypes.6": "Transit Witness",
+        "cosmic.archetypes.7": "Low Tide Technician",
+        "cosmic.archetypes.8": "Cold Route Pilot",
+        "cosmic.progressionPaths.1": "Independent Investigator",
+        "cosmic.progressionPaths.2": "Measured Boundary Keeper",
+        "cosmic.progressionPaths.3": "Witness Relay Steward",
+        "cosmic.progressionPaths.4": "Evidence Guardian",
+        "cosmic.progressionPaths.5": "Evacuation Coordinator",
+        "cosmic.progressionPaths.6": "Quiet Containment Analyst",
+        "cosmic.visualThemes.1": "Quiet Tide Evidence",
+        "cosmic.visualThemes.2": "White Meridian Survey",
+        "cosmic.visualThemes.3": "Recall Witness Map"
+      }
+    },
+    "fallbackLocales": [
+      "ru",
+      "es",
+      "ja",
+      "zh-CN",
+      "ko"
+    ]
+  }
+}

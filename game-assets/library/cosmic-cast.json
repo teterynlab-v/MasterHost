@@ -1,0 +1,1840 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.cosmic.cast",
+  "version": "1.0.0",
+  "type": "cast",
+  "name": "Researchers Crews Witnesses and Threats",
+  "description": "Researchers Crews Witnesses and Threats for Coastal University, Polar Expedition, Decaying Metropolis. Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.",
+  "tags": [
+    "cosmic-investigation",
+    "coastal-university",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Researchers Crews Witnesses and Threats for Coastal University, Polar Expedition, Decaying Metropolis. Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.",
+    "highlights": [
+      "Researchers Crews Witnesses and Threats",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.cosmic-investigation"
+    ],
+    "requiresCapabilities": [
+      "world:cosmic-investigation"
+    ],
+    "providesCapabilities": [
+      "cast:cosmic-investigation"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.cosmic.world-template",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Cosmic Investigation original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.cosmic.cast"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 42,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.cosmic.cast",
+    "version": "1.0.0",
+    "name": "Researchers Crews Witnesses and Threats",
+    "description": "Researchers Crews Witnesses and Threats for Coastal University, Polar Expedition, Decaying Metropolis. Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.",
+    "provides": [
+      "cast:cosmic-investigation"
+    ],
+    "requires": [
+      "world:cosmic-investigation"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.1",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Researcher Mara Lens"
+            },
+            "description": {
+              "value": "Researcher Mara Lens: has a prediction log but refuses to call the missing pages coincidence."
+            },
+            "deepId": {
+              "value": "npcs.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.2",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Surveyor Kai Meridian"
+            },
+            "description": {
+              "value": "Surveyor Kai Meridian: can recover the warm core if another person keeps time outside the cavity."
+            },
+            "deepId": {
+              "value": "npcs.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.3",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Operator Ren Recall"
+            },
+            "description": {
+              "value": "Operator Ren Recall: records callers while the official switchboard deletes their addresses."
+            },
+            "deepId": {
+              "value": "npcs.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "decaying-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.4",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Archivist Tessa Paper"
+            },
+            "description": {
+              "value": "Archivist Tessa Paper: keeps the control logs hidden from a signal-linked audit."
+            },
+            "deepId": {
+              "value": "npcs.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.5",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Medic Ivo Ice"
+            },
+            "description": {
+              "value": "Medic Ivo Ice: can track exposure symptoms if the crew stops using warmth as proof of safety."
+            },
+            "deepId": {
+              "value": "npcs.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.6",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Conductor Bea Tram"
+            },
+            "description": {
+              "value": "Conductor Bea Tram: remembers a vanished station through passengers' paper tickets."
+            },
+            "deepId": {
+              "value": "npcs.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "decaying-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.7",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Technician Neri Tide"
+            },
+            "description": {
+              "value": "Technician Neri Tide: installed the recent transmitter repair without knowing its alignment purpose."
+            },
+            "deepId": {
+              "value": "npcs.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.8",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Pilot Sol Outer"
+            },
+            "description": {
+              "value": "Pilot Sol Outer: can evacuate everyone if the experiment releases its assigned fuel."
+            },
+            "deepId": {
+              "value": "npcs.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.9",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Witness Fia Name"
+            },
+            "description": {
+              "value": "Witness Fia Name: remembers a missing neighbor and needs evidence others can compare."
+            },
+            "deepId": {
+              "value": "npcs.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "decaying-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.10",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Analyst Juno Quiet"
+            },
+            "description": {
+              "value": "Analyst Juno Quiet: found the artificial schedule and wants the lens interrupted intact."
+            },
+            "deepId": {
+              "value": "npcs.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.11",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Driller Mei Core"
+            },
+            "description": {
+              "value": "Driller Mei Core: can retrieve the comparison sample before the warm threshold expands."
+            },
+            "deepId": {
+              "value": "npcs.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.12",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Auditor Oren Vault"
+            },
+            "description": {
+              "value": "Auditor Oren Vault: holds a physical address ledger outside the recall feed."
+            },
+            "deepId": {
+              "value": "npcs.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "decaying-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.13",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Student Dev Interval"
+            },
+            "description": {
+              "value": "Student Dev Interval: noticed that deletion follows a clock interval rather than tidal height."
+            },
+            "deepId": {
+              "value": "npcs.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.14",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Cook Noa Camp"
+            },
+            "description": {
+              "value": "Cook Noa Camp: counted supplies for people the expedition roster no longer contains."
+            },
+            "deepId": {
+              "value": "npcs.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.15",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Reporter Rosa Stop"
+            },
+            "description": {
+              "value": "Reporter Rosa Stop: has photographs of a station the city says was never built."
+            },
+            "deepId": {
+              "value": "npcs.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "decaying-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.16",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Professor Ada Signal"
+            },
+            "description": {
+              "value": "Professor Ada Signal: fears public containment will erase her discovery and conceal its victims."
+            },
+            "deepId": {
+              "value": "npcs.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.17",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Engineer Pell Clock"
+            },
+            "description": {
+              "value": "Engineer Pell Clock: can build an independent timer using mechanical marks."
+            },
+            "deepId": {
+              "value": "npcs.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.18",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Resident Ash Window"
+            },
+            "description": {
+              "value": "Resident Ash Window: describes a house missing from every digital image."
+            },
+            "deepId": {
+              "value": "npcs.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "decaying-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.19",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Keeper Len Tag"
+            },
+            "description": {
+              "value": "Keeper Len Tag: knows who signed the transmitter repair order."
+            },
+            "deepId": {
+              "value": "npcs.19"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.20",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Navigator Kira White"
+            },
+            "description": {
+              "value": "Navigator Kira White: marked the cold exit route before maps began repeating the cavity."
+            },
+            "deepId": {
+              "value": "npcs.20"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.21",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Clerk Taro Ledger"
+            },
+            "description": {
+              "value": "Clerk Taro Ledger: can reconcile paper addresses if witnesses choose what may be disclosed."
+            },
+            "deepId": {
+              "value": "npcs.21"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "decaying-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.22",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Diver Siva Low"
+            },
+            "description": {
+              "value": "Diver Siva Low: can disconnect the transmitter at low tide without entering the lens chamber."
+            },
+            "deepId": {
+              "value": "npcs.22"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.23",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Observer Tess Edge"
+            },
+            "description": {
+              "value": "Observer Tess Edge: keeps paired clocks at the warm boundary and offers a tested safe limit."
+            },
+            "deepId": {
+              "value": "npcs.23"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.npcs.24",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Volunteer Eri Return"
+            },
+            "description": {
+              "value": "Volunteer Eri Return: organizes a witness journey to keep forgotten residents connected."
+            },
+            "deepId": {
+              "value": "npcs.24"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "decaying-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.adversaries.1",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Lens Custodian"
+            },
+            "description": {
+              "value": "Lens Custodian: forces another alignment cycle while ignoring the paper deletion record."
+            },
+            "deepId": {
+              "value": "adversaries.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.adversaries.2",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Warm Geometry Echo"
+            },
+            "description": {
+              "value": "Warm Geometry Echo: copies a rescuers' voice from inside the unmeasured interval."
+            },
+            "deepId": {
+              "value": "adversaries.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.adversaries.3",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Recall Agent"
+            },
+            "description": {
+              "value": "Recall Agent: erases addresses outside the repeating feed and claims the callers are mistaken."
+            },
+            "deepId": {
+              "value": "adversaries.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "decaying-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.adversaries.4",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Archive Glider"
+            },
+            "description": {
+              "value": "Archive Glider: moves along signal-linked shelves but cannot cross the paper annex."
+            },
+            "deepId": {
+              "value": "adversaries.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.adversaries.5",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Heat Advocate"
+            },
+            "description": {
+              "value": "Heat Advocate: locks evacuation fuel inside the experiment's allocation chest."
+            },
+            "deepId": {
+              "value": "adversaries.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.adversaries.6",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Station Doppelganger"
+            },
+            "description": {
+              "value": "Station Doppelganger: offers a familiar platform whose timetable ends before its passengers arrived."
+            },
+            "deepId": {
+              "value": "adversaries.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "decaying-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.adversaries.7",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Transmitter Sentinel"
+            },
+            "description": {
+              "value": "Transmitter Sentinel: defends the recent repair under an unsigned safety order."
+            },
+            "deepId": {
+              "value": "adversaries.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.adversaries.8",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Ice Clock Swarm"
+            },
+            "description": {
+              "value": "Ice Clock Swarm: synchronizes digital timers until an independent mechanical mark interrupts it."
+            },
+            "deepId": {
+              "value": "adversaries.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.adversaries.9",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Memory Switch"
+            },
+            "description": {
+              "value": "Memory Switch: replaces named witnesses with anonymous calls when questioned through the feed."
+            },
+            "deepId": {
+              "value": "adversaries.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "decaying-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.adversaries.10",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Publication Extorter"
+            },
+            "description": {
+              "value": "Publication Extorter: offers quiet shutdown only if the university surrenders all evidence."
+            },
+            "deepId": {
+              "value": "adversaries.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.adversaries.11",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Core Reflection"
+            },
+            "description": {
+              "value": "Core Reflection: returns the warm sample's appearance without its recorded weight."
+            },
+            "deepId": {
+              "value": "adversaries.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.adversaries.12",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Vault Shredder"
+            },
+            "description": {
+              "value": "Vault Shredder: destroys paper addresses while repeating a false retention rule."
+            },
+            "deepId": {
+              "value": "adversaries.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "decaying-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.adversaries.13",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Alignment Votary"
+            },
+            "description": {
+              "value": "Alignment Votary: insists another missing page will prove the discovery beyond doubt."
+            },
+            "deepId": {
+              "value": "adversaries.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.adversaries.14",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Threshold Figure"
+            },
+            "description": {
+              "value": "Threshold Figure: appears beyond the paired clocks and mimics the missing minute."
+            },
+            "deepId": {
+              "value": "adversaries.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.adversaries.15",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Unlisted Inspector"
+            },
+            "description": {
+              "value": "Unlisted Inspector: seizes witness tickets for a station absent from the city list."
+            },
+            "deepId": {
+              "value": "adversaries.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "decaying-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.adversaries.16",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Tide Mimic"
+            },
+            "description": {
+              "value": "Tide Mimic: plays a natural tide curve over the transmitter's artificial schedule."
+            },
+            "deepId": {
+              "value": "adversaries.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "coastal-university"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.adversaries.17",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Meridian Loop"
+            },
+            "description": {
+              "value": "Meridian Loop: repeats an exit map that leads back to the expanding warm boundary."
+            },
+            "deepId": {
+              "value": "adversaries.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "polar-expedition"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cosmic.deep.adversaries.18",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Recall Chorus"
+            },
+            "description": {
+              "value": "Recall Chorus: demands a single shared memory where witnesses still disagree."
+            },
+            "deepId": {
+              "value": "adversaries.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cosmic-deep",
+            "decaying-metropolis"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-npcs-1": {
+            "template": "cosmic.deep.npcs.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-npcs-2": {
+            "template": "cosmic.deep.npcs.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-npcs-3": {
+            "template": "cosmic.deep.npcs.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "decaying-metropolis"
+              ]
+            }
+          },
+          "deep-npcs-4": {
+            "template": "cosmic.deep.npcs.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-npcs-5": {
+            "template": "cosmic.deep.npcs.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-npcs-6": {
+            "template": "cosmic.deep.npcs.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "decaying-metropolis"
+              ]
+            }
+          },
+          "deep-npcs-7": {
+            "template": "cosmic.deep.npcs.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-npcs-8": {
+            "template": "cosmic.deep.npcs.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-npcs-9": {
+            "template": "cosmic.deep.npcs.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "decaying-metropolis"
+              ]
+            }
+          },
+          "deep-npcs-10": {
+            "template": "cosmic.deep.npcs.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-npcs-11": {
+            "template": "cosmic.deep.npcs.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-npcs-12": {
+            "template": "cosmic.deep.npcs.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "decaying-metropolis"
+              ]
+            }
+          },
+          "deep-npcs-13": {
+            "template": "cosmic.deep.npcs.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-npcs-14": {
+            "template": "cosmic.deep.npcs.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-npcs-15": {
+            "template": "cosmic.deep.npcs.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "decaying-metropolis"
+              ]
+            }
+          },
+          "deep-npcs-16": {
+            "template": "cosmic.deep.npcs.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-npcs-17": {
+            "template": "cosmic.deep.npcs.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-npcs-18": {
+            "template": "cosmic.deep.npcs.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "decaying-metropolis"
+              ]
+            }
+          },
+          "deep-npcs-19": {
+            "template": "cosmic.deep.npcs.19",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-npcs-20": {
+            "template": "cosmic.deep.npcs.20",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-npcs-21": {
+            "template": "cosmic.deep.npcs.21",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "decaying-metropolis"
+              ]
+            }
+          },
+          "deep-npcs-22": {
+            "template": "cosmic.deep.npcs.22",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-npcs-23": {
+            "template": "cosmic.deep.npcs.23",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-npcs-24": {
+            "template": "cosmic.deep.npcs.24",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "decaying-metropolis"
+              ]
+            }
+          },
+          "deep-adversaries-1": {
+            "template": "cosmic.deep.adversaries.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-adversaries-2": {
+            "template": "cosmic.deep.adversaries.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-adversaries-3": {
+            "template": "cosmic.deep.adversaries.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "decaying-metropolis"
+              ]
+            }
+          },
+          "deep-adversaries-4": {
+            "template": "cosmic.deep.adversaries.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-adversaries-5": {
+            "template": "cosmic.deep.adversaries.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-adversaries-6": {
+            "template": "cosmic.deep.adversaries.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "decaying-metropolis"
+              ]
+            }
+          },
+          "deep-adversaries-7": {
+            "template": "cosmic.deep.adversaries.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-adversaries-8": {
+            "template": "cosmic.deep.adversaries.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-adversaries-9": {
+            "template": "cosmic.deep.adversaries.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "decaying-metropolis"
+              ]
+            }
+          },
+          "deep-adversaries-10": {
+            "template": "cosmic.deep.adversaries.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-adversaries-11": {
+            "template": "cosmic.deep.adversaries.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-adversaries-12": {
+            "template": "cosmic.deep.adversaries.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "decaying-metropolis"
+              ]
+            }
+          },
+          "deep-adversaries-13": {
+            "template": "cosmic.deep.adversaries.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-adversaries-14": {
+            "template": "cosmic.deep.adversaries.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-adversaries-15": {
+            "template": "cosmic.deep.adversaries.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "decaying-metropolis"
+              ]
+            }
+          },
+          "deep-adversaries-16": {
+            "template": "cosmic.deep.adversaries.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "coastal-university"
+              ]
+            }
+          },
+          "deep-adversaries-17": {
+            "template": "cosmic.deep.adversaries.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "polar-expedition"
+              ]
+            }
+          },
+          "deep-adversaries-18": {
+            "template": "cosmic.deep.adversaries.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "decaying-metropolis"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

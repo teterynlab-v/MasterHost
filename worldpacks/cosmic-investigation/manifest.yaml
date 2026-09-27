@@ -1,0 +1,16 @@
+id: masterhost.cosmic-investigation
+name: Cosmic Investigation
+version: 1.0.0
+schemaVersion: "0.1"
+defaultArtSet: standard
+entryTemplate: world.root
+description: "Three original investigations: a harmful university signal, a warm
+  geometric cavity and an erasing metropolitan recall feed."
+publisher: MasterHost
+official: true
+contentRating: mature
+license:
+  spdx: CC-BY-4.0
+  attribution: Cosmic Investigation original setting content and artwork ©
+    MasterHost contributors.
+  source: https://creativecommons.org/licenses/by/4.0/

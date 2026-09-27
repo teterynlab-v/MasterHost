@@ -12,8 +12,9 @@
 - **M24 Mythic Antiquity: engineering gate complete (2026-09-27).** New original 1.0.0 Pack, three prophecy/voyage/threshold Kits, playable roles/resources/paths, clean transfer/runtime/restart and browser Quick/GM/player/action/reload. Evidence: `docs/M24_STATUS.md`.
 - **M25 Weird West: engineering gate complete (2026-09-27).** New original 1.0.0 Pack, three road/ghost-railway/living-mine Kits, playable roles/resources/paths, clean transfer/runtime/restart and browser Quick/GM/player/action/reload. Evidence: `docs/M25_STATUS.md`.
 - **M26 Urban Fantasy: engineering gate complete (2026-09-27).** New original 1.0.0 Pack, three library/tower/public-route Kits, playable roles/resources/paths, clean transfer/runtime/restart and browser Quick/GM/player/action/reload. Evidence: `docs/M26_STATUS.md`.
-- **Active:** M27 Cosmic Investigation; M28–M29 follow in order, then M30 collection acceptance.
-- Ordinary clean installations now show all six original universes, Mythic Antiquity, Weird West and Urban Fantasy ready with deep content; the remaining three universes are planned.
+- **M27 Cosmic Investigation: engineering gate complete (2026-09-27).** New 1.0.0 Pack, three signal/geometry/recall Kits, explicit Exposure accumulation/reduction, clean transfer/runtime/restart and browser resource/check/scene/reload evidence. Evidence: `docs/M27_STATUS.md`.
+- **Active:** M28 Age of Sail; M29 follows, then M30 collection acceptance.
+- Ordinary clean installations now show ten universes ready with deep content; Age of Sail and Mecha & Kaiju remain planned universes are planned.
 
 ## Post-M18 playability correction (2026-09-22)
 

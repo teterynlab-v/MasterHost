@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.cosmic.visuals",
+  "version": "1.0.0",
+  "type": "visuals",
+  "name": "Independent Evidence Schematics",
+  "description": "Independent Evidence Schematics for Coastal University, Polar Expedition, Decaying Metropolis. Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.",
+  "tags": [
+    "cosmic-investigation",
+    "coastal-university",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Independent Evidence Schematics for Coastal University, Polar Expedition, Decaying Metropolis. Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.",
+    "highlights": [
+      "Independent Evidence Schematics",
+      "Deep Universe Standard v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.cosmic-investigation"
+    ],
+    "requiresCapabilities": [
+      "setting:cosmic-investigation"
+    ],
+    "providesCapabilities": [
+      "visuals:cosmic-investigation"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.cosmic.setting",
+      "version": "1.0.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Cosmic Investigation original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.cosmic.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 6
+  },
+  "media": [
+    {
+      "name": "cosmic-investigation/cosmic-background.svg",
+      "path": "media/cosmic-background.svg",
+      "role": "background",
+      "mediaType": "image/svg+xml",
+      "checksum": "29c1671f98e3306893d67c6144d5da0c493d5974cfa5d417bb100def8f05d1b0",
+      "size": 747
+    },
+    {
+      "name": "cosmic-investigation/cosmic-portrait.svg",
+      "path": "media/cosmic-portrait.svg",
+      "role": "portrait",
+      "mediaType": "image/svg+xml",
+      "checksum": "59dd1ffbe295f1fe3ae284b513b9e5befea134946d676c0787cb713eb0157e65",
+      "size": 634
+    },
+    {
+      "name": "cosmic-investigation/cosmic-creature.svg",
+      "path": "media/cosmic-creature.svg",
+      "role": "token",
+      "mediaType": "image/svg+xml",
+      "checksum": "c4249721d9e42a6ded817b8a4a7de49b69bbfab213ef72c357495b80bd723998",
+      "size": 712
+    },
+    {
+      "name": "cosmic-investigation/cosmic-item.svg",
+      "path": "media/cosmic-item.svg",
+      "role": "item",
+      "mediaType": "image/svg+xml",
+      "checksum": "f9063f05819741f654f45f4b03015e203c63cc54037ef9cbda3cbb21df3f4167",
+      "size": 647
+    },
+    {
+      "name": "cosmic-investigation/cosmic-location.svg",
+      "path": "media/cosmic-location.svg",
+      "role": "location",
+      "mediaType": "image/svg+xml",
+      "checksum": "84b54fb2fe8a96d5ca6b6c9d71f0f0dee2e706d4fa1c3e922e812cc669b667ce",
+      "size": 636
+    },
+    {
+      "name": "cosmic-investigation/cosmic-map.svg",
+      "path": "media/cosmic-map.svg",
+      "role": "map",
+      "mediaType": "image/svg+xml",
+      "checksum": "d773e4ddd8bb6e8213bf3bd5e8bbc459b1b45702f36973fd23ebc34c44a602a4",
+      "size": 2472
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.cosmic.visuals",
+    "version": "1.0.0",
+    "name": "Independent Evidence Schematics",
+    "description": "Independent Evidence Schematics for Coastal University, Polar Expedition, Decaying Metropolis. Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.",
+    "provides": [
+      "visuals:cosmic-investigation"
+    ],
+    "requires": [
+      "setting:cosmic-investigation"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/cosmic-deep",
+        "value": {
+          "id": "cosmic-deep",
+          "name": "Evidence Navigation",
+          "description": "Original Cosmic Investigation navigation schematics",
+          "defaults": {
+            "background": "assets/cosmic-investigation/cosmic-background.svg",
+            "portrait": "assets/cosmic-investigation/cosmic-portrait.svg",
+            "token": "assets/cosmic-investigation/cosmic-creature.svg",
+            "item": "assets/cosmic-investigation/cosmic-item.svg",
+            "location": "assets/cosmic-investigation/cosmic-location.svg",
+            "map": "assets/cosmic-investigation/cosmic-map.svg"
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "cosmic-deep"
+  }
+}
