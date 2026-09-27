@@ -1,0 +1,496 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.classic.locations",
+  "version": "1.4.0",
+  "type": "locations",
+  "name": "Border Roads and Ruins — Illustrated",
+  "description": "Twelve playable settlements, wild roads, abbeys, keeps, vaults, and imperial ruins with linked pressures.",
+  "tags": [
+    "classic-fantasy",
+    "border-kingdoms",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Twelve playable settlements, wild roads, abbeys, keeps, vaults, and imperial ruins with linked pressures.",
+    "highlights": [
+      "Border Roads and Ruins",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.classic-fantasy"
+    ],
+    "requiresCapabilities": [
+      "world:classic-fantasy"
+    ],
+    "providesCapabilities": [
+      "locations:classic-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.classic.world-template",
+      "version": "1.4.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Classic Fantasy original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.classic.locations"
+  },
+  "published": true,
+  "counts": {
+    "locations": 12,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.classic.locations",
+    "version": "1.4.0",
+    "name": "Border Roads and Ruins — Illustrated",
+    "description": "Twelve playable settlements, wild roads, abbeys, keeps, vaults, and imperial ruins with linked pressures.",
+    "provides": [
+      "locations:classic-fantasy"
+    ],
+    "requires": [
+      "world:classic-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.locations.1",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Kingsbridge"
+            },
+            "description": {
+              "value": "Kingsbridge is a contested landmark in Border Kingdoms, where travelers can find shelter only by resolving a local oath dispute."
+            },
+            "deepId": {
+              "value": "locations.1"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.locations.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.locations.2",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Rosewatch"
+            },
+            "description": {
+              "value": "Rosewatch guards a route through War of Heirs; its hidden entrance opens when visitors return a stolen community relic."
+            },
+            "deepId": {
+              "value": "locations.2"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.locations.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.locations.3",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Moonwell Abbey"
+            },
+            "description": {
+              "value": "Moonwell Abbey bears visible scars from the conflict in Ruins of the Ancient Empire, and clues there point toward the next threatened settlement."
+            },
+            "deepId": {
+              "value": "locations.3"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.locations.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.locations.4",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Dragon Gate"
+            },
+            "description": {
+              "value": "Dragon Gate offers safety in Border Kingdoms at a price: the keeper asks the party to choose which neighboring claim deserves aid."
+            },
+            "deepId": {
+              "value": "locations.4"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.locations.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.locations.5",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Whispering Wood"
+            },
+            "description": {
+              "value": "Whispering Wood is a contested landmark in War of Heirs, where travelers can find shelter only by resolving a local oath dispute."
+            },
+            "deepId": {
+              "value": "locations.5"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.locations.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.locations.6",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Starfall Keep"
+            },
+            "description": {
+              "value": "Starfall Keep guards a route through Ruins of the Ancient Empire; its hidden entrance opens when visitors return a stolen community relic."
+            },
+            "deepId": {
+              "value": "locations.6"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.locations.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.locations.7",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Pilgrim Rest"
+            },
+            "description": {
+              "value": "Pilgrim Rest bears visible scars from the conflict in Border Kingdoms, and clues there point toward the next threatened settlement."
+            },
+            "deepId": {
+              "value": "locations.7"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.locations.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.locations.8",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Cinder Ford"
+            },
+            "description": {
+              "value": "Cinder Ford offers safety in War of Heirs at a price: the keeper asks the party to choose which neighboring claim deserves aid."
+            },
+            "deepId": {
+              "value": "locations.8"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.locations.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.locations.9",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Hollow Crown Vault"
+            },
+            "description": {
+              "value": "Hollow Crown Vault is a contested landmark in Ruins of the Ancient Empire, where travelers can find shelter only by resolving a local oath dispute."
+            },
+            "deepId": {
+              "value": "locations.9"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.locations.9"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.locations.10",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Sunken Archive"
+            },
+            "description": {
+              "value": "Sunken Archive guards a route through Border Kingdoms; its hidden entrance opens when visitors return a stolen community relic."
+            },
+            "deepId": {
+              "value": "locations.10"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.locations.10"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.locations.11",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Frostmere Beacon"
+            },
+            "description": {
+              "value": "Frostmere Beacon bears visible scars from the conflict in War of Heirs, and clues there point toward the next threatened settlement."
+            },
+            "deepId": {
+              "value": "locations.11"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.locations.11"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.locations.12",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Barrow of Nine Oaths"
+            },
+            "description": {
+              "value": "Barrow of Nine Oaths offers safety in Ruins of the Ancient Empire at a price: the keeper asks the party to choose which neighboring claim deserves aid."
+            },
+            "deepId": {
+              "value": "locations.12"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.locations.12"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-locations-1": {
+            "template": "classic.deep.locations.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-locations-2": {
+            "template": "classic.deep.locations.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-locations-3": {
+            "template": "classic.deep.locations.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-locations-4": {
+            "template": "classic.deep.locations.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-locations-5": {
+            "template": "classic.deep.locations.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-locations-6": {
+            "template": "classic.deep.locations.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-locations-7": {
+            "template": "classic.deep.locations.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-locations-8": {
+            "template": "classic.deep.locations.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-locations-9": {
+            "template": "classic.deep.locations.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-locations-10": {
+            "template": "classic.deep.locations.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-locations-11": {
+            "template": "classic.deep.locations.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-locations-12": {
+            "template": "classic.deep.locations.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

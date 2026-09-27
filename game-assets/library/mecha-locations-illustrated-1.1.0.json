@@ -1,0 +1,592 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.mecha.locations",
+  "version": "1.1.0",
+  "type": "locations",
+  "name": "Twelve District Dock and Wreck Sites — Illustrated",
+  "description": "Twelve District Dock and Wreck Sites for Defense Metropolis, Colony Rebellion, Machine-Wreck Frontier. Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.",
+  "tags": [
+    "mecha-kaiju",
+    "defense-metropolis",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Twelve District Dock and Wreck Sites for Defense Metropolis, Colony Rebellion, Machine-Wreck Frontier. Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.",
+    "highlights": [
+      "Twelve District Dock and Wreck Sites",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.mecha-kaiju"
+    ],
+    "requiresCapabilities": [
+      "world:mecha-kaiju"
+    ],
+    "providesCapabilities": [
+      "locations:mecha-kaiju"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.mecha.world-template",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Mecha & Kaiju original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.mecha.locations"
+  },
+  "published": true,
+  "counts": {
+    "locations": 12,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.mecha.locations",
+    "version": "1.1.0",
+    "name": "Twelve District Dock and Wreck Sites — Illustrated",
+    "description": "Twelve District Dock and Wreck Sites for Defense Metropolis, Colony Rebellion, Machine-Wreck Frontier. Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.",
+    "provides": [
+      "locations:mecha-kaiju"
+    ],
+    "requires": [
+      "world:mecha-kaiju"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.locations.1",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Floodgate District"
+            },
+            "description": {
+              "value": "Floodgate District: the first alarm closes shelter doors on the wrong side of the seawall."
+            },
+            "deepId": {
+              "value": "locations.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis",
+            "illustrated.mecha-kaiju.locations.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.locations.2",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Orbital Oxygen Dock"
+            },
+            "description": {
+              "value": "Orbital Oxygen Dock: a military fuel convoy masks missing civilian air canisters."
+            },
+            "deepId": {
+              "value": "locations.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion",
+            "illustrated.mecha-kaiju.locations.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.locations.3",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Sleeping Frame Basin"
+            },
+            "description": {
+              "value": "Sleeping Frame Basin: an apparently abandoned giant broadcasts an inhabited-cabin signal."
+            },
+            "deepId": {
+              "value": "locations.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier",
+            "illustrated.mecha-kaiju.locations.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.locations.4",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Ferry Lift Junction"
+            },
+            "description": {
+              "value": "Ferry Lift Junction: evacuation competes with ammunition transport on the same lift."
+            },
+            "deepId": {
+              "value": "locations.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis",
+            "illustrated.mecha-kaiju.locations.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.locations.5",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Quota Archive"
+            },
+            "description": {
+              "value": "Quota Archive: air distribution records reveal why the colony can no longer breathe safely."
+            },
+            "deepId": {
+              "value": "locations.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion",
+            "illustrated.mecha-kaiju.locations.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.locations.6",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Crew Memory Vault"
+            },
+            "description": {
+              "value": "Crew Memory Vault: old rescue protocols prove the wreck inhabitants never consented to salvage."
+            },
+            "deepId": {
+              "value": "locations.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier",
+            "illustrated.mecha-kaiju.locations.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.locations.7",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Outer Shield Pylon"
+            },
+            "description": {
+              "value": "Outer Shield Pylon: a damaged relay can be redirected away from inhabited lower streets."
+            },
+            "deepId": {
+              "value": "locations.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis",
+            "illustrated.mecha-kaiju.locations.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.locations.8",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Neutral Repair Bay"
+            },
+            "description": {
+              "value": "Neutral Repair Bay: both factions need its only pressure-tested docking arm."
+            },
+            "deepId": {
+              "value": "locations.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion",
+            "illustrated.mecha-kaiju.locations.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.locations.9",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Core Access Bridge"
+            },
+            "description": {
+              "value": "Core Access Bridge: salvagers can isolate weapons while leaving life support awake."
+            },
+            "deepId": {
+              "value": "locations.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier",
+            "illustrated.mecha-kaiju.locations.9"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.locations.10",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Highwater Shelter"
+            },
+            "description": {
+              "value": "Highwater Shelter: the defense planner can see exactly whom a full-power shot would displace."
+            },
+            "deepId": {
+              "value": "locations.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "defense-metropolis",
+            "illustrated.mecha-kaiju.locations.10"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.locations.11",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Habitat Transfer Ring"
+            },
+            "description": {
+              "value": "Habitat Transfer Ring: civilian tug crews offer a third route beyond surrender or reactor sabotage."
+            },
+            "deepId": {
+              "value": "locations.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "colony-rebellion",
+            "illustrated.mecha-kaiju.locations.11"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/mecha.deep.locations.12",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Sunken Signal Yard"
+            },
+            "description": {
+              "value": "Sunken Signal Yard: the sleeping frame can depart after its inhabited sections are secured."
+            },
+            "deepId": {
+              "value": "locations.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "mecha-deep",
+            "machine-wreck-frontier",
+            "illustrated.mecha-kaiju.locations.12"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-locations-1": {
+            "template": "mecha.deep.locations.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-locations-2": {
+            "template": "mecha.deep.locations.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-locations-3": {
+            "template": "mecha.deep.locations.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-locations-4": {
+            "template": "mecha.deep.locations.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-locations-5": {
+            "template": "mecha.deep.locations.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-locations-6": {
+            "template": "mecha.deep.locations.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-locations-7": {
+            "template": "mecha.deep.locations.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-locations-8": {
+            "template": "mecha.deep.locations.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-locations-9": {
+            "template": "mecha.deep.locations.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          },
+          "deep-locations-10": {
+            "template": "mecha.deep.locations.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "defense-metropolis"
+              ]
+            }
+          },
+          "deep-locations-11": {
+            "template": "mecha.deep.locations.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "colony-rebellion"
+              ]
+            }
+          },
+          "deep-locations-12": {
+            "template": "mecha.deep.locations.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "machine-wreck-frontier"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

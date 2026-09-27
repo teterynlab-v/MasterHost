@@ -1,0 +1,540 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.waste.setting",
+  "version": "1.1.0",
+  "type": "setting",
+  "name": "Communities after the Collapse — Illustrated",
+  "description": "Communities after the Collapse for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+  "tags": [
+    "post-apocalypse",
+    "dustroad-convoy",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Communities after the Collapse for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+    "highlights": [
+      "Communities after the Collapse",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.post-apocalypse"
+    ],
+    "requiresCapabilities": [],
+    "providesCapabilities": [
+      "setting:post-apocalypse"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Post-Apocalypse original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.waste.setting"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.waste.setting",
+    "version": "1.1.0",
+    "name": "Communities after the Collapse — Illustrated",
+    "description": "Communities after the Collapse for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+    "provides": [
+      "setting:post-apocalypse"
+    ],
+    "requires": [],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.factions.1",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Road Mutual"
+            },
+            "description": {
+              "value": "Road Mutual: runs the convoy and needs an honest accounting of emergency reserves."
+            },
+            "deepId": {
+              "value": "factions.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy",
+            "illustrated.post-apocalypse.factions.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.factions.2",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Vault Keepers"
+            },
+            "description": {
+              "value": "Vault Keepers: protects clean seed but refuses planting outside the sealed greenhouse."
+            },
+            "deepId": {
+              "value": "factions.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault",
+            "illustrated.post-apocalypse.factions.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.factions.3",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Heat Assembly"
+            },
+            "description": {
+              "value": "Heat Assembly: allocates power through a ledger that omits distant homes."
+            },
+            "deepId": {
+              "value": "factions.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid",
+            "illustrated.post-apocalypse.factions.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.factions.4",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Causeway Camp"
+            },
+            "description": {
+              "value": "Causeway Camp: offers bridge labor if the convoy evacuates its injured travelers."
+            },
+            "deepId": {
+              "value": "factions.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy",
+            "illustrated.post-apocalypse.factions.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.factions.5",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Open Soil Collective"
+            },
+            "description": {
+              "value": "Open Soil Collective: has safe test beds and demands a share of the harvest."
+            },
+            "deepId": {
+              "value": "factions.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault",
+            "illustrated.post-apocalypse.factions.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.factions.6",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Station Mechanics"
+            },
+            "description": {
+              "value": "Station Mechanics: can restart the grid if the assembly releases repair cells."
+            },
+            "deepId": {
+              "value": "factions.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid",
+            "illustrated.post-apocalypse.factions.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.factions.7",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Caravan Witnesses"
+            },
+            "description": {
+              "value": "Caravan Witnesses: knows which supply bids were forged before departure."
+            },
+            "deepId": {
+              "value": "factions.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy",
+            "illustrated.post-apocalypse.factions.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.factions.8",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Seed Heirs"
+            },
+            "description": {
+              "value": "Seed Heirs: holds original planting agreements signed before the collapse."
+            },
+            "deepId": {
+              "value": "factions.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault",
+            "illustrated.post-apocalypse.factions.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.visualThemes.1",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Dustroad Route"
+            },
+            "description": {
+              "value": "Dustroad Route: ochre front lines and blue reserve marks distinguish safe crossings from paid barriers."
+            },
+            "deepId": {
+              "value": "visualThemes.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy",
+            "illustrated.post-apocalypse.visualThemes.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.visualThemes.2",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Glassroot Trial"
+            },
+            "description": {
+              "value": "Glassroot Trial: green clean beds and red isolation bands mark viable seed and uncertain cultures."
+            },
+            "deepId": {
+              "value": "visualThemes.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault",
+            "illustrated.post-apocalypse.visualThemes.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.visualThemes.3",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Last Grid Ledger"
+            },
+            "description": {
+              "value": "Last Grid Ledger: amber household lines and gray dead districts distinguish shared heat from obsolete demand."
+            },
+            "deepId": {
+              "value": "visualThemes.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid",
+            "illustrated.post-apocalypse.visualThemes.3"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-factions-1": {
+            "template": "waste.deep.factions.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-factions-2": {
+            "template": "waste.deep.factions.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-factions-3": {
+            "template": "waste.deep.factions.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-factions-4": {
+            "template": "waste.deep.factions.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-factions-5": {
+            "template": "waste.deep.factions.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-factions-6": {
+            "template": "waste.deep.factions.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-factions-7": {
+            "template": "waste.deep.factions.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-factions-8": {
+            "template": "waste.deep.factions.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-visualThemes-1": {
+            "template": "waste.deep.visualThemes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.1"
+              ]
+            }
+          },
+          "deep-visualThemes-2": {
+            "template": "waste.deep.visualThemes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.2"
+              ]
+            }
+          },
+          "deep-visualThemes-3": {
+            "template": "waste.deep.visualThemes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.3"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

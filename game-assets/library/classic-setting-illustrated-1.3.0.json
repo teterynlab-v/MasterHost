@@ -1,0 +1,452 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.classic.setting",
+  "version": "1.3.0",
+  "type": "setting",
+  "name": "Border Kingdoms Setting — Illustrated",
+  "description": "The disputed marches, road oaths, rival crowns, and migrating monsters that frame a ready Classic Fantasy game.",
+  "tags": [
+    "classic-fantasy",
+    "border-kingdoms",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "The disputed marches, road oaths, rival crowns, and migrating monsters that frame a ready Classic Fantasy game.",
+    "highlights": [
+      "Border Kingdoms Setting",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.classic-fantasy"
+    ],
+    "requiresCapabilities": [],
+    "providesCapabilities": [
+      "setting:classic-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Classic Fantasy original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.classic.setting"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.classic.setting",
+    "version": "1.3.0",
+    "name": "Border Kingdoms Setting — Illustrated",
+    "description": "The disputed marches, road oaths, rival crowns, and migrating monsters that frame a ready Classic Fantasy game.",
+    "provides": [
+      "setting:classic-fantasy"
+    ],
+    "requires": [],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.factions.1",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Argent Crown"
+            },
+            "description": {
+              "value": "Argent Crown holds roads and granaries in Border Kingdoms; its captains demand service before granting safe passage."
+            },
+            "deepId": {
+              "value": "factions.1"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.factions.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.factions.2",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Wardens of the Long Road"
+            },
+            "description": {
+              "value": "Wardens of the Long Road claims an old charter in War of Heirs, trading protection for public loyalty and private concessions."
+            },
+            "deepId": {
+              "value": "factions.2"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.factions.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.factions.3",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Ember Collegium"
+            },
+            "description": {
+              "value": "Ember Collegium is divided over the future of Ruins of the Ancient Empire; one wing seeks peace while another prepares a decisive seizure."
+            },
+            "deepId": {
+              "value": "factions.3"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.factions.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.factions.4",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Free Banners"
+            },
+            "description": {
+              "value": "Free Banners controls a scarce craft needed across Border Kingdoms, making every alliance costly and every insult consequential."
+            },
+            "deepId": {
+              "value": "factions.4"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.factions.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.factions.5",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "River Compact"
+            },
+            "description": {
+              "value": "River Compact holds roads and granaries in War of Heirs; its captains demand service before granting safe passage."
+            },
+            "deepId": {
+              "value": "factions.5"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.factions.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.factions.6",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Thornwood Conclave"
+            },
+            "description": {
+              "value": "Thornwood Conclave claims an old charter in Ruins of the Ancient Empire, trading protection for public loyalty and private concessions."
+            },
+            "deepId": {
+              "value": "factions.6"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.factions.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.factions.7",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Ashen Synod"
+            },
+            "description": {
+              "value": "Ashen Synod is divided over the future of Border Kingdoms; one wing seeks peace while another prepares a decisive seizure."
+            },
+            "deepId": {
+              "value": "factions.7"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.factions.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.factions.8",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Guild of Seven Keys"
+            },
+            "description": {
+              "value": "Guild of Seven Keys controls a scarce craft needed across War of Heirs, making every alliance costly and every insult consequential."
+            },
+            "deepId": {
+              "value": "factions.8"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.factions.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.visualThemes.1",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Illuminated Chronicle"
+            },
+            "description": {
+              "value": "Illuminated Chronicle presents Border Kingdoms through readable maps, heraldic accents, and illustrated cards suited to heroic travel."
+            },
+            "deepId": {
+              "value": "visualThemes.1"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.visualThemes.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.visualThemes.2",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Weathered Border Map"
+            },
+            "description": {
+              "value": "Weathered Border Map presents War of Heirs as a weathered field document with strong route marks, faction seals, and practical table contrast."
+            },
+            "deepId": {
+              "value": "visualThemes.2"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.visualThemes.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.visualThemes.3",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Imperial Mosaic"
+            },
+            "description": {
+              "value": "Imperial Mosaic presents Ruins of the Ancient Empire with geometric ruins, mineral colors, and luminous details that distinguish ancient mechanisms."
+            },
+            "deepId": {
+              "value": "visualThemes.3"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.visualThemes.3"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-factions-1": {
+            "template": "classic.deep.factions.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-factions-2": {
+            "template": "classic.deep.factions.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-factions-3": {
+            "template": "classic.deep.factions.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-factions-4": {
+            "template": "classic.deep.factions.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-factions-5": {
+            "template": "classic.deep.factions.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-factions-6": {
+            "template": "classic.deep.factions.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-factions-7": {
+            "template": "classic.deep.factions.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-factions-8": {
+            "template": "classic.deep.factions.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-visualThemes-1": {
+            "template": "classic.deep.visualThemes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.1"
+              ]
+            }
+          },
+          "deep-visualThemes-2": {
+            "template": "classic.deep.visualThemes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.2"
+              ]
+            }
+          },
+          "deep-visualThemes-3": {
+            "template": "classic.deep.visualThemes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.3"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

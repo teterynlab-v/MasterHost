@@ -1,0 +1,540 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.dusk.setting",
+  "version": "1.2.0",
+  "type": "setting",
+  "name": "Bargains beneath a Dying Sun — Illustrated",
+  "description": "Bargains beneath a Dying Sun for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+  "tags": [
+    "dark-fantasy",
+    "dying-marches",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Bargains beneath a Dying Sun for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+    "highlights": [
+      "Bargains beneath a Dying Sun",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.dark-fantasy"
+    ],
+    "requiresCapabilities": [],
+    "providesCapabilities": [
+      "setting:dark-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Dark Fantasy original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.dusk.setting"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.dusk.setting",
+    "version": "1.2.0",
+    "name": "Bargains beneath a Dying Sun — Illustrated",
+    "description": "Bargains beneath a Dying Sun for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+    "provides": [
+      "setting:dark-fantasy"
+    ],
+    "requires": [],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.factions.1",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Dawn Wardens"
+            },
+            "description": {
+              "value": "Dawn Wardens: guard the fields with a bell they cannot ring without another household oath."
+            },
+            "deepId": {
+              "value": "factions.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.factions.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.factions.2",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Nameless House"
+            },
+            "description": {
+              "value": "Nameless House: shelters children erased by the valley's naming pact."
+            },
+            "deepId": {
+              "value": "factions.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.factions.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.factions.3",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Pilgrim Kitchen"
+            },
+            "description": {
+              "value": "Pilgrim Kitchen: feeds the sick and rejects proof of penitence as a ration condition."
+            },
+            "deepId": {
+              "value": "factions.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.factions.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.factions.4",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "March Freeholders"
+            },
+            "description": {
+              "value": "March Freeholders: will repair the gates if tenants gain a voice in the wardens' levy."
+            },
+            "deepId": {
+              "value": "factions.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.factions.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.factions.5",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Thorn Court"
+            },
+            "description": {
+              "value": "Thorn Court: enforces naming debts while concealing its own broken promise."
+            },
+            "deepId": {
+              "value": "factions.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.factions.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.factions.6",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Ash Hospice"
+            },
+            "description": {
+              "value": "Ash Hospice: knows which symptoms respond to the saint's cure."
+            },
+            "deepId": {
+              "value": "factions.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.factions.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.factions.7",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Bell Witnesses"
+            },
+            "description": {
+              "value": "Bell Witnesses: holds the first contract granting dawn protection to every resident."
+            },
+            "deepId": {
+              "value": "factions.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.factions.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.factions.8",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "River Coven"
+            },
+            "description": {
+              "value": "River Coven: offers to release names if the houses accept a common witness."
+            },
+            "deepId": {
+              "value": "factions.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.factions.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.visualThemes.1",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Last Dawn Chart"
+            },
+            "description": {
+              "value": "Last Dawn Chart: gold protection routes and black confiscation marks distinguish defense from levy control."
+            },
+            "deepId": {
+              "value": "visualThemes.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.visualThemes.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.visualThemes.2",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "River Pact Chart"
+            },
+            "description": {
+              "value": "River Pact Chart: violet house claims and silver common witnesses distinguish ransom from chosen identity."
+            },
+            "deepId": {
+              "value": "visualThemes.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.visualThemes.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.visualThemes.3",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Ash Pilgrim Chart"
+            },
+            "description": {
+              "value": "Ash Pilgrim Chart: green tested water and rust penance barriers distinguish treatment from imposed guilt."
+            },
+            "deepId": {
+              "value": "visualThemes.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.visualThemes.3"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-factions-1": {
+            "template": "dusk.deep.factions.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-factions-2": {
+            "template": "dusk.deep.factions.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-factions-3": {
+            "template": "dusk.deep.factions.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-factions-4": {
+            "template": "dusk.deep.factions.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-factions-5": {
+            "template": "dusk.deep.factions.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-factions-6": {
+            "template": "dusk.deep.factions.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-factions-7": {
+            "template": "dusk.deep.factions.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-factions-8": {
+            "template": "dusk.deep.factions.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-visualThemes-1": {
+            "template": "dusk.deep.visualThemes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.1"
+              ]
+            }
+          },
+          "deep-visualThemes-2": {
+            "template": "dusk.deep.visualThemes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.2"
+              ]
+            }
+          },
+          "deep-visualThemes-3": {
+            "template": "dusk.deep.visualThemes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.3"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

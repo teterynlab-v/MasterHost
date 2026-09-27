@@ -1,0 +1,347 @@
+{
+  "schemaVersion": 1,
+  "selections": {
+    "age-of-sail/adversaries.15": {
+      "output": "artwork/generated/age-of-sail/adversaries.15-v2.png",
+      "checksum": "313757ad52678a962cd70a25270de3e081cd26f4cd7d74be85b4693e351cc190",
+      "original": "artwork/generated/age-of-sail/adversaries.15.png",
+      "reason": "Removed synthetic signature strokes using the built-in image edit; selected after visual inspection."
+    },
+    "urban-fantasy/factions.1": {
+      "output": "artwork/generated/urban-fantasy/factions.1-modern-v2.png",
+      "checksum": "a51705c27ba0a8662c8affb12ff31a9bb860879c6ecd409c28721b71affbed0a",
+      "original": "artwork/generated/urban-fantasy/factions.1.png",
+      "originalChecksum": "d9fd7e2d49fd88fbb2e492f9e1fb066eb39471049530a8ba25168ffc513c137c",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/factions.2": {
+      "output": "artwork/generated/urban-fantasy/factions.2-modern-v2.png",
+      "checksum": "6577696b994f9dd16fb713c18c3810e0817ac7255ce18bf5a8641d6b714fd70c",
+      "original": "artwork/generated/urban-fantasy/factions.2.png",
+      "originalChecksum": "24822e5d602f3fbfb9d7adfc0710e293de24d25eaffa00902b094e499fc12cbe",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/factions.3": {
+      "output": "artwork/generated/urban-fantasy/factions.3-modern-v2.png",
+      "checksum": "440d6643e7176386f2a4968a243480674c727295a26466be5d9f039efec6d441",
+      "original": "artwork/generated/urban-fantasy/factions.3.png",
+      "originalChecksum": "f1ee5b8ca1ff63108d74440e7761db3abe6e641b77d86a137cfbe7dc1e7f6e61",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/factions.4": {
+      "output": "artwork/generated/urban-fantasy/factions.4-modern-v2.png",
+      "checksum": "f45e6f4fc7b4559ca9ab9b75be97fa8d4a54ebc11bc3ec34e2d2ac2dcbc6b0e7",
+      "original": "artwork/generated/urban-fantasy/factions.4.png",
+      "originalChecksum": "2b0b6a64a30fcade3151dd72b5cc509df00cf656f28a36fb9db823cefc241f35",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/factions.5": {
+      "output": "artwork/generated/urban-fantasy/factions.5-modern-v2.png",
+      "checksum": "12f79766b112ac14bf6795098ceca1973b499355c9281a951854af74492ff201",
+      "original": "artwork/generated/urban-fantasy/factions.5.png",
+      "originalChecksum": "c67fcbb0a5df517de8faaad788d63a0ad3e0bdeb7b47eac45569a5c2a5856730",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/factions.6": {
+      "output": "artwork/generated/urban-fantasy/factions.6-modern-v2.png",
+      "checksum": "c523f2c446f9046228323816de08df419f475ee1b3908b1532137e597edeb59f",
+      "original": "artwork/generated/urban-fantasy/factions.6.png",
+      "originalChecksum": "a1581214b0073a8730fcff8680dc8506ea16900cbcb4c297fa50ad0bc31aea4e",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/factions.7": {
+      "output": "artwork/generated/urban-fantasy/factions.7-modern-v2.png",
+      "checksum": "c2cd2d819062f050603ddb8634129a7ee8247e3d4768925bd869e882aa2c9dc0",
+      "original": "artwork/generated/urban-fantasy/factions.7.png",
+      "originalChecksum": "68a89b1f63c0272e5482a3e1cbdb302d63b8f1b5b0c680d119280904b7b4551f",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/factions.8": {
+      "output": "artwork/generated/urban-fantasy/factions.8-modern-v2.png",
+      "checksum": "2b4f34f234b8c497ee8517874c1e59c827d6b9b6bcbf8b734712fedee113e233",
+      "original": "artwork/generated/urban-fantasy/factions.8.png",
+      "originalChecksum": "4d597253b481eb0be1cc020c016f91f7694185bf8208cb8deeeb93d3fe21b88e",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/locations.1": {
+      "output": "artwork/generated/urban-fantasy/locations.1-modern-v2.png",
+      "checksum": "7bc9fdc1a2602c1e2a0a965f9a358afd78e1d5f86af29751189eb0e0aade3ae5",
+      "original": "artwork/generated/urban-fantasy/locations.1.png",
+      "originalChecksum": "7c1452308e453b7446bf3e8c969d3c67ee688ecf5f1bcbf59ab89da2a6fcf7f5",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/locations.2": {
+      "output": "artwork/generated/urban-fantasy/locations.2-modern-v2.png",
+      "checksum": "982ffbd762c57886e0a7526e89a2964c029d803e55186f0239b86818df3c657e",
+      "original": "artwork/generated/urban-fantasy/locations.2.png",
+      "originalChecksum": "0548c50d637ced91987beb06805c515dc82b167602f6a3df76ee74ebe37e63fc",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/locations.3": {
+      "output": "artwork/generated/urban-fantasy/locations.3-modern-v2.png",
+      "checksum": "0e1493468688777a6dcfad23b609a6a47e72d0055e1a96c81f249189c1ec0047",
+      "original": "artwork/generated/urban-fantasy/locations.3.png",
+      "originalChecksum": "43b2ae1a50012041cd7f320049df38362d201dff3c06800e99ba994f51e5263f",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/locations.4": {
+      "output": "artwork/generated/urban-fantasy/locations.4-modern-v2.png",
+      "checksum": "13e78605b2505bab2eb0a5ceaae39ecb730770f7b6efb1871169eea0fa2c7952",
+      "original": "artwork/generated/urban-fantasy/locations.4.png",
+      "originalChecksum": "93cbb4609662c5d941cf9d6b1558b6b1dd97f47b67a4f99576a04be549e975ad",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/locations.5": {
+      "output": "artwork/generated/urban-fantasy/locations.5-modern-v2.png",
+      "checksum": "e34ddc874fd2df7ef41bfbbd5541ef8c199dc99c5760157809a2abd99574315f",
+      "original": "artwork/generated/urban-fantasy/locations.5.png",
+      "originalChecksum": "cf313cbadcc7fa9e3f236eb712db7d6bb0151d77f6e2d7b3b62edcb7df96a589",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/locations.6": {
+      "output": "artwork/generated/urban-fantasy/locations.6-modern-v2.png",
+      "checksum": "b1f04be44a349de8c062d2d82df5017d5cb367317d0892ca1ab2cc590cc46143",
+      "original": "artwork/generated/urban-fantasy/locations.6.png",
+      "originalChecksum": "84ac71355751a6ebc23a3e4fc41044db9e501424ddf4716f59b493b808beaf0a",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/locations.7": {
+      "output": "artwork/generated/urban-fantasy/locations.7-modern-v2.png",
+      "checksum": "196c6a962030f867f9e49cf9af325bdc204d5e0053e7b69ba7c1bc47b6b76225",
+      "original": "artwork/generated/urban-fantasy/locations.7.png",
+      "originalChecksum": "6a47c71ef3eaf77410f91c83d6c026f3820771c2c7d602a31091c3ffe6e4d57e",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/locations.8": {
+      "output": "artwork/generated/urban-fantasy/locations.8-modern-v2.png",
+      "checksum": "bd7e1b991cc22a9efcd911b119dd60c7800bacab3f0168394abc3bd0d020caec",
+      "original": "artwork/generated/urban-fantasy/locations.8.png",
+      "originalChecksum": "5859a86303383bf808391c8132c40c17f303e3c56b32aa36cfdc94ca1818b65d",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/locations.9": {
+      "output": "artwork/generated/urban-fantasy/locations.9-modern-v2.png",
+      "checksum": "02a8d6d15eb827e36f45376ddb7fc86e1b0e259a19853c90e5c45da4a303e178",
+      "original": "artwork/generated/urban-fantasy/locations.9.png",
+      "originalChecksum": "e6bc7683fd5a4ca2b2469a98c65e734536c0d0ea40f4081b8a3371fca919523c",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/locations.10": {
+      "output": "artwork/generated/urban-fantasy/locations.10-modern-v2.png",
+      "checksum": "02ce0839a0d9c52cd21e3297e1f5c9860f387d33dc473ef1409e2edde3287f52",
+      "original": "artwork/generated/urban-fantasy/locations.10.png",
+      "originalChecksum": "6c8a523e4ac3284832362009583879d1080b51f99703faf3a5c5bd2dc27a2848",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/locations.11": {
+      "output": "artwork/generated/urban-fantasy/locations.11-modern-v2.png",
+      "checksum": "18109921bc99411ce4a2ff41a70ade173a7fbf10767fb6662af9980275caa298",
+      "original": "artwork/generated/urban-fantasy/locations.11.png",
+      "originalChecksum": "8e346c5231693d3cccdce1ee74c1c95682a3e8b2cb87c850fad617f210994010",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/locations.12": {
+      "output": "artwork/generated/urban-fantasy/locations.12-modern-v2.png",
+      "checksum": "da18211dff8d37de5b2afa2370c9f9d49452dfadfc976dda5d43ae430b657332",
+      "original": "artwork/generated/urban-fantasy/locations.12.png",
+      "originalChecksum": "f7c20d35919bae042cba150f369c367ccbdb10bdc3a39155016b615ba3135fe9",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.1": {
+      "output": "artwork/generated/urban-fantasy/npcs.1-modern-v2.png",
+      "checksum": "01215eb8fc5ee579a32f4404439741ca99c44adb5f4572dcad059b8598e119ed",
+      "original": "artwork/generated/urban-fantasy/npcs.1.png",
+      "originalChecksum": "a94ff24cb662661aadfcf29ee9506d497d5531601a3d68ed7148d5242d1a48d6",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.2": {
+      "output": "artwork/generated/urban-fantasy/npcs.2-modern-v2.png",
+      "checksum": "24e5fa469b7401346995e3f33cf313704905fd1f2319247682a6270335549343",
+      "original": "artwork/generated/urban-fantasy/npcs.2.png",
+      "originalChecksum": "a44786ce33e820c1ca5223c0382ff14c33b429516a5329bd19ece688ebf364ff",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.3": {
+      "output": "artwork/generated/urban-fantasy/npcs.3-modern-v2.png",
+      "checksum": "3690e2321b61719d428002f56cff83e4976d3960ee93a6f6460f8880273310f1",
+      "original": "artwork/generated/urban-fantasy/npcs.3.png",
+      "originalChecksum": "fd48a6d7973e6064a77121f05531d7594ef667d746d45f6149b1f31a8f58f8c2",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.4": {
+      "output": "artwork/generated/urban-fantasy/npcs.4-modern-v2.png",
+      "checksum": "7ad045b8156d880defc44a028acc7ebc71a2f0e2aac25626174220769b9f68aa",
+      "original": "artwork/generated/urban-fantasy/npcs.4.png",
+      "originalChecksum": "e451b83d9b6745dee7ecaaa240438e0aee20db033c7f238b69ccf25b3b4956c1",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.5": {
+      "output": "artwork/generated/urban-fantasy/npcs.5-modern-v2.png",
+      "checksum": "3ccd70f7175b3355e94146778a3fae37fff65daa87fae3f14bb7515bb2b1c0eb",
+      "original": "artwork/generated/urban-fantasy/npcs.5.png",
+      "originalChecksum": "345a437ae09c54a42fedae561a7ae26ad8c3fe0f9ac6ebc210d937109ed05842",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.6": {
+      "output": "artwork/generated/urban-fantasy/npcs.6-modern-v2.png",
+      "checksum": "39dfa3fb2f82dcfed38b52841ebf469bb53a77a563101be9685db721486a4174",
+      "original": "artwork/generated/urban-fantasy/npcs.6.png",
+      "originalChecksum": "4f258a09d7c29d33f0086ca33f5d55cd5abf564089fb7332879ab4f5f1527266",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.7": {
+      "output": "artwork/generated/urban-fantasy/npcs.7-modern-v2.png",
+      "checksum": "d1cfdb7c80755f8e55677888dc8bf4fd4d390d3ecadd3e3e1c08aa4edb643875",
+      "original": "artwork/generated/urban-fantasy/npcs.7.png",
+      "originalChecksum": "cfe747b2dabb9bcd8766b9d6d546bd817d14a16d368ae026c9be08c5a9f4f753",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.8": {
+      "output": "artwork/generated/urban-fantasy/npcs.8-modern-v2.png",
+      "checksum": "4c85a2352758b031aa8001e7419ac5833fdd7f7c95d4e83785243f3661ba2568",
+      "original": "artwork/generated/urban-fantasy/npcs.8.png",
+      "originalChecksum": "249aac17ba6066026cd0f81ce724ba17bf2aaadaff248a6791fbb389a99453b6",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.9": {
+      "output": "artwork/generated/urban-fantasy/npcs.9-modern-v2.png",
+      "checksum": "d487b1a6df15701c629907b39ac47a3c0b55a4f02d20d81d27a7718852b1faf0",
+      "original": "artwork/generated/urban-fantasy/npcs.9.png",
+      "originalChecksum": "17924f40b91aed0e6b92c95d4eb789eac295acf95e469b67a190c76f55535c0e",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.10": {
+      "output": "artwork/generated/urban-fantasy/npcs.10-modern-v2.png",
+      "checksum": "e6a7b12b162512e02884ff880cc4c33851920b9aed8d32182203993485da32eb",
+      "original": "artwork/generated/urban-fantasy/npcs.10.png",
+      "originalChecksum": "8442c2e6c3b2d95a1ab872b4fdf046c26355a2e7d210ef196c4381f1c43e516f",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.11": {
+      "output": "artwork/generated/urban-fantasy/npcs.11-modern-v2.png",
+      "checksum": "68275b4cf461a397ec7b83bdd5bbad15c886f4c55239cb2c344879c12988be11",
+      "original": "artwork/generated/urban-fantasy/npcs.11.png",
+      "originalChecksum": "5dee34674a5033741015f603fe6602d77d67a4f5749be5b13c2ad6bef8fc53ff",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.12": {
+      "output": "artwork/generated/urban-fantasy/npcs.12-modern-v2.png",
+      "checksum": "712b139cd5c309aed4744747c33b851fb3f5e118dfb2155aaefdf0f010065873",
+      "original": "artwork/generated/urban-fantasy/npcs.12.png",
+      "originalChecksum": "35df6d00f7fc2be003d719976164541cbde39c08f547ecd0dbf33f830045f9fe",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.13": {
+      "output": "artwork/generated/urban-fantasy/npcs.13-modern-v2.png",
+      "checksum": "594282515571cedb042c9641a46a0808ae71f54c2b70ea89392b7cb5b828423f",
+      "original": "artwork/generated/urban-fantasy/npcs.13.png",
+      "originalChecksum": "3a1f8e830066a00c22abf3698c220330add974b623b9185da4942b3a8a240a0f",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.14": {
+      "output": "artwork/generated/urban-fantasy/npcs.14-modern-v2.png",
+      "checksum": "0d39f3491e5aeb5be354367f33ecaaca447a6543fdc5bade477e5b8d9d577201",
+      "original": "artwork/generated/urban-fantasy/npcs.14.png",
+      "originalChecksum": "f5643072f485c67ed0e211ebe7524b24c6de09b12dc7b4f6afbd31b6f87b08cf",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.15": {
+      "output": "artwork/generated/urban-fantasy/npcs.15-modern-v2.png",
+      "checksum": "62549640709e5cefb44176a8c2ce3e7778757425567b842d02c2e1cc57850867",
+      "original": "artwork/generated/urban-fantasy/npcs.15.png",
+      "originalChecksum": "d23a49b61a26490c6688dd0703a86f3209fb07337280650548483fcde5b9004c",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.16": {
+      "output": "artwork/generated/urban-fantasy/npcs.16-modern-v2.png",
+      "checksum": "d595bcf605f3a4987a8f4f0d0fec311c95e8d4714622fcda0cc608766aeed174",
+      "original": "artwork/generated/urban-fantasy/npcs.16.png",
+      "originalChecksum": "a0d0bfac1a493e682f9dc3db7bedc9a02496f3f565dfcc0e3e5995c9f62fa25c",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.17": {
+      "output": "artwork/generated/urban-fantasy/npcs.17-modern-v2.png",
+      "checksum": "b87a5b663af7a0b79bc0d999a76ca3543ee74086731d56055d8283f4fb9059ee",
+      "original": "artwork/generated/urban-fantasy/npcs.17.png",
+      "originalChecksum": "e8ce37adf3158cf0e7c861c98bb749aa34bca8f6350f9c69a0f5b2cd5ada9d4a",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.18": {
+      "output": "artwork/generated/urban-fantasy/npcs.18-modern-v2.png",
+      "checksum": "e21331cc188ec967259d9f1067f21531165f843976131e594f4f292c41430633",
+      "original": "artwork/generated/urban-fantasy/npcs.18.png",
+      "originalChecksum": "1d51de07d1a3953e23f8cf2f0bed5379c0428aaad2b972a46c46c61eb707b049",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.19": {
+      "output": "artwork/generated/urban-fantasy/npcs.19-modern-v2.png",
+      "checksum": "4da5e722f17e56f1c3317466dc8042c692652cd2f399652a50f31f01cce6ab7c",
+      "original": "artwork/generated/urban-fantasy/npcs.19.png",
+      "originalChecksum": "7030ca62e319d8d3ae162f31a4d3e7d1a7a01cfa9742ca75b2bc6a5b868404be",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.20": {
+      "output": "artwork/generated/urban-fantasy/npcs.20-modern-v2.png",
+      "checksum": "b9ba185eb41e58debcdaa3f0cee49260435d5a5b0c78732832914758858f23bb",
+      "original": "artwork/generated/urban-fantasy/npcs.20.png",
+      "originalChecksum": "e350ad73dc332caf534633dd971fe5d816373a075852ec67604099a0fec2718a",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.21": {
+      "output": "artwork/generated/urban-fantasy/npcs.21-modern-v2.png",
+      "checksum": "2cf8d6b86168a28836a1df9070939d439bd33bbaceb1829674d78ec56efe2cd6",
+      "original": "artwork/generated/urban-fantasy/npcs.21.png",
+      "originalChecksum": "5a5c75d5fb19850801db19a4b0f2a12f435efef137bca8fbb99a7db83a2e9e47",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.22": {
+      "output": "artwork/generated/urban-fantasy/npcs.22-modern-v2.png",
+      "checksum": "1305291be90d1785f1b5d5538897c3bc9bb1fdc25eb48fff93577f2326092892",
+      "original": "artwork/generated/urban-fantasy/npcs.22.png",
+      "originalChecksum": "f457ea0ca2ac6beefe95cf719d2cb7f5005420235862d8929905ee5c46f1ad83",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.23": {
+      "output": "artwork/generated/urban-fantasy/npcs.23-modern-v2.png",
+      "checksum": "b0b00eacacbf6e147620083ef8cbacd78e39f3eaddad290a3719bf228df783bb",
+      "original": "artwork/generated/urban-fantasy/npcs.23.png",
+      "originalChecksum": "706d503969131208c64c8220a1ecf273ad4a758dac21083217861afda0e0779c",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/npcs.24": {
+      "output": "artwork/generated/urban-fantasy/npcs.24-modern-v2.png",
+      "checksum": "b7f3742a579b4ddff5dc11a6a73b0192fd2208ffe58cd1da690a5eeea9b4b2b6",
+      "original": "artwork/generated/urban-fantasy/npcs.24.png",
+      "originalChecksum": "d47eef00c51a3f7173ae5b89759739580923f50f0b3f35cc4c0c4160d9843bc7",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/adversaries.1": {
+      "output": "artwork/generated/urban-fantasy/adversaries.1-modern-v2.png",
+      "checksum": "0a4d1277e19dcb6e63efd83f4d676f3e0b9d3c1a43f8a27109efd8b72ec292ca",
+      "original": "artwork/generated/urban-fantasy/adversaries.1.png",
+      "originalChecksum": "5d40ff4cfd643d1fcc5cc2568576d0edc1240dccd8e99a5aa3892b839203ef4f",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/adversaries.2": {
+      "output": "artwork/generated/urban-fantasy/adversaries.2-modern-v2.png",
+      "checksum": "cd50955dabc596656138cd52083d5d733144a1a2542cc29857a533b9d7fefaaa",
+      "original": "artwork/generated/urban-fantasy/adversaries.2.png",
+      "originalChecksum": "ca28014e3938a4d0d050518342cd6ac2d6a49ef3a88b47db37b6221e0ace2587",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/adversaries.3": {
+      "output": "artwork/generated/urban-fantasy/adversaries.3-modern-v2.png",
+      "checksum": "aa8bb601d32840b1b30479f237c76471a06f501abe2671dd884d398e97310035",
+      "original": "artwork/generated/urban-fantasy/adversaries.3.png",
+      "originalChecksum": "729f71ee394f56d3f4ec52164cbb7fad2e4b01c86e78feb25c10b9ffc456a478",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    },
+    "urban-fantasy/scenes.1": {
+      "output": "artwork/generated/urban-fantasy/scenes.1-modern-v2.png",
+      "checksum": "3781c7c79dab1c628115d4d75eef64605faa9ed59529af9293bcb00db2a55a87",
+      "original": "artwork/generated/urban-fantasy/scenes.1.png",
+      "originalChecksum": "4a9adc77ef2a414fec0d1a26d6c58dab18274e1b6b08fe2c7ed64675399509a7",
+      "reason": "Generated a contemporary urban-fantasy replacement with the built-in image tool; first source retained. Individual art review remains separate."
+    }
+  }
+}

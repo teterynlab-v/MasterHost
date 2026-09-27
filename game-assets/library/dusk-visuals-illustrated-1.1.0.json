@@ -1,0 +1,1890 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.dusk.visuals",
+  "version": "1.1.0",
+  "type": "visuals",
+  "name": "Dark Bargain Schematics — Illustrated",
+  "description": "Dark Bargain Schematics for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+  "tags": [
+    "dark-fantasy",
+    "dying-marches",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Dark Bargain Schematics for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+    "highlights": [
+      "Dark Bargain Schematics",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.dark-fantasy"
+    ],
+    "requiresCapabilities": [
+      "setting:dark-fantasy"
+    ],
+    "providesCapabilities": [
+      "visuals:dark-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.dusk.setting",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Dark Fantasy original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.dusk.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 151
+  },
+  "media": [
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/factions.1.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/factions.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "7ebddc2d25c118c74b5fbe2356e636ea63b641a59522741624363922fcc647cb",
+      "size": 46532
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/factions.2.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/factions.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "a96be03936bafbe83a432815b945e059cf0e7bf21f58a85dad02993045e513e8",
+      "size": 46878
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/factions.3.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/factions.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "9340337ce6ce21b4cba612625ee10132e544105ec6f0862a3da38a7732580cfa",
+      "size": 45178
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/factions.4.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/factions.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "711b809c8a897b7ece64d3d322554bc0c6231c3cadf745ec6a345c77e3e2d368",
+      "size": 45526
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/factions.5.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/factions.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "2e38d7c0f60c2196e4c3f2a7d47971296c6de5f80b4565280b9bcd7c5cb49cec",
+      "size": 45342
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/factions.6.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/factions.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "67b75017bdda5a332be5fea36239d4fe19007fc5050a2a66a65ded661779d289",
+      "size": 46044
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/factions.7.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/factions.7.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "3569f5bc9acab0f8c6355e95bcdc90f095a14b9e1fdf30655e58afa2c349410e",
+      "size": 46546
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/factions.8.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/factions.8.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "a5929c551ae52aeaa19f10b7781a17b74a1261b01a8ee1e543f2a3b2cc3cb513",
+      "size": 46178
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/locations.1.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/locations.1.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "fdc658be47deea862dc5723efc80bf26705725813eebba1edea5d8b69aa7255e",
+      "size": 46486
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/locations.2.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/locations.2.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "7db4aa3da9a3d5b5e23502a2954645f72dde3a845f29fe586c34d9b3e105ae9c",
+      "size": 46280
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/locations.3.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/locations.3.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "964bc4bbe083b72d2797d0065ed8070466ead9f77895ff143bf94d8c3f4ee19a",
+      "size": 45952
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/locations.4.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/locations.4.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "4f8a6e717afe3f1d3603e7464ff66d7aa1ae933d80cacaa01a87d505522b23a1",
+      "size": 46482
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/locations.5.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/locations.5.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "35ff75cb56175fb49b5be4a9c3fddc46a8186ab7671473936050be314faba4e2",
+      "size": 46582
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/locations.6.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/locations.6.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "f567c40447c6e6f71821b23f12fd9a3a5206906bc1c12289d0b62cca897f9b08",
+      "size": 47026
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/locations.7.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/locations.7.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "9bb0b303b0209d0c88627db36cb741aa8868d5e225a0bbceabf7dd449d924808",
+      "size": 46806
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/locations.8.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/locations.8.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "cad018329b64fd615a518789d7d70a2c0f062d158851f62f2bf34d82841701b6",
+      "size": 46186
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/locations.9.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/locations.9.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "49b272224e197c837f421134e5bc3f200a3e8259ae8fd6dcd68f2302f41e5998",
+      "size": 46054
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/locations.10.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/locations.10.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "b07b67cb7d52a61e1534518a4111739af904bb0f98d5074846065d6444f8617f",
+      "size": 46910
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/locations.11.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/locations.11.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "3103d9f89454ac7cb8e755af1ff472b8682d77c3d782cf8bc58c6b83e275ba6c",
+      "size": 46714
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/locations.12.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/locations.12.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "09707478801aecc58b697906998161204bb538b430080bf44b968f0ddf8a655b",
+      "size": 46612
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.1.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "58280bad5ce92e7137488c829ab261973ad69ae6f34044e398957df8627e189d",
+      "size": 45660
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.2.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "ce4dd89141536242f6e6b6f97d56f8eb71079ba586cda91ebfb0d1ffcde95cbf",
+      "size": 45378
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.3.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "8b70a2c0ceac8601fcf1bf544081633177baeacac96e42b7939fc652f051ff96",
+      "size": 45498
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.4.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "0668f87fb0389e1f550b95ffd5377976c1c3bb079a1993148630be899732c3c9",
+      "size": 46060
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.5.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "0cfca9966405e7ee95ab34969555a73406b6648d7b23d1d4209a7a96ee24d9f6",
+      "size": 45212
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.6.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "5344fb492f888e12a666a83152cc9f4ef172cc993fceabe0d5fba0efc3ed2e51",
+      "size": 45830
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.7.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "60962510968f36de9d369c367014c279b8a5283e2d7959de7bb549d8e9a4dfb5",
+      "size": 45806
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.8.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "826cd0e35d928389398e792365e3712f30468e36d8b6265772439866c462a63f",
+      "size": 46056
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.9.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.9.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "ad8ee77279c8cb1789a8984ddc058210b09f68a8412ee9c98ee1c6a4d77b2b1c",
+      "size": 45280
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.10.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.10.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "c7ccef0c3095bd23accd322a90e95858ed52dfe5b3002cfe391e6970b9a49ec7",
+      "size": 46162
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.11.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.11.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "710feacc2ec8e4d4d7176f0a91c0a20f0fe00e4093a093ecb69b47d02be95cc4",
+      "size": 45000
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.12.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.12.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "d12e8571b2d2416cda38d90c778a4437e697cf424523b3ee04a2e00f3edd6ed9",
+      "size": 44492
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.13.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.13.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "5f3a514cb530f2670b8705b114eae3f1462c6314e8d2c39ac31bde85de3ebdfb",
+      "size": 46258
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.14.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.14.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "99ca3476220095a921f0ff2ade195a56df0884a55d82c6e4bd53e68468efde37",
+      "size": 45606
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.15.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.15.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "5f0bead91123ff35a0f1c956ebb22c16c09f4e6221b4a2d73f0c76ec1e59a3de",
+      "size": 45842
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.16.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.16.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "cfcd6be9b0ed16f7a4d37ebdc9a859efa57820125d955ffe3fdc47449e6e62b6",
+      "size": 44950
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.17.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.17.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "4513819ccbad70ae93277c1e2537c9681205d2bb0b035c022290f4dfd87b2ad8",
+      "size": 46752
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.18.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.18.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "11c774b4cad2670a8dd462f9a061a9e7c74fdb0ca79a9b6914356feccde5416b",
+      "size": 44556
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.19.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.19.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "7fddc7bc6005fe1abb52e19f5379cff4bfeba58680a791a72e9c4aa9c5519382",
+      "size": 45906
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.20.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.20.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "3a44ef4db05c8ed944d28069d25af50bf465a51963e33ce0940be47a0d44337c",
+      "size": 45314
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.21.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.21.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "d29d227aa713467394ce857271dac60da0b137ab2e91b1db0e97e0e37c2da65e",
+      "size": 45556
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.22.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.22.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "4255203bfa09fb211fedcc3153c9638e936af3300856d923c3faf5f7ec94d49e",
+      "size": 45420
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.23.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.23.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "a25fdb3f81d4f1bb10d8e080ba16b6032a074d2876a2585057b3fc8e50b70104",
+      "size": 45196
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/npcs.24.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/npcs.24.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "c3d740104d8669e91b9e8bcbbbecc7435cccaf8583f5c1828e8bd046295cab37",
+      "size": 45202
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/adversaries.1.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/adversaries.1.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "82b0c9932e200fc84a108eee68331c47d9af5f8e35afae715833a638d810c81e",
+      "size": 45108
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/adversaries.2.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/adversaries.2.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "cab920bf68541bebf43f00963d640a508e841a9e192e8867bad7385ac60710f2",
+      "size": 45460
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/adversaries.3.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/adversaries.3.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "8ac98dda9053fc8d67da14fe02e430300faa6ce9da8e3327231605d6d26c2778",
+      "size": 46884
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/adversaries.4.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/adversaries.4.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "3e9a7f72aeb3de23a934299c1c5483bb7cdb6e256ecacebb6210c32e8c9b54eb",
+      "size": 45400
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/adversaries.5.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/adversaries.5.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "6274057080ed0b78ae953b9dc9f00e1e593112696f6c706b97357b7c6fa7b935",
+      "size": 45950
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/adversaries.6.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/adversaries.6.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "a90538565bdcc1466b28b4ed9dc37ae67815d6bb348a5e823e9bc0a17ff58e7c",
+      "size": 46068
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/adversaries.7.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/adversaries.7.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "e88e65e9c38472f1a2a3e4afce0a6bd7d562ee5ab316603555d2bccb9e3788db",
+      "size": 46024
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/adversaries.8.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/adversaries.8.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "3861f1ccd5838e869845d167841ece83d823af43241b338d2cd1b13c7098a02c",
+      "size": 47720
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/adversaries.9.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/adversaries.9.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "f5ee76062aa10420de6d97ac72f61bf8c53aec02fafd2d0c393f6bef06eaa657",
+      "size": 48412
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/adversaries.10.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/adversaries.10.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "5efff1167700a00e96636284bbf597d4cc29461f8ecfdcf5b427a2443dbfd874",
+      "size": 45290
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/adversaries.11.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/adversaries.11.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "597137af4859b3cb7ee250c4e2b125f2a99959b0b8696340bd3df30915ac0e4c",
+      "size": 46718
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/adversaries.12.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/adversaries.12.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "e9ea77947d63170161615f8b69bb8d8380291ee545da333d27e55a1ce80ad897",
+      "size": 46520
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/adversaries.13.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/adversaries.13.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "d84cee9895a5d28cff2a522ee0cc3b500d26a31081c7ed0f30c1e34db5126422",
+      "size": 46260
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/adversaries.14.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/adversaries.14.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "fe187082bf5905d6a9a9be558edd34c3ae0b67ee716956aada8babbf9e30302d",
+      "size": 45600
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/adversaries.15.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/adversaries.15.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "311443ff09033a334bbb0fb2842670f98290ed2b499379b299f840043a36398a",
+      "size": 48812
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/adversaries.16.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/adversaries.16.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "0f7143ea1554c145fb519ced1b558c7d58e75aa25cd94bcc230b194cca861f65",
+      "size": 44748
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/adversaries.17.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/adversaries.17.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "c989fbe04d85fefbd3683ece30f0a3708b9f3f0db4895da18bb8b8765d7025a8",
+      "size": 48468
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/adversaries.18.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/adversaries.18.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "864c1f97035750a539a838eda9f8986100778218979cc41307dfccef2e91e3e2",
+      "size": 47030
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.1.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.1.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "817e1412b4624d0ab3f5dc5e43d5f2453fc9a69ebfb475812ccbd7ba91fb6236",
+      "size": 45176
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.2.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.2.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "2d8666362d81cbd2bf8f6fc9b50ace2ed8f65ce664771dea63e9c36158bb1d45",
+      "size": 44828
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.3.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.3.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "97f5e5a1833e017cd8e5052245cfb27e6d14a6d6a398f011d18ea6d9f761e78c",
+      "size": 45450
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.4.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.4.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "d1be4ffb1d848bf57e55a1b7ba82added18c3844627c253713f5a405d114ea92",
+      "size": 46334
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.5.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.5.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "8991315a5afaa53d85b3c6fdb42ade27b8243d50ca14753387bd69cf70a51c61",
+      "size": 45418
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.6.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.6.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "2305b89dca907745ffe2e01d94ad3db1c69ba266a24d2d60f2345f209fe9165e",
+      "size": 47774
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.7.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.7.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "f4ed43963eb6b95a105d3b9c00a45d3a7578e6be9a99e5d80292a4bf51769485",
+      "size": 45056
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.8.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.8.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "fdd453b454b0a6dde653e985571b2d926a93761f98b11d4f5b2d514a25d4cbfe",
+      "size": 45692
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.9.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.9.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "08db97158a92a502d9413af8cc508aa68a6d0a8fe451cab7a571c7b4678441e7",
+      "size": 45290
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.10.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.10.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "9bca671ed7c7809d25de748247366fde5386cf80a5a91206d9c89eecebf5d0a0",
+      "size": 44668
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.11.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.11.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "1f057bf4800d7a4235e56ff48b79a765c9a28aa412465db9a375b75a8ea2cdd3",
+      "size": 46262
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.12.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.12.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "3d1e87771fcfc4e3ceef7b35d8f8421536258016aea4b66edc968e19847acc3d",
+      "size": 47370
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.13.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.13.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "4c4792b02ca058ac0f629e045ccda0469192e11c972159d4b4652252791edeb7",
+      "size": 45544
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.14.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.14.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "86be14a03488cab393960c58f121c5ebdfdd997cf90d973628db1cfa95da726e",
+      "size": 46570
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.15.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.15.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "012e4b54738148c9cc405f290b57606c814eb17fad4d09d2116ae3b454181b0b",
+      "size": 45346
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.16.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.16.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "d362e0ac8f502523a5fcf5d449d27a878b5dbd5ffae654e318bde3dd9e78214b",
+      "size": 46048
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.17.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.17.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "5faa26f1de486fc99e6e88fc1017609b9d818bb80464d40e4c7c9635968c45d1",
+      "size": 46062
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.18.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.18.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "1cdfa2612ff7d971e7c18d595813d0c6d9e83f28148b05a0ab3f5c6f5808932b",
+      "size": 45476
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.19.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.19.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "26e3a040f8553b6ddf66fd0abf2828245331b16d766b8d1296473f55d38e6bd9",
+      "size": 45928
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.20.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.20.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "4e5e52127ea18b5d61bffe5070f48e67745403437bfc68b8fa819029ebf85205",
+      "size": 45190
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.21.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.21.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "ab5d3c24b8a0e1f2b8d2bd1d99276ff8a5b34cb756b54c3cd6ef429970d4a634",
+      "size": 47564
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.22.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.22.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "e2f582330795d073581ee1dd801b0c91a56eb8d892027c0198c691a85f669b40",
+      "size": 45322
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.23.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.23.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "e4fe7f40e88608e6a273024fc4691dabae5ba05f4709ab22b87d37fbe7a18307",
+      "size": 45798
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/items.24.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/items.24.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "8a7ec44656981e40d4ac78ff21596ee4f0c3e499b1b0cee284d287f6edbecaa6",
+      "size": 45368
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.1.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "5bd25618661147b9e428470e70787fcd1af2e8d30b9bc6bd4f7c4554fe3eb57f",
+      "size": 46526
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.2.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b4295e12e4ead0c016c7aa28f10c50b484c19f3d28b031a53ddbe2889a18c602",
+      "size": 47130
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.3.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "72cfffbf01818b7d560baabe740af829dc94399740c104332f1840339f301f06",
+      "size": 46776
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.4.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f67052542c12431118bb05b9b60e1dff0511f981445cf5fd7141759f447f8dbf",
+      "size": 46962
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.5.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "2e6e6153ae6b9e8f59b64b5d0aa1dfe88cbad253d76f361e6517a525488ae5b9",
+      "size": 46960
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.6.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "2aaf6ba16d6c1a642ec9c5c5cf7a23560aaad28617941de86e6c83fbc9f5b295",
+      "size": 45380
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.7.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "7faf7509cdd703f5fbf85eb25c19ec7d5be48b98c90e1475e80fa57620a4f744",
+      "size": 46872
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.8.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "5093f500e7bd8e8c04a95874a2a343714003ee99b7ccc8341e66100d65d4d129",
+      "size": 46654
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.9.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "1c12d5e31d5de7a12afdf0d270fef81bfa9fdcec09b5c33abe2e65f6dcd22ea0",
+      "size": 46042
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.10.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "e4022ded1ec6b61e4b9b7bc12c9838f32d43ac7b28b0503a99d880b6bdc51743",
+      "size": 47272
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.11.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "830778ccfbdd9f18dc07ddc4a1c4c4d722beaff8c0138c3ef289d6890accc48c",
+      "size": 47090
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.12.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "0da3214a55c5bffd648f87c4152fd1ee452a4e07bde62cd536cff2b0e8585a4a",
+      "size": 47098
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.13.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a497b187f9866821525113419c39fa1a7e093ba29ca7099d0cef9d7d9731f08a",
+      "size": 46378
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.14.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "266e5bf97beb6ef953997d9e5e7ffd84029a391f7b4f8c0282c8dc143ff913ac",
+      "size": 45986
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.15.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "7e6cbf9a5b52bd183b45fbc4fa27fd406982a0a23cc91b6e27a85edca131afa9",
+      "size": 46646
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.16.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "09a6a9f9b5f266d1adf07a1190bbc1afebcfb6854524f50c626cbe15a117e567",
+      "size": 46890
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.17.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "cfb68a404da399c9ddc5084e9aeac6f69f802fcca0677f6660b5c91dd07f6921",
+      "size": 46828
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.18.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f68ee1ad079fced33f8ec43b92f78f84fb68df6f50852a504cdd3e894d8a4f6f",
+      "size": 46308
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.19.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.19.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "49c51c2ce5c754f936dacf16d4be0c38e79640c4307a05dc98f6f17212005cea",
+      "size": 47638
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.20.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.20.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "70d7be095c0161a77e54cfd9ff504c04312b385d97a40adb7ab1c576eb52d6bc",
+      "size": 44532
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.21.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.21.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f043e5630d0a5871d6aeeaa2071026072f5de512478568d064d8e69e3dbe3beb",
+      "size": 46716
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.22.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.22.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "d11b5bd9f4ef6a56f83ddf3bb365c4af1968c84fd3305c622e349e921bcd8ba6",
+      "size": 45920
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.23.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.23.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "de83247d5da7169934024e0ef218edfadd4538d3260947cdf5c39e4932bdc438",
+      "size": 46446
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.24.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.24.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "6bfe6544f94c1d4b0b511d5cf3f68049ac2412d2682a657630e7d7163c16b679",
+      "size": 47054
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.25.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.25.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4abe83221ba340e5f2c361c5638ab3d9f554d07035a3f8e30b9d2213e5ab2e95",
+      "size": 47392
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.26.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.26.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4b16ed006abdb0d8bcbac1601122e4a206545b3f08fd9f2a0f839352ff3601f4",
+      "size": 46666
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.27.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.27.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "6dcc6c581f28681f0af550a38f961cf474089b2e16fa93270ec1e28d5181b1fe",
+      "size": 46800
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.28.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.28.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "8543f3672a5d68f7e756a8410f65a3b8062ca38c8edcbdcde572f483543dc1a5",
+      "size": 46902
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.29.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.29.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "e00233385031a47b2d220601b9ba0e08569cc038ada13928ca64544862d1ba1a",
+      "size": 46780
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/events.30.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/events.30.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "38aae0d0505e1bdb89a5876eeca7590348b3337058529616699ac597b5be2198",
+      "size": 47200
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/scenes.1.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/scenes.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "57eaf79b32877010ce1943b2c583538429bb794c03d5f27328cacd1d160e4812",
+      "size": 47010
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/scenes.2.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/scenes.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "9b7dab3685218173fa956301df63d93feebdbb314ffd663de99f79b197752f9c",
+      "size": 46460
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/scenes.3.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/scenes.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "0162beb8d7c092426f23794e4e7b232be6f0d4e9aad0361667c81e72174661e7",
+      "size": 46584
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/scenes.4.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/scenes.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "9416324adb5a932b0949d143605ae1647dbf801c1bc46dc07c25b1a98f9ff0d1",
+      "size": 47146
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/scenes.5.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/scenes.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "af276584262dc5131d15451173b889e6cc4fe715d3934dec1e31b6d2325c7655",
+      "size": 50488
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/scenes.6.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/scenes.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "615751400a3efcab5d2446cbba13bf4d05aa283904fa6dab19e4f9b2805f813c",
+      "size": 47350
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/scenes.7.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/scenes.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "94743d4bad93959c39243997642a04b380f4742f2b32ba368c0e807dc9cd2691",
+      "size": 46260
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/scenes.8.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/scenes.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ed56f118a19107acea8c338f7384d8a011cec91e9b6840978aba26b73c0482e5",
+      "size": 47250
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/scenes.9.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/scenes.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "059a3e53dde8a2fe1e68c88b69d51cf53a17064089c4bcb4c609f2038813f60e",
+      "size": 46862
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/scenes.10.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/scenes.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ae38ddda8a864a803c0621d8e06429af30670817e272a0d2830660a02d8a1052",
+      "size": 46290
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/scenes.11.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/scenes.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "538c6b45f4b97bcb2bf1e5caaffd5a0e09cd7a97ff15e3717007db2e62f1ae26",
+      "size": 46226
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/scenes.12.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/scenes.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "8b03f31ad8ff8f013fb421c1ac797e94ef2fd0a0d2d8325fa72098396b1b12e1",
+      "size": 46346
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/scenes.13.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/scenes.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "fe743e5dc49f4898122fe3434589c0d8771a8af9e7a4e79cd94db957beb1c031",
+      "size": 47038
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/scenes.14.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/scenes.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "04e6fc7809e354d922a8b5b276614d2e19ef1378517df9b72ee1f82f9c73128a",
+      "size": 46740
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/scenes.15.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/scenes.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "d057566b59bfb96537c58d4d3542bf1fe991c04c0df1464e4c63dbd75a52560f",
+      "size": 46560
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/scenes.16.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/scenes.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f5a8dba6fcb064b3545b1d21212e11721b4a85b47a7ef1c44efc59e5314f2eab",
+      "size": 46710
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/scenes.17.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/scenes.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "592875caf4034e7b7208828e575c634d0648b14845cebf5ddc49f1e0019df9f8",
+      "size": 46754
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/scenes.18.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/scenes.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b78173da6ce4628841a8fa1bafeed8759a357e4b981958eabf8d841bf592c031",
+      "size": 46608
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/archetypes.1.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/archetypes.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "868427fa11e7a95b775a556d349062af7d6dd040bc67493ed1b2a0813977bf59",
+      "size": 44546
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/archetypes.2.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/archetypes.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "acf85dd5239edf74969ad49076b4a7493a993fdf358fcf14c975ea4588ba9fa1",
+      "size": 45794
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/archetypes.3.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/archetypes.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "b53024fce3d5291560ea2657af38a4b52cdc58eb628d83b1123034e416aa9ee6",
+      "size": 45110
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/archetypes.4.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/archetypes.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "a117909e5c976ddb9f4fe62f9fee28af18b9976a416ee30243cedec53154db36",
+      "size": 45218
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/archetypes.5.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/archetypes.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "2b5a5b92508d404d1a858d61862e311a078dd4d5e2b062064dd6069cc806e41f",
+      "size": 46698
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/archetypes.6.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/archetypes.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "e729081417a9ea9b6a85814ed09335e2e01cbf6ab454f1373dbf049727b1d2fe",
+      "size": 47834
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/archetypes.7.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/archetypes.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "1c35eab77cead16bd256d82665687bfd8e9843c5b1e6b52433f09329865b4c7f",
+      "size": 45264
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/archetypes.8.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/archetypes.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "39e2e4b93fa5dd20d740f75fb519d7b9924c63ccc68f66b53010c34b33b539f9",
+      "size": 45876
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/progressionPaths.1.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/progressionPaths.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "8f5d56b8c7fd384830a1bbb44987b181f7c0f2d7f7354a9e1f2ae60be905c5ec",
+      "size": 46700
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/progressionPaths.2.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/progressionPaths.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "a15a094839fba71c9371e2c724f2d0b9a919fc2e635cbe7e5500c19f812634b1",
+      "size": 46988
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/progressionPaths.3.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/progressionPaths.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "b37ccd43575926ebec05040d13e5a10326b996a47cdbbce1e1157c72d3466007",
+      "size": 46590
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/progressionPaths.4.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/progressionPaths.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "3363f9eaf783b03a98b93925cbfbe4344f27332b97dd0249977ebfa407581f14",
+      "size": 46386
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/progressionPaths.5.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/progressionPaths.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "0e30f4ae62c47d53baad92abbe3a36636399579de23d21f204f560d4b2c9b28d",
+      "size": 47692
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/progressionPaths.6.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/progressionPaths.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "a2ad75fe7c06fd8307dbdd391dda30a849f2861477e5890cc5a8d39db30ef100",
+      "size": 46448
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/visualThemes.1.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/visualThemes.1.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "20b3342a6faf00baffd560068ed567a5d5e532289e071684a646670a7bcaa161",
+      "size": 44192
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/visualThemes.2.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/visualThemes.2.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "18a8ec8c6c2e9edc91edc833fad998bf3763a16253439ee773902157ce34e501",
+      "size": 43974
+    },
+    {
+      "name": "dark-fantasy/illustrated-1.1.0/visualThemes.3.webp",
+      "path": "media/dark-fantasy/illustrated-1.1.0/visualThemes.3.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "82336e7b1b0b86857c5007a6b1ccc810fb8cbbee27c474a4f6c6e62fc6fb0c13",
+      "size": 44598
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.dusk.visuals",
+    "version": "1.1.0",
+    "name": "Dark Bargain Schematics — Illustrated",
+    "description": "Dark Bargain Schematics for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+    "provides": [
+      "visuals:dark-fantasy"
+    ],
+    "requires": [
+      "setting:dark-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/illustrated-dark-fantasy",
+        "value": {
+          "id": "illustrated-dark-fantasy",
+          "name": "Illustrated dark-fantasy",
+          "description": "Individual generated illustrations for every authored content object",
+          "defaults": {
+            "background": "assets/dark-fantasy/illustrated-1.1.0/scenes.1.webp",
+            "card": "assets/dark-fantasy/illustrated-1.1.0/scenes.1.webp",
+            "map": "assets/dark-fantasy/illustrated-1.1.0/visualThemes.1.webp",
+            "portrait": "assets/dark-fantasy/illustrated-1.1.0/archetypes.1.webp",
+            "token": "assets/dark-fantasy/illustrated-1.1.0/adversaries.1.webp",
+            "item": "assets/dark-fantasy/illustrated-1.1.0/items.1.webp",
+            "location": "assets/dark-fantasy/illustrated-1.1.0/locations.1.webp"
+          },
+          "families": {
+            "illustrated.dark-fantasy.factions.1": {
+              "card": "assets/dark-fantasy/illustrated-1.1.0/factions.1.webp"
+            },
+            "illustrated.dark-fantasy.factions.2": {
+              "card": "assets/dark-fantasy/illustrated-1.1.0/factions.2.webp"
+            },
+            "illustrated.dark-fantasy.factions.3": {
+              "card": "assets/dark-fantasy/illustrated-1.1.0/factions.3.webp"
+            },
+            "illustrated.dark-fantasy.factions.4": {
+              "card": "assets/dark-fantasy/illustrated-1.1.0/factions.4.webp"
+            },
+            "illustrated.dark-fantasy.factions.5": {
+              "card": "assets/dark-fantasy/illustrated-1.1.0/factions.5.webp"
+            },
+            "illustrated.dark-fantasy.factions.6": {
+              "card": "assets/dark-fantasy/illustrated-1.1.0/factions.6.webp"
+            },
+            "illustrated.dark-fantasy.factions.7": {
+              "card": "assets/dark-fantasy/illustrated-1.1.0/factions.7.webp"
+            },
+            "illustrated.dark-fantasy.factions.8": {
+              "card": "assets/dark-fantasy/illustrated-1.1.0/factions.8.webp"
+            },
+            "illustrated.dark-fantasy.locations.1": {
+              "location": "assets/dark-fantasy/illustrated-1.1.0/locations.1.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/locations.1.webp"
+            },
+            "illustrated.dark-fantasy.locations.2": {
+              "location": "assets/dark-fantasy/illustrated-1.1.0/locations.2.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/locations.2.webp"
+            },
+            "illustrated.dark-fantasy.locations.3": {
+              "location": "assets/dark-fantasy/illustrated-1.1.0/locations.3.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/locations.3.webp"
+            },
+            "illustrated.dark-fantasy.locations.4": {
+              "location": "assets/dark-fantasy/illustrated-1.1.0/locations.4.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/locations.4.webp"
+            },
+            "illustrated.dark-fantasy.locations.5": {
+              "location": "assets/dark-fantasy/illustrated-1.1.0/locations.5.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/locations.5.webp"
+            },
+            "illustrated.dark-fantasy.locations.6": {
+              "location": "assets/dark-fantasy/illustrated-1.1.0/locations.6.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/locations.6.webp"
+            },
+            "illustrated.dark-fantasy.locations.7": {
+              "location": "assets/dark-fantasy/illustrated-1.1.0/locations.7.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/locations.7.webp"
+            },
+            "illustrated.dark-fantasy.locations.8": {
+              "location": "assets/dark-fantasy/illustrated-1.1.0/locations.8.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/locations.8.webp"
+            },
+            "illustrated.dark-fantasy.locations.9": {
+              "location": "assets/dark-fantasy/illustrated-1.1.0/locations.9.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/locations.9.webp"
+            },
+            "illustrated.dark-fantasy.locations.10": {
+              "location": "assets/dark-fantasy/illustrated-1.1.0/locations.10.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/locations.10.webp"
+            },
+            "illustrated.dark-fantasy.locations.11": {
+              "location": "assets/dark-fantasy/illustrated-1.1.0/locations.11.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/locations.11.webp"
+            },
+            "illustrated.dark-fantasy.locations.12": {
+              "location": "assets/dark-fantasy/illustrated-1.1.0/locations.12.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/locations.12.webp"
+            },
+            "illustrated.dark-fantasy.npcs.1": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.1.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.1.webp"
+            },
+            "illustrated.dark-fantasy.npcs.2": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.2.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.2.webp"
+            },
+            "illustrated.dark-fantasy.npcs.3": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.3.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.3.webp"
+            },
+            "illustrated.dark-fantasy.npcs.4": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.4.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.4.webp"
+            },
+            "illustrated.dark-fantasy.npcs.5": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.5.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.5.webp"
+            },
+            "illustrated.dark-fantasy.npcs.6": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.6.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.6.webp"
+            },
+            "illustrated.dark-fantasy.npcs.7": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.7.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.7.webp"
+            },
+            "illustrated.dark-fantasy.npcs.8": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.8.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.8.webp"
+            },
+            "illustrated.dark-fantasy.npcs.9": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.9.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.9.webp"
+            },
+            "illustrated.dark-fantasy.npcs.10": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.10.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.10.webp"
+            },
+            "illustrated.dark-fantasy.npcs.11": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.11.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.11.webp"
+            },
+            "illustrated.dark-fantasy.npcs.12": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.12.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.12.webp"
+            },
+            "illustrated.dark-fantasy.npcs.13": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.13.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.13.webp"
+            },
+            "illustrated.dark-fantasy.npcs.14": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.14.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.14.webp"
+            },
+            "illustrated.dark-fantasy.npcs.15": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.15.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.15.webp"
+            },
+            "illustrated.dark-fantasy.npcs.16": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.16.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.16.webp"
+            },
+            "illustrated.dark-fantasy.npcs.17": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.17.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.17.webp"
+            },
+            "illustrated.dark-fantasy.npcs.18": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.18.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.18.webp"
+            },
+            "illustrated.dark-fantasy.npcs.19": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.19.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.19.webp"
+            },
+            "illustrated.dark-fantasy.npcs.20": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.20.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.20.webp"
+            },
+            "illustrated.dark-fantasy.npcs.21": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.21.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.21.webp"
+            },
+            "illustrated.dark-fantasy.npcs.22": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.22.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.22.webp"
+            },
+            "illustrated.dark-fantasy.npcs.23": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.23.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.23.webp"
+            },
+            "illustrated.dark-fantasy.npcs.24": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/npcs.24.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/npcs.24.webp"
+            },
+            "illustrated.dark-fantasy.adversaries.1": {
+              "token": "assets/dark-fantasy/illustrated-1.1.0/adversaries.1.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/adversaries.1.webp"
+            },
+            "illustrated.dark-fantasy.adversaries.2": {
+              "token": "assets/dark-fantasy/illustrated-1.1.0/adversaries.2.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/adversaries.2.webp"
+            },
+            "illustrated.dark-fantasy.adversaries.3": {
+              "token": "assets/dark-fantasy/illustrated-1.1.0/adversaries.3.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/adversaries.3.webp"
+            },
+            "illustrated.dark-fantasy.adversaries.4": {
+              "token": "assets/dark-fantasy/illustrated-1.1.0/adversaries.4.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/adversaries.4.webp"
+            },
+            "illustrated.dark-fantasy.adversaries.5": {
+              "token": "assets/dark-fantasy/illustrated-1.1.0/adversaries.5.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/adversaries.5.webp"
+            },
+            "illustrated.dark-fantasy.adversaries.6": {
+              "token": "assets/dark-fantasy/illustrated-1.1.0/adversaries.6.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/adversaries.6.webp"
+            },
+            "illustrated.dark-fantasy.adversaries.7": {
+              "token": "assets/dark-fantasy/illustrated-1.1.0/adversaries.7.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/adversaries.7.webp"
+            },
+            "illustrated.dark-fantasy.adversaries.8": {
+              "token": "assets/dark-fantasy/illustrated-1.1.0/adversaries.8.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/adversaries.8.webp"
+            },
+            "illustrated.dark-fantasy.adversaries.9": {
+              "token": "assets/dark-fantasy/illustrated-1.1.0/adversaries.9.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/adversaries.9.webp"
+            },
+            "illustrated.dark-fantasy.adversaries.10": {
+              "token": "assets/dark-fantasy/illustrated-1.1.0/adversaries.10.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/adversaries.10.webp"
+            },
+            "illustrated.dark-fantasy.adversaries.11": {
+              "token": "assets/dark-fantasy/illustrated-1.1.0/adversaries.11.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/adversaries.11.webp"
+            },
+            "illustrated.dark-fantasy.adversaries.12": {
+              "token": "assets/dark-fantasy/illustrated-1.1.0/adversaries.12.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/adversaries.12.webp"
+            },
+            "illustrated.dark-fantasy.adversaries.13": {
+              "token": "assets/dark-fantasy/illustrated-1.1.0/adversaries.13.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/adversaries.13.webp"
+            },
+            "illustrated.dark-fantasy.adversaries.14": {
+              "token": "assets/dark-fantasy/illustrated-1.1.0/adversaries.14.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/adversaries.14.webp"
+            },
+            "illustrated.dark-fantasy.adversaries.15": {
+              "token": "assets/dark-fantasy/illustrated-1.1.0/adversaries.15.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/adversaries.15.webp"
+            },
+            "illustrated.dark-fantasy.adversaries.16": {
+              "token": "assets/dark-fantasy/illustrated-1.1.0/adversaries.16.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/adversaries.16.webp"
+            },
+            "illustrated.dark-fantasy.adversaries.17": {
+              "token": "assets/dark-fantasy/illustrated-1.1.0/adversaries.17.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/adversaries.17.webp"
+            },
+            "illustrated.dark-fantasy.adversaries.18": {
+              "token": "assets/dark-fantasy/illustrated-1.1.0/adversaries.18.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/adversaries.18.webp"
+            },
+            "illustrated.dark-fantasy.items.1": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.1.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.1.webp"
+            },
+            "illustrated.dark-fantasy.items.2": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.2.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.2.webp"
+            },
+            "illustrated.dark-fantasy.items.3": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.3.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.3.webp"
+            },
+            "illustrated.dark-fantasy.items.4": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.4.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.4.webp"
+            },
+            "illustrated.dark-fantasy.items.5": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.5.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.5.webp"
+            },
+            "illustrated.dark-fantasy.items.6": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.6.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.6.webp"
+            },
+            "illustrated.dark-fantasy.items.7": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.7.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.7.webp"
+            },
+            "illustrated.dark-fantasy.items.8": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.8.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.8.webp"
+            },
+            "illustrated.dark-fantasy.items.9": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.9.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.9.webp"
+            },
+            "illustrated.dark-fantasy.items.10": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.10.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.10.webp"
+            },
+            "illustrated.dark-fantasy.items.11": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.11.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.11.webp"
+            },
+            "illustrated.dark-fantasy.items.12": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.12.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.12.webp"
+            },
+            "illustrated.dark-fantasy.items.13": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.13.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.13.webp"
+            },
+            "illustrated.dark-fantasy.items.14": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.14.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.14.webp"
+            },
+            "illustrated.dark-fantasy.items.15": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.15.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.15.webp"
+            },
+            "illustrated.dark-fantasy.items.16": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.16.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.16.webp"
+            },
+            "illustrated.dark-fantasy.items.17": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.17.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.17.webp"
+            },
+            "illustrated.dark-fantasy.items.18": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.18.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.18.webp"
+            },
+            "illustrated.dark-fantasy.items.19": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.19.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.19.webp"
+            },
+            "illustrated.dark-fantasy.items.20": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.20.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.20.webp"
+            },
+            "illustrated.dark-fantasy.items.21": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.21.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.21.webp"
+            },
+            "illustrated.dark-fantasy.items.22": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.22.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.22.webp"
+            },
+            "illustrated.dark-fantasy.items.23": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.23.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.23.webp"
+            },
+            "illustrated.dark-fantasy.items.24": {
+              "item": "assets/dark-fantasy/illustrated-1.1.0/items.24.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/items.24.webp"
+            },
+            "illustrated.dark-fantasy.events.1": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.1.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.1.webp"
+            },
+            "illustrated.dark-fantasy.events.2": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.2.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.2.webp"
+            },
+            "illustrated.dark-fantasy.events.3": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.3.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.3.webp"
+            },
+            "illustrated.dark-fantasy.events.4": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.4.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.4.webp"
+            },
+            "illustrated.dark-fantasy.events.5": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.5.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.5.webp"
+            },
+            "illustrated.dark-fantasy.events.6": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.6.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.6.webp"
+            },
+            "illustrated.dark-fantasy.events.7": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.7.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.7.webp"
+            },
+            "illustrated.dark-fantasy.events.8": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.8.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.8.webp"
+            },
+            "illustrated.dark-fantasy.events.9": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.9.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.9.webp"
+            },
+            "illustrated.dark-fantasy.events.10": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.10.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.10.webp"
+            },
+            "illustrated.dark-fantasy.events.11": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.11.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.11.webp"
+            },
+            "illustrated.dark-fantasy.events.12": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.12.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.12.webp"
+            },
+            "illustrated.dark-fantasy.events.13": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.13.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.13.webp"
+            },
+            "illustrated.dark-fantasy.events.14": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.14.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.14.webp"
+            },
+            "illustrated.dark-fantasy.events.15": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.15.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.15.webp"
+            },
+            "illustrated.dark-fantasy.events.16": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.16.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.16.webp"
+            },
+            "illustrated.dark-fantasy.events.17": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.17.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.17.webp"
+            },
+            "illustrated.dark-fantasy.events.18": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.18.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.18.webp"
+            },
+            "illustrated.dark-fantasy.events.19": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.19.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.19.webp"
+            },
+            "illustrated.dark-fantasy.events.20": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.20.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.20.webp"
+            },
+            "illustrated.dark-fantasy.events.21": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.21.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.21.webp"
+            },
+            "illustrated.dark-fantasy.events.22": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.22.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.22.webp"
+            },
+            "illustrated.dark-fantasy.events.23": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.23.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.23.webp"
+            },
+            "illustrated.dark-fantasy.events.24": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.24.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.24.webp"
+            },
+            "illustrated.dark-fantasy.events.25": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.25.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.25.webp"
+            },
+            "illustrated.dark-fantasy.events.26": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.26.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.26.webp"
+            },
+            "illustrated.dark-fantasy.events.27": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.27.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.27.webp"
+            },
+            "illustrated.dark-fantasy.events.28": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.28.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.28.webp"
+            },
+            "illustrated.dark-fantasy.events.29": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.29.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.29.webp"
+            },
+            "illustrated.dark-fantasy.events.30": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/events.30.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/events.30.webp"
+            },
+            "illustrated.dark-fantasy.scenes.1": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/scenes.1.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/scenes.1.webp"
+            },
+            "illustrated.dark-fantasy.scenes.2": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/scenes.2.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/scenes.2.webp"
+            },
+            "illustrated.dark-fantasy.scenes.3": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/scenes.3.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/scenes.3.webp"
+            },
+            "illustrated.dark-fantasy.scenes.4": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/scenes.4.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/scenes.4.webp"
+            },
+            "illustrated.dark-fantasy.scenes.5": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/scenes.5.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/scenes.5.webp"
+            },
+            "illustrated.dark-fantasy.scenes.6": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/scenes.6.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/scenes.6.webp"
+            },
+            "illustrated.dark-fantasy.scenes.7": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/scenes.7.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/scenes.7.webp"
+            },
+            "illustrated.dark-fantasy.scenes.8": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/scenes.8.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/scenes.8.webp"
+            },
+            "illustrated.dark-fantasy.scenes.9": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/scenes.9.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/scenes.9.webp"
+            },
+            "illustrated.dark-fantasy.scenes.10": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/scenes.10.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/scenes.10.webp"
+            },
+            "illustrated.dark-fantasy.scenes.11": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/scenes.11.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/scenes.11.webp"
+            },
+            "illustrated.dark-fantasy.scenes.12": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/scenes.12.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/scenes.12.webp"
+            },
+            "illustrated.dark-fantasy.scenes.13": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/scenes.13.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/scenes.13.webp"
+            },
+            "illustrated.dark-fantasy.scenes.14": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/scenes.14.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/scenes.14.webp"
+            },
+            "illustrated.dark-fantasy.scenes.15": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/scenes.15.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/scenes.15.webp"
+            },
+            "illustrated.dark-fantasy.scenes.16": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/scenes.16.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/scenes.16.webp"
+            },
+            "illustrated.dark-fantasy.scenes.17": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/scenes.17.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/scenes.17.webp"
+            },
+            "illustrated.dark-fantasy.scenes.18": {
+              "background": "assets/dark-fantasy/illustrated-1.1.0/scenes.18.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/scenes.18.webp"
+            },
+            "illustrated.dark-fantasy.archetypes.1": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/archetypes.1.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/archetypes.1.webp"
+            },
+            "illustrated.dark-fantasy.archetypes.2": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/archetypes.2.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/archetypes.2.webp"
+            },
+            "illustrated.dark-fantasy.archetypes.3": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/archetypes.3.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/archetypes.3.webp"
+            },
+            "illustrated.dark-fantasy.archetypes.4": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/archetypes.4.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/archetypes.4.webp"
+            },
+            "illustrated.dark-fantasy.archetypes.5": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/archetypes.5.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/archetypes.5.webp"
+            },
+            "illustrated.dark-fantasy.archetypes.6": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/archetypes.6.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/archetypes.6.webp"
+            },
+            "illustrated.dark-fantasy.archetypes.7": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/archetypes.7.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/archetypes.7.webp"
+            },
+            "illustrated.dark-fantasy.archetypes.8": {
+              "portrait": "assets/dark-fantasy/illustrated-1.1.0/archetypes.8.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/archetypes.8.webp"
+            },
+            "illustrated.dark-fantasy.progressionPaths.1": {
+              "card": "assets/dark-fantasy/illustrated-1.1.0/progressionPaths.1.webp"
+            },
+            "illustrated.dark-fantasy.progressionPaths.2": {
+              "card": "assets/dark-fantasy/illustrated-1.1.0/progressionPaths.2.webp"
+            },
+            "illustrated.dark-fantasy.progressionPaths.3": {
+              "card": "assets/dark-fantasy/illustrated-1.1.0/progressionPaths.3.webp"
+            },
+            "illustrated.dark-fantasy.progressionPaths.4": {
+              "card": "assets/dark-fantasy/illustrated-1.1.0/progressionPaths.4.webp"
+            },
+            "illustrated.dark-fantasy.progressionPaths.5": {
+              "card": "assets/dark-fantasy/illustrated-1.1.0/progressionPaths.5.webp"
+            },
+            "illustrated.dark-fantasy.progressionPaths.6": {
+              "card": "assets/dark-fantasy/illustrated-1.1.0/progressionPaths.6.webp"
+            },
+            "illustrated.dark-fantasy.visualThemes.1": {
+              "map": "assets/dark-fantasy/illustrated-1.1.0/visualThemes.1.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/visualThemes.1.webp"
+            },
+            "illustrated.dark-fantasy.visualThemes.2": {
+              "map": "assets/dark-fantasy/illustrated-1.1.0/visualThemes.2.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/visualThemes.2.webp"
+            },
+            "illustrated.dark-fantasy.visualThemes.3": {
+              "map": "assets/dark-fantasy/illustrated-1.1.0/visualThemes.3.webp",
+              "card": "assets/dark-fantasy/illustrated-1.1.0/visualThemes.3.webp"
+            }
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "illustrated-dark-fantasy"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.urban.rules",
+  "version": "1.1.0",
+  "type": "rules",
+  "name": "Court Shade and Civic Spell Rules — Illustrated",
+  "description": "Court Shade and Civic Spell Rules for Hidden Courts, Monster Districts, Municipal Magic Conspiracy. Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.",
+  "tags": [
+    "urban-fantasy",
+    "hidden-courts",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Court Shade and Civic Spell Rules for Hidden Courts, Monster Districts, Municipal Magic Conspiracy. Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.",
+    "highlights": [
+      "Court Shade and Civic Spell Rules",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.urban-fantasy"
+    ],
+    "requiresCapabilities": [
+      "setting:urban-fantasy"
+    ],
+    "providesCapabilities": [
+      "rules:urban-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.urban.setting",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Urban Fantasy original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.urban.rules"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 6,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.urban.rules",
+    "version": "1.1.0",
+    "name": "Court Shade and Civic Spell Rules — Illustrated",
+    "description": "Court Shade and Civic Spell Rules for Hidden Courts, Monster Districts, Municipal Magic Conspiracy. Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.",
+    "provides": [
+      "rules:urban-fantasy"
+    ],
+    "requires": [
+      "setting:urban-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/actions/urban-read-treaty",
+        "value": {
+          "label": "Read Treaty",
+          "target": "self",
+          "kind": "check",
+          "checkId": "wits"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/urban-return-page",
+        "value": {
+          "label": "Return Page",
+          "target": "self",
+          "kind": "check",
+          "checkId": "magic"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/urban-repair-shade",
+        "value": {
+          "label": "Repair Shade",
+          "target": "self",
+          "kind": "check",
+          "checkId": "body"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/urban-witness-inspection",
+        "value": {
+          "label": "Witness Inspection",
+          "target": "self",
+          "kind": "check",
+          "checkId": "wits"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/urban-audit-spell",
+        "value": {
+          "label": "Audit Spell",
+          "target": "self",
+          "kind": "check",
+          "checkId": "wits"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/urban-restore-route",
+        "value": {
+          "label": "Restore Route",
+          "target": "self",
+          "kind": "check",
+          "checkId": "magic"
+        }
+      }
+    ]
+  }
+}

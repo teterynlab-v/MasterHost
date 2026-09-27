@@ -1,0 +1,1890 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.space.visuals",
+  "version": "1.1.0",
+  "type": "visuals",
+  "name": "Civilian Sector Schematics — Illustrated",
+  "description": "Civilian Sector Schematics for Voidwake Archipelago, Sunforge Hegemony, Nightglass Frontier. Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.",
+  "tags": [
+    "space-opera",
+    "voidwake-archipelago",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Civilian Sector Schematics for Voidwake Archipelago, Sunforge Hegemony, Nightglass Frontier. Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.",
+    "highlights": [
+      "Civilian Sector Schematics",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.space-opera"
+    ],
+    "requiresCapabilities": [
+      "setting:space-opera"
+    ],
+    "providesCapabilities": [
+      "visuals:space-opera"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.space.setting",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Space Opera original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.space.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 151
+  },
+  "media": [
+    {
+      "name": "space-opera/illustrated-1.1.0/factions.1.webp",
+      "path": "media/space-opera/illustrated-1.1.0/factions.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "a152ba392545db552537950f3168762b7ae1bb1f143708298df235131a0d47c5",
+      "size": 46402
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/factions.2.webp",
+      "path": "media/space-opera/illustrated-1.1.0/factions.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "9259448ab94f21f571a3fa6667ab9763dc1b93bd79b5a12e51b121439cb691ac",
+      "size": 46252
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/factions.3.webp",
+      "path": "media/space-opera/illustrated-1.1.0/factions.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "13a50d53f4cc71fa44034b308e70b3cca90c9b3b83eaf5bab231ce3064bbd220",
+      "size": 46918
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/factions.4.webp",
+      "path": "media/space-opera/illustrated-1.1.0/factions.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "c4fec9147d6ea5cb66af9f20bd595818987e5ca27f1f2785db79259143d8da95",
+      "size": 46244
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/factions.5.webp",
+      "path": "media/space-opera/illustrated-1.1.0/factions.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "d59fd172c90887b4a6ecd5e525b94a97f5d70f13544efd596ff21cec6ac31e04",
+      "size": 45894
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/factions.6.webp",
+      "path": "media/space-opera/illustrated-1.1.0/factions.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "7f9cbf358a13593dd3daa8e6055b0db6276ffc50f447383f6989543ebbd43f5a",
+      "size": 45374
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/factions.7.webp",
+      "path": "media/space-opera/illustrated-1.1.0/factions.7.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "cc82d51627c88c471203aa05bc2aa4aa46274df9f49afdeae42581c229176739",
+      "size": 45880
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/factions.8.webp",
+      "path": "media/space-opera/illustrated-1.1.0/factions.8.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "f78bafca7b18881c7f1c590caff66e76c48445f137defa15c10e603a27154c06",
+      "size": 46958
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/locations.1.webp",
+      "path": "media/space-opera/illustrated-1.1.0/locations.1.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "3a4618f486831da44dab383f46e25b7065e42735491e824794453c80372491de",
+      "size": 46562
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/locations.2.webp",
+      "path": "media/space-opera/illustrated-1.1.0/locations.2.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "3ac4be3acdfe950eed11b11eccd10e0829f74b0bbce334522a94ca1ff84eab01",
+      "size": 46346
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/locations.3.webp",
+      "path": "media/space-opera/illustrated-1.1.0/locations.3.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "a14682c4f77054e3bffdc2ef8f50783cf545f243919e3801797626c1961014b7",
+      "size": 46918
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/locations.4.webp",
+      "path": "media/space-opera/illustrated-1.1.0/locations.4.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "983a1527fe0a9d41ae12cbccf48aead346ff8dc65c79d84026dc2c4a31675252",
+      "size": 46776
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/locations.5.webp",
+      "path": "media/space-opera/illustrated-1.1.0/locations.5.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "e6eb455b035e28f0d3e3059060c1120448813bce50764c9dbf967ad0938d2668",
+      "size": 47208
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/locations.6.webp",
+      "path": "media/space-opera/illustrated-1.1.0/locations.6.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "8e552cdc7738350b4460455121769a4d5ab1a2e2f75e4edf5f75a1c5f452590e",
+      "size": 46274
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/locations.7.webp",
+      "path": "media/space-opera/illustrated-1.1.0/locations.7.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "454f7d328668c089036f3e04450824f51b57e2207cb7caf50f4eb300ac12dd2d",
+      "size": 46398
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/locations.8.webp",
+      "path": "media/space-opera/illustrated-1.1.0/locations.8.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "851a015d9b89f76ed4790ebb4ff938f26716b5197ad4ef3ec3f66be8403f259f",
+      "size": 47194
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/locations.9.webp",
+      "path": "media/space-opera/illustrated-1.1.0/locations.9.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "7fe8a37f83ca339ee714da96e642f231435ebc50f47b71331397b251f9e55715",
+      "size": 47086
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/locations.10.webp",
+      "path": "media/space-opera/illustrated-1.1.0/locations.10.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "29f1fa1f4efe34c602de7f2b490b771ca838bb1dcd003cfdbbf33c247fe04c23",
+      "size": 46512
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/locations.11.webp",
+      "path": "media/space-opera/illustrated-1.1.0/locations.11.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "55a8bbda1c1d2405d017575fa0b4647433e666a5fb286788fe71c1af4e94f65b",
+      "size": 46780
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/locations.12.webp",
+      "path": "media/space-opera/illustrated-1.1.0/locations.12.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "c9d69814505e36fd95ef8a084ce91db5cd4a19095b97d08b67332b0e8f6b2407",
+      "size": 47188
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.1.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "f2d22b4e8c374b67ea0b700b818bbabd19e164567d0c3a88b232d85ddacc87d7",
+      "size": 46540
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.2.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "f14c2429e3f5369e33323b6809d33fa88c12be48636e734fd602b42015f18fed",
+      "size": 46232
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.3.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "2651f672ba582f655f8a4ad40b8d8db30d2a23f06e7feea3f1169157ef7b8d3d",
+      "size": 47204
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.4.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "de44b3a4571c423cdf3a3eb56a0813cd75c681af3a3ca12e651725c79b713800",
+      "size": 46222
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.5.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "13c1509ea3b51eb6b744966ca7d36a122e7234ea75254a7e5a36a657af66d956",
+      "size": 46136
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.6.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "76453500ed002f5c2aac5109e409294cca5acfcbb428a50eaec743b0a6110afc",
+      "size": 45376
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.7.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "8956c2238fb19b7880aebdc57fb1009a769c24ca1471eb07d27dbc4f7a6a7625",
+      "size": 45994
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.8.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "25d7909212fa7583b50ba8a6a3fc5b8244a91b6a8ac3c8630018aca364160f26",
+      "size": 46482
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.9.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.9.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "457f49342296a4a8c37194aaf62f764927579e86c53b479b3059ca9f3d00c0e3",
+      "size": 46586
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.10.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.10.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "0730917dcd06f59226c41b6133c646965265f256777bdb8dbf5e1cb0ed1b1213",
+      "size": 46448
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.11.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.11.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "b633c99d3c166af2cfb236ce7fd0e3abbca8b3ed3b99497978b9e22620375345",
+      "size": 46564
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.12.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.12.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "b69bfc9d91952fff964d9e597aa27ffbbc0764f2dfb539910d03e8960a4f7d65",
+      "size": 45794
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.13.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.13.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "bb663ed72d8ad5826095403aa9556bede00fb8a7655d4cf31457d8e9a8cd766e",
+      "size": 46108
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.14.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.14.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "07454b70db9401cac69037c567964c6750a294f1c9737b7f9b45a2d11846387d",
+      "size": 46624
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.15.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.15.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "fd694f830fd68bb63867b37e8484fbb6e9560cd478cc33e189f3899861346e66",
+      "size": 45918
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.16.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.16.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "e734f3715cc455a29743b66df7baf6a4a8ae0b08189364aae2091c813c33b0d1",
+      "size": 45778
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.17.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.17.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "020962cfd06fb61b2f7a94eab7af947988ad312e7333b9d7ced1fa5aa7be724f",
+      "size": 46524
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.18.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.18.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "83e9fda871b840e3f7c4ff14cae0e3f81e68ce8a46f2bb3b6d5d978e2783987c",
+      "size": 46574
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.19.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.19.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "d88259102685388e5dfdc259afe046cbd54f40c74ee66b18e6e0c9dfd745f755",
+      "size": 45814
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.20.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.20.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "b6d46b58da057c40830479f097e15b43422789ddce9061cfbcc9fc6e41ebc141",
+      "size": 46542
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.21.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.21.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "b10790d2d47ac0b18de8168d57b37bee612045ecd7677d12e5d0c55b608a6e26",
+      "size": 45718
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.22.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.22.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "c51e4e9b6dc8a5229c8cf8ddff1f61b79e4f4d91c1b42b0392dedbb8295a340a",
+      "size": 45460
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.23.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.23.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "25e1b921d48d512af2d786abd2b012ad2e9d0c3ec081efd532de64799e86c867",
+      "size": 46300
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/npcs.24.webp",
+      "path": "media/space-opera/illustrated-1.1.0/npcs.24.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "93a19667101a653bd3321370d5f79309aab2263c6256213238246eb4c4c29d76",
+      "size": 45182
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/adversaries.1.webp",
+      "path": "media/space-opera/illustrated-1.1.0/adversaries.1.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "530c4f4a058757445dec86ca1ac8daf9acdcabcd249279e655b1f9ec699245cc",
+      "size": 45080
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/adversaries.2.webp",
+      "path": "media/space-opera/illustrated-1.1.0/adversaries.2.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "969e5952c99a08ea78dc40969cf9c662c16caac0352bcaabb516a6bc10f8cc5d",
+      "size": 45762
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/adversaries.3.webp",
+      "path": "media/space-opera/illustrated-1.1.0/adversaries.3.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "c483e7ab274f96ba52f8356fbae9d58c0a76533c4fd0050ba0d546129b29a198",
+      "size": 45000
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/adversaries.4.webp",
+      "path": "media/space-opera/illustrated-1.1.0/adversaries.4.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "fb40d36d59ccacbf8d7fdabe717751f8fdf59fd88a26bdda2e98735956e2b0a9",
+      "size": 45862
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/adversaries.5.webp",
+      "path": "media/space-opera/illustrated-1.1.0/adversaries.5.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "1850b69034b66db78b9e8df069868e7fff97e82e3047ce191bb6f463004da6ea",
+      "size": 45476
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/adversaries.6.webp",
+      "path": "media/space-opera/illustrated-1.1.0/adversaries.6.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "ac6068f9e91e6d023a3fd9867c1f96074f2d4fc7279690c18246049089a1d7a6",
+      "size": 46440
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/adversaries.7.webp",
+      "path": "media/space-opera/illustrated-1.1.0/adversaries.7.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "d193ed31375c25ec599be4105cbeb17eedc31fdc08038493e8b9c991ef45519a",
+      "size": 45856
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/adversaries.8.webp",
+      "path": "media/space-opera/illustrated-1.1.0/adversaries.8.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "2a20112be39515fb67952a02e656bd233e8fcb2de5d8e9f1205caf913c63f10a",
+      "size": 47324
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/adversaries.9.webp",
+      "path": "media/space-opera/illustrated-1.1.0/adversaries.9.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "26afc38a5eb544f3fd37b8a88e75c5eda729d13c719158c3cf4c1dd845e61694",
+      "size": 49736
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/adversaries.10.webp",
+      "path": "media/space-opera/illustrated-1.1.0/adversaries.10.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "45f7028d6e30a006a617bddcdb20bedcd3e0be07badf15710b5252d9634c3d8d",
+      "size": 45892
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/adversaries.11.webp",
+      "path": "media/space-opera/illustrated-1.1.0/adversaries.11.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "78b4d06ee956a2cca5e5379ef20864ca6a4b08f2e1575541ed6666cba22d060e",
+      "size": 46514
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/adversaries.12.webp",
+      "path": "media/space-opera/illustrated-1.1.0/adversaries.12.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "1902d40a8becf902eb9379fdeffd5dbd5b6653cd43fdcb08b928d4a39fc9ca80",
+      "size": 44660
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/adversaries.13.webp",
+      "path": "media/space-opera/illustrated-1.1.0/adversaries.13.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "2651664301f1626ecf4107842b67422bac2c6321a9a649c426ac7ebcd0858e44",
+      "size": 45578
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/adversaries.14.webp",
+      "path": "media/space-opera/illustrated-1.1.0/adversaries.14.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "73377946a258c2d5b0b55b0300c1295eff58ed02faa438e7d01c7e76ac28a031",
+      "size": 46528
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/adversaries.15.webp",
+      "path": "media/space-opera/illustrated-1.1.0/adversaries.15.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "62b528c374ba2215ff980206325384b47ce5b7c6fd13c7659a98096b2990c0b9",
+      "size": 46618
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/adversaries.16.webp",
+      "path": "media/space-opera/illustrated-1.1.0/adversaries.16.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "4c08d55352d70c0fcd4b980f337b7da718512e9311faa85e5fa8f2cb53071d9b",
+      "size": 45774
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/adversaries.17.webp",
+      "path": "media/space-opera/illustrated-1.1.0/adversaries.17.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "06623e75a91be98255007039da4b2c4537d1e4f9faa8c0128e9f31b592f46110",
+      "size": 46346
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/adversaries.18.webp",
+      "path": "media/space-opera/illustrated-1.1.0/adversaries.18.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "884344ac33b89c02e788558349d682f5ef811ff9fdef0a4a5f84a35453b937fa",
+      "size": 45872
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.1.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.1.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "f7aa778dd82284cde6abde395e57ce6047e2efa21ad16b596dc7b48c3095cdcf",
+      "size": 46470
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.2.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.2.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "3ef8f5430da07a8cca058aa40e84134d763c81e42f6f1b983bebd9cf408618aa",
+      "size": 47052
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.3.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.3.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "2849c3a43bcd6b4596cb31c72e5c3106fdd115d2ae7069812b1df3f93e38b19b",
+      "size": 46704
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.4.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.4.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "44ff86790274240e819a6226d928a2b3f32180f1891c84f1c7c6f935218e245f",
+      "size": 46166
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.5.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.5.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "a48c98afe6149661ed53f1223a62b63767f38a0b291433651fcb339f1a6437b4",
+      "size": 46428
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.6.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.6.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "d5b64864e5a89a8b92c751b9ba5acc62f87aecb97a5b75de6bfd4a9129588ca0",
+      "size": 45824
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.7.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.7.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "23fedfe41968ff4e8f8088635fc7b30570a173df4ae49cb200bdd99594e02ee9",
+      "size": 46378
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.8.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.8.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "1c1ea8e321ab16f20f06bf9f007a6b116ab9d25f62a51b4f05d8ef0ef9f60b28",
+      "size": 46428
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.9.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.9.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "8c7429685b287cab048d234e0de82e415166b45dcf48b31e952a1184420e62ec",
+      "size": 46422
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.10.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.10.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "9adec04740a7c887c1fa1dc61a0c12d05a319293cf0e27432e5be6c7c050665f",
+      "size": 46482
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.11.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.11.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "838cc5b4bd1be2c4d6e80fbad39f378834643a410007bce2f333e7283763c595",
+      "size": 45692
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.12.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.12.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "d17b863522ef08e10b4da8ede189075b1358f46bd1407a6b111373bdf5b98a45",
+      "size": 46064
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.13.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.13.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "a4eb2c34ad0b698644c37dfe828fbb4444e30229c22c631dc1ae29f55c2d447f",
+      "size": 46018
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.14.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.14.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "cdf44de81b0afbe6d8fdc2330aa99630d394c4f6f9d1eb58720b9db7f5213d99",
+      "size": 47260
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.15.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.15.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "e7859a7242bb8206fb7389be1cf05367bc7884e7727dea51fa3bceef416f1c44",
+      "size": 48108
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.16.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.16.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "8f4713bb30ddadcb7b15a0b1f7af0971097efaf0dfd64fd35a1a4d1f115ddb7f",
+      "size": 45738
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.17.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.17.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "c7feac03f3aed423acbe5b2e4f12d8e0da984921320c4b67c7f6d7923bdf9ab9",
+      "size": 45940
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.18.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.18.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "e3fd805f9e5516b5d2e4ed85823d39aadb04d6509fdfb3d17ee890b6a1f7602b",
+      "size": 46030
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.19.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.19.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "7e3bce93e857da31db9ffe2af63879bfe6c8e50c79502df95647af6191dcbe11",
+      "size": 46558
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.20.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.20.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "5348e4fb401e04d6c66f5f771cd57a9db963a1c689fa4501fd5b1498cd26dfe9",
+      "size": 46920
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.21.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.21.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "4d18bcdab787ed7a85f834094a056a71b60965459413e94f59d944d30d1600c7",
+      "size": 46752
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.22.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.22.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "48ff8af3d91e50534b52b65571bdfcfbdc6a6788a5db2d8e5a9ced2b05cfe80a",
+      "size": 46170
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.23.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.23.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "f96c8c217f72a292df4917f65e684c93bfdcc74032c71f38f4c2b96d3e5032ce",
+      "size": 46854
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/items.24.webp",
+      "path": "media/space-opera/illustrated-1.1.0/items.24.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "d0885c9527d2f8c7b0f8c7cbdb6ef29add4179a18c1562ba8f11a6b31f43cebe",
+      "size": 45178
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.1.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "67c849861882026475185c9255224fc8a8efc0b5aa86d78aacb92c6aa520bce8",
+      "size": 47152
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.2.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "6cf1439ced12a7a64e3c98b83b4716378585717a3e9e0e2f39dcf6b94544730a",
+      "size": 47168
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.3.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f61546d3ecb5d1ba83dddd68e084202000341ac4f3469dd1487e7578ef716970",
+      "size": 46848
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.4.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b427ed38d05757bb8a1482e9bbec45fa3908614cb0bec2861a0d7b00029a09d3",
+      "size": 46938
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.5.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "0b42fe80bd7e0c1042b659d42565caa693d4333326da6a9ea4a50af9ac446a12",
+      "size": 47054
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.6.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "3ed1307e23ee4093e8572772f008104e795b1d97c204052767740cbe87bb71a1",
+      "size": 46808
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.7.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "0a810bfa7142a281202cabea799b3b1ff5ff4b67cbab637687dde45cfeee41b4",
+      "size": 44846
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.8.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f01441165d72b4a35435884f00eea8ffaaf44545aa30e563af641dceafe2493c",
+      "size": 46330
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.9.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "e922dc513b671dd05bf8e057bbc80e6a0f5381208453cfa0f852e05211a2d2fa",
+      "size": 46274
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.10.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f3dfe73a43de1efd7f6d59765e80dc487fe4ddcb3d78e6634718447d5d524572",
+      "size": 46574
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.11.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a86b8bc645f67b7e6a31d1346fe6d149fd5357925f0c8ba5d6e4a5b2fe6f6725",
+      "size": 47418
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.12.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ed1c35dffe7db61e47004c701d44fa17cb232746c7781bdd0bf0849b5b13c06a",
+      "size": 46782
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.13.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "504a8fa99fb40b27d6115e2f0fa3af12678aed5f746066d21c31cde11c16b9c5",
+      "size": 46504
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.14.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c8a5ea31cbf18b2a899b96c0517dada8b1323bf6971e2e57aa8bad7f498f47ed",
+      "size": 46872
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.15.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "75e126b6afcd44a8be686765b70daf17a47ccb9b706e610f90369c60450dc0be",
+      "size": 46926
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.16.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "9e88cd14572e5fb94724f92bfa1ea4c84f74755c6795b2b67a2d46fb958cb802",
+      "size": 46370
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.17.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "5a10e8e9e32a302f5a2dea4992e7ce2ce9c49f9ec2fdc2c7d690df45e5a03c93",
+      "size": 46714
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.18.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c0d868b8a5228564d54429fd60b68bb79f5bbc9b348a48f553c5beef609fe881",
+      "size": 47208
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.19.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.19.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "caa5c8c7fe8c841e1cef183113661c2dfe5fa8d49c81382ffefa4f6dea58f698",
+      "size": 46192
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.20.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.20.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "7dfb33c9dedb7ffcde905c258367760b3cdf9803a344c5f0585b955b75dc8c2f",
+      "size": 46636
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.21.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.21.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "40c061be60c01a6d679aa2fd78cdb13cfb1058341a44eeaabbb5c16f8c6e8ed1",
+      "size": 47232
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.22.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.22.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f240afed9744f4a7e1c8080e570f0625d74226d2b3cb06d8ae1a51197b12da20",
+      "size": 45910
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.23.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.23.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "acb1bd4e4517fa12b9f29ba8cd47ba433939c222153fff08f142afc4aa55f6fd",
+      "size": 46324
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.24.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.24.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "e8c0ae2bd399fdfaae6de7c8016dd83250c1ca21803b4a181fbbc9819e2161c7",
+      "size": 47838
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.25.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.25.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f60680865bf12b40734f81d471412b9f932e340b74aba209b9cf457cee3cd06a",
+      "size": 46966
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.26.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.26.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "9495126cfb6efb9d2618296f1bcd0ecd29d7ad2315cf8e7300ef93cd33feda26",
+      "size": 46462
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.27.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.27.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4b1c2f2ed6b6cd59abf6f57c7a8a514e746a182f5b0c347317f2ac273b4257ca",
+      "size": 46666
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.28.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.28.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "dcc2de94e71687581190469c49ced211c417ad4fd29a9e0aead273936f5d6a26",
+      "size": 46326
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.29.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.29.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "35daa790f029f2952c2a13135bd5dafdbf39ee3ba05b06bf9b86b93cee944203",
+      "size": 46636
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/events.30.webp",
+      "path": "media/space-opera/illustrated-1.1.0/events.30.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4f6e78c585ce3977d84c9747965d722ebb067c19e6938884a525d650cbe1c6be",
+      "size": 46180
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/scenes.1.webp",
+      "path": "media/space-opera/illustrated-1.1.0/scenes.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "85d8ea8cf8f33e8ea0498765b5b570a8ecb0b429d729ec35b2e1aeee3321f520",
+      "size": 46244
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/scenes.2.webp",
+      "path": "media/space-opera/illustrated-1.1.0/scenes.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "598086b34b92b12d91139d7f1de87da0056c04dd8648d5220dee3ca3da882e5b",
+      "size": 46916
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/scenes.3.webp",
+      "path": "media/space-opera/illustrated-1.1.0/scenes.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "cd7dd8f204ec08281291eb687abb0c6917da1036e91e38b026a72578d1341a3e",
+      "size": 47268
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/scenes.4.webp",
+      "path": "media/space-opera/illustrated-1.1.0/scenes.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a7d3a2cd080d350263d45f733b07cc111ba5266e0b310edef7ba2e3671a78ad3",
+      "size": 46954
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/scenes.5.webp",
+      "path": "media/space-opera/illustrated-1.1.0/scenes.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4310747724e5db86fd6cc46050ef7094becb7cbe91ceb70c4a4431583f5606d8",
+      "size": 46476
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/scenes.6.webp",
+      "path": "media/space-opera/illustrated-1.1.0/scenes.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "6bd57c8acb49251391732a78db3d48a46cf0e1653677f646cc2a62029ca59584",
+      "size": 46252
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/scenes.7.webp",
+      "path": "media/space-opera/illustrated-1.1.0/scenes.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "56e7b2e96a1f3c829ad34e983b9605df6b625b5ecad6b86b15123307bde3c2ef",
+      "size": 45708
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/scenes.8.webp",
+      "path": "media/space-opera/illustrated-1.1.0/scenes.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "91389d1ff91d5ddfb0af2e691bf2ea944ad71e7cf5c5015e5bdb32a02c2927dd",
+      "size": 47220
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/scenes.9.webp",
+      "path": "media/space-opera/illustrated-1.1.0/scenes.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "8070331b0111f442745011ff066db2b5bd97bf27b277e4dba7e9b9465dde81d1",
+      "size": 46880
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/scenes.10.webp",
+      "path": "media/space-opera/illustrated-1.1.0/scenes.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4049ade929dac56e0cfe8873f99abe95c93b125c46a86b177a8fad594292f35f",
+      "size": 46684
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/scenes.11.webp",
+      "path": "media/space-opera/illustrated-1.1.0/scenes.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "23a1f84ce8b46be38b97d32d9e2b10eb51497a6b7ebd69f6ef51677d01074276",
+      "size": 46530
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/scenes.12.webp",
+      "path": "media/space-opera/illustrated-1.1.0/scenes.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c058b991f8405d2b9caa4f8c600ba4881df7b4a0106cddabc13e7dd2ff97e697",
+      "size": 46920
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/scenes.13.webp",
+      "path": "media/space-opera/illustrated-1.1.0/scenes.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b5a779b27c220387a717f9c1f9fc04b01d5f2b91a15fac6faa682f513e549af2",
+      "size": 46024
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/scenes.14.webp",
+      "path": "media/space-opera/illustrated-1.1.0/scenes.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "af4b4f6ac3d0aa4ed808ed8c56d077681074cca9fedc41157876b4c5f34cd62c",
+      "size": 47360
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/scenes.15.webp",
+      "path": "media/space-opera/illustrated-1.1.0/scenes.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "db3cfb03c9f42cd3e66231c4f92bb262433a0c420076b5d99e224a04c0337ce0",
+      "size": 46812
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/scenes.16.webp",
+      "path": "media/space-opera/illustrated-1.1.0/scenes.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "31287152b7ad6e2dbb910acc6d68bc1dfe553f2c326bacf4ce549d81c833d7d6",
+      "size": 46048
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/scenes.17.webp",
+      "path": "media/space-opera/illustrated-1.1.0/scenes.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c2768378de9ae5c17c3622b9be3d1afabd153845838af6f1096a208d7cb2e443",
+      "size": 46724
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/scenes.18.webp",
+      "path": "media/space-opera/illustrated-1.1.0/scenes.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c2aa622d4117c5b96dd952295da9734ff11e12ccb4767d3bfc60db44876eb42e",
+      "size": 46232
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/archetypes.1.webp",
+      "path": "media/space-opera/illustrated-1.1.0/archetypes.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "c849ba6eefeb2ccdc3adc184d264a30c426d17f420e53a5c84e8801a4dc931d4",
+      "size": 47724
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/archetypes.2.webp",
+      "path": "media/space-opera/illustrated-1.1.0/archetypes.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "d477aad1f9de26efa272aaf8a18e6a756d4563b12123e94122111c2af973fca3",
+      "size": 45600
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/archetypes.3.webp",
+      "path": "media/space-opera/illustrated-1.1.0/archetypes.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "e7bd8251aeedd1323a76c2a8fb1f296113e3918a7dcb3b843792eebdbb3e722d",
+      "size": 47150
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/archetypes.4.webp",
+      "path": "media/space-opera/illustrated-1.1.0/archetypes.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "eb92902a2330b289bb4ed0f678d249214c4649963a1085a963e0c391e350691f",
+      "size": 49700
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/archetypes.5.webp",
+      "path": "media/space-opera/illustrated-1.1.0/archetypes.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "4ba60b8cb6552de609cf452a026eb8bd497926919899ef6c1ced7bb6ec583803",
+      "size": 45630
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/archetypes.6.webp",
+      "path": "media/space-opera/illustrated-1.1.0/archetypes.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "07cae5f9f61be2bac1009cead1b6df3a12e3f30afbeab61172ced214f03cb786",
+      "size": 45334
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/archetypes.7.webp",
+      "path": "media/space-opera/illustrated-1.1.0/archetypes.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "74aae933cef9c0db667a915845183e30dbbd791ea4f4069f34b3629bcd6b8194",
+      "size": 46734
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/archetypes.8.webp",
+      "path": "media/space-opera/illustrated-1.1.0/archetypes.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "2d1d7ffc63fe1b470db590f4e0569df24a542af6e5be97cb5b91319c19aa9176",
+      "size": 46300
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/progressionPaths.1.webp",
+      "path": "media/space-opera/illustrated-1.1.0/progressionPaths.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "d29018c361f59f89ed0c1af1af99ab346e20a9d6705a60e7203ada125d6f4d3e",
+      "size": 46238
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/progressionPaths.2.webp",
+      "path": "media/space-opera/illustrated-1.1.0/progressionPaths.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "412e0653a64444c16c75eb287b77c1c6270364f361dd999c44d3f7721435553c",
+      "size": 47086
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/progressionPaths.3.webp",
+      "path": "media/space-opera/illustrated-1.1.0/progressionPaths.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "4efff76dc9052dd130ad4c65030494587dffedfacb2dbc621ec8764f167703b7",
+      "size": 46646
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/progressionPaths.4.webp",
+      "path": "media/space-opera/illustrated-1.1.0/progressionPaths.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "ceca79772fc137f27a4788f51f72e164a80c57dac41ccf25da922d40f2fd5053",
+      "size": 46408
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/progressionPaths.5.webp",
+      "path": "media/space-opera/illustrated-1.1.0/progressionPaths.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "f8419e37bf473e559e20c7941d9f25b6b6636c3e3a63aa28683210f2f0e430d7",
+      "size": 46900
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/progressionPaths.6.webp",
+      "path": "media/space-opera/illustrated-1.1.0/progressionPaths.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "16d1713ffabb998419209d5e7269c44a0e51ba242a0164b7b40c183d9b540977",
+      "size": 46846
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/visualThemes.1.webp",
+      "path": "media/space-opera/illustrated-1.1.0/visualThemes.1.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "f1c8312cbe70c310adfe1ea61840f36946494cf66d91fa55d22d635470ec732b",
+      "size": 46222
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/visualThemes.2.webp",
+      "path": "media/space-opera/illustrated-1.1.0/visualThemes.2.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "de5077a70d5c6a39acec694fa0b14790fb60f2b5a30d51156a04590ba5d62604",
+      "size": 46122
+    },
+    {
+      "name": "space-opera/illustrated-1.1.0/visualThemes.3.webp",
+      "path": "media/space-opera/illustrated-1.1.0/visualThemes.3.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "a0a5a0891d9ea5353dd36d84dc96ed07687ca1b39b638553d8161b3b49d67481",
+      "size": 46582
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.space.visuals",
+    "version": "1.1.0",
+    "name": "Civilian Sector Schematics — Illustrated",
+    "description": "Civilian Sector Schematics for Voidwake Archipelago, Sunforge Hegemony, Nightglass Frontier. Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.",
+    "provides": [
+      "visuals:space-opera"
+    ],
+    "requires": [
+      "setting:space-opera"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/illustrated-space-opera",
+        "value": {
+          "id": "illustrated-space-opera",
+          "name": "Illustrated space-opera",
+          "description": "Individual generated illustrations for every authored content object",
+          "defaults": {
+            "background": "assets/space-opera/illustrated-1.1.0/scenes.1.webp",
+            "card": "assets/space-opera/illustrated-1.1.0/scenes.1.webp",
+            "map": "assets/space-opera/illustrated-1.1.0/visualThemes.1.webp",
+            "portrait": "assets/space-opera/illustrated-1.1.0/archetypes.1.webp",
+            "token": "assets/space-opera/illustrated-1.1.0/adversaries.1.webp",
+            "item": "assets/space-opera/illustrated-1.1.0/items.1.webp",
+            "location": "assets/space-opera/illustrated-1.1.0/locations.1.webp"
+          },
+          "families": {
+            "illustrated.space-opera.factions.1": {
+              "card": "assets/space-opera/illustrated-1.1.0/factions.1.webp"
+            },
+            "illustrated.space-opera.factions.2": {
+              "card": "assets/space-opera/illustrated-1.1.0/factions.2.webp"
+            },
+            "illustrated.space-opera.factions.3": {
+              "card": "assets/space-opera/illustrated-1.1.0/factions.3.webp"
+            },
+            "illustrated.space-opera.factions.4": {
+              "card": "assets/space-opera/illustrated-1.1.0/factions.4.webp"
+            },
+            "illustrated.space-opera.factions.5": {
+              "card": "assets/space-opera/illustrated-1.1.0/factions.5.webp"
+            },
+            "illustrated.space-opera.factions.6": {
+              "card": "assets/space-opera/illustrated-1.1.0/factions.6.webp"
+            },
+            "illustrated.space-opera.factions.7": {
+              "card": "assets/space-opera/illustrated-1.1.0/factions.7.webp"
+            },
+            "illustrated.space-opera.factions.8": {
+              "card": "assets/space-opera/illustrated-1.1.0/factions.8.webp"
+            },
+            "illustrated.space-opera.locations.1": {
+              "location": "assets/space-opera/illustrated-1.1.0/locations.1.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/locations.1.webp"
+            },
+            "illustrated.space-opera.locations.2": {
+              "location": "assets/space-opera/illustrated-1.1.0/locations.2.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/locations.2.webp"
+            },
+            "illustrated.space-opera.locations.3": {
+              "location": "assets/space-opera/illustrated-1.1.0/locations.3.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/locations.3.webp"
+            },
+            "illustrated.space-opera.locations.4": {
+              "location": "assets/space-opera/illustrated-1.1.0/locations.4.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/locations.4.webp"
+            },
+            "illustrated.space-opera.locations.5": {
+              "location": "assets/space-opera/illustrated-1.1.0/locations.5.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/locations.5.webp"
+            },
+            "illustrated.space-opera.locations.6": {
+              "location": "assets/space-opera/illustrated-1.1.0/locations.6.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/locations.6.webp"
+            },
+            "illustrated.space-opera.locations.7": {
+              "location": "assets/space-opera/illustrated-1.1.0/locations.7.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/locations.7.webp"
+            },
+            "illustrated.space-opera.locations.8": {
+              "location": "assets/space-opera/illustrated-1.1.0/locations.8.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/locations.8.webp"
+            },
+            "illustrated.space-opera.locations.9": {
+              "location": "assets/space-opera/illustrated-1.1.0/locations.9.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/locations.9.webp"
+            },
+            "illustrated.space-opera.locations.10": {
+              "location": "assets/space-opera/illustrated-1.1.0/locations.10.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/locations.10.webp"
+            },
+            "illustrated.space-opera.locations.11": {
+              "location": "assets/space-opera/illustrated-1.1.0/locations.11.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/locations.11.webp"
+            },
+            "illustrated.space-opera.locations.12": {
+              "location": "assets/space-opera/illustrated-1.1.0/locations.12.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/locations.12.webp"
+            },
+            "illustrated.space-opera.npcs.1": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.1.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.1.webp"
+            },
+            "illustrated.space-opera.npcs.2": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.2.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.2.webp"
+            },
+            "illustrated.space-opera.npcs.3": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.3.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.3.webp"
+            },
+            "illustrated.space-opera.npcs.4": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.4.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.4.webp"
+            },
+            "illustrated.space-opera.npcs.5": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.5.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.5.webp"
+            },
+            "illustrated.space-opera.npcs.6": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.6.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.6.webp"
+            },
+            "illustrated.space-opera.npcs.7": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.7.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.7.webp"
+            },
+            "illustrated.space-opera.npcs.8": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.8.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.8.webp"
+            },
+            "illustrated.space-opera.npcs.9": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.9.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.9.webp"
+            },
+            "illustrated.space-opera.npcs.10": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.10.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.10.webp"
+            },
+            "illustrated.space-opera.npcs.11": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.11.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.11.webp"
+            },
+            "illustrated.space-opera.npcs.12": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.12.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.12.webp"
+            },
+            "illustrated.space-opera.npcs.13": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.13.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.13.webp"
+            },
+            "illustrated.space-opera.npcs.14": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.14.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.14.webp"
+            },
+            "illustrated.space-opera.npcs.15": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.15.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.15.webp"
+            },
+            "illustrated.space-opera.npcs.16": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.16.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.16.webp"
+            },
+            "illustrated.space-opera.npcs.17": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.17.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.17.webp"
+            },
+            "illustrated.space-opera.npcs.18": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.18.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.18.webp"
+            },
+            "illustrated.space-opera.npcs.19": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.19.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.19.webp"
+            },
+            "illustrated.space-opera.npcs.20": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.20.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.20.webp"
+            },
+            "illustrated.space-opera.npcs.21": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.21.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.21.webp"
+            },
+            "illustrated.space-opera.npcs.22": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.22.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.22.webp"
+            },
+            "illustrated.space-opera.npcs.23": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.23.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.23.webp"
+            },
+            "illustrated.space-opera.npcs.24": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/npcs.24.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/npcs.24.webp"
+            },
+            "illustrated.space-opera.adversaries.1": {
+              "token": "assets/space-opera/illustrated-1.1.0/adversaries.1.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/adversaries.1.webp"
+            },
+            "illustrated.space-opera.adversaries.2": {
+              "token": "assets/space-opera/illustrated-1.1.0/adversaries.2.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/adversaries.2.webp"
+            },
+            "illustrated.space-opera.adversaries.3": {
+              "token": "assets/space-opera/illustrated-1.1.0/adversaries.3.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/adversaries.3.webp"
+            },
+            "illustrated.space-opera.adversaries.4": {
+              "token": "assets/space-opera/illustrated-1.1.0/adversaries.4.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/adversaries.4.webp"
+            },
+            "illustrated.space-opera.adversaries.5": {
+              "token": "assets/space-opera/illustrated-1.1.0/adversaries.5.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/adversaries.5.webp"
+            },
+            "illustrated.space-opera.adversaries.6": {
+              "token": "assets/space-opera/illustrated-1.1.0/adversaries.6.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/adversaries.6.webp"
+            },
+            "illustrated.space-opera.adversaries.7": {
+              "token": "assets/space-opera/illustrated-1.1.0/adversaries.7.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/adversaries.7.webp"
+            },
+            "illustrated.space-opera.adversaries.8": {
+              "token": "assets/space-opera/illustrated-1.1.0/adversaries.8.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/adversaries.8.webp"
+            },
+            "illustrated.space-opera.adversaries.9": {
+              "token": "assets/space-opera/illustrated-1.1.0/adversaries.9.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/adversaries.9.webp"
+            },
+            "illustrated.space-opera.adversaries.10": {
+              "token": "assets/space-opera/illustrated-1.1.0/adversaries.10.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/adversaries.10.webp"
+            },
+            "illustrated.space-opera.adversaries.11": {
+              "token": "assets/space-opera/illustrated-1.1.0/adversaries.11.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/adversaries.11.webp"
+            },
+            "illustrated.space-opera.adversaries.12": {
+              "token": "assets/space-opera/illustrated-1.1.0/adversaries.12.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/adversaries.12.webp"
+            },
+            "illustrated.space-opera.adversaries.13": {
+              "token": "assets/space-opera/illustrated-1.1.0/adversaries.13.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/adversaries.13.webp"
+            },
+            "illustrated.space-opera.adversaries.14": {
+              "token": "assets/space-opera/illustrated-1.1.0/adversaries.14.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/adversaries.14.webp"
+            },
+            "illustrated.space-opera.adversaries.15": {
+              "token": "assets/space-opera/illustrated-1.1.0/adversaries.15.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/adversaries.15.webp"
+            },
+            "illustrated.space-opera.adversaries.16": {
+              "token": "assets/space-opera/illustrated-1.1.0/adversaries.16.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/adversaries.16.webp"
+            },
+            "illustrated.space-opera.adversaries.17": {
+              "token": "assets/space-opera/illustrated-1.1.0/adversaries.17.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/adversaries.17.webp"
+            },
+            "illustrated.space-opera.adversaries.18": {
+              "token": "assets/space-opera/illustrated-1.1.0/adversaries.18.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/adversaries.18.webp"
+            },
+            "illustrated.space-opera.items.1": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.1.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.1.webp"
+            },
+            "illustrated.space-opera.items.2": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.2.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.2.webp"
+            },
+            "illustrated.space-opera.items.3": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.3.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.3.webp"
+            },
+            "illustrated.space-opera.items.4": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.4.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.4.webp"
+            },
+            "illustrated.space-opera.items.5": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.5.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.5.webp"
+            },
+            "illustrated.space-opera.items.6": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.6.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.6.webp"
+            },
+            "illustrated.space-opera.items.7": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.7.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.7.webp"
+            },
+            "illustrated.space-opera.items.8": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.8.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.8.webp"
+            },
+            "illustrated.space-opera.items.9": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.9.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.9.webp"
+            },
+            "illustrated.space-opera.items.10": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.10.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.10.webp"
+            },
+            "illustrated.space-opera.items.11": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.11.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.11.webp"
+            },
+            "illustrated.space-opera.items.12": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.12.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.12.webp"
+            },
+            "illustrated.space-opera.items.13": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.13.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.13.webp"
+            },
+            "illustrated.space-opera.items.14": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.14.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.14.webp"
+            },
+            "illustrated.space-opera.items.15": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.15.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.15.webp"
+            },
+            "illustrated.space-opera.items.16": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.16.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.16.webp"
+            },
+            "illustrated.space-opera.items.17": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.17.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.17.webp"
+            },
+            "illustrated.space-opera.items.18": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.18.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.18.webp"
+            },
+            "illustrated.space-opera.items.19": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.19.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.19.webp"
+            },
+            "illustrated.space-opera.items.20": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.20.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.20.webp"
+            },
+            "illustrated.space-opera.items.21": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.21.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.21.webp"
+            },
+            "illustrated.space-opera.items.22": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.22.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.22.webp"
+            },
+            "illustrated.space-opera.items.23": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.23.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.23.webp"
+            },
+            "illustrated.space-opera.items.24": {
+              "item": "assets/space-opera/illustrated-1.1.0/items.24.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/items.24.webp"
+            },
+            "illustrated.space-opera.events.1": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.1.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.1.webp"
+            },
+            "illustrated.space-opera.events.2": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.2.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.2.webp"
+            },
+            "illustrated.space-opera.events.3": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.3.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.3.webp"
+            },
+            "illustrated.space-opera.events.4": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.4.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.4.webp"
+            },
+            "illustrated.space-opera.events.5": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.5.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.5.webp"
+            },
+            "illustrated.space-opera.events.6": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.6.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.6.webp"
+            },
+            "illustrated.space-opera.events.7": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.7.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.7.webp"
+            },
+            "illustrated.space-opera.events.8": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.8.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.8.webp"
+            },
+            "illustrated.space-opera.events.9": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.9.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.9.webp"
+            },
+            "illustrated.space-opera.events.10": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.10.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.10.webp"
+            },
+            "illustrated.space-opera.events.11": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.11.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.11.webp"
+            },
+            "illustrated.space-opera.events.12": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.12.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.12.webp"
+            },
+            "illustrated.space-opera.events.13": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.13.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.13.webp"
+            },
+            "illustrated.space-opera.events.14": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.14.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.14.webp"
+            },
+            "illustrated.space-opera.events.15": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.15.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.15.webp"
+            },
+            "illustrated.space-opera.events.16": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.16.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.16.webp"
+            },
+            "illustrated.space-opera.events.17": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.17.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.17.webp"
+            },
+            "illustrated.space-opera.events.18": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.18.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.18.webp"
+            },
+            "illustrated.space-opera.events.19": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.19.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.19.webp"
+            },
+            "illustrated.space-opera.events.20": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.20.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.20.webp"
+            },
+            "illustrated.space-opera.events.21": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.21.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.21.webp"
+            },
+            "illustrated.space-opera.events.22": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.22.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.22.webp"
+            },
+            "illustrated.space-opera.events.23": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.23.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.23.webp"
+            },
+            "illustrated.space-opera.events.24": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.24.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.24.webp"
+            },
+            "illustrated.space-opera.events.25": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.25.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.25.webp"
+            },
+            "illustrated.space-opera.events.26": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.26.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.26.webp"
+            },
+            "illustrated.space-opera.events.27": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.27.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.27.webp"
+            },
+            "illustrated.space-opera.events.28": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.28.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.28.webp"
+            },
+            "illustrated.space-opera.events.29": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.29.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.29.webp"
+            },
+            "illustrated.space-opera.events.30": {
+              "background": "assets/space-opera/illustrated-1.1.0/events.30.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/events.30.webp"
+            },
+            "illustrated.space-opera.scenes.1": {
+              "background": "assets/space-opera/illustrated-1.1.0/scenes.1.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/scenes.1.webp"
+            },
+            "illustrated.space-opera.scenes.2": {
+              "background": "assets/space-opera/illustrated-1.1.0/scenes.2.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/scenes.2.webp"
+            },
+            "illustrated.space-opera.scenes.3": {
+              "background": "assets/space-opera/illustrated-1.1.0/scenes.3.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/scenes.3.webp"
+            },
+            "illustrated.space-opera.scenes.4": {
+              "background": "assets/space-opera/illustrated-1.1.0/scenes.4.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/scenes.4.webp"
+            },
+            "illustrated.space-opera.scenes.5": {
+              "background": "assets/space-opera/illustrated-1.1.0/scenes.5.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/scenes.5.webp"
+            },
+            "illustrated.space-opera.scenes.6": {
+              "background": "assets/space-opera/illustrated-1.1.0/scenes.6.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/scenes.6.webp"
+            },
+            "illustrated.space-opera.scenes.7": {
+              "background": "assets/space-opera/illustrated-1.1.0/scenes.7.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/scenes.7.webp"
+            },
+            "illustrated.space-opera.scenes.8": {
+              "background": "assets/space-opera/illustrated-1.1.0/scenes.8.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/scenes.8.webp"
+            },
+            "illustrated.space-opera.scenes.9": {
+              "background": "assets/space-opera/illustrated-1.1.0/scenes.9.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/scenes.9.webp"
+            },
+            "illustrated.space-opera.scenes.10": {
+              "background": "assets/space-opera/illustrated-1.1.0/scenes.10.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/scenes.10.webp"
+            },
+            "illustrated.space-opera.scenes.11": {
+              "background": "assets/space-opera/illustrated-1.1.0/scenes.11.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/scenes.11.webp"
+            },
+            "illustrated.space-opera.scenes.12": {
+              "background": "assets/space-opera/illustrated-1.1.0/scenes.12.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/scenes.12.webp"
+            },
+            "illustrated.space-opera.scenes.13": {
+              "background": "assets/space-opera/illustrated-1.1.0/scenes.13.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/scenes.13.webp"
+            },
+            "illustrated.space-opera.scenes.14": {
+              "background": "assets/space-opera/illustrated-1.1.0/scenes.14.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/scenes.14.webp"
+            },
+            "illustrated.space-opera.scenes.15": {
+              "background": "assets/space-opera/illustrated-1.1.0/scenes.15.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/scenes.15.webp"
+            },
+            "illustrated.space-opera.scenes.16": {
+              "background": "assets/space-opera/illustrated-1.1.0/scenes.16.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/scenes.16.webp"
+            },
+            "illustrated.space-opera.scenes.17": {
+              "background": "assets/space-opera/illustrated-1.1.0/scenes.17.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/scenes.17.webp"
+            },
+            "illustrated.space-opera.scenes.18": {
+              "background": "assets/space-opera/illustrated-1.1.0/scenes.18.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/scenes.18.webp"
+            },
+            "illustrated.space-opera.archetypes.1": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/archetypes.1.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/archetypes.1.webp"
+            },
+            "illustrated.space-opera.archetypes.2": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/archetypes.2.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/archetypes.2.webp"
+            },
+            "illustrated.space-opera.archetypes.3": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/archetypes.3.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/archetypes.3.webp"
+            },
+            "illustrated.space-opera.archetypes.4": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/archetypes.4.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/archetypes.4.webp"
+            },
+            "illustrated.space-opera.archetypes.5": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/archetypes.5.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/archetypes.5.webp"
+            },
+            "illustrated.space-opera.archetypes.6": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/archetypes.6.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/archetypes.6.webp"
+            },
+            "illustrated.space-opera.archetypes.7": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/archetypes.7.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/archetypes.7.webp"
+            },
+            "illustrated.space-opera.archetypes.8": {
+              "portrait": "assets/space-opera/illustrated-1.1.0/archetypes.8.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/archetypes.8.webp"
+            },
+            "illustrated.space-opera.progressionPaths.1": {
+              "card": "assets/space-opera/illustrated-1.1.0/progressionPaths.1.webp"
+            },
+            "illustrated.space-opera.progressionPaths.2": {
+              "card": "assets/space-opera/illustrated-1.1.0/progressionPaths.2.webp"
+            },
+            "illustrated.space-opera.progressionPaths.3": {
+              "card": "assets/space-opera/illustrated-1.1.0/progressionPaths.3.webp"
+            },
+            "illustrated.space-opera.progressionPaths.4": {
+              "card": "assets/space-opera/illustrated-1.1.0/progressionPaths.4.webp"
+            },
+            "illustrated.space-opera.progressionPaths.5": {
+              "card": "assets/space-opera/illustrated-1.1.0/progressionPaths.5.webp"
+            },
+            "illustrated.space-opera.progressionPaths.6": {
+              "card": "assets/space-opera/illustrated-1.1.0/progressionPaths.6.webp"
+            },
+            "illustrated.space-opera.visualThemes.1": {
+              "map": "assets/space-opera/illustrated-1.1.0/visualThemes.1.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/visualThemes.1.webp"
+            },
+            "illustrated.space-opera.visualThemes.2": {
+              "map": "assets/space-opera/illustrated-1.1.0/visualThemes.2.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/visualThemes.2.webp"
+            },
+            "illustrated.space-opera.visualThemes.3": {
+              "map": "assets/space-opera/illustrated-1.1.0/visualThemes.3.webp",
+              "card": "assets/space-opera/illustrated-1.1.0/visualThemes.3.webp"
+            }
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "illustrated-space-opera"
+  }
+}

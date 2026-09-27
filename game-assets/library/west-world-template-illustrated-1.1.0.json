@@ -1,0 +1,178 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.west.world-template",
+  "version": "1.1.0",
+  "type": "world-template",
+  "name": "Three Supernatural Frontier Frames — Illustrated",
+  "description": "Three Supernatural Frontier Frames for Cursed Frontier, Ghost Railway, Occult Boomtown. Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.",
+  "tags": [
+    "weird-west",
+    "cursed-frontier",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Three Supernatural Frontier Frames for Cursed Frontier, Ghost Railway, Occult Boomtown. Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.",
+    "highlights": [
+      "Three Supernatural Frontier Frames",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.weird-west"
+    ],
+    "requiresCapabilities": [
+      "setting:weird-west"
+    ],
+    "providesCapabilities": [
+      "world:weird-west"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.west.setting",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Weird West original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.west.world-template"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.west.world-template",
+    "version": "1.1.0",
+    "name": "Three Supernatural Frontier Frames — Illustrated",
+    "description": "Three Supernatural Frontier Frames for Cursed Frontier, Ghost Railway, Occult Boomtown. Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.",
+    "provides": [
+      "world:weird-west"
+    ],
+    "requires": [
+      "setting:weird-west"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.kit.cursed-frontier",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "Cursed Frontier: The Road after the Flood"
+            },
+            "kitId": {
+              "value": "kit.cursed-frontier"
+            },
+            "openingSceneId": {
+              "value": "scenes.1"
+            }
+          },
+          "tags": [
+            "west-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.kit.ghost-railway",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "Ghost Railway: The Midnight Homecoming"
+            },
+            "kitId": {
+              "value": "kit.ghost-railway"
+            },
+            "openingSceneId": {
+              "value": "scenes.2"
+            }
+          },
+          "tags": [
+            "west-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.kit.occult-boomtown",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "Occult Boomtown: A Town above Ground"
+            },
+            "kitId": {
+              "value": "kit.occult-boomtown"
+            },
+            "openingSceneId": {
+              "value": "scenes.3"
+            }
+          },
+          "tags": [
+            "west-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-kit-cursed-frontier": {
+            "template": "west.deep.kit.cursed-frontier",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.cursed-frontier"
+              ]
+            }
+          },
+          "deep-kit-ghost-railway": {
+            "template": "west.deep.kit.ghost-railway",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.ghost-railway"
+              ]
+            }
+          },
+          "deep-kit-occult-boomtown": {
+            "template": "west.deep.kit.occult-boomtown",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.occult-boomtown"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

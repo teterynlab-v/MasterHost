@@ -1,0 +1,178 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.dusk.world-template",
+  "version": "1.2.0",
+  "type": "world-template",
+  "name": "Three Dark Bargain Frames — Illustrated",
+  "description": "Three Dark Bargain Frames for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+  "tags": [
+    "dark-fantasy",
+    "dying-marches",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Three Dark Bargain Frames for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+    "highlights": [
+      "Three Dark Bargain Frames",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.dark-fantasy"
+    ],
+    "requiresCapabilities": [
+      "setting:dark-fantasy"
+    ],
+    "providesCapabilities": [
+      "world:dark-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.dusk.setting",
+      "version": "1.2.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Dark Fantasy original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.dusk.world-template"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.dusk.world-template",
+    "version": "1.2.0",
+    "name": "Three Dark Bargain Frames — Illustrated",
+    "description": "Three Dark Bargain Frames for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+    "provides": [
+      "world:dark-fantasy"
+    ],
+    "requires": [
+      "setting:dark-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.kit.dying-marches",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "Dying Marches: Dawn for Everyone"
+            },
+            "kitId": {
+              "value": "kit.dying-marches"
+            },
+            "openingSceneId": {
+              "value": "scenes.1"
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.kit.witch-principalities",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "Witch Principalities: The Released Pact"
+            },
+            "kitId": {
+              "value": "kit.witch-principalities"
+            },
+            "openingSceneId": {
+              "value": "scenes.2"
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.kit.plague-pilgrimage",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "Plague Pilgrimage: The Bearer's Road"
+            },
+            "kitId": {
+              "value": "kit.plague-pilgrimage"
+            },
+            "openingSceneId": {
+              "value": "scenes.3"
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-kit-dying-marches": {
+            "template": "dusk.deep.kit.dying-marches",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.dying-marches"
+              ]
+            }
+          },
+          "deep-kit-witch-principalities": {
+            "template": "dusk.deep.kit.witch-principalities",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.witch-principalities"
+              ]
+            }
+          },
+          "deep-kit-plague-pilgrimage": {
+            "template": "dusk.deep.kit.plague-pilgrimage",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.plague-pilgrimage"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

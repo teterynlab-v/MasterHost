@@ -1,0 +1,916 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.classic.items",
+  "version": "1.3.0",
+  "type": "items",
+  "name": "Relics of the Marches — Illustrated",
+  "description": "Twenty-four rewards, clues, tools, heirlooms, and consumables with clear uses in travel and conflict.",
+  "tags": [
+    "classic-fantasy",
+    "border-kingdoms",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Twenty-four rewards, clues, tools, heirlooms, and consumables with clear uses in travel and conflict.",
+    "highlights": [
+      "Relics of the Marches",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.classic-fantasy"
+    ],
+    "requiresCapabilities": [
+      "setting:classic-fantasy"
+    ],
+    "providesCapabilities": [
+      "items:classic-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.classic.setting",
+      "version": "1.3.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Classic Fantasy original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.classic.items"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 24,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.classic.items",
+    "version": "1.3.0",
+    "name": "Relics of the Marches — Illustrated",
+    "description": "Twenty-four rewards, clues, tools, heirlooms, and consumables with clear uses in travel and conflict.",
+    "provides": [
+      "items:classic-fantasy"
+    ],
+    "requires": [
+      "setting:classic-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.1",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Roadwarden Blade"
+            },
+            "description": {
+              "value": "Roadwarden Blade solves a practical obstacle in Border Kingdoms, while its heraldry identifies a faction that denies ever possessing it."
+            },
+            "deepId": {
+              "value": "items.1"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.items.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.2",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Wayfarer Kit"
+            },
+            "description": {
+              "value": "Wayfarer Kit is a reward promised in War of Heirs; using it immediately grants an advantage but weakens the final settlement."
+            },
+            "deepId": {
+              "value": "items.2"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.items.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.3",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Ember Relic"
+            },
+            "description": {
+              "value": "Ember Relic preserves evidence from Ruins of the Ancient Empire, allowing the party to challenge a lie before violence becomes inevitable."
+            },
+            "deepId": {
+              "value": "items.3"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.items.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.4",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Moonwell Draught"
+            },
+            "description": {
+              "value": "Moonwell Draught aids travel through Border Kingdoms and bears a prior owner’s oath that creates a new obligation when revealed."
+            },
+            "deepId": {
+              "value": "items.4"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.items.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.5",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Kingsguard Mail"
+            },
+            "description": {
+              "value": "Kingsguard Mail solves a practical obstacle in War of Heirs, while its heraldry identifies a faction that denies ever possessing it."
+            },
+            "deepId": {
+              "value": "items.5"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.items.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.6",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Seven-Key Picks"
+            },
+            "description": {
+              "value": "Seven-Key Picks is a reward promised in Ruins of the Ancient Empire; using it immediately grants an advantage but weakens the final settlement."
+            },
+            "deepId": {
+              "value": "items.6"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.items.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.7",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Royal Token"
+            },
+            "description": {
+              "value": "Royal Token preserves evidence from Border Kingdoms, allowing the party to challenge a lie before violence becomes inevitable."
+            },
+            "deepId": {
+              "value": "items.7"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.items.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.8",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Griffin Saddle"
+            },
+            "description": {
+              "value": "Griffin Saddle aids travel through War of Heirs and bears a prior owner’s oath that creates a new obligation when revealed."
+            },
+            "deepId": {
+              "value": "items.8"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.items.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.9",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Oathstone Shard"
+            },
+            "description": {
+              "value": "Oathstone Shard solves a practical obstacle in Ruins of the Ancient Empire, while its heraldry identifies a faction that denies ever possessing it."
+            },
+            "deepId": {
+              "value": "items.9"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.items.9"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.10",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Map of Lost Roads"
+            },
+            "description": {
+              "value": "Map of Lost Roads is a reward promised in Border Kingdoms; using it immediately grants an advantage but weakens the final settlement."
+            },
+            "deepId": {
+              "value": "items.10"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.items.10"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.11",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Sun Disk"
+            },
+            "description": {
+              "value": "Sun Disk preserves evidence from War of Heirs, allowing the party to challenge a lie before violence becomes inevitable."
+            },
+            "deepId": {
+              "value": "items.11"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.items.11"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.12",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Thornwood Bow"
+            },
+            "description": {
+              "value": "Thornwood Bow aids travel through Ruins of the Ancient Empire and bears a prior owner’s oath that creates a new obligation when revealed."
+            },
+            "deepId": {
+              "value": "items.12"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.items.12"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.13",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Banner of Truce"
+            },
+            "description": {
+              "value": "Banner of Truce solves a practical obstacle in Border Kingdoms, while its heraldry identifies a faction that denies ever possessing it."
+            },
+            "deepId": {
+              "value": "items.13"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.items.13"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.14",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Scribes Lens"
+            },
+            "description": {
+              "value": "Scribes Lens is a reward promised in War of Heirs; using it immediately grants an advantage but weakens the final settlement."
+            },
+            "deepId": {
+              "value": "items.14"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.items.14"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.15",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Cinder Bomb"
+            },
+            "description": {
+              "value": "Cinder Bomb preserves evidence from Ruins of the Ancient Empire, allowing the party to challenge a lie before violence becomes inevitable."
+            },
+            "deepId": {
+              "value": "items.15"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.items.15"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.16",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "River Compass"
+            },
+            "description": {
+              "value": "River Compass aids travel through Border Kingdoms and bears a prior owner’s oath that creates a new obligation when revealed."
+            },
+            "deepId": {
+              "value": "items.16"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.items.16"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.17",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Barrow Lantern"
+            },
+            "description": {
+              "value": "Barrow Lantern solves a practical obstacle in War of Heirs, while its heraldry identifies a faction that denies ever possessing it."
+            },
+            "deepId": {
+              "value": "items.17"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.items.17"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.18",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Heirloom Signet"
+            },
+            "description": {
+              "value": "Heirloom Signet is a reward promised in Ruins of the Ancient Empire; using it immediately grants an advantage but weakens the final settlement."
+            },
+            "deepId": {
+              "value": "items.18"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.items.18"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.19",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Dragonbone Flute"
+            },
+            "description": {
+              "value": "Dragonbone Flute preserves evidence from Border Kingdoms, allowing the party to challenge a lie before violence becomes inevitable."
+            },
+            "deepId": {
+              "value": "items.19"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.items.19"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.20",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Pilgrim Bell"
+            },
+            "description": {
+              "value": "Pilgrim Bell aids travel through War of Heirs and bears a prior owner’s oath that creates a new obligation when revealed."
+            },
+            "deepId": {
+              "value": "items.20"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.items.20"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.21",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Imperial Gear"
+            },
+            "description": {
+              "value": "Imperial Gear solves a practical obstacle in Ruins of the Ancient Empire, while its heraldry identifies a faction that denies ever possessing it."
+            },
+            "deepId": {
+              "value": "items.21"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.items.21"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.22",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Mosscloak"
+            },
+            "description": {
+              "value": "Mosscloak is a reward promised in Border Kingdoms; using it immediately grants an advantage but weakens the final settlement."
+            },
+            "deepId": {
+              "value": "items.22"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.items.22"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.23",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Silver Ration Box"
+            },
+            "description": {
+              "value": "Silver Ration Box preserves evidence from War of Heirs, allowing the party to challenge a lie before violence becomes inevitable."
+            },
+            "deepId": {
+              "value": "items.23"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.items.23"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.items.24",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Crownless Helm"
+            },
+            "description": {
+              "value": "Crownless Helm aids travel through Ruins of the Ancient Empire and bears a prior owner’s oath that creates a new obligation when revealed."
+            },
+            "deepId": {
+              "value": "items.24"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.items.24"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-items-1": {
+            "template": "classic.deep.items.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-items-2": {
+            "template": "classic.deep.items.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-items-3": {
+            "template": "classic.deep.items.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-items-4": {
+            "template": "classic.deep.items.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-items-5": {
+            "template": "classic.deep.items.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-items-6": {
+            "template": "classic.deep.items.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-items-7": {
+            "template": "classic.deep.items.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-items-8": {
+            "template": "classic.deep.items.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-items-9": {
+            "template": "classic.deep.items.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-items-10": {
+            "template": "classic.deep.items.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-items-11": {
+            "template": "classic.deep.items.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-items-12": {
+            "template": "classic.deep.items.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-items-13": {
+            "template": "classic.deep.items.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-items-14": {
+            "template": "classic.deep.items.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-items-15": {
+            "template": "classic.deep.items.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-items-16": {
+            "template": "classic.deep.items.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-items-17": {
+            "template": "classic.deep.items.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-items-18": {
+            "template": "classic.deep.items.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-items-19": {
+            "template": "classic.deep.items.19",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-items-20": {
+            "template": "classic.deep.items.20",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-items-21": {
+            "template": "classic.deep.items.21",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-items-22": {
+            "template": "classic.deep.items.22",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-items-23": {
+            "template": "classic.deep.items.23",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-items-24": {
+            "template": "classic.deep.items.24",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

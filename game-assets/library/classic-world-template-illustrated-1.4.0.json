@@ -1,0 +1,178 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.classic.world-template",
+  "version": "1.4.0",
+  "type": "world-template",
+  "name": "Crowned Marches World — Illustrated",
+  "description": "A connected realm structure of provinces, settlements, roads, factions, adventure sites, and an opening threat.",
+  "tags": [
+    "classic-fantasy",
+    "border-kingdoms",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "A connected realm structure of provinces, settlements, roads, factions, adventure sites, and an opening threat.",
+    "highlights": [
+      "Crowned Marches World",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.classic-fantasy"
+    ],
+    "requiresCapabilities": [
+      "setting:classic-fantasy"
+    ],
+    "providesCapabilities": [
+      "world:classic-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.classic.setting",
+      "version": "1.4.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Classic Fantasy original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.classic.world-template"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.classic.world-template",
+    "version": "1.4.0",
+    "name": "Crowned Marches World — Illustrated",
+    "description": "A connected realm structure of provinces, settlements, roads, factions, adventure sites, and an opening threat.",
+    "provides": [
+      "world:classic-fantasy"
+    ],
+    "requires": [
+      "setting:classic-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.kit.border-kingdoms",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "Border Kingdoms: The First Oath"
+            },
+            "kitId": {
+              "value": "kit.border-kingdoms"
+            },
+            "openingSceneId": {
+              "value": "scenes.1"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.kit.war-of-heirs",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "War of Heirs: The First Oath"
+            },
+            "kitId": {
+              "value": "kit.war-of-heirs"
+            },
+            "openingSceneId": {
+              "value": "scenes.2"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.kit.ancient-empire-ruins",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "Ruins of the Ancient Empire: The First Oath"
+            },
+            "kitId": {
+              "value": "kit.ancient-empire-ruins"
+            },
+            "openingSceneId": {
+              "value": "scenes.3"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-kit-border-kingdoms": {
+            "template": "classic.deep.kit.border-kingdoms",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.border-kingdoms"
+              ]
+            }
+          },
+          "deep-kit-war-of-heirs": {
+            "template": "classic.deep.kit.war-of-heirs",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.war-of-heirs"
+              ]
+            }
+          },
+          "deep-kit-ancient-empire-ruins": {
+            "template": "classic.deep.kit.ancient-empire-ruins",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.ancient-empire-ruins"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

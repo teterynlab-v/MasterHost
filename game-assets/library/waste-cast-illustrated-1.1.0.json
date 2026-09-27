@@ -1,0 +1,1882 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.waste.cast",
+  "version": "1.1.0",
+  "type": "cast",
+  "name": "Travelers Growers Mechanics and Threats — Illustrated",
+  "description": "Travelers Growers Mechanics and Threats for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+  "tags": [
+    "post-apocalypse",
+    "dustroad-convoy",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Travelers Growers Mechanics and Threats for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+    "highlights": [
+      "Travelers Growers Mechanics and Threats",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.post-apocalypse"
+    ],
+    "requiresCapabilities": [
+      "world:post-apocalypse"
+    ],
+    "providesCapabilities": [
+      "cast:post-apocalypse"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.waste.world-template",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Post-Apocalypse original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.waste.cast"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 42,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.waste.cast",
+    "version": "1.1.0",
+    "name": "Travelers Growers Mechanics and Threats — Illustrated",
+    "description": "Travelers Growers Mechanics and Threats for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+    "provides": [
+      "cast:post-apocalypse"
+    ],
+    "requires": [
+      "world:post-apocalypse"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.1",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Driver Mara Axle"
+            },
+            "description": {
+              "value": "Driver Mara Axle: will abandon the buyer contract if the crew offers a defensible reserve plan."
+            },
+            "deepId": {
+              "value": "npcs.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy",
+            "illustrated.post-apocalypse.npcs.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.2",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Keeper Ina Glassroot"
+            },
+            "description": {
+              "value": "Keeper Ina Glassroot: knows the isolation protocol is outdated and fears losing the clean crop."
+            },
+            "deepId": {
+              "value": "npcs.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault",
+            "illustrated.post-apocalypse.npcs.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.3",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Engineer Pell Heat"
+            },
+            "description": {
+              "value": "Engineer Pell Heat: can repair the bypass but needs the uncounted homes mapped."
+            },
+            "deepId": {
+              "value": "npcs.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid",
+            "illustrated.post-apocalypse.npcs.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.4",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Camper Juno Brace"
+            },
+            "description": {
+              "value": "Camper Juno Brace: can lead bridge labor once injured travelers have transport."
+            },
+            "deepId": {
+              "value": "npcs.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy",
+            "illustrated.post-apocalypse.npcs.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.5",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Grower Dev Open"
+            },
+            "description": {
+              "value": "Grower Dev Open: has clean outdoor shoots and offers a neutral contamination test."
+            },
+            "deepId": {
+              "value": "npcs.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault",
+            "illustrated.post-apocalypse.npcs.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.6",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Clerk Sera Ember"
+            },
+            "description": {
+              "value": "Clerk Sera Ember: keeps the omitted demand ledger hidden beneath an old heater."
+            },
+            "deepId": {
+              "value": "npcs.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid",
+            "illustrated.post-apocalypse.npcs.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.7",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Medic Noa Filter"
+            },
+            "description": {
+              "value": "Medic Noa Filter: has spare dust masks and must choose a safe evacuation route."
+            },
+            "deepId": {
+              "value": "npcs.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy",
+            "illustrated.post-apocalypse.npcs.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.8",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Archivist Ren Seed"
+            },
+            "description": {
+              "value": "Archivist Ren Seed: holds the joint charter and wants the heirs involved in its renewal."
+            },
+            "deepId": {
+              "value": "npcs.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault",
+            "illustrated.post-apocalypse.npcs.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.9",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Elder Bea Far"
+            },
+            "description": {
+              "value": "Elder Bea Far: knows a working cable route through the old service tunnel."
+            },
+            "deepId": {
+              "value": "npcs.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid",
+            "illustrated.post-apocalypse.npcs.9"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.10",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Broker Sol Passage"
+            },
+            "description": {
+              "value": "Broker Sol Passage: bought the forged bids and will testify for a limited amnesty."
+            },
+            "deepId": {
+              "value": "npcs.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy",
+            "illustrated.post-apocalypse.npcs.10"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.11",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Technician Mei Culture"
+            },
+            "description": {
+              "value": "Technician Mei Culture: can separate the viable strain without burning the entire seed room."
+            },
+            "deepId": {
+              "value": "npcs.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault",
+            "illustrated.post-apocalypse.npcs.11"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.12",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Worker Ash Cinder"
+            },
+            "description": {
+              "value": "Worker Ash Cinder: can shut the warehouse valve before the repair crew enters."
+            },
+            "deepId": {
+              "value": "npcs.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid",
+            "illustrated.post-apocalypse.npcs.12"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.13",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Child Len Route"
+            },
+            "description": {
+              "value": "Child Len Route: marked a foot crossing the convoy's heavy trucks cannot use."
+            },
+            "deepId": {
+              "value": "npcs.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy",
+            "illustrated.post-apocalypse.npcs.13"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.14",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Patient Rosa Root"
+            },
+            "description": {
+              "value": "Patient Rosa Root: needs food now and refuses a harvest promise without a ration."
+            },
+            "deepId": {
+              "value": "npcs.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault",
+            "illustrated.post-apocalypse.npcs.14"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.15",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Courier Kai Hearth"
+            },
+            "description": {
+              "value": "Courier Kai Hearth: can carry repair cells over the cold ridge if given shelter on return."
+            },
+            "deepId": {
+              "value": "npcs.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid",
+            "illustrated.post-apocalypse.npcs.15"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.16",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Buyer Tess Reserve"
+            },
+            "description": {
+              "value": "Buyer Tess Reserve: claims the barrels but will accept a witnessed delayed delivery."
+            },
+            "deepId": {
+              "value": "npcs.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy",
+            "illustrated.post-apocalypse.npcs.16"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.17",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Keeper Oren Seal"
+            },
+            "description": {
+              "value": "Keeper Oren Seal: will open the gate if a safe filter replacement is demonstrated."
+            },
+            "deepId": {
+              "value": "npcs.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault",
+            "illustrated.post-apocalypse.npcs.17"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.18",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Guardian Fia Wire"
+            },
+            "description": {
+              "value": "Guardian Fia Wire: protects Far Hearth and suspects the crew only wants its spare cable."
+            },
+            "deepId": {
+              "value": "npcs.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid",
+            "illustrated.post-apocalypse.npcs.18"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.19",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Mechanic Ivo Span"
+            },
+            "description": {
+              "value": "Mechanic Ivo Span: can reinforce one bridge beam before the dust front arrives."
+            },
+            "deepId": {
+              "value": "npcs.19"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy",
+            "illustrated.post-apocalypse.npcs.19"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.20",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Grower Nessa Heir"
+            },
+            "description": {
+              "value": "Grower Nessa Heir: wants seed rights to survive even if the greenhouse is lost."
+            },
+            "deepId": {
+              "value": "npcs.20"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault",
+            "illustrated.post-apocalypse.npcs.20"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.21",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Organizer Bo Warm"
+            },
+            "description": {
+              "value": "Organizer Bo Warm: can negotiate shared heat if the omitted residents get a vote."
+            },
+            "deepId": {
+              "value": "npcs.21"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid",
+            "illustrated.post-apocalypse.npcs.21"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.22",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Scout Ada Mile"
+            },
+            "description": {
+              "value": "Scout Ada Mile: saw the broker's barricade being built with stolen repair lumber."
+            },
+            "deepId": {
+              "value": "npcs.22"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy",
+            "illustrated.post-apocalypse.npcs.22"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.23",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Researcher Taro Field"
+            },
+            "description": {
+              "value": "Researcher Taro Field: recorded old outdoor success trials that were suppressed."
+            },
+            "deepId": {
+              "value": "npcs.23"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault",
+            "illustrated.post-apocalypse.npcs.23"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.npcs.24",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Dispatcher Kira Last"
+            },
+            "description": {
+              "value": "Dispatcher Kira Last: holds a one-use grid override and wants a public witness before using it."
+            },
+            "deepId": {
+              "value": "npcs.24"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid",
+            "illustrated.post-apocalypse.npcs.24"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.adversaries.1",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Passage Raiders"
+            },
+            "description": {
+              "value": "Passage Raiders: demand the buyer's barrels and will accept supplies for wounded kin."
+            },
+            "deepId": {
+              "value": "adversaries.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy",
+            "illustrated.post-apocalypse.adversaries.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.adversaries.2",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Vault Purger"
+            },
+            "description": {
+              "value": "Vault Purger: burns exposed cultures unless a verified clean sample is provided."
+            },
+            "deepId": {
+              "value": "adversaries.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault",
+            "illustrated.post-apocalypse.adversaries.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.adversaries.3",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Heat Sheriff"
+            },
+            "description": {
+              "value": "Heat Sheriff: seizes repair cells from anyone without an assembly meter."
+            },
+            "deepId": {
+              "value": "adversaries.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid",
+            "illustrated.post-apocalypse.adversaries.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.adversaries.4",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Dust Stalker"
+            },
+            "description": {
+              "value": "Dust Stalker: follows the convoy's engines and can be diverted by a quiet decoy."
+            },
+            "deepId": {
+              "value": "adversaries.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy",
+            "illustrated.post-apocalypse.adversaries.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.adversaries.5",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Filter Bloom"
+            },
+            "description": {
+              "value": "Filter Bloom: clogs air channels but becomes harmless when separated from warm moisture."
+            },
+            "deepId": {
+              "value": "adversaries.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault",
+            "illustrated.post-apocalypse.adversaries.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.adversaries.6",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Warehouse Guard"
+            },
+            "description": {
+              "value": "Warehouse Guard: protects an unauthorized heating line and hides its demand receipt."
+            },
+            "deepId": {
+              "value": "adversaries.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid",
+            "illustrated.post-apocalypse.adversaries.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.adversaries.7",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Axle Gang"
+            },
+            "description": {
+              "value": "Axle Gang: tries to seize the convoy truck while the crew repairs the span."
+            },
+            "deepId": {
+              "value": "adversaries.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy",
+            "illustrated.post-apocalypse.adversaries.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.adversaries.8",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Seal Drone"
+            },
+            "description": {
+              "value": "Seal Drone: locks the greenhouse during an evacuation unless its protocol is amended."
+            },
+            "deepId": {
+              "value": "adversaries.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault",
+            "illustrated.post-apocalypse.adversaries.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.adversaries.9",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Cable Gnawer"
+            },
+            "description": {
+              "value": "Cable Gnawer: a scavenging machine mistakes the return line for salvage."
+            },
+            "deepId": {
+              "value": "adversaries.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid",
+            "illustrated.post-apocalypse.adversaries.9"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.adversaries.10",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Reserve Collector"
+            },
+            "description": {
+              "value": "Reserve Collector: enforces the distant bid without acknowledging the stranded camp."
+            },
+            "deepId": {
+              "value": "adversaries.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy",
+            "illustrated.post-apocalypse.adversaries.10"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.adversaries.11",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Culture Warden"
+            },
+            "description": {
+              "value": "Culture Warden: destroys test beds while calling the destruction a safety inspection."
+            },
+            "deepId": {
+              "value": "adversaries.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault",
+            "illustrated.post-apocalypse.adversaries.11"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.adversaries.12",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Ration Informer"
+            },
+            "description": {
+              "value": "Ration Informer: threatens residents who admit they bypassed broken meters."
+            },
+            "deepId": {
+              "value": "adversaries.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid",
+            "illustrated.post-apocalypse.adversaries.12"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.adversaries.13",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Causeway Swarm"
+            },
+            "description": {
+              "value": "Causeway Swarm: loose road machines react to bridge vibration and can be powered down."
+            },
+            "deepId": {
+              "value": "adversaries.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy",
+            "illustrated.post-apocalypse.adversaries.13"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.adversaries.14",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Seed Thief"
+            },
+            "description": {
+              "value": "Seed Thief: steals viable samples for a monopoly rather than immediate hunger."
+            },
+            "deepId": {
+              "value": "adversaries.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault",
+            "illustrated.post-apocalypse.adversaries.14"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.adversaries.15",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Cold Patrol"
+            },
+            "description": {
+              "value": "Cold Patrol: orders Far Hearth evacuated without arranging another shelter."
+            },
+            "deepId": {
+              "value": "adversaries.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid",
+            "illustrated.post-apocalypse.adversaries.15"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.adversaries.16",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Auction Enforcer"
+            },
+            "description": {
+              "value": "Auction Enforcer: barricades the public road before the reserve hearing begins."
+            },
+            "deepId": {
+              "value": "adversaries.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "dustroad-convoy",
+            "illustrated.post-apocalypse.adversaries.16"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.adversaries.17",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Charter Eraser"
+            },
+            "description": {
+              "value": "Charter Eraser: destroys evidence that planting rights were shared."
+            },
+            "deepId": {
+              "value": "adversaries.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "seed-vault",
+            "illustrated.post-apocalypse.adversaries.17"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/waste.deep.adversaries.18",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Grid Echo"
+            },
+            "description": {
+              "value": "Grid Echo: an old control process prioritizes a dead industrial district."
+            },
+            "deepId": {
+              "value": "adversaries.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "waste-deep",
+            "last-grid",
+            "illustrated.post-apocalypse.adversaries.18"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-npcs-1": {
+            "template": "waste.deep.npcs.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-npcs-2": {
+            "template": "waste.deep.npcs.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-npcs-3": {
+            "template": "waste.deep.npcs.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-npcs-4": {
+            "template": "waste.deep.npcs.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-npcs-5": {
+            "template": "waste.deep.npcs.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-npcs-6": {
+            "template": "waste.deep.npcs.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-npcs-7": {
+            "template": "waste.deep.npcs.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-npcs-8": {
+            "template": "waste.deep.npcs.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-npcs-9": {
+            "template": "waste.deep.npcs.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-npcs-10": {
+            "template": "waste.deep.npcs.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-npcs-11": {
+            "template": "waste.deep.npcs.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-npcs-12": {
+            "template": "waste.deep.npcs.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-npcs-13": {
+            "template": "waste.deep.npcs.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-npcs-14": {
+            "template": "waste.deep.npcs.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-npcs-15": {
+            "template": "waste.deep.npcs.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-npcs-16": {
+            "template": "waste.deep.npcs.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-npcs-17": {
+            "template": "waste.deep.npcs.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-npcs-18": {
+            "template": "waste.deep.npcs.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-npcs-19": {
+            "template": "waste.deep.npcs.19",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-npcs-20": {
+            "template": "waste.deep.npcs.20",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-npcs-21": {
+            "template": "waste.deep.npcs.21",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-npcs-22": {
+            "template": "waste.deep.npcs.22",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-npcs-23": {
+            "template": "waste.deep.npcs.23",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-npcs-24": {
+            "template": "waste.deep.npcs.24",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-adversaries-1": {
+            "template": "waste.deep.adversaries.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-adversaries-2": {
+            "template": "waste.deep.adversaries.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-adversaries-3": {
+            "template": "waste.deep.adversaries.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-adversaries-4": {
+            "template": "waste.deep.adversaries.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-adversaries-5": {
+            "template": "waste.deep.adversaries.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-adversaries-6": {
+            "template": "waste.deep.adversaries.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-adversaries-7": {
+            "template": "waste.deep.adversaries.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-adversaries-8": {
+            "template": "waste.deep.adversaries.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-adversaries-9": {
+            "template": "waste.deep.adversaries.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-adversaries-10": {
+            "template": "waste.deep.adversaries.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-adversaries-11": {
+            "template": "waste.deep.adversaries.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-adversaries-12": {
+            "template": "waste.deep.adversaries.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-adversaries-13": {
+            "template": "waste.deep.adversaries.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-adversaries-14": {
+            "template": "waste.deep.adversaries.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-adversaries-15": {
+            "template": "waste.deep.adversaries.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          },
+          "deep-adversaries-16": {
+            "template": "waste.deep.adversaries.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dustroad-convoy"
+              ]
+            }
+          },
+          "deep-adversaries-17": {
+            "template": "waste.deep.adversaries.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "seed-vault"
+              ]
+            }
+          },
+          "deep-adversaries-18": {
+            "template": "waste.deep.adversaries.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "last-grid"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,592 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.myth.locations",
+  "version": "1.1.0",
+  "type": "locations",
+  "name": "Twelve Ford Island and Threshold Sites — Illustrated",
+  "description": "Twelve Ford Island and Threshold Sites for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+  "tags": [
+    "mythic-antiquity",
+    "warring-poleis",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Twelve Ford Island and Threshold Sites for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+    "highlights": [
+      "Twelve Ford Island and Threshold Sites",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.mythic-antiquity"
+    ],
+    "requiresCapabilities": [
+      "world:mythic-antiquity"
+    ],
+    "providesCapabilities": [
+      "locations:mythic-antiquity"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.myth.world-template",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Mythic Antiquity original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.myth.locations"
+  },
+  "published": true,
+  "counts": {
+    "locations": 12,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.myth.locations",
+    "version": "1.1.0",
+    "name": "Twelve Ford Island and Threshold Sites — Illustrated",
+    "description": "Twelve Ford Island and Threshold Sites for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+    "provides": [
+      "locations:mythic-antiquity"
+    ],
+    "requires": [
+      "world:mythic-antiquity"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.locations.1",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Backward Ford"
+            },
+            "description": {
+              "value": "Backward Ford: the river reverses as rival armies each claim divine permission to cross."
+            },
+            "deepId": {
+              "value": "locations.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.locations.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.locations.2",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Island of Second Echoes"
+            },
+            "description": {
+              "value": "Island of Second Echoes: every shouted command returns in the voice of a missing sailor."
+            },
+            "deepId": {
+              "value": "locations.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.locations.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.locations.3",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Threshold Stair"
+            },
+            "description": {
+              "value": "Threshold Stair: the dead wait with tokens of tasks the living have forgotten."
+            },
+            "deepId": {
+              "value": "locations.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.locations.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.locations.4",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Bronze Oracle Court"
+            },
+            "description": {
+              "value": "Bronze Oracle Court: a prophecy tablet has a scraped-away condition beneath the war decree."
+            },
+            "deepId": {
+              "value": "locations.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.locations.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.locations.5",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Storm Jar Anchorage"
+            },
+            "description": {
+              "value": "Storm Jar Anchorage: a chained squall pulls against the harbor while ships cannot depart."
+            },
+            "deepId": {
+              "value": "locations.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.locations.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.locations.6",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Hall of Unfinished Deeds"
+            },
+            "description": {
+              "value": "Hall of Unfinished Deeds: rank and wealth vanish while abandoned promises take visible shape."
+            },
+            "deepId": {
+              "value": "locations.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.locations.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.locations.7",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Laurel Pass"
+            },
+            "description": {
+              "value": "Laurel Pass: envoys can meet out of bowshot if both standards are lowered."
+            },
+            "deepId": {
+              "value": "locations.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.locations.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.locations.8",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Pearl Cavern"
+            },
+            "description": {
+              "value": "Pearl Cavern: a submerged altar accepts the storm only after a safe diving route is marked."
+            },
+            "deepId": {
+              "value": "locations.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.locations.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.locations.9",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Garden of Borrowed Days"
+            },
+            "description": {
+              "value": "Garden of Borrowed Days: a lost sibling may speak while another visitor offers a day of memory."
+            },
+            "deepId": {
+              "value": "locations.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.locations.9"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.locations.10",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Shield Foundry"
+            },
+            "description": {
+              "value": "Shield Foundry: the defense muster can be rebuilt as a river rescue crew."
+            },
+            "deepId": {
+              "value": "locations.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.locations.10"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.locations.11",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Homeward Beacon"
+            },
+            "description": {
+              "value": "Homeward Beacon: a flame remembers the missing sailor when the crew tells their story."
+            },
+            "deepId": {
+              "value": "locations.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.locations.11"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.locations.12",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Quiet Ferry"
+            },
+            "description": {
+              "value": "Quiet Ferry: the ferryman permits a return only with a named deed completed."
+            },
+            "deepId": {
+              "value": "locations.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.locations.12"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-locations-1": {
+            "template": "myth.deep.locations.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-locations-2": {
+            "template": "myth.deep.locations.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-locations-3": {
+            "template": "myth.deep.locations.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-locations-4": {
+            "template": "myth.deep.locations.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-locations-5": {
+            "template": "myth.deep.locations.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-locations-6": {
+            "template": "myth.deep.locations.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-locations-7": {
+            "template": "myth.deep.locations.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-locations-8": {
+            "template": "myth.deep.locations.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-locations-9": {
+            "template": "myth.deep.locations.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-locations-10": {
+            "template": "myth.deep.locations.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-locations-11": {
+            "template": "myth.deep.locations.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-locations-12": {
+            "template": "myth.deep.locations.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

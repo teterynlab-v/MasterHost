@@ -1,0 +1,1882 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.urban.cast",
+  "version": "1.1.0",
+  "type": "cast",
+  "name": "Readers Tenants Civic Workers and Threats — Illustrated",
+  "description": "Readers Tenants Civic Workers and Threats for Hidden Courts, Monster Districts, Municipal Magic Conspiracy. Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.",
+  "tags": [
+    "urban-fantasy",
+    "hidden-courts",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Readers Tenants Civic Workers and Threats for Hidden Courts, Monster Districts, Municipal Magic Conspiracy. Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.",
+    "highlights": [
+      "Readers Tenants Civic Workers and Threats",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.urban-fantasy"
+    ],
+    "requiresCapabilities": [
+      "world:urban-fantasy"
+    ],
+    "providesCapabilities": [
+      "cast:urban-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.urban.world-template",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Urban Fantasy original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.urban.cast"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 42,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.urban.cast",
+    "version": "1.1.0",
+    "name": "Readers Tenants Civic Workers and Threats — Illustrated",
+    "description": "Readers Tenants Civic Workers and Threats for Hidden Courts, Monster Districts, Municipal Magic Conspiracy. Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.",
+    "provides": [
+      "cast:urban-fantasy"
+    ],
+    "requires": [
+      "world:urban-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.1",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Librarian Mara Leaf"
+            },
+            "description": {
+              "value": "Librarian Mara Leaf: knows which borrower took the ending and refuses to surrender readers' memories."
+            },
+            "deepId": {
+              "value": "npcs.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.npcs.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.2",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Tenant Kai Lantern"
+            },
+            "description": {
+              "value": "Tenant Kai Lantern: can repair the blackout circuit if the roof is opened."
+            },
+            "deepId": {
+              "value": "npcs.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.npcs.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.3",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Dispatcher Ren Route"
+            },
+            "description": {
+              "value": "Dispatcher Ren Route: keeps callers' descriptions of streets the map no longer admits exist."
+            },
+            "deepId": {
+              "value": "npcs.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "municipal-magic-conspiracy",
+            "illustrated.urban-fantasy.npcs.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.4",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Court Reader Tessa Margin"
+            },
+            "description": {
+              "value": "Court Reader Tessa Margin: will release patrons if the lending record proves her claim expired."
+            },
+            "deepId": {
+              "value": "npcs.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.npcs.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.5",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Caretaker Ivo Shade"
+            },
+            "description": {
+              "value": "Caretaker Ivo Shade: hid the inspection notice to protect neighbors and now needs their help."
+            },
+            "deepId": {
+              "value": "npcs.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.npcs.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.6",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Clerk Bea Permit"
+            },
+            "description": {
+              "value": "Clerk Bea Permit: copied the unauthorized contract before its index vanished."
+            },
+            "deepId": {
+              "value": "npcs.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "municipal-magic-conspiracy",
+            "illustrated.urban-fantasy.npcs.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.7",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Borrower Neri Tomorrow"
+            },
+            "description": {
+              "value": "Borrower Neri Tomorrow: has the final page but cannot find the return chute's present entrance."
+            },
+            "deepId": {
+              "value": "npcs.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.npcs.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.8",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Inspector Sol Night"
+            },
+            "description": {
+              "value": "Inspector Sol Night: can accept a witnessed evening inspection if safety conditions are documented."
+            },
+            "deepId": {
+              "value": "npcs.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.npcs.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.9",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Archivist Fia Street"
+            },
+            "description": {
+              "value": "Archivist Fia Street: keeps an offline address list in the utility basement."
+            },
+            "deepId": {
+              "value": "npcs.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "municipal-magic-conspiracy",
+            "illustrated.urban-fantasy.npcs.9"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.10",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Student Juno Ink"
+            },
+            "description": {
+              "value": "Student Juno Ink: remembers the treaty's final sentence without knowing its meaning."
+            },
+            "deepId": {
+              "value": "npcs.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.npcs.10"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.11",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Cook Mei Common"
+            },
+            "description": {
+              "value": "Cook Mei Common: can gather neighbors who usually avoid each other's shifts."
+            },
+            "deepId": {
+              "value": "npcs.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.npcs.11"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.12",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Engineer Oren Grid"
+            },
+            "description": {
+              "value": "Engineer Oren Grid: can restore names if the private extension's feed is isolated."
+            },
+            "deepId": {
+              "value": "npcs.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "municipal-magic-conspiracy",
+            "illustrated.urban-fantasy.npcs.12"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.13",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Court Herald Dev Index"
+            },
+            "description": {
+              "value": "Court Herald Dev Index: admits the ending was lent without both courts' consent."
+            },
+            "deepId": {
+              "value": "npcs.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.npcs.13"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.14",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Courier Noa Roof"
+            },
+            "description": {
+              "value": "Courier Noa Roof: can carry repair cells through the tower's daylight landing."
+            },
+            "deepId": {
+              "value": "npcs.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.npcs.14"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.15",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Paramedic Rosa Turn"
+            },
+            "description": {
+              "value": "Paramedic Rosa Turn: needs a usable route to the unnamed junction before another call."
+            },
+            "deepId": {
+              "value": "npcs.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "municipal-magic-conspiracy",
+            "illustrated.urban-fantasy.npcs.15"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.16",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Pagebinder Ada Spine"
+            },
+            "description": {
+              "value": "Pagebinder Ada Spine: can rejoin the treaty without erasing the borrower's annotation."
+            },
+            "deepId": {
+              "value": "npcs.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.npcs.16"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.17",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Neighbor Pell Dawn"
+            },
+            "description": {
+              "value": "Neighbor Pell Dawn: wants safe stairs and will oppose the forced sweep if repairs are visible."
+            },
+            "deepId": {
+              "value": "npcs.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.npcs.17"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.18",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Auditor Ash Budget"
+            },
+            "description": {
+              "value": "Auditor Ash Budget: found payments for streets that disappeared after contract renewal."
+            },
+            "deepId": {
+              "value": "npcs.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "municipal-magic-conspiracy",
+            "illustrated.urban-fantasy.npcs.18"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.19",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Reader Len Memory"
+            },
+            "description": {
+              "value": "Reader Len Memory: lost a childhood recollection while trying to leave the margin room."
+            },
+            "deepId": {
+              "value": "npcs.19"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.npcs.19"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.20",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Witness Kira Shift"
+            },
+            "description": {
+              "value": "Witness Kira Shift: can document a safe inspection without disclosing private identities."
+            },
+            "deepId": {
+              "value": "npcs.20"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.npcs.20"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.21",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Resident Taro Unbound"
+            },
+            "description": {
+              "value": "Resident Taro Unbound: knows the old street name and wants residents to choose its return."
+            },
+            "deepId": {
+              "value": "npcs.21"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "municipal-magic-conspiracy",
+            "illustrated.urban-fantasy.npcs.21"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.22",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Deskkeeper Siva Due"
+            },
+            "description": {
+              "value": "Deskkeeper Siva Due: will move the return deadline if both courts sign the repair."
+            },
+            "deepId": {
+              "value": "npcs.22"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.npcs.22"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.23",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Shadeworker Tess Wire"
+            },
+            "description": {
+              "value": "Shadeworker Tess Wire: can bypass the broken circuit at a visible fire risk."
+            },
+            "deepId": {
+              "value": "npcs.23"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.npcs.23"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.npcs.24",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Organizer Eri Map"
+            },
+            "description": {
+              "value": "Organizer Eri Map: collects residents' route choices before the spell office reconnects them."
+            },
+            "deepId": {
+              "value": "npcs.24"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "municipal-magic-conspiracy",
+            "illustrated.urban-fantasy.npcs.24"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.adversaries.1",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Margin Bailiff"
+            },
+            "description": {
+              "value": "Margin Bailiff: takes memories as exit payment unless the treaty ending is restored."
+            },
+            "deepId": {
+              "value": "adversaries.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.adversaries.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.adversaries.2",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Daylight Sweep Crew"
+            },
+            "description": {
+              "value": "Daylight Sweep Crew: forces doors open at dawn despite a safer inspection proposal."
+            },
+            "deepId": {
+              "value": "adversaries.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.adversaries.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.adversaries.3",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Street Eraser"
+            },
+            "description": {
+              "value": "Street Eraser: enforces a private spell extension over public emergency routes."
+            },
+            "deepId": {
+              "value": "adversaries.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "municipal-magic-conspiracy",
+            "illustrated.urban-fantasy.adversaries.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.adversaries.4",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Index Moth"
+            },
+            "description": {
+              "value": "Index Moth: eats the return record and retreats from a complete spoken sentence."
+            },
+            "deepId": {
+              "value": "adversaries.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.adversaries.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.adversaries.5",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Shade Saboteur"
+            },
+            "description": {
+              "value": "Shade Saboteur: cuts roof access to profit from the tower's inspection failure."
+            },
+            "deepId": {
+              "value": "adversaries.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.adversaries.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.adversaries.6",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Permit Enforcer"
+            },
+            "description": {
+              "value": "Permit Enforcer: seizes the offline list as an unauthorized map."
+            },
+            "deepId": {
+              "value": "adversaries.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "municipal-magic-conspiracy",
+            "illustrated.urban-fantasy.adversaries.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.adversaries.7",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Tomorrow Librarian"
+            },
+            "description": {
+              "value": "Tomorrow Librarian: keeps the page beyond closing until its true due date is shown."
+            },
+            "deepId": {
+              "value": "adversaries.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.adversaries.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.adversaries.8",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Sunlit Sentinel"
+            },
+            "description": {
+              "value": "Sunlit Sentinel: guards the stairs without distinguishing residents from threats."
+            },
+            "deepId": {
+              "value": "adversaries.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.adversaries.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.adversaries.9",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Route Doppelganger"
+            },
+            "description": {
+              "value": "Route Doppelganger: sends rescuers to a duplicate junction absent from the paper map."
+            },
+            "deepId": {
+              "value": "adversaries.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "municipal-magic-conspiracy",
+            "illustrated.urban-fantasy.adversaries.9"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.adversaries.10",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Court Usurer"
+            },
+            "description": {
+              "value": "Court Usurer: offers a replacement ending at the cost of permanent reader tribute."
+            },
+            "deepId": {
+              "value": "adversaries.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.adversaries.10"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.adversaries.11",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "False Caretaker"
+            },
+            "description": {
+              "value": "False Caretaker: offers a shade repair that locks all tenants inside."
+            },
+            "deepId": {
+              "value": "adversaries.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.adversaries.11"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.adversaries.12",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Budget Wraith"
+            },
+            "description": {
+              "value": "Budget Wraith: conceals the spell extension's payment trail in repeating invoices."
+            },
+            "deepId": {
+              "value": "adversaries.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "municipal-magic-conspiracy",
+            "illustrated.urban-fantasy.adversaries.12"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.adversaries.13",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Borrowed Memory Shade"
+            },
+            "description": {
+              "value": "Borrowed Memory Shade: imitates the lost recollection to lure a reader from witnesses."
+            },
+            "deepId": {
+              "value": "adversaries.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.adversaries.13"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.adversaries.14",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Roof Lock Automaton"
+            },
+            "description": {
+              "value": "Roof Lock Automaton: rejects valid tenant access while obeying an outdated inspection hold."
+            },
+            "deepId": {
+              "value": "adversaries.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.adversaries.14"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.adversaries.15",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Archive Shredder"
+            },
+            "description": {
+              "value": "Archive Shredder: destroys streets removed from the private index."
+            },
+            "deepId": {
+              "value": "adversaries.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "municipal-magic-conspiracy",
+            "illustrated.urban-fantasy.adversaries.15"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.adversaries.16",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Closing Bell Echo"
+            },
+            "description": {
+              "value": "Closing Bell Echo: repeats the library's detention rule after the treaty is whole."
+            },
+            "deepId": {
+              "value": "adversaries.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.adversaries.16"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.adversaries.17",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Inspection Rumor"
+            },
+            "description": {
+              "value": "Inspection Rumor: turns ordinary neighbors against nocturnal households with false safety claims."
+            },
+            "deepId": {
+              "value": "adversaries.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.adversaries.17"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.adversaries.18",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Contract Reflection"
+            },
+            "description": {
+              "value": "Contract Reflection: recreates the erased street feed unless the extension is explicitly ended."
+            },
+            "deepId": {
+              "value": "adversaries.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "municipal-magic-conspiracy",
+            "illustrated.urban-fantasy.adversaries.18"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-npcs-1": {
+            "template": "urban.deep.npcs.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "hidden-courts"
+              ]
+            }
+          },
+          "deep-npcs-2": {
+            "template": "urban.deep.npcs.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "monster-districts"
+              ]
+            }
+          },
+          "deep-npcs-3": {
+            "template": "urban.deep.npcs.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "municipal-magic-conspiracy"
+              ]
+            }
+          },
+          "deep-npcs-4": {
+            "template": "urban.deep.npcs.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "hidden-courts"
+              ]
+            }
+          },
+          "deep-npcs-5": {
+            "template": "urban.deep.npcs.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "monster-districts"
+              ]
+            }
+          },
+          "deep-npcs-6": {
+            "template": "urban.deep.npcs.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "municipal-magic-conspiracy"
+              ]
+            }
+          },
+          "deep-npcs-7": {
+            "template": "urban.deep.npcs.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "hidden-courts"
+              ]
+            }
+          },
+          "deep-npcs-8": {
+            "template": "urban.deep.npcs.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "monster-districts"
+              ]
+            }
+          },
+          "deep-npcs-9": {
+            "template": "urban.deep.npcs.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "municipal-magic-conspiracy"
+              ]
+            }
+          },
+          "deep-npcs-10": {
+            "template": "urban.deep.npcs.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "hidden-courts"
+              ]
+            }
+          },
+          "deep-npcs-11": {
+            "template": "urban.deep.npcs.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "monster-districts"
+              ]
+            }
+          },
+          "deep-npcs-12": {
+            "template": "urban.deep.npcs.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "municipal-magic-conspiracy"
+              ]
+            }
+          },
+          "deep-npcs-13": {
+            "template": "urban.deep.npcs.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "hidden-courts"
+              ]
+            }
+          },
+          "deep-npcs-14": {
+            "template": "urban.deep.npcs.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "monster-districts"
+              ]
+            }
+          },
+          "deep-npcs-15": {
+            "template": "urban.deep.npcs.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "municipal-magic-conspiracy"
+              ]
+            }
+          },
+          "deep-npcs-16": {
+            "template": "urban.deep.npcs.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "hidden-courts"
+              ]
+            }
+          },
+          "deep-npcs-17": {
+            "template": "urban.deep.npcs.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "monster-districts"
+              ]
+            }
+          },
+          "deep-npcs-18": {
+            "template": "urban.deep.npcs.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "municipal-magic-conspiracy"
+              ]
+            }
+          },
+          "deep-npcs-19": {
+            "template": "urban.deep.npcs.19",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "hidden-courts"
+              ]
+            }
+          },
+          "deep-npcs-20": {
+            "template": "urban.deep.npcs.20",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "monster-districts"
+              ]
+            }
+          },
+          "deep-npcs-21": {
+            "template": "urban.deep.npcs.21",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "municipal-magic-conspiracy"
+              ]
+            }
+          },
+          "deep-npcs-22": {
+            "template": "urban.deep.npcs.22",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "hidden-courts"
+              ]
+            }
+          },
+          "deep-npcs-23": {
+            "template": "urban.deep.npcs.23",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "monster-districts"
+              ]
+            }
+          },
+          "deep-npcs-24": {
+            "template": "urban.deep.npcs.24",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "municipal-magic-conspiracy"
+              ]
+            }
+          },
+          "deep-adversaries-1": {
+            "template": "urban.deep.adversaries.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "hidden-courts"
+              ]
+            }
+          },
+          "deep-adversaries-2": {
+            "template": "urban.deep.adversaries.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "monster-districts"
+              ]
+            }
+          },
+          "deep-adversaries-3": {
+            "template": "urban.deep.adversaries.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "municipal-magic-conspiracy"
+              ]
+            }
+          },
+          "deep-adversaries-4": {
+            "template": "urban.deep.adversaries.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "hidden-courts"
+              ]
+            }
+          },
+          "deep-adversaries-5": {
+            "template": "urban.deep.adversaries.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "monster-districts"
+              ]
+            }
+          },
+          "deep-adversaries-6": {
+            "template": "urban.deep.adversaries.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "municipal-magic-conspiracy"
+              ]
+            }
+          },
+          "deep-adversaries-7": {
+            "template": "urban.deep.adversaries.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "hidden-courts"
+              ]
+            }
+          },
+          "deep-adversaries-8": {
+            "template": "urban.deep.adversaries.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "monster-districts"
+              ]
+            }
+          },
+          "deep-adversaries-9": {
+            "template": "urban.deep.adversaries.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "municipal-magic-conspiracy"
+              ]
+            }
+          },
+          "deep-adversaries-10": {
+            "template": "urban.deep.adversaries.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "hidden-courts"
+              ]
+            }
+          },
+          "deep-adversaries-11": {
+            "template": "urban.deep.adversaries.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "monster-districts"
+              ]
+            }
+          },
+          "deep-adversaries-12": {
+            "template": "urban.deep.adversaries.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "municipal-magic-conspiracy"
+              ]
+            }
+          },
+          "deep-adversaries-13": {
+            "template": "urban.deep.adversaries.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "hidden-courts"
+              ]
+            }
+          },
+          "deep-adversaries-14": {
+            "template": "urban.deep.adversaries.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "monster-districts"
+              ]
+            }
+          },
+          "deep-adversaries-15": {
+            "template": "urban.deep.adversaries.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "municipal-magic-conspiracy"
+              ]
+            }
+          },
+          "deep-adversaries-16": {
+            "template": "urban.deep.adversaries.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "hidden-courts"
+              ]
+            }
+          },
+          "deep-adversaries-17": {
+            "template": "urban.deep.adversaries.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "monster-districts"
+              ]
+            }
+          },
+          "deep-adversaries-18": {
+            "template": "urban.deep.adversaries.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "municipal-magic-conspiracy"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

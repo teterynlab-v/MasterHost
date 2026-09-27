@@ -1,0 +1,1108 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.dusk.items",
+  "version": "1.1.0",
+  "type": "items",
+  "name": "Contract Name and Cure Evidence — Illustrated",
+  "description": "Contract Name and Cure Evidence for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+  "tags": [
+    "dark-fantasy",
+    "dying-marches",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Contract Name and Cure Evidence for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+    "highlights": [
+      "Contract Name and Cure Evidence",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.dark-fantasy"
+    ],
+    "requiresCapabilities": [
+      "setting:dark-fantasy"
+    ],
+    "providesCapabilities": [
+      "items:dark-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.dusk.setting",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Dark Fantasy original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.dusk.items"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 24,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.dusk.items",
+    "version": "1.1.0",
+    "name": "Contract Name and Cure Evidence — Illustrated",
+    "description": "Contract Name and Cure Evidence for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+    "provides": [
+      "items:dark-fantasy"
+    ],
+    "requires": [
+      "setting:dark-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.1",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "First Bell Contract"
+            },
+            "description": {
+              "value": "First Bell Contract: promises protection to all residents rather than sworn owners alone."
+            },
+            "deepId": {
+              "value": "items.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.items.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.2",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Child Sign Book"
+            },
+            "description": {
+              "value": "Child Sign Book: preserves gestures while the court erases written names."
+            },
+            "deepId": {
+              "value": "items.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.items.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.3",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Recovery Record"
+            },
+            "description": {
+              "value": "Recovery Record: separates clean-water improvements from imposed confessions."
+            },
+            "deepId": {
+              "value": "items.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.items.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.4",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Dawn Clapper"
+            },
+            "description": {
+              "value": "Dawn Clapper: can restore the warning bell after its theft is witnessed."
+            },
+            "deepId": {
+              "value": "items.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.items.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.5",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Broken Pact Seal"
+            },
+            "description": {
+              "value": "Broken Pact Seal: proves the heir was spared at the children's expense."
+            },
+            "deepId": {
+              "value": "items.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.items.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.6",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Hospice Ration Key"
+            },
+            "description": {
+              "value": "Hospice Ration Key: opens a store seized by the penance marshal."
+            },
+            "deepId": {
+              "value": "items.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.items.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.7",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Tenant Seed Sack"
+            },
+            "description": {
+              "value": "Tenant Seed Sack: allows planting outside the levy if defense is arranged."
+            },
+            "deepId": {
+              "value": "items.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.items.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.8",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Common Naming Verse"
+            },
+            "description": {
+              "value": "Common Naming Verse: can restore names without assigning them to a house."
+            },
+            "deepId": {
+              "value": "items.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.items.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.9",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Rest Charter"
+            },
+            "description": {
+              "value": "Rest Charter: guarantees the saint safe rest and the right to leave."
+            },
+            "deepId": {
+              "value": "items.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.items.9"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.10",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Levy Chest Receipt"
+            },
+            "description": {
+              "value": "Levy Chest Receipt: links confiscated grain to the captain's private guard."
+            },
+            "deepId": {
+              "value": "items.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.items.10"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.11",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Mirror Chalk"
+            },
+            "description": {
+              "value": "Mirror Chalk: lets children mark their route without written names."
+            },
+            "deepId": {
+              "value": "items.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.items.11"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.12",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Well Test Strip"
+            },
+            "description": {
+              "value": "Well Test Strip: identifies irritant contamination before cure dilution."
+            },
+            "deepId": {
+              "value": "items.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.items.12"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.13",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Repair Covenant"
+            },
+            "description": {
+              "value": "Repair Covenant: exchanges tenant gate work for an accountable defense schedule."
+            },
+            "deepId": {
+              "value": "items.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.13"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.items.13"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.14",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "River Witness Cord"
+            },
+            "description": {
+              "value": "River Witness Cord: binds three representatives without transferring children's debts."
+            },
+            "deepId": {
+              "value": "items.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.17"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.items.14"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.15",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Rotating Care List"
+            },
+            "description": {
+              "value": "Rotating Care List: keeps treatment available while the bearer rests."
+            },
+            "deepId": {
+              "value": "items.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.21"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.items.15"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.16",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Decoy Dawn Lantern"
+            },
+            "description": {
+              "value": "Decoy Dawn Lantern: draws the sun hound away from the planting crews."
+            },
+            "deepId": {
+              "value": "items.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.22"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.items.16"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.17",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Heir Testimony"
+            },
+            "description": {
+              "value": "Heir Testimony: can expose the broken promise without naming another child as collateral."
+            },
+            "deepId": {
+              "value": "items.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.items.17"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.18",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Smoke Filter"
+            },
+            "description": {
+              "value": "Smoke Filter: protects hospice patients from the ash censer."
+            },
+            "deepId": {
+              "value": "items.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.items.18"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.19",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Universal Protection Copy"
+            },
+            "description": {
+              "value": "Universal Protection Copy: can survive destruction of the bell archive."
+            },
+            "deepId": {
+              "value": "items.19"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.items.19"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.20",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Nursery Petition"
+            },
+            "description": {
+              "value": "Nursery Petition: states the children's own conditions for name restoration."
+            },
+            "deepId": {
+              "value": "items.20"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.items.20"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.21",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Clean Dose Flask"
+            },
+            "description": {
+              "value": "Clean Dose Flask: offers a measured cure instead of a confession payment."
+            },
+            "deepId": {
+              "value": "items.21"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.15"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.items.21"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.22",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Defense Route Map"
+            },
+            "description": {
+              "value": "Defense Route Map: marks patrols that leave tenant furrows intact."
+            },
+            "deepId": {
+              "value": "items.22"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.16"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.items.22"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.23",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Unowned Name Register"
+            },
+            "description": {
+              "value": "Unowned Name Register: records identities with the right to revise or remove them."
+            },
+            "deepId": {
+              "value": "items.23"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.20"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.items.23"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.items.24",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Open Cure Agreement"
+            },
+            "description": {
+              "value": "Open Cure Agreement: sets treatment priority and prevents captive ownership of the bearer."
+            },
+            "deepId": {
+              "value": "items.24"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.24"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.items.24"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-items-1": {
+            "template": "dusk.deep.items.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-items-2": {
+            "template": "dusk.deep.items.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-items-3": {
+            "template": "dusk.deep.items.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-items-4": {
+            "template": "dusk.deep.items.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-items-5": {
+            "template": "dusk.deep.items.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-items-6": {
+            "template": "dusk.deep.items.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-items-7": {
+            "template": "dusk.deep.items.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-items-8": {
+            "template": "dusk.deep.items.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-items-9": {
+            "template": "dusk.deep.items.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-items-10": {
+            "template": "dusk.deep.items.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-items-11": {
+            "template": "dusk.deep.items.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-items-12": {
+            "template": "dusk.deep.items.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-items-13": {
+            "template": "dusk.deep.items.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-items-14": {
+            "template": "dusk.deep.items.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-items-15": {
+            "template": "dusk.deep.items.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-items-16": {
+            "template": "dusk.deep.items.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-items-17": {
+            "template": "dusk.deep.items.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-items-18": {
+            "template": "dusk.deep.items.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-items-19": {
+            "template": "dusk.deep.items.19",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-items-20": {
+            "template": "dusk.deep.items.20",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-items-21": {
+            "template": "dusk.deep.items.21",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-items-22": {
+            "template": "dusk.deep.items.22",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-items-23": {
+            "template": "dusk.deep.items.23",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-items-24": {
+            "template": "dusk.deep.items.24",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

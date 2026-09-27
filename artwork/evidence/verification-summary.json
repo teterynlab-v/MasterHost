@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-27T20:22:51.585645+00:00",
+  "sourceBaseHead": "5f7321a18ffdc71a8e29c677954c57245f3fb1b5",
+  "selectedGeneratedImages": 1812,
+  "universes": 12,
+  "objectsPerUniverse": 151,
+  "typecheck": "passed",
+  "tests": {
+    "passed": 260,
+    "skipped": 0,
+    "files": 72,
+    "databaseTests": "real isolated PostgreSQL"
+  },
+  "webBuild": "passed",
+  "release": {
+    "version": "0.2.0-illustrated",
+    "files": 3278,
+    "thirdPartyLicenses": 197,
+    "sha256": "04d2c2f39ecf9ee2dcb6a08c3f94211a19f0133271a74b06e06334616eb0991b",
+    "serverImageSha256": "f2e9465fd5204c4fd948400c336a0ed69967ec448a820ff4f72a56780b693980"
+  },
+  "cleanInstallation": {
+    "installations": 2,
+    "compiledKitWorlds": 36,
+    "selfContainedGameImports": 12,
+    "imagesPerCollection": 151,
+    "allImageSizesAndChecksums": "passed",
+    "imageMimeAfterRestart": "passed",
+    "liveSessions": 12,
+    "restartReadback": "passed"
+  },
+  "browser": {
+    "catalogueLoadedCovers": 12,
+    "representativeTablesAndPortraitSelection": "artwork/runtime-evidence.json",
+    "retainedUrbanQuickGmReloadAndApiRestart": "passed",
+    "fullMobileAndAccessibilityAcceptance": "open"
+  },
+  "sourceReview": "independent read-only review accepted menu dependency selection and exact published Pack lookups; no independent live gate rerun claimed",
+  "artReview": "limited checksum-bound source/thumbnail inspection; full-resolution human review pending; recurring NPC facial similarities and decorative unreadable glyphs remain",
+  "M30HumanAcceptance": "open"
+}

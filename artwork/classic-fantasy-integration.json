@@ -1,0 +1,10 @@
+{
+  "universeId": "classic-fantasy",
+  "version": "1.4.0",
+  "sourcePack": "classic-fantasy",
+  "sourceImages": 151,
+  "runtimeImages": 151,
+  "runtimeBytes": 7015628,
+  "status": "assembled; all151 live HTTP checks and clean game portability/restart verified; representative browser proof separate; human art review pending",
+  "verificationEvidence": "artwork/evidence/verification-summary.json"
+}

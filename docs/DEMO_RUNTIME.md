@@ -19,3 +19,11 @@ From the repository run `./scripts/resume-demo.sh` to resume this existing demo.
 ## Recovery evidence, 2026-09-27
 
 The previous temporary Vite process had exited while API and PostgreSQL remained healthy. Replaced that frontend with the production Docker image. Health through the web proxy returned200 and the catalog returned12 ready universes. Browser recovered the saved GM campaign/code, six scenes, Pack map and connected WebSocket. Stopped the web container, ran resume-demo.sh, then reloaded the browser and confirmed recovery. No application/database replacement or external deployment.
+
+## Illustrated collection refresh, 2026-09-27
+
+All twelve illustrated asset collections are installed. API/web containers now use the illustration preview images; the PostgreSQL container, existing records, environment, exact port bindings, network aliases and restart policies were preserved. The retained catalogue loaded all twelve generated covers in the browser. A new Urban Fantasy game was created through Quick Builder with 151 included media, then its six scenes, illustrated exploration map and connected GM table were checked after reload. Its code is 792245. Old immutable Worlds still use their old media; create a new game from the collection for the illustrated versions.
+
+Source gallery: http://127.0.0.1:8247/. Evidence is in `artwork/runtime-evidence.json` and `artwork/evidence/retained-urban-gm.png`. Full-resolution art review and M30 human acceptance remain separate.
+
+Final server image was built from the checked extracted illustrated release, including exact published Pack lookups in runtime, Realm context and Descriptor flows. The same retained campaign restored after this API replacement. Clean portability/live-session/restart engineering proof is separate in `artwork/evidence/verification-summary.json`; it passed on 2026-09-28.

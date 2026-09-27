@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.mecha.rules",
+  "version": "1.1.0",
+  "type": "rules",
+  "name": "Evacuation Inspection and Salvage Rules — Illustrated",
+  "description": "Evacuation Inspection and Salvage Rules for Defense Metropolis, Colony Rebellion, Machine-Wreck Frontier. Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.",
+  "tags": [
+    "mecha-kaiju",
+    "defense-metropolis",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Evacuation Inspection and Salvage Rules for Defense Metropolis, Colony Rebellion, Machine-Wreck Frontier. Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.",
+    "highlights": [
+      "Evacuation Inspection and Salvage Rules",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.mecha-kaiju"
+    ],
+    "requiresCapabilities": [
+      "setting:mecha-kaiju"
+    ],
+    "providesCapabilities": [
+      "rules:mecha-kaiju"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.mecha.setting",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Mecha & Kaiju original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.mecha.rules"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 6,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.mecha.rules",
+    "version": "1.1.0",
+    "name": "Evacuation Inspection and Salvage Rules — Illustrated",
+    "description": "Evacuation Inspection and Salvage Rules for Defense Metropolis, Colony Rebellion, Machine-Wreck Frontier. Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.",
+    "provides": [
+      "rules:mecha-kaiju"
+    ],
+    "requires": [
+      "setting:mecha-kaiju"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/actions/mecha-mark-safe-arc",
+        "value": {
+          "label": "Mark Safe Arc",
+          "target": "self",
+          "kind": "check",
+          "checkId": "systems"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/mecha-lift-ferry",
+        "value": {
+          "label": "Lift Ferry",
+          "target": "self",
+          "kind": "check",
+          "checkId": "force"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/mecha-verify-quotas",
+        "value": {
+          "label": "Verify Quotas",
+          "target": "self",
+          "kind": "check",
+          "checkId": "systems"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/mecha-negotiate-air",
+        "value": {
+          "label": "Negotiate Air",
+          "target": "self",
+          "kind": "check",
+          "checkId": "bond"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/mecha-brace-cabin",
+        "value": {
+          "label": "Brace Cabin",
+          "target": "self",
+          "kind": "check",
+          "checkId": "force"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/mecha-relay-consent",
+        "value": {
+          "label": "Relay Consent",
+          "target": "self",
+          "kind": "check",
+          "checkId": "bond"
+        }
+      }
+    ]
+  }
+}

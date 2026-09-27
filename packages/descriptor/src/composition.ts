@@ -86,10 +86,12 @@ function parameterize(value: unknown, parameters: Record<string, string | number
 function target(root: Record<string, any>, segments: string[]) {
   let parent: any = root;
   for (const segment of segments.slice(0, -1)) {
-    if (!parent || typeof parent !== "object" || Array.isArray(parent) || !Object.prototype.hasOwnProperty.call(parent, segment)) throw Error(`patch parent does not exist at ${segment}`);
+    if (!parent || typeof parent !== "object" || (Array.isArray(parent) && !/^(0|[1-9][0-9]*)$/.test(segment)) || !Object.prototype.hasOwnProperty.call(parent, segment)) throw Error(`patch parent does not exist at ${segment}`);
     parent = parent[segment];
   }
-  return { parent, key: segments.at(-1)! };
+  const key = segments.at(-1)!;
+  if (Array.isArray(parent) && (!/^(0|[1-9][0-9]*)$/.test(key) || !Object.prototype.hasOwnProperty.call(parent, key))) throw Error(`patch array index does not exist at ${key}`);
+  return { parent, key };
 }
 
 export function composeGameDescriptor(input: ComposeGameDescriptorInput): { document: WorldPackDocument; report: CompositionReport } {

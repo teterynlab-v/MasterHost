@@ -1,0 +1,592 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.cyber.locations",
+  "version": "1.1.0",
+  "type": "locations",
+  "name": "Twelve District and Transit Sites — Illustrated",
+  "description": "Twelve District and Transit Sites for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+  "tags": [
+    "cyberpunk",
+    "rainline-mutual",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Twelve District and Transit Sites for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+    "highlights": [
+      "Twelve District and Transit Sites",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.cyberpunk"
+    ],
+    "requiresCapabilities": [
+      "world:cyberpunk"
+    ],
+    "providesCapabilities": [
+      "locations:cyberpunk"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.cyber.world-template",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Cyberpunk original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.cyber.locations"
+  },
+  "published": true,
+  "counts": {
+    "locations": 12,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.cyber.locations",
+    "version": "1.1.0",
+    "name": "Twelve District and Transit Sites — Illustrated",
+    "description": "Twelve District and Transit Sites for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+    "provides": [
+      "locations:cyberpunk"
+    ],
+    "requires": [
+      "world:cyberpunk"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.locations.1",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Rainline Pump Hall"
+            },
+            "description": {
+              "value": "Rainline Pump Hall: rising water threatens tenants while a remote contract keeps the intake locked."
+            },
+            "deepId": {
+              "value": "locations.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual",
+            "illustrated.cyberpunk.locations.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.locations.2",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Glasshouse Reception"
+            },
+            "description": {
+              "value": "Glasshouse Reception: a smiling terminal admits insured bodies but rejects their original names."
+            },
+            "deepId": {
+              "value": "locations.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house",
+            "illustrated.cyberpunk.locations.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.locations.3",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Ghost Platform"
+            },
+            "description": {
+              "value": "Ghost Platform: a dead train announces a courier who never arrived."
+            },
+            "deepId": {
+              "value": "locations.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit",
+            "illustrated.cyberpunk.locations.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.locations.4",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Copper Substation"
+            },
+            "description": {
+              "value": "Copper Substation: live wiring shares a wall with sleeping families."
+            },
+            "deepId": {
+              "value": "locations.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual",
+            "illustrated.cyberpunk.locations.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.locations.5",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Consent Vault"
+            },
+            "description": {
+              "value": "Consent Vault: paper originals contradict the clinic's sale receipts."
+            },
+            "deepId": {
+              "value": "locations.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house",
+            "illustrated.cyberpunk.locations.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.locations.6",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Tunnel Garden"
+            },
+            "description": {
+              "value": "Tunnel Garden: sleepers irrigate vegetables with stolen condensation."
+            },
+            "deepId": {
+              "value": "locations.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit",
+            "illustrated.cyberpunk.locations.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.locations.7",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Northbank Roofs"
+            },
+            "description": {
+              "value": "Northbank Roofs: a cable bridge carries medicines over the flooded road."
+            },
+            "deepId": {
+              "value": "locations.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual",
+            "illustrated.cyberpunk.locations.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.locations.8",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Helix Recovery Ward"
+            },
+            "description": {
+              "value": "Helix Recovery Ward: an awake patient hears their identity used by another body."
+            },
+            "deepId": {
+              "value": "locations.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house",
+            "illustrated.cyberpunk.locations.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.locations.9",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Signal Junction"
+            },
+            "description": {
+              "value": "Signal Junction: three memory routes offer incompatible versions of one farewell."
+            },
+            "deepId": {
+              "value": "locations.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit",
+            "illustrated.cyberpunk.locations.9"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.locations.10",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Meter Market"
+            },
+            "description": {
+              "value": "Meter Market: vendors auction the district's household consumption profiles."
+            },
+            "deepId": {
+              "value": "locations.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual",
+            "illustrated.cyberpunk.locations.10"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.locations.11",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Auditor Annex"
+            },
+            "description": {
+              "value": "Auditor Annex: a clerk keeps erased referrals in an unplugged recorder."
+            },
+            "deepId": {
+              "value": "locations.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house",
+            "illustrated.cyberpunk.locations.11"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.locations.12",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Return Siding"
+            },
+            "description": {
+              "value": "Return Siding: the courier's last physical possessions sit inside a sealed maintenance tram."
+            },
+            "deepId": {
+              "value": "locations.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit",
+            "illustrated.cyberpunk.locations.12"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-locations-1": {
+            "template": "cyber.deep.locations.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-locations-2": {
+            "template": "cyber.deep.locations.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-locations-3": {
+            "template": "cyber.deep.locations.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-locations-4": {
+            "template": "cyber.deep.locations.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-locations-5": {
+            "template": "cyber.deep.locations.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-locations-6": {
+            "template": "cyber.deep.locations.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-locations-7": {
+            "template": "cyber.deep.locations.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-locations-8": {
+            "template": "cyber.deep.locations.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-locations-9": {
+            "template": "cyber.deep.locations.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-locations-10": {
+            "template": "cyber.deep.locations.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-locations-11": {
+            "template": "cyber.deep.locations.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-locations-12": {
+            "template": "cyber.deep.locations.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

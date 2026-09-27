@@ -44,6 +44,22 @@ describe("M10 dynamic game Descriptor composition", () => {
     expect(first.document.manifest).toMatchObject({ id: "masterhost.game.game-one", version: "0.1.3", name: "Game One", official: false, publisher: "MasterHost Game Builder" });
   });
 
+  it("appends options inside an existing character field without replacing source options", () => {
+    const document=base();
+    document.content.characterCreation={schemaVersion:'1.0',steps:[{id:'appearance',title:'Appearance',fields:[{id:'portrait',label:'Portrait',type:'asset',options:[{value:'standard',label:'Standard'}]}]}],calculated:[],starting:{assets:[]}};
+    const fragment:GameDescriptorFragment={id:'portraits',version:'1',name:'Portraits',provides:[],requires:[],conflicts:[],parameters:{},patches:[{op:'append',path:'/content/characterCreation/steps/0/fields/0/options',value:[{value:'mage',label:'Mage'}]}]};
+    const result=composeGameDescriptor({projectId:'portraits',revision:1,name:'Portraits',base:document,fragments:[fragment],selections:[{fragmentId:fragment.id,version:'1',parameters:{}}]});
+    expect(result.report.valid,JSON.stringify(result.report.diagnostics)).toBe(true);
+    expect(result.document.content.characterCreation!.steps[0].fields[0].options!.map(option=>option.value)).toEqual(['standard','mage']);
+    expect(document.content.characterCreation!.steps[0].fields[0].options).toHaveLength(1);
+    for(const index of ['01','-1','999','length']){
+      fragment.patches[0].path=`/content/characterCreation/steps/${index}/fields/0/options`;
+      expect(composeGameDescriptor({projectId:'portraits',revision:1,name:'Portraits',base:document,fragments:[fragment],selections:[{fragmentId:fragment.id,version:'1',parameters:{}}]}).report.valid).toBe(false);
+    }
+    fragment.patches=[{op:'set',path:'/content/characterCreation/steps/extra',value:structuredClone(document.content.characterCreation!.steps[0])}];
+    expect(composeGameDescriptor({projectId:'portraits',revision:1,name:'Portraits',base:document,fragments:[fragment],selections:[{fragmentId:fragment.id,version:'1',parameters:{}}]}).report.valid).toBe(false);
+  });
+
   it("reports missing capabilities and explicit conflicts", () => {
     const dependent: GameDescriptorFragment = { id: "dependent", version: "1", name: "Dependent", provides: [], requires: ["rules:missing"], conflicts: [], parameters: {}, patches: [] };
     const blocked: GameDescriptorFragment = { id: "blocked", version: "1", name: "Blocked", provides: ["rules:blocked"], requires: [], conflicts: [location.id], parameters: {}, patches: [] };

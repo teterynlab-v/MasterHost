@@ -1,0 +1,1890 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.gothic.visuals",
+  "version": "1.1.0",
+  "type": "visuals",
+  "name": "Haunted Community Schematics — Illustrated",
+  "description": "Haunted Community Schematics for Mourning County, Velvet Court, Drowned Choir. Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.",
+  "tags": [
+    "gothic-horror",
+    "mourning-county",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Haunted Community Schematics for Mourning County, Velvet Court, Drowned Choir. Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.",
+    "highlights": [
+      "Haunted Community Schematics",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.gothic-horror"
+    ],
+    "requiresCapabilities": [
+      "setting:gothic-horror"
+    ],
+    "providesCapabilities": [
+      "visuals:gothic-horror"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.gothic.setting",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Gothic Horror original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.gothic.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 151
+  },
+  "media": [
+    {
+      "name": "gothic-horror/illustrated-1.1.0/factions.1.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/factions.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "e8c6b98148b713fbdd3d5549e8a8da104b79866cf801cfb24b2a10f2a03e95a0",
+      "size": 47314
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/factions.2.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/factions.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "ceddde573a1335bed694d811792fa5cf2fb187050da72a7738c456986014caaa",
+      "size": 47016
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/factions.3.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/factions.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "ff3ef5865b3c822832ea2f101a7c2bced0545dd78e7f2923177b09243f79446d",
+      "size": 46722
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/factions.4.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/factions.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "757c51f4775fcc3b4971a759abb5198656d97bb5a25747f0409d031683a7c7aa",
+      "size": 46454
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/factions.5.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/factions.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "2a63b13ba1edd224cf79956702fdc27ef944c0d8688bfa9c6a229ca85c687a24",
+      "size": 46592
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/factions.6.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/factions.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "7e7c5e4b0f605ac208401df9b9e568355dbe402e94b514766764647453851b48",
+      "size": 45402
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/factions.7.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/factions.7.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "342ca5a1152776ce62c9bdc78a6ddbdfc46149e98d8dd5a8037dc2824c45bef2",
+      "size": 45768
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/factions.8.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/factions.8.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "a5bbf16db0642a34f590b794b80ae03d2ab03f3571148ae1e498a4c59cbad48e",
+      "size": 46588
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/locations.1.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/locations.1.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "35d3b06df0fb3d98c02a3775bb658677eaf092141ccd9115fe68437b93ad8f79",
+      "size": 44964
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/locations.2.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/locations.2.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "55b0e9eafe739e4429dd1588cf16f06e5c23892e7ff21e8bd2309617269cb8ff",
+      "size": 48576
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/locations.3.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/locations.3.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "48a73ef4360da85758c2a16133cb3846a11565c1023f70e15456fee531ef9a23",
+      "size": 46412
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/locations.4.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/locations.4.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "5b34f177ecc9deb86a1906bfe819f32a15353327a3635bc8e7fb2b305767510e",
+      "size": 46690
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/locations.5.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/locations.5.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "7c1e7d50c8bb77d19d87d9f095b68acd8ea103d228670521f97aa3b279f6194a",
+      "size": 46168
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/locations.6.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/locations.6.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "9f97230da1111339145eb4e5ad0de2638c66b0af1b294e49cdab1fb572bbd6cd",
+      "size": 46912
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/locations.7.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/locations.7.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "b722913aaae98d7982ffcdb65e7ad27ae5dd0c3c73202556d58e93be6a74017b",
+      "size": 45950
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/locations.8.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/locations.8.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "eb12032c9baba297a10c31cb22d9747dc07ccf671bda214abed13956c7ada72c",
+      "size": 46590
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/locations.9.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/locations.9.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "4465493845939cdd9ac3fd416fd227e788a7c61876a356267f01ba70d2d2390b",
+      "size": 47414
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/locations.10.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/locations.10.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "682ac01945813d36b7562b6f58fd3fb4153ab042ad052768de363e1a79825211",
+      "size": 47376
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/locations.11.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/locations.11.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "1d3b21df5340d5684e8137329d7d33fbc51ec1b311a23417c65f4e28fe6d9600",
+      "size": 47576
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/locations.12.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/locations.12.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "373a9e75a9091b8450a84a5d52f1cdf402502f8ca396d149773153b952c8613f",
+      "size": 46972
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.1.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "bcd308e6bc4ce4e124308448aed396d8336b9969f82eb2e0946fa15b20979b49",
+      "size": 46806
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.2.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "22fa428f31cd1bb6c20a823598276be022925efdfcacc448b4e7cceda5c3a047",
+      "size": 46314
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.3.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "4e0df90d1b0ad02cf6cb3b3fbf28853aec9aaaa01c38cc54af0fc531e2a08d24",
+      "size": 46002
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.4.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "e777fc5a51e315e5f537e250cafd8d55e615455c170fecd505783d5b7101ddfd",
+      "size": 45778
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.5.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "64fb990c00592120a5cf36e343c1eaced7797fd37506f879694a6746a77d1375",
+      "size": 50992
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.6.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "0019e6f6fab90a2ae244ec447d2569069cc5908faeaef6615097c4124e229854",
+      "size": 46530
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.7.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "ec3555a3f948d027d35397a9fa1ea37a5e0c19be3231dc1a007ef2b7d835ea25",
+      "size": 46376
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.8.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "7bcb27d60f045554335261a8a85ab47f4a67ba09050f600e489099848dbde315",
+      "size": 46484
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.9.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.9.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "be7b749b6f31a48c1a0cdc0914268bbfcc71698b029d8d357cf96faab89d587f",
+      "size": 46010
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.10.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.10.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "dcbfa1d13ae19b95c9a0d5c7ffced3a5ddca1cf5d976e403fb9e87005e0a2f6d",
+      "size": 45666
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.11.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.11.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "49460e073a41202fc3577cd56c6235c61a4df535f6a11b91e335fbeb7e6b29db",
+      "size": 46976
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.12.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.12.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "19916cf5c830831faf4e0075418532b6fb9456a2081a11f9f6e7a08212b5c5e5",
+      "size": 45904
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.13.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.13.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "5c7fb10adf9d4578c23309634b7b1791d2ea9456c51f554d062f9d8f62ab5605",
+      "size": 46008
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.14.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.14.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "a35c69552d49c7aba3b1df377132b01a3afd6edc22920e24d5a63e169b1c2972",
+      "size": 46452
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.15.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.15.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "6c2e72541851bd359418d7c283103372a9a0ab16e9bfbcdedfcf96533cc12929",
+      "size": 45738
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.16.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.16.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "294d12243c37d174e724ad8d13e44c106939eca55d1c4fa42b0182322b6b41c6",
+      "size": 46948
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.17.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.17.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "62e4f5895dc2900a91dddebd74716a2f2e74887e9459256eee9db0b41e02b11f",
+      "size": 45702
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.18.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.18.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "ae916fba63b0dd52faaafe46460f8a5711ad32bc4e73b03bfdcaeabc4536b8e0",
+      "size": 46102
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.19.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.19.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "192e86cc8664215727cb5f45e7628291bd94d4e5e08251036cf94973fe689d53",
+      "size": 45930
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.20.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.20.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "9cf2fad26fe0a3a1e0bc547c7c7d4ea942223509d3ff7baa67e3aa7478bc4a21",
+      "size": 46040
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.21.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.21.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "229bfe919906cc6c997e4b3bb7de467433b8d092c486c97190c50b7ad529ffb5",
+      "size": 45610
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.22.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.22.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "6e04b05898bcc03c20c3e3a9f2c32eca43edef90a10c3e9022e9b9d003ea2939",
+      "size": 46452
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.23.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.23.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "4121bc08215b357ff3486851b8fc2a84554c76400d482fc571920b175501d718",
+      "size": 46468
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/npcs.24.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/npcs.24.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "7fbe982022c3f419b7b71c0739e9cd755ad1f61dd19c62f86ed70c412b1f81be",
+      "size": 46546
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/adversaries.1.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/adversaries.1.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "bea673320bfa7dbf33a54b3d9a63657190e80bfeb38a112198fe52e4fce251f1",
+      "size": 46246
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/adversaries.2.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/adversaries.2.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "fc02caab76fdd99846de5811b8967e22e72a8a47fdc9d5a7bb66b08ed32bb593",
+      "size": 45772
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/adversaries.3.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/adversaries.3.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "7819a69bd23b1238ad3cedd3579e802da0a234b2b930fccb6d4964683fe36248",
+      "size": 45180
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/adversaries.4.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/adversaries.4.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "909561ed788230fcde60b5f7d79b4b870ba6a72f40dc238bc2a9c56d9395d0c2",
+      "size": 45336
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/adversaries.5.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/adversaries.5.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "251ec96a020216e4b1d7d0e3ae1d72f2bfe286f68953242fceb6b2a7f64bccee",
+      "size": 45910
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/adversaries.6.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/adversaries.6.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "8638a5240dbf6f3cf9b8a53daa40502e1fbdaffebd2c92fc724ae8f33e71af5f",
+      "size": 45174
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/adversaries.7.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/adversaries.7.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "b7ff42137d5d21cd541b8b8306b33274931462f69dca83096f7ffd158c55a1a9",
+      "size": 45666
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/adversaries.8.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/adversaries.8.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "0987fdbe1d5c29cfa751414a992217405be9e044513ad4d2d6bfe5734caaa5ba",
+      "size": 47364
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/adversaries.9.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/adversaries.9.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "e1a029bf817e963f0d7f1ed493f8cd56e7eeffd356a196b1016a19328ce70b0c",
+      "size": 45334
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/adversaries.10.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/adversaries.10.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "991168b5f6a688794a2bad7de74bb5f369d8e9b0fcaaac80624ff1711cc88a0b",
+      "size": 46306
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/adversaries.11.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/adversaries.11.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "81564ae42d8f3117cee1bf0bea2bb7bc27f331ee490ea3c90c8efdc98fbd298b",
+      "size": 46226
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/adversaries.12.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/adversaries.12.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "27744a7332171b95839acde528c3ec6af2817d06fb50ae34f40b17766af21c2b",
+      "size": 45510
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/adversaries.13.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/adversaries.13.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "252a7a4c6ff692eb127a3d08f55d8065428b901c1c024b092e0bf659c9507fd2",
+      "size": 44956
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/adversaries.14.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/adversaries.14.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "4ac6d3705128897eddd20ab61e205148519c1ac6851bd4dd99425d6b4e79e270",
+      "size": 46478
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/adversaries.15.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/adversaries.15.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "d5e9b6ac8a94852aa9399dd4ce6189978a2cb9cbd7a26b48b450453865689e46",
+      "size": 45102
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/adversaries.16.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/adversaries.16.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "1bb6e8b4b2318d0440f3cf74c523928c54d012fcc2d378c168160be4ef887bd7",
+      "size": 45070
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/adversaries.17.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/adversaries.17.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "21edf65a9fc9f8fa39ef3cafae364dea9f6797eea62c350c9f2772905c468af2",
+      "size": 46346
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/adversaries.18.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/adversaries.18.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "7ed8dbd3e0432ccb58fdb2344ea24dac3d2b7ba38b68dc8590737654aeee8e8a",
+      "size": 46164
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.1.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.1.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "198c36a15f31ae5be02e604e1c83243da8cbf00951571d6345fd754f2de248b6",
+      "size": 45628
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.2.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.2.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "d835aa17594df6eaa34d7d85cf9a26507d020ae168fd68572c7b2c7cab78c295",
+      "size": 45614
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.3.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.3.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "fb4f5a6ec590ded392d83d65044b5f0ce745dd26f77866ef8228106d299b21ce",
+      "size": 45668
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.4.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.4.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "31bc60ab1f1f1ef4c7e83368d0ff571567c16db30d0f17ddc853f54f3428dacd",
+      "size": 46264
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.5.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.5.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "7088d5e5629f6cd9a6744198e99debcaacac31de47fa79a89b23a4a970c93210",
+      "size": 46388
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.6.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.6.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "79602a617f0bb557f231fe1f2843cd7d418777cb8d3ee7d7769bb348c4e78593",
+      "size": 46842
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.7.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.7.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "46488a367e139a47fc31c215196ce550c9d2d59730c427682c35ea3e424fb28e",
+      "size": 46232
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.8.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.8.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "c2896b98d13c4e4be9cecbaa3dff0cadbda095a2852291ba7caba9389b868a7c",
+      "size": 46226
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.9.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.9.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "d03672457e05a0384a69272c1d359592d3ea437395af854be326143b45852fe9",
+      "size": 45834
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.10.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.10.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "b36c63f48965905e87e33178dffaf5264ac8a41d52493506b04abc9ab6a897a5",
+      "size": 46086
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.11.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.11.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "ba1438de10b136cbabde3441a8b6e19fcc42ef706038c9ca12ce818b812d2253",
+      "size": 46798
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.12.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.12.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "36a29e70646be2f0e29ca5117f0f98b257965800972a1a653dfb6e6814cfa787",
+      "size": 45970
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.13.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.13.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "89b0767f67e0809aa530c3d0393945ea412c14face466ceeeaf69a196aa4c4aa",
+      "size": 46660
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.14.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.14.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "1c3b5dab325d5516b0abe7a1c33b5ff5fef46fb89fc26c7d8d0351288e3377f5",
+      "size": 46316
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.15.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.15.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "af39b1ef2068e43ac7e7f4f6db141c8ae42955a34fadd328adad4d2880afccc6",
+      "size": 46072
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.16.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.16.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "60bb3659cc2cf3d5edf60ea16d0cc5dfb9b58740356d4b519693c0d911e45a8c",
+      "size": 44930
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.17.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.17.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "04c91140a9df04373d3628847f76730a291117acd395d5c35414d7f216b27e70",
+      "size": 47268
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.18.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.18.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "c58bc8afb6b228fb4e7ef085f4df8601415049efabcd1342799911ebc97d5cc1",
+      "size": 46678
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.19.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.19.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "c74fe82728bb7a40a47167522951e5690db473097f0e2528c00a726910998dc6",
+      "size": 45604
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.20.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.20.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "22e73fec78891df14a74d157b4023557cdac5d9aac6327f57b08a29db0c33b4c",
+      "size": 45932
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.21.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.21.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "fda1c9cddea7c24596717829fe748fbeb683e68ec07ccb3d75ae19e2545072a9",
+      "size": 45132
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.22.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.22.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "02928bf1ede28dc01b3f834e5acd16e65f230a4597035077f5e3a7d369b8a132",
+      "size": 45918
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.23.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.23.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "2e6c72e429f809845367cb58e8daaeaec59e5518fcffae4b1b0bc368c52e8590",
+      "size": 46078
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/items.24.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/items.24.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "43daf37910ca0ccd1fbcb6f9d73d57f85ab42b7b1b59ea4086763fe861ea27ae",
+      "size": 45500
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.1.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "3e8c0f2675c2afeccc6531cc56d781dbe0aff4839c6563b1f7c46096c4cc9956",
+      "size": 47404
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.2.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "21d7332d8eb9058422f5301b4ed8901346768f6ba5a8854458f6358541abeaf8",
+      "size": 47174
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.3.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "07f7ab0aae9dc0e97f366b6d6c9a210e2cca67463c99845e31dec5653ddea332",
+      "size": 46850
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.4.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "714bf94c24a26806f115b1503131eb2e390e61da435d51f29ac4bd13faf38d64",
+      "size": 47690
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.5.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a571d2983b7587e2b1457ac502463870f099d4990781b70c9066fd1ec39bbd5d",
+      "size": 47368
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.6.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "cc56834631b8a6cec19acd662774f2d49331f168179c84311165dbfc61144dae",
+      "size": 47598
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.7.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c8eefa3accc8a39e4c770fc4e98ba8fe0fb0b7d6c67ce196c46ec94b307372d9",
+      "size": 46304
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.8.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4ed1f9ef3ffbc001441f151c1b2c99d0a6c4dd22fec5ce0fa95e569122ad2a3e",
+      "size": 46784
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.9.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f5d71bfcdc68a1ac98cbf67afdb0204af29ae0a80f05379a6c83a97c3907c40d",
+      "size": 47664
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.10.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "0bee9fa4c4391147ba4950fcad904c8269726a5132d07ff6ac014ad75bd4aefe",
+      "size": 46630
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.11.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "d56e31ab669d04cc4d798a9a4408cf2b823f294e3bb8fb45547780b0aba7b4b3",
+      "size": 46974
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.12.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "adf7afc7995848986698b5e90805cd3c7bfbb753a2136dc4b46a104d52e612d5",
+      "size": 46842
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.13.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "bd4c9fc5a2b9c6b3a38f644bd7ef2d2c0b52ffa3b9649ef49e637c47657728e1",
+      "size": 46648
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.14.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "676a733d394bd1412a23f2f487f0517763ea9a4bdb2748f1ce164815f6d78253",
+      "size": 47048
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.15.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ae5d0514add5c5113cb11cad9d62a703545574e847e6a5a5d414a583bda5253a",
+      "size": 45854
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.16.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "317d4a8f46e791d2c10b289e8102552b25bd7ee42491b5995775bf6ab6aa2195",
+      "size": 47408
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.17.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "dc4845200057a23395bfaa0e40e49566bced830a05a9c8dcc7df0ae41215cce3",
+      "size": 47360
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.18.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a00a15d6e3c1fd88cb5b889a44340485b9e0eebed27b3ea09456129ec5852c4f",
+      "size": 47356
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.19.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.19.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "0a022db1fd99934b2932798b4cfd000ea4b7f57a7c46e08483fb2b4dcace265c",
+      "size": 46716
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.20.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.20.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4a3ef55c11ec0d7aab3f80e8a634e904bcf30731627ba43c4db5dc258d201c73",
+      "size": 47250
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.21.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.21.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "9c4bfdd81aeb5753f8f9f566fbba7a83a5e1e3398bf43f5d305099d5a58b8d7c",
+      "size": 47176
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.22.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.22.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "9149b654fdb16ee8af7f1c5c23ccf26bb616358a89af3869bc40709c50c11353",
+      "size": 46228
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.23.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.23.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c6e9f9d1a9ca0549e4a976650d0ed3f86aa8e5f03dcee4a82da4793b1da9502d",
+      "size": 46584
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.24.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.24.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "1d91b6f4789f28ad59b54d0819148a74d7d37c637ea6666ba413efeb63de452d",
+      "size": 46726
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.25.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.25.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "0e2891e4ecff848796b789185cce07dd729b64a9b49aeeda4d40f1f6d681ed24",
+      "size": 46698
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.26.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.26.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "1883f9fa464396397d1445968ff7d4da58816ff8a3c6ce5cc859a3e6eb83fb63",
+      "size": 47070
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.27.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.27.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f05ee6641c04a08d76b9a34421d3a90f51031c79223cb931a7c23ee4d5594a59",
+      "size": 46760
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.28.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.28.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "633a116942e8bfdb1a7296ea61c0cc84b2319f9e478f950680c3ed485955b171",
+      "size": 47356
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.29.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.29.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "6b936da98913d31939184bb6f7200d80b0452d3f8bf898d5f0e5da7829522ba4",
+      "size": 46812
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/events.30.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/events.30.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "70b8b68243e065d6973374c6e4134906e6f31a01a3d0a68de041c29cdd8478f9",
+      "size": 47056
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/scenes.1.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/scenes.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "303dd773135360ed7a62a9e7543893b23599363e0abefd6f4e24385dc33c5078",
+      "size": 47220
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/scenes.2.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/scenes.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "7cbd9787b0fe063a7044b912af65904d2fcb0198450234fdd34f34691b0df1f6",
+      "size": 47260
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/scenes.3.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/scenes.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "50e4a510e961d3ddb11138fac8f0561398169d2f0e1e0daeed91baf9c0676661",
+      "size": 46702
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/scenes.4.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/scenes.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "559fd8f93d11d657454201a115d63235128790c64065c0c3518c6e4c3cbe5e51",
+      "size": 46314
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/scenes.5.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/scenes.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "695242d7955fcd44a55c12c4c697e713719c5ed35c7a70af4df779f2a6cf8d15",
+      "size": 47062
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/scenes.6.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/scenes.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "08b3339c599be014f13c5fb71cf3cc0930a7fefe3a5bcfb748dfdae268adef54",
+      "size": 47908
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/scenes.7.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/scenes.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "699178403efbf143bedbf772de22c8388935b89d4c332532c543b9f5f7f45e9d",
+      "size": 47300
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/scenes.8.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/scenes.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "7dd61c1a7ed62ad440dd7df8855e9527334aa56552906a5a8d8d8a452f52ff03",
+      "size": 47734
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/scenes.9.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/scenes.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b5173bc9ffa4158773181271a21ce333a4970c5cbf2cc35525348bc866c4ff17",
+      "size": 47026
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/scenes.10.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/scenes.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "cb5390569dbafd5d4be81ac6ec639b6eeab9214cb52350088da8a442e9af57c8",
+      "size": 47024
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/scenes.11.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/scenes.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f822cdf475cee2ac0a3c9f9e00fd72c10677da7a1e0236e6da2700ab7ac28368",
+      "size": 47122
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/scenes.12.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/scenes.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "79917546760517045621b2a66532d0b053994c0db5423673631a8fddffe90d33",
+      "size": 46590
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/scenes.13.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/scenes.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "496e15bced7687c93768872809d514853cb944434919fc7c8356e83e4d18de99",
+      "size": 46730
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/scenes.14.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/scenes.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "e3265f2a4a439abf0dcfd4db04409ca885aff8b2a3576d0fe5699cf2ebdc7de5",
+      "size": 47276
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/scenes.15.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/scenes.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "0c0bc3968c8db00fc3d8a5ad88ab5582db0ea16cb1308a2fdc116ce2679396a9",
+      "size": 46352
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/scenes.16.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/scenes.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "daa55980f4c037334354687aa966addcaf7a41d9133168db022ad6604231a163",
+      "size": 46880
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/scenes.17.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/scenes.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "acd3731751fc7bd78a9ab671c91756a428650a402b8b264b46ff5786ea900328",
+      "size": 46970
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/scenes.18.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/scenes.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "228b0b2c714d574cefd014f1d56b91d73c431a8ea9c2a23dc32b22f532cf2aac",
+      "size": 46356
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/archetypes.1.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/archetypes.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "ac489a8dff664b76a10a323b5c0367ff4c7480e900070ac27cacd08365207a0a",
+      "size": 45566
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/archetypes.2.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/archetypes.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "a0ab4fad496f645c5cdd8e0d78b866b49aadc547c179e65d9b38dc0b19a4e9f4",
+      "size": 45816
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/archetypes.3.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/archetypes.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "1110f52c1b00443b7570caf8d36ef1b05f07b6147cec55af729b4a7925de5c68",
+      "size": 45460
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/archetypes.4.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/archetypes.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "c3d5ec704a6732c8fd37c8367e15602a7997bd9989d97510427fe521d9a723d0",
+      "size": 45288
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/archetypes.5.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/archetypes.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "199322e86ae586ac44fe1cc7d91f765979f6cc29c674700670133d912495cbc9",
+      "size": 46110
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/archetypes.6.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/archetypes.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "5c99246f5b246b88e64826536d6a1adbefbb9b667ba89be328cbe17d60153bab",
+      "size": 46732
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/archetypes.7.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/archetypes.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "e27185fd995434c08cddfe52bc04551d1a200956f2fa9ac68be8946e2455ed58",
+      "size": 45116
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/archetypes.8.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/archetypes.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "f5740773ce14406dbe805a34dfa26ec3b919145c4853117fb10c884e7d7fedc4",
+      "size": 46824
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/progressionPaths.1.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/progressionPaths.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "10b8fb831a405e57f7982d80e80fd62991ca571520443c5be164ab5783f44adf",
+      "size": 47012
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/progressionPaths.2.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/progressionPaths.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "d2862b5cdac409c0c4ae82528690ffa27bafd9ae2ec58e3ce222a7a975c15d7b",
+      "size": 46474
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/progressionPaths.3.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/progressionPaths.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "da37cff5fc0e296aaa81253779eb347ed262e23a6acd8d0da30b420d78dfd211",
+      "size": 46486
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/progressionPaths.4.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/progressionPaths.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "ec74eb17d24207deff1945a4d76068e9deee5db664ac78b06a368b313e89b74f",
+      "size": 46714
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/progressionPaths.5.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/progressionPaths.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "a37f155cdea25f7aa45cffec4dd26f0837892d4b8e92c27e4f70444c02787725",
+      "size": 47360
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/progressionPaths.6.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/progressionPaths.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "677d1b1aa4f42bf47562bfb3303e311eb6630f11997aab09afb362029204dd43",
+      "size": 46254
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/visualThemes.1.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/visualThemes.1.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "64f89be5d69f96513343b3e44c8c0cd39b3b159ed85707e3110e491e50988426",
+      "size": 45034
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/visualThemes.2.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/visualThemes.2.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "3e4331afbf056576e1390e99f667f02de67d96538f8652e962fdc000888ef2d8",
+      "size": 44306
+    },
+    {
+      "name": "gothic-horror/illustrated-1.1.0/visualThemes.3.webp",
+      "path": "media/gothic-horror/illustrated-1.1.0/visualThemes.3.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "3feb21b8348adfd51ecdf797e3899158d6bafe071661dab87df9f9b1bf6be88e",
+      "size": 45076
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.gothic.visuals",
+    "version": "1.1.0",
+    "name": "Haunted Community Schematics — Illustrated",
+    "description": "Haunted Community Schematics for Mourning County, Velvet Court, Drowned Choir. Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.",
+    "provides": [
+      "visuals:gothic-horror"
+    ],
+    "requires": [
+      "setting:gothic-horror"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/illustrated-gothic-horror",
+        "value": {
+          "id": "illustrated-gothic-horror",
+          "name": "Illustrated gothic-horror",
+          "description": "Individual generated illustrations for every authored content object",
+          "defaults": {
+            "background": "assets/gothic-horror/illustrated-1.1.0/scenes.1.webp",
+            "card": "assets/gothic-horror/illustrated-1.1.0/scenes.1.webp",
+            "map": "assets/gothic-horror/illustrated-1.1.0/visualThemes.1.webp",
+            "portrait": "assets/gothic-horror/illustrated-1.1.0/archetypes.1.webp",
+            "token": "assets/gothic-horror/illustrated-1.1.0/adversaries.1.webp",
+            "item": "assets/gothic-horror/illustrated-1.1.0/items.1.webp",
+            "location": "assets/gothic-horror/illustrated-1.1.0/locations.1.webp"
+          },
+          "families": {
+            "illustrated.gothic-horror.factions.1": {
+              "card": "assets/gothic-horror/illustrated-1.1.0/factions.1.webp"
+            },
+            "illustrated.gothic-horror.factions.2": {
+              "card": "assets/gothic-horror/illustrated-1.1.0/factions.2.webp"
+            },
+            "illustrated.gothic-horror.factions.3": {
+              "card": "assets/gothic-horror/illustrated-1.1.0/factions.3.webp"
+            },
+            "illustrated.gothic-horror.factions.4": {
+              "card": "assets/gothic-horror/illustrated-1.1.0/factions.4.webp"
+            },
+            "illustrated.gothic-horror.factions.5": {
+              "card": "assets/gothic-horror/illustrated-1.1.0/factions.5.webp"
+            },
+            "illustrated.gothic-horror.factions.6": {
+              "card": "assets/gothic-horror/illustrated-1.1.0/factions.6.webp"
+            },
+            "illustrated.gothic-horror.factions.7": {
+              "card": "assets/gothic-horror/illustrated-1.1.0/factions.7.webp"
+            },
+            "illustrated.gothic-horror.factions.8": {
+              "card": "assets/gothic-horror/illustrated-1.1.0/factions.8.webp"
+            },
+            "illustrated.gothic-horror.locations.1": {
+              "location": "assets/gothic-horror/illustrated-1.1.0/locations.1.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/locations.1.webp"
+            },
+            "illustrated.gothic-horror.locations.2": {
+              "location": "assets/gothic-horror/illustrated-1.1.0/locations.2.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/locations.2.webp"
+            },
+            "illustrated.gothic-horror.locations.3": {
+              "location": "assets/gothic-horror/illustrated-1.1.0/locations.3.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/locations.3.webp"
+            },
+            "illustrated.gothic-horror.locations.4": {
+              "location": "assets/gothic-horror/illustrated-1.1.0/locations.4.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/locations.4.webp"
+            },
+            "illustrated.gothic-horror.locations.5": {
+              "location": "assets/gothic-horror/illustrated-1.1.0/locations.5.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/locations.5.webp"
+            },
+            "illustrated.gothic-horror.locations.6": {
+              "location": "assets/gothic-horror/illustrated-1.1.0/locations.6.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/locations.6.webp"
+            },
+            "illustrated.gothic-horror.locations.7": {
+              "location": "assets/gothic-horror/illustrated-1.1.0/locations.7.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/locations.7.webp"
+            },
+            "illustrated.gothic-horror.locations.8": {
+              "location": "assets/gothic-horror/illustrated-1.1.0/locations.8.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/locations.8.webp"
+            },
+            "illustrated.gothic-horror.locations.9": {
+              "location": "assets/gothic-horror/illustrated-1.1.0/locations.9.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/locations.9.webp"
+            },
+            "illustrated.gothic-horror.locations.10": {
+              "location": "assets/gothic-horror/illustrated-1.1.0/locations.10.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/locations.10.webp"
+            },
+            "illustrated.gothic-horror.locations.11": {
+              "location": "assets/gothic-horror/illustrated-1.1.0/locations.11.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/locations.11.webp"
+            },
+            "illustrated.gothic-horror.locations.12": {
+              "location": "assets/gothic-horror/illustrated-1.1.0/locations.12.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/locations.12.webp"
+            },
+            "illustrated.gothic-horror.npcs.1": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.1.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.1.webp"
+            },
+            "illustrated.gothic-horror.npcs.2": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.2.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.2.webp"
+            },
+            "illustrated.gothic-horror.npcs.3": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.3.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.3.webp"
+            },
+            "illustrated.gothic-horror.npcs.4": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.4.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.4.webp"
+            },
+            "illustrated.gothic-horror.npcs.5": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.5.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.5.webp"
+            },
+            "illustrated.gothic-horror.npcs.6": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.6.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.6.webp"
+            },
+            "illustrated.gothic-horror.npcs.7": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.7.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.7.webp"
+            },
+            "illustrated.gothic-horror.npcs.8": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.8.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.8.webp"
+            },
+            "illustrated.gothic-horror.npcs.9": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.9.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.9.webp"
+            },
+            "illustrated.gothic-horror.npcs.10": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.10.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.10.webp"
+            },
+            "illustrated.gothic-horror.npcs.11": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.11.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.11.webp"
+            },
+            "illustrated.gothic-horror.npcs.12": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.12.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.12.webp"
+            },
+            "illustrated.gothic-horror.npcs.13": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.13.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.13.webp"
+            },
+            "illustrated.gothic-horror.npcs.14": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.14.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.14.webp"
+            },
+            "illustrated.gothic-horror.npcs.15": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.15.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.15.webp"
+            },
+            "illustrated.gothic-horror.npcs.16": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.16.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.16.webp"
+            },
+            "illustrated.gothic-horror.npcs.17": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.17.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.17.webp"
+            },
+            "illustrated.gothic-horror.npcs.18": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.18.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.18.webp"
+            },
+            "illustrated.gothic-horror.npcs.19": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.19.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.19.webp"
+            },
+            "illustrated.gothic-horror.npcs.20": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.20.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.20.webp"
+            },
+            "illustrated.gothic-horror.npcs.21": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.21.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.21.webp"
+            },
+            "illustrated.gothic-horror.npcs.22": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.22.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.22.webp"
+            },
+            "illustrated.gothic-horror.npcs.23": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.23.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.23.webp"
+            },
+            "illustrated.gothic-horror.npcs.24": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/npcs.24.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/npcs.24.webp"
+            },
+            "illustrated.gothic-horror.adversaries.1": {
+              "token": "assets/gothic-horror/illustrated-1.1.0/adversaries.1.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/adversaries.1.webp"
+            },
+            "illustrated.gothic-horror.adversaries.2": {
+              "token": "assets/gothic-horror/illustrated-1.1.0/adversaries.2.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/adversaries.2.webp"
+            },
+            "illustrated.gothic-horror.adversaries.3": {
+              "token": "assets/gothic-horror/illustrated-1.1.0/adversaries.3.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/adversaries.3.webp"
+            },
+            "illustrated.gothic-horror.adversaries.4": {
+              "token": "assets/gothic-horror/illustrated-1.1.0/adversaries.4.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/adversaries.4.webp"
+            },
+            "illustrated.gothic-horror.adversaries.5": {
+              "token": "assets/gothic-horror/illustrated-1.1.0/adversaries.5.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/adversaries.5.webp"
+            },
+            "illustrated.gothic-horror.adversaries.6": {
+              "token": "assets/gothic-horror/illustrated-1.1.0/adversaries.6.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/adversaries.6.webp"
+            },
+            "illustrated.gothic-horror.adversaries.7": {
+              "token": "assets/gothic-horror/illustrated-1.1.0/adversaries.7.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/adversaries.7.webp"
+            },
+            "illustrated.gothic-horror.adversaries.8": {
+              "token": "assets/gothic-horror/illustrated-1.1.0/adversaries.8.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/adversaries.8.webp"
+            },
+            "illustrated.gothic-horror.adversaries.9": {
+              "token": "assets/gothic-horror/illustrated-1.1.0/adversaries.9.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/adversaries.9.webp"
+            },
+            "illustrated.gothic-horror.adversaries.10": {
+              "token": "assets/gothic-horror/illustrated-1.1.0/adversaries.10.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/adversaries.10.webp"
+            },
+            "illustrated.gothic-horror.adversaries.11": {
+              "token": "assets/gothic-horror/illustrated-1.1.0/adversaries.11.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/adversaries.11.webp"
+            },
+            "illustrated.gothic-horror.adversaries.12": {
+              "token": "assets/gothic-horror/illustrated-1.1.0/adversaries.12.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/adversaries.12.webp"
+            },
+            "illustrated.gothic-horror.adversaries.13": {
+              "token": "assets/gothic-horror/illustrated-1.1.0/adversaries.13.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/adversaries.13.webp"
+            },
+            "illustrated.gothic-horror.adversaries.14": {
+              "token": "assets/gothic-horror/illustrated-1.1.0/adversaries.14.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/adversaries.14.webp"
+            },
+            "illustrated.gothic-horror.adversaries.15": {
+              "token": "assets/gothic-horror/illustrated-1.1.0/adversaries.15.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/adversaries.15.webp"
+            },
+            "illustrated.gothic-horror.adversaries.16": {
+              "token": "assets/gothic-horror/illustrated-1.1.0/adversaries.16.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/adversaries.16.webp"
+            },
+            "illustrated.gothic-horror.adversaries.17": {
+              "token": "assets/gothic-horror/illustrated-1.1.0/adversaries.17.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/adversaries.17.webp"
+            },
+            "illustrated.gothic-horror.adversaries.18": {
+              "token": "assets/gothic-horror/illustrated-1.1.0/adversaries.18.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/adversaries.18.webp"
+            },
+            "illustrated.gothic-horror.items.1": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.1.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.1.webp"
+            },
+            "illustrated.gothic-horror.items.2": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.2.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.2.webp"
+            },
+            "illustrated.gothic-horror.items.3": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.3.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.3.webp"
+            },
+            "illustrated.gothic-horror.items.4": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.4.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.4.webp"
+            },
+            "illustrated.gothic-horror.items.5": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.5.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.5.webp"
+            },
+            "illustrated.gothic-horror.items.6": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.6.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.6.webp"
+            },
+            "illustrated.gothic-horror.items.7": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.7.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.7.webp"
+            },
+            "illustrated.gothic-horror.items.8": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.8.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.8.webp"
+            },
+            "illustrated.gothic-horror.items.9": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.9.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.9.webp"
+            },
+            "illustrated.gothic-horror.items.10": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.10.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.10.webp"
+            },
+            "illustrated.gothic-horror.items.11": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.11.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.11.webp"
+            },
+            "illustrated.gothic-horror.items.12": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.12.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.12.webp"
+            },
+            "illustrated.gothic-horror.items.13": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.13.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.13.webp"
+            },
+            "illustrated.gothic-horror.items.14": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.14.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.14.webp"
+            },
+            "illustrated.gothic-horror.items.15": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.15.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.15.webp"
+            },
+            "illustrated.gothic-horror.items.16": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.16.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.16.webp"
+            },
+            "illustrated.gothic-horror.items.17": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.17.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.17.webp"
+            },
+            "illustrated.gothic-horror.items.18": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.18.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.18.webp"
+            },
+            "illustrated.gothic-horror.items.19": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.19.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.19.webp"
+            },
+            "illustrated.gothic-horror.items.20": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.20.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.20.webp"
+            },
+            "illustrated.gothic-horror.items.21": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.21.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.21.webp"
+            },
+            "illustrated.gothic-horror.items.22": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.22.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.22.webp"
+            },
+            "illustrated.gothic-horror.items.23": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.23.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.23.webp"
+            },
+            "illustrated.gothic-horror.items.24": {
+              "item": "assets/gothic-horror/illustrated-1.1.0/items.24.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/items.24.webp"
+            },
+            "illustrated.gothic-horror.events.1": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.1.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.1.webp"
+            },
+            "illustrated.gothic-horror.events.2": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.2.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.2.webp"
+            },
+            "illustrated.gothic-horror.events.3": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.3.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.3.webp"
+            },
+            "illustrated.gothic-horror.events.4": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.4.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.4.webp"
+            },
+            "illustrated.gothic-horror.events.5": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.5.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.5.webp"
+            },
+            "illustrated.gothic-horror.events.6": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.6.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.6.webp"
+            },
+            "illustrated.gothic-horror.events.7": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.7.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.7.webp"
+            },
+            "illustrated.gothic-horror.events.8": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.8.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.8.webp"
+            },
+            "illustrated.gothic-horror.events.9": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.9.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.9.webp"
+            },
+            "illustrated.gothic-horror.events.10": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.10.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.10.webp"
+            },
+            "illustrated.gothic-horror.events.11": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.11.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.11.webp"
+            },
+            "illustrated.gothic-horror.events.12": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.12.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.12.webp"
+            },
+            "illustrated.gothic-horror.events.13": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.13.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.13.webp"
+            },
+            "illustrated.gothic-horror.events.14": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.14.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.14.webp"
+            },
+            "illustrated.gothic-horror.events.15": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.15.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.15.webp"
+            },
+            "illustrated.gothic-horror.events.16": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.16.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.16.webp"
+            },
+            "illustrated.gothic-horror.events.17": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.17.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.17.webp"
+            },
+            "illustrated.gothic-horror.events.18": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.18.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.18.webp"
+            },
+            "illustrated.gothic-horror.events.19": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.19.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.19.webp"
+            },
+            "illustrated.gothic-horror.events.20": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.20.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.20.webp"
+            },
+            "illustrated.gothic-horror.events.21": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.21.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.21.webp"
+            },
+            "illustrated.gothic-horror.events.22": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.22.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.22.webp"
+            },
+            "illustrated.gothic-horror.events.23": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.23.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.23.webp"
+            },
+            "illustrated.gothic-horror.events.24": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.24.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.24.webp"
+            },
+            "illustrated.gothic-horror.events.25": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.25.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.25.webp"
+            },
+            "illustrated.gothic-horror.events.26": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.26.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.26.webp"
+            },
+            "illustrated.gothic-horror.events.27": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.27.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.27.webp"
+            },
+            "illustrated.gothic-horror.events.28": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.28.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.28.webp"
+            },
+            "illustrated.gothic-horror.events.29": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.29.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.29.webp"
+            },
+            "illustrated.gothic-horror.events.30": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/events.30.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/events.30.webp"
+            },
+            "illustrated.gothic-horror.scenes.1": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/scenes.1.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/scenes.1.webp"
+            },
+            "illustrated.gothic-horror.scenes.2": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/scenes.2.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/scenes.2.webp"
+            },
+            "illustrated.gothic-horror.scenes.3": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/scenes.3.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/scenes.3.webp"
+            },
+            "illustrated.gothic-horror.scenes.4": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/scenes.4.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/scenes.4.webp"
+            },
+            "illustrated.gothic-horror.scenes.5": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/scenes.5.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/scenes.5.webp"
+            },
+            "illustrated.gothic-horror.scenes.6": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/scenes.6.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/scenes.6.webp"
+            },
+            "illustrated.gothic-horror.scenes.7": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/scenes.7.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/scenes.7.webp"
+            },
+            "illustrated.gothic-horror.scenes.8": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/scenes.8.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/scenes.8.webp"
+            },
+            "illustrated.gothic-horror.scenes.9": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/scenes.9.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/scenes.9.webp"
+            },
+            "illustrated.gothic-horror.scenes.10": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/scenes.10.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/scenes.10.webp"
+            },
+            "illustrated.gothic-horror.scenes.11": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/scenes.11.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/scenes.11.webp"
+            },
+            "illustrated.gothic-horror.scenes.12": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/scenes.12.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/scenes.12.webp"
+            },
+            "illustrated.gothic-horror.scenes.13": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/scenes.13.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/scenes.13.webp"
+            },
+            "illustrated.gothic-horror.scenes.14": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/scenes.14.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/scenes.14.webp"
+            },
+            "illustrated.gothic-horror.scenes.15": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/scenes.15.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/scenes.15.webp"
+            },
+            "illustrated.gothic-horror.scenes.16": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/scenes.16.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/scenes.16.webp"
+            },
+            "illustrated.gothic-horror.scenes.17": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/scenes.17.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/scenes.17.webp"
+            },
+            "illustrated.gothic-horror.scenes.18": {
+              "background": "assets/gothic-horror/illustrated-1.1.0/scenes.18.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/scenes.18.webp"
+            },
+            "illustrated.gothic-horror.archetypes.1": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/archetypes.1.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/archetypes.1.webp"
+            },
+            "illustrated.gothic-horror.archetypes.2": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/archetypes.2.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/archetypes.2.webp"
+            },
+            "illustrated.gothic-horror.archetypes.3": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/archetypes.3.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/archetypes.3.webp"
+            },
+            "illustrated.gothic-horror.archetypes.4": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/archetypes.4.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/archetypes.4.webp"
+            },
+            "illustrated.gothic-horror.archetypes.5": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/archetypes.5.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/archetypes.5.webp"
+            },
+            "illustrated.gothic-horror.archetypes.6": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/archetypes.6.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/archetypes.6.webp"
+            },
+            "illustrated.gothic-horror.archetypes.7": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/archetypes.7.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/archetypes.7.webp"
+            },
+            "illustrated.gothic-horror.archetypes.8": {
+              "portrait": "assets/gothic-horror/illustrated-1.1.0/archetypes.8.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/archetypes.8.webp"
+            },
+            "illustrated.gothic-horror.progressionPaths.1": {
+              "card": "assets/gothic-horror/illustrated-1.1.0/progressionPaths.1.webp"
+            },
+            "illustrated.gothic-horror.progressionPaths.2": {
+              "card": "assets/gothic-horror/illustrated-1.1.0/progressionPaths.2.webp"
+            },
+            "illustrated.gothic-horror.progressionPaths.3": {
+              "card": "assets/gothic-horror/illustrated-1.1.0/progressionPaths.3.webp"
+            },
+            "illustrated.gothic-horror.progressionPaths.4": {
+              "card": "assets/gothic-horror/illustrated-1.1.0/progressionPaths.4.webp"
+            },
+            "illustrated.gothic-horror.progressionPaths.5": {
+              "card": "assets/gothic-horror/illustrated-1.1.0/progressionPaths.5.webp"
+            },
+            "illustrated.gothic-horror.progressionPaths.6": {
+              "card": "assets/gothic-horror/illustrated-1.1.0/progressionPaths.6.webp"
+            },
+            "illustrated.gothic-horror.visualThemes.1": {
+              "map": "assets/gothic-horror/illustrated-1.1.0/visualThemes.1.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/visualThemes.1.webp"
+            },
+            "illustrated.gothic-horror.visualThemes.2": {
+              "map": "assets/gothic-horror/illustrated-1.1.0/visualThemes.2.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/visualThemes.2.webp"
+            },
+            "illustrated.gothic-horror.visualThemes.3": {
+              "map": "assets/gothic-horror/illustrated-1.1.0/visualThemes.3.webp",
+              "card": "assets/gothic-horror/illustrated-1.1.0/visualThemes.3.webp"
+            }
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "illustrated-gothic-horror"
+  }
+}

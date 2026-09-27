@@ -1,0 +1,1890 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.urban.visuals",
+  "version": "1.1.0",
+  "type": "visuals",
+  "name": "After-hours Route Schematics — Illustrated",
+  "description": "After-hours Route Schematics for Hidden Courts, Monster Districts, Municipal Magic Conspiracy. Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.",
+  "tags": [
+    "urban-fantasy",
+    "hidden-courts",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "After-hours Route Schematics for Hidden Courts, Monster Districts, Municipal Magic Conspiracy. Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.",
+    "highlights": [
+      "After-hours Route Schematics",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.urban-fantasy"
+    ],
+    "requiresCapabilities": [
+      "setting:urban-fantasy"
+    ],
+    "providesCapabilities": [
+      "visuals:urban-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.urban.setting",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Urban Fantasy original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.urban.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 151
+  },
+  "media": [
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/factions.1.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/factions.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "1f35887117021a03d25788896aae752e3bc12d7dbe74f4bdda08f60e42cd302f",
+      "size": 45646
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/factions.2.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/factions.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "17bc85650245d53c5dba550d59555ea77509db81e73d01ce62ef2cb7458ebe2a",
+      "size": 45462
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/factions.3.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/factions.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "54a0d71eb6a83069b292f52855899ce55d308e0294bc0d2f0f0501603419f36d",
+      "size": 45428
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/factions.4.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/factions.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "f226f05571a8e05f09f60267a2e8b8ff743f617b1af46798ca0c90ff8b242ba0",
+      "size": 46580
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/factions.5.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/factions.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "3ef53c1c4d243ba377bf09e30f468c72073371a07ae27ccbfe42693aecf0c97d",
+      "size": 46216
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/factions.6.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/factions.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "815ed6194a2e530a2a8bc64e0e1813ad63a913158bf82e81441c6325f9901f6f",
+      "size": 45678
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/factions.7.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/factions.7.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "283ffccfe2d48cf26f8d6445faa0da6b650d0caed4aedb26da444933c8480259",
+      "size": 46424
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/factions.8.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/factions.8.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "cdc55ac36d08aa52b09d7cd41675fc95f826927750c7cc1cbae8fbb29d73e96b",
+      "size": 45694
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/locations.1.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/locations.1.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "4e69af13a5d9e8d331c7bb5db310402aff8d049d5ccddd3a5420b9370e93e485",
+      "size": 46376
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/locations.2.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/locations.2.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "dffcf388e970465b93779e7a2079bf3448f606074edd892b723712195981b162",
+      "size": 46334
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/locations.3.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/locations.3.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "017d656673954f04892e3aa81cae9bec91be7efec1d45536abe85ee470ac28d9",
+      "size": 45210
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/locations.4.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/locations.4.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "39d688864bac2b54cb83dbe5e233e5f74bb2f961a069c812f807fb120e94478b",
+      "size": 46952
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/locations.5.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/locations.5.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "9d30fe309f213794d20960f8af66f2e8f703765e1c90a398e813d44a3261fa91",
+      "size": 46228
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/locations.6.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/locations.6.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "7c95106ee3ae068f9fef5eddaa5be6bd4ae8ae8aaadfb03ad432d9f90679f5b6",
+      "size": 46498
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/locations.7.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/locations.7.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "f707b3e7f9522af89f5aa777b5e44a1fe9440b62c1f8742628c9ec43a4299ce4",
+      "size": 46786
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/locations.8.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/locations.8.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "65b150636613a896a7244c172060940c691463b4fe18b189ab0d429988461a4a",
+      "size": 46920
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/locations.9.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/locations.9.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "e1688bd3d2b842858bf4fd9e7023c191ec08474a6c344add5384b4f566d820ae",
+      "size": 45020
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/locations.10.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/locations.10.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "02777eaca40d10748972006740c61f7e02bfec14a19652b7bbe3109406dba59f",
+      "size": 46860
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/locations.11.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/locations.11.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "220d597e5741e754e4a76725112ccee4dd8b8bb1161de809640c6053168e36e9",
+      "size": 46354
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/locations.12.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/locations.12.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "6ead3d923074705c416b273a51981840e41fed434b8944b01e773b2863091068",
+      "size": 45606
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.1.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "59424f9261db92ef8880fbbaca6b07933616a02467b7a355a9b042c999cd13c3",
+      "size": 46626
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.2.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "df28f7510dc51adb1de6911ed04e22a49f3be840bd330718cf566116ffb74ad6",
+      "size": 45990
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.3.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "5902d7e8dcb300d41bb0c80673dc3f0e49ad86765011d40880f8dd10eca49649",
+      "size": 46040
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.4.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "c2b1fdcc366772ec50f73e395d69460a6ff49c99a5f67dbd6963fa8a13defc73",
+      "size": 46212
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.5.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "534c05a00bc93cd4496a73be404a3ef29ee762189274816ea9748561fc42d882",
+      "size": 46008
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.6.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "81b12474d8b2cad5f5533f316cb92b07b82f046f9fe13704bb389c043a1adcb8",
+      "size": 46272
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.7.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "15e93d2dc85c80243cc5e068122580b0b0560bd3e7f1df8eb02d84a31ac891d2",
+      "size": 46802
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.8.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "1dd6fa1c973c66f131021a30cefdc7111fde09163f9598d7891f0b0758289033",
+      "size": 46526
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.9.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.9.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "fb9f22c701aebc8598ca0e78c403d0a2c8433bd315e6086f121f7ed4d1ae0651",
+      "size": 46216
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.10.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.10.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "c4ebe896a421a1bcc6c5e599bd7a4241405191f189789a43f64470271fd2a809",
+      "size": 45426
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.11.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.11.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "d3fc1ce41c8a430c40d7b77f3ee392dfda549f2d56e1619cbc1992f445be2ea6",
+      "size": 46454
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.12.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.12.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "79e4fd5411e4531cddc132f5500cabe3ac0c44960eb567743f4bea36fe8beb3b",
+      "size": 45198
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.13.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.13.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "f2d94be7c481941b3d6f870c5302f2aa883f23ef1948c77ce3e80b2d81859261",
+      "size": 46746
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.14.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.14.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "ff049b2400bfdd8faeeaa8b89338e5db43f8d348f77937ef6ee059e70026644d",
+      "size": 45838
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.15.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.15.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "1a08b54e92050888c8c21ccf51610ebd1c0fe3eb63f6619012a72919cc79822e",
+      "size": 45492
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.16.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.16.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "192b1e735b7d341ac90207dd741754bb80696bc8cb7034fd5cea68d35573b2de",
+      "size": 46328
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.17.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.17.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "60fe8d0eb6e27289cb5351b512c2d3a0d0eb00a18928543099f2b3a9d2c0df56",
+      "size": 45584
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.18.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.18.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "06e1c6a074028109660d43cdec67c43778905f77845d4b3a923004d66f33e750",
+      "size": 45618
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.19.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.19.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "bd5a57943d2ac6319ce7cf565d2ba68d7cca735e864dda21eef2c4ac40ecf33e",
+      "size": 46752
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.20.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.20.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "2d7d85e3d871d72b46b2253e8753825790d8a9c1d90a143f98a8677aedc8b8f6",
+      "size": 45928
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.21.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.21.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "e978b72a1744f99ff92bd180420f954f32618516cd6c3d845f64568fe40769e0",
+      "size": 45378
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.22.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.22.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "d0dd71ec415e19f60a41e7b01ff745614d6d5da84fb9caffb58902ed25e094c1",
+      "size": 46610
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.23.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.23.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "a7cece0d94160721d1cb42a9fa2e0d9585461e1abc8fe5ea178c4dd51ad0a08e",
+      "size": 46048
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/npcs.24.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/npcs.24.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "01c5718bb29df626178ec8e6024ab141234271111c3cbea94d80e0da4e533853",
+      "size": 45594
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/adversaries.1.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/adversaries.1.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "81488dcbf911e0f6261490c064e3d718be6b1b7df64ec01e3ab33a3a28ebe701",
+      "size": 44818
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/adversaries.2.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/adversaries.2.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "8f017f97913cbf7f1dececd35beb9ec296ee9c07e40bb5b32f4577464f34e4d3",
+      "size": 45604
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/adversaries.3.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/adversaries.3.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "8d73d71209b630c8f0353d555d16f7b8b7cc40de6fa96a563e83f689d5fea407",
+      "size": 45706
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/adversaries.4.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/adversaries.4.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "5cd06887061d4f3365bae99c32b9ba089c72f58d07490debd7f0f9ba3109e8ef",
+      "size": 45896
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/adversaries.5.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/adversaries.5.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "d2a6390ad7df9f1e24cbec07eafda1a224de5569fe8deadbda17da50c2d739c3",
+      "size": 46458
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/adversaries.6.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/adversaries.6.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "5d8e94fdafb537dc3c3c6a590c41327c10a29966c0693910f6becc3ed455a893",
+      "size": 45982
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/adversaries.7.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/adversaries.7.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "741c4710a910b74a7c0512fa93e2b12e4b58e276d2071b96e4733e71cc5dff0d",
+      "size": 46144
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/adversaries.8.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/adversaries.8.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "835e2761243b78015458f97428e07a4d470562375a1dc9e6242bf22848ee9d57",
+      "size": 45944
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/adversaries.9.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/adversaries.9.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "6490bf1dfcaeaff7a7de152c96e33ae7fdb5e658fe6741f53f6e5e9f1ca488eb",
+      "size": 45660
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/adversaries.10.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/adversaries.10.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "4dfbe76c6fdc4ab0dc8ea3baa9daaa16bd7d6caf9d8d4f750c5e0116bf11aa98",
+      "size": 46076
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/adversaries.11.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/adversaries.11.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "c6dc6b888677807ee4eac5764d76c19a7f9f1abf85ac151701ce52df48abeda9",
+      "size": 47164
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/adversaries.12.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/adversaries.12.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "23090e56472dcb376dc8eff9a762c8960ada04a507bb8c33962ddea672c1f78d",
+      "size": 45542
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/adversaries.13.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/adversaries.13.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "6aad69c780104bdef7efddd83ac7ec00157c3a749f8b5d5c710f888313a2e589",
+      "size": 46708
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/adversaries.14.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/adversaries.14.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "f030370b77fc51e45cc265e45c7dabf1cdf1ac7060400f46da6f593aa92dc1a7",
+      "size": 45902
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/adversaries.15.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/adversaries.15.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "669cd5039e6704b967cb4105900f4f1f85cd72d8577a8087adc2eab422636591",
+      "size": 44860
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/adversaries.16.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/adversaries.16.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "00d8c6e066f162eb9da5d1019ac4fe7eb9923d8fe8d6ea11a89907d7547cacb4",
+      "size": 45520
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/adversaries.17.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/adversaries.17.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "489e281534e31f7bb956657ccc187c6e7cedb00c57fbfa12a3d7dacbd57739bc",
+      "size": 45284
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/adversaries.18.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/adversaries.18.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "0264be511537432b9a94b2e1736016c90830677a17273ff3aebca8971447e58f",
+      "size": 47872
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.1.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.1.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "18a9daea63272ade4843dd5c468243dac66400e72c530afd5c1292eebcdde4c8",
+      "size": 46494
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.2.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.2.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "9ee2b4cf7a523b97001b323e97069a4981615dd3a2d2314467e80bdda4f14c5a",
+      "size": 45656
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.3.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.3.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "596470cde07e09a61361e65c21f4b483546cfe4bfcd7d9903690aad46b3990f7",
+      "size": 45708
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.4.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.4.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "9f550703e6237d81799eef5ae765cf32c2eb3202125f0d97f2e5115616188e77",
+      "size": 46806
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.5.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.5.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "2d11c31c3c41f6d73d1023093a3e6b4bbc4f2c7165f73a30122d40f9e5f88174",
+      "size": 47286
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.6.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.6.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "7b12d7d0556e8135a2656a02024d31a57a3eb892c97bf1b9b9e8fb2ca1cd38f6",
+      "size": 46054
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.7.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.7.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "b72536ad481330511ef5a68bef1883fa61f42f0ec073bc4dea93c06649be937a",
+      "size": 46432
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.8.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.8.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "a205422bd184e903042cf159c24ee0f0b21b7cf4a83fad299a4581ef17bffd61",
+      "size": 47088
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.9.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.9.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "5634215830a3a1f9d6aeb8539a5d73225e6e2be68de5901ad46ae73bad6ad416",
+      "size": 45692
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.10.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.10.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "744fc64398d6d2540f99c19234e44dc867a4e3ab529c95e26793a61acd292db9",
+      "size": 46308
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.11.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.11.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "3a41093022f9d4838aa2843d2f3e9ee6bd3643d71adc3d20a87056e1792a9cdf",
+      "size": 46402
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.12.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.12.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "742d47d71437adf838cad9a713a5c9fa0fd4ac7252ac15fe1b38b68bc7c87dd5",
+      "size": 45282
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.13.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.13.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "4b78492b8669a1dfb3e0915b403fa5762701d5f3ea83e0fb47ca424688ee5582",
+      "size": 46250
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.14.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.14.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "79c45a419af3317f311b4f6ae7918bb8cc26a69b4991f1d078d895beafe0675e",
+      "size": 45408
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.15.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.15.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "9ce21eb653cb0acf1478c64bb58f8e0070fcd07edc398f29fea71735be831271",
+      "size": 46222
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.16.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.16.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "b9d0320196b2a0d72d0d6b594fa5a5cd305e13a1597a82bc154eb220b10525ea",
+      "size": 46212
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.17.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.17.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "31a9de7dd0e6d2bb0d601099eda450096128b721f59583a8ffeacae520a97a53",
+      "size": 46758
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.18.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.18.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "045790d10b9be88776b49ff765eaedc5265855630ddca193a18ea9fd08309c02",
+      "size": 46254
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.19.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.19.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "8fc1ec5d463915b2badd719e92ae5767fbbeeb63462476183b8721893bdcb628",
+      "size": 47028
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.20.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.20.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "5eab6a458e0360f1521cacd88ddfd7fa6de6dfe462f42d91a30421b24bf35264",
+      "size": 46516
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.21.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.21.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "eee550fdd7f931a2c5d77d553f2961c8ab5f0313614b762afc2e051261f3f56a",
+      "size": 46518
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.22.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.22.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "e40cdcaa7c1e98dab14a97f26a18113a05cfae154cd8ddac3af1644807249835",
+      "size": 44920
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.23.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.23.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "08b6c63239d46dc63ee86f6f8aa8f54ab6fa520777212b52a9876d1b6243a24c",
+      "size": 47512
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/items.24.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/items.24.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "bdd2c3b1cb6e229b2ddddc030a47dacf9922336e87610d24d49978df0209c273",
+      "size": 45024
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.1.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ef512f88598c975c3713adf96bcd9baaa6c9d34c4eb71509bdba2ca0726d29bc",
+      "size": 47004
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.2.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "68fec2b9fbfe3c02df5ad783cab65c7629a768653f5eec20f8400ef5aa0b661a",
+      "size": 46672
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.3.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "46bfd5d772825d68576914b26e95380e7200fef8084a3754dabdd5b805cb20c7",
+      "size": 47078
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.4.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "cddb9f42e86a29fb9fbf98423c90ea5ce51a2e68891f47542553e619663b5149",
+      "size": 47074
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.5.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b9530ec6a2c77c4c199a37efe2af6bb985eebf393858715615cd2c980f3642c0",
+      "size": 46610
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.6.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ef28b376c8278d4b71a0703187be89cb0da71c832d906e102efb7d4d51ffc83a",
+      "size": 46752
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.7.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "5575f1c943c639c10bfecc1e6bd5b1abfd069d81e8b2812ef753f6276533b73a",
+      "size": 47884
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.8.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "abb5bd54d449171ba40e0afdcbd60054c7b8b65f5fa352fef71a3ccdf4b0c07f",
+      "size": 47126
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.9.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "9fea67be218b9cc8c087e085d5955fc20b6dac7eba8465a5a2ce2fb651b76b10",
+      "size": 45960
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.10.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4c5d068b7d2346a602974424e7d36cbeb52948f4459f6d943dc9904d45bec5b9",
+      "size": 46330
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.11.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ef41841643748ffd7f9eed18bb893edc8a8677c8ad35186c90f264632bb68c6e",
+      "size": 46700
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.12.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ee9f93d6b45d655c23c90ed621c1d3f7b29c01541fc20885517eedd8a397c1b7",
+      "size": 46838
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.13.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "06bae554cd690338b40ea711f5d61e0ba2b46f7f6f07f4a371f4a41b1f5dfd99",
+      "size": 46640
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.14.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "73e592d3e34fefe10379be37e1ab959185ef4a9ca05f3eaafabe62933f06aa00",
+      "size": 46872
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.15.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "85722a15fcbd34e26f30576194ea3a59cd700d159c99decd9b44367b5d57d1cc",
+      "size": 46250
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.16.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a17e341ddd39e7b61d265f24e98bf3f07ff13f38cf3d8e7300415e5c0c4c25a9",
+      "size": 46454
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.17.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "49e66a736b7bd7b336dbc8f03c81376e52fde8f306d367afca3f98b701562b29",
+      "size": 46502
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.18.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c394a80a7ffc1576103c9bc16f1f75c382279c6398760ae722c9431f364e2d98",
+      "size": 46342
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.19.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.19.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "52ef6be469bbb9a9fbe9b5771950d212d074e9e985fdb8ce0c4ff1531e5eee1d",
+      "size": 47108
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.20.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.20.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "606c6f489a0c157bca6424544844e4da4882ebd397d27b24aedbc5b9375b75e8",
+      "size": 47070
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.21.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.21.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4d50cd0bddda622196fe11824ee4b6a21cab58f67e9b733e37818eabfdb3981e",
+      "size": 46496
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.22.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.22.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "193491c8596f4e3a5728232c41b274c794e55011f913734d15c6c4cd461406b3",
+      "size": 46498
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.23.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.23.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "71de982e5a55d2920ba5051ae75b0582c57bc2b8add8aa3516e0fc488cfc4058",
+      "size": 45590
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.24.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.24.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a9e2486869f1058de7768d9e575fa3fe43c4c2d8bd32c214c7494c0b7f667b37",
+      "size": 46612
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.25.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.25.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "3772ba1aad440836fadcd927e050a503244ccd3fed3eaa3ae75fd8c5520f48b5",
+      "size": 46172
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.26.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.26.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "6f52d2db513c8bbe1c5a98b9db6ae9edbcbc55da1905fae8bfb9c5a1050aa601",
+      "size": 46684
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.27.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.27.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c130e2d951d119338ff26da068ca674c6c1505ff1c9348f85124b8251d513ca8",
+      "size": 45596
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.28.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.28.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "62f4bfa2ef5241596036bf552c62c9ff6307d692cffbf3fef4095beff37438b9",
+      "size": 47260
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.29.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.29.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4b896d72589a67edfc2eee986d78f5f6329b51969e475c83e9de9149558d0f90",
+      "size": 46956
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/events.30.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/events.30.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b97c53fe89aa242f3d454672f324f128bca9ae296e1f4e9446930495a2b44d9b",
+      "size": 45774
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/scenes.1.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/scenes.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f93acbf74a7fc4101dcc611f181419e05cd85c2b460c0bb6712f169855427f96",
+      "size": 46850
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/scenes.2.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/scenes.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "9391a35436e239253dc5376511d26cac043968f5ed4dca0362936dbe00687def",
+      "size": 55612
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/scenes.3.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/scenes.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "6370fc6ece78a4ba4afade55e04a3ab3c16ece3a5f0838afb193a9b991e91809",
+      "size": 44970
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/scenes.4.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/scenes.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c11f8c9487e11c7fab7e6e87bae9af4e331d95fb0021d523c4782019eb7af4b1",
+      "size": 47034
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/scenes.5.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/scenes.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "421eafc1f11e1e9212ace53b1b86893c9551d82ebe237312124d6c9cf3840bb6",
+      "size": 46474
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/scenes.6.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/scenes.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "3c70f45af6941b44d85858c441d78576e080bd8b220d945476ab3e749d961281",
+      "size": 46012
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/scenes.7.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/scenes.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "746f85e2a49c22db5591dc1ac829595c16aa7a48f056c31082a830d37a70ad0a",
+      "size": 47202
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/scenes.8.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/scenes.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ee3e35a0694ab8684b2a545065ca9d5bb3a450398fbf14529fb06300ac757195",
+      "size": 46690
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/scenes.9.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/scenes.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "5f4525a7a189312ecb485f3e273f77def6aefd454d6f5495562cea61c66bcd06",
+      "size": 46272
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/scenes.10.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/scenes.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c61c07abf244d5bca7cc1c9365d3f7fd20057667cc044e8e65b8efc799d0a479",
+      "size": 46946
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/scenes.11.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/scenes.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a70aa43f50867693aa015181357d3583687800c4662bfa1d0ce1c18ad4ef6b76",
+      "size": 46500
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/scenes.12.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/scenes.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "7d3d43308de1d729c3ad32b32673bd6c2a887f524b664dc16c7d93b7fd6b21a4",
+      "size": 46236
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/scenes.13.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/scenes.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "6feaddcf0da0363e7d9195fe995d472fffa9d9e341378dd8bea241d759fb47df",
+      "size": 46106
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/scenes.14.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/scenes.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b0b4957770070403f66fcbc386b47765e21c8933537b813e35dbd3dd6d69b092",
+      "size": 47246
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/scenes.15.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/scenes.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b73efe529c6d5880954db797c56da60cf8dec0da0c7659af91c128f7f6e99185",
+      "size": 46374
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/scenes.16.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/scenes.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "fc8b369dcf8762d09d9d2a286696ba65fd7df26a684c57811dc991a35c32e6b3",
+      "size": 47070
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/scenes.17.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/scenes.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "26c814541827a1607dad76ba3f9e9e84c982e95bdfe78a60f5a7fbfd7faecf14",
+      "size": 45858
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/scenes.18.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/scenes.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "7c76c8e0c4333ccacf8aa59473fd84008a04f6a2e09c9e9abe3abff81f4b324b",
+      "size": 46470
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/archetypes.1.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/archetypes.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "90ae8bd8cb40c6cd6c9327ce5fb2a40c7bde138a07061c7e8af2267e14e94ca9",
+      "size": 45664
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/archetypes.2.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/archetypes.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "5be310ad3f3afaf9967294b413de411ed5a83a7d3a184f1d5532fdea73fca744",
+      "size": 46178
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/archetypes.3.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/archetypes.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "eea591ca12cc2312ebc36ca7ee994704c5e02b1b65e7c5a8cba1c0f9e9addafb",
+      "size": 49634
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/archetypes.4.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/archetypes.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "9de928fd65c6ff02b712889a11775a11230b54fd75214888aa2a11f4ba39c219",
+      "size": 45158
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/archetypes.5.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/archetypes.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "e9bc7485d162f7a8cdf60972770ca4eb17fb719c4486714462a6f0fc036c16ee",
+      "size": 45620
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/archetypes.6.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/archetypes.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "0c58b42b880ca0131221304da78d5949395908e191afb0e35c0ebdd61f4db1d5",
+      "size": 49648
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/archetypes.7.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/archetypes.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "328715c699a190617040dff0c1b88664d08219568951adf03e03e49c81d34239",
+      "size": 45350
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/archetypes.8.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/archetypes.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "d9c6ce3d120e11a3c5b60efe3782e9787f272fc2de65425d8bf34828de5ec4c9",
+      "size": 46196
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/progressionPaths.1.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/progressionPaths.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "2818ec4f44260eee9b5e00564620c9b0f81bd47bf117f7315581569fbe73e76c",
+      "size": 46266
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/progressionPaths.2.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/progressionPaths.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "e69ecf551762ae6372b441810654818d68cac90c075c057fe1becf043d985056",
+      "size": 46992
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/progressionPaths.3.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/progressionPaths.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "7446d12b6e6eebfcc5886964ab0d15ea0c178d9e2c163db68350116d490ee9bd",
+      "size": 46052
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/progressionPaths.4.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/progressionPaths.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "b0f56d6362e87b10f07fbfc321251d76bae92cd903b9033bafd7b7590e5f039d",
+      "size": 46266
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/progressionPaths.5.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/progressionPaths.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "d41c8d630e52c1dfe76377794f4306be58e8a47c531815627c915ddf7a70dcc1",
+      "size": 46692
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/progressionPaths.6.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/progressionPaths.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "edc5d52e37185aafed605ca80f1db639b5f3402ba59379c32e3eb68df70a8fc6",
+      "size": 46176
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/visualThemes.1.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/visualThemes.1.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "c953e24b40a573cf8b49eedf45aa40d8d0fbdfb484ac3c82ae869dc1352f8784",
+      "size": 46480
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/visualThemes.2.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/visualThemes.2.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "e64424b485fd367462d7ec1aa37dd8d8ded36141ca81c52ab7cd7a9d942ff329",
+      "size": 44434
+    },
+    {
+      "name": "urban-fantasy/illustrated-1.1.0/visualThemes.3.webp",
+      "path": "media/urban-fantasy/illustrated-1.1.0/visualThemes.3.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "bbfa94bca5ac83d5d76f55a817c5468bef303a698f3f3fccc2889aee1693cbd3",
+      "size": 44716
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.urban.visuals",
+    "version": "1.1.0",
+    "name": "After-hours Route Schematics — Illustrated",
+    "description": "After-hours Route Schematics for Hidden Courts, Monster Districts, Municipal Magic Conspiracy. Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.",
+    "provides": [
+      "visuals:urban-fantasy"
+    ],
+    "requires": [
+      "setting:urban-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/illustrated-urban-fantasy",
+        "value": {
+          "id": "illustrated-urban-fantasy",
+          "name": "Illustrated urban-fantasy",
+          "description": "Individual generated illustrations for every authored content object",
+          "defaults": {
+            "background": "assets/urban-fantasy/illustrated-1.1.0/scenes.1.webp",
+            "card": "assets/urban-fantasy/illustrated-1.1.0/scenes.1.webp",
+            "map": "assets/urban-fantasy/illustrated-1.1.0/visualThemes.1.webp",
+            "portrait": "assets/urban-fantasy/illustrated-1.1.0/archetypes.1.webp",
+            "token": "assets/urban-fantasy/illustrated-1.1.0/adversaries.1.webp",
+            "item": "assets/urban-fantasy/illustrated-1.1.0/items.1.webp",
+            "location": "assets/urban-fantasy/illustrated-1.1.0/locations.1.webp"
+          },
+          "families": {
+            "illustrated.urban-fantasy.factions.1": {
+              "card": "assets/urban-fantasy/illustrated-1.1.0/factions.1.webp"
+            },
+            "illustrated.urban-fantasy.factions.2": {
+              "card": "assets/urban-fantasy/illustrated-1.1.0/factions.2.webp"
+            },
+            "illustrated.urban-fantasy.factions.3": {
+              "card": "assets/urban-fantasy/illustrated-1.1.0/factions.3.webp"
+            },
+            "illustrated.urban-fantasy.factions.4": {
+              "card": "assets/urban-fantasy/illustrated-1.1.0/factions.4.webp"
+            },
+            "illustrated.urban-fantasy.factions.5": {
+              "card": "assets/urban-fantasy/illustrated-1.1.0/factions.5.webp"
+            },
+            "illustrated.urban-fantasy.factions.6": {
+              "card": "assets/urban-fantasy/illustrated-1.1.0/factions.6.webp"
+            },
+            "illustrated.urban-fantasy.factions.7": {
+              "card": "assets/urban-fantasy/illustrated-1.1.0/factions.7.webp"
+            },
+            "illustrated.urban-fantasy.factions.8": {
+              "card": "assets/urban-fantasy/illustrated-1.1.0/factions.8.webp"
+            },
+            "illustrated.urban-fantasy.locations.1": {
+              "location": "assets/urban-fantasy/illustrated-1.1.0/locations.1.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/locations.1.webp"
+            },
+            "illustrated.urban-fantasy.locations.2": {
+              "location": "assets/urban-fantasy/illustrated-1.1.0/locations.2.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/locations.2.webp"
+            },
+            "illustrated.urban-fantasy.locations.3": {
+              "location": "assets/urban-fantasy/illustrated-1.1.0/locations.3.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/locations.3.webp"
+            },
+            "illustrated.urban-fantasy.locations.4": {
+              "location": "assets/urban-fantasy/illustrated-1.1.0/locations.4.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/locations.4.webp"
+            },
+            "illustrated.urban-fantasy.locations.5": {
+              "location": "assets/urban-fantasy/illustrated-1.1.0/locations.5.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/locations.5.webp"
+            },
+            "illustrated.urban-fantasy.locations.6": {
+              "location": "assets/urban-fantasy/illustrated-1.1.0/locations.6.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/locations.6.webp"
+            },
+            "illustrated.urban-fantasy.locations.7": {
+              "location": "assets/urban-fantasy/illustrated-1.1.0/locations.7.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/locations.7.webp"
+            },
+            "illustrated.urban-fantasy.locations.8": {
+              "location": "assets/urban-fantasy/illustrated-1.1.0/locations.8.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/locations.8.webp"
+            },
+            "illustrated.urban-fantasy.locations.9": {
+              "location": "assets/urban-fantasy/illustrated-1.1.0/locations.9.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/locations.9.webp"
+            },
+            "illustrated.urban-fantasy.locations.10": {
+              "location": "assets/urban-fantasy/illustrated-1.1.0/locations.10.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/locations.10.webp"
+            },
+            "illustrated.urban-fantasy.locations.11": {
+              "location": "assets/urban-fantasy/illustrated-1.1.0/locations.11.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/locations.11.webp"
+            },
+            "illustrated.urban-fantasy.locations.12": {
+              "location": "assets/urban-fantasy/illustrated-1.1.0/locations.12.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/locations.12.webp"
+            },
+            "illustrated.urban-fantasy.npcs.1": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.1.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.1.webp"
+            },
+            "illustrated.urban-fantasy.npcs.2": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.2.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.2.webp"
+            },
+            "illustrated.urban-fantasy.npcs.3": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.3.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.3.webp"
+            },
+            "illustrated.urban-fantasy.npcs.4": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.4.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.4.webp"
+            },
+            "illustrated.urban-fantasy.npcs.5": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.5.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.5.webp"
+            },
+            "illustrated.urban-fantasy.npcs.6": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.6.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.6.webp"
+            },
+            "illustrated.urban-fantasy.npcs.7": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.7.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.7.webp"
+            },
+            "illustrated.urban-fantasy.npcs.8": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.8.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.8.webp"
+            },
+            "illustrated.urban-fantasy.npcs.9": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.9.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.9.webp"
+            },
+            "illustrated.urban-fantasy.npcs.10": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.10.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.10.webp"
+            },
+            "illustrated.urban-fantasy.npcs.11": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.11.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.11.webp"
+            },
+            "illustrated.urban-fantasy.npcs.12": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.12.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.12.webp"
+            },
+            "illustrated.urban-fantasy.npcs.13": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.13.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.13.webp"
+            },
+            "illustrated.urban-fantasy.npcs.14": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.14.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.14.webp"
+            },
+            "illustrated.urban-fantasy.npcs.15": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.15.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.15.webp"
+            },
+            "illustrated.urban-fantasy.npcs.16": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.16.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.16.webp"
+            },
+            "illustrated.urban-fantasy.npcs.17": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.17.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.17.webp"
+            },
+            "illustrated.urban-fantasy.npcs.18": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.18.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.18.webp"
+            },
+            "illustrated.urban-fantasy.npcs.19": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.19.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.19.webp"
+            },
+            "illustrated.urban-fantasy.npcs.20": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.20.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.20.webp"
+            },
+            "illustrated.urban-fantasy.npcs.21": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.21.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.21.webp"
+            },
+            "illustrated.urban-fantasy.npcs.22": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.22.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.22.webp"
+            },
+            "illustrated.urban-fantasy.npcs.23": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.23.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.23.webp"
+            },
+            "illustrated.urban-fantasy.npcs.24": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/npcs.24.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/npcs.24.webp"
+            },
+            "illustrated.urban-fantasy.adversaries.1": {
+              "token": "assets/urban-fantasy/illustrated-1.1.0/adversaries.1.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/adversaries.1.webp"
+            },
+            "illustrated.urban-fantasy.adversaries.2": {
+              "token": "assets/urban-fantasy/illustrated-1.1.0/adversaries.2.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/adversaries.2.webp"
+            },
+            "illustrated.urban-fantasy.adversaries.3": {
+              "token": "assets/urban-fantasy/illustrated-1.1.0/adversaries.3.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/adversaries.3.webp"
+            },
+            "illustrated.urban-fantasy.adversaries.4": {
+              "token": "assets/urban-fantasy/illustrated-1.1.0/adversaries.4.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/adversaries.4.webp"
+            },
+            "illustrated.urban-fantasy.adversaries.5": {
+              "token": "assets/urban-fantasy/illustrated-1.1.0/adversaries.5.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/adversaries.5.webp"
+            },
+            "illustrated.urban-fantasy.adversaries.6": {
+              "token": "assets/urban-fantasy/illustrated-1.1.0/adversaries.6.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/adversaries.6.webp"
+            },
+            "illustrated.urban-fantasy.adversaries.7": {
+              "token": "assets/urban-fantasy/illustrated-1.1.0/adversaries.7.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/adversaries.7.webp"
+            },
+            "illustrated.urban-fantasy.adversaries.8": {
+              "token": "assets/urban-fantasy/illustrated-1.1.0/adversaries.8.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/adversaries.8.webp"
+            },
+            "illustrated.urban-fantasy.adversaries.9": {
+              "token": "assets/urban-fantasy/illustrated-1.1.0/adversaries.9.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/adversaries.9.webp"
+            },
+            "illustrated.urban-fantasy.adversaries.10": {
+              "token": "assets/urban-fantasy/illustrated-1.1.0/adversaries.10.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/adversaries.10.webp"
+            },
+            "illustrated.urban-fantasy.adversaries.11": {
+              "token": "assets/urban-fantasy/illustrated-1.1.0/adversaries.11.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/adversaries.11.webp"
+            },
+            "illustrated.urban-fantasy.adversaries.12": {
+              "token": "assets/urban-fantasy/illustrated-1.1.0/adversaries.12.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/adversaries.12.webp"
+            },
+            "illustrated.urban-fantasy.adversaries.13": {
+              "token": "assets/urban-fantasy/illustrated-1.1.0/adversaries.13.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/adversaries.13.webp"
+            },
+            "illustrated.urban-fantasy.adversaries.14": {
+              "token": "assets/urban-fantasy/illustrated-1.1.0/adversaries.14.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/adversaries.14.webp"
+            },
+            "illustrated.urban-fantasy.adversaries.15": {
+              "token": "assets/urban-fantasy/illustrated-1.1.0/adversaries.15.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/adversaries.15.webp"
+            },
+            "illustrated.urban-fantasy.adversaries.16": {
+              "token": "assets/urban-fantasy/illustrated-1.1.0/adversaries.16.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/adversaries.16.webp"
+            },
+            "illustrated.urban-fantasy.adversaries.17": {
+              "token": "assets/urban-fantasy/illustrated-1.1.0/adversaries.17.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/adversaries.17.webp"
+            },
+            "illustrated.urban-fantasy.adversaries.18": {
+              "token": "assets/urban-fantasy/illustrated-1.1.0/adversaries.18.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/adversaries.18.webp"
+            },
+            "illustrated.urban-fantasy.items.1": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.1.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.1.webp"
+            },
+            "illustrated.urban-fantasy.items.2": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.2.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.2.webp"
+            },
+            "illustrated.urban-fantasy.items.3": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.3.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.3.webp"
+            },
+            "illustrated.urban-fantasy.items.4": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.4.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.4.webp"
+            },
+            "illustrated.urban-fantasy.items.5": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.5.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.5.webp"
+            },
+            "illustrated.urban-fantasy.items.6": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.6.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.6.webp"
+            },
+            "illustrated.urban-fantasy.items.7": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.7.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.7.webp"
+            },
+            "illustrated.urban-fantasy.items.8": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.8.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.8.webp"
+            },
+            "illustrated.urban-fantasy.items.9": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.9.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.9.webp"
+            },
+            "illustrated.urban-fantasy.items.10": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.10.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.10.webp"
+            },
+            "illustrated.urban-fantasy.items.11": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.11.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.11.webp"
+            },
+            "illustrated.urban-fantasy.items.12": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.12.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.12.webp"
+            },
+            "illustrated.urban-fantasy.items.13": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.13.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.13.webp"
+            },
+            "illustrated.urban-fantasy.items.14": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.14.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.14.webp"
+            },
+            "illustrated.urban-fantasy.items.15": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.15.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.15.webp"
+            },
+            "illustrated.urban-fantasy.items.16": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.16.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.16.webp"
+            },
+            "illustrated.urban-fantasy.items.17": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.17.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.17.webp"
+            },
+            "illustrated.urban-fantasy.items.18": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.18.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.18.webp"
+            },
+            "illustrated.urban-fantasy.items.19": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.19.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.19.webp"
+            },
+            "illustrated.urban-fantasy.items.20": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.20.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.20.webp"
+            },
+            "illustrated.urban-fantasy.items.21": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.21.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.21.webp"
+            },
+            "illustrated.urban-fantasy.items.22": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.22.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.22.webp"
+            },
+            "illustrated.urban-fantasy.items.23": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.23.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.23.webp"
+            },
+            "illustrated.urban-fantasy.items.24": {
+              "item": "assets/urban-fantasy/illustrated-1.1.0/items.24.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/items.24.webp"
+            },
+            "illustrated.urban-fantasy.events.1": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.1.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.1.webp"
+            },
+            "illustrated.urban-fantasy.events.2": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.2.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.2.webp"
+            },
+            "illustrated.urban-fantasy.events.3": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.3.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.3.webp"
+            },
+            "illustrated.urban-fantasy.events.4": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.4.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.4.webp"
+            },
+            "illustrated.urban-fantasy.events.5": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.5.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.5.webp"
+            },
+            "illustrated.urban-fantasy.events.6": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.6.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.6.webp"
+            },
+            "illustrated.urban-fantasy.events.7": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.7.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.7.webp"
+            },
+            "illustrated.urban-fantasy.events.8": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.8.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.8.webp"
+            },
+            "illustrated.urban-fantasy.events.9": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.9.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.9.webp"
+            },
+            "illustrated.urban-fantasy.events.10": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.10.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.10.webp"
+            },
+            "illustrated.urban-fantasy.events.11": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.11.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.11.webp"
+            },
+            "illustrated.urban-fantasy.events.12": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.12.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.12.webp"
+            },
+            "illustrated.urban-fantasy.events.13": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.13.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.13.webp"
+            },
+            "illustrated.urban-fantasy.events.14": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.14.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.14.webp"
+            },
+            "illustrated.urban-fantasy.events.15": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.15.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.15.webp"
+            },
+            "illustrated.urban-fantasy.events.16": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.16.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.16.webp"
+            },
+            "illustrated.urban-fantasy.events.17": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.17.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.17.webp"
+            },
+            "illustrated.urban-fantasy.events.18": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.18.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.18.webp"
+            },
+            "illustrated.urban-fantasy.events.19": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.19.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.19.webp"
+            },
+            "illustrated.urban-fantasy.events.20": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.20.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.20.webp"
+            },
+            "illustrated.urban-fantasy.events.21": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.21.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.21.webp"
+            },
+            "illustrated.urban-fantasy.events.22": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.22.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.22.webp"
+            },
+            "illustrated.urban-fantasy.events.23": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.23.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.23.webp"
+            },
+            "illustrated.urban-fantasy.events.24": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.24.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.24.webp"
+            },
+            "illustrated.urban-fantasy.events.25": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.25.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.25.webp"
+            },
+            "illustrated.urban-fantasy.events.26": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.26.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.26.webp"
+            },
+            "illustrated.urban-fantasy.events.27": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.27.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.27.webp"
+            },
+            "illustrated.urban-fantasy.events.28": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.28.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.28.webp"
+            },
+            "illustrated.urban-fantasy.events.29": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.29.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.29.webp"
+            },
+            "illustrated.urban-fantasy.events.30": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/events.30.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/events.30.webp"
+            },
+            "illustrated.urban-fantasy.scenes.1": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/scenes.1.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/scenes.1.webp"
+            },
+            "illustrated.urban-fantasy.scenes.2": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/scenes.2.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/scenes.2.webp"
+            },
+            "illustrated.urban-fantasy.scenes.3": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/scenes.3.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/scenes.3.webp"
+            },
+            "illustrated.urban-fantasy.scenes.4": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/scenes.4.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/scenes.4.webp"
+            },
+            "illustrated.urban-fantasy.scenes.5": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/scenes.5.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/scenes.5.webp"
+            },
+            "illustrated.urban-fantasy.scenes.6": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/scenes.6.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/scenes.6.webp"
+            },
+            "illustrated.urban-fantasy.scenes.7": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/scenes.7.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/scenes.7.webp"
+            },
+            "illustrated.urban-fantasy.scenes.8": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/scenes.8.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/scenes.8.webp"
+            },
+            "illustrated.urban-fantasy.scenes.9": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/scenes.9.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/scenes.9.webp"
+            },
+            "illustrated.urban-fantasy.scenes.10": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/scenes.10.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/scenes.10.webp"
+            },
+            "illustrated.urban-fantasy.scenes.11": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/scenes.11.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/scenes.11.webp"
+            },
+            "illustrated.urban-fantasy.scenes.12": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/scenes.12.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/scenes.12.webp"
+            },
+            "illustrated.urban-fantasy.scenes.13": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/scenes.13.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/scenes.13.webp"
+            },
+            "illustrated.urban-fantasy.scenes.14": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/scenes.14.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/scenes.14.webp"
+            },
+            "illustrated.urban-fantasy.scenes.15": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/scenes.15.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/scenes.15.webp"
+            },
+            "illustrated.urban-fantasy.scenes.16": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/scenes.16.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/scenes.16.webp"
+            },
+            "illustrated.urban-fantasy.scenes.17": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/scenes.17.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/scenes.17.webp"
+            },
+            "illustrated.urban-fantasy.scenes.18": {
+              "background": "assets/urban-fantasy/illustrated-1.1.0/scenes.18.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/scenes.18.webp"
+            },
+            "illustrated.urban-fantasy.archetypes.1": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/archetypes.1.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/archetypes.1.webp"
+            },
+            "illustrated.urban-fantasy.archetypes.2": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/archetypes.2.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/archetypes.2.webp"
+            },
+            "illustrated.urban-fantasy.archetypes.3": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/archetypes.3.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/archetypes.3.webp"
+            },
+            "illustrated.urban-fantasy.archetypes.4": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/archetypes.4.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/archetypes.4.webp"
+            },
+            "illustrated.urban-fantasy.archetypes.5": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/archetypes.5.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/archetypes.5.webp"
+            },
+            "illustrated.urban-fantasy.archetypes.6": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/archetypes.6.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/archetypes.6.webp"
+            },
+            "illustrated.urban-fantasy.archetypes.7": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/archetypes.7.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/archetypes.7.webp"
+            },
+            "illustrated.urban-fantasy.archetypes.8": {
+              "portrait": "assets/urban-fantasy/illustrated-1.1.0/archetypes.8.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/archetypes.8.webp"
+            },
+            "illustrated.urban-fantasy.progressionPaths.1": {
+              "card": "assets/urban-fantasy/illustrated-1.1.0/progressionPaths.1.webp"
+            },
+            "illustrated.urban-fantasy.progressionPaths.2": {
+              "card": "assets/urban-fantasy/illustrated-1.1.0/progressionPaths.2.webp"
+            },
+            "illustrated.urban-fantasy.progressionPaths.3": {
+              "card": "assets/urban-fantasy/illustrated-1.1.0/progressionPaths.3.webp"
+            },
+            "illustrated.urban-fantasy.progressionPaths.4": {
+              "card": "assets/urban-fantasy/illustrated-1.1.0/progressionPaths.4.webp"
+            },
+            "illustrated.urban-fantasy.progressionPaths.5": {
+              "card": "assets/urban-fantasy/illustrated-1.1.0/progressionPaths.5.webp"
+            },
+            "illustrated.urban-fantasy.progressionPaths.6": {
+              "card": "assets/urban-fantasy/illustrated-1.1.0/progressionPaths.6.webp"
+            },
+            "illustrated.urban-fantasy.visualThemes.1": {
+              "map": "assets/urban-fantasy/illustrated-1.1.0/visualThemes.1.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/visualThemes.1.webp"
+            },
+            "illustrated.urban-fantasy.visualThemes.2": {
+              "map": "assets/urban-fantasy/illustrated-1.1.0/visualThemes.2.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/visualThemes.2.webp"
+            },
+            "illustrated.urban-fantasy.visualThemes.3": {
+              "map": "assets/urban-fantasy/illustrated-1.1.0/visualThemes.3.webp",
+              "card": "assets/urban-fantasy/illustrated-1.1.0/visualThemes.3.webp"
+            }
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "illustrated-urban-fantasy"
+  }
+}

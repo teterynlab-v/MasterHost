@@ -1,0 +1,800 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.dusk.characters",
+  "version": "1.2.0",
+  "type": "characters",
+  "name": "Dark Callings and Witness Paths — Illustrated",
+  "description": "Dark Callings and Witness Paths for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+  "tags": [
+    "dark-fantasy",
+    "dying-marches",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Dark Callings and Witness Paths for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+    "highlights": [
+      "Dark Callings and Witness Paths",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.dark-fantasy"
+    ],
+    "requiresCapabilities": [
+      "rules:dark-fantasy",
+      "items:dark-fantasy"
+    ],
+    "providesCapabilities": [
+      "characters:dark-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.dusk.rules",
+      "version": "1.2.0"
+    },
+    {
+      "id": "masterhost.asset.dusk.items",
+      "version": "1.2.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Dark Fantasy original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.dusk.characters"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 8,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.dusk.characters",
+    "version": "1.2.0",
+    "name": "Dark Callings and Witness Paths — Illustrated",
+    "description": "Dark Callings and Witness Paths for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+    "provides": [
+      "characters:dark-fantasy"
+    ],
+    "requires": [
+      "rules:dark-fantasy",
+      "items:dark-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.archetypes.1",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Bell Advocate"
+            },
+            "description": {
+              "value": "Bell Advocate: tests defense claims and protects residents excluded from oaths."
+            },
+            "deepId": {
+              "value": "archetypes.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.archetypes.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.archetypes.2",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Name Witness"
+            },
+            "description": {
+              "value": "Name Witness: learns erased signs and protects children's control of identity."
+            },
+            "deepId": {
+              "value": "archetypes.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.archetypes.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.archetypes.3",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Hospice Examiner"
+            },
+            "description": {
+              "value": "Hospice Examiner: separates symptoms from imposed penance."
+            },
+            "deepId": {
+              "value": "archetypes.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.archetypes.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.archetypes.4",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Furrow Guardian"
+            },
+            "description": {
+              "value": "Furrow Guardian: keeps workers safe without granting permanent harvest control."
+            },
+            "deepId": {
+              "value": "archetypes.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.archetypes.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.archetypes.5",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "River Mediator"
+            },
+            "description": {
+              "value": "River Mediator: renews promises under witnesses rather than hereditary ransom."
+            },
+            "deepId": {
+              "value": "archetypes.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.archetypes.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.archetypes.6",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Bearer Companion"
+            },
+            "description": {
+              "value": "Bearer Companion: protects a healer's rest and right to leave."
+            },
+            "deepId": {
+              "value": "archetypes.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.archetypes.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.archetypes.7",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Contract Archivist"
+            },
+            "description": {
+              "value": "Contract Archivist: preserves original protections against convenient reinterpretation."
+            },
+            "deepId": {
+              "value": "archetypes.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.archetypes.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.archetypes.8",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Mirror Tutor"
+            },
+            "description": {
+              "value": "Mirror Tutor: restores shared memory without replacing the children's own names."
+            },
+            "deepId": {
+              "value": "archetypes.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.archetypes.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.progressionPaths.1",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Dawn Steward"
+            },
+            "description": {
+              "value": "Dawn Steward: earn trust through accountable common defense; gain bell authority and patrol obligations."
+            },
+            "deepId": {
+              "value": "progressionPaths.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.progressionPaths.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.progressionPaths.2",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Pact Liberator"
+            },
+            "description": {
+              "value": "Pact Liberator: earn trust by ending inherited ransom; gain shared witnesses and registry duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.progressionPaths.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.progressionPaths.3",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Cure Custodian"
+            },
+            "description": {
+              "value": "Cure Custodian: earn trust through safe treatment by need; gain hospice access and dosage records."
+            },
+            "deepId": {
+              "value": "progressionPaths.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.progressionPaths.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.progressionPaths.4",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Tenant Defender"
+            },
+            "description": {
+              "value": "Tenant Defender: earn trust by preserving harvest and fair repair; gain freeholder crews and levy scrutiny."
+            },
+            "deepId": {
+              "value": "progressionPaths.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.progressionPaths.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.progressionPaths.5",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Name Guardian"
+            },
+            "description": {
+              "value": "Name Guardian: earn trust through identities chosen by their holders; gain nursery access and consent duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.progressionPaths.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.progressionPaths.6",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Road Companion"
+            },
+            "description": {
+              "value": "Road Companion: earn trust by keeping care voluntary; gain pilgrim support and rest obligations."
+            },
+            "deepId": {
+              "value": "progressionPaths.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.progressionPaths.6"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-archetypes-1": {
+            "template": "dusk.deep.archetypes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-archetypes-2": {
+            "template": "dusk.deep.archetypes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-archetypes-3": {
+            "template": "dusk.deep.archetypes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-archetypes-4": {
+            "template": "dusk.deep.archetypes.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-archetypes-5": {
+            "template": "dusk.deep.archetypes.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-archetypes-6": {
+            "template": "dusk.deep.archetypes.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-archetypes-7": {
+            "template": "dusk.deep.archetypes.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-archetypes-8": {
+            "template": "dusk.deep.archetypes.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-progressionPaths-1": {
+            "template": "dusk.deep.progressionPaths.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-progressionPaths-2": {
+            "template": "dusk.deep.progressionPaths.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-progressionPaths-3": {
+            "template": "dusk.deep.progressionPaths.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-progressionPaths-4": {
+            "template": "dusk.deep.progressionPaths.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-progressionPaths-5": {
+            "template": "dusk.deep.progressionPaths.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-progressionPaths-6": {
+            "template": "dusk.deep.progressionPaths.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "op": "append",
+        "path": "/content/characterCreation/steps/3/fields/1/options",
+        "value": [
+          {
+            "value": "archetypes.1",
+            "label": "Bell Advocate"
+          },
+          {
+            "value": "archetypes.2",
+            "label": "Name Witness"
+          },
+          {
+            "value": "archetypes.3",
+            "label": "Hospice Examiner"
+          },
+          {
+            "value": "archetypes.4",
+            "label": "Furrow Guardian"
+          },
+          {
+            "value": "archetypes.5",
+            "label": "River Mediator"
+          },
+          {
+            "value": "archetypes.6",
+            "label": "Bearer Companion"
+          },
+          {
+            "value": "archetypes.7",
+            "label": "Contract Archivist"
+          },
+          {
+            "value": "archetypes.8",
+            "label": "Mirror Tutor"
+          }
+        ]
+      },
+      {
+        "op": "append",
+        "path": "/content/characterCreation/starting/assets",
+        "value": [
+          {
+            "id": "portrait",
+            "value": "assets/dark-fantasy/illustrated-1.2.0/archetypes.1.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "standard"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/dark-fantasy/illustrated-1.2.0/archetypes.1.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.1"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/dark-fantasy/illustrated-1.2.0/archetypes.2.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.2"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/dark-fantasy/illustrated-1.2.0/archetypes.3.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.3"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/dark-fantasy/illustrated-1.2.0/archetypes.4.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.4"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/dark-fantasy/illustrated-1.2.0/archetypes.5.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.5"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/dark-fantasy/illustrated-1.2.0/archetypes.6.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.6"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/dark-fantasy/illustrated-1.2.0/archetypes.7.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.7"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/dark-fantasy/illustrated-1.2.0/archetypes.8.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.8"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

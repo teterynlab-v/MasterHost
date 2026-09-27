@@ -1,0 +1,1890 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.cyber.visuals",
+  "version": "1.1.0",
+  "type": "visuals",
+  "name": "Neighborhood Mutual Schematics — Illustrated",
+  "description": "Neighborhood Mutual Schematics for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+  "tags": [
+    "cyberpunk",
+    "rainline-mutual",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Neighborhood Mutual Schematics for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+    "highlights": [
+      "Neighborhood Mutual Schematics",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.cyberpunk"
+    ],
+    "requiresCapabilities": [
+      "setting:cyberpunk"
+    ],
+    "providesCapabilities": [
+      "visuals:cyberpunk"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.cyber.setting",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Cyberpunk original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.cyber.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 151
+  },
+  "media": [
+    {
+      "name": "cyberpunk/illustrated-1.1.0/factions.1.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/factions.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "0bc6d92519ad23701a040351053c486890d431886e83904b4fdf6f0bd54c9131",
+      "size": 45676
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/factions.2.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/factions.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "05cc9d335dd88fa396717aa7977ba725f0337eff96f0032acade740b9e6a82ee",
+      "size": 46348
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/factions.3.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/factions.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "73511824eb5ba2792e47e23ac02d80e82239d020cbef3f28a080bd5b3f3aac8a",
+      "size": 46038
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/factions.4.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/factions.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "eb4ca263e81e408ae907008f6a974544306d9e87c4020d8b9e7d8ea8a0bb35ab",
+      "size": 45306
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/factions.5.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/factions.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "f6c06605fe85b90aec5efb93876c6bccb68415edfcacd0f2f1dbbdc287bc558f",
+      "size": 46138
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/factions.6.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/factions.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "ee1331b92ab575e9e7a3e46c9f92dc466c8fcd2e1e685d595312c0d4c6f6ac7a",
+      "size": 45324
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/factions.7.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/factions.7.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "bb36b83da46b6aab6998269314db9b5d50ccd76cf58bc43cc0e18b11639b9ec1",
+      "size": 45920
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/factions.8.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/factions.8.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "59c7948f5687caaf27617e52da7995e00c7b76f2e50b8e3b728600e61035dead",
+      "size": 46290
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/locations.1.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/locations.1.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "0895011f9b2dfec452c4f133b41ad572518a98056836e7dea466b14155115a61",
+      "size": 45794
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/locations.2.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/locations.2.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "abcd59d708683beb903bbd7a58c8b88a40704b85d781ac744f88fef01446f0d6",
+      "size": 46324
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/locations.3.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/locations.3.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "479a0eaac42f343fe8ce51c69c5b2a291db018f71dccf3f9cde291e2d0d5184e",
+      "size": 46296
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/locations.4.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/locations.4.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "44889014f88fb2a2967c06f90f1c8c26a87692af825acb6850baa06091b6e9ee",
+      "size": 46190
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/locations.5.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/locations.5.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "bda1851645d2f9cb27ad7ee50d6fe6b133a175e1bca229ac980a763e88021979",
+      "size": 46960
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/locations.6.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/locations.6.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "bacb31c610f5bf56d5bc40a65198e1ddd1d750618f2a3a89c19bb6c06606baa5",
+      "size": 45582
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/locations.7.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/locations.7.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "14b7c4e6c10187b8bfa3f00b25695b737f4646fedc813f8ab5b3165fa7746576",
+      "size": 45864
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/locations.8.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/locations.8.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "b18decbc2647cfc00af524d2903c3f542652724715ba6a195880e7fa05c81226",
+      "size": 47038
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/locations.9.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/locations.9.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "5a01a7c9348582cb6b9cf735281f5574aa46ba5de698c758cafb8bfcde6dcd58",
+      "size": 45858
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/locations.10.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/locations.10.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "b7c66e287ec299dff3b1b78b91be29697df0ad0d8320266f3071d548c9add422",
+      "size": 46254
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/locations.11.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/locations.11.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "2ce390eb906925791aab4632e28c51d9a6117c85d909286b5b15a246f19616c3",
+      "size": 47564
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/locations.12.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/locations.12.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "f36eac7bd24b3528bf091a9b4033e9fccb31d83aab82dc90d68faba3e8e525ba",
+      "size": 47062
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.1.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "fe1f12c5ebc5cea0f3a1a28b8cb98141ac6a1144a8942a240b7d034ff09e277f",
+      "size": 45618
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.2.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "41abb01aa45553b802a5af8fcca1e52826b0e51559d80430f34791f3a9b4d0ed",
+      "size": 46988
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.3.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "a57b093d86d98c732998e8e22f6e4c0392ff8b59ab266029d9d6b9771765d948",
+      "size": 45872
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.4.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "9634febca4aeb4e400e289c37d1ba740788d7a580ba9ea72b55afc8f8dac8e08",
+      "size": 45832
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.5.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "04214770c62b085280f64e9e4c44c6bcd9a3dca14e0acfb2ec7c619841188067",
+      "size": 46590
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.6.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "d380a7b861fa40b629b5c337c6980db1542f4f6eb078c64c1f36ee5e514cd59b",
+      "size": 45984
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.7.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "b3e02c55df2ce3f1aaf0dd362758941c0983ad0641f3e820f0f3ff1e011e9ef2",
+      "size": 45442
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.8.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "5427b749ac668b250005d8a99d908f2a0e6d59d97a2f0c95f767838d07d42af9",
+      "size": 46720
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.9.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.9.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "5c32d399a3c8edeb6ce9c1bd4aa21cafb022fa5ccd8a05f12aee5149a5e786ac",
+      "size": 45828
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.10.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.10.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "1c3af5595aa2603c6d0b96fe4dbdf64e932beb4e6065be63dc9c393f0757734b",
+      "size": 45450
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.11.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.11.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "f286f532863da17b2fb9464c8fe8c14af801e8acc661b8c8f40254250c66fb1c",
+      "size": 46638
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.12.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.12.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "b8ecc87ff020f613e1f5277f45d5d91dddf8ce9b7df6793607073f04709a531b",
+      "size": 46380
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.13.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.13.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "498618e8e12f0acf61202f37d28882a892874ef8afb0e9f469143ab33c532fc9",
+      "size": 45330
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.14.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.14.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "40db970ff38f7a82d3cfb7945eed7036329fa8b55de5612863948e4c908aa5e3",
+      "size": 46690
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.15.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.15.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "57e72ab2d96c4771fbc9c43bcffe0f1dc278973b2e4c1780a4e6adc862b00b83",
+      "size": 46656
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.16.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.16.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "86af8bdf9b8699945df8ccf35558c9e33deba50b9e854df1ce78d79eb355ea26",
+      "size": 45248
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.17.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.17.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "4e58cb74de03b7ef8e9c7732571e940bfb04fadee0a025453f6dc0c54c285f8e",
+      "size": 46722
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.18.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.18.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "5254449680dfeff0071a3d460b8283942dc41520156d6d8ccd3d68ad6ba4c33d",
+      "size": 46028
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.19.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.19.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "793f58316364aeba0449962169bff8bb9f1f362cf43fc6a6b4089c1cc972e4e5",
+      "size": 45328
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.20.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.20.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "8453e8bd3be5c04ef0df40b8bfcf9605f47ed62ff6a62e6afff6a59f189d76ce",
+      "size": 47096
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.21.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.21.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "ad93ddea4a879e06f28915cef2b67c92aa0cdaf23d1f3446bc78bc1a5c6d1227",
+      "size": 45208
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.22.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.22.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "7b6de0de0c8f16ded466f7cd18d27a216ff00962e01cb916bed13f884d6a3d7e",
+      "size": 45912
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.23.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.23.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "04b35488f23841a0eceac12461c89f476f827aa154b97c55d5f419158259b018",
+      "size": 47106
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/npcs.24.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/npcs.24.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "4225ebbead623ebe482d1a0d3a5aa96e5260b6fb65c25c4edf6ae57b7df747ba",
+      "size": 45980
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/adversaries.1.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/adversaries.1.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "e8c691bcbfc77c46423eba55aeb55827e1e7205553601da2c182e3d27380c499",
+      "size": 45256
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/adversaries.2.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/adversaries.2.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "0182579f8fbc13ba9c2f1b4d75ed7b249cb82781510264cf1a07d6b58ce554b6",
+      "size": 46100
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/adversaries.3.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/adversaries.3.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "2fd47a84201a25b01c95284588b193f4be564dc47ece39bb1302f5e51d5f89f3",
+      "size": 53312
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/adversaries.4.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/adversaries.4.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "6a4d4e0064f685c2e31382d52437537bbec3484413680630da06e83d5b6e756c",
+      "size": 45234
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/adversaries.5.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/adversaries.5.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "74242d1014d2a3f88a09eb82ba773ef6d28d26a13dc19c4cba756bdc7f3ed212",
+      "size": 46440
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/adversaries.6.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/adversaries.6.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "9b76ba0a280adf100bce7ab587b01b8f441472937469ccaf6dbd663648dfc0f8",
+      "size": 45798
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/adversaries.7.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/adversaries.7.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "6dcb9180afc596bec4742afbbd9240b7dbcd4eb9e6c546e4d5feca35833e78f1",
+      "size": 45184
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/adversaries.8.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/adversaries.8.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "7e8de9140a7ad4d20b8bbf9bd933f006e213dc47e827983550a4f56213cab5e5",
+      "size": 45670
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/adversaries.9.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/adversaries.9.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "b85c707e5b708cdf0718e5ed3a07925e87e80f13a55c4c1d13cedbe9376445ff",
+      "size": 48938
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/adversaries.10.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/adversaries.10.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "8dc00ca45fef1aa3db7225b737bd950786ff85c94fc75700419abd87342457bc",
+      "size": 45464
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/adversaries.11.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/adversaries.11.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "37de1d8a015a9a4cd337cb78149a938378f177a31cdbc9c69f3239ccb8f3fcc8",
+      "size": 47468
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/adversaries.12.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/adversaries.12.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "ef95eea4c4823cc0e7478ba06e4668574f4d9bfe2372b0ac1ce25134057755af",
+      "size": 46436
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/adversaries.13.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/adversaries.13.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "4aea3a69fafc09714276aff2d6f1eabee070565405d1998e50d2722e98a26c58",
+      "size": 44962
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/adversaries.14.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/adversaries.14.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "35e2b81fd5bbff96a97dc7233b270adfe3305be4e7cd9c85da050831d9d95a4a",
+      "size": 46208
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/adversaries.15.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/adversaries.15.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "209d61e9aa7661693af0caf109c9aecfc86e3e8f164ac63cbae2b0b2276ae851",
+      "size": 45576
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/adversaries.16.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/adversaries.16.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "70c9c95e1e638fb7d4e76f9b2f4c16a3006e745cf9f121b1b3b0949289d2b00d",
+      "size": 45660
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/adversaries.17.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/adversaries.17.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "164c4b170a916f1d1a2ef041510846ebf788b1c65394007c1375180defc0dfa8",
+      "size": 45602
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/adversaries.18.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/adversaries.18.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "cced624fe11bafe033a50caf5a96d31660f8979c7b369d46630fa9a62b4eea87",
+      "size": 45868
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.1.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.1.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "38aa42337f3407a3d44d66ea91ad9bf509c0e16fb60b379613d3e3811ea2fb6c",
+      "size": 45752
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.2.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.2.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "f1c2b318c3e1737a02fef788970710b3dd7a4e6d59263aaae257b3faa05e5ee7",
+      "size": 47140
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.3.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.3.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "e5c9c266dd81a96b26b3ed235cbd2a672436595ac8e94643be8139d1324945c8",
+      "size": 46196
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.4.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.4.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "7257df8bc7a38da275fb8fa0d610746d145213c1329a6f7f259065040f7c6807",
+      "size": 45576
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.5.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.5.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "a20c6f59850ba691db692175ee8b6738913f23d04d501badfd24cc9f9a07c449",
+      "size": 47018
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.6.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.6.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "7e9fe32e78b32fd0ce3b92195f4e5c9a66ed108efb46b3bad30cd7223da1e1df",
+      "size": 46248
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.7.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.7.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "d031850b910bfb269b6ceace1884ab42c4182994b3f358808de11d32ac9256b5",
+      "size": 45588
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.8.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.8.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "8aad048d27ddcdcd18592de046eeb9d14ed05c3d01ba1eb08541a49c97d5a6dc",
+      "size": 46222
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.9.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.9.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "26b0477478df6c8cd422e744e638e6d22ec9fe330a87f6a7797f4c2ba902e8df",
+      "size": 46438
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.10.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.10.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "b9c615dbfc1f15029439096d9cbebe76c091612167604f123e6b606d360f82c7",
+      "size": 46006
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.11.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.11.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "d3ff0446d6482f85848857190f1630b9a9b14b3792de6b37dc534098a78f9def",
+      "size": 46896
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.12.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.12.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "4ef06837eec5a67161b37e6090aad76de5c3f2afee63e42dd25b98dd4c01700d",
+      "size": 46898
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.13.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.13.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "b9442f8de8606d61698b97a5594c7542c10288e67fb7f1c23c09ec44b64f3740",
+      "size": 45606
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.14.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.14.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "7ffead129582473db8a63427693c1e2ce622fdb15d16184161509bf3787a02bc",
+      "size": 47068
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.15.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.15.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "3f403c45f72c2876475a1fde1cef90e9d3b4d0aac0de09b3deee9c90ef3077e4",
+      "size": 45788
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.16.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.16.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "63e3383838c7b31871f957ded8af18fe90e0dfe31bff6a24d3e40fe6e7a742a4",
+      "size": 45660
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.17.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.17.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "074d2c299f3a6e681233c46e75c493ab9aeba905dc57f76608928fe203fd0836",
+      "size": 47000
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.18.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.18.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "aaf7ef149380f502158dc1369472e7b0214020ea0b1b46eb6fc62a995b86a149",
+      "size": 46052
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.19.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.19.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "b53c9665a1ad2a2cfa6a400882efda79325550ed10faebf89330ae0ed04342f0",
+      "size": 45434
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.20.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.20.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "860699a0b4a4a64a97fc7e0d1f84994047acb9cf8b6b3189869fa77f71e6bee0",
+      "size": 46770
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.21.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.21.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "e59ca858b838968de5bf2f05c106aab625368515e6fb87d5a9bb4109ef8ff5cc",
+      "size": 46690
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.22.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.22.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "1fa0436414fa2f7ce3abfb56bbba6f269a2e03721cc8b9b389b51e347bf6db7d",
+      "size": 46060
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.23.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.23.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "1bff6fc3d4c29a971eb2111abaa3bc17a7727b8cfce004e4e8c6e43b0d419f2d",
+      "size": 47080
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/items.24.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/items.24.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "b5da818e2c48cb2cee096966a333a4581f28ad6b4bcf018e219201a82a5aafd3",
+      "size": 47268
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.1.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "1b1bd5868958c35dcf56e783e684b6c29f3134c85b8432ac7ab63d60879df932",
+      "size": 45978
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.2.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "43d6427b36200e8d2584db29310220d40a78b531a2da64b4736668c8d0d95699",
+      "size": 46974
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.3.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "806cfbc1357c89de65e18c518ea34f90d2c79e0656ee2c5a28d8a1a3947ac789",
+      "size": 45528
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.4.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "de1662430dcc06815bdf316c851bd4d5021a6f531912a9e10e7b6c2c30744385",
+      "size": 46488
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.5.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "35d5231dc5d4e4611aa68d402de154698de9f1698482f6f91a47ef2e0c1debb2",
+      "size": 47082
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.6.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "be574e78e7c1323ee29e23b5e758c29808ecd99058a64c4a558d6bee0778614c",
+      "size": 46656
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.7.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ed3bafec473add842a7efa32bdd05192c4afe6f399d7420b46120d6e81015ead",
+      "size": 45536
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.8.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "3e3cd98c61d838f11f6eed0dbc5b0195bca401c0343a549177c12e206df8fa68",
+      "size": 46688
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.9.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "3b443af42bf46f042bbd509fb957e4a4303d6ecea6fe8e1afca382cadf0453ae",
+      "size": 46112
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.10.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "bad819a1e76829cd7bdc576f372e9e5533f4644ab89fdc52477cd9ad58aab046",
+      "size": 46388
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.11.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "235c9e368a6a1db30a907fd3db9155c412177b4d2c65a132da97ca35ffd7bcab",
+      "size": 47008
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.12.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "fb9a661fa20c6e2d8d28d56b29de4fd6854a77ecfb1cd0dfa9833b061a1ed65f",
+      "size": 45170
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.13.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "5019ed4478179e49f1daf0f0b53f5eb3854540c9068266155fe6b967e6b12997",
+      "size": 47122
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.14.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b6eebb7ae3ddce4b893c3d8eb7772d1db1a7039df918b27ac9594824ae1ca445",
+      "size": 47204
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.15.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "441280052d04a28b50bdfb63238720f109a17e7c0c1293c6ca40f1653affeda8",
+      "size": 46156
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.16.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4806faba062cd174d8061c14a27bd6eb031d3dbff56fc84b5b7c3b53912d7f67",
+      "size": 46564
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.17.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "d0911b21b051da1c6a874debb9a98e2106f79481bb5a73699979e6eb2028127f",
+      "size": 46938
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.18.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "84fee1133d003ff497ba574161ef42a17d0de6179701f606fd2cae582efb4642",
+      "size": 45828
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.19.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.19.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "14654528340bcfbd13611bdfffca5f1ff0368635a791413209b05e8f0758d4f4",
+      "size": 46706
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.20.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.20.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f424bee88516596fb2021c1e540639738865a498a284f497972a054b59480eb1",
+      "size": 47796
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.21.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.21.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "fa61a6a1337536a9ca8b8a29307b3792373133e328beb4d21736d13ab89a6ec7",
+      "size": 46678
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.22.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.22.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "5fa8636235ea06b7db02fccb29557d0f84f00aadb7006e87b709a161a6dbe3b8",
+      "size": 46440
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.23.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.23.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "5200f69c3f17424ff644af62cf0c50876e3ee4c64664ec736cac579f46524a3a",
+      "size": 46910
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.24.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.24.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "2b9fa6e76e6a1ed93582146fc2e2cb6a474e8988897bbb16106b1b28db8329ae",
+      "size": 47108
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.25.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.25.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "aab8d2b1bca5fd30b9325c3a23b486240c2bc358dbd7f0e3f5c31ba9647ad655",
+      "size": 46288
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.26.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.26.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "11da9b841b4a6eff1149ea5c681ffb2bb5cae0e6fbde51caa3f04ee48439312e",
+      "size": 47354
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.27.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.27.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "dce81bd5206dc3f7e591828178a2aa83d832c899b00a2a7a8b82c8099424e6a9",
+      "size": 46544
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.28.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.28.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "282f37bdf607df6da0516b3653c1a1a8f72d9e4cd75640456fed6195417d6a3c",
+      "size": 45968
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.29.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.29.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "cf5b74c9eb6c6a1d7b7794de900115c6f5aa77bdf5830ca17f7d3f30f8690cb9",
+      "size": 46506
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/events.30.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/events.30.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f90ce8931ce8724702ed9957b39614bbcd60528ddf81e8c35cf86b44a7596b99",
+      "size": 46962
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/scenes.1.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/scenes.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b26d0ba6c3bdc9378915603bc7f11cac9a27bf06081fc23584f780291a83f2ca",
+      "size": 45518
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/scenes.2.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/scenes.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "077e2411d7c2204d5702a700e5a8f54167f5270a76ccaa914008ba7f9ee0be51",
+      "size": 47280
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/scenes.3.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/scenes.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "af43835fb010d5ce70c8af19f7630c2418de7d5201fb4070ad3de8c7d8af6450",
+      "size": 46700
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/scenes.4.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/scenes.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "d7a07eeb5ec13c3e4df30a40bba945892cf4520917be8ed822eb886120ca1dba",
+      "size": 45008
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/scenes.5.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/scenes.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "429f66aac41b50c02dbed9fbda017e89fd9c0b2ff18c7e9b4d5d5f806ff14190",
+      "size": 46864
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/scenes.6.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/scenes.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "95b04e1d468521e4e0aa0188cb63a98b71485b5ae6b84e6d01d5b8fb357781b3",
+      "size": 46398
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/scenes.7.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/scenes.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "e99f27e0f9fde4a5d137ddbcbfa6a8fde139dbc96ecf9dde9ef45f1409c696cb",
+      "size": 46076
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/scenes.8.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/scenes.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "5c6329a96a7f0f91e8d37f1a629ec90f0884a3a4ef715c31f6248dd0a0f48c9a",
+      "size": 46818
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/scenes.9.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/scenes.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "20ac2ce4d34ee5d4ec1e7b47cf4b7400bb307159d45835a4e6632e042bcfae5e",
+      "size": 46580
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/scenes.10.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/scenes.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "baa911c1bd788f94b2e9b444a007b2f5d417d1c4fdaedfd4e84922807552822d",
+      "size": 46418
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/scenes.11.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/scenes.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c553398679a29689d18221a3131eb28cb1c0f220259a09d2b98b9182843495da",
+      "size": 48132
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/scenes.12.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/scenes.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "dc7740cdba5a887de1fbf3933dfe1249109a9a96c19dafd5f119fe185ccffa57",
+      "size": 46490
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/scenes.13.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/scenes.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "446c250e680dee1634c07074255357f60491d037f0cca65b0cdcf55cb80bc603",
+      "size": 46418
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/scenes.14.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/scenes.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "049f610b4d354a78551a10b3a99adf1186f2fc860025b196558122f8c64bfbe3",
+      "size": 47228
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/scenes.15.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/scenes.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b4fe61dcad6a6b371db37568715ef8bb879688872883bed15544ab1cb99ae146",
+      "size": 46710
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/scenes.16.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/scenes.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "605d76036cb4c5018f9cf67578b975d3eaf3108add9a30b819258b2d2b1851df",
+      "size": 47526
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/scenes.17.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/scenes.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4d2eff2a6dc24113f62c2b299136c5a4d3caca122227c1b90a1362d24c58246e",
+      "size": 46718
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/scenes.18.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/scenes.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4112284aa2f04261cfc324f21a5c0138b61740b18cca7d6c8f253916bfe83787",
+      "size": 46662
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/archetypes.1.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/archetypes.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "00a2370306042bcc9abdb5d31107010a1cdc74067d6da4008c6a6bdb34f773da",
+      "size": 59264
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/archetypes.2.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/archetypes.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "f71fd816758de9b5bbbe3d2e73ab644bbe6b5b5b9ac9a73e933e430a73caf88a",
+      "size": 45656
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/archetypes.3.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/archetypes.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "b4dd5a478c3039f2ddd3868533323c028c3e615a166eaa5ed541d73e725a9acd",
+      "size": 47668
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/archetypes.4.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/archetypes.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "e7a4162ecdf497b896abd33d351f6259ca5af752eecf0cfc45bfa493f2e46001",
+      "size": 45752
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/archetypes.5.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/archetypes.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "321a6e2a56559c36d63480339a06e79dc85572be55296551e88ac1774cd3f792",
+      "size": 45838
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/archetypes.6.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/archetypes.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "5ee7a2f3b4134dacbf8900b827a971812a613c7eb82cb184f4777694eaf01849",
+      "size": 49036
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/archetypes.7.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/archetypes.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "6ff9e058f6c10bfbe941e51bf37d84770cb91489d83d18557026c533c4245b0a",
+      "size": 47688
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/archetypes.8.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/archetypes.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "6528ede0d43a75ba8c9feea4890a2d8d593f026fbd02b68cce8999f9fa0891a4",
+      "size": 45290
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/progressionPaths.1.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/progressionPaths.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "0ee93f0b47e2c3497ab68af34b8f57d5daf1d291acef446e4e1a2ba007981fe9",
+      "size": 46370
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/progressionPaths.2.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/progressionPaths.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "8dacd6ab42c0ebb9746c8077833615feae454dc0175ba2499c852a9a0f86038c",
+      "size": 46874
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/progressionPaths.3.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/progressionPaths.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "732df0b89fe5d7a65801d09e13ff9d4f79890f02a312533567111a36cd848753",
+      "size": 47056
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/progressionPaths.4.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/progressionPaths.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "62caaee8f7dc12c395236bbd44914c3b777528a1d7501022b2b1143e6277917f",
+      "size": 46178
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/progressionPaths.5.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/progressionPaths.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "8550e7d0545756a5da2667053c46dd2c0f99b18e14e49f842ab3c073b97a3b1b",
+      "size": 47242
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/progressionPaths.6.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/progressionPaths.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "b249a003c2cbb2e7d1ed88fa4ca77b9c766c1a23e625e0969f12255c27587935",
+      "size": 46492
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/visualThemes.1.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/visualThemes.1.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "666869f6ea6095127078ee752c60b80cf74023be90a0965ad0a0446f386f603d",
+      "size": 45138
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/visualThemes.2.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/visualThemes.2.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "04821e949f2a8e5c8dbe242212d2b565e7b0fb1c530fb0e7dc9825a75f8b3dd4",
+      "size": 44616
+    },
+    {
+      "name": "cyberpunk/illustrated-1.1.0/visualThemes.3.webp",
+      "path": "media/cyberpunk/illustrated-1.1.0/visualThemes.3.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "a6827d96f1b4d402bb3e5562994473530b008910519f9019fc0de8c47997c1ed",
+      "size": 46516
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.cyber.visuals",
+    "version": "1.1.0",
+    "name": "Neighborhood Mutual Schematics — Illustrated",
+    "description": "Neighborhood Mutual Schematics for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+    "provides": [
+      "visuals:cyberpunk"
+    ],
+    "requires": [
+      "setting:cyberpunk"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/illustrated-cyberpunk",
+        "value": {
+          "id": "illustrated-cyberpunk",
+          "name": "Illustrated cyberpunk",
+          "description": "Individual generated illustrations for every authored content object",
+          "defaults": {
+            "background": "assets/cyberpunk/illustrated-1.1.0/scenes.1.webp",
+            "card": "assets/cyberpunk/illustrated-1.1.0/scenes.1.webp",
+            "map": "assets/cyberpunk/illustrated-1.1.0/visualThemes.1.webp",
+            "portrait": "assets/cyberpunk/illustrated-1.1.0/archetypes.1.webp",
+            "token": "assets/cyberpunk/illustrated-1.1.0/adversaries.1.webp",
+            "item": "assets/cyberpunk/illustrated-1.1.0/items.1.webp",
+            "location": "assets/cyberpunk/illustrated-1.1.0/locations.1.webp"
+          },
+          "families": {
+            "illustrated.cyberpunk.factions.1": {
+              "card": "assets/cyberpunk/illustrated-1.1.0/factions.1.webp"
+            },
+            "illustrated.cyberpunk.factions.2": {
+              "card": "assets/cyberpunk/illustrated-1.1.0/factions.2.webp"
+            },
+            "illustrated.cyberpunk.factions.3": {
+              "card": "assets/cyberpunk/illustrated-1.1.0/factions.3.webp"
+            },
+            "illustrated.cyberpunk.factions.4": {
+              "card": "assets/cyberpunk/illustrated-1.1.0/factions.4.webp"
+            },
+            "illustrated.cyberpunk.factions.5": {
+              "card": "assets/cyberpunk/illustrated-1.1.0/factions.5.webp"
+            },
+            "illustrated.cyberpunk.factions.6": {
+              "card": "assets/cyberpunk/illustrated-1.1.0/factions.6.webp"
+            },
+            "illustrated.cyberpunk.factions.7": {
+              "card": "assets/cyberpunk/illustrated-1.1.0/factions.7.webp"
+            },
+            "illustrated.cyberpunk.factions.8": {
+              "card": "assets/cyberpunk/illustrated-1.1.0/factions.8.webp"
+            },
+            "illustrated.cyberpunk.locations.1": {
+              "location": "assets/cyberpunk/illustrated-1.1.0/locations.1.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/locations.1.webp"
+            },
+            "illustrated.cyberpunk.locations.2": {
+              "location": "assets/cyberpunk/illustrated-1.1.0/locations.2.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/locations.2.webp"
+            },
+            "illustrated.cyberpunk.locations.3": {
+              "location": "assets/cyberpunk/illustrated-1.1.0/locations.3.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/locations.3.webp"
+            },
+            "illustrated.cyberpunk.locations.4": {
+              "location": "assets/cyberpunk/illustrated-1.1.0/locations.4.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/locations.4.webp"
+            },
+            "illustrated.cyberpunk.locations.5": {
+              "location": "assets/cyberpunk/illustrated-1.1.0/locations.5.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/locations.5.webp"
+            },
+            "illustrated.cyberpunk.locations.6": {
+              "location": "assets/cyberpunk/illustrated-1.1.0/locations.6.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/locations.6.webp"
+            },
+            "illustrated.cyberpunk.locations.7": {
+              "location": "assets/cyberpunk/illustrated-1.1.0/locations.7.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/locations.7.webp"
+            },
+            "illustrated.cyberpunk.locations.8": {
+              "location": "assets/cyberpunk/illustrated-1.1.0/locations.8.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/locations.8.webp"
+            },
+            "illustrated.cyberpunk.locations.9": {
+              "location": "assets/cyberpunk/illustrated-1.1.0/locations.9.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/locations.9.webp"
+            },
+            "illustrated.cyberpunk.locations.10": {
+              "location": "assets/cyberpunk/illustrated-1.1.0/locations.10.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/locations.10.webp"
+            },
+            "illustrated.cyberpunk.locations.11": {
+              "location": "assets/cyberpunk/illustrated-1.1.0/locations.11.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/locations.11.webp"
+            },
+            "illustrated.cyberpunk.locations.12": {
+              "location": "assets/cyberpunk/illustrated-1.1.0/locations.12.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/locations.12.webp"
+            },
+            "illustrated.cyberpunk.npcs.1": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.1.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.1.webp"
+            },
+            "illustrated.cyberpunk.npcs.2": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.2.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.2.webp"
+            },
+            "illustrated.cyberpunk.npcs.3": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.3.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.3.webp"
+            },
+            "illustrated.cyberpunk.npcs.4": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.4.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.4.webp"
+            },
+            "illustrated.cyberpunk.npcs.5": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.5.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.5.webp"
+            },
+            "illustrated.cyberpunk.npcs.6": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.6.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.6.webp"
+            },
+            "illustrated.cyberpunk.npcs.7": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.7.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.7.webp"
+            },
+            "illustrated.cyberpunk.npcs.8": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.8.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.8.webp"
+            },
+            "illustrated.cyberpunk.npcs.9": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.9.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.9.webp"
+            },
+            "illustrated.cyberpunk.npcs.10": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.10.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.10.webp"
+            },
+            "illustrated.cyberpunk.npcs.11": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.11.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.11.webp"
+            },
+            "illustrated.cyberpunk.npcs.12": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.12.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.12.webp"
+            },
+            "illustrated.cyberpunk.npcs.13": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.13.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.13.webp"
+            },
+            "illustrated.cyberpunk.npcs.14": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.14.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.14.webp"
+            },
+            "illustrated.cyberpunk.npcs.15": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.15.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.15.webp"
+            },
+            "illustrated.cyberpunk.npcs.16": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.16.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.16.webp"
+            },
+            "illustrated.cyberpunk.npcs.17": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.17.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.17.webp"
+            },
+            "illustrated.cyberpunk.npcs.18": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.18.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.18.webp"
+            },
+            "illustrated.cyberpunk.npcs.19": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.19.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.19.webp"
+            },
+            "illustrated.cyberpunk.npcs.20": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.20.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.20.webp"
+            },
+            "illustrated.cyberpunk.npcs.21": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.21.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.21.webp"
+            },
+            "illustrated.cyberpunk.npcs.22": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.22.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.22.webp"
+            },
+            "illustrated.cyberpunk.npcs.23": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.23.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.23.webp"
+            },
+            "illustrated.cyberpunk.npcs.24": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/npcs.24.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/npcs.24.webp"
+            },
+            "illustrated.cyberpunk.adversaries.1": {
+              "token": "assets/cyberpunk/illustrated-1.1.0/adversaries.1.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/adversaries.1.webp"
+            },
+            "illustrated.cyberpunk.adversaries.2": {
+              "token": "assets/cyberpunk/illustrated-1.1.0/adversaries.2.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/adversaries.2.webp"
+            },
+            "illustrated.cyberpunk.adversaries.3": {
+              "token": "assets/cyberpunk/illustrated-1.1.0/adversaries.3.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/adversaries.3.webp"
+            },
+            "illustrated.cyberpunk.adversaries.4": {
+              "token": "assets/cyberpunk/illustrated-1.1.0/adversaries.4.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/adversaries.4.webp"
+            },
+            "illustrated.cyberpunk.adversaries.5": {
+              "token": "assets/cyberpunk/illustrated-1.1.0/adversaries.5.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/adversaries.5.webp"
+            },
+            "illustrated.cyberpunk.adversaries.6": {
+              "token": "assets/cyberpunk/illustrated-1.1.0/adversaries.6.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/adversaries.6.webp"
+            },
+            "illustrated.cyberpunk.adversaries.7": {
+              "token": "assets/cyberpunk/illustrated-1.1.0/adversaries.7.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/adversaries.7.webp"
+            },
+            "illustrated.cyberpunk.adversaries.8": {
+              "token": "assets/cyberpunk/illustrated-1.1.0/adversaries.8.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/adversaries.8.webp"
+            },
+            "illustrated.cyberpunk.adversaries.9": {
+              "token": "assets/cyberpunk/illustrated-1.1.0/adversaries.9.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/adversaries.9.webp"
+            },
+            "illustrated.cyberpunk.adversaries.10": {
+              "token": "assets/cyberpunk/illustrated-1.1.0/adversaries.10.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/adversaries.10.webp"
+            },
+            "illustrated.cyberpunk.adversaries.11": {
+              "token": "assets/cyberpunk/illustrated-1.1.0/adversaries.11.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/adversaries.11.webp"
+            },
+            "illustrated.cyberpunk.adversaries.12": {
+              "token": "assets/cyberpunk/illustrated-1.1.0/adversaries.12.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/adversaries.12.webp"
+            },
+            "illustrated.cyberpunk.adversaries.13": {
+              "token": "assets/cyberpunk/illustrated-1.1.0/adversaries.13.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/adversaries.13.webp"
+            },
+            "illustrated.cyberpunk.adversaries.14": {
+              "token": "assets/cyberpunk/illustrated-1.1.0/adversaries.14.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/adversaries.14.webp"
+            },
+            "illustrated.cyberpunk.adversaries.15": {
+              "token": "assets/cyberpunk/illustrated-1.1.0/adversaries.15.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/adversaries.15.webp"
+            },
+            "illustrated.cyberpunk.adversaries.16": {
+              "token": "assets/cyberpunk/illustrated-1.1.0/adversaries.16.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/adversaries.16.webp"
+            },
+            "illustrated.cyberpunk.adversaries.17": {
+              "token": "assets/cyberpunk/illustrated-1.1.0/adversaries.17.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/adversaries.17.webp"
+            },
+            "illustrated.cyberpunk.adversaries.18": {
+              "token": "assets/cyberpunk/illustrated-1.1.0/adversaries.18.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/adversaries.18.webp"
+            },
+            "illustrated.cyberpunk.items.1": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.1.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.1.webp"
+            },
+            "illustrated.cyberpunk.items.2": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.2.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.2.webp"
+            },
+            "illustrated.cyberpunk.items.3": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.3.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.3.webp"
+            },
+            "illustrated.cyberpunk.items.4": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.4.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.4.webp"
+            },
+            "illustrated.cyberpunk.items.5": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.5.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.5.webp"
+            },
+            "illustrated.cyberpunk.items.6": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.6.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.6.webp"
+            },
+            "illustrated.cyberpunk.items.7": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.7.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.7.webp"
+            },
+            "illustrated.cyberpunk.items.8": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.8.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.8.webp"
+            },
+            "illustrated.cyberpunk.items.9": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.9.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.9.webp"
+            },
+            "illustrated.cyberpunk.items.10": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.10.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.10.webp"
+            },
+            "illustrated.cyberpunk.items.11": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.11.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.11.webp"
+            },
+            "illustrated.cyberpunk.items.12": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.12.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.12.webp"
+            },
+            "illustrated.cyberpunk.items.13": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.13.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.13.webp"
+            },
+            "illustrated.cyberpunk.items.14": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.14.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.14.webp"
+            },
+            "illustrated.cyberpunk.items.15": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.15.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.15.webp"
+            },
+            "illustrated.cyberpunk.items.16": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.16.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.16.webp"
+            },
+            "illustrated.cyberpunk.items.17": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.17.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.17.webp"
+            },
+            "illustrated.cyberpunk.items.18": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.18.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.18.webp"
+            },
+            "illustrated.cyberpunk.items.19": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.19.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.19.webp"
+            },
+            "illustrated.cyberpunk.items.20": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.20.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.20.webp"
+            },
+            "illustrated.cyberpunk.items.21": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.21.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.21.webp"
+            },
+            "illustrated.cyberpunk.items.22": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.22.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.22.webp"
+            },
+            "illustrated.cyberpunk.items.23": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.23.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.23.webp"
+            },
+            "illustrated.cyberpunk.items.24": {
+              "item": "assets/cyberpunk/illustrated-1.1.0/items.24.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/items.24.webp"
+            },
+            "illustrated.cyberpunk.events.1": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.1.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.1.webp"
+            },
+            "illustrated.cyberpunk.events.2": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.2.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.2.webp"
+            },
+            "illustrated.cyberpunk.events.3": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.3.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.3.webp"
+            },
+            "illustrated.cyberpunk.events.4": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.4.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.4.webp"
+            },
+            "illustrated.cyberpunk.events.5": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.5.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.5.webp"
+            },
+            "illustrated.cyberpunk.events.6": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.6.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.6.webp"
+            },
+            "illustrated.cyberpunk.events.7": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.7.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.7.webp"
+            },
+            "illustrated.cyberpunk.events.8": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.8.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.8.webp"
+            },
+            "illustrated.cyberpunk.events.9": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.9.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.9.webp"
+            },
+            "illustrated.cyberpunk.events.10": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.10.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.10.webp"
+            },
+            "illustrated.cyberpunk.events.11": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.11.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.11.webp"
+            },
+            "illustrated.cyberpunk.events.12": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.12.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.12.webp"
+            },
+            "illustrated.cyberpunk.events.13": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.13.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.13.webp"
+            },
+            "illustrated.cyberpunk.events.14": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.14.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.14.webp"
+            },
+            "illustrated.cyberpunk.events.15": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.15.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.15.webp"
+            },
+            "illustrated.cyberpunk.events.16": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.16.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.16.webp"
+            },
+            "illustrated.cyberpunk.events.17": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.17.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.17.webp"
+            },
+            "illustrated.cyberpunk.events.18": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.18.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.18.webp"
+            },
+            "illustrated.cyberpunk.events.19": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.19.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.19.webp"
+            },
+            "illustrated.cyberpunk.events.20": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.20.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.20.webp"
+            },
+            "illustrated.cyberpunk.events.21": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.21.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.21.webp"
+            },
+            "illustrated.cyberpunk.events.22": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.22.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.22.webp"
+            },
+            "illustrated.cyberpunk.events.23": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.23.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.23.webp"
+            },
+            "illustrated.cyberpunk.events.24": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.24.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.24.webp"
+            },
+            "illustrated.cyberpunk.events.25": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.25.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.25.webp"
+            },
+            "illustrated.cyberpunk.events.26": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.26.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.26.webp"
+            },
+            "illustrated.cyberpunk.events.27": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.27.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.27.webp"
+            },
+            "illustrated.cyberpunk.events.28": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.28.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.28.webp"
+            },
+            "illustrated.cyberpunk.events.29": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.29.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.29.webp"
+            },
+            "illustrated.cyberpunk.events.30": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/events.30.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/events.30.webp"
+            },
+            "illustrated.cyberpunk.scenes.1": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/scenes.1.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/scenes.1.webp"
+            },
+            "illustrated.cyberpunk.scenes.2": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/scenes.2.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/scenes.2.webp"
+            },
+            "illustrated.cyberpunk.scenes.3": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/scenes.3.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/scenes.3.webp"
+            },
+            "illustrated.cyberpunk.scenes.4": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/scenes.4.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/scenes.4.webp"
+            },
+            "illustrated.cyberpunk.scenes.5": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/scenes.5.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/scenes.5.webp"
+            },
+            "illustrated.cyberpunk.scenes.6": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/scenes.6.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/scenes.6.webp"
+            },
+            "illustrated.cyberpunk.scenes.7": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/scenes.7.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/scenes.7.webp"
+            },
+            "illustrated.cyberpunk.scenes.8": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/scenes.8.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/scenes.8.webp"
+            },
+            "illustrated.cyberpunk.scenes.9": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/scenes.9.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/scenes.9.webp"
+            },
+            "illustrated.cyberpunk.scenes.10": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/scenes.10.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/scenes.10.webp"
+            },
+            "illustrated.cyberpunk.scenes.11": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/scenes.11.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/scenes.11.webp"
+            },
+            "illustrated.cyberpunk.scenes.12": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/scenes.12.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/scenes.12.webp"
+            },
+            "illustrated.cyberpunk.scenes.13": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/scenes.13.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/scenes.13.webp"
+            },
+            "illustrated.cyberpunk.scenes.14": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/scenes.14.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/scenes.14.webp"
+            },
+            "illustrated.cyberpunk.scenes.15": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/scenes.15.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/scenes.15.webp"
+            },
+            "illustrated.cyberpunk.scenes.16": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/scenes.16.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/scenes.16.webp"
+            },
+            "illustrated.cyberpunk.scenes.17": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/scenes.17.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/scenes.17.webp"
+            },
+            "illustrated.cyberpunk.scenes.18": {
+              "background": "assets/cyberpunk/illustrated-1.1.0/scenes.18.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/scenes.18.webp"
+            },
+            "illustrated.cyberpunk.archetypes.1": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/archetypes.1.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/archetypes.1.webp"
+            },
+            "illustrated.cyberpunk.archetypes.2": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/archetypes.2.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/archetypes.2.webp"
+            },
+            "illustrated.cyberpunk.archetypes.3": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/archetypes.3.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/archetypes.3.webp"
+            },
+            "illustrated.cyberpunk.archetypes.4": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/archetypes.4.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/archetypes.4.webp"
+            },
+            "illustrated.cyberpunk.archetypes.5": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/archetypes.5.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/archetypes.5.webp"
+            },
+            "illustrated.cyberpunk.archetypes.6": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/archetypes.6.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/archetypes.6.webp"
+            },
+            "illustrated.cyberpunk.archetypes.7": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/archetypes.7.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/archetypes.7.webp"
+            },
+            "illustrated.cyberpunk.archetypes.8": {
+              "portrait": "assets/cyberpunk/illustrated-1.1.0/archetypes.8.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/archetypes.8.webp"
+            },
+            "illustrated.cyberpunk.progressionPaths.1": {
+              "card": "assets/cyberpunk/illustrated-1.1.0/progressionPaths.1.webp"
+            },
+            "illustrated.cyberpunk.progressionPaths.2": {
+              "card": "assets/cyberpunk/illustrated-1.1.0/progressionPaths.2.webp"
+            },
+            "illustrated.cyberpunk.progressionPaths.3": {
+              "card": "assets/cyberpunk/illustrated-1.1.0/progressionPaths.3.webp"
+            },
+            "illustrated.cyberpunk.progressionPaths.4": {
+              "card": "assets/cyberpunk/illustrated-1.1.0/progressionPaths.4.webp"
+            },
+            "illustrated.cyberpunk.progressionPaths.5": {
+              "card": "assets/cyberpunk/illustrated-1.1.0/progressionPaths.5.webp"
+            },
+            "illustrated.cyberpunk.progressionPaths.6": {
+              "card": "assets/cyberpunk/illustrated-1.1.0/progressionPaths.6.webp"
+            },
+            "illustrated.cyberpunk.visualThemes.1": {
+              "map": "assets/cyberpunk/illustrated-1.1.0/visualThemes.1.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/visualThemes.1.webp"
+            },
+            "illustrated.cyberpunk.visualThemes.2": {
+              "map": "assets/cyberpunk/illustrated-1.1.0/visualThemes.2.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/visualThemes.2.webp"
+            },
+            "illustrated.cyberpunk.visualThemes.3": {
+              "map": "assets/cyberpunk/illustrated-1.1.0/visualThemes.3.webp",
+              "card": "assets/cyberpunk/illustrated-1.1.0/visualThemes.3.webp"
+            }
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "illustrated-cyberpunk"
+  }
+}

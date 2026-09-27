@@ -32,7 +32,7 @@ describe("M25 Deep Weird West", () => {
 
   it("ships a complete Quick selection that also composes in Advanced mode", async () => {
     const assets = await loadGameAssetRegistry(resolve("game-assets/library"));
-    const selected = assets.filter(asset => asset.id.startsWith("masterhost.asset.west.")).map(asset => ({ id: asset.id, version: asset.version }));
+    const selected = assets.filter(asset => asset.preview.highlights.includes("Deep Universe Standard v1")).filter(asset => asset.id.startsWith("masterhost.asset.west.")).map(asset => ({ id: asset.id, version: asset.version }));
     const review = reviewQuickGameSelection(assets, "masterhost.weird-west", selected);
     expect(review).toMatchObject({ ready: true, diagnostics: [] });
     expect(review.selected).toHaveLength(quickGameAssetTypes.length);

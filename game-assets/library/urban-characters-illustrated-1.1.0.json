@@ -1,0 +1,800 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.urban.characters",
+  "version": "1.1.0",
+  "type": "characters",
+  "name": "City Roles and Common Ground Paths — Illustrated",
+  "description": "City Roles and Common Ground Paths for Hidden Courts, Monster Districts, Municipal Magic Conspiracy. Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.",
+  "tags": [
+    "urban-fantasy",
+    "hidden-courts",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "City Roles and Common Ground Paths for Hidden Courts, Monster Districts, Municipal Magic Conspiracy. Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.",
+    "highlights": [
+      "City Roles and Common Ground Paths",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.urban-fantasy"
+    ],
+    "requiresCapabilities": [
+      "rules:urban-fantasy",
+      "items:urban-fantasy"
+    ],
+    "providesCapabilities": [
+      "characters:urban-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.urban.rules",
+      "version": "1.1.0"
+    },
+    {
+      "id": "masterhost.asset.urban.items",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Urban Fantasy original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.urban.characters"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 8,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.urban.characters",
+    "version": "1.1.0",
+    "name": "City Roles and Common Ground Paths — Illustrated",
+    "description": "City Roles and Common Ground Paths for Hidden Courts, Monster Districts, Municipal Magic Conspiracy. Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.",
+    "provides": [
+      "characters:urban-fantasy"
+    ],
+    "requires": [
+      "rules:urban-fantasy",
+      "items:urban-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.archetypes.1",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Treaty Reader"
+            },
+            "description": {
+              "value": "Treaty Reader: finds exit conditions concealed by hidden court claims."
+            },
+            "deepId": {
+              "value": "archetypes.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.archetypes.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.archetypes.2",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Shade Caretaker"
+            },
+            "description": {
+              "value": "Shade Caretaker: keeps nocturnal homes safe through tested practical repairs."
+            },
+            "deepId": {
+              "value": "archetypes.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.archetypes.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.archetypes.3",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Route Archivist"
+            },
+            "description": {
+              "value": "Route Archivist: restores public paths erased by private enchantment."
+            },
+            "deepId": {
+              "value": "archetypes.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "municipal-magic-conspiracy",
+            "illustrated.urban-fantasy.archetypes.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.archetypes.4",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Memory Advocate"
+            },
+            "description": {
+              "value": "Memory Advocate: returns recollections to the people who chose them."
+            },
+            "deepId": {
+              "value": "archetypes.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.archetypes.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.archetypes.5",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Night Inspector"
+            },
+            "description": {
+              "value": "Night Inspector: tests safety without exposing private identities."
+            },
+            "deepId": {
+              "value": "archetypes.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.archetypes.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.archetypes.6",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Spell Auditor"
+            },
+            "description": {
+              "value": "Spell Auditor: traces civic enchantment contracts through ordinary budgets."
+            },
+            "deepId": {
+              "value": "archetypes.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "municipal-magic-conspiracy",
+            "illustrated.urban-fantasy.archetypes.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.archetypes.7",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Page Courier"
+            },
+            "description": {
+              "value": "Page Courier: finds a present route through enchanted borrowing deadlines."
+            },
+            "deepId": {
+              "value": "archetypes.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.archetypes.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.archetypes.8",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Neighbor Organizer"
+            },
+            "description": {
+              "value": "Neighbor Organizer: makes ordinary and supernatural households solve shared problems."
+            },
+            "deepId": {
+              "value": "archetypes.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.archetypes.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.progressionPaths.1",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Open Door Witness"
+            },
+            "description": {
+              "value": "Open Door Witness: earn trust through independent library exit; gain court access and lending duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.progressionPaths.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.progressionPaths.2",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Safe Dawn Keeper"
+            },
+            "description": {
+              "value": "Safe Dawn Keeper: earn support through repaired shades; gain tenant crews and inspection obligations."
+            },
+            "deepId": {
+              "value": "progressionPaths.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.progressionPaths.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.progressionPaths.3",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Public Route Guardian"
+            },
+            "description": {
+              "value": "Public Route Guardian: earn standing through usable emergency maps; gain archives and correction duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "municipal-magic-conspiracy",
+            "illustrated.urban-fantasy.progressionPaths.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.progressionPaths.4",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Memory Steward"
+            },
+            "description": {
+              "value": "Memory Steward: earn trust by returning chosen recollections; gain reader witnesses and consent duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.progressionPaths.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.progressionPaths.5",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Night Mediator"
+            },
+            "description": {
+              "value": "Night Mediator: earn legitimacy through tested shared safety; gain neighborhood support and repair duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.progressionPaths.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.progressionPaths.6",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Civic Spell Reformer"
+            },
+            "description": {
+              "value": "Civic Spell Reformer: earn authority by ending private route erasure; gain utility access and public audit duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "municipal-magic-conspiracy",
+            "illustrated.urban-fantasy.progressionPaths.6"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-archetypes-1": {
+            "template": "urban.deep.archetypes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "hidden-courts"
+              ]
+            }
+          },
+          "deep-archetypes-2": {
+            "template": "urban.deep.archetypes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "monster-districts"
+              ]
+            }
+          },
+          "deep-archetypes-3": {
+            "template": "urban.deep.archetypes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "municipal-magic-conspiracy"
+              ]
+            }
+          },
+          "deep-archetypes-4": {
+            "template": "urban.deep.archetypes.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "hidden-courts"
+              ]
+            }
+          },
+          "deep-archetypes-5": {
+            "template": "urban.deep.archetypes.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "monster-districts"
+              ]
+            }
+          },
+          "deep-archetypes-6": {
+            "template": "urban.deep.archetypes.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "municipal-magic-conspiracy"
+              ]
+            }
+          },
+          "deep-archetypes-7": {
+            "template": "urban.deep.archetypes.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "hidden-courts"
+              ]
+            }
+          },
+          "deep-archetypes-8": {
+            "template": "urban.deep.archetypes.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "monster-districts"
+              ]
+            }
+          },
+          "deep-progressionPaths-1": {
+            "template": "urban.deep.progressionPaths.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "hidden-courts"
+              ]
+            }
+          },
+          "deep-progressionPaths-2": {
+            "template": "urban.deep.progressionPaths.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "monster-districts"
+              ]
+            }
+          },
+          "deep-progressionPaths-3": {
+            "template": "urban.deep.progressionPaths.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "municipal-magic-conspiracy"
+              ]
+            }
+          },
+          "deep-progressionPaths-4": {
+            "template": "urban.deep.progressionPaths.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "hidden-courts"
+              ]
+            }
+          },
+          "deep-progressionPaths-5": {
+            "template": "urban.deep.progressionPaths.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "monster-districts"
+              ]
+            }
+          },
+          "deep-progressionPaths-6": {
+            "template": "urban.deep.progressionPaths.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "municipal-magic-conspiracy"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "op": "append",
+        "path": "/content/characterCreation/steps/3/fields/1/options",
+        "value": [
+          {
+            "value": "archetypes.1",
+            "label": "Treaty Reader"
+          },
+          {
+            "value": "archetypes.2",
+            "label": "Shade Caretaker"
+          },
+          {
+            "value": "archetypes.3",
+            "label": "Route Archivist"
+          },
+          {
+            "value": "archetypes.4",
+            "label": "Memory Advocate"
+          },
+          {
+            "value": "archetypes.5",
+            "label": "Night Inspector"
+          },
+          {
+            "value": "archetypes.6",
+            "label": "Spell Auditor"
+          },
+          {
+            "value": "archetypes.7",
+            "label": "Page Courier"
+          },
+          {
+            "value": "archetypes.8",
+            "label": "Neighbor Organizer"
+          }
+        ]
+      },
+      {
+        "op": "append",
+        "path": "/content/characterCreation/starting/assets",
+        "value": [
+          {
+            "id": "portrait",
+            "value": "assets/urban-fantasy/illustrated-1.1.0/archetypes.1.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "standard"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/urban-fantasy/illustrated-1.1.0/archetypes.1.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.1"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/urban-fantasy/illustrated-1.1.0/archetypes.2.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.2"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/urban-fantasy/illustrated-1.1.0/archetypes.3.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.3"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/urban-fantasy/illustrated-1.1.0/archetypes.4.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.4"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/urban-fantasy/illustrated-1.1.0/archetypes.5.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.5"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/urban-fantasy/illustrated-1.1.0/archetypes.6.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.6"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/urban-fantasy/illustrated-1.1.0/archetypes.7.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.7"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/urban-fantasy/illustrated-1.1.0/archetypes.8.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.8"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

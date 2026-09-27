@@ -1,0 +1,178 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.sail.world-template",
+  "version": "1.1.0",
+  "type": "world-template",
+  "name": "Three Seafaring Voyage Frames — Illustrated",
+  "description": "Three Seafaring Voyage Frames for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+  "tags": [
+    "age-of-sail",
+    "pirate-archipelago",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Three Seafaring Voyage Frames for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+    "highlights": [
+      "Three Seafaring Voyage Frames",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.age-of-sail"
+    ],
+    "requiresCapabilities": [
+      "setting:age-of-sail"
+    ],
+    "providesCapabilities": [
+      "world:age-of-sail"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.sail.setting",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Age of Sail original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.sail.world-template"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.sail.world-template",
+    "version": "1.1.0",
+    "name": "Three Seafaring Voyage Frames — Illustrated",
+    "description": "Three Seafaring Voyage Frames for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+    "provides": [
+      "world:age-of-sail"
+    ],
+    "requires": [
+      "setting:age-of-sail"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.kit.pirate-archipelago",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "Pirate Archipelago: Boats for the Next Storm"
+            },
+            "kitId": {
+              "value": "kit.pirate-archipelago"
+            },
+            "openingSceneId": {
+              "value": "scenes.1"
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.kit.imperial-trade-war",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "Imperial Trade War: Neither Navy's Prize"
+            },
+            "kitId": {
+              "value": "kit.imperial-trade-war"
+            },
+            "openingSceneId": {
+              "value": "scenes.2"
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.kit.mythic-ocean",
+        "value": {
+          "kind": "campaign-kit",
+          "values": {
+            "name": {
+              "value": "Mythic Ocean: An Island with Its Own Horizon"
+            },
+            "kitId": {
+              "value": "kit.mythic-ocean"
+            },
+            "openingSceneId": {
+              "value": "scenes.3"
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "campaign-kit"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-kit-pirate-archipelago": {
+            "template": "sail.deep.kit.pirate-archipelago",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.pirate-archipelago"
+              ]
+            }
+          },
+          "deep-kit-imperial-trade-war": {
+            "template": "sail.deep.kit.imperial-trade-war",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.imperial-trade-war"
+              ]
+            }
+          },
+          "deep-kit-mythic-ocean": {
+            "template": "sail.deep.kit.mythic-ocean",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.campaignKit"
+                },
+                "kit.mythic-ocean"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

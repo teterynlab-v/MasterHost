@@ -1,0 +1,540 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.urban.setting",
+  "version": "1.1.0",
+  "type": "setting",
+  "name": "The After-hours City — Illustrated",
+  "description": "The After-hours City for Hidden Courts, Monster Districts, Municipal Magic Conspiracy. Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.",
+  "tags": [
+    "urban-fantasy",
+    "hidden-courts",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "The After-hours City for Hidden Courts, Monster Districts, Municipal Magic Conspiracy. Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.",
+    "highlights": [
+      "The After-hours City",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.urban-fantasy"
+    ],
+    "requiresCapabilities": [],
+    "providesCapabilities": [
+      "setting:urban-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Urban Fantasy original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.urban.setting"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.urban.setting",
+    "version": "1.1.0",
+    "name": "The After-hours City — Illustrated",
+    "description": "The After-hours City for Hidden Courts, Monster Districts, Municipal Magic Conspiracy. Three original city campaigns: readers detained by hidden courts, nocturnal homes facing a daylight inspection and streets erased by a private spell contract.",
+    "provides": [
+      "setting:urban-fantasy"
+    ],
+    "requires": [],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.factions.1",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "After-hours Library"
+            },
+            "description": {
+              "value": "After-hours Library: hosts rival hidden courts whose treaty lives in a missing final page."
+            },
+            "deepId": {
+              "value": "factions.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.factions.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.factions.2",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Lantern Block Tenants"
+            },
+            "description": {
+              "value": "Lantern Block Tenants: shares a tower with nocturnal residents facing a forced daylight inspection."
+            },
+            "deepId": {
+              "value": "factions.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.factions.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.factions.3",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Civic Spell Office"
+            },
+            "description": {
+              "value": "Civic Spell Office: repairs public enchantments while an unauthorized contract erases street names."
+            },
+            "deepId": {
+              "value": "factions.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "municipal-magic-conspiracy",
+            "illustrated.urban-fantasy.factions.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.factions.4",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Margin Court"
+            },
+            "description": {
+              "value": "Margin Court: claims readers' memories when the treaty's ending cannot be found."
+            },
+            "deepId": {
+              "value": "factions.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.factions.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.factions.5",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Night Shift Mutual"
+            },
+            "description": {
+              "value": "Night Shift Mutual: can provide safe inspection witnesses without exposing residents to sunlight."
+            },
+            "deepId": {
+              "value": "factions.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.factions.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.factions.6",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Streetname Volunteers"
+            },
+            "description": {
+              "value": "Streetname Volunteers: records vanished addresses before emergency crews lose their routes."
+            },
+            "deepId": {
+              "value": "factions.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "municipal-magic-conspiracy",
+            "illustrated.urban-fantasy.factions.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.factions.7",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Index Court"
+            },
+            "description": {
+              "value": "Index Court: wants the treaty restored but hides its role in lending the last page."
+            },
+            "deepId": {
+              "value": "factions.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.factions.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.factions.8",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Utility Archive Crew"
+            },
+            "description": {
+              "value": "Utility Archive Crew: keeps a copy of the spell contract outside the official registry."
+            },
+            "deepId": {
+              "value": "factions.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.factions.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.visualThemes.1",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "After-hours Index"
+            },
+            "description": {
+              "value": "After-hours Index: silver exit clauses and violet court debts distinguish readers' rights from tribute."
+            },
+            "deepId": {
+              "value": "visualThemes.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "hidden-courts",
+            "illustrated.urban-fantasy.visualThemes.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.visualThemes.2",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Lantern Block"
+            },
+            "description": {
+              "value": "Lantern Block: amber repaired shades and blue night routes distinguish tested safety from daylight exposure."
+            },
+            "deepId": {
+              "value": "visualThemes.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "monster-districts",
+            "illustrated.urban-fantasy.visualThemes.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/urban.deep.visualThemes.3",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Civic Route Map"
+            },
+            "description": {
+              "value": "Civic Route Map: green resident-approved streets and gray erased feeds distinguish public routes from private control."
+            },
+            "deepId": {
+              "value": "visualThemes.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "urban-deep",
+            "municipal-magic-conspiracy",
+            "illustrated.urban-fantasy.visualThemes.3"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-factions-1": {
+            "template": "urban.deep.factions.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "hidden-courts"
+              ]
+            }
+          },
+          "deep-factions-2": {
+            "template": "urban.deep.factions.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "monster-districts"
+              ]
+            }
+          },
+          "deep-factions-3": {
+            "template": "urban.deep.factions.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "municipal-magic-conspiracy"
+              ]
+            }
+          },
+          "deep-factions-4": {
+            "template": "urban.deep.factions.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "hidden-courts"
+              ]
+            }
+          },
+          "deep-factions-5": {
+            "template": "urban.deep.factions.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "monster-districts"
+              ]
+            }
+          },
+          "deep-factions-6": {
+            "template": "urban.deep.factions.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "municipal-magic-conspiracy"
+              ]
+            }
+          },
+          "deep-factions-7": {
+            "template": "urban.deep.factions.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "hidden-courts"
+              ]
+            }
+          },
+          "deep-factions-8": {
+            "template": "urban.deep.factions.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "monster-districts"
+              ]
+            }
+          },
+          "deep-visualThemes-1": {
+            "template": "urban.deep.visualThemes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.1"
+              ]
+            }
+          },
+          "deep-visualThemes-2": {
+            "template": "urban.deep.visualThemes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.2"
+              ]
+            }
+          },
+          "deep-visualThemes-3": {
+            "template": "urban.deep.visualThemes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.3"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,592 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.west.locations",
+  "version": "1.1.0",
+  "type": "locations",
+  "name": "Twelve River Rail and Living Mine Sites — Illustrated",
+  "description": "Twelve River Rail and Living Mine Sites for Cursed Frontier, Ghost Railway, Occult Boomtown. Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.",
+  "tags": [
+    "weird-west",
+    "cursed-frontier",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Twelve River Rail and Living Mine Sites for Cursed Frontier, Ghost Railway, Occult Boomtown. Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.",
+    "highlights": [
+      "Twelve River Rail and Living Mine Sites",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.weird-west"
+    ],
+    "requiresCapabilities": [
+      "world:weird-west"
+    ],
+    "providesCapabilities": [
+      "locations:weird-west"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.west.world-template",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Weird West original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.west.locations"
+  },
+  "published": true,
+  "counts": {
+    "locations": 12,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.west.locations",
+    "version": "1.1.0",
+    "name": "Twelve River Rail and Living Mine Sites — Illustrated",
+    "description": "Twelve River Rail and Living Mine Sites for Cursed Frontier, Ghost Railway, Occult Boomtown. Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.",
+    "provides": [
+      "locations:weird-west"
+    ],
+    "requires": [
+      "world:weird-west"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.locations.1",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Redwater Crossing"
+            },
+            "description": {
+              "value": "Redwater Crossing: a new fence blocks the old river road and wakes a flood rider."
+            },
+            "deepId": {
+              "value": "locations.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "cursed-frontier",
+            "illustrated.weird-west.locations.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.locations.2",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Midnight Depot"
+            },
+            "description": {
+              "value": "Midnight Depot: a train arrives with one more carriage than the timetable permits."
+            },
+            "deepId": {
+              "value": "locations.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "ghost-railway",
+            "illustrated.weird-west.locations.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.locations.3",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Deepgold Assay Hall"
+            },
+            "description": {
+              "value": "Deepgold Assay Hall: a tested nugget beats in time with a miner's heart."
+            },
+            "deepId": {
+              "value": "locations.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "occult-boomtown",
+            "illustrated.weird-west.locations.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.locations.4",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Burial Road Stakes"
+            },
+            "description": {
+              "value": "Burial Road Stakes: fresh markers cut across a route promised open to mourners."
+            },
+            "deepId": {
+              "value": "locations.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "cursed-frontier",
+            "illustrated.weird-west.locations.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.locations.5",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Platform Zero"
+            },
+            "description": {
+              "value": "Platform Zero: the builder's station appears when someone admits an unpaid debt."
+            },
+            "deepId": {
+              "value": "locations.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "ghost-railway",
+            "illustrated.weird-west.locations.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.locations.6",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Listening Shaft"
+            },
+            "description": {
+              "value": "Listening Shaft: the vein repeats miners' names before another tunnel opens."
+            },
+            "deepId": {
+              "value": "locations.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "occult-boomtown",
+            "illustrated.weird-west.locations.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.locations.7",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "County Survey Room"
+            },
+            "description": {
+              "value": "County Survey Room: the new map omits an old shared passage agreement."
+            },
+            "deepId": {
+              "value": "locations.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "cursed-frontier",
+            "illustrated.weird-west.locations.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.locations.8",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Black Lantern Bridge"
+            },
+            "description": {
+              "value": "Black Lantern Bridge: a safe carriage can cross if its brake lantern is repaired."
+            },
+            "deepId": {
+              "value": "locations.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "ghost-railway",
+            "illustrated.weird-west.locations.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.locations.9",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Dry Well Yard"
+            },
+            "description": {
+              "value": "Dry Well Yard: the town's water tastes metallic while the gold trade grows."
+            },
+            "deepId": {
+              "value": "locations.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "occult-boomtown",
+            "illustrated.weird-west.locations.9"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.locations.10",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "River Shelter"
+            },
+            "description": {
+              "value": "River Shelter: families can evacuate before the flood rider reaches their doors."
+            },
+            "deepId": {
+              "value": "locations.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "cursed-frontier",
+            "illustrated.weird-west.locations.10"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.locations.11",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Builder's Cabin"
+            },
+            "description": {
+              "value": "Builder's Cabin: a wage book explains why the vanished station was never recorded."
+            },
+            "deepId": {
+              "value": "locations.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "ghost-railway",
+            "illustrated.weird-west.locations.11"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.locations.12",
+        "value": {
+          "kind": "location",
+          "values": {
+            "name": {
+              "value": "Sealed Fault"
+            },
+            "description": {
+              "value": "Sealed Fault: the ore can be returned through a narrow shaft at visible collapse risk."
+            },
+            "deepId": {
+              "value": "locations.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "occult-boomtown",
+            "illustrated.weird-west.locations.12"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-locations-1": {
+            "template": "west.deep.locations.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "cursed-frontier"
+              ]
+            }
+          },
+          "deep-locations-2": {
+            "template": "west.deep.locations.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-railway"
+              ]
+            }
+          },
+          "deep-locations-3": {
+            "template": "west.deep.locations.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "occult-boomtown"
+              ]
+            }
+          },
+          "deep-locations-4": {
+            "template": "west.deep.locations.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "cursed-frontier"
+              ]
+            }
+          },
+          "deep-locations-5": {
+            "template": "west.deep.locations.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-railway"
+              ]
+            }
+          },
+          "deep-locations-6": {
+            "template": "west.deep.locations.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "occult-boomtown"
+              ]
+            }
+          },
+          "deep-locations-7": {
+            "template": "west.deep.locations.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "cursed-frontier"
+              ]
+            }
+          },
+          "deep-locations-8": {
+            "template": "west.deep.locations.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-railway"
+              ]
+            }
+          },
+          "deep-locations-9": {
+            "template": "west.deep.locations.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "occult-boomtown"
+              ]
+            }
+          },
+          "deep-locations-10": {
+            "template": "west.deep.locations.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "cursed-frontier"
+              ]
+            }
+          },
+          "deep-locations-11": {
+            "template": "west.deep.locations.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-railway"
+              ]
+            }
+          },
+          "deep-locations-12": {
+            "template": "west.deep.locations.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "occult-boomtown"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

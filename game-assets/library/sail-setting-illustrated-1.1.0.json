@@ -1,0 +1,540 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.sail.setting",
+  "version": "1.1.0",
+  "type": "setting",
+  "name": "The Unfixed Sea — Illustrated",
+  "description": "The Unfixed Sea for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+  "tags": [
+    "age-of-sail",
+    "pirate-archipelago",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "The Unfixed Sea for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+    "highlights": [
+      "The Unfixed Sea",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.age-of-sail"
+    ],
+    "requiresCapabilities": [],
+    "providesCapabilities": [
+      "setting:age-of-sail"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Age of Sail original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.sail.setting"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.sail.setting",
+    "version": "1.1.0",
+    "name": "The Unfixed Sea — Illustrated",
+    "description": "The Unfixed Sea for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+    "provides": [
+      "setting:age-of-sail"
+    ],
+    "requires": [],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.factions.1",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Free Cove Captains"
+            },
+            "description": {
+              "value": "Free Cove Captains: needs a rescue flotilla while rivals hold the archipelago's stolen lifeboats."
+            },
+            "deepId": {
+              "value": "factions.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "pirate-archipelago",
+            "illustrated.age-of-sail.factions.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.factions.2",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Neutral Cargo League"
+            },
+            "description": {
+              "value": "Neutral Cargo League: carries treatment supplies through a blockade enforced by forged war papers."
+            },
+            "deepId": {
+              "value": "factions.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "imperial-trade-war",
+            "illustrated.age-of-sail.factions.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.factions.3",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Drifting Island Choir"
+            },
+            "description": {
+              "value": "Drifting Island Choir: keeps a moving island on course through names its sailors willingly sing."
+            },
+            "deepId": {
+              "value": "factions.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "mythic-ocean",
+            "illustrated.age-of-sail.factions.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.factions.4",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Reef Salvagers"
+            },
+            "description": {
+              "value": "Reef Salvagers: can release the boats if a captain settles an older rescue debt."
+            },
+            "deepId": {
+              "value": "factions.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "pirate-archipelago",
+            "illustrated.age-of-sail.factions.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.factions.5",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Harbor Surgeons"
+            },
+            "description": {
+              "value": "Harbor Surgeons: will testify that the cargo serves civilians on both sides."
+            },
+            "deepId": {
+              "value": "factions.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "imperial-trade-war",
+            "illustrated.age-of-sail.factions.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.factions.6",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Storm Watch Crew"
+            },
+            "description": {
+              "value": "Storm Watch Crew: can chart the island's safe route without binding it to a private anchor."
+            },
+            "deepId": {
+              "value": "factions.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "mythic-ocean",
+            "illustrated.age-of-sail.factions.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.factions.7",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Cove Signal Keepers"
+            },
+            "description": {
+              "value": "Cove Signal Keepers: tracks stranded sailors ignored by the captain's prize ledger."
+            },
+            "deepId": {
+              "value": "factions.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "pirate-archipelago",
+            "illustrated.age-of-sail.factions.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.factions.8",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Tide Chart Guild"
+            },
+            "description": {
+              "value": "Tide Chart Guild: holds a living route book whose last entry was taken by a storm broker."
+            },
+            "deepId": {
+              "value": "factions.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "imperial-trade-war",
+            "illustrated.age-of-sail.factions.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.visualThemes.1",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Free Cove Rescue"
+            },
+            "description": {
+              "value": "Free Cove Rescue: blue soundings and amber distress lights distinguish rescue capacity from locked prizes."
+            },
+            "deepId": {
+              "value": "visualThemes.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "pirate-archipelago",
+            "illustrated.age-of-sail.visualThemes.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.visualThemes.2",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Neutral Cargo Chart"
+            },
+            "description": {
+              "value": "Neutral Cargo Chart: green civilian routes and red forged seals distinguish inspected delivery from military seizure."
+            },
+            "deepId": {
+              "value": "visualThemes.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "imperial-trade-war",
+            "illustrated.age-of-sail.visualThemes.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/sail.deep.visualThemes.3",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Unfixed Horizon Song"
+            },
+            "description": {
+              "value": "Unfixed Horizon Song: teal offered currents and violet borrowed names distinguish a living route from private captivity."
+            },
+            "deepId": {
+              "value": "visualThemes.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "sail-deep",
+            "mythic-ocean",
+            "illustrated.age-of-sail.visualThemes.3"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-factions-1": {
+            "template": "sail.deep.factions.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "pirate-archipelago"
+              ]
+            }
+          },
+          "deep-factions-2": {
+            "template": "sail.deep.factions.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "imperial-trade-war"
+              ]
+            }
+          },
+          "deep-factions-3": {
+            "template": "sail.deep.factions.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mythic-ocean"
+              ]
+            }
+          },
+          "deep-factions-4": {
+            "template": "sail.deep.factions.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "pirate-archipelago"
+              ]
+            }
+          },
+          "deep-factions-5": {
+            "template": "sail.deep.factions.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "imperial-trade-war"
+              ]
+            }
+          },
+          "deep-factions-6": {
+            "template": "sail.deep.factions.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mythic-ocean"
+              ]
+            }
+          },
+          "deep-factions-7": {
+            "template": "sail.deep.factions.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "pirate-archipelago"
+              ]
+            }
+          },
+          "deep-factions-8": {
+            "template": "sail.deep.factions.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "imperial-trade-war"
+              ]
+            }
+          },
+          "deep-visualThemes-1": {
+            "template": "sail.deep.visualThemes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.1"
+              ]
+            }
+          },
+          "deep-visualThemes-2": {
+            "template": "sail.deep.visualThemes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.2"
+              ]
+            }
+          },
+          "deep-visualThemes-3": {
+            "template": "sail.deep.visualThemes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.3"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

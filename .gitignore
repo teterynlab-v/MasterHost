@@ -9,3 +9,11 @@ backups/
 *.log
 
 release/
+
+# Original generated artwork stays in the local authoring archive.
+# Versioned delivery images are tracked under game-assets/library/media/.
+artwork/generated/
+artwork/manifest.json.tmp
+artwork/candidate-rejected/
+
+artwork/manifest.json.*.tmp

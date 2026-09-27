@@ -1,0 +1,800 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.gothic.characters",
+  "version": "1.1.0",
+  "type": "characters",
+  "name": "Witness Roles and Stewardship Paths — Illustrated",
+  "description": "Witness Roles and Stewardship Paths for Mourning County, Velvet Court, Drowned Choir. Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.",
+  "tags": [
+    "gothic-horror",
+    "mourning-county",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Witness Roles and Stewardship Paths for Mourning County, Velvet Court, Drowned Choir. Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.",
+    "highlights": [
+      "Witness Roles and Stewardship Paths",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.gothic-horror"
+    ],
+    "requiresCapabilities": [
+      "rules:gothic-horror",
+      "items:gothic-horror"
+    ],
+    "providesCapabilities": [
+      "characters:gothic-horror"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.gothic.rules",
+      "version": "1.1.0"
+    },
+    {
+      "id": "masterhost.asset.gothic.items",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Gothic Horror original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.gothic.characters"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 8,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.gothic.characters",
+    "version": "1.1.0",
+    "name": "Witness Roles and Stewardship Paths — Illustrated",
+    "description": "Witness Roles and Stewardship Paths for Mourning County, Velvet Court, Drowned Choir. Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.",
+    "provides": [
+      "characters:gothic-horror"
+    ],
+    "requires": [
+      "rules:gothic-horror",
+      "items:gothic-horror"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.archetypes.1",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Estate Witness"
+            },
+            "description": {
+              "value": "Estate Witness: can authenticate old promises and protects a tenant family."
+            },
+            "deepId": {
+              "value": "archetypes.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county",
+            "illustrated.gothic-horror.archetypes.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.archetypes.2",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Night Clinician"
+            },
+            "description": {
+              "value": "Night Clinician: keeps patients safe while confronting the charity's creditor."
+            },
+            "deepId": {
+              "value": "archetypes.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court",
+            "illustrated.gothic-horror.archetypes.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.archetypes.3",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Reservoir Diver"
+            },
+            "description": {
+              "value": "Reservoir Diver: knows the safe stair and has a loved one in the lost parish."
+            },
+            "deepId": {
+              "value": "archetypes.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir",
+            "illustrated.gothic-horror.archetypes.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.archetypes.4",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Bellfounder"
+            },
+            "description": {
+              "value": "Bellfounder: reshapes binding metal and refuses unpaid work."
+            },
+            "deepId": {
+              "value": "archetypes.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county",
+            "illustrated.gothic-horror.archetypes.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.archetypes.5",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Court Petitioner"
+            },
+            "description": {
+              "value": "Court Petitioner: preserves testimony without exploiting private suffering."
+            },
+            "deepId": {
+              "value": "archetypes.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court",
+            "illustrated.gothic-horror.archetypes.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.archetypes.6",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Choir Archivist"
+            },
+            "description": {
+              "value": "Choir Archivist: reconstructs lost names and keeps the rescue roll."
+            },
+            "deepId": {
+              "value": "archetypes.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir",
+            "illustrated.gothic-horror.archetypes.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.archetypes.7",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Tenant Advocate"
+            },
+            "description": {
+              "value": "Tenant Advocate: can negotiate housing duties with the living heirs."
+            },
+            "deepId": {
+              "value": "archetypes.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county",
+            "illustrated.gothic-horror.archetypes.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.archetypes.8",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Care Trustee"
+            },
+            "description": {
+              "value": "Care Trustee: can fund honest treatment and account for its limits."
+            },
+            "deepId": {
+              "value": "archetypes.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court",
+            "illustrated.gothic-horror.archetypes.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.progressionPaths.1",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Promise Keeper"
+            },
+            "description": {
+              "value": "Promise Keeper: earn trust by paying an inherited obligation without sacrificing tenants; gain estate access and upkeep duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county",
+            "illustrated.gothic-horror.progressionPaths.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.progressionPaths.2",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Care Guardian"
+            },
+            "description": {
+              "value": "Care Guardian: earn trust by ending debt without abandoning patients; gain a clinic contact and treatment oversight."
+            },
+            "deepId": {
+              "value": "progressionPaths.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court",
+            "illustrated.gothic-horror.progressionPaths.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.progressionPaths.3",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Remembrance Steward"
+            },
+            "description": {
+              "value": "Remembrance Steward: earn trust by naming the omitted dead; gain parish access and public record duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir",
+            "illustrated.gothic-horror.progressionPaths.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.progressionPaths.4",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Bell Custodian"
+            },
+            "description": {
+              "value": "Bell Custodian: earn trust by reshaping the toll through paid work; gain foundry support and wage obligations."
+            },
+            "deepId": {
+              "value": "progressionPaths.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county",
+            "illustrated.gothic-horror.progressionPaths.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.progressionPaths.5",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Witness Protector"
+            },
+            "description": {
+              "value": "Witness Protector: earn trust by separating confession from private harm; gain hearing access and confidentiality duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court",
+            "illustrated.gothic-horror.progressionPaths.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.progressionPaths.6",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Water Warden"
+            },
+            "description": {
+              "value": "Water Warden: earn trust by preserving both rescue and town supply; gain sluice authority and shared maintenance duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir",
+            "illustrated.gothic-horror.progressionPaths.6"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-archetypes-1": {
+            "template": "gothic.deep.archetypes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-archetypes-2": {
+            "template": "gothic.deep.archetypes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-archetypes-3": {
+            "template": "gothic.deep.archetypes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-archetypes-4": {
+            "template": "gothic.deep.archetypes.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-archetypes-5": {
+            "template": "gothic.deep.archetypes.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-archetypes-6": {
+            "template": "gothic.deep.archetypes.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-archetypes-7": {
+            "template": "gothic.deep.archetypes.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-archetypes-8": {
+            "template": "gothic.deep.archetypes.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-progressionPaths-1": {
+            "template": "gothic.deep.progressionPaths.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-progressionPaths-2": {
+            "template": "gothic.deep.progressionPaths.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-progressionPaths-3": {
+            "template": "gothic.deep.progressionPaths.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-progressionPaths-4": {
+            "template": "gothic.deep.progressionPaths.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-progressionPaths-5": {
+            "template": "gothic.deep.progressionPaths.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-progressionPaths-6": {
+            "template": "gothic.deep.progressionPaths.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "op": "append",
+        "path": "/content/characterCreation/steps/3/fields/1/options",
+        "value": [
+          {
+            "value": "archetypes.1",
+            "label": "Estate Witness"
+          },
+          {
+            "value": "archetypes.2",
+            "label": "Night Clinician"
+          },
+          {
+            "value": "archetypes.3",
+            "label": "Reservoir Diver"
+          },
+          {
+            "value": "archetypes.4",
+            "label": "Bellfounder"
+          },
+          {
+            "value": "archetypes.5",
+            "label": "Court Petitioner"
+          },
+          {
+            "value": "archetypes.6",
+            "label": "Choir Archivist"
+          },
+          {
+            "value": "archetypes.7",
+            "label": "Tenant Advocate"
+          },
+          {
+            "value": "archetypes.8",
+            "label": "Care Trustee"
+          }
+        ]
+      },
+      {
+        "op": "append",
+        "path": "/content/characterCreation/starting/assets",
+        "value": [
+          {
+            "id": "portrait",
+            "value": "assets/gothic-horror/illustrated-1.1.0/archetypes.1.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "standard"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/gothic-horror/illustrated-1.1.0/archetypes.1.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.1"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/gothic-horror/illustrated-1.1.0/archetypes.2.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.2"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/gothic-horror/illustrated-1.1.0/archetypes.3.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.3"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/gothic-horror/illustrated-1.1.0/archetypes.4.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.4"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/gothic-horror/illustrated-1.1.0/archetypes.5.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.5"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/gothic-horror/illustrated-1.1.0/archetypes.6.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.6"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/gothic-horror/illustrated-1.1.0/archetypes.7.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.7"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/gothic-horror/illustrated-1.1.0/archetypes.8.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.8"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

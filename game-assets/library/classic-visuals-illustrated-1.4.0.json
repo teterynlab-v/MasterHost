@@ -1,0 +1,1890 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.classic.visuals",
+  "version": "1.4.0",
+  "type": "visuals",
+  "name": "Illuminated Marches Art Set — Illustrated",
+  "description": "Illustration-quality maps plus portraits, tokens, item art, location cards, and backgrounds for the three Classic Fantasy patterns.",
+  "tags": [
+    "classic-fantasy",
+    "border-kingdoms",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Illustration-quality maps plus portraits, tokens, item art, location cards, and backgrounds for the three Classic Fantasy patterns.",
+    "highlights": [
+      "Illuminated Marches Art Set",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.classic-fantasy"
+    ],
+    "requiresCapabilities": [
+      "setting:classic-fantasy"
+    ],
+    "providesCapabilities": [
+      "visuals:classic-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.classic.setting",
+      "version": "1.4.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Classic Fantasy original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.classic.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 151
+  },
+  "media": [
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/factions.1.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/factions.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "bfc8fbb307a627f36767810b2ba2a0341405ee7eb56fba9bc5090c031b87852d",
+      "size": 44848
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/factions.2.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/factions.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "75be8537820ca79887ea42416fabb793843dc8890eb0fc5eb4f66206953c6393",
+      "size": 45374
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/factions.3.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/factions.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "88086dd644e73378c6e11dffa0ac58b09045ecf48bc31e5a67f82dc0d348577b",
+      "size": 46556
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/factions.4.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/factions.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "a0306af0fc1c3dea54fe69d769ec7192bf6838510073cbd29a4f00964bebc8b3",
+      "size": 45868
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/factions.5.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/factions.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "a7197c704378e821c22d0a58590dbf34d6fe332ea5b382eae050128d85fe2a7a",
+      "size": 45290
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/factions.6.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/factions.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "06c40a15ee62c4a13bcb4a6ce35e21b3dffa1c0bb0bb0257c0db8780a5713b61",
+      "size": 45328
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/factions.7.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/factions.7.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "9a920096cbad16f491964e8ceffdd82a37d92b1e5636bec7753f86e55e3b1a49",
+      "size": 46104
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/factions.8.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/factions.8.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "9e3aaca75c362c92bff2ff656676fd2fc9c6c67003e24dabd070cb1749abbf35",
+      "size": 45860
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/locations.1.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/locations.1.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "16694a5b26eee58db5790c705fa11e42f85f69723cb9bbfbe9618f8295cec8ac",
+      "size": 45316
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/locations.2.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/locations.2.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "2b785f7efe2fb78dd62558d0d062f52e2faef3c81365e46ce08135b4f28f3a99",
+      "size": 45116
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/locations.3.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/locations.3.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "6962f4d9fcfe264927f26ff68517cd26cf494736ea61f247b813284c13106c4a",
+      "size": 45226
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/locations.4.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/locations.4.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "a6e66d3eb5a32509d7e117bc9fbce60837ee575ca663cc8aaa1b1caa15f4a1f0",
+      "size": 46316
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/locations.5.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/locations.5.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "e26f5f4a4b251f67eb3eaec32e60b4b188b8bf6e6dd01c567d99dbaf18d8a153",
+      "size": 45298
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/locations.6.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/locations.6.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "632b3ff558c70876f6a8ebca70758cc85e055f93a0d4dc1cd62fbe8024cc0d65",
+      "size": 45668
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/locations.7.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/locations.7.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "37961c38574fb220aa4897e354f540c3f41056c346812ff6c7d5b1a187df81fa",
+      "size": 45444
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/locations.8.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/locations.8.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "0f8f9437b4bf7d052dfac949e7c793102fb962319103acc0c31862da81f5e7fc",
+      "size": 45122
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/locations.9.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/locations.9.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "9f894ca49f8943101ffeaaba1523b5ce5f6e35b549bdc3bac957994a3520038a",
+      "size": 46400
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/locations.10.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/locations.10.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "00a7ed828ae649b190fc8ad5d01edfdbc8c5b0b1aae940e1a6f38ffe8e9ab971",
+      "size": 45486
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/locations.11.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/locations.11.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "5a94b8b426d3b41f9d3d407005ea89b875967e8449e8a03fc4c70758560579f4",
+      "size": 46270
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/locations.12.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/locations.12.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "fb3676ad56863328aebdc79b08899099e83358fe713a2ab469aca20626acdbce",
+      "size": 46498
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.1.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "afa3df65136bda388237b5067e6781aaa7f10a383a8950828aabd1ef09330e26",
+      "size": 45664
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.2.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "3a91c8458b9573a099af447b1e1c7550900e23242b93d3f7df1ede92496a88f8",
+      "size": 46470
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.3.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "cfcff0efa755bde6d7898dd199ed5d4149baf93856bac45bb9f98991b952a2e8",
+      "size": 45122
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.4.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "e501ad634e346cb6ea9f469c604a2ecdd3c9842a509c05eb791e00a73378195e",
+      "size": 45214
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.5.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "25258fbe0421fb6798be8045effc9cb4578a6b18ddc54e93adf998c904df7ff3",
+      "size": 45664
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.6.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "26c67a3166b0176e79718cd6f07c11cb2b3e27ecd604da473bcd6140a9c67b38",
+      "size": 45740
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.7.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "559f75da67f2fa484c02f50054bcc3ee21ecb97e0ba7d011c0adcd97148b895d",
+      "size": 45662
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.8.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "d9ecf0cc47eba9cfacc0027190a4f4fd4d7cd059a6f1135ea7a341f33a76dc08",
+      "size": 44940
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.9.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.9.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "f1404f86ae521b6b1e9d2e3ee2210a79430063d02dba0d731b57f652da988f60",
+      "size": 45666
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.10.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.10.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "5a7ac0593faa355b6cfd62681d74c1be9c9975b149b89983968f86c3b189cd00",
+      "size": 45926
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.11.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.11.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "d01748971c786b02a0feca50d6450a7a3376d51342115cd1b6fba60dae9fbed1",
+      "size": 46040
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.12.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.12.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "3fcc4ae0d6fbb2088701df34264ea5fc88cec3e1649239fe61da4c2036af4ff4",
+      "size": 44530
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.13.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.13.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "fc543836242a11a3ee78e53a8150fa18146b5b53a505e4c984aab1b330e6f705",
+      "size": 45972
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.14.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.14.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "6a7e39299ec8581ecd34f30ba677fff1d1fbd70d227c4b9a8a991538164a5fa6",
+      "size": 45594
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.15.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.15.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "151c346c29a5d4abc882396e7b3e154518f6924413c060dd66cd622dcb8aa2ca",
+      "size": 45638
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.16.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.16.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "fac57377117cf3233752b9fb31d5016508f46ae29c34e0be187ff46abe9be39c",
+      "size": 44882
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.17.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.17.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "a1a87dbf930df7abd703de98e5ed87996c92cae970d230b506b12efc2c194368",
+      "size": 46260
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.18.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.18.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "4fdc1d9c46e2c8f3bfb036c0f6d170a6d82e6b4462504d7d249ae248bf6a97c5",
+      "size": 45014
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.19.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.19.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "780006f884920aa3b09b520df534627b75fa84b416e04802305905daa0f88c13",
+      "size": 45976
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.20.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.20.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "d2fe38fcebbd494628534fc8039ffed3eee6e0992a1a7f8c8d0b0eee6a52d16f",
+      "size": 45098
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.21.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.21.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "07c80e4b3583bab1eb034f3157948fa12837e28beb1d650e3918ea3e1b31919c",
+      "size": 44914
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.22.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.22.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "8df85fd31fcd1c6a4ac38acd7b052cc9ca6a44fa8773898ef0db0334da8493bb",
+      "size": 45584
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.23.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.23.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "a77f9fb8c0658b0636ec690f37424c9ae0d83cd98e8a0492aed425ef8f6b4fd7",
+      "size": 46430
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/npcs.24.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/npcs.24.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "10fca166f962e996ab6090396adb96b64d7cfe3d2575a62cdebb7f489935160e",
+      "size": 45674
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/adversaries.1.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/adversaries.1.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "ebb202dcfa436121b47d07e64023090f37524bb00fc815bde1de3bd6e30dad5d",
+      "size": 45170
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/adversaries.2.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/adversaries.2.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "9a2be37b5e419e4a68de8b6f4faa5a9a67bd2273f020f30cba7a1295c582e639",
+      "size": 45828
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/adversaries.3.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/adversaries.3.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "cfb9119708d1f1151f46a0dcde80282e09dd36063c8a84dedde99cd8230bbeb1",
+      "size": 45434
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/adversaries.4.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/adversaries.4.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "e19fb03d617ceb425ffc07150a7f1762440dc8c1821cba7694e8c1563836322f",
+      "size": 45046
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/adversaries.5.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/adversaries.5.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "04e533f57bf7307b4d698206394173e1758293010cf01e2dfb0536296abf3049",
+      "size": 44930
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/adversaries.6.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/adversaries.6.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "1179df9fb8765191a90a288d425b60b61dafd8437a933add229be62094d8f0cc",
+      "size": 48416
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/adversaries.7.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/adversaries.7.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "432e56bf076f56ac50241281cbca74ae3fc2cb2c9e269e3fc861641c969afd06",
+      "size": 44834
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/adversaries.8.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/adversaries.8.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "93261032c2e3edf42408d374794c886a795138ef8ceacdd7a101125869fa10fc",
+      "size": 60756
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/adversaries.9.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/adversaries.9.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "930adc2e554a4596fe0fae7833c23d500c1979b5325ea8e49886355b9fe02d62",
+      "size": 45588
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/adversaries.10.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/adversaries.10.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "2e9a0789b7f7f2395434ec61b9561abc1311357d961bd65cc1ef4cff9ea2dda4",
+      "size": 45118
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/adversaries.11.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/adversaries.11.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "330445ccba9c0548be4ebf41300afca9aa8d70348c26cff5a21e3d7c834e0cfc",
+      "size": 45046
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/adversaries.12.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/adversaries.12.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "861c2605b84de728eaafbf59e8b1d39782467de08902e65e7a0c4f9d43208158",
+      "size": 46218
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/adversaries.13.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/adversaries.13.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "527afba582864bcd706dca3451cd06bec2063fc52a7ad00b676df41ca5e39335",
+      "size": 58720
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/adversaries.14.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/adversaries.14.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "a376fee2fc1913d1f2d31366700a1ea3e4e23a9dcfd3a811f37da5e66b5d45c9",
+      "size": 63506
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/adversaries.15.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/adversaries.15.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "cae40ab6f10dfaa092090e7748a508c1b2d82e42276ee8970ad37949bbc7432f",
+      "size": 45094
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/adversaries.16.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/adversaries.16.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "f26acf22a02a0241b6f50c237f2d830f2205e6878bca632122558ce144a8c8c1",
+      "size": 44586
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/adversaries.17.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/adversaries.17.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "cf7082a6141c7b138d1d83ba8c791eeda36105cd40c4d259470b430af4d94ead",
+      "size": 46044
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/adversaries.18.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/adversaries.18.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "04167b87836a1c9255070819136171a525dc075a829ee1f850efd7c8abde8260",
+      "size": 44948
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.1.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.1.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "c3b8c21a69eeec0cdecea9b854fa0c62cb235f88cf791589668009c5e362af49",
+      "size": 59268
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.2.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.2.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "403b6270849b421276c15069161ea1f81b42fa13b55e01be376d19f46d03f0a6",
+      "size": 46010
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.3.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.3.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "c00882dc6cf463185357724d98808282cfe2f5ced859afa4cae6a9a3e6a41f33",
+      "size": 45786
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.4.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.4.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "41bfc974a3f338523222087f404a0f6eec73889b5512085df0b4a582dad2f4b8",
+      "size": 45532
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.5.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.5.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "d2db51ec875592d0d8e955c03a33a91e278a63e5ab9c1aa06aceb31e2ca8844c",
+      "size": 45354
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.6.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.6.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "8ed5a293bdecb27e8a9146c636d3f2387c4c4e9f47ffbc00640c4108cc7d1e84",
+      "size": 45256
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.7.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.7.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "e73d2c884448fdbb574909a381bef92f85b71f8016d3747c80a9de6964114634",
+      "size": 45270
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.8.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.8.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "1e98cbe56bac7e2e7ba9ebb92d194376072a0ec407940c493108de7120258b72",
+      "size": 45360
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.9.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.9.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "6caeaf54d648b6a34e95f1dd74a41b7fa5f7af43b7fe995d1dc23a1753adc605",
+      "size": 45032
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.10.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.10.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "3fffb5f9712dd73f06a0850fb2d7bc17d5aefab2d95756af7f82877f394cf564",
+      "size": 44530
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.11.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.11.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "f2b9cb36c0d3710278e74a73cc371bc08c50afc791207077885668b46c2ddd85",
+      "size": 44790
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.12.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.12.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "c991290732b9528102d9fca2540f53e9f54f363fc8607c04bcb69b68f8c97684",
+      "size": 46110
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.13.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.13.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "e866c2a613c3932aec8920b82422357976d9d6efbf8682fbaac84b1d022c5433",
+      "size": 44790
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.14.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.14.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "bc190871ed445b5b372480f64f0bd4e273e085e2aaebd8bdb189384722c1495c",
+      "size": 46422
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.15.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.15.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "dbd837206379542c40be618183e45149a1306635acbd463d18a7e8432782f033",
+      "size": 45826
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.16.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.16.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "ea211a8e8425f193a9df2fde42772871672648ea59cdc07cdea634d262f1148b",
+      "size": 44722
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.17.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.17.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "c279bf754d5f4fb94fc3046de85c02c4ae0306ca00a13c71742c64162c7e05dc",
+      "size": 46738
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.18.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.18.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "2d74ec1f22839618bde1f82f7dffb5c4befec839ab39c2f7fd396c80133e8d4f",
+      "size": 45484
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.19.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.19.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "59c7dcdd79ccaf1b4be8afadf4a86450b3564e1bbe1a8b54d3ccb36d10598fd2",
+      "size": 46826
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.20.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.20.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "0aef0b1e1290089f8cc8719cdc54e83363bbb2f7c1ca229433da6721785f0533",
+      "size": 44636
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.21.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.21.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "dc05fa72b01d9957601fdcc33100193b105a6d1bcabe69f5c86833303d828ecc",
+      "size": 45502
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.22.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.22.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "7858462ffed7c61143673285d83cf7253fdc00657384168964cf8822dcd1e006",
+      "size": 44806
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.23.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.23.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "c38d78016781bb287d9b3237dd01064959b9b2c954298d90369b1ce1d77ce653",
+      "size": 45304
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/items.24.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/items.24.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "f07e0c289a44618c77d5c9c7d65c932e62511736ce2381e75adb6bb1f44b0ebe",
+      "size": 45414
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.1.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "aa04108f6db990644d5e2110ed8a8875bf06d566f5e7526cbf18e125c5484052",
+      "size": 46054
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.2.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "e8726bf45813abeeb5b97e1493765733ab530dfd214716cb8227e7b8cc602cf4",
+      "size": 45920
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.3.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "7477b38facc3c0820337ed78d43e9aafca022a0516dcf3332e32cf828bfeb2d5",
+      "size": 46618
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.4.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "94500575743a1b84eb5161f108e5714698b81ff03723cbc8fc3734ca80859887",
+      "size": 46084
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.5.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "26f155d2add1fc76387a274b63f4a1ea79f413e808b067791e6cbc112948e343",
+      "size": 45298
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.6.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "62aab34ae948009547d8f85e3eb6eef4d520c8c8cabb80b273809eb75abe0e73",
+      "size": 46324
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.7.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "3899af73dcbc4554cec96b4d71883c7142dcbf6ae639fb836a23047091f8825f",
+      "size": 45424
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.8.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "71e0842d9b6093b7a44ebb6e48375016d57d6752d1fc29b8a5afbb15c4fea9ba",
+      "size": 46744
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.9.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "2aa0d61c83d3bf0e18f20011c270feda4d832203eaa7aa41a0b81994fd0f6ae6",
+      "size": 46324
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.10.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "41d13b53b19d27a42ca7ebe6f14643583fecfa46866d56d2e9e2adf51f679b28",
+      "size": 45120
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.11.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b655fe5de8c4ba4ffffd4892debc166484b1935cdb178d8b9f76d028c0bc3476",
+      "size": 46802
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.12.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4105cc8aa3135c88fb972282475c965634c8a54c7586561bcfebd89c2ba5e2bc",
+      "size": 46010
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.13.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "abc332ed2e9e69c7e771e1d9364064c4fd0d513768b6ef06c8534ae8f3e983ca",
+      "size": 45650
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.14.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "caa0462509488203d33b857c328ef0a7f7ddebc909ec4c9cf547d9d79aecdf05",
+      "size": 45626
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.15.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "474318f0a830d6c02171ee4ed62a5406cd5416e258cfdfdc470df8c6b671ba37",
+      "size": 46610
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.16.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "336e96095c3dd48749d7c98c546013eec295be3e93f87cdbbfefb14ef53f56b9",
+      "size": 45592
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.17.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c34f84ff67a461355a948b3854665c08638932e18cc7ca86a0baa8eb4a80105c",
+      "size": 47140
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.18.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "9a5dbe4b7c579ce72929f1164eabca09f831a1955e0c6e9b7fb4c92feb0b3b63",
+      "size": 46540
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.19.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.19.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "41760a5095a43d566f320040751dfbefb7ce43e9f75e92912ffe8db2a04b7242",
+      "size": 45762
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.20.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.20.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "72b97ef29935823fb6182d163becc9f3c7168666ac91943b0dcfaaf221fbb684",
+      "size": 45924
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.21.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.21.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f43ea9ca1977f227fa29981f402568118c68d253ec3255d01bcec6aa107397f8",
+      "size": 46784
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.22.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.22.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "33a827d17fb87989cdfd7ac75d4309250679966708c102af941515fb2ba4139f",
+      "size": 46602
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.23.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.23.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "14f1ba75397047369c14a6076d12f2e417df4e7b82d41fe121734d2bdf36fc4d",
+      "size": 46594
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.24.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.24.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "942d3a6f227d6201a2533c7bd2ac0f24e22f1adf1ffe009982d3a1dbac8f4f7c",
+      "size": 47912
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.25.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.25.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ce5de9e33a4c5b8f8e2aec4a099355062c178f3bd102ac00acb08328f093844d",
+      "size": 45738
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.26.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.26.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "898027ec7dca6a67b6b568ff43a49b9d0bc09600a04cddc76260d0ca7749743c",
+      "size": 47374
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.27.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.27.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "429d87ddc6f049658fb5cc9ad2f982bd5ba72fac85f487e23de38591a0c2c060",
+      "size": 47190
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.28.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.28.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "db0bcc392f3bd5604a44433443ca8b4fdb816ed1f496290cb483da4e43c41057",
+      "size": 46508
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.29.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.29.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b3c213d7167e469695d3458637fa0085c8a3ddb4e6c8dbddf90a1d40d7cb06b1",
+      "size": 45662
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/events.30.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/events.30.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "91bf95905860787a2b94af5cd727606e5a86f3fe9f1b31f8013d5154a08b62b9",
+      "size": 46600
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/scenes.1.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/scenes.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "d12f1d52491fdf1a87ed4d81720122b9705c0a5e92e41d93d643ebb78f005679",
+      "size": 46324
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/scenes.2.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/scenes.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "fca1f4602c89bb5cf97c90e9594db1a1e2a0e03f5092c53344feb67f212206f6",
+      "size": 46002
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/scenes.3.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/scenes.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ae83958787fac4d8840ff46e0b8911df17c305f62ea887c216a0898f3357f38c",
+      "size": 46400
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/scenes.4.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/scenes.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a0dc0d436f1923475193205236552f9f20e6cb2139ca2cd8cac13469d8af2a34",
+      "size": 47266
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/scenes.5.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/scenes.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "708152396c0c50d6dbf0b928326673130d15a5568690e06e185db91522113c76",
+      "size": 45494
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/scenes.6.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/scenes.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a795e11ca1ca45f44dcff688fdfe99b2345e77b26387dfd488cf8f3fbf418fcf",
+      "size": 46572
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/scenes.7.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/scenes.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "7cadeeb9698795b5f1a71924d132963b1cb531b9da00538e6822e2ad0fad42b3",
+      "size": 47506
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/scenes.8.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/scenes.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "11371683014436f402664c583c102f92491ba027f622324cfd9146f900cd06a1",
+      "size": 47150
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/scenes.9.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/scenes.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "98bfcf7304627924052de636a336b2f902f6f0cfc331ba4a7998fa2215205c06",
+      "size": 46436
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/scenes.10.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/scenes.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "77387184ebfe2192e20d4c2f7c9fb642e5e9a8b3ba3c862686bb7a0e6b51bd84",
+      "size": 47154
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/scenes.11.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/scenes.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "741199730971e8226e70aa9d4f1abb1d17c6d47d5f743eac296f209342bb2a2c",
+      "size": 46712
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/scenes.12.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/scenes.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "0b6fa443a41bb3a63bd9b23aea2a5ef5a60e87a51241ed0868178af3d4dae412",
+      "size": 45980
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/scenes.13.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/scenes.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "014c12dcc411eaf7e35bac06396eddb7d22e7c2916229d5293acbb3682eccb6d",
+      "size": 45408
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/scenes.14.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/scenes.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "5c6817789bd165b19a4e39047210e3f072b4aa60ce9df993d6b21ea44bc40404",
+      "size": 46502
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/scenes.15.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/scenes.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ab2761626a1c27076ff5bebe24dbff7bfc93782dcbdd91b67ea05d0a0784b1df",
+      "size": 45524
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/scenes.16.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/scenes.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c544b62b33025e490b45a7d33ef7e9d7e4d7b355d2f3b56969e3878f232c973e",
+      "size": 46260
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/scenes.17.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/scenes.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "2526f36c2f6aae93aa05d8134f90f8ee9b14507f9a2bf04d80654b1c69c7fa6a",
+      "size": 45990
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/scenes.18.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/scenes.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "7747fcc26aa092d57db6aeb378591ea6832c4bcc1aee1d25fad79f1d7220550e",
+      "size": 46134
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/archetypes.1.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/archetypes.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "f9e5b1fcc4bce46092b5010201780975e01ed82efd2c783a5575e0370be04f50",
+      "size": 49280
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/archetypes.2.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/archetypes.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "2a73767569e8376a179fcc27da9cecbef9600acf7a0e208f264d45867be321bd",
+      "size": 60348
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/archetypes.3.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/archetypes.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "95f2bcccfe2e2e513980d92d99b806daea91c42624f1ad3b8b17c78b95ec4cb9",
+      "size": 48934
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/archetypes.4.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/archetypes.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "a7c84fbfadf0dfc12542ca89265d2915e5e6e5674f7f0222ddb1ef93a437f453",
+      "size": 46942
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/archetypes.5.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/archetypes.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "889c26578fc1202f41772819059f39bf172fe1bc5884c1e276351c0ae85c750e",
+      "size": 44382
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/archetypes.6.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/archetypes.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "a062ff362288b84192dc074d8432428cb8994d923a5336915309cce77f5c0faf",
+      "size": 49362
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/archetypes.7.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/archetypes.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "1e18e836ee591695fa36681cb5fa9041a165a803cb958ee7a595eee0c906de14",
+      "size": 58186
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/archetypes.8.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/archetypes.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "68e7799d22b7ab81529eded568f0521d16f2207686ea522eb219dfefea0f5a62",
+      "size": 44846
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/progressionPaths.1.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/progressionPaths.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "83a23229f3310fe55adf773d81af543f545d08870a3806754a9ead268a248c6e",
+      "size": 46002
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/progressionPaths.2.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/progressionPaths.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "4093a5bef0aa873811e76df08c92cad2da9d4aec8eac1be33abc6c0b06329873",
+      "size": 45740
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/progressionPaths.3.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/progressionPaths.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "38c4f33abd880b78bae174f7362d560d7c200244d42d97d97af73377de92d225",
+      "size": 45996
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/progressionPaths.4.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/progressionPaths.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "41a4d3f9be519a5cb951eb074af2a9d122aa13fd561a8c9effecd2b767ab5ade",
+      "size": 46262
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/progressionPaths.5.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/progressionPaths.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "ed690db5d311a6c8c655f7bfdc44c1bc11a72387646cd9eea4a91d17f6c4ac9c",
+      "size": 46418
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/progressionPaths.6.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/progressionPaths.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "b1903a4860c0201400fd9782c4f2f88a8c7f8b7e3b7c4e5eb97341994f30ee8f",
+      "size": 45704
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/visualThemes.1.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/visualThemes.1.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "7f7de14261c5400d0240e64b45c03be1fc497f3b4f3762c565f74a163fef9f06",
+      "size": 46638
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/visualThemes.2.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/visualThemes.2.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "41ce56d1d03567347177e1cd1ba0329b54fc3eb149522f317455689e40dc4c9e",
+      "size": 45754
+    },
+    {
+      "name": "classic-fantasy/illustrated-1.4.0/visualThemes.3.webp",
+      "path": "media/classic-fantasy/illustrated-1.4.0/visualThemes.3.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "2f406ff89bebc4735446e231c40fcf84e935ff975aabc41199ee3923f08dd814",
+      "size": 44378
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.classic.visuals",
+    "version": "1.4.0",
+    "name": "Illuminated Marches Art Set — Illustrated",
+    "description": "Original maps, portraits, tokens, item art, location cards, and backgrounds for the three Classic Fantasy patterns.",
+    "provides": [
+      "visuals:classic-fantasy"
+    ],
+    "requires": [
+      "setting:classic-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/illustrated-classic-fantasy",
+        "value": {
+          "id": "illustrated-classic-fantasy",
+          "name": "Illustrated classic-fantasy",
+          "description": "Individual generated illustrations for every authored content object",
+          "defaults": {
+            "background": "assets/classic-fantasy/illustrated-1.4.0/scenes.1.webp",
+            "card": "assets/classic-fantasy/illustrated-1.4.0/scenes.1.webp",
+            "map": "assets/classic-fantasy/illustrated-1.4.0/visualThemes.1.webp",
+            "portrait": "assets/classic-fantasy/illustrated-1.4.0/archetypes.1.webp",
+            "token": "assets/classic-fantasy/illustrated-1.4.0/adversaries.1.webp",
+            "item": "assets/classic-fantasy/illustrated-1.4.0/items.1.webp",
+            "location": "assets/classic-fantasy/illustrated-1.4.0/locations.1.webp"
+          },
+          "families": {
+            "illustrated.classic-fantasy.factions.1": {
+              "card": "assets/classic-fantasy/illustrated-1.4.0/factions.1.webp"
+            },
+            "illustrated.classic-fantasy.factions.2": {
+              "card": "assets/classic-fantasy/illustrated-1.4.0/factions.2.webp"
+            },
+            "illustrated.classic-fantasy.factions.3": {
+              "card": "assets/classic-fantasy/illustrated-1.4.0/factions.3.webp"
+            },
+            "illustrated.classic-fantasy.factions.4": {
+              "card": "assets/classic-fantasy/illustrated-1.4.0/factions.4.webp"
+            },
+            "illustrated.classic-fantasy.factions.5": {
+              "card": "assets/classic-fantasy/illustrated-1.4.0/factions.5.webp"
+            },
+            "illustrated.classic-fantasy.factions.6": {
+              "card": "assets/classic-fantasy/illustrated-1.4.0/factions.6.webp"
+            },
+            "illustrated.classic-fantasy.factions.7": {
+              "card": "assets/classic-fantasy/illustrated-1.4.0/factions.7.webp"
+            },
+            "illustrated.classic-fantasy.factions.8": {
+              "card": "assets/classic-fantasy/illustrated-1.4.0/factions.8.webp"
+            },
+            "illustrated.classic-fantasy.locations.1": {
+              "location": "assets/classic-fantasy/illustrated-1.4.0/locations.1.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/locations.1.webp"
+            },
+            "illustrated.classic-fantasy.locations.2": {
+              "location": "assets/classic-fantasy/illustrated-1.4.0/locations.2.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/locations.2.webp"
+            },
+            "illustrated.classic-fantasy.locations.3": {
+              "location": "assets/classic-fantasy/illustrated-1.4.0/locations.3.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/locations.3.webp"
+            },
+            "illustrated.classic-fantasy.locations.4": {
+              "location": "assets/classic-fantasy/illustrated-1.4.0/locations.4.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/locations.4.webp"
+            },
+            "illustrated.classic-fantasy.locations.5": {
+              "location": "assets/classic-fantasy/illustrated-1.4.0/locations.5.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/locations.5.webp"
+            },
+            "illustrated.classic-fantasy.locations.6": {
+              "location": "assets/classic-fantasy/illustrated-1.4.0/locations.6.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/locations.6.webp"
+            },
+            "illustrated.classic-fantasy.locations.7": {
+              "location": "assets/classic-fantasy/illustrated-1.4.0/locations.7.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/locations.7.webp"
+            },
+            "illustrated.classic-fantasy.locations.8": {
+              "location": "assets/classic-fantasy/illustrated-1.4.0/locations.8.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/locations.8.webp"
+            },
+            "illustrated.classic-fantasy.locations.9": {
+              "location": "assets/classic-fantasy/illustrated-1.4.0/locations.9.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/locations.9.webp"
+            },
+            "illustrated.classic-fantasy.locations.10": {
+              "location": "assets/classic-fantasy/illustrated-1.4.0/locations.10.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/locations.10.webp"
+            },
+            "illustrated.classic-fantasy.locations.11": {
+              "location": "assets/classic-fantasy/illustrated-1.4.0/locations.11.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/locations.11.webp"
+            },
+            "illustrated.classic-fantasy.locations.12": {
+              "location": "assets/classic-fantasy/illustrated-1.4.0/locations.12.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/locations.12.webp"
+            },
+            "illustrated.classic-fantasy.npcs.1": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.1.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.1.webp"
+            },
+            "illustrated.classic-fantasy.npcs.2": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.2.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.2.webp"
+            },
+            "illustrated.classic-fantasy.npcs.3": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.3.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.3.webp"
+            },
+            "illustrated.classic-fantasy.npcs.4": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.4.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.4.webp"
+            },
+            "illustrated.classic-fantasy.npcs.5": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.5.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.5.webp"
+            },
+            "illustrated.classic-fantasy.npcs.6": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.6.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.6.webp"
+            },
+            "illustrated.classic-fantasy.npcs.7": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.7.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.7.webp"
+            },
+            "illustrated.classic-fantasy.npcs.8": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.8.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.8.webp"
+            },
+            "illustrated.classic-fantasy.npcs.9": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.9.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.9.webp"
+            },
+            "illustrated.classic-fantasy.npcs.10": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.10.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.10.webp"
+            },
+            "illustrated.classic-fantasy.npcs.11": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.11.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.11.webp"
+            },
+            "illustrated.classic-fantasy.npcs.12": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.12.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.12.webp"
+            },
+            "illustrated.classic-fantasy.npcs.13": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.13.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.13.webp"
+            },
+            "illustrated.classic-fantasy.npcs.14": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.14.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.14.webp"
+            },
+            "illustrated.classic-fantasy.npcs.15": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.15.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.15.webp"
+            },
+            "illustrated.classic-fantasy.npcs.16": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.16.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.16.webp"
+            },
+            "illustrated.classic-fantasy.npcs.17": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.17.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.17.webp"
+            },
+            "illustrated.classic-fantasy.npcs.18": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.18.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.18.webp"
+            },
+            "illustrated.classic-fantasy.npcs.19": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.19.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.19.webp"
+            },
+            "illustrated.classic-fantasy.npcs.20": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.20.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.20.webp"
+            },
+            "illustrated.classic-fantasy.npcs.21": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.21.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.21.webp"
+            },
+            "illustrated.classic-fantasy.npcs.22": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.22.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.22.webp"
+            },
+            "illustrated.classic-fantasy.npcs.23": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.23.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.23.webp"
+            },
+            "illustrated.classic-fantasy.npcs.24": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/npcs.24.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/npcs.24.webp"
+            },
+            "illustrated.classic-fantasy.adversaries.1": {
+              "token": "assets/classic-fantasy/illustrated-1.4.0/adversaries.1.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/adversaries.1.webp"
+            },
+            "illustrated.classic-fantasy.adversaries.2": {
+              "token": "assets/classic-fantasy/illustrated-1.4.0/adversaries.2.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/adversaries.2.webp"
+            },
+            "illustrated.classic-fantasy.adversaries.3": {
+              "token": "assets/classic-fantasy/illustrated-1.4.0/adversaries.3.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/adversaries.3.webp"
+            },
+            "illustrated.classic-fantasy.adversaries.4": {
+              "token": "assets/classic-fantasy/illustrated-1.4.0/adversaries.4.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/adversaries.4.webp"
+            },
+            "illustrated.classic-fantasy.adversaries.5": {
+              "token": "assets/classic-fantasy/illustrated-1.4.0/adversaries.5.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/adversaries.5.webp"
+            },
+            "illustrated.classic-fantasy.adversaries.6": {
+              "token": "assets/classic-fantasy/illustrated-1.4.0/adversaries.6.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/adversaries.6.webp"
+            },
+            "illustrated.classic-fantasy.adversaries.7": {
+              "token": "assets/classic-fantasy/illustrated-1.4.0/adversaries.7.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/adversaries.7.webp"
+            },
+            "illustrated.classic-fantasy.adversaries.8": {
+              "token": "assets/classic-fantasy/illustrated-1.4.0/adversaries.8.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/adversaries.8.webp"
+            },
+            "illustrated.classic-fantasy.adversaries.9": {
+              "token": "assets/classic-fantasy/illustrated-1.4.0/adversaries.9.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/adversaries.9.webp"
+            },
+            "illustrated.classic-fantasy.adversaries.10": {
+              "token": "assets/classic-fantasy/illustrated-1.4.0/adversaries.10.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/adversaries.10.webp"
+            },
+            "illustrated.classic-fantasy.adversaries.11": {
+              "token": "assets/classic-fantasy/illustrated-1.4.0/adversaries.11.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/adversaries.11.webp"
+            },
+            "illustrated.classic-fantasy.adversaries.12": {
+              "token": "assets/classic-fantasy/illustrated-1.4.0/adversaries.12.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/adversaries.12.webp"
+            },
+            "illustrated.classic-fantasy.adversaries.13": {
+              "token": "assets/classic-fantasy/illustrated-1.4.0/adversaries.13.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/adversaries.13.webp"
+            },
+            "illustrated.classic-fantasy.adversaries.14": {
+              "token": "assets/classic-fantasy/illustrated-1.4.0/adversaries.14.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/adversaries.14.webp"
+            },
+            "illustrated.classic-fantasy.adversaries.15": {
+              "token": "assets/classic-fantasy/illustrated-1.4.0/adversaries.15.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/adversaries.15.webp"
+            },
+            "illustrated.classic-fantasy.adversaries.16": {
+              "token": "assets/classic-fantasy/illustrated-1.4.0/adversaries.16.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/adversaries.16.webp"
+            },
+            "illustrated.classic-fantasy.adversaries.17": {
+              "token": "assets/classic-fantasy/illustrated-1.4.0/adversaries.17.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/adversaries.17.webp"
+            },
+            "illustrated.classic-fantasy.adversaries.18": {
+              "token": "assets/classic-fantasy/illustrated-1.4.0/adversaries.18.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/adversaries.18.webp"
+            },
+            "illustrated.classic-fantasy.items.1": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.1.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.1.webp"
+            },
+            "illustrated.classic-fantasy.items.2": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.2.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.2.webp"
+            },
+            "illustrated.classic-fantasy.items.3": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.3.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.3.webp"
+            },
+            "illustrated.classic-fantasy.items.4": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.4.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.4.webp"
+            },
+            "illustrated.classic-fantasy.items.5": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.5.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.5.webp"
+            },
+            "illustrated.classic-fantasy.items.6": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.6.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.6.webp"
+            },
+            "illustrated.classic-fantasy.items.7": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.7.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.7.webp"
+            },
+            "illustrated.classic-fantasy.items.8": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.8.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.8.webp"
+            },
+            "illustrated.classic-fantasy.items.9": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.9.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.9.webp"
+            },
+            "illustrated.classic-fantasy.items.10": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.10.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.10.webp"
+            },
+            "illustrated.classic-fantasy.items.11": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.11.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.11.webp"
+            },
+            "illustrated.classic-fantasy.items.12": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.12.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.12.webp"
+            },
+            "illustrated.classic-fantasy.items.13": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.13.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.13.webp"
+            },
+            "illustrated.classic-fantasy.items.14": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.14.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.14.webp"
+            },
+            "illustrated.classic-fantasy.items.15": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.15.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.15.webp"
+            },
+            "illustrated.classic-fantasy.items.16": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.16.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.16.webp"
+            },
+            "illustrated.classic-fantasy.items.17": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.17.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.17.webp"
+            },
+            "illustrated.classic-fantasy.items.18": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.18.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.18.webp"
+            },
+            "illustrated.classic-fantasy.items.19": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.19.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.19.webp"
+            },
+            "illustrated.classic-fantasy.items.20": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.20.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.20.webp"
+            },
+            "illustrated.classic-fantasy.items.21": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.21.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.21.webp"
+            },
+            "illustrated.classic-fantasy.items.22": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.22.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.22.webp"
+            },
+            "illustrated.classic-fantasy.items.23": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.23.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.23.webp"
+            },
+            "illustrated.classic-fantasy.items.24": {
+              "item": "assets/classic-fantasy/illustrated-1.4.0/items.24.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/items.24.webp"
+            },
+            "illustrated.classic-fantasy.events.1": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.1.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.1.webp"
+            },
+            "illustrated.classic-fantasy.events.2": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.2.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.2.webp"
+            },
+            "illustrated.classic-fantasy.events.3": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.3.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.3.webp"
+            },
+            "illustrated.classic-fantasy.events.4": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.4.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.4.webp"
+            },
+            "illustrated.classic-fantasy.events.5": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.5.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.5.webp"
+            },
+            "illustrated.classic-fantasy.events.6": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.6.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.6.webp"
+            },
+            "illustrated.classic-fantasy.events.7": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.7.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.7.webp"
+            },
+            "illustrated.classic-fantasy.events.8": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.8.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.8.webp"
+            },
+            "illustrated.classic-fantasy.events.9": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.9.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.9.webp"
+            },
+            "illustrated.classic-fantasy.events.10": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.10.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.10.webp"
+            },
+            "illustrated.classic-fantasy.events.11": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.11.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.11.webp"
+            },
+            "illustrated.classic-fantasy.events.12": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.12.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.12.webp"
+            },
+            "illustrated.classic-fantasy.events.13": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.13.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.13.webp"
+            },
+            "illustrated.classic-fantasy.events.14": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.14.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.14.webp"
+            },
+            "illustrated.classic-fantasy.events.15": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.15.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.15.webp"
+            },
+            "illustrated.classic-fantasy.events.16": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.16.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.16.webp"
+            },
+            "illustrated.classic-fantasy.events.17": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.17.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.17.webp"
+            },
+            "illustrated.classic-fantasy.events.18": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.18.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.18.webp"
+            },
+            "illustrated.classic-fantasy.events.19": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.19.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.19.webp"
+            },
+            "illustrated.classic-fantasy.events.20": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.20.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.20.webp"
+            },
+            "illustrated.classic-fantasy.events.21": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.21.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.21.webp"
+            },
+            "illustrated.classic-fantasy.events.22": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.22.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.22.webp"
+            },
+            "illustrated.classic-fantasy.events.23": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.23.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.23.webp"
+            },
+            "illustrated.classic-fantasy.events.24": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.24.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.24.webp"
+            },
+            "illustrated.classic-fantasy.events.25": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.25.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.25.webp"
+            },
+            "illustrated.classic-fantasy.events.26": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.26.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.26.webp"
+            },
+            "illustrated.classic-fantasy.events.27": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.27.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.27.webp"
+            },
+            "illustrated.classic-fantasy.events.28": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.28.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.28.webp"
+            },
+            "illustrated.classic-fantasy.events.29": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.29.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.29.webp"
+            },
+            "illustrated.classic-fantasy.events.30": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/events.30.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/events.30.webp"
+            },
+            "illustrated.classic-fantasy.scenes.1": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/scenes.1.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/scenes.1.webp"
+            },
+            "illustrated.classic-fantasy.scenes.2": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/scenes.2.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/scenes.2.webp"
+            },
+            "illustrated.classic-fantasy.scenes.3": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/scenes.3.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/scenes.3.webp"
+            },
+            "illustrated.classic-fantasy.scenes.4": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/scenes.4.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/scenes.4.webp"
+            },
+            "illustrated.classic-fantasy.scenes.5": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/scenes.5.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/scenes.5.webp"
+            },
+            "illustrated.classic-fantasy.scenes.6": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/scenes.6.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/scenes.6.webp"
+            },
+            "illustrated.classic-fantasy.scenes.7": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/scenes.7.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/scenes.7.webp"
+            },
+            "illustrated.classic-fantasy.scenes.8": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/scenes.8.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/scenes.8.webp"
+            },
+            "illustrated.classic-fantasy.scenes.9": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/scenes.9.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/scenes.9.webp"
+            },
+            "illustrated.classic-fantasy.scenes.10": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/scenes.10.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/scenes.10.webp"
+            },
+            "illustrated.classic-fantasy.scenes.11": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/scenes.11.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/scenes.11.webp"
+            },
+            "illustrated.classic-fantasy.scenes.12": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/scenes.12.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/scenes.12.webp"
+            },
+            "illustrated.classic-fantasy.scenes.13": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/scenes.13.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/scenes.13.webp"
+            },
+            "illustrated.classic-fantasy.scenes.14": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/scenes.14.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/scenes.14.webp"
+            },
+            "illustrated.classic-fantasy.scenes.15": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/scenes.15.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/scenes.15.webp"
+            },
+            "illustrated.classic-fantasy.scenes.16": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/scenes.16.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/scenes.16.webp"
+            },
+            "illustrated.classic-fantasy.scenes.17": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/scenes.17.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/scenes.17.webp"
+            },
+            "illustrated.classic-fantasy.scenes.18": {
+              "background": "assets/classic-fantasy/illustrated-1.4.0/scenes.18.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/scenes.18.webp"
+            },
+            "illustrated.classic-fantasy.archetypes.1": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/archetypes.1.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/archetypes.1.webp"
+            },
+            "illustrated.classic-fantasy.archetypes.2": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/archetypes.2.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/archetypes.2.webp"
+            },
+            "illustrated.classic-fantasy.archetypes.3": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/archetypes.3.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/archetypes.3.webp"
+            },
+            "illustrated.classic-fantasy.archetypes.4": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/archetypes.4.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/archetypes.4.webp"
+            },
+            "illustrated.classic-fantasy.archetypes.5": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/archetypes.5.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/archetypes.5.webp"
+            },
+            "illustrated.classic-fantasy.archetypes.6": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/archetypes.6.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/archetypes.6.webp"
+            },
+            "illustrated.classic-fantasy.archetypes.7": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/archetypes.7.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/archetypes.7.webp"
+            },
+            "illustrated.classic-fantasy.archetypes.8": {
+              "portrait": "assets/classic-fantasy/illustrated-1.4.0/archetypes.8.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/archetypes.8.webp"
+            },
+            "illustrated.classic-fantasy.progressionPaths.1": {
+              "card": "assets/classic-fantasy/illustrated-1.4.0/progressionPaths.1.webp"
+            },
+            "illustrated.classic-fantasy.progressionPaths.2": {
+              "card": "assets/classic-fantasy/illustrated-1.4.0/progressionPaths.2.webp"
+            },
+            "illustrated.classic-fantasy.progressionPaths.3": {
+              "card": "assets/classic-fantasy/illustrated-1.4.0/progressionPaths.3.webp"
+            },
+            "illustrated.classic-fantasy.progressionPaths.4": {
+              "card": "assets/classic-fantasy/illustrated-1.4.0/progressionPaths.4.webp"
+            },
+            "illustrated.classic-fantasy.progressionPaths.5": {
+              "card": "assets/classic-fantasy/illustrated-1.4.0/progressionPaths.5.webp"
+            },
+            "illustrated.classic-fantasy.progressionPaths.6": {
+              "card": "assets/classic-fantasy/illustrated-1.4.0/progressionPaths.6.webp"
+            },
+            "illustrated.classic-fantasy.visualThemes.1": {
+              "map": "assets/classic-fantasy/illustrated-1.4.0/visualThemes.1.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/visualThemes.1.webp"
+            },
+            "illustrated.classic-fantasy.visualThemes.2": {
+              "map": "assets/classic-fantasy/illustrated-1.4.0/visualThemes.2.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/visualThemes.2.webp"
+            },
+            "illustrated.classic-fantasy.visualThemes.3": {
+              "map": "assets/classic-fantasy/illustrated-1.4.0/visualThemes.3.webp",
+              "card": "assets/classic-fantasy/illustrated-1.4.0/visualThemes.3.webp"
+            }
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "illustrated-classic-fantasy"
+  }
+}

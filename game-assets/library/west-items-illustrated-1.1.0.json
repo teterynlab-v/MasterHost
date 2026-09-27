@@ -1,0 +1,1108 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.west.items",
+  "version": "1.1.0",
+  "type": "items",
+  "name": "Survey Lantern and Clean Water Tools — Illustrated",
+  "description": "Survey Lantern and Clean Water Tools for Cursed Frontier, Ghost Railway, Occult Boomtown. Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.",
+  "tags": [
+    "weird-west",
+    "cursed-frontier",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Survey Lantern and Clean Water Tools for Cursed Frontier, Ghost Railway, Occult Boomtown. Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.",
+    "highlights": [
+      "Survey Lantern and Clean Water Tools",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.weird-west"
+    ],
+    "requiresCapabilities": [
+      "setting:weird-west"
+    ],
+    "providesCapabilities": [
+      "items:weird-west"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.west.setting",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Weird West original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.west.items"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 24,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.west.items",
+    "version": "1.1.0",
+    "name": "Survey Lantern and Clean Water Tools — Illustrated",
+    "description": "Survey Lantern and Clean Water Tools for Cursed Frontier, Ghost Railway, Occult Boomtown. Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.",
+    "provides": [
+      "items:weird-west"
+    ],
+    "requires": [
+      "setting:weird-west"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.1",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Shared Passage Copy"
+            },
+            "description": {
+              "value": "Shared Passage Copy: proves both banks promised access for mourners and neighbors."
+            },
+            "deepId": {
+              "value": "items.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "cursed-frontier",
+            "illustrated.weird-west.items.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.2",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Missing Wage Book"
+            },
+            "description": {
+              "value": "Missing Wage Book: names workers removed from the railway timetable."
+            },
+            "deepId": {
+              "value": "items.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "ghost-railway",
+            "illustrated.weird-west.items.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.3",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Pulsing Nugget"
+            },
+            "description": {
+              "value": "Pulsing Nugget: links the living vein to illness in the miners."
+            },
+            "deepId": {
+              "value": "items.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "occult-boomtown",
+            "illustrated.weird-west.items.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.4",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Survey Stake Puller"
+            },
+            "description": {
+              "value": "Survey Stake Puller: removes the fence before the flood reaches the shelter."
+            },
+            "deepId": {
+              "value": "items.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "cursed-frontier",
+            "illustrated.weird-west.items.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.5",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Brake Lantern"
+            },
+            "description": {
+              "value": "Brake Lantern: lets the extra carriage cross the ghost bridge safely."
+            },
+            "deepId": {
+              "value": "items.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "ghost-railway",
+            "illustrated.weird-west.items.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.6",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Clean Reserve Jar"
+            },
+            "description": {
+              "value": "Clean Reserve Jar: proves the well can recover after ore exposure ends."
+            },
+            "deepId": {
+              "value": "items.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "occult-boomtown",
+            "illustrated.weird-west.items.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.7",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Two-bank Witness Slip"
+            },
+            "description": {
+              "value": "Two-bank Witness Slip: validates the passage before the county owner arrives."
+            },
+            "deepId": {
+              "value": "items.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "cursed-frontier",
+            "illustrated.weird-west.items.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.8",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Platform Zero Ticket"
+            },
+            "description": {
+              "value": "Platform Zero Ticket: names a destination absent from the printed map."
+            },
+            "deepId": {
+              "value": "items.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "ghost-railway",
+            "illustrated.weird-west.items.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.9",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Fault Return Basket"
+            },
+            "description": {
+              "value": "Fault Return Basket: carries living ore back without mixing it into water stores."
+            },
+            "deepId": {
+              "value": "items.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "occult-boomtown",
+            "illustrated.weird-west.items.9"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.10",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Evacuation Wagon Map"
+            },
+            "description": {
+              "value": "Evacuation Wagon Map: marks the dry route and limited places before the flood."
+            },
+            "deepId": {
+              "value": "items.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "cursed-frontier",
+            "illustrated.weird-west.items.10"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.11",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Builder's Wage Token"
+            },
+            "description": {
+              "value": "Builder's Wage Token: records a debt that cannot be erased by changing the year."
+            },
+            "deepId": {
+              "value": "items.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "ghost-railway",
+            "illustrated.weird-west.items.11"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.12",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Assay Pulse Chart"
+            },
+            "description": {
+              "value": "Assay Pulse Chart: shows miners' symptoms follow gold exposure."
+            },
+            "deepId": {
+              "value": "items.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "occult-boomtown",
+            "illustrated.weird-west.items.12"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.13",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Fence Withdrawal Order"
+            },
+            "description": {
+              "value": "Fence Withdrawal Order: lets workers remove stakes without another private command."
+            },
+            "deepId": {
+              "value": "items.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.13"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "cursed-frontier",
+            "illustrated.weird-west.items.13"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.14",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Union Passenger List"
+            },
+            "description": {
+              "value": "Union Passenger List: names the missing crew before carriage detachment."
+            },
+            "deepId": {
+              "value": "items.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.17"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "ghost-railway",
+            "illustrated.weird-west.items.14"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.15",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Surface Work Agreement"
+            },
+            "description": {
+              "value": "Surface Work Agreement: provides a bounded alternative to reopening the living shaft."
+            },
+            "deepId": {
+              "value": "items.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.21"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "occult-boomtown",
+            "illustrated.weird-west.items.15"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.16",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "River Rope Kit"
+            },
+            "description": {
+              "value": "River Rope Kit: makes one evacuation crossing safe but needs an anchored watch."
+            },
+            "deepId": {
+              "value": "items.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.22"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "cursed-frontier",
+            "illustrated.weird-west.items.16"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.17",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Repaired Timetable"
+            },
+            "description": {
+              "value": "Repaired Timetable: records Platform Zero and the crew's true working dates."
+            },
+            "deepId": {
+              "value": "items.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "ghost-railway",
+            "illustrated.weird-west.items.17"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.18",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Mine Closure Seal"
+            },
+            "description": {
+              "value": "Mine Closure Seal: blocks the unsafe lower gallery if the council witnesses it."
+            },
+            "deepId": {
+              "value": "items.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "occult-boomtown",
+            "illustrated.weird-west.items.18"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.19",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Mourning Road Marker"
+            },
+            "description": {
+              "value": "Mourning Road Marker: restores the route without pretending the flooded losses vanished."
+            },
+            "deepId": {
+              "value": "items.19"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "cursed-frontier",
+            "illustrated.weird-west.items.19"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.20",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Carriage Release Lever"
+            },
+            "description": {
+              "value": "Carriage Release Lever: frees passengers only after a safe platform is ready."
+            },
+            "deepId": {
+              "value": "items.20"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "ghost-railway",
+            "illustrated.weird-west.items.20"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.21",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Returned Gold Receipt"
+            },
+            "description": {
+              "value": "Returned Gold Receipt: records how much ore was restored and what remains dangerous."
+            },
+            "deepId": {
+              "value": "items.21"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.15"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "occult-boomtown",
+            "illustrated.weird-west.items.21"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.22",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "County Hearing Bell"
+            },
+            "description": {
+              "value": "County Hearing Bell: calls both banks to witness the revised survey."
+            },
+            "deepId": {
+              "value": "items.22"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.16"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "cursed-frontier",
+            "illustrated.weird-west.items.22"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.23",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Homeward Rail Lamp"
+            },
+            "description": {
+              "value": "Homeward Rail Lamp: guides the lost builder once wages and acknowledgment are settled."
+            },
+            "deepId": {
+              "value": "items.23"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.20"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "ghost-railway",
+            "illustrated.weird-west.items.23"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/west.deep.items.24",
+        "value": {
+          "kind": "item",
+          "values": {
+            "name": {
+              "value": "Clean Well Covenant"
+            },
+            "description": {
+              "value": "Clean Well Covenant: sets testing and surface work obligations after mine closure."
+            },
+            "deepId": {
+              "value": "items.24"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.24"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "west-deep",
+            "occult-boomtown",
+            "illustrated.weird-west.items.24"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-items-1": {
+            "template": "west.deep.items.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "cursed-frontier"
+              ]
+            }
+          },
+          "deep-items-2": {
+            "template": "west.deep.items.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-railway"
+              ]
+            }
+          },
+          "deep-items-3": {
+            "template": "west.deep.items.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "occult-boomtown"
+              ]
+            }
+          },
+          "deep-items-4": {
+            "template": "west.deep.items.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "cursed-frontier"
+              ]
+            }
+          },
+          "deep-items-5": {
+            "template": "west.deep.items.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-railway"
+              ]
+            }
+          },
+          "deep-items-6": {
+            "template": "west.deep.items.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "occult-boomtown"
+              ]
+            }
+          },
+          "deep-items-7": {
+            "template": "west.deep.items.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "cursed-frontier"
+              ]
+            }
+          },
+          "deep-items-8": {
+            "template": "west.deep.items.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-railway"
+              ]
+            }
+          },
+          "deep-items-9": {
+            "template": "west.deep.items.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "occult-boomtown"
+              ]
+            }
+          },
+          "deep-items-10": {
+            "template": "west.deep.items.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "cursed-frontier"
+              ]
+            }
+          },
+          "deep-items-11": {
+            "template": "west.deep.items.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-railway"
+              ]
+            }
+          },
+          "deep-items-12": {
+            "template": "west.deep.items.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "occult-boomtown"
+              ]
+            }
+          },
+          "deep-items-13": {
+            "template": "west.deep.items.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "cursed-frontier"
+              ]
+            }
+          },
+          "deep-items-14": {
+            "template": "west.deep.items.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-railway"
+              ]
+            }
+          },
+          "deep-items-15": {
+            "template": "west.deep.items.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "occult-boomtown"
+              ]
+            }
+          },
+          "deep-items-16": {
+            "template": "west.deep.items.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "cursed-frontier"
+              ]
+            }
+          },
+          "deep-items-17": {
+            "template": "west.deep.items.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-railway"
+              ]
+            }
+          },
+          "deep-items-18": {
+            "template": "west.deep.items.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "occult-boomtown"
+              ]
+            }
+          },
+          "deep-items-19": {
+            "template": "west.deep.items.19",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "cursed-frontier"
+              ]
+            }
+          },
+          "deep-items-20": {
+            "template": "west.deep.items.20",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-railway"
+              ]
+            }
+          },
+          "deep-items-21": {
+            "template": "west.deep.items.21",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "occult-boomtown"
+              ]
+            }
+          },
+          "deep-items-22": {
+            "template": "west.deep.items.22",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "cursed-frontier"
+              ]
+            }
+          },
+          "deep-items-23": {
+            "template": "west.deep.items.23",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-railway"
+              ]
+            }
+          },
+          "deep-items-24": {
+            "template": "west.deep.items.24",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "occult-boomtown"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

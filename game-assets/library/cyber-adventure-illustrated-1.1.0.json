@@ -1,0 +1,2164 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.cyber.adventure",
+  "version": "1.1.0",
+  "type": "adventure",
+  "name": "Three Complete District Adventures — Illustrated",
+  "description": "Three Complete District Adventures for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+  "tags": [
+    "cyberpunk",
+    "rainline-mutual",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Three Complete District Adventures for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+    "highlights": [
+      "Three Complete District Adventures",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.cyberpunk"
+    ],
+    "requiresCapabilities": [
+      "world:cyberpunk",
+      "locations:cyberpunk",
+      "cast:cyberpunk",
+      "items:cyberpunk",
+      "rules:cyberpunk"
+    ],
+    "providesCapabilities": [
+      "adventure:cyberpunk"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.cyber.world-template",
+      "version": "1.1.0"
+    },
+    {
+      "id": "masterhost.asset.cyber.locations",
+      "version": "1.1.0"
+    },
+    {
+      "id": "masterhost.asset.cyber.cast",
+      "version": "1.1.0"
+    },
+    {
+      "id": "masterhost.asset.cyber.items",
+      "version": "1.1.0"
+    },
+    {
+      "id": "masterhost.asset.cyber.rules",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Cyberpunk original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.cyber.adventure"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 18,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.cyber.adventure",
+    "version": "1.1.0",
+    "name": "Three Complete District Adventures — Illustrated",
+    "description": "Three Complete District Adventures for Rainline Mutual, Glass House, Ghost Transit. Three complete street campaigns: public utility repair, stolen medical identities and consent at a haunted transit archive.",
+    "provides": [
+      "adventure:cyberpunk"
+    ],
+    "requires": [
+      "world:cyberpunk",
+      "locations:cyberpunk",
+      "cast:cyberpunk",
+      "items:cyberpunk",
+      "rules:cyberpunk"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.scenes.1",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Water Behind the Lock"
+            },
+            "description": {
+              "value": "Water Behind the Lock: Objective: restore emergency water. Bypass the contract or secure a public override; delay floods the clinic road."
+            },
+            "deepId": {
+              "value": "scenes.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual",
+            "illustrated.cyberpunk.scenes.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.scenes.2",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Wrong Name"
+            },
+            "description": {
+              "value": "The Wrong Name: Objective: locate the original patient. Follow receipts or interview the lobby nurse; delay starts a forced transfer."
+            },
+            "deepId": {
+              "value": "scenes.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house",
+            "illustrated.cyberpunk.scenes.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.scenes.3",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "A Train for the Missing"
+            },
+            "description": {
+              "value": "A Train for the Missing: Objective: contact Juno. Trace the announcement or enter the maintenance tram; delay closes the tunnel."
+            },
+            "deepId": {
+              "value": "scenes.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit",
+            "illustrated.cyberpunk.scenes.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.scenes.4",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Live Copper"
+            },
+            "description": {
+              "value": "Live Copper: Objective: make repairs safe. Isolate the transformer or reroute families; delay burns the roof bridge."
+            },
+            "deepId": {
+              "value": "scenes.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual",
+            "illustrated.cyberpunk.scenes.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.scenes.5",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Paper Vault"
+            },
+            "description": {
+              "value": "The Paper Vault: Objective: preserve consent evidence. Escort the auditor or copy originals under witness; delay triggers erasure."
+            },
+            "deepId": {
+              "value": "scenes.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house",
+            "illustrated.cyberpunk.scenes.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.scenes.6",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Garden of Sleepers"
+            },
+            "description": {
+              "value": "Garden of Sleepers: Objective: protect shelter while pursuing the signal. Reroute drones or negotiate relocation; delay destroys the pump."
+            },
+            "deepId": {
+              "value": "scenes.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit",
+            "illustrated.cyberpunk.scenes.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.scenes.7",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Meter Auction"
+            },
+            "description": {
+              "value": "The Meter Auction: Objective: stop seizure. Prove sabotage or redeem the disputed transformer; delay sells household profiles."
+            },
+            "deepId": {
+              "value": "scenes.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual",
+            "illustrated.cyberpunk.scenes.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.scenes.8",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "A Body in the Ward"
+            },
+            "description": {
+              "value": "A Body in the Ward: Objective: free patients without denying others care. Verify identities or secure neutral treatment; delay locks the ward."
+            },
+            "deepId": {
+              "value": "scenes.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house",
+            "illustrated.cyberpunk.scenes.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.scenes.9",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Two Farewells"
+            },
+            "description": {
+              "value": "Two Farewells: Objective: establish Juno's wishes. Compare physical records or mediate the branches; delay lets the collector copy them."
+            },
+            "deepId": {
+              "value": "scenes.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit",
+            "illustrated.cyberpunk.scenes.9"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.scenes.10",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Repair Bargain"
+            },
+            "description": {
+              "value": "The Repair Bargain: Objective: secure sustainable power. Form a mutual or accept a bounded equipment contract; delay drains reserves."
+            },
+            "deepId": {
+              "value": "scenes.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.13"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual",
+            "illustrated.cyberpunk.scenes.10"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.scenes.11",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Names on the Receipt"
+            },
+            "description": {
+              "value": "Names on the Receipt: Objective: expose the exchange safely. Redact intimate data or protect public witnesses; delay reaches the insurer."
+            },
+            "deepId": {
+              "value": "scenes.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house",
+            "illustrated.cyberpunk.scenes.11"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.scenes.12",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Moving Tram"
+            },
+            "description": {
+              "value": "The Moving Tram: Objective: recover possessions and a return path. Start the tram or open a service gate; delay seals the carriage."
+            },
+            "deepId": {
+              "value": "scenes.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.15"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit",
+            "illustrated.cyberpunk.scenes.12"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.scenes.13",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Hearing in the Rain"
+            },
+            "description": {
+              "value": "Hearing in the Rain: Objective: settle liability. Present anonymous outage evidence or seek a tenants' injunction; delay authorizes seizure."
+            },
+            "deepId": {
+              "value": "scenes.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.16"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual",
+            "illustrated.cyberpunk.scenes.13"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.scenes.14",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "The Clinic Injunction"
+            },
+            "description": {
+              "value": "The Clinic Injunction: Objective: stop further sales. Certify originals or bring the patient to testify; delay moves the ledger offsite."
+            },
+            "deepId": {
+              "value": "scenes.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.17"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house",
+            "illustrated.cyberpunk.scenes.14"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.scenes.15",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "A Boundary for Juno"
+            },
+            "description": {
+              "value": "A Boundary for Juno: Objective: record explicit consent. Preserve one branch or honor an end to copying; delay merges the recordings."
+            },
+            "deepId": {
+              "value": "scenes.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit",
+            "illustrated.cyberpunk.scenes.15"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.scenes.16",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Who Owns the Water"
+            },
+            "description": {
+              "value": "Who Owns the Water: Objective: choose repair governance. Sign a community deed or a limited lease; record who can cut power."
+            },
+            "deepId": {
+              "value": "scenes.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual",
+            "illustrated.cyberpunk.scenes.16"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.scenes.17",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Names After Glass"
+            },
+            "description": {
+              "value": "Names After Glass: Objective: settle restitution. Restore identities or fund private care; record whose evidence remains public."
+            },
+            "deepId": {
+              "value": "scenes.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house",
+            "illustrated.cyberpunk.scenes.17"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.scenes.18",
+        "value": {
+          "kind": "scene",
+          "values": {
+            "name": {
+              "value": "Laststop at Dawn"
+            },
+            "description": {
+              "value": "Laststop at Dawn: Objective: decide the archive's future. Establish a consent trust or erase copies after farewell; record where sleepers can stay."
+            },
+            "deepId": {
+              "value": "scenes.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "leads-to",
+                  "targetId": "scenes.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit",
+            "illustrated.cyberpunk.scenes.18"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.1",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Pump Lockout"
+            },
+            "description": {
+              "value": "Pump Lockout: the intake shuts while the utility advertises priority access."
+            },
+            "deepId": {
+              "value": "events.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual",
+            "illustrated.cyberpunk.events.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.2",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Borrowed Voice"
+            },
+            "description": {
+              "value": "Borrowed Voice: a terminal greets the crew with a missing patient's name."
+            },
+            "deepId": {
+              "value": "events.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house",
+            "illustrated.cyberpunk.events.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.3",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Arrival Announcement"
+            },
+            "description": {
+              "value": "Arrival Announcement: the abandoned station repeats Juno's unfinished message."
+            },
+            "deepId": {
+              "value": "events.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit",
+            "illustrated.cyberpunk.events.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.4",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Debt Notice"
+            },
+            "description": {
+              "value": "Debt Notice: repair volunteers receive seizure orders before the public hearing."
+            },
+            "deepId": {
+              "value": "events.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual",
+            "illustrated.cyberpunk.events.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.5",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Witness Transfer"
+            },
+            "description": {
+              "value": "Witness Transfer: the clinic moves the only original signatory into isolation."
+            },
+            "deepId": {
+              "value": "events.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house",
+            "illustrated.cyberpunk.events.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.6",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Camp Inspection"
+            },
+            "description": {
+              "value": "Camp Inspection: maintenance drones order sleepers to leave without another shelter."
+            },
+            "deepId": {
+              "value": "events.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit",
+            "illustrated.cyberpunk.events.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.7",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Roof Surge"
+            },
+            "description": {
+              "value": "Roof Surge: a faulty bridge wire sparks beside a medicine runner."
+            },
+            "deepId": {
+              "value": "events.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual",
+            "illustrated.cyberpunk.events.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.8",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Receipt Leak"
+            },
+            "description": {
+              "value": "Receipt Leak: a broker offers evidence in exchange for deleting one buyer's name."
+            },
+            "deepId": {
+              "value": "events.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house",
+            "illustrated.cyberpunk.events.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.9",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Branch Dispute"
+            },
+            "description": {
+              "value": "Branch Dispute: two copies disagree about whether the courier wanted rescue."
+            },
+            "deepId": {
+              "value": "events.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit",
+            "illustrated.cyberpunk.events.9"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.10",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Transformer Auction"
+            },
+            "description": {
+              "value": "Transformer Auction: the district's spare unit goes on sale during the flood."
+            },
+            "deepId": {
+              "value": "events.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual",
+            "illustrated.cyberpunk.events.10"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.11",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Ward Alarm"
+            },
+            "description": {
+              "value": "Ward Alarm: patients panic when their borrowed names stop receiving care."
+            },
+            "deepId": {
+              "value": "events.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house",
+            "illustrated.cyberpunk.events.11"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.12",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Garden Blackout"
+            },
+            "description": {
+              "value": "Garden Blackout: a signal test threatens the camp's only water pump."
+            },
+            "deepId": {
+              "value": "events.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit",
+            "illustrated.cyberpunk.events.12"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.13",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Public Hearing"
+            },
+            "description": {
+              "value": "Public Hearing: the utility demands personal meter records as proof of sabotage."
+            },
+            "deepId": {
+              "value": "events.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual",
+            "illustrated.cyberpunk.events.13"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.14",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Backup Erasure"
+            },
+            "description": {
+              "value": "Backup Erasure: auditors have minutes before the original consent scan disappears."
+            },
+            "deepId": {
+              "value": "events.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house",
+            "illustrated.cyberpunk.events.14"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.15",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "False Farewell"
+            },
+            "description": {
+              "value": "False Farewell: an advertisement repeats a stolen intimate memory."
+            },
+            "deepId": {
+              "value": "events.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit",
+            "illustrated.cyberpunk.events.15"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.16",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Contract Confession"
+            },
+            "description": {
+              "value": "Contract Confession: the foreman offers testimony if their crew receives amnesty."
+            },
+            "deepId": {
+              "value": "events.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual",
+            "illustrated.cyberpunk.events.16"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.17",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Patient Escape"
+            },
+            "description": {
+              "value": "Patient Escape: a name seal frees one patient but locks another out."
+            },
+            "deepId": {
+              "value": "events.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house",
+            "illustrated.cyberpunk.events.17"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.18",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Track Closure"
+            },
+            "description": {
+              "value": "Track Closure: the tram route will be demolished at sunrise."
+            },
+            "deepId": {
+              "value": "events.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit",
+            "illustrated.cyberpunk.events.18"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.19",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Repair Offer"
+            },
+            "description": {
+              "value": "Repair Offer: a corporation offers free equipment in exchange for perpetual data access."
+            },
+            "deepId": {
+              "value": "events.19"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual",
+            "illustrated.cyberpunk.events.19"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.20",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Clinic Injunction"
+            },
+            "description": {
+              "value": "Clinic Injunction: an advocate can halt sales if the crew preserves the originals."
+            },
+            "deepId": {
+              "value": "events.20"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house",
+            "illustrated.cyberpunk.events.20"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.21",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Sibling Arrival"
+            },
+            "description": {
+              "value": "Sibling Arrival: Ren arrives with a farewell that contradicts the signal."
+            },
+            "deepId": {
+              "value": "events.21"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit",
+            "illustrated.cyberpunk.events.21"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.22",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Roof Council"
+            },
+            "description": {
+              "value": "Roof Council: tenants debate who should hold the emergency override."
+            },
+            "deepId": {
+              "value": "events.22"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual",
+            "illustrated.cyberpunk.events.22"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.23",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Buyer Threat"
+            },
+            "description": {
+              "value": "Buyer Threat: an insurer threatens to cancel innocent patients' treatment."
+            },
+            "deepId": {
+              "value": "events.23"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house",
+            "illustrated.cyberpunk.events.23"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.24",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Anchor Failure"
+            },
+            "description": {
+              "value": "Anchor Failure: the coherent courier branch begins losing its last journey."
+            },
+            "deepId": {
+              "value": "events.24"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit",
+            "illustrated.cyberpunk.events.24"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.25",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Power Shared"
+            },
+            "description": {
+              "value": "Power Shared: a neighboring block offers cells if its own outage is acknowledged."
+            },
+            "deepId": {
+              "value": "events.25"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual",
+            "illustrated.cyberpunk.events.25"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.26",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Exchange Hearing"
+            },
+            "description": {
+              "value": "Exchange Hearing: the court offers restitution without restoring every stolen name."
+            },
+            "deepId": {
+              "value": "events.26"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house",
+            "illustrated.cyberpunk.events.26"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.27",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Camp Vote"
+            },
+            "description": {
+              "value": "Camp Vote: sleepers demand a say in moving the memory trust."
+            },
+            "deepId": {
+              "value": "events.27"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit",
+            "illustrated.cyberpunk.events.27"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.28",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Open Intake"
+            },
+            "description": {
+              "value": "Open Intake: the crew's ownership decision changes who controls emergency water."
+            },
+            "deepId": {
+              "value": "events.28"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "rainline-mutual",
+            "illustrated.cyberpunk.events.28"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.29",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Names Returned"
+            },
+            "description": {
+              "value": "Names Returned: patients choose between privacy, testimony and compensation."
+            },
+            "deepId": {
+              "value": "events.29"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "glass-house",
+            "illustrated.cyberpunk.events.29"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/cyber.deep.events.30",
+        "value": {
+          "kind": "event",
+          "values": {
+            "name": {
+              "value": "Final Departure"
+            },
+            "description": {
+              "value": "Final Departure: Juno asks the crew to record their chosen boundary before the train leaves."
+            },
+            "deepId": {
+              "value": "events.30"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "scenes.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "cyber-deep",
+            "ghost-transit",
+            "illustrated.cyberpunk.events.30"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-scenes-1": {
+            "template": "cyber.deep.scenes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-scenes-2": {
+            "template": "cyber.deep.scenes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-scenes-3": {
+            "template": "cyber.deep.scenes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-scenes-4": {
+            "template": "cyber.deep.scenes.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-scenes-5": {
+            "template": "cyber.deep.scenes.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-scenes-6": {
+            "template": "cyber.deep.scenes.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-scenes-7": {
+            "template": "cyber.deep.scenes.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-scenes-8": {
+            "template": "cyber.deep.scenes.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-scenes-9": {
+            "template": "cyber.deep.scenes.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-scenes-10": {
+            "template": "cyber.deep.scenes.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-scenes-11": {
+            "template": "cyber.deep.scenes.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-scenes-12": {
+            "template": "cyber.deep.scenes.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-scenes-13": {
+            "template": "cyber.deep.scenes.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-scenes-14": {
+            "template": "cyber.deep.scenes.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-scenes-15": {
+            "template": "cyber.deep.scenes.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-scenes-16": {
+            "template": "cyber.deep.scenes.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-scenes-17": {
+            "template": "cyber.deep.scenes.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-scenes-18": {
+            "template": "cyber.deep.scenes.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-events-1": {
+            "template": "cyber.deep.events.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-events-2": {
+            "template": "cyber.deep.events.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-events-3": {
+            "template": "cyber.deep.events.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-events-4": {
+            "template": "cyber.deep.events.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-events-5": {
+            "template": "cyber.deep.events.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-events-6": {
+            "template": "cyber.deep.events.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-events-7": {
+            "template": "cyber.deep.events.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-events-8": {
+            "template": "cyber.deep.events.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-events-9": {
+            "template": "cyber.deep.events.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-events-10": {
+            "template": "cyber.deep.events.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-events-11": {
+            "template": "cyber.deep.events.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-events-12": {
+            "template": "cyber.deep.events.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-events-13": {
+            "template": "cyber.deep.events.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-events-14": {
+            "template": "cyber.deep.events.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-events-15": {
+            "template": "cyber.deep.events.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-events-16": {
+            "template": "cyber.deep.events.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-events-17": {
+            "template": "cyber.deep.events.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-events-18": {
+            "template": "cyber.deep.events.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-events-19": {
+            "template": "cyber.deep.events.19",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-events-20": {
+            "template": "cyber.deep.events.20",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-events-21": {
+            "template": "cyber.deep.events.21",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-events-22": {
+            "template": "cyber.deep.events.22",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-events-23": {
+            "template": "cyber.deep.events.23",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-events-24": {
+            "template": "cyber.deep.events.24",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-events-25": {
+            "template": "cyber.deep.events.25",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-events-26": {
+            "template": "cyber.deep.events.26",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-events-27": {
+            "template": "cyber.deep.events.27",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          },
+          "deep-events-28": {
+            "template": "cyber.deep.events.28",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "rainline-mutual"
+              ]
+            }
+          },
+          "deep-events-29": {
+            "template": "cyber.deep.events.29",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "glass-house"
+              ]
+            }
+          },
+          "deep-events-30": {
+            "template": "cyber.deep.events.30",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ghost-transit"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

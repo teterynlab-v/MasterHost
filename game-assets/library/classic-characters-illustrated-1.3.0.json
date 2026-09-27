@@ -1,0 +1,695 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.classic.characters",
+  "version": "1.3.0",
+  "type": "characters",
+  "name": "Marches Character Paths — Illustrated",
+  "description": "Eight ready archetypes and six progression paths for oathbound, roadwise, magical, diplomatic, and delving heroes.",
+  "tags": [
+    "classic-fantasy",
+    "border-kingdoms",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Eight ready archetypes and six progression paths for oathbound, roadwise, magical, diplomatic, and delving heroes.",
+    "highlights": [
+      "Marches Character Paths",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.classic-fantasy"
+    ],
+    "requiresCapabilities": [
+      "rules:classic-fantasy",
+      "items:classic-fantasy"
+    ],
+    "providesCapabilities": [
+      "characters:classic-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.classic.rules",
+      "version": "1.3.0"
+    },
+    {
+      "id": "masterhost.asset.classic.items",
+      "version": "1.3.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Classic Fantasy original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.classic.characters"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 8,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.classic.characters",
+    "version": "1.3.0",
+    "name": "Marches Character Paths — Illustrated",
+    "description": "Eight ready archetypes and six progression paths for oathbound, roadwise, magical, diplomatic, and delving heroes.",
+    "provides": [
+      "characters:classic-fantasy"
+    ],
+    "requires": [
+      "rules:classic-fantasy",
+      "items:classic-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.archetypes.1",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Oathbound Knight"
+            },
+            "description": {
+              "value": "Oathbound Knight enters Border Kingdoms with a clear duty, a useful field specialty, and a relationship that can complicate the first oath."
+            },
+            "deepId": {
+              "value": "archetypes.1"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.archetypes.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.archetypes.2",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Thornwood Ranger"
+            },
+            "description": {
+              "value": "Thornwood Ranger is ready for War of Heirs, combining a distinct approach to danger with a reason to protect one of its communities."
+            },
+            "deepId": {
+              "value": "archetypes.2"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.archetypes.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.archetypes.3",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Ember Mage"
+            },
+            "description": {
+              "value": "Ember Mage knows one hidden truth about Ruins of the Ancient Empire and must decide when revealing it matters more than personal standing."
+            },
+            "deepId": {
+              "value": "archetypes.3"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.archetypes.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.archetypes.4",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Roadwise Envoy"
+            },
+            "description": {
+              "value": "Roadwise Envoy has practical authority in Border Kingdoms, but every use of that status strengthens a rival obligation."
+            },
+            "deepId": {
+              "value": "archetypes.4"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.archetypes.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.archetypes.5",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Moonwell Healer"
+            },
+            "description": {
+              "value": "Moonwell Healer enters War of Heirs with a clear duty, a useful field specialty, and a relationship that can complicate the first oath."
+            },
+            "deepId": {
+              "value": "archetypes.5"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.archetypes.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.archetypes.6",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Crownless Scion"
+            },
+            "description": {
+              "value": "Crownless Scion is ready for Ruins of the Ancient Empire, combining a distinct approach to danger with a reason to protect one of its communities."
+            },
+            "deepId": {
+              "value": "archetypes.6"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.archetypes.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.archetypes.7",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Guild Delver"
+            },
+            "description": {
+              "value": "Guild Delver knows one hidden truth about Border Kingdoms and must decide when revealing it matters more than personal standing."
+            },
+            "deepId": {
+              "value": "archetypes.7"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.archetypes.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.archetypes.8",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Banner Captain"
+            },
+            "description": {
+              "value": "Banner Captain has practical authority in War of Heirs, but every use of that status strengthens a rival obligation."
+            },
+            "deepId": {
+              "value": "archetypes.8"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.archetypes.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.progressionPaths.1",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Renowned Warden"
+            },
+            "description": {
+              "value": "Renowned Warden advances through deeds in Border Kingdoms, unlocking recognition, a reliable contact, and responsibility for a lasting consequence."
+            },
+            "deepId": {
+              "value": "progressionPaths.1"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.progressionPaths.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.progressionPaths.2",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Master of Roads"
+            },
+            "description": {
+              "value": "Master of Roads rewards difficult choices in War of Heirs with new reach, while tying the hero more closely to a faction’s expectations."
+            },
+            "deepId": {
+              "value": "progressionPaths.2"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.progressionPaths.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.progressionPaths.3",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Keeper of Embers"
+            },
+            "description": {
+              "value": "Keeper of Embers turns discoveries in Ruins of the Ancient Empire into expertise, access, and a final opportunity to reshape an old institution."
+            },
+            "deepId": {
+              "value": "progressionPaths.3"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.progressionPaths.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.progressionPaths.4",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Voice of the Compact"
+            },
+            "description": {
+              "value": "Voice of the Compact grows through service in Border Kingdoms, exchanging short-term power for a promise the Realm can remember."
+            },
+            "deepId": {
+              "value": "progressionPaths.4"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.progressionPaths.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.progressionPaths.5",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Heir of Reconciliation"
+            },
+            "description": {
+              "value": "Heir of Reconciliation advances through deeds in War of Heirs, unlocking recognition, a reliable contact, and responsibility for a lasting consequence."
+            },
+            "deepId": {
+              "value": "progressionPaths.5"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.progressionPaths.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.progressionPaths.6",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Seeker of the Old Empire"
+            },
+            "description": {
+              "value": "Seeker of the Old Empire rewards difficult choices in Ruins of the Ancient Empire with new reach, while tying the hero more closely to a faction’s expectations."
+            },
+            "deepId": {
+              "value": "progressionPaths.6"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.progressionPaths.6"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-archetypes-1": {
+            "template": "classic.deep.archetypes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-archetypes-2": {
+            "template": "classic.deep.archetypes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-archetypes-3": {
+            "template": "classic.deep.archetypes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-archetypes-4": {
+            "template": "classic.deep.archetypes.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-archetypes-5": {
+            "template": "classic.deep.archetypes.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-archetypes-6": {
+            "template": "classic.deep.archetypes.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-archetypes-7": {
+            "template": "classic.deep.archetypes.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-archetypes-8": {
+            "template": "classic.deep.archetypes.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-progressionPaths-1": {
+            "template": "classic.deep.progressionPaths.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-progressionPaths-2": {
+            "template": "classic.deep.progressionPaths.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-progressionPaths-3": {
+            "template": "classic.deep.progressionPaths.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-progressionPaths-4": {
+            "template": "classic.deep.progressionPaths.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-progressionPaths-5": {
+            "template": "classic.deep.progressionPaths.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-progressionPaths-6": {
+            "template": "classic.deep.progressionPaths.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "op": "append",
+        "path": "/content/characterCreation/steps",
+        "value": [
+          {
+            "id": "illustrated-portrait",
+            "title": "Illustrated portrait",
+            "fields": [
+              {
+                "id": "illustratedArchetype",
+                "label": "Portrait",
+                "type": "asset",
+                "required": true,
+                "default": "archetypes.1",
+                "options": [
+                  {
+                    "value": "archetypes.1",
+                    "label": "Oathbound Knight"
+                  },
+                  {
+                    "value": "archetypes.2",
+                    "label": "Thornwood Ranger"
+                  },
+                  {
+                    "value": "archetypes.3",
+                    "label": "Ember Mage"
+                  },
+                  {
+                    "value": "archetypes.4",
+                    "label": "Roadwise Envoy"
+                  },
+                  {
+                    "value": "archetypes.5",
+                    "label": "Moonwell Healer"
+                  },
+                  {
+                    "value": "archetypes.6",
+                    "label": "Crownless Scion"
+                  },
+                  {
+                    "value": "archetypes.7",
+                    "label": "Guild Delver"
+                  },
+                  {
+                    "value": "archetypes.8",
+                    "label": "Banner Captain"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "op": "append",
+        "path": "/content/characterCreation/starting/assets",
+        "value": [
+          {
+            "id": "portrait",
+            "value": "assets/classic-fantasy/illustrated-1.3.0/archetypes.1.webp",
+            "when": {
+              "field": "illustratedArchetype",
+              "equals": "archetypes.1"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/classic-fantasy/illustrated-1.3.0/archetypes.2.webp",
+            "when": {
+              "field": "illustratedArchetype",
+              "equals": "archetypes.2"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/classic-fantasy/illustrated-1.3.0/archetypes.3.webp",
+            "when": {
+              "field": "illustratedArchetype",
+              "equals": "archetypes.3"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/classic-fantasy/illustrated-1.3.0/archetypes.4.webp",
+            "when": {
+              "field": "illustratedArchetype",
+              "equals": "archetypes.4"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/classic-fantasy/illustrated-1.3.0/archetypes.5.webp",
+            "when": {
+              "field": "illustratedArchetype",
+              "equals": "archetypes.5"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/classic-fantasy/illustrated-1.3.0/archetypes.6.webp",
+            "when": {
+              "field": "illustratedArchetype",
+              "equals": "archetypes.6"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/classic-fantasy/illustrated-1.3.0/archetypes.7.webp",
+            "when": {
+              "field": "illustratedArchetype",
+              "equals": "archetypes.7"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/classic-fantasy/illustrated-1.3.0/archetypes.8.webp",
+            "when": {
+              "field": "illustratedArchetype",
+              "equals": "archetypes.8"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

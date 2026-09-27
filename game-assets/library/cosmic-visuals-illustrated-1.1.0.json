@@ -1,0 +1,1890 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.cosmic.visuals",
+  "version": "1.1.0",
+  "type": "visuals",
+  "name": "Independent Evidence Schematics — Illustrated",
+  "description": "Independent Evidence Schematics for Coastal University, Polar Expedition, Decaying Metropolis. Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.",
+  "tags": [
+    "cosmic-investigation",
+    "coastal-university",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Independent Evidence Schematics for Coastal University, Polar Expedition, Decaying Metropolis. Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.",
+    "highlights": [
+      "Independent Evidence Schematics",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.cosmic-investigation"
+    ],
+    "requiresCapabilities": [
+      "setting:cosmic-investigation"
+    ],
+    "providesCapabilities": [
+      "visuals:cosmic-investigation"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.cosmic.setting",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Cosmic Investigation original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.cosmic.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 151
+  },
+  "media": [
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/factions.1.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/factions.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "6558557e4a2c0e850462198d2c2d848bfd0f60b46f16c6df8da6346875cdfe6b",
+      "size": 45576
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/factions.2.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/factions.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "21a349605782b473392155cda715f5bae071a80d0ac75b39d19a1b4de0165a25",
+      "size": 46012
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/factions.3.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/factions.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "1aeeceb4d796edd695304e082e1fd0f3225a3864b85c77b264b253be255c85e0",
+      "size": 46078
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/factions.4.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/factions.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "c883b23fae117f3b3b31a66e923141f2446e663d187ed152bd99b91c51ef6373",
+      "size": 46248
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/factions.5.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/factions.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "fd137b4e3024cc603f2663c15a439b891695fece7599a2e6ede4c85a62a3213e",
+      "size": 45314
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/factions.6.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/factions.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "9b857599833ccac12008ffac2cb55952b629adc05dc59dc9f0f0ca2ff5545718",
+      "size": 46392
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/factions.7.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/factions.7.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "ff07952db970eb3fec3f94930fc082707d605e9591c1a10c7aa97bee07ed94f9",
+      "size": 46216
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/factions.8.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/factions.8.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "1ddf675e8dbc85c7c0b67f8bbd60185752826f810ccce538e17ab672c0a7a133",
+      "size": 46420
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/locations.1.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/locations.1.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "af09d517c897471e7e36b307b399e1376544173c086b8efcb2a771921681eb4a",
+      "size": 45426
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/locations.2.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/locations.2.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "098e8866f881220b967371f9807b4b847386a89486347a98035bcc4cf8d80a36",
+      "size": 46690
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/locations.3.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/locations.3.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "11e1f68c8d117fa39e511c476002f435434f6c80b0e22ce052ea010bac745ec0",
+      "size": 45556
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/locations.4.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/locations.4.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "dd865f7859f5468b0208b5a42e130d5258249dfb4dd111ea1d03f2ef81e3923e",
+      "size": 46312
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/locations.5.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/locations.5.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "42dbbd56ff3e058f536611f2825cae8351991474febe59ce0027e66c84b9c6a9",
+      "size": 46172
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/locations.6.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/locations.6.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "08c03f6f5f2c38502ab3f2326918f1977d7dcf21df4c065c12575f0c990cf73d",
+      "size": 46302
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/locations.7.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/locations.7.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "0bce7e6428160bf0d9a8bdb6054f76c91563e6fb3a4423a86e913c439b09c0fd",
+      "size": 46364
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/locations.8.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/locations.8.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "8bb25f0d3f2e9509058418ca16ff837f2e62766401bb08a6d8c38133ad90a712",
+      "size": 46708
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/locations.9.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/locations.9.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "55eab8eedc03fd403151ecd3c2a031a70ac2431f6c03761e0021ab76840a4cb0",
+      "size": 46352
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/locations.10.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/locations.10.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "57b05b3a57296737cceb1c0d5f11fedbc8facf6ceffd6aadc25d7f61c4c38ae0",
+      "size": 46258
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/locations.11.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/locations.11.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "a7ee1183dbfc6ac56a21b7062fd9d789c4bfdbbb4de21b6b997aabad02d2eddd",
+      "size": 46592
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/locations.12.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/locations.12.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "ebc7fa2cfa2d32077ba5255afef306cb03dae78ba87fba7aeaad5986b69ab4ac",
+      "size": 46004
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.1.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "4e5723d7aa8e45ebf9a7fb0975fbfa7f6f7b5a6b635fba7e9cf166a484f9ba56",
+      "size": 46102
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.2.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "5acc1aeb7a61eb3c1324cf32ef47c6c53ec1dc0ee99ccc19f8ce5f671570356b",
+      "size": 45194
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.3.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "9ebbf9ad0c12178685a1187641033bbb0daf20d2189a51fbb207e23c6204a51b",
+      "size": 46290
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.4.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "256ee59d80a6e1206b6f5436a39bdb0832fb659b94db644aae12eec8cde093c3",
+      "size": 46316
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.5.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "ff52137b08bcd3c60fa19d672d83110672d2624c88116e2df950f3cd5a19b0fe",
+      "size": 45624
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.6.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "c44be8e03028e4562eb3ec15f3b6b523798839c9cfb1d35911098b1fa0687237",
+      "size": 45202
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.7.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "e43ca679c30918dac659c7f7e56f77223560e17ece12cd09707aeed3093842db",
+      "size": 46302
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.8.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "0cd8be86fcdb63eb367be054b4043a3c5088a9fb5834b1776a563cd20924d74e",
+      "size": 45708
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.9.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.9.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "f3060cfdbf8aa4a089270413b88b3af982e59f7e405f8cf78594930271c95d0d",
+      "size": 46500
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.10.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.10.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "d65a03d2be5fe41d5d8feaa0108b90216c7e27d7c4f120602aa5c08a984728a6",
+      "size": 45412
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.11.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.11.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "3ed062f933fd2d5d9b97e0106e91b636d766e42085324b9b79732b659dc388b6",
+      "size": 45466
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.12.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.12.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "211f9116e1d0c74c13b7477ea700728bbe58796f759aa5e9a15f91d6e2734555",
+      "size": 45606
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.13.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.13.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "3324da9be0ce64935fa112933d9d7bbf3a9b1628f770f9f04f3b399776eb6e22",
+      "size": 46212
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.14.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.14.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "5401db4e95792d0820b68ccf9b32c51646f48983da3a8ef66473ea1f7701c478",
+      "size": 45406
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.15.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.15.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "e96e7b33e29ae4db1ab8d68f7831abf8e3f01d3cf50fd253dcd864a7e32d2f33",
+      "size": 46450
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.16.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.16.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "178dad2ba4c0db3bfdaa370969ee48b50384df9b8acdba50cf27a0c88340c0d3",
+      "size": 46252
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.17.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.17.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "69a022c3a9181a9c3e1df4469e83ddb0ffbb1ec5aca184ab3449e49e4552ff5d",
+      "size": 44884
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.18.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.18.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "1ab1651c67135aa5d552d41673ac8b483404b94029d2169bfb495b9c4ea6d77c",
+      "size": 45288
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.19.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.19.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "77c45a88954e5df624d4953fbd7f1c90804e700cb0c1c1d7c552e80f166d2d29",
+      "size": 46504
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.20.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.20.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "cd4dd827f37acd6e1cb54d842b6b48d0075f6e95c193a6fe637621321e0ab588",
+      "size": 45186
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.21.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.21.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "2446885dc111ce8843e3d107d9dbb9880d64e40047fcfc2c88e3cd6ba368aa43",
+      "size": 45654
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.22.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.22.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "d53593118d3aa47452a61501e1f98ee3a77bd28284484fc1feef7a5a1cc978d3",
+      "size": 45522
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.23.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.23.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "1aff6037d65449f6eedf1c8d06afd8afd0960e6338690baf63df67339518f238",
+      "size": 45412
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/npcs.24.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/npcs.24.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "243cff8cbf319ebccb1955f2ecb79deeef5961f0ef9f613e247ef737f3bad031",
+      "size": 45954
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/adversaries.1.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/adversaries.1.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "20279db2dec4e2cce9d0e2d1a4a930efd1721d3ac206a1cafb6db62a0a97f1af",
+      "size": 45562
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/adversaries.2.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/adversaries.2.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "5c4def5e293d675b8cea830662ff086f1c6e947ad509f6b8afe00146a5f1de15",
+      "size": 44302
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/adversaries.3.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/adversaries.3.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "be96c01abebe862094908954b37fb861ae590b3ce89fcb220de144587797afb0",
+      "size": 45874
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/adversaries.4.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/adversaries.4.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "da16fd69f28703aacf03b033dde30ff829d77c6d64aacc0733f603cef446a88a",
+      "size": 46252
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/adversaries.5.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/adversaries.5.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "5f94af805c70c30ba01f8ec3c7e45943c1d6f48b5c2ab96beca0b5fac87ddff7",
+      "size": 51200
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/adversaries.6.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/adversaries.6.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "97bf5028ace2d77ccc3c5d6aa0eee6ba412edc566f3d1e00042e2b08b3a5b752",
+      "size": 46210
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/adversaries.7.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/adversaries.7.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "32f9513b48322d7593c1bb2fa1a9fde9786eeff2bbb36b9400a26cb3dd42146d",
+      "size": 45782
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/adversaries.8.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/adversaries.8.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "178c4d3c702fbfedccd3606d12fd7571b0e7ac2ee94ed7612be49769f88899cd",
+      "size": 45248
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/adversaries.9.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/adversaries.9.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "8c74d6a40aa60ab0231558d0bfeaa87bdc32e1b20ff74185170580d3e154159b",
+      "size": 46328
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/adversaries.10.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/adversaries.10.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "245e05d3e21aef9053a46c5579c43f9c76685ac05344edf0882bd00338e5f906",
+      "size": 46058
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/adversaries.11.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/adversaries.11.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "c5ab2fc810ff60f59b45d94d16c2aea6cde4fa61b9151bb6d3a2c9bfeb9a242e",
+      "size": 44862
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/adversaries.12.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/adversaries.12.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "b0142bd8aad63548fcad5032ca21012fb9579622d32a3d87347d3116d30974f6",
+      "size": 45412
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/adversaries.13.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/adversaries.13.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "5f44cfe4826e1f58f98e99baa8682108d2490a000f0bf5cc891668b3ee4142aa",
+      "size": 45960
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/adversaries.14.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/adversaries.14.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "20e65a65b8c17102157d3729ec7ce3c56076abfc38ba86510e9d7bc0a4cec4be",
+      "size": 44838
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/adversaries.15.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/adversaries.15.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "9155db8aeff0e920c40e2c96c7f2cb3801a583eaab92a729acda7c802c1b70b1",
+      "size": 44792
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/adversaries.16.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/adversaries.16.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "34ac9a446d783c76083adcfaaf1f5116ef696f1942ff66e8fc1bfb713e09f0b6",
+      "size": 45884
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/adversaries.17.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/adversaries.17.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "c2d04b683d8b5837feff212fb9906f868449b18d8daf4ac6b243f86dd74139c4",
+      "size": 44974
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/adversaries.18.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/adversaries.18.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "0231450a88b741ff806fc032c6838f30eb7b93a022e6b1903edb88de59c8da59",
+      "size": 46446
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.1.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.1.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "69431a5a336a9efba99bb640201989f5b3c7d6d9964b9c931f8743d4d1fcda15",
+      "size": 45580
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.2.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.2.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "1c323a5861612c587cf35d18024d58fdd10b4db2e74740ae87aa7c40a797917c",
+      "size": 45562
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.3.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.3.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "dd914f2c6f275067672845f123ce71d72e8f49a70abc0b393d708491c850b989",
+      "size": 46882
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.4.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.4.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "f425d2b6b6c3b13b0cf5bd6d3e6265c6981d01f9024088d88726c1e42234d235",
+      "size": 46012
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.5.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.5.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "7697422a9d5edbbd50d7484ffe23f2aad5e46d0114b72f2441aca461b00a3a36",
+      "size": 45508
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.6.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.6.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "1147feb482cd4b106a8f0c1eeafa9fd2f564dbab5e872019f28a61efe8b77904",
+      "size": 45708
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.7.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.7.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "d3ce1e7cb137804139582ba36a2d4a1808df049d11ec267d68f77508b93a7f00",
+      "size": 45476
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.8.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.8.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "b376981c3efc0bc63259ce540007ceefe90e2f5157f9e639951f32b8b2ec6bb4",
+      "size": 45684
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.9.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.9.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "989bd7cb2de0ead8e78bbdf40855be82e86ac7101b2c5e4068855e1879784781",
+      "size": 46726
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.10.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.10.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "5a9e8ed6c37c7df9b77af62a689782b241deaec1d9cc90f1adf4951ae00ebee6",
+      "size": 45888
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.11.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.11.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "2246dd51e2fc907f5b10114ffcc3429670c2d8fb632d6b1f116bf2c64f693e52",
+      "size": 45742
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.12.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.12.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "73cc587da5fc63d1e7c00a9002dfdd89ea3cc7b0a23e18e441b5410a729750b6",
+      "size": 46570
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.13.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.13.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "6d0789ebaa78e65d47c80f0394c371ee029ba547ae75fb31c865b7874c42c114",
+      "size": 47158
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.14.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.14.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "b8925244b221b3bcfa2f9e0a5bcef2649c088a42d37ec76eab6620a4f8b14142",
+      "size": 45352
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.15.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.15.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "8e13708531a145706acaabefca9a0ef7bb058735e5935b7636d3902761dabddb",
+      "size": 46516
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.16.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.16.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "907b5191f65f0aefa71ab54128e4548e5f1012f1033f92988fc04586f81e3ced",
+      "size": 46074
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.17.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.17.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "8d28b22033922d36de1b6b1769a842d0994395688d0a9f5e522b15894c60cf14",
+      "size": 46242
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.18.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.18.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "772ce0941cd1fb2c9599d78942c1a909eb169f86e10e40f80fde2056d36dc440",
+      "size": 46128
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.19.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.19.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "2b7f12d744c41c1221d6b95db96122bbbc7137f6be73110f5c29500e33e6301c",
+      "size": 44782
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.20.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.20.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "0d50305b8771c2a64dbb5269d9d83d422c3e918c585ef8ca71081a2c28372a7a",
+      "size": 46556
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.21.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.21.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "94db5585af72c1ce51b70f7bc9e71065b2db28bf3b39c7d8578eee03c2da598a",
+      "size": 45428
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.22.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.22.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "95341d987c59ede48e36029632733c4314eab4271ed3fdaafd8ca8e37480eaf3",
+      "size": 46088
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.23.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.23.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "05c1c41fee2783c5bbfdaa14cb7bb28c402bf3fd9d14da3e7f01346fcaf2cefd",
+      "size": 45662
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/items.24.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/items.24.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "e9ea2a7cd439af1282d9e84af6d583424095dceb29c37b70d96949d9c2fb2b5a",
+      "size": 46450
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.1.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "0c0072b9d49d02de8c0dbeee85e4e240a2b9da4dc0bdf1af38f5d737b1e1b4de",
+      "size": 46256
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.2.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "9449e8496b71e2bf0cde4fd39b6c48e1d875dccead39212951fcb803343574bf",
+      "size": 47944
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.3.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "eb10abf5e4462318b2c0ab2b6d8a9a2b7cd795ea70bfadfffbf0b98887aaefa8",
+      "size": 47352
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.4.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "20bd20604725c85f8c72ad6cba58dbe637830569122c117ddc05e65334a71654",
+      "size": 45966
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.5.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "3cb791fa3ec47713bff6ac6db32a957792ff0c54a1a0c14b5f54d82c1eb65a64",
+      "size": 47236
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.6.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "bf5374697d7468e64b819dbd19195c31ce6dafefe2ec8fb03561baea4578d3d1",
+      "size": 46214
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.7.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "19084465efd9928b52915b775ccfe8b65705ee3d7dc74296d5af84efcfb6e41f",
+      "size": 46414
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.8.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "0e715ac8983593a0249a0fcb6d4e847d4ab54bbe4393a8f6da14db8829418969",
+      "size": 46862
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.9.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ad75f9ab6664d9e3cb2d1ae9052d929e80a91f22d55bc243d3d8613b2d63629f",
+      "size": 46488
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.10.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "867d551cb225650900bcf2b53122f1d8405b4da0328184b2b27634d6ff98b30b",
+      "size": 46200
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.11.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4a3b680c48f05fbe422b290e948cfffdcf16aea7588bfde6db7be9514b7784b2",
+      "size": 46536
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.12.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "54a28bde3ba2ffcbcd6b28e6ae3ce2376e05b854d785eeea14a8a2f22c270465",
+      "size": 48292
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.13.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "5de62066eebad60da15430ac5f8e0b82ed46954a007238f09548a8c9b5d4720c",
+      "size": 47054
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.14.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "68a0363930397a9370f86cd742f5978cded4191cbaa45ada978305c22d1efcaf",
+      "size": 47072
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.15.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "489c84e508df80c6e6e642440ee3d086ac5eef7e19e45612a6d56c7417c1a51b",
+      "size": 45586
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.16.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "6d369c3ea4bcbeece8bec521b264c63749d7e34897c5215ed4ae07eb8832619a",
+      "size": 44932
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.17.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "cc5400fff4a4573e4178d59dd8f7aadde97c37077e4cc80cb41b201781cf2cc7",
+      "size": 45802
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.18.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b9813790d879bc63c0d2b4e52d1eb8471bc360dec092ff57f535390b438e92c0",
+      "size": 46246
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.19.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.19.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "3da3e9a16059c7ae3409b83e1b6f688dfd14ba1787b738aa8efe5cabec985c63",
+      "size": 46284
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.20.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.20.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "cb4168424f375dc0976111432fd9b8b66e135ce28a7eb56679de6d6445eca05a",
+      "size": 46960
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.21.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.21.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "3ff4907c6046c9f970fa162ff1ab6b3f94c561756930837c829b6b867dd18a0b",
+      "size": 45596
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.22.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.22.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ca3ea49c2124ecf84c8fa0a066e00f25769a28c0836967b2d5de6657a3eab089",
+      "size": 45964
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.23.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.23.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "320fa965bfdbf89363c8c466546c2c90cff79c8afe864cb22f407afad4283b95",
+      "size": 45854
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.24.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.24.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c14adc1f63667c4505b30cd80e91d45817ee199e2ce794326d923f6b704ca276",
+      "size": 46284
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.25.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.25.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c525af5d15dc72a08f8229ff8563b890c98492d765b10774698cef5394c84f6d",
+      "size": 46070
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.26.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.26.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "32399300642d34ff205adeac7485920f83f5016eb319d2c58719faaaac4916c4",
+      "size": 45912
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.27.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.27.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f36497396211059d6cb4446dbf85143e9a72b7760e19bb137b010f814613448c",
+      "size": 46268
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.28.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.28.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a14f5f9679aa59a0d03413488adfbdfd480aa50f6fca2685e7c1d44052e67082",
+      "size": 46746
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.29.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.29.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a5a3fec1ac9e784350868c7aa6ffbe4a01f333402b3fe8a934dfcdcc0c12c506",
+      "size": 46432
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/events.30.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/events.30.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "7530c611ab55459e4b392af5f810635fd7480a9e3c68c73cda96439031148656",
+      "size": 45850
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/scenes.1.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/scenes.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "5312d351d0999b0e0416a5a166dfff8ef6aace4decab3be349c10145182bf35f",
+      "size": 46204
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/scenes.2.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/scenes.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "d333862a17c0a0ba1e3ceb84f9512a4aad5bd0a9d332c4e0ebd2594573128e10",
+      "size": 46268
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/scenes.3.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/scenes.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "47e3e01cdeac6e24b0506036636885f4fc8814a4b9afe86342b408588cdeab44",
+      "size": 46502
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/scenes.4.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/scenes.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "72751c663edbb37db94f2264d744cfb9f972d3ad147133ca993ff202e518d66e",
+      "size": 46724
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/scenes.5.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/scenes.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "16473091080ffe8ee8ea0eee48354f34290964e695f0d6304cd109fc4ff8b01d",
+      "size": 46276
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/scenes.6.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/scenes.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "1eba7755892ecef0404d8f76380c30b19eda631b6a57ed96ba73b3dcf1d3a6f1",
+      "size": 46564
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/scenes.7.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/scenes.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "90627a816abfe4e49c885b83fde87f91c4d8750d1a7dfcc57b252a7472b5e300",
+      "size": 46674
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/scenes.8.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/scenes.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f2f390f71e206007660b6d83b7610b0300d8d9381516b82b304ab8d3f282841f",
+      "size": 46302
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/scenes.9.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/scenes.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "eb7b9eda3d5026732c5b81b36c25cec701d4c63d73f53b5ce682a8dc33f8a1b0",
+      "size": 46776
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/scenes.10.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/scenes.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "5acd4fd4eba3527971a9a0a4076eefeb26d24334ccd5e2a5d743d1155e44cdb1",
+      "size": 46698
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/scenes.11.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/scenes.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "855a74469cf415ce49a071ef71c5d2245d9ea8084d9beac2ca3b010ecea30e51",
+      "size": 45624
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/scenes.12.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/scenes.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ddb569b2d8b81a41da702d90d92046bd544ae096201847279c5c2dd1b372690e",
+      "size": 46642
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/scenes.13.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/scenes.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "41b8533bbbc915bd45237aff18a57a811b0e6f5c9109644ffa86d7884909a9a3",
+      "size": 45580
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/scenes.14.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/scenes.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b67f496ad9f4150e0c4f83fcb7df42111661f01562a553af5c9e353dbb95f293",
+      "size": 46630
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/scenes.15.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/scenes.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "849f1004d677e970474c170c124e8dc4316d684c92ffc72658be87bbf8480e8b",
+      "size": 47428
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/scenes.16.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/scenes.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "7c8da988904c66389770c5408574ab2a0e184ca416fd4c7d41202b21a021775d",
+      "size": 46752
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/scenes.17.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/scenes.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4683a9af30cb3b267e9cfc881fc20d4758a63150ba47de69406453ba10e6a33f",
+      "size": 46316
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/scenes.18.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/scenes.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "8ce8f6c62f1c833d26e1aebc3bc7e27cac4ab2539739fa3cf59f585b378a9369",
+      "size": 46570
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/archetypes.1.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/archetypes.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "8fd989b554da5509b0083b4626499ec732f9c5f00203006225d0d017b393e7e0",
+      "size": 45720
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/archetypes.2.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/archetypes.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "bbc8e1843e1bb83182281bac952e4a12345c2716f15ebce95ae3bcb8fa661e34",
+      "size": 44958
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/archetypes.3.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/archetypes.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "d796c921c0d8d22b5e734f212be84c86c588b7affce6fea01b703cdce7ce2c4d",
+      "size": 46316
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/archetypes.4.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/archetypes.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "4336349febae7403c4661fa97298623a1f9d86d8877af492f653bb51e72009eb",
+      "size": 45366
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/archetypes.5.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/archetypes.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "62c170628ecabd85680cd96da3b1295e9ef8f5898e23559805b3291bc1ec07ad",
+      "size": 45782
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/archetypes.6.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/archetypes.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "eda6ba9dca2872c51c9ece0df3e9e941f176678042d0083e5900a65a34c779e5",
+      "size": 46722
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/archetypes.7.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/archetypes.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "df5de8a26806d7bf090ef86fdfb593dd5a024ee8e051d785c8921de8b551a303",
+      "size": 45616
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/archetypes.8.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/archetypes.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "e1ead401ef87ce6d3e916c21c8b3f6fe606c0ec18ae9aa766ee8b458957044cf",
+      "size": 45026
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/progressionPaths.1.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/progressionPaths.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "09f5f2b8acb02fbb956e304d07cba78ab13201417338f4d8d642c07a544c1f64",
+      "size": 46232
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/progressionPaths.2.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/progressionPaths.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "cce5e841d8f73f2fd6e4ccf9f64a8a110c1ec3058fea34d3b691faf2f2c66f09",
+      "size": 45988
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/progressionPaths.3.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/progressionPaths.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "fbdb82cc6e0cab350d777bd3c41819cc69fd246cd64e33bf1c0ce534a8bf4a10",
+      "size": 46328
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/progressionPaths.4.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/progressionPaths.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "aca3cab0e696f5d5e65d00da710820da52a24294eec49be155fa694911b39665",
+      "size": 46416
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/progressionPaths.5.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/progressionPaths.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "001f1cac55b1131bab1f37efc8242bb3bf99ddf43df748f01024a1881de417ef",
+      "size": 46224
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/progressionPaths.6.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/progressionPaths.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "0f1bdaebac97bceff680aeb4e77f50b948000ceac6b177d6a4245029fd8f6b06",
+      "size": 46046
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/visualThemes.1.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/visualThemes.1.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "5620c38663aa8f928d37ff85579d60528fb3996f72ad678d4bf6d5eaf9380afd",
+      "size": 44788
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/visualThemes.2.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/visualThemes.2.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "af884182e5d2aa59b22f564bcc37740be5f94f791642db3d80e41da4055eda2a",
+      "size": 44756
+    },
+    {
+      "name": "cosmic-investigation/illustrated-1.1.0/visualThemes.3.webp",
+      "path": "media/cosmic-investigation/illustrated-1.1.0/visualThemes.3.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "92fe010a7bbea68aa08180d60ad138656313a224b50884f437088620c32b1f8f",
+      "size": 44786
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.cosmic.visuals",
+    "version": "1.1.0",
+    "name": "Independent Evidence Schematics — Illustrated",
+    "description": "Independent Evidence Schematics for Coastal University, Polar Expedition, Decaying Metropolis. Three original investigations: a harmful university signal, a warm geometric cavity and an erasing metropolitan recall feed.",
+    "provides": [
+      "visuals:cosmic-investigation"
+    ],
+    "requires": [
+      "setting:cosmic-investigation"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/illustrated-cosmic-investigation",
+        "value": {
+          "id": "illustrated-cosmic-investigation",
+          "name": "Illustrated cosmic-investigation",
+          "description": "Individual generated illustrations for every authored content object",
+          "defaults": {
+            "background": "assets/cosmic-investigation/illustrated-1.1.0/scenes.1.webp",
+            "card": "assets/cosmic-investigation/illustrated-1.1.0/scenes.1.webp",
+            "map": "assets/cosmic-investigation/illustrated-1.1.0/visualThemes.1.webp",
+            "portrait": "assets/cosmic-investigation/illustrated-1.1.0/archetypes.1.webp",
+            "token": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.1.webp",
+            "item": "assets/cosmic-investigation/illustrated-1.1.0/items.1.webp",
+            "location": "assets/cosmic-investigation/illustrated-1.1.0/locations.1.webp"
+          },
+          "families": {
+            "illustrated.cosmic-investigation.factions.1": {
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/factions.1.webp"
+            },
+            "illustrated.cosmic-investigation.factions.2": {
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/factions.2.webp"
+            },
+            "illustrated.cosmic-investigation.factions.3": {
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/factions.3.webp"
+            },
+            "illustrated.cosmic-investigation.factions.4": {
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/factions.4.webp"
+            },
+            "illustrated.cosmic-investigation.factions.5": {
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/factions.5.webp"
+            },
+            "illustrated.cosmic-investigation.factions.6": {
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/factions.6.webp"
+            },
+            "illustrated.cosmic-investigation.factions.7": {
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/factions.7.webp"
+            },
+            "illustrated.cosmic-investigation.factions.8": {
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/factions.8.webp"
+            },
+            "illustrated.cosmic-investigation.locations.1": {
+              "location": "assets/cosmic-investigation/illustrated-1.1.0/locations.1.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/locations.1.webp"
+            },
+            "illustrated.cosmic-investigation.locations.2": {
+              "location": "assets/cosmic-investigation/illustrated-1.1.0/locations.2.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/locations.2.webp"
+            },
+            "illustrated.cosmic-investigation.locations.3": {
+              "location": "assets/cosmic-investigation/illustrated-1.1.0/locations.3.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/locations.3.webp"
+            },
+            "illustrated.cosmic-investigation.locations.4": {
+              "location": "assets/cosmic-investigation/illustrated-1.1.0/locations.4.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/locations.4.webp"
+            },
+            "illustrated.cosmic-investigation.locations.5": {
+              "location": "assets/cosmic-investigation/illustrated-1.1.0/locations.5.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/locations.5.webp"
+            },
+            "illustrated.cosmic-investigation.locations.6": {
+              "location": "assets/cosmic-investigation/illustrated-1.1.0/locations.6.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/locations.6.webp"
+            },
+            "illustrated.cosmic-investigation.locations.7": {
+              "location": "assets/cosmic-investigation/illustrated-1.1.0/locations.7.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/locations.7.webp"
+            },
+            "illustrated.cosmic-investigation.locations.8": {
+              "location": "assets/cosmic-investigation/illustrated-1.1.0/locations.8.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/locations.8.webp"
+            },
+            "illustrated.cosmic-investigation.locations.9": {
+              "location": "assets/cosmic-investigation/illustrated-1.1.0/locations.9.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/locations.9.webp"
+            },
+            "illustrated.cosmic-investigation.locations.10": {
+              "location": "assets/cosmic-investigation/illustrated-1.1.0/locations.10.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/locations.10.webp"
+            },
+            "illustrated.cosmic-investigation.locations.11": {
+              "location": "assets/cosmic-investigation/illustrated-1.1.0/locations.11.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/locations.11.webp"
+            },
+            "illustrated.cosmic-investigation.locations.12": {
+              "location": "assets/cosmic-investigation/illustrated-1.1.0/locations.12.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/locations.12.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.1": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.1.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.1.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.2": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.2.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.2.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.3": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.3.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.3.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.4": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.4.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.4.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.5": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.5.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.5.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.6": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.6.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.6.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.7": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.7.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.7.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.8": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.8.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.8.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.9": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.9.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.9.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.10": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.10.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.10.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.11": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.11.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.11.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.12": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.12.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.12.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.13": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.13.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.13.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.14": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.14.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.14.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.15": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.15.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.15.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.16": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.16.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.16.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.17": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.17.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.17.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.18": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.18.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.18.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.19": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.19.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.19.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.20": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.20.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.20.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.21": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.21.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.21.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.22": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.22.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.22.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.23": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.23.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.23.webp"
+            },
+            "illustrated.cosmic-investigation.npcs.24": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/npcs.24.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/npcs.24.webp"
+            },
+            "illustrated.cosmic-investigation.adversaries.1": {
+              "token": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.1.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.1.webp"
+            },
+            "illustrated.cosmic-investigation.adversaries.2": {
+              "token": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.2.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.2.webp"
+            },
+            "illustrated.cosmic-investigation.adversaries.3": {
+              "token": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.3.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.3.webp"
+            },
+            "illustrated.cosmic-investigation.adversaries.4": {
+              "token": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.4.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.4.webp"
+            },
+            "illustrated.cosmic-investigation.adversaries.5": {
+              "token": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.5.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.5.webp"
+            },
+            "illustrated.cosmic-investigation.adversaries.6": {
+              "token": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.6.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.6.webp"
+            },
+            "illustrated.cosmic-investigation.adversaries.7": {
+              "token": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.7.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.7.webp"
+            },
+            "illustrated.cosmic-investigation.adversaries.8": {
+              "token": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.8.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.8.webp"
+            },
+            "illustrated.cosmic-investigation.adversaries.9": {
+              "token": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.9.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.9.webp"
+            },
+            "illustrated.cosmic-investigation.adversaries.10": {
+              "token": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.10.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.10.webp"
+            },
+            "illustrated.cosmic-investigation.adversaries.11": {
+              "token": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.11.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.11.webp"
+            },
+            "illustrated.cosmic-investigation.adversaries.12": {
+              "token": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.12.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.12.webp"
+            },
+            "illustrated.cosmic-investigation.adversaries.13": {
+              "token": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.13.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.13.webp"
+            },
+            "illustrated.cosmic-investigation.adversaries.14": {
+              "token": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.14.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.14.webp"
+            },
+            "illustrated.cosmic-investigation.adversaries.15": {
+              "token": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.15.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.15.webp"
+            },
+            "illustrated.cosmic-investigation.adversaries.16": {
+              "token": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.16.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.16.webp"
+            },
+            "illustrated.cosmic-investigation.adversaries.17": {
+              "token": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.17.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.17.webp"
+            },
+            "illustrated.cosmic-investigation.adversaries.18": {
+              "token": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.18.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/adversaries.18.webp"
+            },
+            "illustrated.cosmic-investigation.items.1": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.1.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.1.webp"
+            },
+            "illustrated.cosmic-investigation.items.2": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.2.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.2.webp"
+            },
+            "illustrated.cosmic-investigation.items.3": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.3.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.3.webp"
+            },
+            "illustrated.cosmic-investigation.items.4": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.4.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.4.webp"
+            },
+            "illustrated.cosmic-investigation.items.5": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.5.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.5.webp"
+            },
+            "illustrated.cosmic-investigation.items.6": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.6.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.6.webp"
+            },
+            "illustrated.cosmic-investigation.items.7": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.7.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.7.webp"
+            },
+            "illustrated.cosmic-investigation.items.8": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.8.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.8.webp"
+            },
+            "illustrated.cosmic-investigation.items.9": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.9.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.9.webp"
+            },
+            "illustrated.cosmic-investigation.items.10": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.10.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.10.webp"
+            },
+            "illustrated.cosmic-investigation.items.11": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.11.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.11.webp"
+            },
+            "illustrated.cosmic-investigation.items.12": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.12.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.12.webp"
+            },
+            "illustrated.cosmic-investigation.items.13": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.13.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.13.webp"
+            },
+            "illustrated.cosmic-investigation.items.14": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.14.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.14.webp"
+            },
+            "illustrated.cosmic-investigation.items.15": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.15.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.15.webp"
+            },
+            "illustrated.cosmic-investigation.items.16": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.16.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.16.webp"
+            },
+            "illustrated.cosmic-investigation.items.17": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.17.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.17.webp"
+            },
+            "illustrated.cosmic-investigation.items.18": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.18.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.18.webp"
+            },
+            "illustrated.cosmic-investigation.items.19": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.19.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.19.webp"
+            },
+            "illustrated.cosmic-investigation.items.20": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.20.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.20.webp"
+            },
+            "illustrated.cosmic-investigation.items.21": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.21.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.21.webp"
+            },
+            "illustrated.cosmic-investigation.items.22": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.22.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.22.webp"
+            },
+            "illustrated.cosmic-investigation.items.23": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.23.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.23.webp"
+            },
+            "illustrated.cosmic-investigation.items.24": {
+              "item": "assets/cosmic-investigation/illustrated-1.1.0/items.24.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/items.24.webp"
+            },
+            "illustrated.cosmic-investigation.events.1": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.1.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.1.webp"
+            },
+            "illustrated.cosmic-investigation.events.2": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.2.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.2.webp"
+            },
+            "illustrated.cosmic-investigation.events.3": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.3.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.3.webp"
+            },
+            "illustrated.cosmic-investigation.events.4": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.4.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.4.webp"
+            },
+            "illustrated.cosmic-investigation.events.5": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.5.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.5.webp"
+            },
+            "illustrated.cosmic-investigation.events.6": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.6.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.6.webp"
+            },
+            "illustrated.cosmic-investigation.events.7": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.7.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.7.webp"
+            },
+            "illustrated.cosmic-investigation.events.8": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.8.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.8.webp"
+            },
+            "illustrated.cosmic-investigation.events.9": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.9.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.9.webp"
+            },
+            "illustrated.cosmic-investigation.events.10": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.10.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.10.webp"
+            },
+            "illustrated.cosmic-investigation.events.11": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.11.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.11.webp"
+            },
+            "illustrated.cosmic-investigation.events.12": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.12.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.12.webp"
+            },
+            "illustrated.cosmic-investigation.events.13": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.13.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.13.webp"
+            },
+            "illustrated.cosmic-investigation.events.14": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.14.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.14.webp"
+            },
+            "illustrated.cosmic-investigation.events.15": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.15.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.15.webp"
+            },
+            "illustrated.cosmic-investigation.events.16": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.16.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.16.webp"
+            },
+            "illustrated.cosmic-investigation.events.17": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.17.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.17.webp"
+            },
+            "illustrated.cosmic-investigation.events.18": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.18.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.18.webp"
+            },
+            "illustrated.cosmic-investigation.events.19": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.19.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.19.webp"
+            },
+            "illustrated.cosmic-investigation.events.20": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.20.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.20.webp"
+            },
+            "illustrated.cosmic-investigation.events.21": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.21.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.21.webp"
+            },
+            "illustrated.cosmic-investigation.events.22": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.22.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.22.webp"
+            },
+            "illustrated.cosmic-investigation.events.23": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.23.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.23.webp"
+            },
+            "illustrated.cosmic-investigation.events.24": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.24.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.24.webp"
+            },
+            "illustrated.cosmic-investigation.events.25": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.25.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.25.webp"
+            },
+            "illustrated.cosmic-investigation.events.26": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.26.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.26.webp"
+            },
+            "illustrated.cosmic-investigation.events.27": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.27.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.27.webp"
+            },
+            "illustrated.cosmic-investigation.events.28": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.28.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.28.webp"
+            },
+            "illustrated.cosmic-investigation.events.29": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.29.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.29.webp"
+            },
+            "illustrated.cosmic-investigation.events.30": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/events.30.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/events.30.webp"
+            },
+            "illustrated.cosmic-investigation.scenes.1": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/scenes.1.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/scenes.1.webp"
+            },
+            "illustrated.cosmic-investigation.scenes.2": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/scenes.2.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/scenes.2.webp"
+            },
+            "illustrated.cosmic-investigation.scenes.3": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/scenes.3.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/scenes.3.webp"
+            },
+            "illustrated.cosmic-investigation.scenes.4": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/scenes.4.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/scenes.4.webp"
+            },
+            "illustrated.cosmic-investigation.scenes.5": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/scenes.5.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/scenes.5.webp"
+            },
+            "illustrated.cosmic-investigation.scenes.6": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/scenes.6.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/scenes.6.webp"
+            },
+            "illustrated.cosmic-investigation.scenes.7": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/scenes.7.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/scenes.7.webp"
+            },
+            "illustrated.cosmic-investigation.scenes.8": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/scenes.8.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/scenes.8.webp"
+            },
+            "illustrated.cosmic-investigation.scenes.9": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/scenes.9.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/scenes.9.webp"
+            },
+            "illustrated.cosmic-investigation.scenes.10": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/scenes.10.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/scenes.10.webp"
+            },
+            "illustrated.cosmic-investigation.scenes.11": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/scenes.11.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/scenes.11.webp"
+            },
+            "illustrated.cosmic-investigation.scenes.12": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/scenes.12.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/scenes.12.webp"
+            },
+            "illustrated.cosmic-investigation.scenes.13": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/scenes.13.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/scenes.13.webp"
+            },
+            "illustrated.cosmic-investigation.scenes.14": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/scenes.14.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/scenes.14.webp"
+            },
+            "illustrated.cosmic-investigation.scenes.15": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/scenes.15.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/scenes.15.webp"
+            },
+            "illustrated.cosmic-investigation.scenes.16": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/scenes.16.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/scenes.16.webp"
+            },
+            "illustrated.cosmic-investigation.scenes.17": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/scenes.17.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/scenes.17.webp"
+            },
+            "illustrated.cosmic-investigation.scenes.18": {
+              "background": "assets/cosmic-investigation/illustrated-1.1.0/scenes.18.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/scenes.18.webp"
+            },
+            "illustrated.cosmic-investigation.archetypes.1": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/archetypes.1.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/archetypes.1.webp"
+            },
+            "illustrated.cosmic-investigation.archetypes.2": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/archetypes.2.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/archetypes.2.webp"
+            },
+            "illustrated.cosmic-investigation.archetypes.3": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/archetypes.3.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/archetypes.3.webp"
+            },
+            "illustrated.cosmic-investigation.archetypes.4": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/archetypes.4.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/archetypes.4.webp"
+            },
+            "illustrated.cosmic-investigation.archetypes.5": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/archetypes.5.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/archetypes.5.webp"
+            },
+            "illustrated.cosmic-investigation.archetypes.6": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/archetypes.6.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/archetypes.6.webp"
+            },
+            "illustrated.cosmic-investigation.archetypes.7": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/archetypes.7.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/archetypes.7.webp"
+            },
+            "illustrated.cosmic-investigation.archetypes.8": {
+              "portrait": "assets/cosmic-investigation/illustrated-1.1.0/archetypes.8.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/archetypes.8.webp"
+            },
+            "illustrated.cosmic-investigation.progressionPaths.1": {
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/progressionPaths.1.webp"
+            },
+            "illustrated.cosmic-investigation.progressionPaths.2": {
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/progressionPaths.2.webp"
+            },
+            "illustrated.cosmic-investigation.progressionPaths.3": {
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/progressionPaths.3.webp"
+            },
+            "illustrated.cosmic-investigation.progressionPaths.4": {
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/progressionPaths.4.webp"
+            },
+            "illustrated.cosmic-investigation.progressionPaths.5": {
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/progressionPaths.5.webp"
+            },
+            "illustrated.cosmic-investigation.progressionPaths.6": {
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/progressionPaths.6.webp"
+            },
+            "illustrated.cosmic-investigation.visualThemes.1": {
+              "map": "assets/cosmic-investigation/illustrated-1.1.0/visualThemes.1.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/visualThemes.1.webp"
+            },
+            "illustrated.cosmic-investigation.visualThemes.2": {
+              "map": "assets/cosmic-investigation/illustrated-1.1.0/visualThemes.2.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/visualThemes.2.webp"
+            },
+            "illustrated.cosmic-investigation.visualThemes.3": {
+              "map": "assets/cosmic-investigation/illustrated-1.1.0/visualThemes.3.webp",
+              "card": "assets/cosmic-investigation/illustrated-1.1.0/visualThemes.3.webp"
+            }
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "illustrated-cosmic-investigation"
+  }
+}

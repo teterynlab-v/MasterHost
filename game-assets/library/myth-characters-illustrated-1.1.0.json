@@ -1,0 +1,800 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.myth.characters",
+  "version": "1.1.0",
+  "type": "characters",
+  "name": "Heroic Roles and Legacy Paths — Illustrated",
+  "description": "Heroic Roles and Legacy Paths for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+  "tags": [
+    "mythic-antiquity",
+    "warring-poleis",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Heroic Roles and Legacy Paths for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+    "highlights": [
+      "Heroic Roles and Legacy Paths",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.mythic-antiquity"
+    ],
+    "requiresCapabilities": [
+      "rules:mythic-antiquity",
+      "items:mythic-antiquity"
+    ],
+    "providesCapabilities": [
+      "characters:mythic-antiquity"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.myth.rules",
+      "version": "1.1.0"
+    },
+    {
+      "id": "masterhost.asset.myth.items",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Mythic Antiquity original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.myth.characters"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 8,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.myth.characters",
+    "version": "1.1.0",
+    "name": "Heroic Roles and Legacy Paths — Illustrated",
+    "description": "Heroic Roles and Legacy Paths for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+    "provides": [
+      "characters:mythic-antiquity"
+    ],
+    "requires": [
+      "rules:mythic-antiquity",
+      "items:mythic-antiquity"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.archetypes.1",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Omen Reader"
+            },
+            "description": {
+              "value": "Omen Reader: looks for prophecy's conditions before accepting a promised victory."
+            },
+            "deepId": {
+              "value": "archetypes.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.archetypes.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.archetypes.2",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Wave Navigator"
+            },
+            "description": {
+              "value": "Wave Navigator: keeps a crew's route tied to truthful remembrance."
+            },
+            "deepId": {
+              "value": "archetypes.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.archetypes.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.archetypes.3",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Threshold Guide"
+            },
+            "description": {
+              "value": "Threshold Guide: helps visitors hear the dead without promising ownership of their return."
+            },
+            "deepId": {
+              "value": "archetypes.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.archetypes.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.archetypes.4",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Bronze Defender"
+            },
+            "description": {
+              "value": "Bronze Defender: turns martial readiness toward people named by the rescue omen."
+            },
+            "deepId": {
+              "value": "archetypes.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.archetypes.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.archetypes.5",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Pearl Diver"
+            },
+            "description": {
+              "value": "Pearl Diver: plans safe descents and returns weather to open water."
+            },
+            "deepId": {
+              "value": "archetypes.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.archetypes.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.archetypes.6",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Quiet Witness"
+            },
+            "description": {
+              "value": "Quiet Witness: gives unfinished humble deeds standing before the judges."
+            },
+            "deepId": {
+              "value": "archetypes.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.archetypes.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.archetypes.7",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Laurel Envoy"
+            },
+            "description": {
+              "value": "Laurel Envoy: makes shared restraint possible between rival cities."
+            },
+            "deepId": {
+              "value": "archetypes.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.archetypes.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.archetypes.8",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Homeward Singer"
+            },
+            "description": {
+              "value": "Homeward Singer: preserves lost companions in the story that guides a crew."
+            },
+            "deepId": {
+              "value": "archetypes.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.archetypes.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.progressionPaths.1",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Ford Guardian"
+            },
+            "description": {
+              "value": "Ford Guardian: earn honor through rescue and restraint; gain shared watch authority and repair duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.progressionPaths.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.progressionPaths.2",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Free Storm Herald"
+            },
+            "description": {
+              "value": "Free Storm Herald: earn renown by ending captive weather; gain island welcome and evacuation responsibilities."
+            },
+            "deepId": {
+              "value": "progressionPaths.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.progressionPaths.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.progressionPaths.3",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Farewell Keeper"
+            },
+            "description": {
+              "value": "Farewell Keeper: earn trust by honoring unfinished requests; gain threshold passage and witness obligations."
+            },
+            "deepId": {
+              "value": "progressionPaths.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.progressionPaths.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.progressionPaths.4",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Laurel Peacemaker"
+            },
+            "description": {
+              "value": "Laurel Peacemaker: earn standing by making truce practical; gain envoys and neutral route duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.progressionPaths.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.progressionPaths.5",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Pearl Wayfinder"
+            },
+            "description": {
+              "value": "Pearl Wayfinder: earn confidence through safe descents; gain altar knowledge and crew protection duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.progressionPaths.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.progressionPaths.6",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Living Messenger"
+            },
+            "description": {
+              "value": "Living Messenger: earn remembrance by finishing requested deeds; gain mourner support and consent obligations."
+            },
+            "deepId": {
+              "value": "progressionPaths.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.progressionPaths.6"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-archetypes-1": {
+            "template": "myth.deep.archetypes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-archetypes-2": {
+            "template": "myth.deep.archetypes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-archetypes-3": {
+            "template": "myth.deep.archetypes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-archetypes-4": {
+            "template": "myth.deep.archetypes.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-archetypes-5": {
+            "template": "myth.deep.archetypes.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-archetypes-6": {
+            "template": "myth.deep.archetypes.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-archetypes-7": {
+            "template": "myth.deep.archetypes.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-archetypes-8": {
+            "template": "myth.deep.archetypes.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-progressionPaths-1": {
+            "template": "myth.deep.progressionPaths.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-progressionPaths-2": {
+            "template": "myth.deep.progressionPaths.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-progressionPaths-3": {
+            "template": "myth.deep.progressionPaths.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-progressionPaths-4": {
+            "template": "myth.deep.progressionPaths.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-progressionPaths-5": {
+            "template": "myth.deep.progressionPaths.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-progressionPaths-6": {
+            "template": "myth.deep.progressionPaths.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "op": "append",
+        "path": "/content/characterCreation/steps/3/fields/1/options",
+        "value": [
+          {
+            "value": "archetypes.1",
+            "label": "Omen Reader"
+          },
+          {
+            "value": "archetypes.2",
+            "label": "Wave Navigator"
+          },
+          {
+            "value": "archetypes.3",
+            "label": "Threshold Guide"
+          },
+          {
+            "value": "archetypes.4",
+            "label": "Bronze Defender"
+          },
+          {
+            "value": "archetypes.5",
+            "label": "Pearl Diver"
+          },
+          {
+            "value": "archetypes.6",
+            "label": "Quiet Witness"
+          },
+          {
+            "value": "archetypes.7",
+            "label": "Laurel Envoy"
+          },
+          {
+            "value": "archetypes.8",
+            "label": "Homeward Singer"
+          }
+        ]
+      },
+      {
+        "op": "append",
+        "path": "/content/characterCreation/starting/assets",
+        "value": [
+          {
+            "id": "portrait",
+            "value": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.1.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "standard"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.1.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.1"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.2.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.2"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.3.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.3"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.4.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.4"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.5.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.5"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.6.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.6"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.7.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.7"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.8.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.8"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

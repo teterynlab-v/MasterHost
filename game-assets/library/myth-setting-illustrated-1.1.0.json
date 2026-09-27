@@ -1,0 +1,540 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.myth.setting",
+  "version": "1.1.0",
+  "type": "setting",
+  "name": "The Bronze Horizon — Illustrated",
+  "description": "The Bronze Horizon for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+  "tags": [
+    "mythic-antiquity",
+    "warring-poleis",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "The Bronze Horizon for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+    "highlights": [
+      "The Bronze Horizon",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.mythic-antiquity"
+    ],
+    "requiresCapabilities": [],
+    "providesCapabilities": [
+      "setting:mythic-antiquity"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Mythic Antiquity original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.myth.setting"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.myth.setting",
+    "version": "1.1.0",
+    "name": "The Bronze Horizon — Illustrated",
+    "description": "The Bronze Horizon for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+    "provides": [
+      "setting:mythic-antiquity"
+    ],
+    "requires": [],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.factions.1",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Bronze Assembly"
+            },
+            "description": {
+              "value": "Bronze Assembly: votes on a war promised by the city oracle while the river runs backward."
+            },
+            "deepId": {
+              "value": "factions.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.factions.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.factions.2",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Wave Companions"
+            },
+            "description": {
+              "value": "Wave Companions: sails a returning route only by remembering a lost crew member."
+            },
+            "deepId": {
+              "value": "factions.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.factions.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.factions.3",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Threshold Chorus"
+            },
+            "description": {
+              "value": "Threshold Chorus: guides the living through death's border without promising resurrection."
+            },
+            "deepId": {
+              "value": "factions.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.factions.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.factions.4",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "River Militia"
+            },
+            "description": {
+              "value": "River Militia: will defend the ford but refuses an invasion disguised as prophecy."
+            },
+            "deepId": {
+              "value": "factions.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.factions.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.factions.5",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Island Hearths"
+            },
+            "description": {
+              "value": "Island Hearths: offers shelter to sailors who release a stolen storm jar."
+            },
+            "deepId": {
+              "value": "factions.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.factions.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.factions.6",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Silent Judges"
+            },
+            "description": {
+              "value": "Silent Judges: measures unfinished deeds rather than earthly rank at the gate."
+            },
+            "deepId": {
+              "value": "factions.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.factions.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.factions.7",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Laurel Envoys"
+            },
+            "description": {
+              "value": "Laurel Envoys: seeks a truce before two cities fulfill the same war omen."
+            },
+            "deepId": {
+              "value": "factions.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.factions.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.factions.8",
+        "value": {
+          "kind": "faction",
+          "values": {
+            "name": {
+              "value": "Pearl Divers"
+            },
+            "description": {
+              "value": "Pearl Divers: knows a submerged passage where a storm may be returned."
+            },
+            "deepId": {
+              "value": "factions.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.factions.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.visualThemes.1",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Bronze Ford"
+            },
+            "description": {
+              "value": "Bronze Ford: gold omen marks and blue rescue routes distinguish an invasion from a shared crossing."
+            },
+            "deepId": {
+              "value": "visualThemes.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.visualThemes.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.visualThemes.2",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Pearl Homeward"
+            },
+            "description": {
+              "value": "Pearl Homeward: silver remembered crew marks and teal open storms distinguish a truthful route from captivity."
+            },
+            "deepId": {
+              "value": "visualThemes.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.visualThemes.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.visualThemes.3",
+        "value": {
+          "kind": "visual-theme",
+          "values": {
+            "name": {
+              "value": "Quiet Threshold"
+            },
+            "description": {
+              "value": "Quiet Threshold: white completed deeds and violet borrowed days distinguish farewell from forced return."
+            },
+            "deepId": {
+              "value": "visualThemes.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.visualThemes.3"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-factions-1": {
+            "template": "myth.deep.factions.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-factions-2": {
+            "template": "myth.deep.factions.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-factions-3": {
+            "template": "myth.deep.factions.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-factions-4": {
+            "template": "myth.deep.factions.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-factions-5": {
+            "template": "myth.deep.factions.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-factions-6": {
+            "template": "myth.deep.factions.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-factions-7": {
+            "template": "myth.deep.factions.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-factions-8": {
+            "template": "myth.deep.factions.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-visualThemes-1": {
+            "template": "myth.deep.visualThemes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.1"
+              ]
+            }
+          },
+          "deep-visualThemes-2": {
+            "template": "myth.deep.visualThemes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.2"
+              ]
+            }
+          },
+          "deep-visualThemes-3": {
+            "template": "myth.deep.visualThemes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.visualTheme"
+                },
+                "visualThemes.3"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.dusk.rules",
+  "version": "1.2.0",
+  "type": "rules",
+  "name": "Defense Naming and Cure Rules — Illustrated",
+  "description": "Defense Naming and Cure Rules for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+  "tags": [
+    "dark-fantasy",
+    "dying-marches",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Defense Naming and Cure Rules for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+    "highlights": [
+      "Defense Naming and Cure Rules",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.dark-fantasy"
+    ],
+    "requiresCapabilities": [
+      "setting:dark-fantasy"
+    ],
+    "providesCapabilities": [
+      "rules:dark-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.dusk.setting",
+      "version": "1.2.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Dark Fantasy original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.dusk.rules"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 6,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.dusk.rules",
+    "version": "1.2.0",
+    "name": "Defense Naming and Cure Rules — Illustrated",
+    "description": "Defense Naming and Cure Rules for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+    "provides": [
+      "rules:dark-fantasy"
+    ],
+    "requires": [
+      "setting:dark-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/actions/dusk-read-contract",
+        "value": {
+          "label": "Read Contract",
+          "target": "self",
+          "kind": "check",
+          "checkId": "guile"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/dusk-guard-furrow",
+        "value": {
+          "label": "Guard Furrow",
+          "target": "self",
+          "kind": "check",
+          "checkId": "steel"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/dusk-witness-name",
+        "value": {
+          "label": "Witness Name",
+          "target": "self",
+          "kind": "check",
+          "checkId": "will"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/dusk-test-cure",
+        "value": {
+          "label": "Test Cure",
+          "target": "self",
+          "kind": "check",
+          "checkId": "guile"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/dusk-defy-ransom",
+        "value": {
+          "label": "Defy Ransom",
+          "target": "self",
+          "kind": "check",
+          "checkId": "will"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/dusk-escort-bearer",
+        "value": {
+          "label": "Escort Bearer",
+          "target": "self",
+          "kind": "check",
+          "checkId": "steel"
+        }
+      }
+    ]
+  }
+}

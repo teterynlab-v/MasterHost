@@ -1,0 +1,1890 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.sail.visuals",
+  "version": "1.1.0",
+  "type": "visuals",
+  "name": "Unfixed Sea Schematics — Illustrated",
+  "description": "Unfixed Sea Schematics for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+  "tags": [
+    "age-of-sail",
+    "pirate-archipelago",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Unfixed Sea Schematics for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+    "highlights": [
+      "Unfixed Sea Schematics",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.age-of-sail"
+    ],
+    "requiresCapabilities": [
+      "setting:age-of-sail"
+    ],
+    "providesCapabilities": [
+      "visuals:age-of-sail"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.sail.setting",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Age of Sail original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.sail.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 151
+  },
+  "media": [
+    {
+      "name": "age-of-sail/illustrated-1.1.0/factions.1.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/factions.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "dda797d917bd0697cd6a4d5657298039d24e9f8d51d402604bd5777edf195da2",
+      "size": 44836
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/factions.2.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/factions.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "9c17c50b51b0ba6d86f062ec40d27eec55fc5554991c9308664e3a69c24c1323",
+      "size": 46152
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/factions.3.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/factions.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "690f01a0061b7f8de1fd6226de33d7e6923dd701c9c86385b1c0f33117899772",
+      "size": 46200
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/factions.4.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/factions.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "6dd378ffaa32210dd7f2784f9f20872ff8dcf4cd6aa1f9b081a5ab5e5c23957c",
+      "size": 44692
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/factions.5.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/factions.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "757b38a91407c901ae0478987fb4f991a028a714c6050146a86762f0de672953",
+      "size": 45370
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/factions.6.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/factions.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "d7fb070e20ff2222d3fe4ada57a940482237b1f3f43e01e4d31345e217a53523",
+      "size": 44818
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/factions.7.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/factions.7.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "2ffa00ffc9a577b685576c6e26383c9349eddedeac01e0a75c1ffa07fc8609ec",
+      "size": 45318
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/factions.8.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/factions.8.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "3bcb259bde2b77fd6710423a0e3d8958751133fe57f3bcaf116a0872f1144997",
+      "size": 46050
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/locations.1.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/locations.1.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "ff6fa972e5c648ecabd0e919abb92f19e7c34acf156c5f5c50773864ab7d334a",
+      "size": 46560
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/locations.2.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/locations.2.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "32c53f02753c5218e3f6422f2743aa6a9456cfae329e8f8a202faed709292eba",
+      "size": 45402
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/locations.3.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/locations.3.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "6ffd778a5d5b245fc49e21001cfb0f1254b45ad2eac794fb229e5760d9153015",
+      "size": 45650
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/locations.4.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/locations.4.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "f1540fbcfece39838581ea6425f90108fe49ae745ee1557dcb49bb788fa67c1b",
+      "size": 44538
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/locations.5.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/locations.5.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "d99bff94ed815eab9216b986a267568ca0462d3d852a7f1933d366029f5d3689",
+      "size": 46384
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/locations.6.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/locations.6.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "fa549834ffdc1ab3635799097ad6ce2adf0c73d832b8670314e5c0379cb63bcb",
+      "size": 45790
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/locations.7.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/locations.7.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "83d6e607611b492471bd8b765cd844f32554d4df9c7ce4eda411867602f2c24e",
+      "size": 45132
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/locations.8.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/locations.8.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "84a3ecd118992bb3ecede9d309caa60bd5257179b19448416c98f791e35e4898",
+      "size": 46252
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/locations.9.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/locations.9.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "4f49d0c5d9ed30901cf30aa5db44d01244246bce173066c21012503613d999ba",
+      "size": 46528
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/locations.10.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/locations.10.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "e7bb2e1237666f94f8d5ddcbbc93c67540ac76e19bf70760c9a257091a15ba39",
+      "size": 46282
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/locations.11.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/locations.11.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "df0c2838abe98c8ec167846b4b11d68d57304d7150a8ca84f7a5a1d89bbfe419",
+      "size": 45928
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/locations.12.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/locations.12.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "5d174242307d7792d94d741ca4e5f96cc96fc37f5c0592a1f289843454128ef4",
+      "size": 46190
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.1.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "4ed3c5ca5977d8be1848a17fe7cfb0b74c5f58a00e42602d202e0dadc78ec1ef",
+      "size": 45206
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.2.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "7f6a8fa5e5532f73d875840a64e600a158b96531364d221e364f664665b4c5f8",
+      "size": 45948
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.3.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "44b5b58f5ac1689beb3cb61c299093172516cb827434123c0d3460dd1135daf1",
+      "size": 44820
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.4.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "03e239300faf801c8368175f446c83a5f552bb48650c554d03c9345fedda6882",
+      "size": 45292
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.5.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "42cf6236c392b1aca2483e70fbe7e0f37eddf6a2434f908e1deeba95aeac88ad",
+      "size": 45770
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.6.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "3cada39a5dd13f0abb240c74d32d21ee73a02f7161b7c5bb1bfb2a7a09f92e6f",
+      "size": 44786
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.7.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "bbe0d7cb1240779290b340fb0715946c43d74a986d54f88dd47b11d455f38066",
+      "size": 45328
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.8.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "ab41115d3a8946fbb161c10b4656ad50ac77d221775a54c616b253f5c6d6b555",
+      "size": 46258
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.9.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.9.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "aa32cbe37a4d8897cf6f344d215936e3f2538d14a53358481892e0842ed3c61c",
+      "size": 45622
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.10.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.10.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "83f75d04498618d9457f413c165aa52f3054d05d25ab6ed00f41f405f59654d8",
+      "size": 44764
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.11.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.11.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "193c7295022e12f987fb4992d92319198401b030e549ec048369cebbc0be0986",
+      "size": 45244
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.12.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.12.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "9859a94d34b60764a7e753536b27fcf4fb8b4992aecdf97c31bfd386341eb838",
+      "size": 45426
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.13.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.13.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "24b63f8486ac932feb50da7a307a2e93475afb211c4df221a91d9cead89b4eda",
+      "size": 45406
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.14.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.14.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "c666acb6a1eee5239518aeab13ae175dccd0db2af7ac8cb979453e7f3e6647b9",
+      "size": 45970
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.15.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.15.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "51a27c6fe9a066098e711273aa13eee2dadaeef266c12cdf9ffb17fe4d2b7572",
+      "size": 44802
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.16.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.16.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "01965a4d180a7667764f4841b1650bd739ef94c0578453938b6c09c419f76666",
+      "size": 45262
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.17.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.17.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "c2ee6a89fd6153ec4a3c7f8bb549aa350103640235e631c4efc1b0ff5267aaf7",
+      "size": 45428
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.18.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.18.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "55863805fcd213da865e8a15d4ce1075ac06bccd8039dc3e83e3af9b7e96714f",
+      "size": 45568
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.19.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.19.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "068c0bcc57467d76d60529871f32d59fed69e98ea3bfdce8975675b3516518ef",
+      "size": 45456
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.20.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.20.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "8e3eb0d5c575a8f905c6a2d0a2e617398aa8e31ad2847516f509ae0bdf7e89c8",
+      "size": 45968
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.21.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.21.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "d996a553253e0515e316c4f5fa48dc88bfa55c2556209c547eb1437e8514258d",
+      "size": 45440
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.22.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.22.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "adb2c12f378fef2b53b22b266207fcdd7ccb17664397f031ae00233a7835481a",
+      "size": 45264
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.23.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.23.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "cf81b22cf920f603791c770904753a8aca2ee07a1c2c9d7f8e15f3f36bbca8e5",
+      "size": 46038
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/npcs.24.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/npcs.24.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "d6d70c42219272fa14f0feca3321f9051b50cb981decc6b29abaf10e9e45f5ec",
+      "size": 45228
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/adversaries.1.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/adversaries.1.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "405668cec83f601989517780813367df8ad296b0a13813d28cdd6b4d508fa5e9",
+      "size": 51146
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/adversaries.2.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/adversaries.2.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "acaa1b939ef7102c4ed9f7d666a37af4a697bad772e60d722bdfd2b95dbef670",
+      "size": 46104
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/adversaries.3.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/adversaries.3.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "a8ade412caa16343c660143964b26703ccfd6b1ca74bbdb6c6c82ec228a70192",
+      "size": 45132
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/adversaries.4.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/adversaries.4.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "cd3fffa33588239dfef4cdcc152bafb0ba443e309293f1ea460c3696270e0f8a",
+      "size": 57244
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/adversaries.5.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/adversaries.5.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "b6a66cb5edf5bdb4f03d8245f18595680838bb9d5fa383b6501bfe72929d5e9d",
+      "size": 46210
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/adversaries.6.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/adversaries.6.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "382304e31d559ea5cf1a84567289474e909588ef5f3fd2f8e11097b0f7d53d61",
+      "size": 45594
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/adversaries.7.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/adversaries.7.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "fc835cf20b3679c3f3fc1019cbc8d44edce7c5122c7acffdf596cb16d7527dfc",
+      "size": 45420
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/adversaries.8.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/adversaries.8.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "96baa1d29c51a20a619de08529328eb7691694f3044ae690ef76b2d908d980fb",
+      "size": 44746
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/adversaries.9.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/adversaries.9.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "fdcb20f04fa49f34e84e3a5e8fc7556e6e50ed6e92fb49aae7d48ff077aae789",
+      "size": 45184
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/adversaries.10.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/adversaries.10.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "f6e870e4254f55efff5c123b45bee02f234420c2c90604de544e4c03d4fc5bbe",
+      "size": 45874
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/adversaries.11.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/adversaries.11.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "e77b429ed676f8e2e110ec0da96ee6780b767324c977345ac0d4da9a09099b65",
+      "size": 45672
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/adversaries.12.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/adversaries.12.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "a150c10d23a63c923625679c17b7d016ca85da403dbcfc01c8e3e8e2109955d8",
+      "size": 45888
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/adversaries.13.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/adversaries.13.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "a0739fa46e06aae7d31e9d621ee02916482630b19f6b05ce0923c5b59051d740",
+      "size": 45694
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/adversaries.14.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/adversaries.14.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "987bdd158a04092bc3ef402f7af6e6160d4c8cbd9790d1d85badaf7e4dcf42e5",
+      "size": 45396
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/adversaries.15.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/adversaries.15.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "d7c50ab49992b25004c9ded4f88945181b92b7e1ea270d26e507b38b9ade254f",
+      "size": 44348
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/adversaries.16.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/adversaries.16.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "7a5e51e51fbc6e2b07d7a56d97f77f76e7c0e82d0a00336ce5a22772a518c8be",
+      "size": 44870
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/adversaries.17.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/adversaries.17.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "ae23f00b2c9478c5b240a50aa8aa5707b1c6d1070312f36f10de2c9e5696c4b9",
+      "size": 45032
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/adversaries.18.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/adversaries.18.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "683001869ef027f11efc5ac7812f8f18b27cb63fda75b15cdae6fe466777a066",
+      "size": 47190
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.1.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.1.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "f44a26062ff44e31778346a98ce1cf83a3b68e42351f3e06a1f1e3ced87d57c4",
+      "size": 44778
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.2.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.2.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "b6d05bbb1750eb4cb93942520765bcd3c3e14cb19decdb6c4c5ab03b163168a2",
+      "size": 45512
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.3.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.3.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "abcb915f404522aec49707da203ff65c1ca22819d45324e57c280d9da011f30a",
+      "size": 45038
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.4.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.4.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "c67e74b51d22f128dff1888e5475920b21596a5854e38cc20b742a49246d1760",
+      "size": 45008
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.5.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.5.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "bd7e59f2ec8171d43f6cdff1bc471b4c73af6c3ee467db4db1fad4f7fe322909",
+      "size": 45458
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.6.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.6.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "4905942ecc133a5b11982186fdda440b3d0e3493ad2a31b2593597c935fba06a",
+      "size": 45390
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.7.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.7.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "c39e64e46b133debd0a518cb548fc351029f23b4714eff72d3b389f61f415aca",
+      "size": 44818
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.8.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.8.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "6e7313784164355bae5e31ae918b728a8137f93e3cfe18fb9a7c17e1363b2248",
+      "size": 45538
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.9.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.9.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "b39d3b40507dc9a3290b6765613c4e757026337a9d263e6dbaf47a91b8a87a67",
+      "size": 44986
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.10.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.10.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "d3fe8fecddf33d9edd148dd2789554f0c37d8d6723f7a0b78e5d1c9b8b9a5b0a",
+      "size": 45286
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.11.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.11.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "51c8c4604d6283cbcbd8d984f38803f7af8a89155c876882da15a427ec54d88c",
+      "size": 45820
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.12.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.12.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "ee33c91d69035f9daa717baf3be7d34289fb511c686deb7a41d1b3defc3156b4",
+      "size": 44180
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.13.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.13.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "bc393b26875c2840281a62daef021a20ece2f97a480b5109e97d8004d47ca46a",
+      "size": 45876
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.14.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.14.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "3b41822edde9414ee8097ddeacfe62dd849704a971b5e312436e760c8e558845",
+      "size": 45186
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.15.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.15.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "8858f4309c79b2a1ea04514af24f99c46099ef5e14e22e101e92296a2b315076",
+      "size": 45390
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.16.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.16.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "d92de6ba952fbd07b7bcd3ffc1b2dcf983af31d6432150464ecf4d9b4a9e1c76",
+      "size": 45252
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.17.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.17.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "66ba506513ffe59e3307a90614bc5e006dab588cdf488abdbfdbaf6c656bf2f5",
+      "size": 46904
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.18.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.18.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "2cd6518541b068f28233e623ce20e24f5f14400c6f672b56d035b8aed6c40981",
+      "size": 45026
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.19.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.19.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "aa48c554f74afe219e9288b01a19c7a01be51a7849cedf1b22b3673ad3dab1de",
+      "size": 45366
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.20.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.20.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "a4a0d22f84f886e7ae9be6c1f398e8bb2fcdc22141df5047c4f3fea48aba6247",
+      "size": 45544
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.21.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.21.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "880f0fc1813bc9b861fa0b2678296b062aad6f2cb1cf1fac1bcb00b14bc85141",
+      "size": 45482
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.22.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.22.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "524be54cf370da334f47d5b7daf8729e9921364efaf44b1d52e0a469f4017aa2",
+      "size": 44994
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.23.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.23.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "345931d0d348bd0644c6a86561750bd463860a471f7c6bc21eed766559783e70",
+      "size": 46002
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/items.24.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/items.24.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "28e18eb5951ecb386c08bf2bbf3691ce46275372bb0c31dd84d76f682e31a586",
+      "size": 44874
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.1.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "fca73379536d7e0708cd1e9970e4ab7192276037d297b00da643f00a8adc33a0",
+      "size": 45036
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.2.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4e88f62d6108896514133cb630cb9cda339fb88344b16646fecd5cb9b38aceb6",
+      "size": 45908
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.3.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "30f80658dcd1bd76184743decfa9741ceb9760f6cfe2a154557790fb9e07c9ae",
+      "size": 45864
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.4.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "3acce204dc101bcdc63d00eac5762b41f0c9d98f8708e56ed95edda6ec35618c",
+      "size": 45196
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.5.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c1c5f0319bf011d1e7d79f52e198bbd0e5a295a6f73bbfe0bc1f62b5d26415f3",
+      "size": 46092
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.6.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "150623c7bb111038120cc932f356e8001d03c66964e79dd88877218493387291",
+      "size": 46076
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.7.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ac3c860c89e27524e60b4d6600afe3e7980a68884eaf656337b3ab43a00c7c33",
+      "size": 44834
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.8.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "48fa03c66dcb91bbe42c0c92af96ef696e2e4353b388c2723cc966f4eb07dca8",
+      "size": 47112
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.9.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "1561ef57eccb899764f1e37cc45e8603ee33a224c919657dc4d295804590f958",
+      "size": 45864
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.10.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4ad4c3a514325acfc3655a56e80b7cdc2e29c4feaa15329a3c479a20e6a70424",
+      "size": 46536
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.11.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "406a938f3bb485ba2b284304f7acb418e04e9d1b2e2abd50897af57a5590d317",
+      "size": 46554
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.12.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "1ea578d0e88ec5f785219585025dd78b1659708d671f6614060e0c26ac342f4d",
+      "size": 46438
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.13.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "92e00d3499a97bcedd986a5c13a1b76fbb2ed727ca3f58f8876fd6f11e14abbd",
+      "size": 46024
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.14.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "3a7b9d34ad783b7403cec0e84651dad45f6a783c5de17294781b58c321248018",
+      "size": 46446
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.15.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f77891300af22a50ad4b8a85a14aa3a334f8d1ac959858e7dcce61cdd1ccf44e",
+      "size": 46838
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.16.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "e5220d1075f8482ee7f6b3cc79410e3a6fab828b0ff671809414875ca269262a",
+      "size": 45488
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.17.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "651be79f1dec8bd24648d8cbc613482a6a0ec66bc86df80a9186b953eea2263b",
+      "size": 46520
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.18.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ff736ea7fee85c01ac1da83a2a928f2589d3bc4eb4b8f15d9b9ffcffdb12f682",
+      "size": 45786
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.19.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.19.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f2974b5caed49c916216066b3652de04b611655335b8da56cb03d7574d359726",
+      "size": 46182
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.20.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.20.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a7635e699ced0830f59dc3270e768bf85aa65581077f9e59b2789b5e05d553b2",
+      "size": 46412
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.21.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.21.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "d3f5c0d74999459ec57a2a8343410ebbde1d219f369aa9168368904f4a670725",
+      "size": 45490
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.22.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.22.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c02467a3a66144a52d3d7c740a62d549dd017e66d8af63131a253bba3834c56b",
+      "size": 46196
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.23.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.23.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a70bb80ea26ff3756237bb4dcde1934ed1a172a9a0e37fa16b78f8e626318034",
+      "size": 46340
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.24.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.24.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4b9a0d2f8845e3fe431410ff08052bd86bf6e90d9a4d1aa82c6170ea051bc3f0",
+      "size": 46820
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.25.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.25.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f0d1b1d136ca78cd5d0a7781d187c16327a3b979a08b722b39b446411a634192",
+      "size": 45926
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.26.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.26.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "323c69feea0c7ce3bad9c4998a773a9e690dbae549d3c319c6f0ec74ccda16e0",
+      "size": 45218
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.27.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.27.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "94005cb6663be9650a44a71fb7205cf84f0bf6836440d7e49c838ce4e824f150",
+      "size": 46306
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.28.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.28.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "211e1cb23669b1856e8835e914d42f49f6e6b64dca033c1a40b734d2079338cb",
+      "size": 45278
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.29.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.29.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "7891a5841d1ef235862ba07a6893c89e96979e2411a459700d4347381ad506eb",
+      "size": 45826
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/events.30.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/events.30.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "cd2f967cad6c638c80cf0e71c4f8485570117a15bd61dc1a5d04611adee897ff",
+      "size": 46462
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/scenes.1.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/scenes.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "585724bed8f3a9f3c025834704b4a641b1414a14dba86a4d095f0666b7e20fcc",
+      "size": 46228
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/scenes.2.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/scenes.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "75c82c7d4fdf6bde45f850a82da44fefcd8cc28e3310274f7b3c8ebfae677ef5",
+      "size": 46100
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/scenes.3.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/scenes.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "7f1fa6ed455293d69c82d99e4e4223a5807eb4ea60a3c0da5bbfe3c786f36752",
+      "size": 46182
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/scenes.4.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/scenes.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "446501416ec0218055c92eec1981c24f7205516fa814a73390f82cc30967b5e3",
+      "size": 45830
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/scenes.5.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/scenes.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "79996ef0bfb2b89f908572b16025a763ef4795e9ee97eb14d6c925dbca318ed8",
+      "size": 46452
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/scenes.6.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/scenes.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "1f78756a1bfef3024830a72edf5821966cd6505d609bc15755f69cc572360ca1",
+      "size": 45764
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/scenes.7.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/scenes.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "19bb59b3a6fda98ec9cf07b0458bf9ad05e8e1956895585a8cf0b549c63d5563",
+      "size": 44958
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/scenes.8.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/scenes.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c00351363c3ee6d3d57999c5f4c8c986441cfcf8bb708d2cea8c443c7c17bbcb",
+      "size": 46720
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/scenes.9.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/scenes.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "94b03f8308ff2108bc957fde4d0665c02741385bc8125730372665a4b2fc344b",
+      "size": 45718
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/scenes.10.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/scenes.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "0de3c44c42e4cf8e0f5df3511ae181fd856ed4d27b4dc7f8a9cafdc3eed30c93",
+      "size": 46020
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/scenes.11.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/scenes.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "d0ad3428e121448215ec897d240df22e1ff95716eaaedd1d82ec7ab194be3a69",
+      "size": 46142
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/scenes.12.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/scenes.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b8ccf92296626e70fe2f0c38b3e186d741638345584292d5791d5017f47d24a0",
+      "size": 46386
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/scenes.13.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/scenes.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "9209ea3143674e8a545d1b2d364f83a4f72e2e759558b3a203532945e87742a8",
+      "size": 46940
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/scenes.14.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/scenes.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "bfc5f60d27555a1a892c234b14b3f3fd10b4bf7a5442dd50e18f791949cc91bd",
+      "size": 46432
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/scenes.15.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/scenes.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "88ba6e9633c4dd2ee4d18130495142ad710739a3b1aa2cd4fbfb00ed15a4f3fa",
+      "size": 45220
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/scenes.16.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/scenes.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ef0c6cb4b19d24585f5fa8dbf082991ffbbc7343be5ed8e5ad64db7c4e1a8c9a",
+      "size": 45828
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/scenes.17.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/scenes.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "bb02829bd1eff0dce6cb5e991552940a372f8b89b848fe1e2dc52244a80651cd",
+      "size": 47000
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/scenes.18.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/scenes.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "5b53b236edf74bc0b7a13f51ce256d77e91b79cb1601476ef0fea572e724b883",
+      "size": 46056
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/archetypes.1.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/archetypes.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "813e805db18a930346beb8eb0fc031f6f3563e172552ab1f317071db1e517917",
+      "size": 60142
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/archetypes.2.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/archetypes.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "8c690e5baaf4637e76d995efc8b9b70b3fa6903e2f9630f405c8e8ec8916907c",
+      "size": 46104
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/archetypes.3.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/archetypes.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "693b453fe3efc5205e2de95329f5fbecacd3bf03cbbeca89144a1575f16f178d",
+      "size": 44968
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/archetypes.4.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/archetypes.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "20d33d26348cfd317e78cb36f50a8057e9d4463e5a870b1251e499b292c6cc20",
+      "size": 45470
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/archetypes.5.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/archetypes.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "0fe34551d18cb1daf4a699ea2a3d54c0727c1f3f0a57d63f6c9d32daaa13a86e",
+      "size": 45682
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/archetypes.6.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/archetypes.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "180cc278ba62ddddf61f1dacfe63bd723d3eafd32acef360606960b65f1aaacf",
+      "size": 46082
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/archetypes.7.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/archetypes.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "50160a79fcbbd201955ace1cb9c748b23d95e2551fa7b5e073972e14ba9d7a3d",
+      "size": 45202
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/archetypes.8.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/archetypes.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "b1eef92f20b14c18d21c2b91846ad2eb35b290b8d965caccb66d20d90f4904f3",
+      "size": 50124
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/progressionPaths.1.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/progressionPaths.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "5978d1e10c1d97d54de18f271921c378496734ef5aa4ba9370900a8c36c49cb7",
+      "size": 45544
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/progressionPaths.2.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/progressionPaths.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "71360ceab122fb037cddb0164557ccb278b804d372c0b5994e98b250e19ce494",
+      "size": 46562
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/progressionPaths.3.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/progressionPaths.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "6e7ab41f00609ffb1fa6641b65f63177d78ef3672dd43a726ae1841ecdb41676",
+      "size": 46554
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/progressionPaths.4.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/progressionPaths.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "2f50e6e849210d97f5497723eee8704c99362f4f60fd19d7d5bef570f5d34974",
+      "size": 45594
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/progressionPaths.5.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/progressionPaths.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "8306857cad8f3612cc0da312bf28b9cf09a304c41b52a3fc4f43e8ea7391f806",
+      "size": 46894
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/progressionPaths.6.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/progressionPaths.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "eea9b29f55c9c36a8a8ae9042ab2685f42a23d160183c1a8858117d93fdd184b",
+      "size": 46220
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/visualThemes.1.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/visualThemes.1.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "3e23828225f1a3d77856c645f95ebaf7fc994a7fcff990e3f2d4d2e30fc0a60e",
+      "size": 44940
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/visualThemes.2.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/visualThemes.2.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "722f1fea79b42d3d9e982b3be767560923d296d027e1d6056621b17712524158",
+      "size": 45444
+    },
+    {
+      "name": "age-of-sail/illustrated-1.1.0/visualThemes.3.webp",
+      "path": "media/age-of-sail/illustrated-1.1.0/visualThemes.3.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "02f1020730a3d66e46de9a972a533fc3b445f633652f57d38519df501244e0b3",
+      "size": 45576
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.sail.visuals",
+    "version": "1.1.0",
+    "name": "Unfixed Sea Schematics — Illustrated",
+    "description": "Unfixed Sea Schematics for Pirate Archipelago, Imperial Trade War, Mythic Ocean. Three original seafaring campaigns: a free-cove rescue, neutral treatment cargo through forged blockade orders and a moving island choosing its own horizon.",
+    "provides": [
+      "visuals:age-of-sail"
+    ],
+    "requires": [
+      "setting:age-of-sail"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/illustrated-age-of-sail",
+        "value": {
+          "id": "illustrated-age-of-sail",
+          "name": "Illustrated age-of-sail",
+          "description": "Individual generated illustrations for every authored content object",
+          "defaults": {
+            "background": "assets/age-of-sail/illustrated-1.1.0/scenes.1.webp",
+            "card": "assets/age-of-sail/illustrated-1.1.0/scenes.1.webp",
+            "map": "assets/age-of-sail/illustrated-1.1.0/visualThemes.1.webp",
+            "portrait": "assets/age-of-sail/illustrated-1.1.0/archetypes.1.webp",
+            "token": "assets/age-of-sail/illustrated-1.1.0/adversaries.1.webp",
+            "item": "assets/age-of-sail/illustrated-1.1.0/items.1.webp",
+            "location": "assets/age-of-sail/illustrated-1.1.0/locations.1.webp"
+          },
+          "families": {
+            "illustrated.age-of-sail.factions.1": {
+              "card": "assets/age-of-sail/illustrated-1.1.0/factions.1.webp"
+            },
+            "illustrated.age-of-sail.factions.2": {
+              "card": "assets/age-of-sail/illustrated-1.1.0/factions.2.webp"
+            },
+            "illustrated.age-of-sail.factions.3": {
+              "card": "assets/age-of-sail/illustrated-1.1.0/factions.3.webp"
+            },
+            "illustrated.age-of-sail.factions.4": {
+              "card": "assets/age-of-sail/illustrated-1.1.0/factions.4.webp"
+            },
+            "illustrated.age-of-sail.factions.5": {
+              "card": "assets/age-of-sail/illustrated-1.1.0/factions.5.webp"
+            },
+            "illustrated.age-of-sail.factions.6": {
+              "card": "assets/age-of-sail/illustrated-1.1.0/factions.6.webp"
+            },
+            "illustrated.age-of-sail.factions.7": {
+              "card": "assets/age-of-sail/illustrated-1.1.0/factions.7.webp"
+            },
+            "illustrated.age-of-sail.factions.8": {
+              "card": "assets/age-of-sail/illustrated-1.1.0/factions.8.webp"
+            },
+            "illustrated.age-of-sail.locations.1": {
+              "location": "assets/age-of-sail/illustrated-1.1.0/locations.1.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/locations.1.webp"
+            },
+            "illustrated.age-of-sail.locations.2": {
+              "location": "assets/age-of-sail/illustrated-1.1.0/locations.2.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/locations.2.webp"
+            },
+            "illustrated.age-of-sail.locations.3": {
+              "location": "assets/age-of-sail/illustrated-1.1.0/locations.3.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/locations.3.webp"
+            },
+            "illustrated.age-of-sail.locations.4": {
+              "location": "assets/age-of-sail/illustrated-1.1.0/locations.4.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/locations.4.webp"
+            },
+            "illustrated.age-of-sail.locations.5": {
+              "location": "assets/age-of-sail/illustrated-1.1.0/locations.5.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/locations.5.webp"
+            },
+            "illustrated.age-of-sail.locations.6": {
+              "location": "assets/age-of-sail/illustrated-1.1.0/locations.6.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/locations.6.webp"
+            },
+            "illustrated.age-of-sail.locations.7": {
+              "location": "assets/age-of-sail/illustrated-1.1.0/locations.7.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/locations.7.webp"
+            },
+            "illustrated.age-of-sail.locations.8": {
+              "location": "assets/age-of-sail/illustrated-1.1.0/locations.8.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/locations.8.webp"
+            },
+            "illustrated.age-of-sail.locations.9": {
+              "location": "assets/age-of-sail/illustrated-1.1.0/locations.9.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/locations.9.webp"
+            },
+            "illustrated.age-of-sail.locations.10": {
+              "location": "assets/age-of-sail/illustrated-1.1.0/locations.10.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/locations.10.webp"
+            },
+            "illustrated.age-of-sail.locations.11": {
+              "location": "assets/age-of-sail/illustrated-1.1.0/locations.11.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/locations.11.webp"
+            },
+            "illustrated.age-of-sail.locations.12": {
+              "location": "assets/age-of-sail/illustrated-1.1.0/locations.12.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/locations.12.webp"
+            },
+            "illustrated.age-of-sail.npcs.1": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.1.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.1.webp"
+            },
+            "illustrated.age-of-sail.npcs.2": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.2.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.2.webp"
+            },
+            "illustrated.age-of-sail.npcs.3": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.3.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.3.webp"
+            },
+            "illustrated.age-of-sail.npcs.4": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.4.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.4.webp"
+            },
+            "illustrated.age-of-sail.npcs.5": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.5.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.5.webp"
+            },
+            "illustrated.age-of-sail.npcs.6": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.6.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.6.webp"
+            },
+            "illustrated.age-of-sail.npcs.7": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.7.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.7.webp"
+            },
+            "illustrated.age-of-sail.npcs.8": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.8.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.8.webp"
+            },
+            "illustrated.age-of-sail.npcs.9": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.9.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.9.webp"
+            },
+            "illustrated.age-of-sail.npcs.10": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.10.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.10.webp"
+            },
+            "illustrated.age-of-sail.npcs.11": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.11.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.11.webp"
+            },
+            "illustrated.age-of-sail.npcs.12": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.12.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.12.webp"
+            },
+            "illustrated.age-of-sail.npcs.13": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.13.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.13.webp"
+            },
+            "illustrated.age-of-sail.npcs.14": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.14.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.14.webp"
+            },
+            "illustrated.age-of-sail.npcs.15": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.15.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.15.webp"
+            },
+            "illustrated.age-of-sail.npcs.16": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.16.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.16.webp"
+            },
+            "illustrated.age-of-sail.npcs.17": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.17.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.17.webp"
+            },
+            "illustrated.age-of-sail.npcs.18": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.18.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.18.webp"
+            },
+            "illustrated.age-of-sail.npcs.19": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.19.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.19.webp"
+            },
+            "illustrated.age-of-sail.npcs.20": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.20.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.20.webp"
+            },
+            "illustrated.age-of-sail.npcs.21": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.21.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.21.webp"
+            },
+            "illustrated.age-of-sail.npcs.22": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.22.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.22.webp"
+            },
+            "illustrated.age-of-sail.npcs.23": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.23.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.23.webp"
+            },
+            "illustrated.age-of-sail.npcs.24": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/npcs.24.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/npcs.24.webp"
+            },
+            "illustrated.age-of-sail.adversaries.1": {
+              "token": "assets/age-of-sail/illustrated-1.1.0/adversaries.1.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/adversaries.1.webp"
+            },
+            "illustrated.age-of-sail.adversaries.2": {
+              "token": "assets/age-of-sail/illustrated-1.1.0/adversaries.2.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/adversaries.2.webp"
+            },
+            "illustrated.age-of-sail.adversaries.3": {
+              "token": "assets/age-of-sail/illustrated-1.1.0/adversaries.3.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/adversaries.3.webp"
+            },
+            "illustrated.age-of-sail.adversaries.4": {
+              "token": "assets/age-of-sail/illustrated-1.1.0/adversaries.4.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/adversaries.4.webp"
+            },
+            "illustrated.age-of-sail.adversaries.5": {
+              "token": "assets/age-of-sail/illustrated-1.1.0/adversaries.5.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/adversaries.5.webp"
+            },
+            "illustrated.age-of-sail.adversaries.6": {
+              "token": "assets/age-of-sail/illustrated-1.1.0/adversaries.6.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/adversaries.6.webp"
+            },
+            "illustrated.age-of-sail.adversaries.7": {
+              "token": "assets/age-of-sail/illustrated-1.1.0/adversaries.7.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/adversaries.7.webp"
+            },
+            "illustrated.age-of-sail.adversaries.8": {
+              "token": "assets/age-of-sail/illustrated-1.1.0/adversaries.8.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/adversaries.8.webp"
+            },
+            "illustrated.age-of-sail.adversaries.9": {
+              "token": "assets/age-of-sail/illustrated-1.1.0/adversaries.9.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/adversaries.9.webp"
+            },
+            "illustrated.age-of-sail.adversaries.10": {
+              "token": "assets/age-of-sail/illustrated-1.1.0/adversaries.10.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/adversaries.10.webp"
+            },
+            "illustrated.age-of-sail.adversaries.11": {
+              "token": "assets/age-of-sail/illustrated-1.1.0/adversaries.11.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/adversaries.11.webp"
+            },
+            "illustrated.age-of-sail.adversaries.12": {
+              "token": "assets/age-of-sail/illustrated-1.1.0/adversaries.12.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/adversaries.12.webp"
+            },
+            "illustrated.age-of-sail.adversaries.13": {
+              "token": "assets/age-of-sail/illustrated-1.1.0/adversaries.13.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/adversaries.13.webp"
+            },
+            "illustrated.age-of-sail.adversaries.14": {
+              "token": "assets/age-of-sail/illustrated-1.1.0/adversaries.14.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/adversaries.14.webp"
+            },
+            "illustrated.age-of-sail.adversaries.15": {
+              "token": "assets/age-of-sail/illustrated-1.1.0/adversaries.15.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/adversaries.15.webp"
+            },
+            "illustrated.age-of-sail.adversaries.16": {
+              "token": "assets/age-of-sail/illustrated-1.1.0/adversaries.16.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/adversaries.16.webp"
+            },
+            "illustrated.age-of-sail.adversaries.17": {
+              "token": "assets/age-of-sail/illustrated-1.1.0/adversaries.17.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/adversaries.17.webp"
+            },
+            "illustrated.age-of-sail.adversaries.18": {
+              "token": "assets/age-of-sail/illustrated-1.1.0/adversaries.18.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/adversaries.18.webp"
+            },
+            "illustrated.age-of-sail.items.1": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.1.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.1.webp"
+            },
+            "illustrated.age-of-sail.items.2": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.2.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.2.webp"
+            },
+            "illustrated.age-of-sail.items.3": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.3.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.3.webp"
+            },
+            "illustrated.age-of-sail.items.4": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.4.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.4.webp"
+            },
+            "illustrated.age-of-sail.items.5": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.5.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.5.webp"
+            },
+            "illustrated.age-of-sail.items.6": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.6.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.6.webp"
+            },
+            "illustrated.age-of-sail.items.7": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.7.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.7.webp"
+            },
+            "illustrated.age-of-sail.items.8": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.8.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.8.webp"
+            },
+            "illustrated.age-of-sail.items.9": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.9.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.9.webp"
+            },
+            "illustrated.age-of-sail.items.10": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.10.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.10.webp"
+            },
+            "illustrated.age-of-sail.items.11": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.11.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.11.webp"
+            },
+            "illustrated.age-of-sail.items.12": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.12.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.12.webp"
+            },
+            "illustrated.age-of-sail.items.13": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.13.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.13.webp"
+            },
+            "illustrated.age-of-sail.items.14": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.14.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.14.webp"
+            },
+            "illustrated.age-of-sail.items.15": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.15.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.15.webp"
+            },
+            "illustrated.age-of-sail.items.16": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.16.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.16.webp"
+            },
+            "illustrated.age-of-sail.items.17": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.17.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.17.webp"
+            },
+            "illustrated.age-of-sail.items.18": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.18.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.18.webp"
+            },
+            "illustrated.age-of-sail.items.19": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.19.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.19.webp"
+            },
+            "illustrated.age-of-sail.items.20": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.20.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.20.webp"
+            },
+            "illustrated.age-of-sail.items.21": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.21.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.21.webp"
+            },
+            "illustrated.age-of-sail.items.22": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.22.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.22.webp"
+            },
+            "illustrated.age-of-sail.items.23": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.23.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.23.webp"
+            },
+            "illustrated.age-of-sail.items.24": {
+              "item": "assets/age-of-sail/illustrated-1.1.0/items.24.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/items.24.webp"
+            },
+            "illustrated.age-of-sail.events.1": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.1.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.1.webp"
+            },
+            "illustrated.age-of-sail.events.2": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.2.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.2.webp"
+            },
+            "illustrated.age-of-sail.events.3": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.3.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.3.webp"
+            },
+            "illustrated.age-of-sail.events.4": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.4.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.4.webp"
+            },
+            "illustrated.age-of-sail.events.5": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.5.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.5.webp"
+            },
+            "illustrated.age-of-sail.events.6": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.6.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.6.webp"
+            },
+            "illustrated.age-of-sail.events.7": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.7.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.7.webp"
+            },
+            "illustrated.age-of-sail.events.8": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.8.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.8.webp"
+            },
+            "illustrated.age-of-sail.events.9": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.9.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.9.webp"
+            },
+            "illustrated.age-of-sail.events.10": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.10.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.10.webp"
+            },
+            "illustrated.age-of-sail.events.11": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.11.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.11.webp"
+            },
+            "illustrated.age-of-sail.events.12": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.12.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.12.webp"
+            },
+            "illustrated.age-of-sail.events.13": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.13.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.13.webp"
+            },
+            "illustrated.age-of-sail.events.14": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.14.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.14.webp"
+            },
+            "illustrated.age-of-sail.events.15": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.15.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.15.webp"
+            },
+            "illustrated.age-of-sail.events.16": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.16.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.16.webp"
+            },
+            "illustrated.age-of-sail.events.17": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.17.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.17.webp"
+            },
+            "illustrated.age-of-sail.events.18": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.18.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.18.webp"
+            },
+            "illustrated.age-of-sail.events.19": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.19.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.19.webp"
+            },
+            "illustrated.age-of-sail.events.20": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.20.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.20.webp"
+            },
+            "illustrated.age-of-sail.events.21": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.21.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.21.webp"
+            },
+            "illustrated.age-of-sail.events.22": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.22.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.22.webp"
+            },
+            "illustrated.age-of-sail.events.23": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.23.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.23.webp"
+            },
+            "illustrated.age-of-sail.events.24": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.24.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.24.webp"
+            },
+            "illustrated.age-of-sail.events.25": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.25.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.25.webp"
+            },
+            "illustrated.age-of-sail.events.26": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.26.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.26.webp"
+            },
+            "illustrated.age-of-sail.events.27": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.27.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.27.webp"
+            },
+            "illustrated.age-of-sail.events.28": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.28.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.28.webp"
+            },
+            "illustrated.age-of-sail.events.29": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.29.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.29.webp"
+            },
+            "illustrated.age-of-sail.events.30": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/events.30.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/events.30.webp"
+            },
+            "illustrated.age-of-sail.scenes.1": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/scenes.1.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/scenes.1.webp"
+            },
+            "illustrated.age-of-sail.scenes.2": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/scenes.2.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/scenes.2.webp"
+            },
+            "illustrated.age-of-sail.scenes.3": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/scenes.3.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/scenes.3.webp"
+            },
+            "illustrated.age-of-sail.scenes.4": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/scenes.4.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/scenes.4.webp"
+            },
+            "illustrated.age-of-sail.scenes.5": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/scenes.5.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/scenes.5.webp"
+            },
+            "illustrated.age-of-sail.scenes.6": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/scenes.6.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/scenes.6.webp"
+            },
+            "illustrated.age-of-sail.scenes.7": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/scenes.7.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/scenes.7.webp"
+            },
+            "illustrated.age-of-sail.scenes.8": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/scenes.8.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/scenes.8.webp"
+            },
+            "illustrated.age-of-sail.scenes.9": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/scenes.9.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/scenes.9.webp"
+            },
+            "illustrated.age-of-sail.scenes.10": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/scenes.10.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/scenes.10.webp"
+            },
+            "illustrated.age-of-sail.scenes.11": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/scenes.11.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/scenes.11.webp"
+            },
+            "illustrated.age-of-sail.scenes.12": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/scenes.12.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/scenes.12.webp"
+            },
+            "illustrated.age-of-sail.scenes.13": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/scenes.13.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/scenes.13.webp"
+            },
+            "illustrated.age-of-sail.scenes.14": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/scenes.14.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/scenes.14.webp"
+            },
+            "illustrated.age-of-sail.scenes.15": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/scenes.15.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/scenes.15.webp"
+            },
+            "illustrated.age-of-sail.scenes.16": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/scenes.16.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/scenes.16.webp"
+            },
+            "illustrated.age-of-sail.scenes.17": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/scenes.17.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/scenes.17.webp"
+            },
+            "illustrated.age-of-sail.scenes.18": {
+              "background": "assets/age-of-sail/illustrated-1.1.0/scenes.18.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/scenes.18.webp"
+            },
+            "illustrated.age-of-sail.archetypes.1": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/archetypes.1.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/archetypes.1.webp"
+            },
+            "illustrated.age-of-sail.archetypes.2": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/archetypes.2.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/archetypes.2.webp"
+            },
+            "illustrated.age-of-sail.archetypes.3": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/archetypes.3.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/archetypes.3.webp"
+            },
+            "illustrated.age-of-sail.archetypes.4": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/archetypes.4.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/archetypes.4.webp"
+            },
+            "illustrated.age-of-sail.archetypes.5": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/archetypes.5.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/archetypes.5.webp"
+            },
+            "illustrated.age-of-sail.archetypes.6": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/archetypes.6.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/archetypes.6.webp"
+            },
+            "illustrated.age-of-sail.archetypes.7": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/archetypes.7.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/archetypes.7.webp"
+            },
+            "illustrated.age-of-sail.archetypes.8": {
+              "portrait": "assets/age-of-sail/illustrated-1.1.0/archetypes.8.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/archetypes.8.webp"
+            },
+            "illustrated.age-of-sail.progressionPaths.1": {
+              "card": "assets/age-of-sail/illustrated-1.1.0/progressionPaths.1.webp"
+            },
+            "illustrated.age-of-sail.progressionPaths.2": {
+              "card": "assets/age-of-sail/illustrated-1.1.0/progressionPaths.2.webp"
+            },
+            "illustrated.age-of-sail.progressionPaths.3": {
+              "card": "assets/age-of-sail/illustrated-1.1.0/progressionPaths.3.webp"
+            },
+            "illustrated.age-of-sail.progressionPaths.4": {
+              "card": "assets/age-of-sail/illustrated-1.1.0/progressionPaths.4.webp"
+            },
+            "illustrated.age-of-sail.progressionPaths.5": {
+              "card": "assets/age-of-sail/illustrated-1.1.0/progressionPaths.5.webp"
+            },
+            "illustrated.age-of-sail.progressionPaths.6": {
+              "card": "assets/age-of-sail/illustrated-1.1.0/progressionPaths.6.webp"
+            },
+            "illustrated.age-of-sail.visualThemes.1": {
+              "map": "assets/age-of-sail/illustrated-1.1.0/visualThemes.1.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/visualThemes.1.webp"
+            },
+            "illustrated.age-of-sail.visualThemes.2": {
+              "map": "assets/age-of-sail/illustrated-1.1.0/visualThemes.2.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/visualThemes.2.webp"
+            },
+            "illustrated.age-of-sail.visualThemes.3": {
+              "map": "assets/age-of-sail/illustrated-1.1.0/visualThemes.3.webp",
+              "card": "assets/age-of-sail/illustrated-1.1.0/visualThemes.3.webp"
+            }
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "illustrated-age-of-sail"
+  }
+}

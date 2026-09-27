@@ -1,0 +1,1890 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.mecha.visuals",
+  "version": "1.1.0",
+  "type": "visuals",
+  "name": "Rainwall Frame Schematics — Illustrated",
+  "description": "Rainwall Frame Schematics for Defense Metropolis, Colony Rebellion, Machine-Wreck Frontier. Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.",
+  "tags": [
+    "mecha-kaiju",
+    "defense-metropolis",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Rainwall Frame Schematics for Defense Metropolis, Colony Rebellion, Machine-Wreck Frontier. Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.",
+    "highlights": [
+      "Rainwall Frame Schematics",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.mecha-kaiju"
+    ],
+    "requiresCapabilities": [
+      "setting:mecha-kaiju"
+    ],
+    "providesCapabilities": [
+      "visuals:mecha-kaiju"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.mecha.setting",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Mecha & Kaiju original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.mecha.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 151
+  },
+  "media": [
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/factions.1.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/factions.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "a4267a4679a37b31645fa5d4b119021ca3e1fcb9ce96c52b933714c8e63c2a0b",
+      "size": 45766
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/factions.2.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/factions.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "743176674035ff1ecd951730381e4dc96d0b18e9a0342486fdfe15e747d62b36",
+      "size": 45442
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/factions.3.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/factions.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "e31e1e1874c97a9b94b9a2732468c2f6149ac65d84ec4bedcdaf078aa70f516b",
+      "size": 45792
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/factions.4.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/factions.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "e4f6abf821cba6628e682274173632e5be31b5066edfda9d340947d2713da167",
+      "size": 46422
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/factions.5.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/factions.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "153cef468a510c005883156f74045f9ffe8bd6c2662261b9156839cb988e82bd",
+      "size": 46456
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/factions.6.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/factions.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "a4e02bf76b6c3f456a09d941bc731aef6c450e61cb05d35ad89eddea8d8ba679",
+      "size": 46298
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/factions.7.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/factions.7.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "235c3c991d8db933c3cab12b2746916cc1e4399827bbd5f7fb898069ae49df90",
+      "size": 46010
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/factions.8.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/factions.8.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "f7944e19360c056e14fbe7ccbd7cdd5c31cc0b5e24a9336ab972a12c9c7bc6b9",
+      "size": 45408
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/locations.1.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/locations.1.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "faba47761503da9329c652b68e892c76b728b0a66f711832336cf62204f4fb43",
+      "size": 47038
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/locations.2.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/locations.2.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "7e94915e79be2cd18cfe624fb6fd31984c7df4dacded417d503c64b526d62dc1",
+      "size": 45818
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/locations.3.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/locations.3.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "8db807b52c155ccb7754fd56d2b6e8325620f89fcf9e87d253afbf2b5406e086",
+      "size": 45960
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/locations.4.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/locations.4.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "f90c8eccfd6f6d0fe197981e2f15dbf79345bdf3f9cb1681ef74ed7b70f71354",
+      "size": 46552
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/locations.5.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/locations.5.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "ac7d500b13b60ebd41974217d1cbce2c39d5c1351bd20666a65c8a4b62c7e1b4",
+      "size": 46678
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/locations.6.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/locations.6.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "5cadadfcb0c943dc99f51bd4682e90b015a9a3786e7e887194724b9a5eb276f9",
+      "size": 46002
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/locations.7.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/locations.7.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "f727532dfd80f372d1c4db3c363cf67944edbf28be459c73ba227a90ea0f0e17",
+      "size": 46222
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/locations.8.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/locations.8.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "51b31bfda45ce45c438b908ac97ab1f2e5ed2c8b0cc5a21a6062fa623ed7ed02",
+      "size": 46740
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/locations.9.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/locations.9.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "486dc70eb34c05a6365dc2c4ca446233e79e43d2f90bcdafbeee9ea578eea883",
+      "size": 47124
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/locations.10.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/locations.10.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "22de47ab0212635eaa56d395f4a758587a916beca4abac0ef99c9a406bbcc610",
+      "size": 46184
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/locations.11.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/locations.11.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "abcb2ade8b852d65f35555ec48afad08a2ec66010fb4da771e5379696fc8a2c9",
+      "size": 46558
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/locations.12.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/locations.12.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "111855e80c7d0fb7cad839c49108f45c5b570b79d7e1df2cabb956abd5bb2fa0",
+      "size": 46168
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.1.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "56fb3afbcb2c24d114d4629ad4e55a31e827a0a8c162103ce068f6f5ba4fef63",
+      "size": 46310
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.2.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "c9129c218aa4142bdfcb6f2e244c4d7502e86a558f8c7e6b6ea63e3d76a1f9f4",
+      "size": 45394
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.3.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "8283a5e3b358a9b36192c7154ffd17a4f13bddcae6d39863f0520226020f413b",
+      "size": 45550
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.4.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "998215951846a741ad08ffdde9293d3a093f03a1c86bbb99581686cac256f376",
+      "size": 47168
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.5.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "351b0f780ea284eba85166a08986d1e04580d618e1e0c4e9aecea007dcc1ee99",
+      "size": 46792
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.6.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "36760731b1db191fba751f37c5c900f412b0ff305044c6a248255d5ee11c8544",
+      "size": 45824
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.7.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "9245841552920075a262c98a5ee719d84c276dff5dd21a27b47677ff752d1e40",
+      "size": 46264
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.8.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "abf7df8e69985f9722570682d06e682592ebe2fc8da80d783305b11f664d5c3f",
+      "size": 46570
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.9.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.9.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "620100c656faa3e4df7744b058c3f176ee54fd2a7a3a4c642825b1ec764a05e7",
+      "size": 46062
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.10.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.10.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "a5c0a3a56338f78177ab8cf52f20883085a4f002bf23bbe76414f59319b5d4ce",
+      "size": 45726
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.11.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.11.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "55c8ad0e48615c91c39ab00beaa6d6cfc009877576a3aae326deeb95f65159cb",
+      "size": 46262
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.12.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.12.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "d51436a153a756df3d85665520a2e1fdbfe7019cd28418c7653dc45b4a380a27",
+      "size": 44978
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.13.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.13.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "6ab04a68145501ec9d6044b23154bbcf6f2223667c1847e2b9bb92585a8b284b",
+      "size": 46736
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.14.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.14.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "d649506da0cf9678287ce5e370c41802f1259afcd9d5e098993d439545802c91",
+      "size": 46298
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.15.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.15.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "e2fa88eb338fdda737f80a9fe27d65b50a3a4194a367d8b28a9ea14cb62e2b9a",
+      "size": 45510
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.16.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.16.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "ba57122e057149385f253b0159a618dc55d01c61638639a960e62c7bda50e7fd",
+      "size": 47298
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.17.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.17.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "12cff3804740d3cb34b971233dc294ec224e31edea8b1ff23dfae7dee5aafbc8",
+      "size": 45662
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.18.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.18.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "40ad9e1427712ccd280824bad1a57939c1158d91120fded530976b673b9d8cc9",
+      "size": 45272
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.19.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.19.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "63b161ef5192043ea996d5f33e2eb67635e66daa134cb56e2a59c3d8f94a630c",
+      "size": 46054
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.20.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.20.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "1d4b6c9b392322b8b26a3f412beb826bec11db012e108ab5edca18a3ab818ca7",
+      "size": 46978
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.21.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.21.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "43d120391203ca91d37ba6701a9e5dffc181073201ae92f9bba5a983dfd669e1",
+      "size": 46030
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.22.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.22.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "2a5072cede6ebb5ccac9da3ccad11e4dd67c43af9b757c427b3d7a1b27636b40",
+      "size": 45650
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.23.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.23.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "8bfe6166a89b3e954ff1afb10018c069647cf5b38adeb30242c963461f41d8fd",
+      "size": 45994
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/npcs.24.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/npcs.24.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "1042f9ed844c06c282cb605b57f708a1111ad7daf4a393404fa7d5ca4b94b7f1",
+      "size": 45106
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/adversaries.1.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/adversaries.1.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "bd8aae14572461e70d2f7573cfbcfcdf3d462641590d3244546ef7bda45e33fa",
+      "size": 44802
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/adversaries.2.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/adversaries.2.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "31fd7745bbb478c7c19a4adc255d1bbbc04bfd33139fad17b6070ab011ccb09b",
+      "size": 45628
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/adversaries.3.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/adversaries.3.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "d5bcf35dccbbe2841142dd7ca47b8e6b47e38b9db6a8ecfa3df053fe9510c56a",
+      "size": 45952
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/adversaries.4.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/adversaries.4.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "18bcba4a2afc689f142dc77955a82b7842a9ab1114dc7a991316eb0b3e89e937",
+      "size": 45284
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/adversaries.5.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/adversaries.5.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "92ee11408fcf18d55afb405bd48b22c53bf4aa486f54e3a9e1656193dd6c29aa",
+      "size": 45400
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/adversaries.6.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/adversaries.6.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "c367e416a1d085b98cdf55590ea1b809c08b11b21fe8289dfbdce4227485f062",
+      "size": 46084
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/adversaries.7.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/adversaries.7.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "f481417c3bff7f6243bab658b2beaa3d87a892d5c0d0b99c7599b8dfde3fd8f6",
+      "size": 46622
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/adversaries.8.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/adversaries.8.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "8f9e04181f266c3ad298c38b84bf36cb1647d42f0fadf85e17594cbaf17f3830",
+      "size": 46034
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/adversaries.9.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/adversaries.9.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "8519f225557820091cdc1848b15e0f03bb70891df6f0385d5a9cdf3b784d41dc",
+      "size": 45280
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/adversaries.10.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/adversaries.10.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "fdc105c166b2fdb89343ee5ddb2385302b3eb346011dedc0b210a4c56080dfff",
+      "size": 46078
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/adversaries.11.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/adversaries.11.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "83542d34d8592bd95f2176424445ad61882a481b1876cfc0ee8b7f83a26509ee",
+      "size": 45510
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/adversaries.12.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/adversaries.12.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "9ffed5165bff48b11748cb06db6451455e78de3e625d2fc9048697c63f8c4bec",
+      "size": 45388
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/adversaries.13.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/adversaries.13.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "33fc18948d5636f79bac44482ffb7e39fe433073887ac24f56feec60d59a1239",
+      "size": 45030
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/adversaries.14.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/adversaries.14.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "b60004ce67cf1003abed539a5e9f37c1a2dc85f48be3f59a0bb338459011de71",
+      "size": 45700
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/adversaries.15.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/adversaries.15.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "a8f2dd9e77db69a1fc2ccc369a534ebad3e634317e3aae88daadf158b6f19044",
+      "size": 45624
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/adversaries.16.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/adversaries.16.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "995ee6cf90e759973ea2bb1c54566ab79f5437d383b124b05ce0a5a713e62cd4",
+      "size": 44790
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/adversaries.17.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/adversaries.17.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "29e910eeff0510907d8ae200496f169aa8043d383de9f16dcbab3f1c0d0019d6",
+      "size": 46456
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/adversaries.18.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/adversaries.18.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "9f01d242c451634a2dd601f3d6de6219a0eac1d7034cf4bb3d2be8fb0df61d03",
+      "size": 45452
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.1.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.1.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "02b2113f9bf4a511d2e38e69f3b7219889a87712c7d6bab7392eea1ce78fc2a6",
+      "size": 46440
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.2.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.2.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "c5899f7a66a42e266bfeb87b0d4a3d58dcf4df3c04c71d05b41899415ff9238f",
+      "size": 45960
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.3.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.3.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "0af4518f2e067e22e8c7f3c246a6cae16caf231c6e0a9eb50d7f8351217fb8e2",
+      "size": 46358
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.4.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.4.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "d0630620d131de09bfa120d9769231f4796f1848e6241084d900db7569cd8904",
+      "size": 46212
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.5.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.5.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "b1f94f3db132401b99265e3fa45584843424d285ffeb6691c756f92d3a3e5c2b",
+      "size": 46672
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.6.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.6.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "e101805ff4f65bf6ded3b01096283f24ad183e70611e15165fa28b8b587b542e",
+      "size": 46458
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.7.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.7.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "db8f998b6b1c2a640d906b0eeaded5d3565981650ffa283a3603c181916aa428",
+      "size": 45982
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.8.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.8.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "fb8980414596f00961fb9751b3735b13654463e0c39293c8537d14f4a081350a",
+      "size": 45584
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.9.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.9.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "cf8931c4ec7366c756d39debee207c40a2643c1491be5af26ddf342d92d4c47d",
+      "size": 46054
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.10.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.10.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "fed61102abbaf8bca87b0cb3787f45f79faf6220d981728ee953a8b8eec0be04",
+      "size": 46192
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.11.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.11.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "07959351ac86026f4636984eb44da8692cb44d0d8808319ec8c8eaa8a9a2ae57",
+      "size": 45974
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.12.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.12.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "b5c4c64dc5fdcd7e51b63d8ab6c1f66bb113fc66209de29cd96055402e006c77",
+      "size": 46524
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.13.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.13.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "117948905ee24e08bd8741f887223d00088ecdb09f9b2f453a21cedab80d13b9",
+      "size": 46326
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.14.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.14.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "65678b9e233b4f1f803ea8dcce98596342fc6a41d58520d482d4f2421f2f897d",
+      "size": 48028
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.15.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.15.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "f32f619911ef7972d14b081edde0a96946378c25ef39478dface3ef4774e5676",
+      "size": 46554
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.16.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.16.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "d375495dd1343cd6dd62f3d25b4006b2461a4251ab3fce9498ae472aae51076a",
+      "size": 45136
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.17.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.17.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "4afeef6d76de875d9c899be737420d16d7d9f6c951992647da46cb5f0529924b",
+      "size": 45494
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.18.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.18.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "403427e7f587820c9c39d518014e9c293f18437d822e7d3bf90f500107e1c506",
+      "size": 44980
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.19.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.19.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "114a96a3695f8d3241fb1269e4b33639dcfc08df97b2cfec2acc1b51a4712af3",
+      "size": 46416
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.20.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.20.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "22476ba8e8bc698a1778219241efaa11a8f949aa0ffc2b5f9000e804a1355fac",
+      "size": 45988
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.21.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.21.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "3dae568c733a51943127523b9e1b00273b7116a8caf1da84ac3f1bc8ad968860",
+      "size": 46082
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.22.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.22.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "db0c33ab4768881653481232a7342e4fcb271252546d637c430451e3eec796e3",
+      "size": 46734
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.23.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.23.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "48668d94c7e1bbe2267479dc0cc8b99ed892311d1428bd4c3b6905ca04d143cb",
+      "size": 44844
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/items.24.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/items.24.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "7627224476ed3038071bcee0a3cc13f83dfa0a13d842611cc07280fc47f827b0",
+      "size": 46174
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.1.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "babf338b6012eccdf25a758ab642a56958a92d3ef3d09fafc69cb842e4e7645c",
+      "size": 47260
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.2.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "311c62b563b84d7ec01253fb4a08fad404ac420c76c1a32f120262f180636441",
+      "size": 46460
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.3.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ed7718b94b71c8bef090f309cef1c9cf94f1e4d3a06ef526f0ea04052dca6ba9",
+      "size": 46376
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.4.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "37b92dab2c16a1d3e54f777352d65e35ecf73d51689c08836fc208150d03fc1f",
+      "size": 46340
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.5.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "060f2cb0086006a8404f8ba674bd42ca40495808b0f3be779d450431b8afbf9e",
+      "size": 45930
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.6.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "05d40a6a07ac2a4dc6f51154a583f2bb95ccc8058292c47a1fb760808dd97f35",
+      "size": 45576
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.7.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "940fe02988f491436ee99a7857d9a277f60706b24cd9f973e8c9594e31467aaf",
+      "size": 46386
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.8.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "aaf0dacb281d60c1c418d9c7b4db86ab259f23fca117afaae1f9d6b19d4affb8",
+      "size": 46260
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.9.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "555cc46177162f3d354263170bbebed9a4c03ae545fc8baae1ebdd20c50bc797",
+      "size": 46694
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.10.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "3d079ba3974be53abee5bb3d1f4adcbc27bc49d939d7f98b2f859b7014c16978",
+      "size": 47010
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.11.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "2ce098b7f047149fadc7158ad18ef6ec0b89b4e0c00483f74bbf9375a4e29e4d",
+      "size": 46304
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.12.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "03f107966d56e59a4c336788f9fdccd5bd2cf8f20309acd3b2c2f5f5c9585000",
+      "size": 47202
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.13.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "e16c13a90ba69eba05a0b7a4afdef2fc347747cc483545cdc096f2d71ffdf9ad",
+      "size": 45990
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.14.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "8950eabc1a1b7f13b5d07bfaa94285883d7ad2d883946381ea8b4ecbee8c53be",
+      "size": 47406
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.15.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "2852b5e2f02533dbba7a1eb933edb82e52f08698c30f864fc4fd2ea1e87a556f",
+      "size": 46906
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.16.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "370cce4df3a65e4edd7c87ddf07f0a6c54e056b3ea530ba4d7496f67dc2034f9",
+      "size": 46516
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.17.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "849a0cb76798846a98320a6e38ca1b2578e4d5a71b96aa6004095cfb102142d0",
+      "size": 46304
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.18.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "d1bc79b4ba539bdfae7cbad9bc418dd6f7cbfd09494c4e3fa1dad34b166e7057",
+      "size": 46008
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.19.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.19.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "1dd83ebcb7fa42cd10dbe1ebdb94f6b0f557b86e2f8d5de533e7e2dab2ce9d83",
+      "size": 47294
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.20.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.20.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "95b383dfe35c010b6b358f1884813a5b2c162407a6e3223099d1d7ed74a7110e",
+      "size": 46258
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.21.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.21.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "8acbd760c96a640d8121109c336d3a97a5bc756dc836659d49c60a940bb191c3",
+      "size": 46632
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.22.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.22.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "67c01f1b6294da39b5488d4ba3f80f610fe51e5454fb72a11dde67b21d20bbae",
+      "size": 46378
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.23.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.23.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b2dca6b6eff939abd3ca8fc23bf8b76ade895f51602180684cb80532c67bc925",
+      "size": 46042
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.24.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.24.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "29ba37f9cce29dd8c7521ac247f9fa845ea0691d876d35dfee61e8d3dff22364",
+      "size": 46286
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.25.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.25.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4bb5aed64930db761a0803e0cc4c6e637e517154ed708280470dbf55da85a98c",
+      "size": 46626
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.26.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.26.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "147b4ee9d91df38f183dcc8ce360f75cab51e68113d9b6df1d2e311cdbc54703",
+      "size": 46132
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.27.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.27.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "73ad4d8eb7e0ba374a08893c325abcd60aeade33905198230ba3dd1e5e1dc54f",
+      "size": 46282
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.28.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.28.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "026aa7061685c31ab509b3c10ee5c7b7f92a52a1f9f3f357607bd264ed3951d0",
+      "size": 45988
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.29.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.29.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "26442d81fbd04f099f858329ee661d9663b8c1a65502999b420b03cef9c3bae5",
+      "size": 46922
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/events.30.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/events.30.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "98da5442ef61188a6c8ca40a029ccf0e9e25f38ebafbac5827fd3e903dcd1791",
+      "size": 46108
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/scenes.1.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/scenes.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "14ac55534ee87af7b216ba7b1fa6f99c67f2ecea296f7bad1a0d0336ab6aa17c",
+      "size": 46346
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/scenes.2.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/scenes.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "d1bd1c4c04a7fc256c66e3c11869de05388abc380d6e78ee0d7b4a8361074648",
+      "size": 46382
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/scenes.3.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/scenes.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "6b5a2c21380495ede13512a29d0f479c2f1e0073bda75de8f293d894e0a011a9",
+      "size": 46204
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/scenes.4.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/scenes.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "752fec1028e375bcd18b282e6a3d2c05b7015ae229c222612753588e92433ff2",
+      "size": 46626
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/scenes.5.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/scenes.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "3cb8799a68cfcadfbfb9119049a1df9b930507b527103bcbbe384daa764bb1ae",
+      "size": 44840
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/scenes.6.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/scenes.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "3320c5e5cc612ebee63776aabfb477b1e680a52e13db9a8a721a5c4e2731588f",
+      "size": 46990
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/scenes.7.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/scenes.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4cde8b870837889ceabd51b49fb257b4502e0bc062003317eb5f6d2e1f6c2043",
+      "size": 46440
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/scenes.8.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/scenes.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "0bc3f674f87757a678cebe796a7ca092f0cae5aeb832b13c88c05ab6840085fb",
+      "size": 46466
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/scenes.9.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/scenes.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "be5bb537e976e843dd194b05b20a177465fa3c989c059f18510d34a7b840b0b5",
+      "size": 46502
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/scenes.10.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/scenes.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a93ae93cf1b37c804f5ecacbb39079af1c88ec442d9f0341684e0a61d22b0179",
+      "size": 46226
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/scenes.11.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/scenes.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "42418ac06cf9eb727167897a168c630b9e8bf19393002a5480b705032e1959ee",
+      "size": 46678
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/scenes.12.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/scenes.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "2bbf745125e0349aee4bb1ec5149531b55f55bb8cff00918ac54c7580988ae0f",
+      "size": 45816
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/scenes.13.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/scenes.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "958d9de44d7faa923c787dff8887812253a9b9b9c9c09f6b6de6e7f01540f1ef",
+      "size": 47064
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/scenes.14.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/scenes.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4e6a3b274fb3a233bbe183a9d4d7af8a8ae5876682df24e18c887d01a9260a90",
+      "size": 46392
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/scenes.15.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/scenes.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "eba3ff189b8c7f687984ebe9e52bf8ff4b11d204358851de0aeefbb27a69c16e",
+      "size": 46860
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/scenes.16.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/scenes.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "62714af9721f5d202bac46bf26d9b07265dbfced0b406515563297e3bb165d7a",
+      "size": 46764
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/scenes.17.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/scenes.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a58f33b024df69e1359f0ae9fb6892c700b5b40d2f8d9ecfc69625c868afe0c1",
+      "size": 46216
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/scenes.18.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/scenes.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "197861b43f5b07cb245c0ca6df80935d1920d3b859b839b99cee911511946b28",
+      "size": 46272
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/archetypes.1.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/archetypes.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "e341078ed4e57a0d7672a4e92eafba21d4a41524b3d76a21cd12e7d4ccdde89a",
+      "size": 44820
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/archetypes.2.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/archetypes.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "aff6f42ee2309f1f0f14cdc2b182030f673d5b9a1a9add5a0b7bb8bb751f6b47",
+      "size": 45380
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/archetypes.3.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/archetypes.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "2b99fb5fb92abc167f960b344ed60b0399d71074c9367f8bd873bfad762cbd20",
+      "size": 44900
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/archetypes.4.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/archetypes.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "9170ff34ae13fdcca978c0ac81f84bd787175e20513467118c96987d403c6236",
+      "size": 45840
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/archetypes.5.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/archetypes.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "d0ba076b07e37e709415dce99a069527369de2be5af8d68835fd1cedff9ebeab",
+      "size": 45692
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/archetypes.6.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/archetypes.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "e5e5b5c30fc13eb619c057d4ca7342f12fa56ed9178d7d6acfaf740c342763cf",
+      "size": 44800
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/archetypes.7.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/archetypes.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "85aa123811681a1506e8dc3bebf01d90d2f9a897050b674c51de9551787092d5",
+      "size": 45640
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/archetypes.8.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/archetypes.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "8c39650179db4a4a7c61e80a06fcff8d4d9d7fd971984782f7315f73d1c9bd0d",
+      "size": 45868
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/progressionPaths.1.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/progressionPaths.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "772e8f5ad4016d2446919f551479252639993417dd1d9302219602ebfc1c39cd",
+      "size": 45768
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/progressionPaths.2.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/progressionPaths.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "4116879cf68d7cf533e7033179cd59c2ed6ba48f5d53346c087499a747219364",
+      "size": 46390
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/progressionPaths.3.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/progressionPaths.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "1e5515c68c41dfee8de613edaf1c9561211459488fe282613dd1d92161d2295a",
+      "size": 45534
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/progressionPaths.4.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/progressionPaths.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "8a2b5cf2a5c6ee80a53fcba6f62e637f908106f96f5a73e0b819e57abd9aa272",
+      "size": 46492
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/progressionPaths.5.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/progressionPaths.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "9ae1a164cb68f00551b47fa611b39e6d38bb9af8fb7f8aef054987e89ed50c35",
+      "size": 46516
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/progressionPaths.6.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/progressionPaths.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "3870aaaeacdbf46c0cc5c17ce2f9398d3695b22b3b56cec5b75d23371b0ad152",
+      "size": 45370
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/visualThemes.1.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/visualThemes.1.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "a3a805ff711538b7a4407f75e7d99a3ea7163434ff1eda6ae21648c95725a866",
+      "size": 44564
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/visualThemes.2.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/visualThemes.2.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "6736a1df5801d2e3d89fc7c472eb8eac5499c0374fc5bfc8fedd8c717fadfac7",
+      "size": 45194
+    },
+    {
+      "name": "mecha-kaiju/illustrated-1.1.0/visualThemes.3.webp",
+      "path": "media/mecha-kaiju/illustrated-1.1.0/visualThemes.3.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "cf244cf4f11e2c629da364db9e40b99d9606028b67a2c8f5b2306aaa4802bfba",
+      "size": 44610
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.mecha.visuals",
+    "version": "1.1.0",
+    "name": "Rainwall Frame Schematics — Illustrated",
+    "description": "Rainwall Frame Schematics for Defense Metropolis, Colony Rebellion, Machine-Wreck Frontier. Three original frame campaigns: coastal evacuation under a narrow firing arc, independent civilian oxygen access and consensual salvage of living giants.",
+    "provides": [
+      "visuals:mecha-kaiju"
+    ],
+    "requires": [
+      "setting:mecha-kaiju"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/illustrated-mecha-kaiju",
+        "value": {
+          "id": "illustrated-mecha-kaiju",
+          "name": "Illustrated mecha-kaiju",
+          "description": "Individual generated illustrations for every authored content object",
+          "defaults": {
+            "background": "assets/mecha-kaiju/illustrated-1.1.0/scenes.1.webp",
+            "card": "assets/mecha-kaiju/illustrated-1.1.0/scenes.1.webp",
+            "map": "assets/mecha-kaiju/illustrated-1.1.0/visualThemes.1.webp",
+            "portrait": "assets/mecha-kaiju/illustrated-1.1.0/archetypes.1.webp",
+            "token": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.1.webp",
+            "item": "assets/mecha-kaiju/illustrated-1.1.0/items.1.webp",
+            "location": "assets/mecha-kaiju/illustrated-1.1.0/locations.1.webp"
+          },
+          "families": {
+            "illustrated.mecha-kaiju.factions.1": {
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/factions.1.webp"
+            },
+            "illustrated.mecha-kaiju.factions.2": {
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/factions.2.webp"
+            },
+            "illustrated.mecha-kaiju.factions.3": {
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/factions.3.webp"
+            },
+            "illustrated.mecha-kaiju.factions.4": {
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/factions.4.webp"
+            },
+            "illustrated.mecha-kaiju.factions.5": {
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/factions.5.webp"
+            },
+            "illustrated.mecha-kaiju.factions.6": {
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/factions.6.webp"
+            },
+            "illustrated.mecha-kaiju.factions.7": {
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/factions.7.webp"
+            },
+            "illustrated.mecha-kaiju.factions.8": {
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/factions.8.webp"
+            },
+            "illustrated.mecha-kaiju.locations.1": {
+              "location": "assets/mecha-kaiju/illustrated-1.1.0/locations.1.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/locations.1.webp"
+            },
+            "illustrated.mecha-kaiju.locations.2": {
+              "location": "assets/mecha-kaiju/illustrated-1.1.0/locations.2.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/locations.2.webp"
+            },
+            "illustrated.mecha-kaiju.locations.3": {
+              "location": "assets/mecha-kaiju/illustrated-1.1.0/locations.3.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/locations.3.webp"
+            },
+            "illustrated.mecha-kaiju.locations.4": {
+              "location": "assets/mecha-kaiju/illustrated-1.1.0/locations.4.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/locations.4.webp"
+            },
+            "illustrated.mecha-kaiju.locations.5": {
+              "location": "assets/mecha-kaiju/illustrated-1.1.0/locations.5.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/locations.5.webp"
+            },
+            "illustrated.mecha-kaiju.locations.6": {
+              "location": "assets/mecha-kaiju/illustrated-1.1.0/locations.6.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/locations.6.webp"
+            },
+            "illustrated.mecha-kaiju.locations.7": {
+              "location": "assets/mecha-kaiju/illustrated-1.1.0/locations.7.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/locations.7.webp"
+            },
+            "illustrated.mecha-kaiju.locations.8": {
+              "location": "assets/mecha-kaiju/illustrated-1.1.0/locations.8.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/locations.8.webp"
+            },
+            "illustrated.mecha-kaiju.locations.9": {
+              "location": "assets/mecha-kaiju/illustrated-1.1.0/locations.9.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/locations.9.webp"
+            },
+            "illustrated.mecha-kaiju.locations.10": {
+              "location": "assets/mecha-kaiju/illustrated-1.1.0/locations.10.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/locations.10.webp"
+            },
+            "illustrated.mecha-kaiju.locations.11": {
+              "location": "assets/mecha-kaiju/illustrated-1.1.0/locations.11.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/locations.11.webp"
+            },
+            "illustrated.mecha-kaiju.locations.12": {
+              "location": "assets/mecha-kaiju/illustrated-1.1.0/locations.12.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/locations.12.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.1": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.1.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.1.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.2": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.2.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.2.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.3": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.3.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.3.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.4": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.4.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.4.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.5": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.5.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.5.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.6": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.6.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.6.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.7": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.7.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.7.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.8": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.8.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.8.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.9": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.9.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.9.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.10": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.10.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.10.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.11": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.11.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.11.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.12": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.12.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.12.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.13": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.13.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.13.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.14": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.14.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.14.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.15": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.15.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.15.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.16": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.16.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.16.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.17": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.17.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.17.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.18": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.18.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.18.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.19": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.19.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.19.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.20": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.20.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.20.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.21": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.21.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.21.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.22": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.22.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.22.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.23": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.23.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.23.webp"
+            },
+            "illustrated.mecha-kaiju.npcs.24": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/npcs.24.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/npcs.24.webp"
+            },
+            "illustrated.mecha-kaiju.adversaries.1": {
+              "token": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.1.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.1.webp"
+            },
+            "illustrated.mecha-kaiju.adversaries.2": {
+              "token": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.2.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.2.webp"
+            },
+            "illustrated.mecha-kaiju.adversaries.3": {
+              "token": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.3.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.3.webp"
+            },
+            "illustrated.mecha-kaiju.adversaries.4": {
+              "token": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.4.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.4.webp"
+            },
+            "illustrated.mecha-kaiju.adversaries.5": {
+              "token": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.5.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.5.webp"
+            },
+            "illustrated.mecha-kaiju.adversaries.6": {
+              "token": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.6.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.6.webp"
+            },
+            "illustrated.mecha-kaiju.adversaries.7": {
+              "token": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.7.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.7.webp"
+            },
+            "illustrated.mecha-kaiju.adversaries.8": {
+              "token": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.8.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.8.webp"
+            },
+            "illustrated.mecha-kaiju.adversaries.9": {
+              "token": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.9.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.9.webp"
+            },
+            "illustrated.mecha-kaiju.adversaries.10": {
+              "token": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.10.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.10.webp"
+            },
+            "illustrated.mecha-kaiju.adversaries.11": {
+              "token": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.11.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.11.webp"
+            },
+            "illustrated.mecha-kaiju.adversaries.12": {
+              "token": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.12.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.12.webp"
+            },
+            "illustrated.mecha-kaiju.adversaries.13": {
+              "token": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.13.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.13.webp"
+            },
+            "illustrated.mecha-kaiju.adversaries.14": {
+              "token": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.14.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.14.webp"
+            },
+            "illustrated.mecha-kaiju.adversaries.15": {
+              "token": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.15.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.15.webp"
+            },
+            "illustrated.mecha-kaiju.adversaries.16": {
+              "token": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.16.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.16.webp"
+            },
+            "illustrated.mecha-kaiju.adversaries.17": {
+              "token": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.17.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.17.webp"
+            },
+            "illustrated.mecha-kaiju.adversaries.18": {
+              "token": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.18.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/adversaries.18.webp"
+            },
+            "illustrated.mecha-kaiju.items.1": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.1.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.1.webp"
+            },
+            "illustrated.mecha-kaiju.items.2": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.2.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.2.webp"
+            },
+            "illustrated.mecha-kaiju.items.3": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.3.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.3.webp"
+            },
+            "illustrated.mecha-kaiju.items.4": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.4.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.4.webp"
+            },
+            "illustrated.mecha-kaiju.items.5": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.5.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.5.webp"
+            },
+            "illustrated.mecha-kaiju.items.6": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.6.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.6.webp"
+            },
+            "illustrated.mecha-kaiju.items.7": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.7.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.7.webp"
+            },
+            "illustrated.mecha-kaiju.items.8": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.8.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.8.webp"
+            },
+            "illustrated.mecha-kaiju.items.9": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.9.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.9.webp"
+            },
+            "illustrated.mecha-kaiju.items.10": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.10.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.10.webp"
+            },
+            "illustrated.mecha-kaiju.items.11": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.11.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.11.webp"
+            },
+            "illustrated.mecha-kaiju.items.12": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.12.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.12.webp"
+            },
+            "illustrated.mecha-kaiju.items.13": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.13.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.13.webp"
+            },
+            "illustrated.mecha-kaiju.items.14": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.14.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.14.webp"
+            },
+            "illustrated.mecha-kaiju.items.15": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.15.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.15.webp"
+            },
+            "illustrated.mecha-kaiju.items.16": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.16.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.16.webp"
+            },
+            "illustrated.mecha-kaiju.items.17": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.17.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.17.webp"
+            },
+            "illustrated.mecha-kaiju.items.18": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.18.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.18.webp"
+            },
+            "illustrated.mecha-kaiju.items.19": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.19.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.19.webp"
+            },
+            "illustrated.mecha-kaiju.items.20": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.20.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.20.webp"
+            },
+            "illustrated.mecha-kaiju.items.21": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.21.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.21.webp"
+            },
+            "illustrated.mecha-kaiju.items.22": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.22.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.22.webp"
+            },
+            "illustrated.mecha-kaiju.items.23": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.23.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.23.webp"
+            },
+            "illustrated.mecha-kaiju.items.24": {
+              "item": "assets/mecha-kaiju/illustrated-1.1.0/items.24.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/items.24.webp"
+            },
+            "illustrated.mecha-kaiju.events.1": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.1.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.1.webp"
+            },
+            "illustrated.mecha-kaiju.events.2": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.2.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.2.webp"
+            },
+            "illustrated.mecha-kaiju.events.3": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.3.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.3.webp"
+            },
+            "illustrated.mecha-kaiju.events.4": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.4.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.4.webp"
+            },
+            "illustrated.mecha-kaiju.events.5": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.5.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.5.webp"
+            },
+            "illustrated.mecha-kaiju.events.6": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.6.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.6.webp"
+            },
+            "illustrated.mecha-kaiju.events.7": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.7.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.7.webp"
+            },
+            "illustrated.mecha-kaiju.events.8": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.8.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.8.webp"
+            },
+            "illustrated.mecha-kaiju.events.9": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.9.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.9.webp"
+            },
+            "illustrated.mecha-kaiju.events.10": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.10.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.10.webp"
+            },
+            "illustrated.mecha-kaiju.events.11": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.11.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.11.webp"
+            },
+            "illustrated.mecha-kaiju.events.12": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.12.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.12.webp"
+            },
+            "illustrated.mecha-kaiju.events.13": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.13.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.13.webp"
+            },
+            "illustrated.mecha-kaiju.events.14": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.14.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.14.webp"
+            },
+            "illustrated.mecha-kaiju.events.15": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.15.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.15.webp"
+            },
+            "illustrated.mecha-kaiju.events.16": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.16.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.16.webp"
+            },
+            "illustrated.mecha-kaiju.events.17": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.17.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.17.webp"
+            },
+            "illustrated.mecha-kaiju.events.18": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.18.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.18.webp"
+            },
+            "illustrated.mecha-kaiju.events.19": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.19.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.19.webp"
+            },
+            "illustrated.mecha-kaiju.events.20": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.20.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.20.webp"
+            },
+            "illustrated.mecha-kaiju.events.21": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.21.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.21.webp"
+            },
+            "illustrated.mecha-kaiju.events.22": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.22.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.22.webp"
+            },
+            "illustrated.mecha-kaiju.events.23": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.23.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.23.webp"
+            },
+            "illustrated.mecha-kaiju.events.24": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.24.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.24.webp"
+            },
+            "illustrated.mecha-kaiju.events.25": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.25.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.25.webp"
+            },
+            "illustrated.mecha-kaiju.events.26": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.26.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.26.webp"
+            },
+            "illustrated.mecha-kaiju.events.27": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.27.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.27.webp"
+            },
+            "illustrated.mecha-kaiju.events.28": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.28.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.28.webp"
+            },
+            "illustrated.mecha-kaiju.events.29": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.29.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.29.webp"
+            },
+            "illustrated.mecha-kaiju.events.30": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/events.30.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/events.30.webp"
+            },
+            "illustrated.mecha-kaiju.scenes.1": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/scenes.1.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/scenes.1.webp"
+            },
+            "illustrated.mecha-kaiju.scenes.2": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/scenes.2.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/scenes.2.webp"
+            },
+            "illustrated.mecha-kaiju.scenes.3": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/scenes.3.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/scenes.3.webp"
+            },
+            "illustrated.mecha-kaiju.scenes.4": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/scenes.4.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/scenes.4.webp"
+            },
+            "illustrated.mecha-kaiju.scenes.5": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/scenes.5.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/scenes.5.webp"
+            },
+            "illustrated.mecha-kaiju.scenes.6": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/scenes.6.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/scenes.6.webp"
+            },
+            "illustrated.mecha-kaiju.scenes.7": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/scenes.7.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/scenes.7.webp"
+            },
+            "illustrated.mecha-kaiju.scenes.8": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/scenes.8.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/scenes.8.webp"
+            },
+            "illustrated.mecha-kaiju.scenes.9": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/scenes.9.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/scenes.9.webp"
+            },
+            "illustrated.mecha-kaiju.scenes.10": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/scenes.10.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/scenes.10.webp"
+            },
+            "illustrated.mecha-kaiju.scenes.11": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/scenes.11.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/scenes.11.webp"
+            },
+            "illustrated.mecha-kaiju.scenes.12": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/scenes.12.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/scenes.12.webp"
+            },
+            "illustrated.mecha-kaiju.scenes.13": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/scenes.13.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/scenes.13.webp"
+            },
+            "illustrated.mecha-kaiju.scenes.14": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/scenes.14.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/scenes.14.webp"
+            },
+            "illustrated.mecha-kaiju.scenes.15": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/scenes.15.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/scenes.15.webp"
+            },
+            "illustrated.mecha-kaiju.scenes.16": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/scenes.16.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/scenes.16.webp"
+            },
+            "illustrated.mecha-kaiju.scenes.17": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/scenes.17.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/scenes.17.webp"
+            },
+            "illustrated.mecha-kaiju.scenes.18": {
+              "background": "assets/mecha-kaiju/illustrated-1.1.0/scenes.18.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/scenes.18.webp"
+            },
+            "illustrated.mecha-kaiju.archetypes.1": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/archetypes.1.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/archetypes.1.webp"
+            },
+            "illustrated.mecha-kaiju.archetypes.2": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/archetypes.2.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/archetypes.2.webp"
+            },
+            "illustrated.mecha-kaiju.archetypes.3": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/archetypes.3.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/archetypes.3.webp"
+            },
+            "illustrated.mecha-kaiju.archetypes.4": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/archetypes.4.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/archetypes.4.webp"
+            },
+            "illustrated.mecha-kaiju.archetypes.5": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/archetypes.5.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/archetypes.5.webp"
+            },
+            "illustrated.mecha-kaiju.archetypes.6": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/archetypes.6.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/archetypes.6.webp"
+            },
+            "illustrated.mecha-kaiju.archetypes.7": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/archetypes.7.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/archetypes.7.webp"
+            },
+            "illustrated.mecha-kaiju.archetypes.8": {
+              "portrait": "assets/mecha-kaiju/illustrated-1.1.0/archetypes.8.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/archetypes.8.webp"
+            },
+            "illustrated.mecha-kaiju.progressionPaths.1": {
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/progressionPaths.1.webp"
+            },
+            "illustrated.mecha-kaiju.progressionPaths.2": {
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/progressionPaths.2.webp"
+            },
+            "illustrated.mecha-kaiju.progressionPaths.3": {
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/progressionPaths.3.webp"
+            },
+            "illustrated.mecha-kaiju.progressionPaths.4": {
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/progressionPaths.4.webp"
+            },
+            "illustrated.mecha-kaiju.progressionPaths.5": {
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/progressionPaths.5.webp"
+            },
+            "illustrated.mecha-kaiju.progressionPaths.6": {
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/progressionPaths.6.webp"
+            },
+            "illustrated.mecha-kaiju.visualThemes.1": {
+              "map": "assets/mecha-kaiju/illustrated-1.1.0/visualThemes.1.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/visualThemes.1.webp"
+            },
+            "illustrated.mecha-kaiju.visualThemes.2": {
+              "map": "assets/mecha-kaiju/illustrated-1.1.0/visualThemes.2.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/visualThemes.2.webp"
+            },
+            "illustrated.mecha-kaiju.visualThemes.3": {
+              "map": "assets/mecha-kaiju/illustrated-1.1.0/visualThemes.3.webp",
+              "card": "assets/mecha-kaiju/illustrated-1.1.0/visualThemes.3.webp"
+            }
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "illustrated-mecha-kaiju"
+  }
+}

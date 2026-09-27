@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.waste.rules",
+  "version": "1.1.0",
+  "type": "rules",
+  "name": "Reserve Crossing Seed and Heat Rules — Illustrated",
+  "description": "Reserve Crossing Seed and Heat Rules for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+  "tags": [
+    "post-apocalypse",
+    "dustroad-convoy",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Reserve Crossing Seed and Heat Rules for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+    "highlights": [
+      "Reserve Crossing Seed and Heat Rules",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.post-apocalypse"
+    ],
+    "requiresCapabilities": [
+      "setting:post-apocalypse"
+    ],
+    "providesCapabilities": [
+      "rules:post-apocalypse"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.waste.setting",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Post-Apocalypse original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.waste.rules"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 6,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.waste.rules",
+    "version": "1.1.0",
+    "name": "Reserve Crossing Seed and Heat Rules — Illustrated",
+    "description": "Reserve Crossing Seed and Heat Rules for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+    "provides": [
+      "rules:post-apocalypse"
+    ],
+    "requires": [
+      "setting:post-apocalypse"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/actions/waste-audit-reserves",
+        "value": {
+          "label": "Audit Reserves",
+          "target": "self",
+          "kind": "check",
+          "checkId": "heart"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/waste-brace-crossing",
+        "value": {
+          "label": "Brace Crossing",
+          "target": "self",
+          "kind": "check",
+          "checkId": "scavenge"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/waste-test-seed",
+        "value": {
+          "label": "Test Seed",
+          "target": "self",
+          "kind": "check",
+          "checkId": "scavenge"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/waste-negotiate-ration",
+        "value": {
+          "label": "Negotiate Ration",
+          "target": "self",
+          "kind": "check",
+          "checkId": "heart"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/waste-trace-heat",
+        "value": {
+          "label": "Trace Heat",
+          "target": "self",
+          "kind": "check",
+          "checkId": "grit"
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/waste-repair-return",
+        "value": {
+          "label": "Repair Return",
+          "target": "self",
+          "kind": "check",
+          "checkId": "scavenge"
+        }
+      }
+    ]
+  }
+}

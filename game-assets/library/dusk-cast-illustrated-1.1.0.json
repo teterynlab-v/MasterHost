@@ -1,0 +1,1882 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.dusk.cast",
+  "version": "1.1.0",
+  "type": "cast",
+  "name": "Wardens Witches Healers and Threats — Illustrated",
+  "description": "Wardens Witches Healers and Threats for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+  "tags": [
+    "dark-fantasy",
+    "dying-marches",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Wardens Witches Healers and Threats for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+    "highlights": [
+      "Wardens Witches Healers and Threats",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.dark-fantasy"
+    ],
+    "requiresCapabilities": [
+      "world:dark-fantasy"
+    ],
+    "providesCapabilities": [
+      "cast:dark-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.dusk.world-template",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Dark Fantasy original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.dusk.cast"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 42,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.dusk.cast",
+    "version": "1.1.0",
+    "name": "Wardens Witches Healers and Threats — Illustrated",
+    "description": "Wardens Witches Healers and Threats for Dying Marches, Witch Principalities, Plague Pilgrimage. Three complete dark campaigns: common defense under a dying sun, names freed from inherited ransom and a cure without captive ownership.",
+    "provides": [
+      "cast:dark-fantasy"
+    ],
+    "requires": [
+      "world:dark-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.1",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Warden Elian Rook"
+            },
+            "description": {
+              "value": "Warden Elian Rook: will ring for unsworn households if the bell contract is proved."
+            },
+            "deepId": {
+              "value": "npcs.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.npcs.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.2",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Caretaker Siva Blank"
+            },
+            "description": {
+              "value": "Caretaker Siva Blank: knows every child's gesture and refuses another naming ransom."
+            },
+            "deepId": {
+              "value": "npcs.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.npcs.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.3",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Cook Mara Ash"
+            },
+            "description": {
+              "value": "Cook Mara Ash: has enough food for the sick if soldiers stop taking penance rations."
+            },
+            "deepId": {
+              "value": "npcs.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.npcs.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.4",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Farmer Ivo Reed"
+            },
+            "description": {
+              "value": "Farmer Ivo Reed: can lead gate repairs after tenant losses are publicly acknowledged."
+            },
+            "deepId": {
+              "value": "npcs.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.npcs.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.5",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Witch Tessa Thorn"
+            },
+            "description": {
+              "value": "Witch Tessa Thorn: broke the pact to spare her heir and hid the debt in the registry."
+            },
+            "deepId": {
+              "value": "npcs.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.npcs.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.6",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Healer Ren Cinder"
+            },
+            "description": {
+              "value": "Healer Ren Cinder: recorded recoveries unrelated to confession and seeks a witness."
+            },
+            "deepId": {
+              "value": "npcs.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.npcs.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.7",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Bellkeeper Ada Vane"
+            },
+            "description": {
+              "value": "Bellkeeper Ada Vane: saw the levy captain conceal the clapper before the famine."
+            },
+            "deepId": {
+              "value": "npcs.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.npcs.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.8",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Child Neri Glass"
+            },
+            "description": {
+              "value": "Child Neri Glass: can map the nursery by reflections but fears forgetting the others."
+            },
+            "deepId": {
+              "value": "npcs.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.npcs.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.9",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Saint Oren Vale"
+            },
+            "description": {
+              "value": "Saint Oren Vale: wants rest and refuses to become a permanent captive cure."
+            },
+            "deepId": {
+              "value": "npcs.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.npcs.9"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.10",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Captain Pell Dusk"
+            },
+            "description": {
+              "value": "Captain Pell Dusk: claims extra oaths fund defense but keeps their grain for his guard."
+            },
+            "deepId": {
+              "value": "npcs.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.npcs.10"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.11",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Witness Fia River"
+            },
+            "description": {
+              "value": "Witness Fia River: can renew the pact only if children speak for themselves."
+            },
+            "deepId": {
+              "value": "npcs.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.npcs.11"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.12",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Porter Juno Moss"
+            },
+            "description": {
+              "value": "Porter Juno Moss: knows a safe route for patients barred from the procession."
+            },
+            "deepId": {
+              "value": "npcs.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.npcs.12"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.13",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Archivist Bea Soot"
+            },
+            "description": {
+              "value": "Archivist Bea Soot: holds the original universal protection clause beneath a funeral record."
+            },
+            "deepId": {
+              "value": "npcs.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.npcs.13"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.14",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Tutor Kai Mirror"
+            },
+            "description": {
+              "value": "Tutor Kai Mirror: teaches sign names immune to the court's written erasure."
+            },
+            "deepId": {
+              "value": "npcs.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.npcs.14"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.15",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Patient Rosa Fen"
+            },
+            "description": {
+              "value": "Patient Rosa Fen: recovered after clean water and asks why penance is still demanded."
+            },
+            "deepId": {
+              "value": "npcs.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.npcs.15"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.16",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Messenger Sol Furrow"
+            },
+            "description": {
+              "value": "Messenger Sol Furrow: can carry the contract to the hearing before soldiers burn it."
+            },
+            "deepId": {
+              "value": "npcs.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.npcs.16"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.17",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Heir Mei Briar"
+            },
+            "description": {
+              "value": "Heir Mei Briar: will confess the house's debt if her guardian promises no child ransom."
+            },
+            "deepId": {
+              "value": "npcs.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.npcs.17"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.18",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Herbalist Noa Well"
+            },
+            "description": {
+              "value": "Herbalist Noa Well: can stretch the cure but needs a contamination test."
+            },
+            "deepId": {
+              "value": "npcs.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.npcs.18"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.19",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Miller Len Dusk"
+            },
+            "description": {
+              "value": "Miller Len Dusk: hid tenant seed and will release it for a witnessed planting agreement."
+            },
+            "deepId": {
+              "value": "npcs.19"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.npcs.19"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.20",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Mediator Dev Name"
+            },
+            "description": {
+              "value": "Mediator Dev Name: offers a common registry outside house ownership."
+            },
+            "deepId": {
+              "value": "npcs.20"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.npcs.20"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.21",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Guard Tess Gate"
+            },
+            "description": {
+              "value": "Guard Tess Gate: will stop seizing rations if given lawful protection against the captain."
+            },
+            "deepId": {
+              "value": "npcs.21"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.npcs.21"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.22",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Scout Ash Lamp"
+            },
+            "description": {
+              "value": "Scout Ash Lamp: marked a defense route that does not require the tenant fields."
+            },
+            "deepId": {
+              "value": "npcs.22"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.npcs.22"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.23",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Singer Kira Reed"
+            },
+            "description": {
+              "value": "Singer Kira Reed: remembers an older naming verse heard before the houses divided."
+            },
+            "deepId": {
+              "value": "npcs.23"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.npcs.23"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.npcs.24",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Pilgrim Taro Rest"
+            },
+            "description": {
+              "value": "Pilgrim Taro Rest: can organize rotating care so Oren may leave the procession."
+            },
+            "deepId": {
+              "value": "npcs.24"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.npcs.24"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.adversaries.1",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Levy Knight"
+            },
+            "description": {
+              "value": "Levy Knight: confiscates unsworn harvest and may stand down before the first contract."
+            },
+            "deepId": {
+              "value": "adversaries.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.adversaries.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.adversaries.2",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Name Collector"
+            },
+            "description": {
+              "value": "Name Collector: seizes children's signs unless the court's broken debt is exposed."
+            },
+            "deepId": {
+              "value": "adversaries.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.adversaries.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.adversaries.3",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Penance Marshal"
+            },
+            "description": {
+              "value": "Penance Marshal: withholds hospice food until a confession token is surrendered."
+            },
+            "deepId": {
+              "value": "adversaries.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.adversaries.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.adversaries.4",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Hollow Sun Hound"
+            },
+            "description": {
+              "value": "Hollow Sun Hound: hunts unlit fields but follows a decoy lantern away from workers."
+            },
+            "deepId": {
+              "value": "adversaries.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.adversaries.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.adversaries.5",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Thorn Bailiff"
+            },
+            "description": {
+              "value": "Thorn Bailiff: seals the registry to prevent testimony about the heir."
+            },
+            "deepId": {
+              "value": "adversaries.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.adversaries.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.adversaries.6",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Ash Censer"
+            },
+            "description": {
+              "value": "Ash Censer: spreads irritant smoke mistaken for the returning plague."
+            },
+            "deepId": {
+              "value": "adversaries.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.adversaries.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.adversaries.7",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Gate Revenant"
+            },
+            "description": {
+              "value": "Gate Revenant: enforces the old boundary while ignoring its universal protection clause."
+            },
+            "deepId": {
+              "value": "adversaries.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.adversaries.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.adversaries.8",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Mirror Leech"
+            },
+            "description": {
+              "value": "Mirror Leech: feeds on erased memories and retreats from shared spoken names."
+            },
+            "deepId": {
+              "value": "adversaries.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.adversaries.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.adversaries.9",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Pilgrim Extortioner"
+            },
+            "description": {
+              "value": "Pilgrim Extortioner: sells counterfeit cures to travelers barred at the gate."
+            },
+            "deepId": {
+              "value": "adversaries.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.adversaries.9"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.adversaries.10",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Granary Guard"
+            },
+            "description": {
+              "value": "Granary Guard: defends the captain's private seed cache under a false defense order."
+            },
+            "deepId": {
+              "value": "adversaries.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.adversaries.10"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.adversaries.11",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Pact Eraser"
+            },
+            "description": {
+              "value": "Pact Eraser: burns signs that prove the court rather than children broke the promise."
+            },
+            "deepId": {
+              "value": "adversaries.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.adversaries.11"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.adversaries.12",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Saint's Jailer"
+            },
+            "description": {
+              "value": "Saint's Jailer: claims the bearer cannot leave until every pilgrim is purified."
+            },
+            "deepId": {
+              "value": "adversaries.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.adversaries.12"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.adversaries.13",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Dusk Swarm"
+            },
+            "description": {
+              "value": "Dusk Swarm: follows the bell's cracked rhythm and can be drawn beyond the fields."
+            },
+            "deepId": {
+              "value": "adversaries.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.adversaries.13"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.adversaries.14",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "House Usurer"
+            },
+            "description": {
+              "value": "House Usurer: offers name restoration in return for perpetual nursery labor."
+            },
+            "deepId": {
+              "value": "adversaries.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.adversaries.14"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.adversaries.15",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Token Forger"
+            },
+            "description": {
+              "value": "Token Forger: profits from the gate's penance system and holds a list of buyers."
+            },
+            "deepId": {
+              "value": "adversaries.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.adversaries.15"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.adversaries.16",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Oath Devourer"
+            },
+            "description": {
+              "value": "Oath Devourer: consumes promises forced on hungry farmers but weakens before voluntary repair."
+            },
+            "deepId": {
+              "value": "adversaries.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "dying-marches",
+            "illustrated.dark-fantasy.adversaries.16"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.adversaries.17",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Thorn Wraith"
+            },
+            "description": {
+              "value": "Thorn Wraith: guards a suppressed verse naming the houses as accountable parties."
+            },
+            "deepId": {
+              "value": "adversaries.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "witch-principalities",
+            "illustrated.dark-fantasy.adversaries.17"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/dusk.deep.adversaries.18",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Procession Echo"
+            },
+            "description": {
+              "value": "Procession Echo: an inherited rule repeats penance demands after their cure purpose has ended."
+            },
+            "deepId": {
+              "value": "adversaries.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "dusk-deep",
+            "plague-pilgrimage",
+            "illustrated.dark-fantasy.adversaries.18"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-npcs-1": {
+            "template": "dusk.deep.npcs.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-npcs-2": {
+            "template": "dusk.deep.npcs.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-npcs-3": {
+            "template": "dusk.deep.npcs.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-npcs-4": {
+            "template": "dusk.deep.npcs.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-npcs-5": {
+            "template": "dusk.deep.npcs.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-npcs-6": {
+            "template": "dusk.deep.npcs.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-npcs-7": {
+            "template": "dusk.deep.npcs.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-npcs-8": {
+            "template": "dusk.deep.npcs.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-npcs-9": {
+            "template": "dusk.deep.npcs.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-npcs-10": {
+            "template": "dusk.deep.npcs.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-npcs-11": {
+            "template": "dusk.deep.npcs.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-npcs-12": {
+            "template": "dusk.deep.npcs.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-npcs-13": {
+            "template": "dusk.deep.npcs.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-npcs-14": {
+            "template": "dusk.deep.npcs.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-npcs-15": {
+            "template": "dusk.deep.npcs.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-npcs-16": {
+            "template": "dusk.deep.npcs.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-npcs-17": {
+            "template": "dusk.deep.npcs.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-npcs-18": {
+            "template": "dusk.deep.npcs.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-npcs-19": {
+            "template": "dusk.deep.npcs.19",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-npcs-20": {
+            "template": "dusk.deep.npcs.20",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-npcs-21": {
+            "template": "dusk.deep.npcs.21",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-npcs-22": {
+            "template": "dusk.deep.npcs.22",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-npcs-23": {
+            "template": "dusk.deep.npcs.23",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-npcs-24": {
+            "template": "dusk.deep.npcs.24",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-adversaries-1": {
+            "template": "dusk.deep.adversaries.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-adversaries-2": {
+            "template": "dusk.deep.adversaries.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-adversaries-3": {
+            "template": "dusk.deep.adversaries.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-adversaries-4": {
+            "template": "dusk.deep.adversaries.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-adversaries-5": {
+            "template": "dusk.deep.adversaries.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-adversaries-6": {
+            "template": "dusk.deep.adversaries.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-adversaries-7": {
+            "template": "dusk.deep.adversaries.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-adversaries-8": {
+            "template": "dusk.deep.adversaries.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-adversaries-9": {
+            "template": "dusk.deep.adversaries.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-adversaries-10": {
+            "template": "dusk.deep.adversaries.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-adversaries-11": {
+            "template": "dusk.deep.adversaries.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-adversaries-12": {
+            "template": "dusk.deep.adversaries.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-adversaries-13": {
+            "template": "dusk.deep.adversaries.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-adversaries-14": {
+            "template": "dusk.deep.adversaries.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-adversaries-15": {
+            "template": "dusk.deep.adversaries.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          },
+          "deep-adversaries-16": {
+            "template": "dusk.deep.adversaries.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "dying-marches"
+              ]
+            }
+          },
+          "deep-adversaries-17": {
+            "template": "dusk.deep.adversaries.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "witch-principalities"
+              ]
+            }
+          },
+          "deep-adversaries-18": {
+            "template": "dusk.deep.adversaries.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "plague-pilgrimage"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

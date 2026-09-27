@@ -1,0 +1,1882 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.gothic.cast",
+  "version": "1.1.0",
+  "type": "cast",
+  "name": "Witnesses Patrons and Binding Spirits — Illustrated",
+  "description": "Witnesses Patrons and Binding Spirits for Mourning County, Velvet Court, Drowned Choir. Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.",
+  "tags": [
+    "gothic-horror",
+    "mourning-county",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Witnesses Patrons and Binding Spirits for Mourning County, Velvet Court, Drowned Choir. Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.",
+    "highlights": [
+      "Witnesses Patrons and Binding Spirits",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.gothic-horror"
+    ],
+    "requiresCapabilities": [
+      "world:gothic-horror"
+    ],
+    "providesCapabilities": [
+      "cast:gothic-horror"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.gothic.world-template",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Gothic Horror original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.gothic.cast"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 42,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.gothic.cast",
+    "version": "1.1.0",
+    "name": "Witnesses Patrons and Binding Spirits — Illustrated",
+    "description": "Witnesses Patrons and Binding Spirits for Mourning County, Velvet Court, Drowned Choir. Three complete intimate horror campaigns: an inherited funeral promise, a blood-bound charity and the rescue of a drowned parish.",
+    "provides": [
+      "cast:gothic-horror"
+    ],
+    "requires": [
+      "world:gothic-horror"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.1",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Mira Ashwake"
+            },
+            "description": {
+              "value": "Mira Ashwake: a living heir wants the carriage gone but refuses to evict the tenants."
+            },
+            "deepId": {
+              "value": "npcs.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county",
+            "illustrated.gothic-horror.npcs.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.2",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Matron Elise Velvet"
+            },
+            "description": {
+              "value": "Matron Elise Velvet: knows the charity's debt and can keep patients safe during disclosure."
+            },
+            "deepId": {
+              "value": "npcs.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court",
+            "illustrated.gothic-horror.npcs.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.3",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Singer Tom Lowwater"
+            },
+            "description": {
+              "value": "Singer Tom Lowwater: survived in an air pocket and needs someone to record the missing names."
+            },
+            "deepId": {
+              "value": "npcs.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir",
+            "illustrated.gothic-horror.npcs.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.4",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Gravedigger Ren Vale"
+            },
+            "description": {
+              "value": "Gravedigger Ren Vale: keeps a burial ledger that contradicts the estate's register."
+            },
+            "deepId": {
+              "value": "npcs.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county",
+            "illustrated.gothic-horror.npcs.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.5",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Petitioner Ada Thorn"
+            },
+            "description": {
+              "value": "Petitioner Ada Thorn: can name a creditor if the crew protects her family."
+            },
+            "deepId": {
+              "value": "npcs.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court",
+            "illustrated.gothic-horror.npcs.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.6",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Warden Pell Reed"
+            },
+            "description": {
+              "value": "Warden Pell Reed: will lower the reservoir if the town receives another water supply."
+            },
+            "deepId": {
+              "value": "npcs.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir",
+            "illustrated.gothic-horror.npcs.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.7",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Tenant Jonah Branch"
+            },
+            "description": {
+              "value": "Tenant Jonah Branch: signed the old promise to prevent hunger and fears public blame."
+            },
+            "deepId": {
+              "value": "npcs.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county",
+            "illustrated.gothic-horror.npcs.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.8",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Patron Lucien Pale"
+            },
+            "description": {
+              "value": "Patron Lucien Pale: offers to renounce one debt while demanding another remains secret."
+            },
+            "deepId": {
+              "value": "npcs.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court",
+            "illustrated.gothic-horror.npcs.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.9",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Boatkeeper Nessa Moor"
+            },
+            "description": {
+              "value": "Boatkeeper Nessa Moor: knows the pumping intervals but has lost a sibling below."
+            },
+            "deepId": {
+              "value": "npcs.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir",
+            "illustrated.gothic-horror.npcs.9"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.10",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Founder Mara Kiln"
+            },
+            "description": {
+              "value": "Founder Mara Kiln: can recast the bell without its command if paid before the hearing."
+            },
+            "deepId": {
+              "value": "npcs.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county",
+            "illustrated.gothic-horror.npcs.10"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.11",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Judge Ivo Candor"
+            },
+            "description": {
+              "value": "Judge Ivo Candor: needs three independent testimonies to void the subscription."
+            },
+            "deepId": {
+              "value": "npcs.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court",
+            "illustrated.gothic-horror.npcs.11"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.12",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Archivist Sera Hymn"
+            },
+            "description": {
+              "value": "Archivist Sera Hymn: can reconstruct the choir roll from scattered parish receipts."
+            },
+            "deepId": {
+              "value": "npcs.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir",
+            "illustrated.gothic-horror.npcs.12"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.13",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Child Len Orchard"
+            },
+            "description": {
+              "value": "Child Len Orchard: hears the carriage horses before a name appears in the register."
+            },
+            "deepId": {
+              "value": "npcs.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county",
+            "illustrated.gothic-horror.npcs.13"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.14",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Patient Rosa Borrow"
+            },
+            "description": {
+              "value": "Patient Rosa Borrow: wants treatment to continue after the patrons lose their influence."
+            },
+            "deepId": {
+              "value": "npcs.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court",
+            "illustrated.gothic-horror.npcs.14"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.15",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Diver Kai Breath"
+            },
+            "description": {
+              "value": "Diver Kai Breath: can carry two singers upward and needs a second rope team."
+            },
+            "deepId": {
+              "value": "npcs.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir",
+            "illustrated.gothic-horror.npcs.15"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.16",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Steward Oren Ash"
+            },
+            "description": {
+              "value": "Steward Oren Ash: hid the unpaid wages and knows why the bell names tenants."
+            },
+            "deepId": {
+              "value": "npcs.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county",
+            "illustrated.gothic-horror.npcs.16"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.17",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Court Musician Fia Glass"
+            },
+            "description": {
+              "value": "Court Musician Fia Glass: recognizes the debt song behind the ballroom dance."
+            },
+            "deepId": {
+              "value": "npcs.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court",
+            "illustrated.gothic-horror.npcs.17"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.18",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Engineer Dev Sluice"
+            },
+            "description": {
+              "value": "Engineer Dev Sluice: can repair the bypass without draining the town's reserves."
+            },
+            "deepId": {
+              "value": "npcs.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir",
+            "illustrated.gothic-horror.npcs.18"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.19",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Widow Bea Candle"
+            },
+            "description": {
+              "value": "Widow Bea Candle: keeps an earlier heir's confession in a locked mourning box."
+            },
+            "deepId": {
+              "value": "npcs.19"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county",
+            "illustrated.gothic-horror.npcs.19"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.20",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Clerk Noa Seal"
+            },
+            "description": {
+              "value": "Clerk Noa Seal: will certify a revoked contract if their own signature is spared."
+            },
+            "deepId": {
+              "value": "npcs.20"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court",
+            "illustrated.gothic-horror.npcs.20"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.21",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Choirmaster Ina Deep"
+            },
+            "description": {
+              "value": "Choirmaster Ina Deep: refuses to leave until the drowned names are remembered."
+            },
+            "deepId": {
+              "value": "npcs.21"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir",
+            "illustrated.gothic-horror.npcs.21"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.22",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Courier Sol Rook"
+            },
+            "description": {
+              "value": "Courier Sol Rook: can deliver a summons before the carriage crosses the bridge."
+            },
+            "deepId": {
+              "value": "npcs.22"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county",
+            "illustrated.gothic-horror.npcs.22"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.23",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Donor Tess Quiet"
+            },
+            "description": {
+              "value": "Donor Tess Quiet: offers honest care funds but cannot replace all the patrons' gifts."
+            },
+            "deepId": {
+              "value": "npcs.23"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court",
+            "illustrated.gothic-horror.npcs.23"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.npcs.24",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Child Mei Shore"
+            },
+            "description": {
+              "value": "Child Mei Shore: draws the sunken parish as it was before the flood."
+            },
+            "deepId": {
+              "value": "npcs.24"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir",
+            "illustrated.gothic-horror.npcs.24"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.adversaries.1",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Funeral Driver"
+            },
+            "description": {
+              "value": "Funeral Driver: enforces the register and must accept a witnessed release."
+            },
+            "deepId": {
+              "value": "adversaries.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county",
+            "illustrated.gothic-horror.adversaries.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.adversaries.2",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Velvet Collector"
+            },
+            "description": {
+              "value": "Velvet Collector: takes unnamed debtors while calling the seizure a charitable visit."
+            },
+            "deepId": {
+              "value": "adversaries.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court",
+            "illustrated.gothic-horror.adversaries.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.adversaries.3",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Well Cantor"
+            },
+            "description": {
+              "value": "Well Cantor: lures listeners below and can be answered with a restored name."
+            },
+            "deepId": {
+              "value": "adversaries.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir",
+            "illustrated.gothic-horror.adversaries.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.adversaries.4",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Orchard Shade"
+            },
+            "description": {
+              "value": "Orchard Shade: guards an unpaid tenant's grave and attacks anyone carrying eviction seals."
+            },
+            "deepId": {
+              "value": "adversaries.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county",
+            "illustrated.gothic-horror.adversaries.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.adversaries.5",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Mirror Guest"
+            },
+            "description": {
+              "value": "Mirror Guest: borrows a patient's face until the original person is acknowledged."
+            },
+            "deepId": {
+              "value": "adversaries.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court",
+            "illustrated.gothic-horror.adversaries.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.adversaries.6",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Sluice Guardian"
+            },
+            "description": {
+              "value": "Sluice Guardian: closes the stair unless the bypass is flowing."
+            },
+            "deepId": {
+              "value": "adversaries.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir",
+            "illustrated.gothic-horror.adversaries.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.adversaries.7",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Ash Hounds"
+            },
+            "description": {
+              "value": "Ash Hounds: pursue a named heir but pause when the true burial bell sounds."
+            },
+            "deepId": {
+              "value": "adversaries.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county",
+            "illustrated.gothic-horror.adversaries.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.adversaries.8",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Subscription Broker"
+            },
+            "description": {
+              "value": "Subscription Broker: tries to buy witnesses' silence with renewed treatment."
+            },
+            "deepId": {
+              "value": "adversaries.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court",
+            "illustrated.gothic-horror.adversaries.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.adversaries.9",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Choir Echo"
+            },
+            "description": {
+              "value": "Choir Echo: repeats a false roll that excludes the parish's poorest singers."
+            },
+            "deepId": {
+              "value": "adversaries.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir",
+            "illustrated.gothic-horror.adversaries.9"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.adversaries.10",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Grave Bailiff"
+            },
+            "description": {
+              "value": "Grave Bailiff: seizes tenant homes as payment for the estate's forgotten wages."
+            },
+            "deepId": {
+              "value": "adversaries.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county",
+            "illustrated.gothic-horror.adversaries.10"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.adversaries.11",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Patron's Duelist"
+            },
+            "description": {
+              "value": "Patron's Duelist: challenges the crew to turn a public hearing into a private death."
+            },
+            "deepId": {
+              "value": "adversaries.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court",
+            "illustrated.gothic-horror.adversaries.11"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.adversaries.12",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Drowned Usher"
+            },
+            "description": {
+              "value": "Drowned Usher: blocks rescuers who carry no token of parish remembrance."
+            },
+            "deepId": {
+              "value": "adversaries.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir",
+            "illustrated.gothic-horror.adversaries.12"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.adversaries.13",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Bell Wraith"
+            },
+            "description": {
+              "value": "Bell Wraith: rings for another heir whenever a promised wage is denied."
+            },
+            "deepId": {
+              "value": "adversaries.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county",
+            "illustrated.gothic-horror.adversaries.13"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.adversaries.14",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Court Whisperer"
+            },
+            "description": {
+              "value": "Court Whisperer: turns an intimate confession into a weapon against patients."
+            },
+            "deepId": {
+              "value": "adversaries.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court",
+            "illustrated.gothic-horror.adversaries.14"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.adversaries.15",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Reservoir Hunger"
+            },
+            "description": {
+              "value": "Reservoir Hunger: a current drags the last rope toward the choir loft."
+            },
+            "deepId": {
+              "value": "adversaries.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir",
+            "illustrated.gothic-horror.adversaries.15"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.adversaries.16",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Carriage Inspector"
+            },
+            "description": {
+              "value": "Carriage Inspector: declares a release invalid if nobody living signs it."
+            },
+            "deepId": {
+              "value": "adversaries.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "mourning-county",
+            "illustrated.gothic-horror.adversaries.16"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.adversaries.17",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Seal Leech"
+            },
+            "description": {
+              "value": "Seal Leech: feeds on amended contracts and reveals the concealed original."
+            },
+            "deepId": {
+              "value": "adversaries.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "velvet-court",
+            "illustrated.gothic-horror.adversaries.17"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/gothic.deep.adversaries.18",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Nameless Soloist"
+            },
+            "description": {
+              "value": "Nameless Soloist: will let the choir leave only when their stolen name returns."
+            },
+            "deepId": {
+              "value": "adversaries.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "gothic-deep",
+            "drowned-choir",
+            "illustrated.gothic-horror.adversaries.18"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-npcs-1": {
+            "template": "gothic.deep.npcs.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-npcs-2": {
+            "template": "gothic.deep.npcs.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-npcs-3": {
+            "template": "gothic.deep.npcs.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-npcs-4": {
+            "template": "gothic.deep.npcs.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-npcs-5": {
+            "template": "gothic.deep.npcs.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-npcs-6": {
+            "template": "gothic.deep.npcs.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-npcs-7": {
+            "template": "gothic.deep.npcs.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-npcs-8": {
+            "template": "gothic.deep.npcs.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-npcs-9": {
+            "template": "gothic.deep.npcs.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-npcs-10": {
+            "template": "gothic.deep.npcs.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-npcs-11": {
+            "template": "gothic.deep.npcs.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-npcs-12": {
+            "template": "gothic.deep.npcs.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-npcs-13": {
+            "template": "gothic.deep.npcs.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-npcs-14": {
+            "template": "gothic.deep.npcs.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-npcs-15": {
+            "template": "gothic.deep.npcs.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-npcs-16": {
+            "template": "gothic.deep.npcs.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-npcs-17": {
+            "template": "gothic.deep.npcs.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-npcs-18": {
+            "template": "gothic.deep.npcs.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-npcs-19": {
+            "template": "gothic.deep.npcs.19",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-npcs-20": {
+            "template": "gothic.deep.npcs.20",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-npcs-21": {
+            "template": "gothic.deep.npcs.21",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-npcs-22": {
+            "template": "gothic.deep.npcs.22",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-npcs-23": {
+            "template": "gothic.deep.npcs.23",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-npcs-24": {
+            "template": "gothic.deep.npcs.24",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-adversaries-1": {
+            "template": "gothic.deep.adversaries.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-adversaries-2": {
+            "template": "gothic.deep.adversaries.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-adversaries-3": {
+            "template": "gothic.deep.adversaries.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-adversaries-4": {
+            "template": "gothic.deep.adversaries.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-adversaries-5": {
+            "template": "gothic.deep.adversaries.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-adversaries-6": {
+            "template": "gothic.deep.adversaries.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-adversaries-7": {
+            "template": "gothic.deep.adversaries.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-adversaries-8": {
+            "template": "gothic.deep.adversaries.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-adversaries-9": {
+            "template": "gothic.deep.adversaries.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-adversaries-10": {
+            "template": "gothic.deep.adversaries.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-adversaries-11": {
+            "template": "gothic.deep.adversaries.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-adversaries-12": {
+            "template": "gothic.deep.adversaries.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-adversaries-13": {
+            "template": "gothic.deep.adversaries.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-adversaries-14": {
+            "template": "gothic.deep.adversaries.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-adversaries-15": {
+            "template": "gothic.deep.adversaries.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          },
+          "deep-adversaries-16": {
+            "template": "gothic.deep.adversaries.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "mourning-county"
+              ]
+            }
+          },
+          "deep-adversaries-17": {
+            "template": "gothic.deep.adversaries.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "velvet-court"
+              ]
+            }
+          },
+          "deep-adversaries-18": {
+            "template": "gothic.deep.adversaries.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "drowned-choir"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

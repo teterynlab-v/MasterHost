@@ -1,0 +1,1882 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.myth.cast",
+  "version": "1.1.0",
+  "type": "cast",
+  "name": "Heroes Witnesses Divinities and Threats — Illustrated",
+  "description": "Heroes Witnesses Divinities and Threats for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+  "tags": [
+    "mythic-antiquity",
+    "warring-poleis",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Heroes Witnesses Divinities and Threats for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+    "highlights": [
+      "Heroes Witnesses Divinities and Threats",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.mythic-antiquity"
+    ],
+    "requiresCapabilities": [
+      "world:mythic-antiquity"
+    ],
+    "providesCapabilities": [
+      "cast:mythic-antiquity"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.myth.world-template",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Mythic Antiquity original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.myth.cast"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 42,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.myth.cast",
+    "version": "1.1.0",
+    "name": "Heroes Witnesses Divinities and Threats — Illustrated",
+    "description": "Heroes Witnesses Divinities and Threats for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+    "provides": [
+      "cast:mythic-antiquity"
+    ],
+    "requires": [
+      "world:mythic-antiquity"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.1",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Oracle Ione Bronze"
+            },
+            "description": {
+              "value": "Oracle Ione Bronze: can read the missing condition if protected from the war votaries."
+            },
+            "deepId": {
+              "value": "npcs.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.npcs.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.2",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Navigator Saro Wave"
+            },
+            "description": {
+              "value": "Navigator Saro Wave: remembers the lost sailor's promise and fears admitting the ship abandoned them."
+            },
+            "deepId": {
+              "value": "npcs.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.npcs.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.3",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Guide Nema Threshold"
+            },
+            "description": {
+              "value": "Guide Nema Threshold: will lead a living visitor if they accept the limits of borrowed days."
+            },
+            "deepId": {
+              "value": "npcs.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.npcs.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.4",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Marshal Theron Reed"
+            },
+            "description": {
+              "value": "Marshal Theron Reed: can hold the ford while envoys investigate the decree."
+            },
+            "deepId": {
+              "value": "npcs.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.npcs.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.5",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Diver Lysa Pearl"
+            },
+            "description": {
+              "value": "Diver Lysa Pearl: knows how to release the squall without drowning the anchorage."
+            },
+            "deepId": {
+              "value": "npcs.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.npcs.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.6",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Judge Oren Quiet"
+            },
+            "description": {
+              "value": "Judge Oren Quiet: allows testimony from humble deeds the royal claimant dismisses."
+            },
+            "deepId": {
+              "value": "npcs.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.npcs.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.7",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Envoy Kallia Laurel"
+            },
+            "description": {
+              "value": "Envoy Kallia Laurel: carries a truce proposal rejected before it was heard."
+            },
+            "deepId": {
+              "value": "npcs.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.npcs.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.8",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Cook Mira Hearth"
+            },
+            "description": {
+              "value": "Cook Mira Hearth: keeps the crew's last meal for a companion no one will name."
+            },
+            "deepId": {
+              "value": "npcs.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.npcs.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.9",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Sibling Daro Garden"
+            },
+            "description": {
+              "value": "Sibling Daro Garden: wants a message delivered rather than an unwilling resurrection."
+            },
+            "deepId": {
+              "value": "npcs.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.npcs.9"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.10",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Smith Pela Shield"
+            },
+            "description": {
+              "value": "Smith Pela Shield: can turn weapons into rescue hooks before the river rises."
+            },
+            "deepId": {
+              "value": "npcs.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.npcs.10"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.11",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Child Eri Beacon"
+            },
+            "description": {
+              "value": "Child Eri Beacon: heard the missing sailor promise to bring home a story."
+            },
+            "deepId": {
+              "value": "npcs.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.npcs.11"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.12",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Ferryman Sol Still"
+            },
+            "description": {
+              "value": "Ferryman Sol Still: needs the traveler's own unfinished deed named before granting passage."
+            },
+            "deepId": {
+              "value": "npcs.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.npcs.12"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.13",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Votary Ash Gold"
+            },
+            "description": {
+              "value": "Votary Ash Gold: altered the tablet to turn a rescue omen into a victory promise."
+            },
+            "deepId": {
+              "value": "npcs.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.npcs.13"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.14",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Sailor Kai Echo"
+            },
+            "description": {
+              "value": "Sailor Kai Echo: can distinguish the island's truthful echo from a flattering imitation."
+            },
+            "deepId": {
+              "value": "npcs.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.npcs.14"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.15",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Archivist Bea Thread"
+            },
+            "description": {
+              "value": "Archivist Bea Thread: preserves a simple village promise beside the royal burial records."
+            },
+            "deepId": {
+              "value": "npcs.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.npcs.15"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.16",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Captain Ren Oar"
+            },
+            "description": {
+              "value": "Captain Ren Oar: will admit the abandonment if the crew secures another way home."
+            },
+            "deepId": {
+              "value": "npcs.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.npcs.16"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.17",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Priestess Fia Rain"
+            },
+            "description": {
+              "value": "Priestess Fia Rain: can receive the storm if the island's dwellings are evacuated first."
+            },
+            "deepId": {
+              "value": "npcs.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.npcs.17"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.18",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Gardener Mei Day"
+            },
+            "description": {
+              "value": "Gardener Mei Day: counts the memory days offered and forbids taking them by force."
+            },
+            "deepId": {
+              "value": "npcs.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.npcs.18"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.19",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Scout Juno Ford"
+            },
+            "description": {
+              "value": "Scout Juno Ford: mapped a nonmilitary crossing now blocked by both armies."
+            },
+            "deepId": {
+              "value": "npcs.19"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.npcs.19"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.20",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Pearl Keeper Tessa Foam"
+            },
+            "description": {
+              "value": "Pearl Keeper Tessa Foam: holds an anchor stone useful for the final descent."
+            },
+            "deepId": {
+              "value": "npcs.20"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.npcs.20"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.21",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Witness Dev Candle"
+            },
+            "description": {
+              "value": "Witness Dev Candle: remembers a debt the royal claimant tried to erase at death."
+            },
+            "deepId": {
+              "value": "npcs.21"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.npcs.21"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.22",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Soldier Noa Laurel"
+            },
+            "description": {
+              "value": "Soldier Noa Laurel: can lower the standard if the opposite watch promises the same."
+            },
+            "deepId": {
+              "value": "npcs.22"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.npcs.22"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.23",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Singer Kira Home"
+            },
+            "description": {
+              "value": "Singer Kira Home: knows the sailor's last song but needs the crew's missing verse."
+            },
+            "deepId": {
+              "value": "npcs.23"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.npcs.23"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.npcs.24",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Mourner Rosa Return"
+            },
+            "description": {
+              "value": "Mourner Rosa Return: will finish a sibling's task if allowed to hear their farewell."
+            },
+            "deepId": {
+              "value": "npcs.24"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "factions.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.npcs.24"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.adversaries.1",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "War Votary"
+            },
+            "description": {
+              "value": "War Votary: demands a battle at the ford and hides the tablet's condition."
+            },
+            "deepId": {
+              "value": "adversaries.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.adversaries.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.adversaries.2",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Echo Siren"
+            },
+            "description": {
+              "value": "Echo Siren: offers a painless homecoming by erasing the abandoned sailor."
+            },
+            "deepId": {
+              "value": "adversaries.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.adversaries.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.adversaries.3",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Royal Shade"
+            },
+            "description": {
+              "value": "Royal Shade: claims a privileged return while others wait with unfinished tasks."
+            },
+            "deepId": {
+              "value": "adversaries.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.adversaries.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.adversaries.4",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Bronze River Bull"
+            },
+            "description": {
+              "value": "Bronze River Bull: charges raised standards but calms when both are lowered."
+            },
+            "deepId": {
+              "value": "adversaries.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.adversaries.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.adversaries.5",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Storm Chain Sentinel"
+            },
+            "description": {
+              "value": "Storm Chain Sentinel: attacks divers who loosen the jar without warning the island."
+            },
+            "deepId": {
+              "value": "adversaries.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.adversaries.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.adversaries.6",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Memory Moth"
+            },
+            "description": {
+              "value": "Memory Moth: consumes unspoken memories in the borrowed-day garden."
+            },
+            "deepId": {
+              "value": "adversaries.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.adversaries.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.adversaries.7",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Decree Guard"
+            },
+            "description": {
+              "value": "Decree Guard: seizes the original tablet before a public reading."
+            },
+            "deepId": {
+              "value": "adversaries.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.7"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.adversaries.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.adversaries.8",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Pearl Maw"
+            },
+            "description": {
+              "value": "Pearl Maw: guards the submerged altar but follows a sacrificial decoy shell."
+            },
+            "deepId": {
+              "value": "adversaries.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.11"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.adversaries.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.adversaries.9",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Gate Hound"
+            },
+            "description": {
+              "value": "Gate Hound: blocks visitors who refuse to name their own debt."
+            },
+            "deepId": {
+              "value": "adversaries.9"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.adversaries.9"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.adversaries.10",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Glory Spearman"
+            },
+            "description": {
+              "value": "Glory Spearman: tries to provoke the truce envoys into a duel."
+            },
+            "deepId": {
+              "value": "adversaries.10"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.4"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.adversaries.10"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.adversaries.11",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "False Navigator"
+            },
+            "description": {
+              "value": "False Navigator: copies the lost sailor's voice to steer toward the storm jar."
+            },
+            "deepId": {
+              "value": "adversaries.11"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.8"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.adversaries.11"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.adversaries.12",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Judgment Mask"
+            },
+            "description": {
+              "value": "Judgment Mask: ranks tomb gifts above deeds until the chorus removes it."
+            },
+            "deepId": {
+              "value": "adversaries.12"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.12"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.adversaries.12"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.adversaries.13",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Flood Colossus"
+            },
+            "description": {
+              "value": "Flood Colossus: rises from the ford when the river rescue omen goes unmet."
+            },
+            "deepId": {
+              "value": "adversaries.13"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.adversaries.13"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.adversaries.14",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Jar Usurer"
+            },
+            "description": {
+              "value": "Jar Usurer: sells calm weather while the harbor remains chained to the squall."
+            },
+            "deepId": {
+              "value": "adversaries.14"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.adversaries.14"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.adversaries.15",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Day Collector"
+            },
+            "description": {
+              "value": "Day Collector: takes memories as payment without the visitor's voluntary consent."
+            },
+            "deepId": {
+              "value": "adversaries.15"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.adversaries.15"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.adversaries.16",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Banner Thief"
+            },
+            "description": {
+              "value": "Banner Thief: steals the lowered standards to restart the conflict."
+            },
+            "deepId": {
+              "value": "adversaries.16"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "warring-poleis",
+            "illustrated.mythic-antiquity.adversaries.16"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.adversaries.17",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Beacon Shade"
+            },
+            "description": {
+              "value": "Beacon Shade: quenches the homeward flame when the crew omits their lost companion."
+            },
+            "deepId": {
+              "value": "adversaries.17"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.2"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "islands-of-odyssey",
+            "illustrated.mythic-antiquity.adversaries.17"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/myth.deep.adversaries.18",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Silent Bailiff"
+            },
+            "description": {
+              "value": "Silent Bailiff: erases a promised farewell from the ferry's passenger list."
+            },
+            "deepId": {
+              "value": "adversaries.18"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "locations.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "myth-deep",
+            "underworld-frontier",
+            "illustrated.mythic-antiquity.adversaries.18"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-npcs-1": {
+            "template": "myth.deep.npcs.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-npcs-2": {
+            "template": "myth.deep.npcs.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-npcs-3": {
+            "template": "myth.deep.npcs.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-npcs-4": {
+            "template": "myth.deep.npcs.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-npcs-5": {
+            "template": "myth.deep.npcs.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-npcs-6": {
+            "template": "myth.deep.npcs.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-npcs-7": {
+            "template": "myth.deep.npcs.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-npcs-8": {
+            "template": "myth.deep.npcs.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-npcs-9": {
+            "template": "myth.deep.npcs.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-npcs-10": {
+            "template": "myth.deep.npcs.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-npcs-11": {
+            "template": "myth.deep.npcs.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-npcs-12": {
+            "template": "myth.deep.npcs.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-npcs-13": {
+            "template": "myth.deep.npcs.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-npcs-14": {
+            "template": "myth.deep.npcs.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-npcs-15": {
+            "template": "myth.deep.npcs.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-npcs-16": {
+            "template": "myth.deep.npcs.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-npcs-17": {
+            "template": "myth.deep.npcs.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-npcs-18": {
+            "template": "myth.deep.npcs.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-npcs-19": {
+            "template": "myth.deep.npcs.19",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-npcs-20": {
+            "template": "myth.deep.npcs.20",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-npcs-21": {
+            "template": "myth.deep.npcs.21",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-npcs-22": {
+            "template": "myth.deep.npcs.22",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-npcs-23": {
+            "template": "myth.deep.npcs.23",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-npcs-24": {
+            "template": "myth.deep.npcs.24",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-adversaries-1": {
+            "template": "myth.deep.adversaries.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-adversaries-2": {
+            "template": "myth.deep.adversaries.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-adversaries-3": {
+            "template": "myth.deep.adversaries.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-adversaries-4": {
+            "template": "myth.deep.adversaries.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-adversaries-5": {
+            "template": "myth.deep.adversaries.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-adversaries-6": {
+            "template": "myth.deep.adversaries.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-adversaries-7": {
+            "template": "myth.deep.adversaries.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-adversaries-8": {
+            "template": "myth.deep.adversaries.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-adversaries-9": {
+            "template": "myth.deep.adversaries.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-adversaries-10": {
+            "template": "myth.deep.adversaries.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-adversaries-11": {
+            "template": "myth.deep.adversaries.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-adversaries-12": {
+            "template": "myth.deep.adversaries.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-adversaries-13": {
+            "template": "myth.deep.adversaries.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-adversaries-14": {
+            "template": "myth.deep.adversaries.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-adversaries-15": {
+            "template": "myth.deep.adversaries.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          },
+          "deep-adversaries-16": {
+            "template": "myth.deep.adversaries.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "warring-poleis"
+              ]
+            }
+          },
+          "deep-adversaries-17": {
+            "template": "myth.deep.adversaries.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "islands-of-odyssey"
+              ]
+            }
+          },
+          "deep-adversaries-18": {
+            "template": "myth.deep.adversaries.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "underworld-frontier"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

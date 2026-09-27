@@ -1,0 +1,1890 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.waste.visuals",
+  "version": "1.1.0",
+  "type": "visuals",
+  "name": "Rebuilding Route Schematics — Illustrated",
+  "description": "Rebuilding Route Schematics for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+  "tags": [
+    "post-apocalypse",
+    "dustroad-convoy",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Rebuilding Route Schematics for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+    "highlights": [
+      "Rebuilding Route Schematics",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.post-apocalypse"
+    ],
+    "requiresCapabilities": [
+      "setting:post-apocalypse"
+    ],
+    "providesCapabilities": [
+      "visuals:post-apocalypse"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.waste.setting",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Post-Apocalypse original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.waste.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 151
+  },
+  "media": [
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/factions.1.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/factions.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "de4365a5155fe511a8dc331b65ef178acc94cb33eeeab149f72720e238ecda04",
+      "size": 45892
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/factions.2.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/factions.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "6a66cd5c55a1261e5d20e6418cd3ae24abd636401787af04e32494d3d140d4e3",
+      "size": 45846
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/factions.3.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/factions.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "ef2e1932887b6ae5aef7c5796327c512a24358b3438391c25d583357fec0dc0b",
+      "size": 46618
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/factions.4.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/factions.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "741a53cf1e856e554fbdb0befbc5de09f48228182861a20a2a9e0fc48cd14486",
+      "size": 45976
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/factions.5.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/factions.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "02604ceaea31ea1607b57fb51304bb1d914f1bb98c39b4e9c54747c2f09b2c09",
+      "size": 44906
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/factions.6.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/factions.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "b1a04506e3d2c72d9caf0b71bf1bc31fc9e9056ca70642b3e20f0513ccef9503",
+      "size": 45522
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/factions.7.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/factions.7.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "8df7b1826689c5dfe8db8661925824b2dcc99397fbdf31370e4d98628566b1f2",
+      "size": 46780
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/factions.8.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/factions.8.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "656a97b46015ef6428a04be66cebb20567297b03c220f45bb8adac3d7dd4efc2",
+      "size": 44790
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/locations.1.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/locations.1.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "74966fa8356a4361ab8eacdf2fbdc27819281ac35ba1bead84ff396238b5ad53",
+      "size": 46546
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/locations.2.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/locations.2.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "7b516d90e3426a1d2cd0f01fce650df998e1c1828e91fdbb8fc1c147a30eb792",
+      "size": 45566
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/locations.3.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/locations.3.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "53e43f410d56ed4d6e4095bc33e5686265b93ea9ed47a0bc30079d5963c5be1e",
+      "size": 46244
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/locations.4.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/locations.4.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "4cc5bcdd2e1fe3fd7f266d68178e2668ae864fb4ba0191677f647084d11e9c01",
+      "size": 46700
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/locations.5.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/locations.5.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "128228de306b47177cf0f4d01ead8d33e428dc29a32cd8ea2bcd8ce0d9c96695",
+      "size": 45848
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/locations.6.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/locations.6.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "f85455f13ff6494e2c6570d84075630e7f498c56500405b324fc877105a3e1a0",
+      "size": 46726
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/locations.7.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/locations.7.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "84fa313a62550c33aa6048cfce227e1e257c4e9bd1e26e961fb62eb3db530f3c",
+      "size": 46332
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/locations.8.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/locations.8.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "90a6d4a0d96a23597574f8423a7afc0042f3b8d6b4b2d3d1933fe9a272252e06",
+      "size": 45006
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/locations.9.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/locations.9.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "994a3a04f3d806ce2004e699094e2d6b4947bdc491d3c88ddf013b6c582fb80a",
+      "size": 46268
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/locations.10.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/locations.10.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "9b55c632b1fb3edd7b6e9856570a5e21ee8b8e621b4b68dcca16b106e1eaea74",
+      "size": 46042
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/locations.11.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/locations.11.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "2a1f161ae11121e7cf9274900a918c1c443feadeab38fbf6140a738d37250d03",
+      "size": 45528
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/locations.12.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/locations.12.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "1b7912152825701f47abf0ca616e3cf6dca892cdd132d98edd4bfcf917137726",
+      "size": 46358
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.1.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "498b391bc0b23f16c116b8defa710ce6471fbad9c1121e08da4a6f281412f000",
+      "size": 45942
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.2.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "86a6d280272b1d66ced62277379a232822318a512a9ae5d22c8f37c51184c1bb",
+      "size": 48018
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.3.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "d4d429c5e3edd82f63fa7d499a183b8715880798287d4e3165c625b147a0bca6",
+      "size": 45278
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.4.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "8fbf3633429d14dd9d898577f6581ba078aa4081adc4000362a427a0ebfadde8",
+      "size": 45176
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.5.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "7a7c339b2644cc5775a690a405edff6e2dde189fa631922e93734087240ad8bb",
+      "size": 45890
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.6.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "cc1a548c11d7f4bdb74912e75a729df583bc1acb0776a5e6a572aa3e46c944cb",
+      "size": 45532
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.7.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "fa5e37b541e766e5cdea1d4c4bd41cce5b63d1f944921fabe250d4aa11a30edd",
+      "size": 45386
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.8.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "fd2c2e71e2dce5eb025f861563484a478a63f12da7ab8389fc654923b66c7d1e",
+      "size": 45044
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.9.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.9.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "1b2a530edb7657fa1c167afec69a02a36004d2c3c760eb772839511c1585e1e1",
+      "size": 44996
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.10.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.10.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "76e7148d7b5a541b5ea55de9c6a0831a1bd97b3eb61c52e9eae5e36604b26a3f",
+      "size": 45740
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.11.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.11.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "63a8887f15e8c5e011643379790b94aab969b6f9ce212059671051339989409d",
+      "size": 46218
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.12.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.12.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "9a1a333fae19b1d19d5ce4777ead7055177e32215ed1a57587ee818e3058dd2f",
+      "size": 45380
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.13.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.13.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "3dba7079d1e32a1ca97373bef60d56e83eca19c404c01e750dd68663ea4fb88b",
+      "size": 45440
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.14.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.14.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "5060819fa4e878abee89cf837c59f41944840c861a0858d24af0e0babf634b14",
+      "size": 44680
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.15.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.15.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "abdf82731e40fe95c127751ca505573bec9e180c4ff4c25c49872072ae3d7558",
+      "size": 45942
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.16.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.16.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "db6159d88bd7aaae03c4fe68efcaa45b77eca31f0af54a2e51cc9da78ebaf865",
+      "size": 45920
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.17.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.17.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "2195a307d68116d235686b09ca730266bab919eb412a55638289fa51301049de",
+      "size": 45320
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.18.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.18.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "7f5cd4a5c6d1180bf9e1de630b63aaa7b32596117c79e1f0656031ff050917c0",
+      "size": 45210
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.19.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.19.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "de14cea6792daa77ac2759c5cd19f790818ebd3f275f406dd2a7223f1642941f",
+      "size": 45988
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.20.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.20.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "3a189b1d9986c334272de1d91cdc35a1f0c0a37c729aebd4cf901164cd0cf6c7",
+      "size": 45112
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.21.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.21.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "3ca25ce91326fa9668c05b6bf5159cc6e07c9df7ede83c572fff5f0bca4dd36a",
+      "size": 45540
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.22.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.22.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "9afe34f76f6903fe21b2e686398cded984295e2ce831f4dd2972037c1554cba1",
+      "size": 45166
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.23.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.23.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "57351dfb6e772a549dc65f7bc379858eb684ba7f746ef2f8a13d5388c6f89aae",
+      "size": 45520
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/npcs.24.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/npcs.24.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "53d7ab950c92d40ac5fd553b5db7b47a5947511db61b73766ddecb7161d8fdf2",
+      "size": 46370
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/adversaries.1.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/adversaries.1.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "ccef0e243eb5136af8eb22d0c73be2d19b3082d5b46c1f702989074253420a9c",
+      "size": 45730
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/adversaries.2.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/adversaries.2.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "3498718468832c46cc85ecd22a9bb7344ca2dd7964ffb23a6db75a784f5e62dc",
+      "size": 45026
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/adversaries.3.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/adversaries.3.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "53c278d060d1b56c52e7ab22946818d6e4b5ee4fe09bb6d5631aab1a70792a6f",
+      "size": 45734
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/adversaries.4.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/adversaries.4.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "e873a9b906a2dc3910a53ab6b829707e57bf4311fca1cb47a2c288170c6be012",
+      "size": 46236
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/adversaries.5.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/adversaries.5.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "926085968ffa6239a8554ade5fd735ab75953877ba846c487889c4f64023200b",
+      "size": 45218
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/adversaries.6.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/adversaries.6.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "c951c0ab75f71e09d980f91927c62c47b4e656644cc3500a999032fbe4c1086a",
+      "size": 45750
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/adversaries.7.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/adversaries.7.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "e0dc4fae05f40b46b71414141be016efd6a68d9fd5f54fb3390f5c61d5d60ece",
+      "size": 45482
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/adversaries.8.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/adversaries.8.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "e6e52e9fb4922ce1a46cbdd3f76da1328d4fe9a22a17faeae378668bf5c3e10a",
+      "size": 45506
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/adversaries.9.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/adversaries.9.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "ae50961f804b2c5cbe901343b4a3ef0ad9c5a7b8c2c38b59427eac1096bece7d",
+      "size": 45056
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/adversaries.10.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/adversaries.10.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "8abe430f7cf3b77e144ade549a05c54b7dcefefc1862afddbf31df58e09681be",
+      "size": 49644
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/adversaries.11.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/adversaries.11.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "86a9d42d920f44d8a667c00b3bf67e6de74d2f83320e91b4faddd746d6a06766",
+      "size": 58216
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/adversaries.12.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/adversaries.12.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "48464a7058bec5b5ccc05643b5b2d0cf7b71a2c2b31540f4ba4d67ef09017470",
+      "size": 45458
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/adversaries.13.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/adversaries.13.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "3f9bd69d9ca30bafcd4020214e2c4f2e4614bd049c15393f8b91a44417e84393",
+      "size": 45322
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/adversaries.14.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/adversaries.14.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "bd29f1823d72c11fa54520038e49d80a985b616e5955c126a4b18f9bd9f03a14",
+      "size": 46616
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/adversaries.15.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/adversaries.15.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "92cd1ad8d64446135b0b511cf2a3e05c716289f126225213c66127b4a757935e",
+      "size": 47776
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/adversaries.16.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/adversaries.16.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "19ea2ba0ac30560b4ec46fcf47a8b4a922b6e4aa8098552ed3dae335d3cb783f",
+      "size": 44876
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/adversaries.17.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/adversaries.17.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "ace657cfc741adad5456cc714c8b23a8e381d8239efff969c7d802a48c8683ab",
+      "size": 44890
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/adversaries.18.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/adversaries.18.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "f060a8763cf5742b43d957130e7a44c33416c58fc10dfded111b627966f867ac",
+      "size": 45584
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.1.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.1.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "6dffcc0a949725ef98e6a94bf2daf260b2747c2c5f0c4033e2471a24061533fc",
+      "size": 45254
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.2.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.2.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "0c00096d2f97f469b796dddcd3aafe8c4e2633cd95ee516af20c8ee947910593",
+      "size": 47218
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.3.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.3.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "666457e07f87a932f6146eac0bea6a0e6aaa38d0abd7265022601443112596dc",
+      "size": 45298
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.4.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.4.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "d546a4ecaf1d13e697a6af4e722ae024955b5034b9ac3c0c1b83c654bd49806c",
+      "size": 46338
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.5.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.5.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "533b867f4d7c4df8fc81cbac774d80184eceb9a413d4314568ed167d4836c314",
+      "size": 46082
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.6.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.6.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "5ed85ce7131cc7e8b2c5a305e34132335812aab7f8889dcf3d927f18a42a9e2d",
+      "size": 47582
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.7.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.7.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "b294e53a6d5da24bd5cc6f0361441191292d0594e80c2f2ab1e02fb0a9054b8d",
+      "size": 46014
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.8.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.8.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "8d077c52b8e9c25b19fb98c18c3217c0678849c5c200c08032877af60107f2d9",
+      "size": 45386
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.9.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.9.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "3a5aba9551ee5c0d6ec711e5e4cf36a7b0b42a421c3792a4ba3a361bb35e916c",
+      "size": 45142
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.10.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.10.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "160253a8521dd63caf1a3c642c04cfd9c7355bb2ca192e6348e17158a3697cd1",
+      "size": 45536
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.11.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.11.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "c743dd109bb4088333b087224dacff5d2e793cddc8d31ed0946598502f40fbc8",
+      "size": 44740
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.12.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.12.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "ece679c605ba5eb949c300685b68d318ac608550f3b3379b634ef58397aaf563",
+      "size": 46670
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.13.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.13.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "a47256e83ec1c5c35f0cbb4e1834954a2d4f6de65148c664615c6a6da39ca105",
+      "size": 45558
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.14.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.14.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "e6f399240a4314f5bb09e31a9e4758d3dc85a129660faf851164c898b2a4dcd0",
+      "size": 46704
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.15.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.15.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "6cfb9349d26aa0fc4e4296a4983954d84fd53ab5c48ba67cc4cdafa875ce7e5d",
+      "size": 45238
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.16.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.16.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "d050a4449e576009873b97ce31142632b9b135453e8ab3c976d32f7fe70abe5b",
+      "size": 44832
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.17.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.17.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "39c083ee67188375bb79cfef064aa6f910c9764f3caf29ecfbfba9264c22ec11",
+      "size": 45216
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.18.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.18.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "1e7924cb40b72ec56855e03229d98d0099bba32d5a6df09292cef2cbe9eacb3a",
+      "size": 46286
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.19.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.19.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "789268e4c51d19afdf3e165c51d81dabf25b44ba9923dffbf85687f3c18275db",
+      "size": 45602
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.20.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.20.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "877ffa8ebc035765c7498f101b9f15cd729692556e492b0d08dfb0daf10f709f",
+      "size": 44946
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.21.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.21.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "b97aba02f43fb9bc332e92ab2fb9e0050cae212789f7881ca612ec01ca44a10b",
+      "size": 45210
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.22.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.22.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "ada45555f0c8264168ff0ce4ecaeb5b9dcb08c9b019c71a7effcccdcdcbfbfc7",
+      "size": 46962
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.23.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.23.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "9ee7633c19cd6ff58e4db77510cff9ef79d40276c0e62e55dff43795a64884d6",
+      "size": 45634
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/items.24.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/items.24.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "378d777ccfa6c91b3ae8f72b58bfae57db1e3ecc74a50eeab07f38c34ad3aa79",
+      "size": 45214
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.1.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "dcf94925c39dcbee4a25bf1db5f37202240e4073a5bf4ffa502835e221d93d5c",
+      "size": 46582
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.2.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "11ff3c7c7fdf711786d82df6c5eb942fdd2251e4f1440512753a580e3af5106d",
+      "size": 45372
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.3.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "36d02251e5617012f999c551737792335ede43fd571643c148d6baa71b607234",
+      "size": 47156
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.4.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "6cebec8acb75a857cbcfec0744c123422a25c67ffb8db8e72db3036ac77d50a3",
+      "size": 46656
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.5.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c04cdbe4f39752c48737786bc82f8ea7a7050df942b6de9d3cd4edd58f0ae99f",
+      "size": 45248
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.6.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "139259f0709c59a71bf3d755593090428a941bd2345161212d6f23e76058983a",
+      "size": 46974
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.7.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "dedc4f6a4bfb70562f0019329abe0b73632cca69889de739b69a296b72966c7d",
+      "size": 46742
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.8.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b537de7d91720a28cf77391b2927570bdc9c7d287149388c3aee394b65ae677c",
+      "size": 45118
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.9.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "1c4df1908487526302d7fa2b0b074c55083ea705e91afddbe864441fc7b35a9d",
+      "size": 43484
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.10.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "cdac1f5c3570636137fbbf2e31d276449b332f26f1d056cac71824c7a9783df4",
+      "size": 46010
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.11.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "61d61b5feee773e81e944b6fc694861c02e45f563e9cdb34456f3b8de2383915",
+      "size": 46012
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.12.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "7f773f8c71f920e96529d1ac41c2e74da731b5f6d5b7b4d5d86a264bde79bd3c",
+      "size": 46368
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.13.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "37ce1a7fb638c954a7d4509f32315f15cd315e75dded4d8ef6540627f6830fc3",
+      "size": 45636
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.14.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b7963ae54154b5899039afe6375f5d67ce33718e25c429423532f708c4c32891",
+      "size": 46150
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.15.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "0a0e0cb2abfe44ad3530d3da4a0f71fa1be9f0cfab5636bda6a7910e9ccee406",
+      "size": 46340
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.16.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "0d4e4c8cf8cfa2b3a47429f8813fc0e48f7e4df1a0fd0294fddf71f04e2fac7a",
+      "size": 46454
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.17.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "7ca63cc40fffad6e07b333b6c770864f175b97cee14e90b36223ff7590cd06a0",
+      "size": 46934
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.18.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "834f8013a6a36f8a818c75f4d2dba70540f3371d3a68a905c4d1245a69a5623c",
+      "size": 47066
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.19.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.19.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "2ff447a2a4f69a8ab8828f9eb8f72b0930ec2930ad5216b6edf3a52a8cc71d8b",
+      "size": 46470
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.20.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.20.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "fb996519d54bfd26bedede25d58e44e0c40a3c52e33020266e8549f160a7e92a",
+      "size": 46186
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.21.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.21.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c879d369af25d8dffeebcd298a461928d0a9f505221d54cc652226c1acaf9bea",
+      "size": 47284
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.22.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.22.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "8506fbbd362306adbd2ebe54e3778c5c2cde96d8d986e236ee40638f92a0ffe0",
+      "size": 46706
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.23.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.23.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "650ae4de0441b7bb33049d67f77af07dcf4a6f9116aa3d2e28ca0871e6f4f103",
+      "size": 46210
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.24.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.24.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "161350fc039876317bc974ddf32df01b54c9404f5a52687d82025cc731b395d9",
+      "size": 46886
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.25.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.25.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "5ef6937ea55f6c5fbe55eb540a064009fa40817b8463ad828ed6955c5e863f31",
+      "size": 46646
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.26.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.26.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "fc339624df01935a9ba0bd3ac83fa1276f798cc0150fd2eb15ceebaf3b4ddef2",
+      "size": 45912
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.27.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.27.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "e0b874499c8b58fdbd1852288221e14f63066c776c9a161fa21b25a6908d31b3",
+      "size": 45836
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.28.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.28.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a0ab1d57fba63d89d159f57ea8f9c08359c27783db68adf9b3860d5f7014a970",
+      "size": 46232
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.29.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.29.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "54e1340e283d80023aef52aa2121b2321facc3430998853e8fff7d15fd89c07d",
+      "size": 46038
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/events.30.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/events.30.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "52595fd5392f6ac9a168cbd374d7bd1da074f52164a23a3d02dc8a0c596ec045",
+      "size": 47150
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/scenes.1.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/scenes.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "375478e1b52558687d997d51d16b768148a1e7a162ca6baa27dbb0883202f7aa",
+      "size": 46298
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/scenes.2.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/scenes.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "624ffc0b2e31df9348ff4e3f39bd2135d9739975bd0fd61ca0bc8dcf94482156",
+      "size": 45914
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/scenes.3.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/scenes.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "64223f2cc43ce0a7faaa5793de6400fbfb168acdba8b28269ea33a4d64197de2",
+      "size": 46988
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/scenes.4.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/scenes.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "265064bd39893b084158a4f046749bb2e2666d29bfa7b615838d54328336489b",
+      "size": 45712
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/scenes.5.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/scenes.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "50de0e50161cb7c38da196bc671cda7b9264baaee83d62e6aa461ab050bb49cc",
+      "size": 46478
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/scenes.6.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/scenes.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "dcf43d18ad8459dca3d9d7b60146a20a5ca440c5601fb00b042721e97efd5297",
+      "size": 46496
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/scenes.7.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/scenes.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "9082f7cb88f85269b98381af0c58fb1bc493d3da6b0b144709f88e60f4954595",
+      "size": 46176
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/scenes.8.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/scenes.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ccb1c875cf959131899395f9639d1e26405669ac94ea31cd244b572c26412217",
+      "size": 45536
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/scenes.9.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/scenes.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "96d2dd3dfd9d1fc980646f138d0b4623778e4654d7aa5605f34e929835559e3f",
+      "size": 46588
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/scenes.10.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/scenes.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "5a97c3209388f2064a000f80477b2b02425bf2fc7034831f18ac10745658b07f",
+      "size": 45812
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/scenes.11.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/scenes.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "10bc0b18999c6bbf0edd727a3146dd97685ddf8564a4dbe75ec09a781959cb1f",
+      "size": 46820
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/scenes.12.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/scenes.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c97a9d94df3eece5efd7abe720afbc4603a57fcef31fc00f12aabc644eacffff",
+      "size": 45712
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/scenes.13.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/scenes.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "89364defa1d792856d1ec957e4dc8725f39657c143a69cb5246d861184891498",
+      "size": 47026
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/scenes.14.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/scenes.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ccd7b1bc3dc6537fd321d361e61c8d8299ccff07aa344900e4ee67943aa2af22",
+      "size": 46234
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/scenes.15.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/scenes.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "dd00569fdfd8dae1079520a6661ee732b7a6ac0aa38655a1dcb73e314c949c9e",
+      "size": 45934
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/scenes.16.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/scenes.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "e1a8770702ed63b026efae1b74a147d4bc2eebc8ad4c30a54a30871c0fd7914c",
+      "size": 45522
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/scenes.17.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/scenes.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "3ff8533ed0925fd09b283db45f2af46b5997a835cc0d4f2daaa4d27af52b5d8a",
+      "size": 46312
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/scenes.18.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/scenes.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "53d128eceda2721149dd6f561d407fc4a35dfb25f8ed59056dbdda0d7a6046a2",
+      "size": 47710
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/archetypes.1.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/archetypes.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "50731c8c8e8b427c69ada1009872a6bb10f4f17894d55d66684e28de0eb0aa36",
+      "size": 57182
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/archetypes.2.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/archetypes.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "91162a49a9b4177206b852971cd64bec2407d64b00f866ac9fa7a29dff4f5e13",
+      "size": 54306
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/archetypes.3.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/archetypes.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "448e22ab0929b15ac5cb1c02cd3f69f1ab5e657b3d06664cd58c82af343cb2c2",
+      "size": 46174
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/archetypes.4.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/archetypes.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "a46ba05a5ca8c6fc4be674775b7d9b5cd270eb10306224ad0cb7f3935922f1af",
+      "size": 46144
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/archetypes.5.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/archetypes.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "c623bc48d603ff9f3e61e6c7d2c7072fec665eed2924043bb0e46671671d8e2c",
+      "size": 61188
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/archetypes.6.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/archetypes.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "19bb880a60b8a2fded20dd2d88365a07eaee90e99cc9051df62c3a4d964d72e0",
+      "size": 48326
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/archetypes.7.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/archetypes.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "15550367d38c732506c51ed3dc319e9de83c613728d12cbd0a6fc1f892378f11",
+      "size": 47004
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/archetypes.8.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/archetypes.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "bd3d43c50b6367614256f9d0d9f14608bf83da055abf2d1a750e9925ec25c263",
+      "size": 52758
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/progressionPaths.1.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/progressionPaths.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "b37dd3edaccada5d2b8fcdcdd5ddd0891cf30bc68ea3ecc3fd43d4bf9a7e7495",
+      "size": 46404
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/progressionPaths.2.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/progressionPaths.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "7d9386d41b4def28c6c694ec89974c19d10aee7608fee314ff5c304a3b1a236f",
+      "size": 45408
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/progressionPaths.3.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/progressionPaths.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "b50e961f2c58d5000766c83dcd48a92733599f1ef0b3666a09abd5b0738bb7d0",
+      "size": 46540
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/progressionPaths.4.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/progressionPaths.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "3d11153b450cab720105319bcbd82b0fdf29f3c47af24c751164c621282659f8",
+      "size": 46710
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/progressionPaths.5.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/progressionPaths.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "69130e8906a09368fe191d7a01797cffb53d2110bd3b5676d774360aae014fd0",
+      "size": 45996
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/progressionPaths.6.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/progressionPaths.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "8781f12ab359fee68f2b5d48f3265300bbed46dcab51677afab6d536734ad0eb",
+      "size": 46504
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/visualThemes.1.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/visualThemes.1.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "c5e6e025734e9c4d2e28b4ef702143ee313d91ddcf018cdd0beb52a19ac7da50",
+      "size": 44290
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/visualThemes.2.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/visualThemes.2.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "5d0357e694218d70d91283f9c9d37f69830ad8d9378c2e1d5395f050c991b765",
+      "size": 44132
+    },
+    {
+      "name": "post-apocalypse/illustrated-1.1.0/visualThemes.3.webp",
+      "path": "media/post-apocalypse/illustrated-1.1.0/visualThemes.3.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "b3fbf9167dcc990b55e1cb7e85dda68b7fc3c65efbf3f80e5f3a2d771c8bc2e2",
+      "size": 44246
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.waste.visuals",
+    "version": "1.1.0",
+    "name": "Rebuilding Route Schematics — Illustrated",
+    "description": "Rebuilding Route Schematics for Dustroad Convoy, Seed Vault, Last Grid. Three complete rebuilding campaigns: convoy passage, shared seed inheritance and heat for omitted households.",
+    "provides": [
+      "visuals:post-apocalypse"
+    ],
+    "requires": [
+      "setting:post-apocalypse"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/illustrated-post-apocalypse",
+        "value": {
+          "id": "illustrated-post-apocalypse",
+          "name": "Illustrated post-apocalypse",
+          "description": "Individual generated illustrations for every authored content object",
+          "defaults": {
+            "background": "assets/post-apocalypse/illustrated-1.1.0/scenes.1.webp",
+            "card": "assets/post-apocalypse/illustrated-1.1.0/scenes.1.webp",
+            "map": "assets/post-apocalypse/illustrated-1.1.0/visualThemes.1.webp",
+            "portrait": "assets/post-apocalypse/illustrated-1.1.0/archetypes.1.webp",
+            "token": "assets/post-apocalypse/illustrated-1.1.0/adversaries.1.webp",
+            "item": "assets/post-apocalypse/illustrated-1.1.0/items.1.webp",
+            "location": "assets/post-apocalypse/illustrated-1.1.0/locations.1.webp"
+          },
+          "families": {
+            "illustrated.post-apocalypse.factions.1": {
+              "card": "assets/post-apocalypse/illustrated-1.1.0/factions.1.webp"
+            },
+            "illustrated.post-apocalypse.factions.2": {
+              "card": "assets/post-apocalypse/illustrated-1.1.0/factions.2.webp"
+            },
+            "illustrated.post-apocalypse.factions.3": {
+              "card": "assets/post-apocalypse/illustrated-1.1.0/factions.3.webp"
+            },
+            "illustrated.post-apocalypse.factions.4": {
+              "card": "assets/post-apocalypse/illustrated-1.1.0/factions.4.webp"
+            },
+            "illustrated.post-apocalypse.factions.5": {
+              "card": "assets/post-apocalypse/illustrated-1.1.0/factions.5.webp"
+            },
+            "illustrated.post-apocalypse.factions.6": {
+              "card": "assets/post-apocalypse/illustrated-1.1.0/factions.6.webp"
+            },
+            "illustrated.post-apocalypse.factions.7": {
+              "card": "assets/post-apocalypse/illustrated-1.1.0/factions.7.webp"
+            },
+            "illustrated.post-apocalypse.factions.8": {
+              "card": "assets/post-apocalypse/illustrated-1.1.0/factions.8.webp"
+            },
+            "illustrated.post-apocalypse.locations.1": {
+              "location": "assets/post-apocalypse/illustrated-1.1.0/locations.1.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/locations.1.webp"
+            },
+            "illustrated.post-apocalypse.locations.2": {
+              "location": "assets/post-apocalypse/illustrated-1.1.0/locations.2.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/locations.2.webp"
+            },
+            "illustrated.post-apocalypse.locations.3": {
+              "location": "assets/post-apocalypse/illustrated-1.1.0/locations.3.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/locations.3.webp"
+            },
+            "illustrated.post-apocalypse.locations.4": {
+              "location": "assets/post-apocalypse/illustrated-1.1.0/locations.4.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/locations.4.webp"
+            },
+            "illustrated.post-apocalypse.locations.5": {
+              "location": "assets/post-apocalypse/illustrated-1.1.0/locations.5.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/locations.5.webp"
+            },
+            "illustrated.post-apocalypse.locations.6": {
+              "location": "assets/post-apocalypse/illustrated-1.1.0/locations.6.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/locations.6.webp"
+            },
+            "illustrated.post-apocalypse.locations.7": {
+              "location": "assets/post-apocalypse/illustrated-1.1.0/locations.7.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/locations.7.webp"
+            },
+            "illustrated.post-apocalypse.locations.8": {
+              "location": "assets/post-apocalypse/illustrated-1.1.0/locations.8.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/locations.8.webp"
+            },
+            "illustrated.post-apocalypse.locations.9": {
+              "location": "assets/post-apocalypse/illustrated-1.1.0/locations.9.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/locations.9.webp"
+            },
+            "illustrated.post-apocalypse.locations.10": {
+              "location": "assets/post-apocalypse/illustrated-1.1.0/locations.10.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/locations.10.webp"
+            },
+            "illustrated.post-apocalypse.locations.11": {
+              "location": "assets/post-apocalypse/illustrated-1.1.0/locations.11.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/locations.11.webp"
+            },
+            "illustrated.post-apocalypse.locations.12": {
+              "location": "assets/post-apocalypse/illustrated-1.1.0/locations.12.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/locations.12.webp"
+            },
+            "illustrated.post-apocalypse.npcs.1": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.1.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.1.webp"
+            },
+            "illustrated.post-apocalypse.npcs.2": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.2.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.2.webp"
+            },
+            "illustrated.post-apocalypse.npcs.3": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.3.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.3.webp"
+            },
+            "illustrated.post-apocalypse.npcs.4": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.4.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.4.webp"
+            },
+            "illustrated.post-apocalypse.npcs.5": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.5.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.5.webp"
+            },
+            "illustrated.post-apocalypse.npcs.6": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.6.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.6.webp"
+            },
+            "illustrated.post-apocalypse.npcs.7": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.7.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.7.webp"
+            },
+            "illustrated.post-apocalypse.npcs.8": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.8.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.8.webp"
+            },
+            "illustrated.post-apocalypse.npcs.9": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.9.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.9.webp"
+            },
+            "illustrated.post-apocalypse.npcs.10": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.10.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.10.webp"
+            },
+            "illustrated.post-apocalypse.npcs.11": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.11.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.11.webp"
+            },
+            "illustrated.post-apocalypse.npcs.12": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.12.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.12.webp"
+            },
+            "illustrated.post-apocalypse.npcs.13": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.13.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.13.webp"
+            },
+            "illustrated.post-apocalypse.npcs.14": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.14.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.14.webp"
+            },
+            "illustrated.post-apocalypse.npcs.15": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.15.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.15.webp"
+            },
+            "illustrated.post-apocalypse.npcs.16": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.16.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.16.webp"
+            },
+            "illustrated.post-apocalypse.npcs.17": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.17.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.17.webp"
+            },
+            "illustrated.post-apocalypse.npcs.18": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.18.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.18.webp"
+            },
+            "illustrated.post-apocalypse.npcs.19": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.19.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.19.webp"
+            },
+            "illustrated.post-apocalypse.npcs.20": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.20.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.20.webp"
+            },
+            "illustrated.post-apocalypse.npcs.21": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.21.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.21.webp"
+            },
+            "illustrated.post-apocalypse.npcs.22": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.22.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.22.webp"
+            },
+            "illustrated.post-apocalypse.npcs.23": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.23.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.23.webp"
+            },
+            "illustrated.post-apocalypse.npcs.24": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/npcs.24.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/npcs.24.webp"
+            },
+            "illustrated.post-apocalypse.adversaries.1": {
+              "token": "assets/post-apocalypse/illustrated-1.1.0/adversaries.1.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/adversaries.1.webp"
+            },
+            "illustrated.post-apocalypse.adversaries.2": {
+              "token": "assets/post-apocalypse/illustrated-1.1.0/adversaries.2.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/adversaries.2.webp"
+            },
+            "illustrated.post-apocalypse.adversaries.3": {
+              "token": "assets/post-apocalypse/illustrated-1.1.0/adversaries.3.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/adversaries.3.webp"
+            },
+            "illustrated.post-apocalypse.adversaries.4": {
+              "token": "assets/post-apocalypse/illustrated-1.1.0/adversaries.4.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/adversaries.4.webp"
+            },
+            "illustrated.post-apocalypse.adversaries.5": {
+              "token": "assets/post-apocalypse/illustrated-1.1.0/adversaries.5.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/adversaries.5.webp"
+            },
+            "illustrated.post-apocalypse.adversaries.6": {
+              "token": "assets/post-apocalypse/illustrated-1.1.0/adversaries.6.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/adversaries.6.webp"
+            },
+            "illustrated.post-apocalypse.adversaries.7": {
+              "token": "assets/post-apocalypse/illustrated-1.1.0/adversaries.7.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/adversaries.7.webp"
+            },
+            "illustrated.post-apocalypse.adversaries.8": {
+              "token": "assets/post-apocalypse/illustrated-1.1.0/adversaries.8.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/adversaries.8.webp"
+            },
+            "illustrated.post-apocalypse.adversaries.9": {
+              "token": "assets/post-apocalypse/illustrated-1.1.0/adversaries.9.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/adversaries.9.webp"
+            },
+            "illustrated.post-apocalypse.adversaries.10": {
+              "token": "assets/post-apocalypse/illustrated-1.1.0/adversaries.10.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/adversaries.10.webp"
+            },
+            "illustrated.post-apocalypse.adversaries.11": {
+              "token": "assets/post-apocalypse/illustrated-1.1.0/adversaries.11.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/adversaries.11.webp"
+            },
+            "illustrated.post-apocalypse.adversaries.12": {
+              "token": "assets/post-apocalypse/illustrated-1.1.0/adversaries.12.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/adversaries.12.webp"
+            },
+            "illustrated.post-apocalypse.adversaries.13": {
+              "token": "assets/post-apocalypse/illustrated-1.1.0/adversaries.13.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/adversaries.13.webp"
+            },
+            "illustrated.post-apocalypse.adversaries.14": {
+              "token": "assets/post-apocalypse/illustrated-1.1.0/adversaries.14.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/adversaries.14.webp"
+            },
+            "illustrated.post-apocalypse.adversaries.15": {
+              "token": "assets/post-apocalypse/illustrated-1.1.0/adversaries.15.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/adversaries.15.webp"
+            },
+            "illustrated.post-apocalypse.adversaries.16": {
+              "token": "assets/post-apocalypse/illustrated-1.1.0/adversaries.16.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/adversaries.16.webp"
+            },
+            "illustrated.post-apocalypse.adversaries.17": {
+              "token": "assets/post-apocalypse/illustrated-1.1.0/adversaries.17.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/adversaries.17.webp"
+            },
+            "illustrated.post-apocalypse.adversaries.18": {
+              "token": "assets/post-apocalypse/illustrated-1.1.0/adversaries.18.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/adversaries.18.webp"
+            },
+            "illustrated.post-apocalypse.items.1": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.1.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.1.webp"
+            },
+            "illustrated.post-apocalypse.items.2": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.2.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.2.webp"
+            },
+            "illustrated.post-apocalypse.items.3": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.3.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.3.webp"
+            },
+            "illustrated.post-apocalypse.items.4": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.4.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.4.webp"
+            },
+            "illustrated.post-apocalypse.items.5": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.5.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.5.webp"
+            },
+            "illustrated.post-apocalypse.items.6": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.6.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.6.webp"
+            },
+            "illustrated.post-apocalypse.items.7": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.7.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.7.webp"
+            },
+            "illustrated.post-apocalypse.items.8": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.8.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.8.webp"
+            },
+            "illustrated.post-apocalypse.items.9": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.9.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.9.webp"
+            },
+            "illustrated.post-apocalypse.items.10": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.10.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.10.webp"
+            },
+            "illustrated.post-apocalypse.items.11": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.11.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.11.webp"
+            },
+            "illustrated.post-apocalypse.items.12": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.12.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.12.webp"
+            },
+            "illustrated.post-apocalypse.items.13": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.13.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.13.webp"
+            },
+            "illustrated.post-apocalypse.items.14": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.14.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.14.webp"
+            },
+            "illustrated.post-apocalypse.items.15": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.15.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.15.webp"
+            },
+            "illustrated.post-apocalypse.items.16": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.16.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.16.webp"
+            },
+            "illustrated.post-apocalypse.items.17": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.17.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.17.webp"
+            },
+            "illustrated.post-apocalypse.items.18": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.18.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.18.webp"
+            },
+            "illustrated.post-apocalypse.items.19": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.19.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.19.webp"
+            },
+            "illustrated.post-apocalypse.items.20": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.20.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.20.webp"
+            },
+            "illustrated.post-apocalypse.items.21": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.21.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.21.webp"
+            },
+            "illustrated.post-apocalypse.items.22": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.22.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.22.webp"
+            },
+            "illustrated.post-apocalypse.items.23": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.23.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.23.webp"
+            },
+            "illustrated.post-apocalypse.items.24": {
+              "item": "assets/post-apocalypse/illustrated-1.1.0/items.24.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/items.24.webp"
+            },
+            "illustrated.post-apocalypse.events.1": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.1.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.1.webp"
+            },
+            "illustrated.post-apocalypse.events.2": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.2.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.2.webp"
+            },
+            "illustrated.post-apocalypse.events.3": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.3.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.3.webp"
+            },
+            "illustrated.post-apocalypse.events.4": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.4.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.4.webp"
+            },
+            "illustrated.post-apocalypse.events.5": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.5.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.5.webp"
+            },
+            "illustrated.post-apocalypse.events.6": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.6.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.6.webp"
+            },
+            "illustrated.post-apocalypse.events.7": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.7.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.7.webp"
+            },
+            "illustrated.post-apocalypse.events.8": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.8.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.8.webp"
+            },
+            "illustrated.post-apocalypse.events.9": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.9.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.9.webp"
+            },
+            "illustrated.post-apocalypse.events.10": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.10.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.10.webp"
+            },
+            "illustrated.post-apocalypse.events.11": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.11.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.11.webp"
+            },
+            "illustrated.post-apocalypse.events.12": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.12.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.12.webp"
+            },
+            "illustrated.post-apocalypse.events.13": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.13.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.13.webp"
+            },
+            "illustrated.post-apocalypse.events.14": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.14.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.14.webp"
+            },
+            "illustrated.post-apocalypse.events.15": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.15.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.15.webp"
+            },
+            "illustrated.post-apocalypse.events.16": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.16.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.16.webp"
+            },
+            "illustrated.post-apocalypse.events.17": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.17.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.17.webp"
+            },
+            "illustrated.post-apocalypse.events.18": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.18.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.18.webp"
+            },
+            "illustrated.post-apocalypse.events.19": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.19.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.19.webp"
+            },
+            "illustrated.post-apocalypse.events.20": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.20.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.20.webp"
+            },
+            "illustrated.post-apocalypse.events.21": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.21.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.21.webp"
+            },
+            "illustrated.post-apocalypse.events.22": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.22.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.22.webp"
+            },
+            "illustrated.post-apocalypse.events.23": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.23.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.23.webp"
+            },
+            "illustrated.post-apocalypse.events.24": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.24.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.24.webp"
+            },
+            "illustrated.post-apocalypse.events.25": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.25.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.25.webp"
+            },
+            "illustrated.post-apocalypse.events.26": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.26.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.26.webp"
+            },
+            "illustrated.post-apocalypse.events.27": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.27.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.27.webp"
+            },
+            "illustrated.post-apocalypse.events.28": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.28.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.28.webp"
+            },
+            "illustrated.post-apocalypse.events.29": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.29.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.29.webp"
+            },
+            "illustrated.post-apocalypse.events.30": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/events.30.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/events.30.webp"
+            },
+            "illustrated.post-apocalypse.scenes.1": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/scenes.1.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/scenes.1.webp"
+            },
+            "illustrated.post-apocalypse.scenes.2": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/scenes.2.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/scenes.2.webp"
+            },
+            "illustrated.post-apocalypse.scenes.3": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/scenes.3.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/scenes.3.webp"
+            },
+            "illustrated.post-apocalypse.scenes.4": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/scenes.4.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/scenes.4.webp"
+            },
+            "illustrated.post-apocalypse.scenes.5": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/scenes.5.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/scenes.5.webp"
+            },
+            "illustrated.post-apocalypse.scenes.6": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/scenes.6.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/scenes.6.webp"
+            },
+            "illustrated.post-apocalypse.scenes.7": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/scenes.7.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/scenes.7.webp"
+            },
+            "illustrated.post-apocalypse.scenes.8": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/scenes.8.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/scenes.8.webp"
+            },
+            "illustrated.post-apocalypse.scenes.9": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/scenes.9.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/scenes.9.webp"
+            },
+            "illustrated.post-apocalypse.scenes.10": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/scenes.10.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/scenes.10.webp"
+            },
+            "illustrated.post-apocalypse.scenes.11": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/scenes.11.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/scenes.11.webp"
+            },
+            "illustrated.post-apocalypse.scenes.12": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/scenes.12.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/scenes.12.webp"
+            },
+            "illustrated.post-apocalypse.scenes.13": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/scenes.13.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/scenes.13.webp"
+            },
+            "illustrated.post-apocalypse.scenes.14": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/scenes.14.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/scenes.14.webp"
+            },
+            "illustrated.post-apocalypse.scenes.15": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/scenes.15.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/scenes.15.webp"
+            },
+            "illustrated.post-apocalypse.scenes.16": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/scenes.16.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/scenes.16.webp"
+            },
+            "illustrated.post-apocalypse.scenes.17": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/scenes.17.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/scenes.17.webp"
+            },
+            "illustrated.post-apocalypse.scenes.18": {
+              "background": "assets/post-apocalypse/illustrated-1.1.0/scenes.18.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/scenes.18.webp"
+            },
+            "illustrated.post-apocalypse.archetypes.1": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/archetypes.1.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/archetypes.1.webp"
+            },
+            "illustrated.post-apocalypse.archetypes.2": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/archetypes.2.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/archetypes.2.webp"
+            },
+            "illustrated.post-apocalypse.archetypes.3": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/archetypes.3.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/archetypes.3.webp"
+            },
+            "illustrated.post-apocalypse.archetypes.4": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/archetypes.4.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/archetypes.4.webp"
+            },
+            "illustrated.post-apocalypse.archetypes.5": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/archetypes.5.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/archetypes.5.webp"
+            },
+            "illustrated.post-apocalypse.archetypes.6": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/archetypes.6.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/archetypes.6.webp"
+            },
+            "illustrated.post-apocalypse.archetypes.7": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/archetypes.7.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/archetypes.7.webp"
+            },
+            "illustrated.post-apocalypse.archetypes.8": {
+              "portrait": "assets/post-apocalypse/illustrated-1.1.0/archetypes.8.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/archetypes.8.webp"
+            },
+            "illustrated.post-apocalypse.progressionPaths.1": {
+              "card": "assets/post-apocalypse/illustrated-1.1.0/progressionPaths.1.webp"
+            },
+            "illustrated.post-apocalypse.progressionPaths.2": {
+              "card": "assets/post-apocalypse/illustrated-1.1.0/progressionPaths.2.webp"
+            },
+            "illustrated.post-apocalypse.progressionPaths.3": {
+              "card": "assets/post-apocalypse/illustrated-1.1.0/progressionPaths.3.webp"
+            },
+            "illustrated.post-apocalypse.progressionPaths.4": {
+              "card": "assets/post-apocalypse/illustrated-1.1.0/progressionPaths.4.webp"
+            },
+            "illustrated.post-apocalypse.progressionPaths.5": {
+              "card": "assets/post-apocalypse/illustrated-1.1.0/progressionPaths.5.webp"
+            },
+            "illustrated.post-apocalypse.progressionPaths.6": {
+              "card": "assets/post-apocalypse/illustrated-1.1.0/progressionPaths.6.webp"
+            },
+            "illustrated.post-apocalypse.visualThemes.1": {
+              "map": "assets/post-apocalypse/illustrated-1.1.0/visualThemes.1.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/visualThemes.1.webp"
+            },
+            "illustrated.post-apocalypse.visualThemes.2": {
+              "map": "assets/post-apocalypse/illustrated-1.1.0/visualThemes.2.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/visualThemes.2.webp"
+            },
+            "illustrated.post-apocalypse.visualThemes.3": {
+              "map": "assets/post-apocalypse/illustrated-1.1.0/visualThemes.3.webp",
+              "card": "assets/post-apocalypse/illustrated-1.1.0/visualThemes.3.webp"
+            }
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "illustrated-post-apocalypse"
+  }
+}

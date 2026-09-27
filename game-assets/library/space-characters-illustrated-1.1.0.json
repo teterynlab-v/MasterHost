@@ -1,0 +1,800 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.space.characters",
+  "version": "1.1.0",
+  "type": "characters",
+  "name": "Interstellar Crew Roles — Illustrated",
+  "description": "Interstellar Crew Roles for Voidwake Archipelago, Sunforge Hegemony, Nightglass Frontier. Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.",
+  "tags": [
+    "space-opera",
+    "voidwake-archipelago",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Interstellar Crew Roles for Voidwake Archipelago, Sunforge Hegemony, Nightglass Frontier. Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.",
+    "highlights": [
+      "Interstellar Crew Roles",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.space-opera"
+    ],
+    "requiresCapabilities": [
+      "rules:space-opera",
+      "items:space-opera"
+    ],
+    "providesCapabilities": [
+      "characters:space-opera"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.space.rules",
+      "version": "1.1.0"
+    },
+    {
+      "id": "masterhost.asset.space.items",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Space Opera original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.space.characters"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 8,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.space.characters",
+    "version": "1.1.0",
+    "name": "Interstellar Crew Roles — Illustrated",
+    "description": "Interstellar Crew Roles for Voidwake Archipelago, Sunforge Hegemony, Nightglass Frontier. Three complete interstellar campaigns: rescue routes, contested quarantine and a predictive gate archive.",
+    "provides": [
+      "characters:space-opera"
+    ],
+    "requires": [
+      "rules:space-opera",
+      "items:space-opera"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.archetypes.1",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Rescue Pilot"
+            },
+            "description": {
+              "value": "Rescue Pilot: flies a damaged civilian tug and owes its crew a safe return."
+            },
+            "deepId": {
+              "value": "archetypes.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago",
+            "illustrated.space-opera.archetypes.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.archetypes.2",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Neutral Inspector"
+            },
+            "description": {
+              "value": "Neutral Inspector: can read contradictory legal seals and has a relative in the sealed ward."
+            },
+            "deepId": {
+              "value": "archetypes.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony",
+            "illustrated.space-opera.archetypes.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.archetypes.3",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Gate Surveyor"
+            },
+            "description": {
+              "value": "Gate Surveyor: maps unstable corridors and recognizes their partner's voice in the signal."
+            },
+            "deepId": {
+              "value": "archetypes.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.9"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier",
+            "illustrated.space-opera.archetypes.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.archetypes.4",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Habitat Engineer"
+            },
+            "description": {
+              "value": "Habitat Engineer: repairs docking systems and protects a community's dwindling reserves."
+            },
+            "deepId": {
+              "value": "archetypes.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.10"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago",
+            "illustrated.space-opera.archetypes.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.archetypes.5",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Union Medic"
+            },
+            "description": {
+              "value": "Union Medic: treats radiation exposure and needs the original shipment released."
+            },
+            "deepId": {
+              "value": "archetypes.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.14"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony",
+            "illustrated.space-opera.archetypes.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.archetypes.6",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Memory Archivist"
+            },
+            "description": {
+              "value": "Memory Archivist: restores lost identities and refuses to turn personal records into weapons."
+            },
+            "deepId": {
+              "value": "archetypes.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.18"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier",
+            "illustrated.space-opera.archetypes.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.archetypes.7",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Freewake Courier"
+            },
+            "description": {
+              "value": "Freewake Courier: knows blockade routes and wants them shared instead of auctioned."
+            },
+            "deepId": {
+              "value": "archetypes.7"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.19"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago",
+            "illustrated.space-opera.archetypes.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.archetypes.8",
+        "value": {
+          "kind": "archetype",
+          "values": {
+            "name": {
+              "value": "Embassy Witness"
+            },
+            "description": {
+              "value": "Embassy Witness: preserves signed testimony and risks prosecution for an earlier seizure."
+            },
+            "deepId": {
+              "value": "archetypes.8"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "npcs.23"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony",
+            "illustrated.space-opera.archetypes.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.progressionPaths.1",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Route Steward"
+            },
+            "description": {
+              "value": "Route Steward: earns renown by keeping an evacuation route open; gain a courier contact and responsibility for repairs."
+            },
+            "deepId": {
+              "value": "progressionPaths.1"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago",
+            "illustrated.space-opera.progressionPaths.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.progressionPaths.2",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Treaty Mediator"
+            },
+            "description": {
+              "value": "Treaty Mediator: earns renown by securing treatment without suppressing evidence; gain hearing access and a public obligation."
+            },
+            "deepId": {
+              "value": "progressionPaths.2"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony",
+            "illustrated.space-opera.progressionPaths.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.progressionPaths.3",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Gate Custodian"
+            },
+            "description": {
+              "value": "Gate Custodian: earns renown by recovering identities without leaking targeting data; gain archive access and consent duties."
+            },
+            "deepId": {
+              "value": "progressionPaths.3"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.3"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier",
+            "illustrated.space-opera.progressionPaths.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.progressionPaths.4",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Cooperative Captain"
+            },
+            "description": {
+              "value": "Cooperative Captain: earns renown by surrendering a profitable salvage claim; gain a civilian crew and their maintenance costs."
+            },
+            "deepId": {
+              "value": "progressionPaths.4"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.1"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "voidwake-archipelago",
+            "illustrated.space-opera.progressionPaths.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.progressionPaths.5",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Independent Auditor"
+            },
+            "description": {
+              "value": "Independent Auditor: earns renown by preserving disputed testimony; gain neutral inspection authority and political scrutiny."
+            },
+            "deepId": {
+              "value": "progressionPaths.5"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.5"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "sunforge-hegemony",
+            "illustrated.space-opera.progressionPaths.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/space.deep.progressionPaths.6",
+        "value": {
+          "kind": "progression-path",
+          "values": {
+            "name": {
+              "value": "Frontier Cartographer"
+            },
+            "description": {
+              "value": "Frontier Cartographer: earns renown by marking a safe return; gain survey support while publishing hazards honestly."
+            },
+            "deepId": {
+              "value": "progressionPaths.6"
+            },
+            "relations": {
+              "value": [
+                {
+                  "type": "involves",
+                  "targetId": "archetypes.6"
+                }
+              ]
+            }
+          },
+          "tags": [
+            "space-deep",
+            "nightglass-frontier",
+            "illustrated.space-opera.progressionPaths.6"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-archetypes-1": {
+            "template": "space.deep.archetypes.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-archetypes-2": {
+            "template": "space.deep.archetypes.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-archetypes-3": {
+            "template": "space.deep.archetypes.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-archetypes-4": {
+            "template": "space.deep.archetypes.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-archetypes-5": {
+            "template": "space.deep.archetypes.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-archetypes-6": {
+            "template": "space.deep.archetypes.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-archetypes-7": {
+            "template": "space.deep.archetypes.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-archetypes-8": {
+            "template": "space.deep.archetypes.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-progressionPaths-1": {
+            "template": "space.deep.progressionPaths.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-progressionPaths-2": {
+            "template": "space.deep.progressionPaths.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-progressionPaths-3": {
+            "template": "space.deep.progressionPaths.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          },
+          "deep-progressionPaths-4": {
+            "template": "space.deep.progressionPaths.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "voidwake-archipelago"
+              ]
+            }
+          },
+          "deep-progressionPaths-5": {
+            "template": "space.deep.progressionPaths.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "sunforge-hegemony"
+              ]
+            }
+          },
+          "deep-progressionPaths-6": {
+            "template": "space.deep.progressionPaths.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "nightglass-frontier"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "op": "append",
+        "path": "/content/characterCreation/steps/3/fields/1/options",
+        "value": [
+          {
+            "value": "archetypes.1",
+            "label": "Rescue Pilot"
+          },
+          {
+            "value": "archetypes.2",
+            "label": "Neutral Inspector"
+          },
+          {
+            "value": "archetypes.3",
+            "label": "Gate Surveyor"
+          },
+          {
+            "value": "archetypes.4",
+            "label": "Habitat Engineer"
+          },
+          {
+            "value": "archetypes.5",
+            "label": "Union Medic"
+          },
+          {
+            "value": "archetypes.6",
+            "label": "Memory Archivist"
+          },
+          {
+            "value": "archetypes.7",
+            "label": "Freewake Courier"
+          },
+          {
+            "value": "archetypes.8",
+            "label": "Embassy Witness"
+          }
+        ]
+      },
+      {
+        "op": "append",
+        "path": "/content/characterCreation/starting/assets",
+        "value": [
+          {
+            "id": "portrait",
+            "value": "assets/space-opera/illustrated-1.1.0/archetypes.1.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "standard"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/space-opera/illustrated-1.1.0/archetypes.1.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.1"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/space-opera/illustrated-1.1.0/archetypes.2.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.2"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/space-opera/illustrated-1.1.0/archetypes.3.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.3"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/space-opera/illustrated-1.1.0/archetypes.4.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.4"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/space-opera/illustrated-1.1.0/archetypes.5.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.5"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/space-opera/illustrated-1.1.0/archetypes.6.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.6"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/space-opera/illustrated-1.1.0/archetypes.7.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.7"
+            }
+          },
+          {
+            "id": "portrait",
+            "value": "assets/space-opera/illustrated-1.1.0/archetypes.8.webp",
+            "when": {
+              "field": "portrait",
+              "equals": "archetypes.8"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

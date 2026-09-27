@@ -4,16 +4,29 @@ import { readQuickStartHandoff } from "./universe-catalog.js";
 type Identity = { id: string; version: string };
 type Scalar = string | number | boolean;
 type Parameter = { type: "string"; required?: boolean; default?: string; options?: string[] } | { type: "number"; required?: boolean; default?: number; min?: number; max?: number } | { type: "boolean"; required?: boolean; default?: boolean };
-type Asset = Identity & { type: string; name: string; description: string; tags: string[]; preview: { summary: string; highlights: string[] }; dependencies: Identity[]; license: { spdx: string; attribution: string; source: string }; counts: Record<string, number>; contentChecksum: string; media: { name: string; checksum: string }[]; fragment: { parameters: Record<string, Parameter> } };
+type Asset = Identity & { type: string; name: string; description: string; tags: string[]; preview: { summary: string; highlights: string[] }; dependencies: Identity[]; license: { spdx: string; attribution: string; source: string }; counts: Record<string, number>; contentChecksum: string; media: { name: string; checksum: string }[]; compatibility: { basePackIds: string[] }; fragment: { provides:string[]; requires:string[]; parameters: Record<string, Parameter> } };
 type Selection = Identity & { parameters: Record<string, Scalar> };
 type Question = { id: string; label: string; default: string; options: { value: string; label: string }[] };
 type Review = { ready: boolean; diagnostics: { code: string; message: string }[]; orderedSelections: Identity[]; selected: (Identity & { type: string; name: string })[]; counts: Record<string, number>; licenses: { spdx: string; attribution: string; source: string }[] };
 type Preview = { report: { valid: boolean; diagnostics: { code: string; path: string; message: string }[] } };
 
 interface Props { request: (path: string, init?: RequestInit) => Promise<any>; requestMedia: (path: string) => Promise<Blob>; pack: { manifest: { id: string; version: string }; questions: Question[] }; onWorld: (world: any) => Promise<void> | void; onBack: () => void; onAdvanced: () => void }
-export function playTodayAssets<T extends {type:string;preview:{highlights:string[]}}>(assets:T[]):T[]{
- const deep=assets.filter(asset=>asset.preview.highlights.includes("Deep Universe Standard v1"));
- return categories.every(category=>deep.filter(asset=>asset.type===category.type).length===1)?deep:assets;
+type MenuAsset = Identity & {type:string;preview:{highlights:string[]};dependencies:Identity[];compatibility:{basePackIds:string[]};fragment:{provides:string[];requires:string[]}};
+export function playTodayAssets<T extends MenuAsset>(assets:T[], basePackId?:string):T[]{
+ const coherent=(bundle:T[])=>{
+  if(!categories.every(category=>bundle.filter(asset=>asset.type===category.type).length===1))return false;
+  const identities=new Set(bundle.map(asset=>`${asset.id}@${asset.version}`));
+  const capabilities=new Set(bundle.flatMap(asset=>asset.fragment.provides));
+  return bundle.every(asset=>(!basePackId||asset.compatibility.basePackIds.includes(basePackId))&&asset.dependencies.every(dependency=>identities.has(`${dependency.id}@${dependency.version}`))&&asset.fragment.requires.every(capability=>capabilities.has(capability)));
+ };
+ for(const highlight of ["Illustrated Universe v1","Deep Universe Standard v1"]){
+  const matching=assets.filter(asset=>asset.preview.highlights.includes(highlight));
+  for(const version of [...new Set(matching.map(asset=>asset.version))].sort((a,b)=>b.localeCompare(a,undefined,{numeric:true}))){
+   const bundle=matching.filter(asset=>asset.version===version);
+   if(coherent(bundle))return bundle;
+  }
+ }
+ return assets;
 }
 export function quickStartMatchesPack(value: ReturnType<typeof readQuickStartHandoff>, pack: Props["pack"]) { return !value || (pack.manifest.id === value.basePack.id && pack.manifest.version === value.basePack.version); }
 export function initialQuickDecisions(questions: Question[], quickStart: ReturnType<typeof readQuickStartHandoff>) {
@@ -72,7 +85,7 @@ export function QuickGameBuilder({ request, requestMedia, pack, onWorld, onBack,
   const [assets, setAssets] = useState<Asset[]>([]), [step, setStep] = useState(0), [name, setName] = useState(quickStart ? `${quickStart.universeName} One-shot` : "Untitled One-shot"), [seed, setSeed] = useState(quickStart ? `play-today-${quickStart.universeId}` : "masterhost-quick-game"), [selected, setSelected] = useState<Record<string, Selection>>({});
   const [decisions, setDecisions] = useState<Record<string, string>>(() => initialQuickDecisions(pack.questions, quickStart)), [review, setReview] = useState<Review | null>(null), [preview, setPreview] = useState<Preview | null>(null), [busy, setBusy] = useState(false), [error, setError] = useState("");
   const exactPackActive = quickStartMatchesPack(quickStart, pack);
-  useEffect(() => { void request(`/game-assets?basePackId=${encodeURIComponent(pack.manifest.id)}`).then(values=>setAssets(quickStart?playTodayAssets(values):values)).catch(reason => setError(reason.message)); }, []);
+  useEffect(() => { void request(`/game-assets?basePackId=${encodeURIComponent(pack.manifest.id)}`).then(values=>setAssets(quickStart?playTodayAssets(values,pack.manifest.id):values)).catch(reason => setError(reason.message)); }, []);
   useEffect(() => { if (!assets.length) return; setSelected(current => { const next = { ...current }; for (const category of categories) { const matches = assets.filter(asset => asset.type === category.type); if (matches.length === 1 && !next[category.type]) next[category.type] = { id: matches[0]!.id, version: matches[0]!.version, parameters: parameterDefaults(matches[0]!) }; } return next; }); }, [assets]);
   const flow = useMemo(() => quickBuilderFlow(assets), [assets]), flowStep = flow[Math.min(step, flow.length - 1)]!, category = flowStep.kind === "category" ? categories.find(value => value.type === flowStep.type)! : null, choices = useMemo(() => category ? assets.filter(asset => asset.type === category.type) : [], [assets, category?.type]);
   const decisionQuestions = pack.questions.filter(question => !quickStart || !["world.pattern", "world.campaignKit", "world.visualTheme"].includes(question.id));

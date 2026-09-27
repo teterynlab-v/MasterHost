@@ -1,0 +1,1890 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.west.visuals",
+  "version": "1.1.0",
+  "type": "visuals",
+  "name": "Frontier Route Schematics — Illustrated",
+  "description": "Frontier Route Schematics for Cursed Frontier, Ghost Railway, Occult Boomtown. Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.",
+  "tags": [
+    "weird-west",
+    "cursed-frontier",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Frontier Route Schematics for Cursed Frontier, Ghost Railway, Occult Boomtown. Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.",
+    "highlights": [
+      "Frontier Route Schematics",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.weird-west"
+    ],
+    "requiresCapabilities": [
+      "setting:weird-west"
+    ],
+    "providesCapabilities": [
+      "visuals:weird-west"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.west.setting",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Weird West original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.west.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 151
+  },
+  "media": [
+    {
+      "name": "weird-west/illustrated-1.1.0/factions.1.webp",
+      "path": "media/weird-west/illustrated-1.1.0/factions.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "f3b840b5341abc57349e3310976f77f4f444c3717b295079d906dbbac2674a0f",
+      "size": 45200
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/factions.2.webp",
+      "path": "media/weird-west/illustrated-1.1.0/factions.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "61fcd00b5d52e28aa9eb45c34f9fceaa234c0c367b4bdb185a91588b87d943cb",
+      "size": 45720
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/factions.3.webp",
+      "path": "media/weird-west/illustrated-1.1.0/factions.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "ad58a25b4cb6b92c36a406b0e16ff417b448025d660c0c76982dd2a379ca3ae5",
+      "size": 45428
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/factions.4.webp",
+      "path": "media/weird-west/illustrated-1.1.0/factions.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "dd8670b2db8c93446c33a633b55714dbffeed07c19a6edf2d8db158e38cc6c96",
+      "size": 46146
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/factions.5.webp",
+      "path": "media/weird-west/illustrated-1.1.0/factions.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "47694497d55314860837625e4036d61c7ecf6f62f8acafd1fb006e154cf25c5f",
+      "size": 45690
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/factions.6.webp",
+      "path": "media/weird-west/illustrated-1.1.0/factions.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "465e7b0d919667dcc12abfb8311434a6e21b1ae780eb7abe2d37d7972bb68eb1",
+      "size": 45364
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/factions.7.webp",
+      "path": "media/weird-west/illustrated-1.1.0/factions.7.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "238f969c2dea09e7616a81418099ad37142919d322695fd39caf4af70cff711d",
+      "size": 45246
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/factions.8.webp",
+      "path": "media/weird-west/illustrated-1.1.0/factions.8.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "ac0e54f57c765314ce716df9be67735041b91ce752a284ab0fd8c5c9e91d182d",
+      "size": 45574
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/locations.1.webp",
+      "path": "media/weird-west/illustrated-1.1.0/locations.1.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "b2ba275aac20c9ad4daff6d0bbefe9fe1ad413507fc80d10a6445eae7026f243",
+      "size": 45794
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/locations.2.webp",
+      "path": "media/weird-west/illustrated-1.1.0/locations.2.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "e67fdc863a515b183b99e6ba21757f9c6c3cb51a5f504d4ad53a25ba28350f27",
+      "size": 47178
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/locations.3.webp",
+      "path": "media/weird-west/illustrated-1.1.0/locations.3.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "3b2457b152d290650fd67641af1d252cee320c0ed5cda4504ab81898b2a0da15",
+      "size": 46458
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/locations.4.webp",
+      "path": "media/weird-west/illustrated-1.1.0/locations.4.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "75415df7bd88e8da01f455bdc3e6a0b3f3b18e328577b706e4aec281bddc565f",
+      "size": 46126
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/locations.5.webp",
+      "path": "media/weird-west/illustrated-1.1.0/locations.5.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "9b27fdaa267082122c6d4517588a4b02d98ccc1bbb1cbba1b061239a116e1f0e",
+      "size": 46280
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/locations.6.webp",
+      "path": "media/weird-west/illustrated-1.1.0/locations.6.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "a552d3d3ace605518a5303c825e0ab7b126b14f90fa451817bcd4a8f02988100",
+      "size": 46328
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/locations.7.webp",
+      "path": "media/weird-west/illustrated-1.1.0/locations.7.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "31306e6d5739b561290f3afc4cd593014a9a5e4c46bf70beb45168797429afe7",
+      "size": 46406
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/locations.8.webp",
+      "path": "media/weird-west/illustrated-1.1.0/locations.8.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "a67887cd4034da9617028e09c6e9c47f2000f5d655962eae42e70db5fbc6b2a6",
+      "size": 46488
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/locations.9.webp",
+      "path": "media/weird-west/illustrated-1.1.0/locations.9.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "ff310058fcd821b61f0e0f10f2d27f14c8b660ef08a22b6f2c32c495f70f3131",
+      "size": 45406
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/locations.10.webp",
+      "path": "media/weird-west/illustrated-1.1.0/locations.10.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "2e8b7866f7374f1b320466601387241919d637c1b053e62fc67b5ae73cef8ecb",
+      "size": 45520
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/locations.11.webp",
+      "path": "media/weird-west/illustrated-1.1.0/locations.11.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "f260a0dca6fc945acc31a4ee7fe6872a614939e290f244e63b834bc28240cff9",
+      "size": 46242
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/locations.12.webp",
+      "path": "media/weird-west/illustrated-1.1.0/locations.12.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "461cc1c4baa918a06063293ea0da4522a00962cc4b790ea3de33185267f5f480",
+      "size": 47018
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.1.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "f92903e89ad72bec4e82e0cf7cb5bd16bc4f98349dc095fe3de9c1a96b575c36",
+      "size": 45646
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.2.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "89f9cf9d96584bec60041e15f28ed4db2318dadd34e7a89fb6fe5ad37e472c69",
+      "size": 46086
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.3.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "e038ddc84221bf760d7de8c8a02d258bbd7ad048b2686126fd046ac2531dbbe8",
+      "size": 46200
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.4.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "81f6c0d495bca6a6c78f84a1ab99d42f82e75c21b1e904a06a4c1476e4f06d3c",
+      "size": 45466
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.5.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "bbdbfa919bb0a54e2a087f7b620d82e3e7e69475ae7a31051bb72c50859744a5",
+      "size": 45700
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.6.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "a3452ad31531508107bf47c06bfbe5aad5e658fe4c823bc494e90be29f176d50",
+      "size": 45452
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.7.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "a38d376aeb9167164f4478c1377f378c272b2e6224ebcc21197089ca0225224e",
+      "size": 45750
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.8.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "1f6ac061cd3cfae8ae58a4cee1752e8bf101153907a0730cb34c3ec8660b75c8",
+      "size": 45606
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.9.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.9.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "a137f5362e1ccb0e9961d326bad9c08b6e6f4e34e3fc558d57d5c021826dfe09",
+      "size": 44926
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.10.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.10.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "1842154b3d2ca7803f980d7ee5bdb5e1b2fe4ba9dbc41cb9e5445e36b256ab07",
+      "size": 46052
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.11.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.11.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "ab3ee3b286b9034869aca4adc5d970eb8209959d32262ecfbcf852762dc1e024",
+      "size": 45978
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.12.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.12.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "f172552ba6075145940e4f44465d1924a4d608edc9b2b9d127f21211bae92509",
+      "size": 45728
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.13.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.13.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "de3c48445da08165ada44b991adb1ca179649845460ebda9d590e2d71a160e38",
+      "size": 45166
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.14.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.14.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "3a05901b416338375c6392c446b5ce0f940c40a9b59eb3cec6b8e7a3a95fa6d2",
+      "size": 46162
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.15.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.15.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "fa40d9315177f894dedc78eeac00c20b4e1e64ae10e358a2de86d27a1e6c0c57",
+      "size": 46388
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.16.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.16.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "4bbaaef1e4a0e28efa44e9e00c92c9d3968f5c1cc169c0baece986e109146372",
+      "size": 46310
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.17.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.17.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "d2230747b7ff1e35a38e11fe9a9c0f36681ff19b8772d019fbbe8a9b537e2b4a",
+      "size": 46524
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.18.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.18.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "4d64d7ad23f403dc679af71ade653430dc6c7cdf269f0ca486fa695905a43229",
+      "size": 45156
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.19.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.19.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "8e9b70adba28ebd3b84c36481988885014104290ba928e8cb31f74c3ea23bc21",
+      "size": 45738
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.20.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.20.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "bd55f6a3e757318810ac7f7b90908fc15145c8977dd32f3c7844b13f86f01992",
+      "size": 45890
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.21.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.21.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "eb5cfe5e2ccf029cde32a376ebe47c5947f092e751080a3143a1dbe0bf28c1cc",
+      "size": 46112
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.22.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.22.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "1a599f1150bd089d29baed73720f6ab991a1486d33a858566a5e9d234cab5830",
+      "size": 44922
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.23.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.23.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "2d797d6e5bbcde931c78d0a8fe576cc824e34a7d314a6b114f43311b8d5a8110",
+      "size": 46400
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/npcs.24.webp",
+      "path": "media/weird-west/illustrated-1.1.0/npcs.24.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "135ac949d5924007094bf8ded45bac173d151d2e4d7001b5097e15ebc9c30eea",
+      "size": 45030
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/adversaries.1.webp",
+      "path": "media/weird-west/illustrated-1.1.0/adversaries.1.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "c32a48887c10c4147c1e6c9914d2820b87c291cda9862cfa5731fe3111137de6",
+      "size": 60294
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/adversaries.2.webp",
+      "path": "media/weird-west/illustrated-1.1.0/adversaries.2.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "2ed439f186bea05c24d6bb0ce6b46bfa8f5bb2f1c155671d9eb4cf35a05dca12",
+      "size": 45560
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/adversaries.3.webp",
+      "path": "media/weird-west/illustrated-1.1.0/adversaries.3.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "2541d51e3c9ff49468a92bf7266f1177789272e90c56fa84f8c4b61958211496",
+      "size": 43522
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/adversaries.4.webp",
+      "path": "media/weird-west/illustrated-1.1.0/adversaries.4.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "66eba63275e57666ecb4e470d52df79de6429baeda630854f7d9775dc84c4e03",
+      "size": 45138
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/adversaries.5.webp",
+      "path": "media/weird-west/illustrated-1.1.0/adversaries.5.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "79ac4a86ec445fa1ffcc7b80c774ced78c4a1be398b236253190895625c4186c",
+      "size": 46296
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/adversaries.6.webp",
+      "path": "media/weird-west/illustrated-1.1.0/adversaries.6.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "0143a7e23848a36d86dfe0e2057899e2771d60bd9980c9d0eb9fea65ea902d24",
+      "size": 46296
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/adversaries.7.webp",
+      "path": "media/weird-west/illustrated-1.1.0/adversaries.7.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "7ef8ce8a1cbb83aaee45304fdbe33dd19a7dd6600cde2cecdb960bbe096ec92d",
+      "size": 45414
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/adversaries.8.webp",
+      "path": "media/weird-west/illustrated-1.1.0/adversaries.8.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "b810a52282821a24e47903a21e15f657ee23fad7cd4eb22a463b34c29abf9247",
+      "size": 45658
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/adversaries.9.webp",
+      "path": "media/weird-west/illustrated-1.1.0/adversaries.9.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "f4dd7cdf87a82ff45ab9dc8b472b84c6b05ede97ae38e2f657327ac18261a120",
+      "size": 44250
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/adversaries.10.webp",
+      "path": "media/weird-west/illustrated-1.1.0/adversaries.10.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "453aa1570428ad31ef651758e6613f5e63d08f7eb69bdb8aa884dada36b3d951",
+      "size": 47206
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/adversaries.11.webp",
+      "path": "media/weird-west/illustrated-1.1.0/adversaries.11.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "8bcdd142e2ffd6cfe982a089b92b219142139db89f28631c1635f28bc8a14c6d",
+      "size": 46346
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/adversaries.12.webp",
+      "path": "media/weird-west/illustrated-1.1.0/adversaries.12.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "b5bc3cf8163aa1162c33330b1eafcc9248d7d72583f659475c8445b8e89e6607",
+      "size": 44968
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/adversaries.13.webp",
+      "path": "media/weird-west/illustrated-1.1.0/adversaries.13.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "011fc3a837d8e09d3cae3b75f7cc0bbef62f9df79ad8167f8bbbb4de5554c8bd",
+      "size": 45054
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/adversaries.14.webp",
+      "path": "media/weird-west/illustrated-1.1.0/adversaries.14.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "3c1f15cdb4f3a8d1ba03928771946a47c880e74aec12b37cd886e5c37e859f16",
+      "size": 46368
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/adversaries.15.webp",
+      "path": "media/weird-west/illustrated-1.1.0/adversaries.15.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "c9b0b3d786f143f81035887cf502065c855d3ca2672f36d325b70d2a91ab4033",
+      "size": 45400
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/adversaries.16.webp",
+      "path": "media/weird-west/illustrated-1.1.0/adversaries.16.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "b367ffed4ee5961f1ddd9b7ad06a673ba46298e96808e89f374ac15b2cf13f97",
+      "size": 49828
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/adversaries.17.webp",
+      "path": "media/weird-west/illustrated-1.1.0/adversaries.17.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "041d561e8b09773791559cde7e4dcfd3c98dbc1bce6561c12bccd21e208f2cb8",
+      "size": 46308
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/adversaries.18.webp",
+      "path": "media/weird-west/illustrated-1.1.0/adversaries.18.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "af235fda379700b0dd607323fa79fd31eee304a7810befe2c6db41556d5b892b",
+      "size": 45064
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.1.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.1.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "9b55520fbd6a0824470bc6d902a413b807086ee4f71706265f4cb4bc2b6334e4",
+      "size": 44656
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.2.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.2.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "a3c8cb268b9109273c6a9456da3fb7eea53844622bb104446c99e3c4cb096a22",
+      "size": 45506
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.3.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.3.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "13b519268dea9aa1b437faf5cad3afb7935098013fe4e4ca8dce36ce7dc34db2",
+      "size": 45546
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.4.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.4.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "318c964fec9c149581a160453619047a0891f65f2d9ea30e551030106edaff8f",
+      "size": 51292
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.5.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.5.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "951626941f0d3db1278a552fd8d312de8bf5829715b1e6bc1cb01fa592f34e4b",
+      "size": 46700
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.6.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.6.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "e35a2b529c59e383f04d277eaca2272b7513b3cb817fb2c08ea8e17f5d6623e9",
+      "size": 45078
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.7.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.7.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "48815e9bbee3bbda87ad3136a5093e054d733ccf44866ebb2d876629501bc7ad",
+      "size": 45156
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.8.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.8.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "feb4083dc9e20f94eb86cb564a8ac7386efac8affe7b35a13bcfbcbcda53c87f",
+      "size": 45946
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.9.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.9.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "eb512777a29862c11e47d8195c4365d011de74a3a5845f0a6a35945e2921d800",
+      "size": 45676
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.10.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.10.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "363e7bf618d28f232dd4f07ce421c705f009b5e7da63f9f8015d1adfafa895c9",
+      "size": 44946
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.11.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.11.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "03f774abcdd917f1614901646715f1e0b16c7e0d408e73b4d3b8066357a79b80",
+      "size": 45914
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.12.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.12.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "d9769afb8d006b02b4389eb7f560822535c58b72dcfa86e77c5c5c4fa5094118",
+      "size": 45922
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.13.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.13.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "d9fd73b301724f14fef93d36593719c78648cf441d82d075a963fcaed364b688",
+      "size": 45366
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.14.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.14.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "b5fe269ba9672f2c2ea9029492a9910ea00f0113cf3b1bc2ccb6e6b4d0831b9a",
+      "size": 46130
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.15.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.15.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "5b79c6c9fb5fb8f67a5064876db2f4e7559264998d5de163781be255bb3d0147",
+      "size": 44968
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.16.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.16.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "2ac58d896c591a745f66593ed2690776886bcb6ff5b4540c4b48027d8e9a8f17",
+      "size": 44494
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.17.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.17.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "f488d2ec782df7e60b4a0e7f20163ec0fe3835004b9f3c30f4b664354a4528a9",
+      "size": 45222
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.18.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.18.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "85583b066126cff16362f0ca0e7fb1ea8751c00eefdd895e8c9670623a86998a",
+      "size": 44826
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.19.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.19.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "e6e82c2776f295f05f18ae82910f344cd5930382e690307c7c1f243c6cc30b1d",
+      "size": 44914
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.20.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.20.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "3ffcab93a35455d070ec18903d0c0b6896886d01fd3513ef42d96e596f770d5a",
+      "size": 46396
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.21.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.21.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "fd0be2ef8c1ac3cae575579127c8078429f7e81d12aabc8f78ad11f29a6c2861",
+      "size": 45004
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.22.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.22.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "8307c8dded3e748a8b188881134d7e2223b416ec8653895442d1a6fa0acf304f",
+      "size": 44660
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.23.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.23.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "19551666692e06a82e8a7b8f4e0a06dc503cf9b8186209bf30ffe86e5aee1508",
+      "size": 45984
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/items.24.webp",
+      "path": "media/weird-west/illustrated-1.1.0/items.24.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "da29d091f9a12bb1823ad5f6d158fee782cdf1fe7c3274a7cd01cedbf67a3f24",
+      "size": 45464
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.1.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "2c54b4dc74e3c0712094ad621cec9c1019cfca6ea89405ed23929e746de9494f",
+      "size": 46012
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.2.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a2489bba30a4d3693a54d69b5f990cf985d70aa08abc093e1d54a14d88f8b792",
+      "size": 46974
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.3.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "97b0e01bb719ba1cb89cb301e237a80aeb6fb8038a17cbf153f3814c51c8e30c",
+      "size": 46356
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.4.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "52632eb5acdaff43acefd04c95bd2d271a9379808a4e8b3147878ffca00cee9a",
+      "size": 46242
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.5.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "db0a0d21f1e67ab5c58bebe21c39cebacfc8dea880853b0e5839d14a76e3836b",
+      "size": 48320
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.6.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "984542d610eda1d4a2976a620562b16e359d20ff25c649021bee2589881a23b6",
+      "size": 46760
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.7.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ab4f2864be0bd89189436fc24def677ec06ae940ccb23052c39bb80d0d9c644b",
+      "size": 45622
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.8.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "9f494071008edcf75eec9324c6ca6d687fe2816f57410c26421fb68744eaa1ed",
+      "size": 47182
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.9.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "638a0c041f0c663fd02624f8a5d10747f5823642ad9955118d102f9135cbdf27",
+      "size": 46218
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.10.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "3736ff4a634f6ffaf81a3faf274cd1b100bffede5b8e46fe1ecdb3e3412d05de",
+      "size": 46334
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.11.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "96daa59f946d0bade29e6a07ff0aabdf7df942aaf31dbef23d3dd7beb5fd3f8e",
+      "size": 47054
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.12.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "63ad356c58755642009ea138081eae34ebab6c7396f217e1cfef7478fee8b6bd",
+      "size": 46660
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.13.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "1c641051d78ade1d3d4975be5d6e91b7e8b2316989fd7757e2f40b239a0f290a",
+      "size": 47188
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.14.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "606b10a3096061c96436473e6f75b0c1fb84480c0299ca6e474cfb01aac20b60",
+      "size": 46338
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.15.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ca64d903c0e8a1b20e7985f5ee7df94cd3fca346e339c35740cddcbf9cf41b49",
+      "size": 46392
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.16.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "056c6231801dbd002238f81f536da1647d56bf01cd10c26c5822896afb3e6d5d",
+      "size": 45410
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.17.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "d989175c58fdc4667134cc23971206d77a4bd7ef6524a90fbe11b2bb026bd080",
+      "size": 46324
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.18.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "2224cb697bcb2b6b203a017012ff2213d11f9a700b7d26ab9e9ce80e683e9bb2",
+      "size": 45884
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.19.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.19.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "7994661913e64086510af984bd054b599d53acd1d3256a2b0d3cf9ba793d6800",
+      "size": 46292
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.20.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.20.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "503dc81ed4c43eeb8b6ee914ab9784f4530145cf6c7f4a77861800696fc22192",
+      "size": 44784
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.21.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.21.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "0aa45bd3e7935e773db1f1abc5788c4426340ccca94ec5b31d1d692f801ff0a2",
+      "size": 46568
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.22.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.22.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b5cf3ccca8a05593ccbab8b1bd3bc1368b1946ea7f63eb2dddb8d552c38961dc",
+      "size": 46768
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.23.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.23.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "750dc4ae7dc9130776c2af9ec245e545e3736fb539f27102b164fa7ccb23769b",
+      "size": 46454
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.24.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.24.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "79e410b65b4898e391fd879d04be360688768311c22237d976366b090d63375f",
+      "size": 46708
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.25.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.25.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "dc74bdad26c4b2649eb50eea9102b8f4a1c21e140edcc1ac5d16fa8bfb516b75",
+      "size": 44836
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.26.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.26.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "fa46d0f0b18d6e4269389629d52c0dedd354a4667294b805dea0b4128a1fcf56",
+      "size": 46366
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.27.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.27.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "7307db7a7ab2f5a084edb1e65dc8b44f1e1aa70d50ef07b694b5fc86167feebc",
+      "size": 45838
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.28.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.28.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "5636ee670a4c805581d4ddcf23a3f5f57207cd06fc745033584ba85e9b09f756",
+      "size": 45242
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.29.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.29.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "e57098621c615683ec1c25b30a04a754f6f9e0dac271e5fbecca676b0a0a34b2",
+      "size": 46904
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/events.30.webp",
+      "path": "media/weird-west/illustrated-1.1.0/events.30.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f060e546c0ab8c63adae8b23aff1b4084eb36a3673909834015a52e6635ef50d",
+      "size": 45388
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/scenes.1.webp",
+      "path": "media/weird-west/illustrated-1.1.0/scenes.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "3ede6acbd516bd34b0c630d8dc0ff967fe437a883778d7c07df846fed37c26b6",
+      "size": 46042
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/scenes.2.webp",
+      "path": "media/weird-west/illustrated-1.1.0/scenes.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "642eb1db27b8923dce5343228875362d7c5e48578cb4bd89027079c4d4fe13e2",
+      "size": 46372
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/scenes.3.webp",
+      "path": "media/weird-west/illustrated-1.1.0/scenes.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "706a28f7b2652e9a77c2da3159f14e8b7883e925eb5c6b7b3b968f489998e074",
+      "size": 46638
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/scenes.4.webp",
+      "path": "media/weird-west/illustrated-1.1.0/scenes.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "00c14157bf1ef3c14f51edbe3dae5c513742a318e3bd05d53a4a18738db259ad",
+      "size": 45822
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/scenes.5.webp",
+      "path": "media/weird-west/illustrated-1.1.0/scenes.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b415099e6993d531f51fa11166146fbc3b84b999b3286af86f4308b18703e89e",
+      "size": 46164
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/scenes.6.webp",
+      "path": "media/weird-west/illustrated-1.1.0/scenes.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "178bf0040c6bcf8e6004eaacd05ccd8eab0e3e787dd2f4111d33f113751aa6a0",
+      "size": 46668
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/scenes.7.webp",
+      "path": "media/weird-west/illustrated-1.1.0/scenes.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a1bcfe82875f84629e4fed2013c5dc25973ad47d4d14b6724938a66a56decbbc",
+      "size": 45252
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/scenes.8.webp",
+      "path": "media/weird-west/illustrated-1.1.0/scenes.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a6026259f9f92d32cc9a689e72949c2861f8285f14c1c9dcbd0ff58a59813da3",
+      "size": 46900
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/scenes.9.webp",
+      "path": "media/weird-west/illustrated-1.1.0/scenes.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "cb6c97d59877d430e8e9e6c0eec558ea2c08e0aca786f93dd1840d8df962ecbd",
+      "size": 45984
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/scenes.10.webp",
+      "path": "media/weird-west/illustrated-1.1.0/scenes.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "6d8760496d8f6a9bffcf5e65a7cb8f3cb3dc877cc88c74114797b77e80255c7d",
+      "size": 46956
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/scenes.11.webp",
+      "path": "media/weird-west/illustrated-1.1.0/scenes.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4d454fdf5d62d98c6a7ab15d76a160b586a3b4876c5ebcb9501f9b497ba78206",
+      "size": 45960
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/scenes.12.webp",
+      "path": "media/weird-west/illustrated-1.1.0/scenes.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "36a17dbd4f7393eb45e8123f14f01aefa5789553e763b5b3055a44bbc2be9257",
+      "size": 46094
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/scenes.13.webp",
+      "path": "media/weird-west/illustrated-1.1.0/scenes.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a646652a3532120601ec44fb1f2fba20ab6d7b9c60165438ead813237e43e32a",
+      "size": 46424
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/scenes.14.webp",
+      "path": "media/weird-west/illustrated-1.1.0/scenes.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "5734647e28fe7a33331e8e2e8faf38c3275ab6e3b457bf8acaf208afa20c6c50",
+      "size": 46130
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/scenes.15.webp",
+      "path": "media/weird-west/illustrated-1.1.0/scenes.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "1b4c843fe6fb72e49144873e10f26e87480683c18de38eb7464c42c8c31f46d2",
+      "size": 46472
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/scenes.16.webp",
+      "path": "media/weird-west/illustrated-1.1.0/scenes.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "9fd5b58cd78ec19898890760ad79eaf904e1354e90678d4636a98ef11e7a50b3",
+      "size": 46182
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/scenes.17.webp",
+      "path": "media/weird-west/illustrated-1.1.0/scenes.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f0725031a25522543c2cd3e5f4b99b87c74d59868b81d852bd5f256a218e1f4a",
+      "size": 46592
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/scenes.18.webp",
+      "path": "media/weird-west/illustrated-1.1.0/scenes.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "7c05e2bf26e0c8d7b4a08d10237e9a228c3ae46a6159b6815a9bf601bfce1b8a",
+      "size": 45514
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/archetypes.1.webp",
+      "path": "media/weird-west/illustrated-1.1.0/archetypes.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "e82913ba5ea396b51598edf43bf2d786ca74aa39d1ed5e47281301e8bdbe2ab0",
+      "size": 46416
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/archetypes.2.webp",
+      "path": "media/weird-west/illustrated-1.1.0/archetypes.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "fb68cdde0df4d735fd6afce94f3c88224f43ab7e1d8ac444a925e21829334575",
+      "size": 45210
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/archetypes.3.webp",
+      "path": "media/weird-west/illustrated-1.1.0/archetypes.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "aee2275e0f92677c48ee6925f5d801038a6168108b0629f99fe55d4bcf960251",
+      "size": 45728
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/archetypes.4.webp",
+      "path": "media/weird-west/illustrated-1.1.0/archetypes.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "841dafe9f203e47091f05ee2af963550c5d4380d60bc59246a4a38fbed08e183",
+      "size": 46778
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/archetypes.5.webp",
+      "path": "media/weird-west/illustrated-1.1.0/archetypes.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "34167581c918e09a3fd0b7c3c27067a26886595679a09a6beccbc09e1217914a",
+      "size": 45848
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/archetypes.6.webp",
+      "path": "media/weird-west/illustrated-1.1.0/archetypes.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "63f7c820bb6a8549665454bc185e52b8f6c2ff6f6c7e3fa2da4a0143c50487cf",
+      "size": 47448
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/archetypes.7.webp",
+      "path": "media/weird-west/illustrated-1.1.0/archetypes.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "f619efda22994e0d711064e019f5ae8bc5e945cbccbc32b192d85c506f3da106",
+      "size": 45458
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/archetypes.8.webp",
+      "path": "media/weird-west/illustrated-1.1.0/archetypes.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "c84df81566cb8b03abdc563fb927c7a57a867bfa93256b3ea4c75e8d17338dda",
+      "size": 45286
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/progressionPaths.1.webp",
+      "path": "media/weird-west/illustrated-1.1.0/progressionPaths.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "a112d6a38b7fec8dc47b6e8a7f50d9c2abe4e515b6daa75bef54f18542657b4a",
+      "size": 45672
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/progressionPaths.2.webp",
+      "path": "media/weird-west/illustrated-1.1.0/progressionPaths.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "9740b5c3e36da0d603bdb36e248c45b07693db5f0dc4fe1fbb7325b8e8a1c9ac",
+      "size": 46306
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/progressionPaths.3.webp",
+      "path": "media/weird-west/illustrated-1.1.0/progressionPaths.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "7d407ed5a6933305b7535f49972d51a4e23749f75791bd83108d38b5837ed487",
+      "size": 44658
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/progressionPaths.4.webp",
+      "path": "media/weird-west/illustrated-1.1.0/progressionPaths.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "27a1a54b231f5a70250c8dca947fa018f1bed0563235922ed69f9a5745d7fe5f",
+      "size": 45690
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/progressionPaths.5.webp",
+      "path": "media/weird-west/illustrated-1.1.0/progressionPaths.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "661c2e695ae445a2bed0de382315616dc2b5e1e9e4b1ea1266bd3734347dde90",
+      "size": 46092
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/progressionPaths.6.webp",
+      "path": "media/weird-west/illustrated-1.1.0/progressionPaths.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "0d413f50e426eba30c9bbb5a1fd11c8b170a4a27867d1214b72243fc2613d45a",
+      "size": 46118
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/visualThemes.1.webp",
+      "path": "media/weird-west/illustrated-1.1.0/visualThemes.1.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "8baddda1e31529ee85aee7ba053c53435195dfcff10cd0c1eb5eadce4d1864fb",
+      "size": 54618
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/visualThemes.2.webp",
+      "path": "media/weird-west/illustrated-1.1.0/visualThemes.2.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "438d7e33d92eab1fba2f39083d586b7d32f034e74923ede820df90e5c2c74dc3",
+      "size": 44340
+    },
+    {
+      "name": "weird-west/illustrated-1.1.0/visualThemes.3.webp",
+      "path": "media/weird-west/illustrated-1.1.0/visualThemes.3.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "0c74a9ceb7f97492db23ecf98e194f13374588398a43426a3b633ea9ec7ce73f",
+      "size": 43710
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.west.visuals",
+    "version": "1.1.0",
+    "name": "Frontier Route Schematics — Illustrated",
+    "description": "Frontier Route Schematics for Cursed Frontier, Ghost Railway, Occult Boomtown. Three original frontier campaigns: a flood curse across a stolen road, a ghost train with erased workers and a gold vein poisoning the town well.",
+    "provides": [
+      "visuals:weird-west"
+    ],
+    "requires": [
+      "setting:weird-west"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/illustrated-weird-west",
+        "value": {
+          "id": "illustrated-weird-west",
+          "name": "Illustrated weird-west",
+          "description": "Individual generated illustrations for every authored content object",
+          "defaults": {
+            "background": "assets/weird-west/illustrated-1.1.0/scenes.1.webp",
+            "card": "assets/weird-west/illustrated-1.1.0/scenes.1.webp",
+            "map": "assets/weird-west/illustrated-1.1.0/visualThemes.1.webp",
+            "portrait": "assets/weird-west/illustrated-1.1.0/archetypes.1.webp",
+            "token": "assets/weird-west/illustrated-1.1.0/adversaries.1.webp",
+            "item": "assets/weird-west/illustrated-1.1.0/items.1.webp",
+            "location": "assets/weird-west/illustrated-1.1.0/locations.1.webp"
+          },
+          "families": {
+            "illustrated.weird-west.factions.1": {
+              "card": "assets/weird-west/illustrated-1.1.0/factions.1.webp"
+            },
+            "illustrated.weird-west.factions.2": {
+              "card": "assets/weird-west/illustrated-1.1.0/factions.2.webp"
+            },
+            "illustrated.weird-west.factions.3": {
+              "card": "assets/weird-west/illustrated-1.1.0/factions.3.webp"
+            },
+            "illustrated.weird-west.factions.4": {
+              "card": "assets/weird-west/illustrated-1.1.0/factions.4.webp"
+            },
+            "illustrated.weird-west.factions.5": {
+              "card": "assets/weird-west/illustrated-1.1.0/factions.5.webp"
+            },
+            "illustrated.weird-west.factions.6": {
+              "card": "assets/weird-west/illustrated-1.1.0/factions.6.webp"
+            },
+            "illustrated.weird-west.factions.7": {
+              "card": "assets/weird-west/illustrated-1.1.0/factions.7.webp"
+            },
+            "illustrated.weird-west.factions.8": {
+              "card": "assets/weird-west/illustrated-1.1.0/factions.8.webp"
+            },
+            "illustrated.weird-west.locations.1": {
+              "location": "assets/weird-west/illustrated-1.1.0/locations.1.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/locations.1.webp"
+            },
+            "illustrated.weird-west.locations.2": {
+              "location": "assets/weird-west/illustrated-1.1.0/locations.2.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/locations.2.webp"
+            },
+            "illustrated.weird-west.locations.3": {
+              "location": "assets/weird-west/illustrated-1.1.0/locations.3.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/locations.3.webp"
+            },
+            "illustrated.weird-west.locations.4": {
+              "location": "assets/weird-west/illustrated-1.1.0/locations.4.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/locations.4.webp"
+            },
+            "illustrated.weird-west.locations.5": {
+              "location": "assets/weird-west/illustrated-1.1.0/locations.5.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/locations.5.webp"
+            },
+            "illustrated.weird-west.locations.6": {
+              "location": "assets/weird-west/illustrated-1.1.0/locations.6.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/locations.6.webp"
+            },
+            "illustrated.weird-west.locations.7": {
+              "location": "assets/weird-west/illustrated-1.1.0/locations.7.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/locations.7.webp"
+            },
+            "illustrated.weird-west.locations.8": {
+              "location": "assets/weird-west/illustrated-1.1.0/locations.8.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/locations.8.webp"
+            },
+            "illustrated.weird-west.locations.9": {
+              "location": "assets/weird-west/illustrated-1.1.0/locations.9.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/locations.9.webp"
+            },
+            "illustrated.weird-west.locations.10": {
+              "location": "assets/weird-west/illustrated-1.1.0/locations.10.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/locations.10.webp"
+            },
+            "illustrated.weird-west.locations.11": {
+              "location": "assets/weird-west/illustrated-1.1.0/locations.11.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/locations.11.webp"
+            },
+            "illustrated.weird-west.locations.12": {
+              "location": "assets/weird-west/illustrated-1.1.0/locations.12.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/locations.12.webp"
+            },
+            "illustrated.weird-west.npcs.1": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.1.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.1.webp"
+            },
+            "illustrated.weird-west.npcs.2": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.2.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.2.webp"
+            },
+            "illustrated.weird-west.npcs.3": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.3.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.3.webp"
+            },
+            "illustrated.weird-west.npcs.4": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.4.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.4.webp"
+            },
+            "illustrated.weird-west.npcs.5": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.5.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.5.webp"
+            },
+            "illustrated.weird-west.npcs.6": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.6.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.6.webp"
+            },
+            "illustrated.weird-west.npcs.7": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.7.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.7.webp"
+            },
+            "illustrated.weird-west.npcs.8": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.8.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.8.webp"
+            },
+            "illustrated.weird-west.npcs.9": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.9.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.9.webp"
+            },
+            "illustrated.weird-west.npcs.10": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.10.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.10.webp"
+            },
+            "illustrated.weird-west.npcs.11": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.11.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.11.webp"
+            },
+            "illustrated.weird-west.npcs.12": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.12.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.12.webp"
+            },
+            "illustrated.weird-west.npcs.13": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.13.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.13.webp"
+            },
+            "illustrated.weird-west.npcs.14": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.14.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.14.webp"
+            },
+            "illustrated.weird-west.npcs.15": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.15.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.15.webp"
+            },
+            "illustrated.weird-west.npcs.16": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.16.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.16.webp"
+            },
+            "illustrated.weird-west.npcs.17": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.17.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.17.webp"
+            },
+            "illustrated.weird-west.npcs.18": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.18.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.18.webp"
+            },
+            "illustrated.weird-west.npcs.19": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.19.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.19.webp"
+            },
+            "illustrated.weird-west.npcs.20": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.20.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.20.webp"
+            },
+            "illustrated.weird-west.npcs.21": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.21.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.21.webp"
+            },
+            "illustrated.weird-west.npcs.22": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.22.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.22.webp"
+            },
+            "illustrated.weird-west.npcs.23": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.23.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.23.webp"
+            },
+            "illustrated.weird-west.npcs.24": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/npcs.24.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/npcs.24.webp"
+            },
+            "illustrated.weird-west.adversaries.1": {
+              "token": "assets/weird-west/illustrated-1.1.0/adversaries.1.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/adversaries.1.webp"
+            },
+            "illustrated.weird-west.adversaries.2": {
+              "token": "assets/weird-west/illustrated-1.1.0/adversaries.2.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/adversaries.2.webp"
+            },
+            "illustrated.weird-west.adversaries.3": {
+              "token": "assets/weird-west/illustrated-1.1.0/adversaries.3.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/adversaries.3.webp"
+            },
+            "illustrated.weird-west.adversaries.4": {
+              "token": "assets/weird-west/illustrated-1.1.0/adversaries.4.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/adversaries.4.webp"
+            },
+            "illustrated.weird-west.adversaries.5": {
+              "token": "assets/weird-west/illustrated-1.1.0/adversaries.5.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/adversaries.5.webp"
+            },
+            "illustrated.weird-west.adversaries.6": {
+              "token": "assets/weird-west/illustrated-1.1.0/adversaries.6.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/adversaries.6.webp"
+            },
+            "illustrated.weird-west.adversaries.7": {
+              "token": "assets/weird-west/illustrated-1.1.0/adversaries.7.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/adversaries.7.webp"
+            },
+            "illustrated.weird-west.adversaries.8": {
+              "token": "assets/weird-west/illustrated-1.1.0/adversaries.8.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/adversaries.8.webp"
+            },
+            "illustrated.weird-west.adversaries.9": {
+              "token": "assets/weird-west/illustrated-1.1.0/adversaries.9.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/adversaries.9.webp"
+            },
+            "illustrated.weird-west.adversaries.10": {
+              "token": "assets/weird-west/illustrated-1.1.0/adversaries.10.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/adversaries.10.webp"
+            },
+            "illustrated.weird-west.adversaries.11": {
+              "token": "assets/weird-west/illustrated-1.1.0/adversaries.11.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/adversaries.11.webp"
+            },
+            "illustrated.weird-west.adversaries.12": {
+              "token": "assets/weird-west/illustrated-1.1.0/adversaries.12.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/adversaries.12.webp"
+            },
+            "illustrated.weird-west.adversaries.13": {
+              "token": "assets/weird-west/illustrated-1.1.0/adversaries.13.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/adversaries.13.webp"
+            },
+            "illustrated.weird-west.adversaries.14": {
+              "token": "assets/weird-west/illustrated-1.1.0/adversaries.14.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/adversaries.14.webp"
+            },
+            "illustrated.weird-west.adversaries.15": {
+              "token": "assets/weird-west/illustrated-1.1.0/adversaries.15.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/adversaries.15.webp"
+            },
+            "illustrated.weird-west.adversaries.16": {
+              "token": "assets/weird-west/illustrated-1.1.0/adversaries.16.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/adversaries.16.webp"
+            },
+            "illustrated.weird-west.adversaries.17": {
+              "token": "assets/weird-west/illustrated-1.1.0/adversaries.17.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/adversaries.17.webp"
+            },
+            "illustrated.weird-west.adversaries.18": {
+              "token": "assets/weird-west/illustrated-1.1.0/adversaries.18.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/adversaries.18.webp"
+            },
+            "illustrated.weird-west.items.1": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.1.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.1.webp"
+            },
+            "illustrated.weird-west.items.2": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.2.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.2.webp"
+            },
+            "illustrated.weird-west.items.3": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.3.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.3.webp"
+            },
+            "illustrated.weird-west.items.4": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.4.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.4.webp"
+            },
+            "illustrated.weird-west.items.5": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.5.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.5.webp"
+            },
+            "illustrated.weird-west.items.6": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.6.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.6.webp"
+            },
+            "illustrated.weird-west.items.7": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.7.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.7.webp"
+            },
+            "illustrated.weird-west.items.8": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.8.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.8.webp"
+            },
+            "illustrated.weird-west.items.9": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.9.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.9.webp"
+            },
+            "illustrated.weird-west.items.10": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.10.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.10.webp"
+            },
+            "illustrated.weird-west.items.11": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.11.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.11.webp"
+            },
+            "illustrated.weird-west.items.12": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.12.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.12.webp"
+            },
+            "illustrated.weird-west.items.13": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.13.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.13.webp"
+            },
+            "illustrated.weird-west.items.14": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.14.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.14.webp"
+            },
+            "illustrated.weird-west.items.15": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.15.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.15.webp"
+            },
+            "illustrated.weird-west.items.16": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.16.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.16.webp"
+            },
+            "illustrated.weird-west.items.17": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.17.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.17.webp"
+            },
+            "illustrated.weird-west.items.18": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.18.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.18.webp"
+            },
+            "illustrated.weird-west.items.19": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.19.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.19.webp"
+            },
+            "illustrated.weird-west.items.20": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.20.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.20.webp"
+            },
+            "illustrated.weird-west.items.21": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.21.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.21.webp"
+            },
+            "illustrated.weird-west.items.22": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.22.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.22.webp"
+            },
+            "illustrated.weird-west.items.23": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.23.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.23.webp"
+            },
+            "illustrated.weird-west.items.24": {
+              "item": "assets/weird-west/illustrated-1.1.0/items.24.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/items.24.webp"
+            },
+            "illustrated.weird-west.events.1": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.1.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.1.webp"
+            },
+            "illustrated.weird-west.events.2": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.2.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.2.webp"
+            },
+            "illustrated.weird-west.events.3": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.3.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.3.webp"
+            },
+            "illustrated.weird-west.events.4": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.4.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.4.webp"
+            },
+            "illustrated.weird-west.events.5": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.5.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.5.webp"
+            },
+            "illustrated.weird-west.events.6": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.6.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.6.webp"
+            },
+            "illustrated.weird-west.events.7": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.7.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.7.webp"
+            },
+            "illustrated.weird-west.events.8": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.8.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.8.webp"
+            },
+            "illustrated.weird-west.events.9": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.9.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.9.webp"
+            },
+            "illustrated.weird-west.events.10": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.10.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.10.webp"
+            },
+            "illustrated.weird-west.events.11": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.11.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.11.webp"
+            },
+            "illustrated.weird-west.events.12": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.12.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.12.webp"
+            },
+            "illustrated.weird-west.events.13": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.13.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.13.webp"
+            },
+            "illustrated.weird-west.events.14": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.14.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.14.webp"
+            },
+            "illustrated.weird-west.events.15": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.15.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.15.webp"
+            },
+            "illustrated.weird-west.events.16": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.16.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.16.webp"
+            },
+            "illustrated.weird-west.events.17": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.17.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.17.webp"
+            },
+            "illustrated.weird-west.events.18": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.18.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.18.webp"
+            },
+            "illustrated.weird-west.events.19": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.19.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.19.webp"
+            },
+            "illustrated.weird-west.events.20": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.20.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.20.webp"
+            },
+            "illustrated.weird-west.events.21": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.21.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.21.webp"
+            },
+            "illustrated.weird-west.events.22": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.22.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.22.webp"
+            },
+            "illustrated.weird-west.events.23": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.23.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.23.webp"
+            },
+            "illustrated.weird-west.events.24": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.24.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.24.webp"
+            },
+            "illustrated.weird-west.events.25": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.25.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.25.webp"
+            },
+            "illustrated.weird-west.events.26": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.26.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.26.webp"
+            },
+            "illustrated.weird-west.events.27": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.27.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.27.webp"
+            },
+            "illustrated.weird-west.events.28": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.28.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.28.webp"
+            },
+            "illustrated.weird-west.events.29": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.29.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.29.webp"
+            },
+            "illustrated.weird-west.events.30": {
+              "background": "assets/weird-west/illustrated-1.1.0/events.30.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/events.30.webp"
+            },
+            "illustrated.weird-west.scenes.1": {
+              "background": "assets/weird-west/illustrated-1.1.0/scenes.1.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/scenes.1.webp"
+            },
+            "illustrated.weird-west.scenes.2": {
+              "background": "assets/weird-west/illustrated-1.1.0/scenes.2.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/scenes.2.webp"
+            },
+            "illustrated.weird-west.scenes.3": {
+              "background": "assets/weird-west/illustrated-1.1.0/scenes.3.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/scenes.3.webp"
+            },
+            "illustrated.weird-west.scenes.4": {
+              "background": "assets/weird-west/illustrated-1.1.0/scenes.4.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/scenes.4.webp"
+            },
+            "illustrated.weird-west.scenes.5": {
+              "background": "assets/weird-west/illustrated-1.1.0/scenes.5.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/scenes.5.webp"
+            },
+            "illustrated.weird-west.scenes.6": {
+              "background": "assets/weird-west/illustrated-1.1.0/scenes.6.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/scenes.6.webp"
+            },
+            "illustrated.weird-west.scenes.7": {
+              "background": "assets/weird-west/illustrated-1.1.0/scenes.7.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/scenes.7.webp"
+            },
+            "illustrated.weird-west.scenes.8": {
+              "background": "assets/weird-west/illustrated-1.1.0/scenes.8.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/scenes.8.webp"
+            },
+            "illustrated.weird-west.scenes.9": {
+              "background": "assets/weird-west/illustrated-1.1.0/scenes.9.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/scenes.9.webp"
+            },
+            "illustrated.weird-west.scenes.10": {
+              "background": "assets/weird-west/illustrated-1.1.0/scenes.10.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/scenes.10.webp"
+            },
+            "illustrated.weird-west.scenes.11": {
+              "background": "assets/weird-west/illustrated-1.1.0/scenes.11.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/scenes.11.webp"
+            },
+            "illustrated.weird-west.scenes.12": {
+              "background": "assets/weird-west/illustrated-1.1.0/scenes.12.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/scenes.12.webp"
+            },
+            "illustrated.weird-west.scenes.13": {
+              "background": "assets/weird-west/illustrated-1.1.0/scenes.13.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/scenes.13.webp"
+            },
+            "illustrated.weird-west.scenes.14": {
+              "background": "assets/weird-west/illustrated-1.1.0/scenes.14.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/scenes.14.webp"
+            },
+            "illustrated.weird-west.scenes.15": {
+              "background": "assets/weird-west/illustrated-1.1.0/scenes.15.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/scenes.15.webp"
+            },
+            "illustrated.weird-west.scenes.16": {
+              "background": "assets/weird-west/illustrated-1.1.0/scenes.16.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/scenes.16.webp"
+            },
+            "illustrated.weird-west.scenes.17": {
+              "background": "assets/weird-west/illustrated-1.1.0/scenes.17.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/scenes.17.webp"
+            },
+            "illustrated.weird-west.scenes.18": {
+              "background": "assets/weird-west/illustrated-1.1.0/scenes.18.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/scenes.18.webp"
+            },
+            "illustrated.weird-west.archetypes.1": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/archetypes.1.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/archetypes.1.webp"
+            },
+            "illustrated.weird-west.archetypes.2": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/archetypes.2.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/archetypes.2.webp"
+            },
+            "illustrated.weird-west.archetypes.3": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/archetypes.3.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/archetypes.3.webp"
+            },
+            "illustrated.weird-west.archetypes.4": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/archetypes.4.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/archetypes.4.webp"
+            },
+            "illustrated.weird-west.archetypes.5": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/archetypes.5.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/archetypes.5.webp"
+            },
+            "illustrated.weird-west.archetypes.6": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/archetypes.6.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/archetypes.6.webp"
+            },
+            "illustrated.weird-west.archetypes.7": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/archetypes.7.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/archetypes.7.webp"
+            },
+            "illustrated.weird-west.archetypes.8": {
+              "portrait": "assets/weird-west/illustrated-1.1.0/archetypes.8.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/archetypes.8.webp"
+            },
+            "illustrated.weird-west.progressionPaths.1": {
+              "card": "assets/weird-west/illustrated-1.1.0/progressionPaths.1.webp"
+            },
+            "illustrated.weird-west.progressionPaths.2": {
+              "card": "assets/weird-west/illustrated-1.1.0/progressionPaths.2.webp"
+            },
+            "illustrated.weird-west.progressionPaths.3": {
+              "card": "assets/weird-west/illustrated-1.1.0/progressionPaths.3.webp"
+            },
+            "illustrated.weird-west.progressionPaths.4": {
+              "card": "assets/weird-west/illustrated-1.1.0/progressionPaths.4.webp"
+            },
+            "illustrated.weird-west.progressionPaths.5": {
+              "card": "assets/weird-west/illustrated-1.1.0/progressionPaths.5.webp"
+            },
+            "illustrated.weird-west.progressionPaths.6": {
+              "card": "assets/weird-west/illustrated-1.1.0/progressionPaths.6.webp"
+            },
+            "illustrated.weird-west.visualThemes.1": {
+              "map": "assets/weird-west/illustrated-1.1.0/visualThemes.1.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/visualThemes.1.webp"
+            },
+            "illustrated.weird-west.visualThemes.2": {
+              "map": "assets/weird-west/illustrated-1.1.0/visualThemes.2.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/visualThemes.2.webp"
+            },
+            "illustrated.weird-west.visualThemes.3": {
+              "map": "assets/weird-west/illustrated-1.1.0/visualThemes.3.webp",
+              "card": "assets/weird-west/illustrated-1.1.0/visualThemes.3.webp"
+            }
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "illustrated-weird-west"
+  }
+}

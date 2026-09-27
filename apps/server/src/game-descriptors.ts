@@ -29,7 +29,7 @@ export async function registerGameDescriptors(app: FastifyInstance, dependencies
   const basePack = async (request: any, expected: { id: string; version: string }): Promise<{ pack: LoadedWorldPack; document: WorldPackDocument }> => {
     const realm = await realmFor(request), pack = app.masterhostActivePack ? await app.masterhostActivePack(realm) : null;
     if (!pack || pack.manifest.id !== expected.id || pack.manifest.version !== expected.version) throw fail(`base Pack ${expected.id}@${expected.version} is not active`, 409);
-    const project = (await dependencies.packs.list(realm.id)).find(value => value.status === "published" && value.document.manifest.id === expected.id && value.document.manifest.version === expected.version);
+    const project = await dependencies.packs.findPublished(realm.id, expected.id, expected.version);
     const document = project?.document ?? await worldPackDocumentFromLoaded(pack, realm.brand);
     return { pack, document };
   };
@@ -124,7 +124,7 @@ export async function registerGameDescriptors(app: FastifyInstance, dependencies
   app.post("/api/game-descriptors/:id/fork-pack", async (request: any) => {
     const { realm, project } = await current(request.params.id, request), id = String(request.body?.id ?? "").trim(), name = String(request.body?.name ?? "").trim(), version = String(request.body?.version ?? "").trim();
     if (!/^[a-zA-Z0-9][a-zA-Z0-9._-]*$/.test(id) || !name || name.length > 120 || !/^\d+\.\d+\.\d+(?:-[a-zA-Z0-9.-]+)?$/.test(version)) throw fail("valid Pack id, name and semantic version are required");
-    const base = await basePack(request, project.basePack), publishedBase = (await dependencies.packs.list(realm.id)).find(value => value.status === "published" && value.document.manifest.id === project.basePack.id && value.document.manifest.version === project.basePack.version), assetData: Record<string, string> = {};
+    const base = await basePack(request, project.basePack), publishedBase = await dependencies.packs.findPublished(realm.id, project.basePack.id, project.basePack.version), assetData: Record<string, string> = {};
     for (const [assetName, metadata] of Object.entries(project.compiled.assets)) {
       const media = gameAssetMedia(dependencies.assets, assetName, metadata.checksum);
       if (media) assetData[assetName] = (await readFile(media.absolutePath)).toString("base64");

@@ -1,0 +1,857 @@
+{
+  "schemaVersion": 1,
+  "scope": "Thumbnail inspection records; distinct from source integrity, runtime acceptance and full-resolution art approval.",
+  "reviews": [
+    {
+      "checkedAt": "2026-09-27T13:21:24.965004+00:00",
+      "universeId": "cosmic-investigation",
+      "kind": "items",
+      "level": "thumbnail-inspected",
+      "objects": [
+        {
+          "objectId": "items.1",
+          "checksum": "1f4f40ae327bb24cb33482d7f8c673be25bfb8f78604d42b602156c7cf3e5f84"
+        },
+        {
+          "objectId": "items.2",
+          "checksum": "d277714785a5f3c7274dd1214c81ab9dab9881c5e61583a48ed6350472f346f5"
+        },
+        {
+          "objectId": "items.3",
+          "checksum": "776b9092efd6997a965b748d02f26582080b863e59c2737ffc8095210effa808"
+        },
+        {
+          "objectId": "items.4",
+          "checksum": "f54822349a6bd0030dbdc59668c61b30359b31f7a66c11a82197ed50b59c684c"
+        },
+        {
+          "objectId": "items.5",
+          "checksum": "4731d85c5534eaa42320f095d97a0e2f6b1bc9c71c55a7f48a23a35366c0c46e"
+        },
+        {
+          "objectId": "items.6",
+          "checksum": "7e2b50d3aee01d656c3cb2dd10754b5d3134e55cb83014aa3fbc0c519db93112"
+        },
+        {
+          "objectId": "items.7",
+          "checksum": "2ad9f4f20ccf677d527a59b810cfad228f59600c0ab26910ff48b9a8725f10e7"
+        },
+        {
+          "objectId": "items.8",
+          "checksum": "cc03a3d0b200694d3b840345b472c47aee8cae59645ea654291d483a8f73422e"
+        },
+        {
+          "objectId": "items.9",
+          "checksum": "4bba1365fe389c7f82daa1436ba80de0acf1ebf5232c8db40908e253a10394ee"
+        },
+        {
+          "objectId": "items.10",
+          "checksum": "8bdae03d6f1f7f209988fd232cfbfa7808c8ecd228a53928625b3ed2b61b1e83"
+        },
+        {
+          "objectId": "items.11",
+          "checksum": "7d44968a965996946881cec199873b38dac0f56e0d44027c2de0563345273c15"
+        },
+        {
+          "objectId": "items.12",
+          "checksum": "d5e0c0ec278340637d154f8cdefc49d0944890d39a15069db41049112c8206b4"
+        },
+        {
+          "objectId": "items.13",
+          "checksum": "f64cf495338201105eaf51f529f54df7f58f0c3c2c9a3e1bfc1f5422ba2358de"
+        },
+        {
+          "objectId": "items.14",
+          "checksum": "82bebf71ff193b6e5bd0b518faed069ec1e20f615a97a57f3b8dbf8237445692"
+        },
+        {
+          "objectId": "items.15",
+          "checksum": "b8982206860fc910f0459f4d32dd45e054a261eb4cf4210f4a691c0e90ac2feb"
+        },
+        {
+          "objectId": "items.16",
+          "checksum": "49b2993786d36cc1f25e5b2a9dd62e474744bb4de87d46e65c64dd711887720b"
+        },
+        {
+          "objectId": "items.17",
+          "checksum": "5e00f4ab0f9bb1e818759e3ce0f370b2d3749c68134d190b2fca122c954a81d0"
+        },
+        {
+          "objectId": "items.18",
+          "checksum": "c751bd590efc18412054dfb61d58ac19a4f484128a533311ef2cc444ca815b7c"
+        },
+        {
+          "objectId": "items.19",
+          "checksum": "92fded567fba4006cb4eb6f06d639bbf7284eb89da1e826d15863eb4c713d2b3"
+        },
+        {
+          "objectId": "items.20",
+          "checksum": "a0459d16c58c935c3ed39e787fd80f881bc8d521d4fd1359296a8176438be1cb"
+        },
+        {
+          "objectId": "items.21",
+          "checksum": "b66f4c0ec56085ffe1ee9e4113f53bf7ff71f4a80ff9d538486889c5d16b6867"
+        },
+        {
+          "objectId": "items.22",
+          "checksum": "d8a44a70327ad287395d8091b4d60545372ea2ed2502eb9a086d9d397d3a547d"
+        },
+        {
+          "objectId": "items.23",
+          "checksum": "3ceed19379d8ed19d9a6c8dec9db5d9cdcca32a3bff0fb9da5a9ea5e2025136b"
+        },
+        {
+          "objectId": "items.24",
+          "checksum": "500660f1fdb74bb0640045e825d574687944d61e66f04df69c5b0634024148c9"
+        }
+      ],
+      "evidence": "artwork/evidence/cosmic-items-review.png",
+      "observations": "24 separate item illustrations observed with captions in original gallery. Readable distinct objects and consistent painterly lighting. Paper props include decorative markings; full-resolution details remain unapproved."
+    },
+    {
+      "checkedAt": "2026-09-27T13:50:17.822759+00:00",
+      "universeId": "cosmic-investigation",
+      "kind": "npcs",
+      "level": "thumbnail-inspected-with-quality-note",
+      "objects": [
+        {
+          "objectId": "npcs.1",
+          "checksum": "365dea446bac5ea9a4cbdc8b8fc43b0697272f5c1bf030632ff7c3182c7642bc"
+        },
+        {
+          "objectId": "npcs.2",
+          "checksum": "4e5022f4b3c4559b4d616920f38a7dac54fc5d505b6b702a71c000835ca55e17"
+        },
+        {
+          "objectId": "npcs.3",
+          "checksum": "c62497abfd9150d671fc6270f9556163449c227b9260b90c5944e767003f39d9"
+        },
+        {
+          "objectId": "npcs.4",
+          "checksum": "f88d1b2a6f1db699ee217ba3b63873ac823ee0fa472f079b329908af58653864"
+        },
+        {
+          "objectId": "npcs.5",
+          "checksum": "e8346cc7234cfbfc5af31532d341781acab3d969e102a6d183ec6dae63edb082"
+        },
+        {
+          "objectId": "npcs.6",
+          "checksum": "f48a680ef28c65d3b0873fc2dafca3f94869d8502dfad5f9807d48c82cc6aaef"
+        },
+        {
+          "objectId": "npcs.7",
+          "checksum": "29a1db03a60e39591e7d4b0976b7ba7a03f13d125441732fb72e00719cefa5d0"
+        },
+        {
+          "objectId": "npcs.8",
+          "checksum": "e7322033956ceff3104280ee0f013cd75ba85dbb9bf80a8f99f08fadabe4fc77"
+        },
+        {
+          "objectId": "npcs.9",
+          "checksum": "09c9fd5df4726d489f8304c0eebbc65d4a4abe62a01580b92646499797ef963b"
+        },
+        {
+          "objectId": "npcs.10",
+          "checksum": "895eb83a787dcfc1301e7470edda0091fbfe938a747c269445a2b101cdb59879"
+        },
+        {
+          "objectId": "npcs.11",
+          "checksum": "c6249cfb624c3b9872fc1ae26ede251250969a5e44cc62400ccfe0068c76427f"
+        },
+        {
+          "objectId": "npcs.12",
+          "checksum": "b1046a10d3755cedcf3b23af544b2208ea763ff1c59ca122b373d4fc5d7582e5"
+        },
+        {
+          "objectId": "npcs.13",
+          "checksum": "3ce59213c9919a7bb229a30478a2dbb433136e3f8e7e0a0f11d983be2ae60d46"
+        },
+        {
+          "objectId": "npcs.14",
+          "checksum": "7183e777b57eab778ee2f939afa064bf58488a85dd54cb4a2d57ffb7d3d15b52"
+        },
+        {
+          "objectId": "npcs.15",
+          "checksum": "3ba5e57b180e1caf960c95a2ebd249f85d87e558540c285c6e7c17adbb58ccc9"
+        },
+        {
+          "objectId": "npcs.16",
+          "checksum": "2f73cebe08c95e56fa6cdc873459f2659bb6b60b58220f81f9a872cee05b8efc"
+        },
+        {
+          "objectId": "npcs.17",
+          "checksum": "4321db276edc48d46b2fe7984d3afdba8c1fec726ed529dc4b0f401719cfbced"
+        },
+        {
+          "objectId": "npcs.18",
+          "checksum": "797c87f734e574a724bfa73c4e628bba41bf5f83f54a5c412836dc99e878bcb8"
+        },
+        {
+          "objectId": "npcs.19",
+          "checksum": "e9a63ff86bc12b64c11263d80a3a89dcaf0fdd3db79ffce7972663ed4b3334a3"
+        },
+        {
+          "objectId": "npcs.20",
+          "checksum": "a6f775c3ac3d459e273b08e79cd0349ee25eb327d2070ecd5662c5d147c4ac21"
+        },
+        {
+          "objectId": "npcs.21",
+          "checksum": "c3aa478dcbdd08612f7857722a00758bcd864726d15ef61fe598715a14fb0fc2"
+        },
+        {
+          "objectId": "npcs.22",
+          "checksum": "9eff54c69c22734965f47f082e528dac41a04fa02bf4f1b59dac4db56be0661f"
+        },
+        {
+          "objectId": "npcs.23",
+          "checksum": "89c506c0d5a14c89a069a92ec9fc9423dab4616918ed580c5376da9283e00ac2"
+        },
+        {
+          "objectId": "npcs.24",
+          "checksum": "d98c9d9a1389ab5671023e1e80ac20e7df1d03ecc76c88c6322577cb132606ff"
+        }
+      ],
+      "evidence": [
+        "artwork/evidence/cosmic-npcs-review-top.png",
+        "artwork/evidence/cosmic-npcs-review-bottom.png"
+      ],
+      "observations": "24 NPC portraits observed with captions. Distinct clothing and occupational props, consistent painterly context. Several portraits repeat similar young brunette faces; broad visual identity diversity and full-resolution details remain unapproved. Future, not-yet-started NPC batches in Post Apocalypse, Weird West, Urban Fantasy and Mecha Kaiju now have explicit face/age/hair variation while respecting authored child/elder identities."
+    },
+    {
+      "checkedAt": "2026-09-27T14:21:47.763Z",
+      "universeId": "age-of-sail",
+      "kind": "adversaries",
+      "level": "inspected-revision-required",
+      "objects": [
+        {
+          "objectId": "adversaries.15",
+          "checksum": "11107b597affbeb6e536d11ce076eab356ccdac8c10011258d3617e500e9b773"
+        }
+      ],
+      "evidence": [
+        "artwork/generated/age-of-sail/adversaries.15.png"
+      ],
+      "observations": "Island Chain Giant composition matches the authored island/anchor context. Small white signature-like strokes at the extreme bottom-left violate the no-signature brief. Built-in image edit requested; original retained. Corrected output must be visually inspected before selection."
+    },
+    {
+      "checkedAt": "2026-09-27T14:27:11.224Z",
+      "universeId": "age-of-sail",
+      "kind": "adversaries",
+      "level": "revision-inspected-selected",
+      "objects": [
+        {
+          "objectId": "adversaries.15",
+          "checksum": "313757ad52678a962cd70a25270de3e081cd26f4cd7d74be85b4693e351cc190"
+        }
+      ],
+      "evidence": [
+        "artwork/generated/age-of-sail/adversaries.15-v2.png"
+      ],
+      "observations": "The edited original has no visible signature strokes in the bottom-left. Giant, ship, anchor and setting remain consistent. Selected v2 for delivery; first original retained. This single-object check does not approve the remaining collection."
+    },
+    {
+      "checkedAt": "2026-09-27T14:50:06.258Z",
+      "universeId": "age-of-sail",
+      "kind": "npcs",
+      "level": "thumbnail-inspected-with-quality-note",
+      "objects": [
+        {
+          "objectId": "npcs.1",
+          "checksum": "2d0659b59f0f06c2fd6c852cc179f948e411194d5f07adb4208fba6fe4e69cba"
+        },
+        {
+          "objectId": "npcs.2",
+          "checksum": "cc4873432662e0b2841a9262ad8ba2441d4f19419a35b476e5e76bcfea1238a5"
+        },
+        {
+          "objectId": "npcs.3",
+          "checksum": "0fdc14c78af7a123c3a947b51b103096efe49f5240763b6a1622906dec92d96e"
+        },
+        {
+          "objectId": "npcs.4",
+          "checksum": "64412b1bb0e84f01e686021e194e915bc86e4eaef22380eba027625ad127a9fd"
+        },
+        {
+          "objectId": "npcs.5",
+          "checksum": "6e046c7584efb12f4cabbbbaa8d44a37d4d4592dafe2799e0a47a2fb80225985"
+        },
+        {
+          "objectId": "npcs.6",
+          "checksum": "c87035228799e79fbd21fc3e5de0b00ae26d1986b2245ba5848ffd973b7590b6"
+        },
+        {
+          "objectId": "npcs.7",
+          "checksum": "b06f621178a355f01882b1ae959abeb114f0f9f9d04b7e61015837f8e6d30644"
+        },
+        {
+          "objectId": "npcs.8",
+          "checksum": "fa2e2f487a110e9c6207cff99f94b8b02d93daf2a1343288e6d43b7ddc5913eb"
+        },
+        {
+          "objectId": "npcs.9",
+          "checksum": "efd757680bb810ae495d58a5dd81067c22d5fb075f81303f84787fb8eeaf70b6"
+        },
+        {
+          "objectId": "npcs.10",
+          "checksum": "4cc6feda0f94af5bb98ae1c6a45ee5c3aac9016f8d8991f23dec5668f4663289"
+        },
+        {
+          "objectId": "npcs.11",
+          "checksum": "89c1d73e4720ed673c32bc0a958102162d3518817949910909fd914704ced3bb"
+        },
+        {
+          "objectId": "npcs.12",
+          "checksum": "4f9e5d5d0c52d11de22687a4825c4220b2ae72cf95ea545a4ef7a9dc5ae60e8c"
+        },
+        {
+          "objectId": "npcs.13",
+          "checksum": "254145fa7748743d652edcca368d1bdfab2b8972958f2c5ce3aeac3a287f4e70"
+        },
+        {
+          "objectId": "npcs.14",
+          "checksum": "603f0fe9829534b9a0a5da8c12fb62726e698489d9dee14dda94e781a7f188a8"
+        },
+        {
+          "objectId": "npcs.15",
+          "checksum": "516f831173615e40c3a1d6db25b68fcf76c1232af2d955ab3a5b143917a72e0c"
+        },
+        {
+          "objectId": "npcs.16",
+          "checksum": "7ea99d779eb3b1a91d867c2ff74a354038c473be3c7860cfb3649bc6a578d4b0"
+        },
+        {
+          "objectId": "npcs.17",
+          "checksum": "58af73015695779d61bc9db09b2f2f61288b5c09acf033a9a4bc3eff7508a972"
+        },
+        {
+          "objectId": "npcs.18",
+          "checksum": "15349371e29026c9fab17429fec86fa3c31566433335a8f71d3a014d4c05b32f"
+        },
+        {
+          "objectId": "npcs.19",
+          "checksum": "ca3fe96afa2eea44a59a448cf078e913414d2a0c83972c4b1648fd0add8173ca"
+        },
+        {
+          "objectId": "npcs.20",
+          "checksum": "3a1af7ba3d9d3b0cada66671467579a3478e3eff12599999ad0a94d193c44d69"
+        },
+        {
+          "objectId": "npcs.21",
+          "checksum": "53a392296d9629cefff58cde4d8a87dad48631bdbfaf67fb53b62e3e7f079253"
+        },
+        {
+          "objectId": "npcs.22",
+          "checksum": "281d942baad859d4b7070ab8934c94951d3b8643aad769415c40df1765f61662"
+        },
+        {
+          "objectId": "npcs.23",
+          "checksum": "63ff1958a4326911690011f5e0279885ced12e39027fe24de777c837a4cf6d18"
+        },
+        {
+          "objectId": "npcs.24",
+          "checksum": "af903831a16d17ed2e4ad96655196da5a55f355f48f4b83bd51a3e0bbfb89221"
+        }
+      ],
+      "evidence": [
+        "artwork/evidence/age-npcs-review-top.png",
+        "artwork/evidence/age-npcs-review-full.png"
+      ],
+      "observations": "All 24 portrait thumbnails loaded and were inspected with captions. Clothing, occupational props and maritime backgrounds are coherent. Lookout and diver use distinct action poses. Many female faces and some male faces remain similar; full-resolution details and wider identity diversity are not approved. Future untouched NPC collections use explicit varied face/age/hair prompts."
+    },
+    {
+      "checkedAt": "2026-09-27T15:36:44.371Z",
+      "universeId": "weird-west",
+      "kind": "npcs",
+      "level": "original-sample-inspected",
+      "objects": [
+        {
+          "objectId": "npcs.1",
+          "checksum": "41a8abc2a8424b5b3b74a867237695b246c9040c19dd5f321988e42ca34dd5b6"
+        },
+        {
+          "objectId": "npcs.2",
+          "checksum": "099cecacc423f413323db5f2a605714eb601ebbc3427901406f6218689236abc"
+        }
+      ],
+      "evidence": [
+        "artwork/generated/weird-west/npcs.1.png",
+        "artwork/generated/weird-west/npcs.2.png"
+      ],
+      "observations": "Two original-sized NPC samples inspected. Explicit variation produces distinct apparent age, face, complexion and hair: mature short-haired rider versus young red-haired railway worker. Occupational props and environments remain coherent. No visible signature or UI text in these two samples. This does not approve the uninspected collection."
+    },
+    {
+      "checkedAt": "2026-09-27T16:24:06.974778+00:00",
+      "universeId": "mecha-kaiju",
+      "kind": "adversaries",
+      "level": "thumbnail-inspected",
+      "objects": [
+        {
+          "objectId": "adversaries.1",
+          "checksum": "88491c74b6474a16f71b2bb72fe13bafa20881a5dd56391fa8f1ae8c415f5569"
+        },
+        {
+          "objectId": "adversaries.2",
+          "checksum": "207f14e7626e08e6e2324d73ed5400763360cfb05a84d9c01059629b4fbd1c33"
+        },
+        {
+          "objectId": "adversaries.3",
+          "checksum": "6a2d380009d2c74f6e968da68739fda0ccc6eeee4136c553d2b738f3763a9c31"
+        },
+        {
+          "objectId": "adversaries.4",
+          "checksum": "bfb7429a82c23ac4b3f7a52c1fe105256d988e83921937af46676cc39f22520c"
+        },
+        {
+          "objectId": "adversaries.5",
+          "checksum": "626b8c114f7a5a1d877ea78e847ea1add266195a04264d55886784db07daad6b"
+        },
+        {
+          "objectId": "adversaries.6",
+          "checksum": "63d3a21f775fa67c3b5a1cfe1d45cca692a1183f9f7fd67b4b3fa98369afc405"
+        },
+        {
+          "objectId": "adversaries.7",
+          "checksum": "ed4ee95c55a64ccc1367719ba2303fc09695a130693f0b178a3038613d3d9c7d"
+        },
+        {
+          "objectId": "adversaries.8",
+          "checksum": "8e5da7218efd1ce3df69fbf2dd182ae3fcf89002a21fbc266b5c584928a95575"
+        },
+        {
+          "objectId": "adversaries.9",
+          "checksum": "e05e9108cdef25ecdfb30c2cdca15b6f1df847dae8a8c0d2967e1554eb59cde5"
+        },
+        {
+          "objectId": "adversaries.10",
+          "checksum": "02485cf026cbfc8c3405948ce165802ac12e233573bab222c6256f89e8310f04"
+        },
+        {
+          "objectId": "adversaries.11",
+          "checksum": "ad17f8f7903f8e026b175c3f1a8b3c76df6cd0e3193f2a7fcff28bb2e532b93c"
+        },
+        {
+          "objectId": "adversaries.12",
+          "checksum": "50b93569971e8f1a586bbd8a0b0a0aac69fa9744fcd7f1428a11db56b9b4da1a"
+        },
+        {
+          "objectId": "adversaries.13",
+          "checksum": "bcb48e702d5b1846435127a9d4f76b593f80499e2c654c135ee2929e133a8667"
+        },
+        {
+          "objectId": "adversaries.14",
+          "checksum": "6f1f60690bfc1699d165bac5425462c62d9a1bd8c18280172c04b5fef2d184f6"
+        },
+        {
+          "objectId": "adversaries.15",
+          "checksum": "a8ae2017caa61f966e17aa2aa1789ded95f6c58238bbbd683ba499a47f9deb9e"
+        },
+        {
+          "objectId": "adversaries.16",
+          "checksum": "b936c2f00bccccbb428ee6f92871086cce8080559caba57e4016dd8be2def0d3"
+        },
+        {
+          "objectId": "adversaries.17",
+          "checksum": "d83ebf61d455d102784811db1d656bd2167c0a49b4ba746b731a5d83170dfbce"
+        },
+        {
+          "objectId": "adversaries.18",
+          "checksum": "c71ab32cfacd534048607783752b060fe73825915f23de365c5a4b069b00e663"
+        }
+      ],
+      "evidence": "evidence/mecha-adversaries-review.png",
+      "notes": "All 18 thumbnails and captions inspected. Distinct mechanical and organic silhouettes, environmental scale and role-specific props. No visible signatures or UI at thumbnail size. Full-resolution editorial approval remains pending."
+    },
+    {
+      "checkedAt": "2026-09-27T16:44:14.520030+00:00",
+      "universeId": "gothic-horror",
+      "kind": "progressionPaths",
+      "level": "individual-source-inspected",
+      "objects": [
+        {
+          "objectId": "progressionPaths.3",
+          "checksum": "62e644d76f300be57a4c6a07410c5c498228b5168ef507f1d360fa46734d56ce"
+        }
+      ],
+      "evidence": "artwork/generated/gothic-horror/progressionPaths.3.png",
+      "notes": "Source illustration viewed: living memorial custodian with closed ledger, candlelit archive, readable hands and attire. No visible lettering, signature, UI or violence. This checks only this object, not the entire collection."
+    },
+    {
+      "checkedAt": "2026-09-27T16:50:03.578288+00:00",
+      "universeId": "urban-fantasy",
+      "kind": "npcs",
+      "level": "thumbnail-inspected",
+      "objects": [
+        {
+          "objectId": "npcs.1",
+          "checksum": "a94ff24cb662661aadfcf29ee9506d497d5531601a3d68ed7148d5242d1a48d6"
+        },
+        {
+          "objectId": "npcs.2",
+          "checksum": "a44786ce33e820c1ca5223c0382ff14c33b429516a5329bd19ece688ebf364ff"
+        },
+        {
+          "objectId": "npcs.3",
+          "checksum": "fd48a6d7973e6064a77121f05531d7594ef667d746d45f6149b1f31a8f58f8c2"
+        },
+        {
+          "objectId": "npcs.4",
+          "checksum": "e451b83d9b6745dee7ecaaa240438e0aee20db033c7f238b69ccf25b3b4956c1"
+        },
+        {
+          "objectId": "npcs.5",
+          "checksum": "345a437ae09c54a42fedae561a7ae26ad8c3fe0f9ac6ebc210d937109ed05842"
+        },
+        {
+          "objectId": "npcs.6",
+          "checksum": "4f258a09d7c29d33f0086ca33f5d55cd5abf564089fb7332879ab4f5f1527266"
+        },
+        {
+          "objectId": "npcs.7",
+          "checksum": "cfe747b2dabb9bcd8766b9d6d546bd817d14a16d368ae026c9be08c5a9f4f753"
+        },
+        {
+          "objectId": "npcs.8",
+          "checksum": "249aac17ba6066026cd0f81ce724ba17bf2aaadaff248a6791fbb389a99453b6"
+        },
+        {
+          "objectId": "npcs.9",
+          "checksum": "17924f40b91aed0e6b92c95d4eb789eac295acf95e469b67a190c76f55535c0e"
+        },
+        {
+          "objectId": "npcs.10",
+          "checksum": "8442c2e6c3b2d95a1ab872b4fdf046c26355a2e7d210ef196c4381f1c43e516f"
+        },
+        {
+          "objectId": "npcs.11",
+          "checksum": "5dee34674a5033741015f603fe6602d77d67a4f5749be5b13c2ad6bef8fc53ff"
+        },
+        {
+          "objectId": "npcs.12",
+          "checksum": "35df6d00f7fc2be003d719976164541cbde39c08f547ecd0dbf33f830045f9fe"
+        },
+        {
+          "objectId": "npcs.13",
+          "checksum": "3a1f8e830066a00c22abf3698c220330add974b623b9185da4942b3a8a240a0f"
+        },
+        {
+          "objectId": "npcs.14",
+          "checksum": "f5643072f485c67ed0e211ebe7524b24c6de09b12dc7b4f6afbd31b6f87b08cf"
+        },
+        {
+          "objectId": "npcs.15",
+          "checksum": "d23a49b61a26490c6688dd0703a86f3209fb07337280650548483fcde5b9004c"
+        },
+        {
+          "objectId": "npcs.16",
+          "checksum": "a0d0bfac1a493e682f9dc3db7bedc9a02496f3f565dfcc0e3e5995c9f62fa25c"
+        },
+        {
+          "objectId": "npcs.17",
+          "checksum": "e8ce37adf3158cf0e7c861c98bb749aa34bca8f6350f9c69a0f5b2cd5ada9d4a"
+        },
+        {
+          "objectId": "npcs.18",
+          "checksum": "1d51de07d1a3953e23f8cf2f0bed5379c0428aaad2b972a46c46c61eb707b049"
+        },
+        {
+          "objectId": "npcs.19",
+          "checksum": "7030ca62e319d8d3ae162f31a4d3e7d1a7a01cfa9742ca75b2bc6a5b868404be"
+        },
+        {
+          "objectId": "npcs.20",
+          "checksum": "e350ad73dc332caf534633dd971fe5d816373a075852ec67604099a0fec2718a"
+        },
+        {
+          "objectId": "npcs.21",
+          "checksum": "5a5c75d5fb19850801db19a4b0f2a12f435efef137bca8fbb99a7db83a2e9e47"
+        },
+        {
+          "objectId": "npcs.22",
+          "checksum": "f457ea0ca2ac6beefe95cf719d2cb7f5005420235862d8929905ee5c46f1ad83"
+        },
+        {
+          "objectId": "npcs.23",
+          "checksum": "706d503969131208c64c8220a1ecf273ad4a758dac21083217861afda0e0779c"
+        },
+        {
+          "objectId": "npcs.24",
+          "checksum": "d47eef00c51a3f7173ae5b89759739580923f50f0b3f35cc4c0c4160d9843bc7"
+        }
+      ],
+      "evidence": "evidence/urban-npcs-review.png",
+      "notes": "All 24 thumbnails and captions viewed after lazy loading, screenshot taken at page top to avoid sticky-header occlusion. Age, complexion, hair and role-specific props vary; identity traits cycle across groups of eight. Historic fantasy attire predominates, so contemporary-setting editorial fit and full-resolution approval remain pending."
+    },
+    {
+      "checkedAt": "2026-09-27T17:03:34.348719+00:00",
+      "universeId": "urban-fantasy",
+      "kind": "factions",
+      "level": "individual-source-inspected",
+      "objects": [
+        {
+          "objectId": "factions.1",
+          "checksum": "a51705c27ba0a8662c8affb12ff31a9bb860879c6ecd409c28721b71affbed0a"
+        }
+      ],
+      "evidence": "artwork/generated/urban-fantasy/factions.1-modern-v2.png",
+      "notes": "Contemporary replacement source viewed: modern backpack/hoodie, train and high-rise city integrated with a supernatural library court emblem. No visible signature or interface. Decorative page strokes are present, with no legible UI copy. Checks only this source, not all modern revisions."
+    },
+    {
+      "checkedAt": "2026-09-27T17:39:12.446255+00:00",
+      "universeId": "urban-fantasy",
+      "kind": "locations",
+      "level": "thumbnail-inspected",
+      "objects": [
+        {
+          "objectId": "locations.1",
+          "checksum": "7bc9fdc1a2602c1e2a0a965f9a358afd78e1d5f86af29751189eb0e0aade3ae5"
+        },
+        {
+          "objectId": "locations.2",
+          "checksum": "982ffbd762c57886e0a7526e89a2964c029d803e55186f0239b86818df3c657e"
+        },
+        {
+          "objectId": "locations.3",
+          "checksum": "0e1493468688777a6dcfad23b609a6a47e72d0055e1a96c81f249189c1ec0047"
+        },
+        {
+          "objectId": "locations.4",
+          "checksum": "13e78605b2505bab2eb0a5ceaae39ecb730770f7b6efb1871169eea0fa2c7952"
+        }
+      ],
+      "evidence": "evidence/urban-modern-locations-first-four.png",
+      "notes": "Viewed first four selected modern location thumbnails with captions: contemporary library, apartment lobby, ambulances circling a city junction and a supernatural book return chute. Modern buildings/clothing and role-specific scenes read clearly; no visible signature or UI at thumbnail size. Other locations in the screenshot are older originals and are not approved by this record; full-resolution review remains separate."
+    },
+    {
+      "checkedAt": "2026-09-27T17:51:35.045691+00:00",
+      "universeId": "urban-fantasy",
+      "kind": "npcs",
+      "level": "thumbnail-inspected",
+      "objects": [
+        {
+          "objectId": "npcs.1",
+          "checksum": "01215eb8fc5ee579a32f4404439741ca99c44adb5f4572dcad059b8598e119ed"
+        },
+        {
+          "objectId": "npcs.2",
+          "checksum": "24e5fa469b7401346995e3f33cf313704905fd1f2319247682a6270335549343"
+        },
+        {
+          "objectId": "npcs.3",
+          "checksum": "3690e2321b61719d428002f56cff83e4976d3960ee93a6f6460f8880273310f1"
+        },
+        {
+          "objectId": "npcs.4",
+          "checksum": "7ad045b8156d880defc44a028acc7ebc71a2f0e2aac25626174220769b9f68aa"
+        },
+        {
+          "objectId": "npcs.5",
+          "checksum": "3ccd70f7175b3355e94146778a3fae37fff65daa87fae3f14bb7515bb2b1c0eb"
+        },
+        {
+          "objectId": "npcs.6",
+          "checksum": "39dfa3fb2f82dcfed38b52841ebf469bb53a77a563101be9685db721486a4174"
+        },
+        {
+          "objectId": "npcs.7",
+          "checksum": "d1cfdb7c80755f8e55677888dc8bf4fd4d390d3ecadd3e3e1c08aa4edb643875"
+        },
+        {
+          "objectId": "npcs.8",
+          "checksum": "4c85a2352758b031aa8001e7419ac5833fdd7f7c95d4e83785243f3661ba2568"
+        }
+      ],
+      "evidence": "evidence/urban-modern-npcs-first-eight.png",
+      "notes": "Viewed eight selected modern NPC thumbnails and captions. Contemporary clothing, varying ages, complexions, face/hair silhouettes and occupational props are visible: librarian, circuit repair tools, phone dispatch, records clerk. No visible UI/signature at this size. Backgrounds still favor library/city lighting; full-resolution and whole-collection approval remain separate. Other old images partly visible in screenshot not covered."
+    },
+    {
+      "checkedAt": "2026-09-27T17:56:19.849053+00:00",
+      "universeId": "urban-fantasy",
+      "kind": "npcs",
+      "level": "individual-source-inspected",
+      "objects": [
+        {
+          "objectId": "npcs.2",
+          "checksum": "24e5fa469b7401346995e3f33cf313704905fd1f2319247682a6270335549343"
+        }
+      ],
+      "evidence": "artwork/generated/urban-fantasy/npcs.2-modern-v2.png",
+      "notes": "Tenant Kai Lantern modern source viewed at high detail: modern maintenance clothing, tools, open rooftop circuitry, apartment towers, subtle supernatural window silhouettes; recognisable red-haired face and readable hands. No visible signature, lettering or UI. Checks only this source."
+    },
+    {
+      "checkedAt": "2026-09-27T18:02:10.593492+00:00",
+      "universeId": "mecha-kaiju",
+      "kind": "scenes",
+      "level": "individual-source-inspected",
+      "objects": [
+        {
+          "objectId": "scenes.6",
+          "checksum": "f7d5837321411e946980230e08afb2d8c3ee58742e97be57d402cad303127d9f"
+        }
+      ],
+      "evidence": "artwork/generated/mecha-kaiju/scenes.6.png",
+      "notes": "Wake without Weapons source viewed at high detail against objective: sleeping crew capsules, nonviolent protocol access, immense ruined mech and planetary landscape. No visible UI/lettering/signature. Checks only this scene; whole collection remains separate."
+    },
+    {
+      "checkedAt": "2026-09-27T18:16:40.581790+00:00",
+      "universeId": "post-apocalypse",
+      "kind": "visualThemes",
+      "level": "individual-source-inspected",
+      "objects": [
+        {
+          "objectId": "visualThemes.1",
+          "checksum": "9efc381b77fcbcc28f578b680a1d1eec515a96c50138f9853e0b0b7c1baa8600"
+        }
+      ],
+      "evidence": "artwork/generated/post-apocalypse/visualThemes.1.png",
+      "notes": "Map source viewed at high detail: distinguishable settlements, ruined bridge/canyon, routes and dust storm. No visible signature or lettering. Painted colored routes/nodes are illustrative; runtime interactive exploration nodes remain separate. Only this source checked."
+    },
+    {
+      "checkedAt": "2026-09-27T18:43:07.925614+00:00",
+      "universeId": "weird-west",
+      "kind": "visualThemes",
+      "level": "individual-source-inspected",
+      "objects": [
+        {
+          "objectId": "visualThemes.1",
+          "checksum": "2963cea7ec0f91cebcd2fbb8224164ef8b6a29dc920e16b93244942d720ad1f8"
+        }
+      ],
+      "evidence": "artwork/generated/weird-west/visualThemes.1.png",
+      "notes": "Map source viewed at high detail: settlements, farmland, river crossings, mountain mine and supernatural storm border distinguished. Painted blue routes and red boundary accents are illustrative; interactive nodes remain runtime-owned. No visible lettering/signature. Only this source checked."
+    },
+    {
+      "checkedAt": "2026-09-27T18:49:22.236916+00:00",
+      "universeId": "urban-fantasy",
+      "kind": "items",
+      "level": "individual-source-inspected",
+      "objects": [
+        {
+          "objectId": "items.6",
+          "checksum": "cc9bb3392ab67290acc8c5211d106ec38f80e3ba3380ad2ae05f20585d98255e"
+        }
+      ],
+      "evidence": "artwork/generated/urban-fantasy/items.6.png",
+      "notes": "Source viewed at high detail: contemporary city outside a municipal document desk, table and street diagram with supernatural omissions. Decorative pseudo-lettering appears in the document; it is not readable authored text. No visible signature or application interface. Document text/editorial legibility remains a limitation; only this source inspected."
+    },
+    {
+      "checkedAt": "2026-09-27T19:04:15.483005+00:00",
+      "universeId": "urban-fantasy",
+      "kind": "events",
+      "level": "individual-source-inspected",
+      "objects": [
+        {
+          "objectId": "events.10",
+          "checksum": "883d59bbcb7b07c91e39b46322590ad0e2c4dc9bc0ca23e1b28ec5b96cd5c14c"
+        }
+      ],
+      "evidence": "artwork/generated/urban-fantasy/events.10.png",
+      "notes": "Source viewed at high detail: contemporary visitor with backpack and library books, supernatural court witnesses, modern skyline outside library, glowing page. Decorative page strokes are not legible authored text. No visible signature/application UI. Only this source inspected."
+    },
+    {
+      "checkedAt": "2026-09-27T19:45:05.197137+00:00",
+      "universeId": "urban-fantasy",
+      "kind": "npcs",
+      "level": "thumbnail-inspected",
+      "objects": [
+        {
+          "objectId": "npcs.1",
+          "checksum": "01215eb8fc5ee579a32f4404439741ca99c44adb5f4572dcad059b8598e119ed"
+        },
+        {
+          "objectId": "npcs.2",
+          "checksum": "24e5fa469b7401346995e3f33cf313704905fd1f2319247682a6270335549343"
+        },
+        {
+          "objectId": "npcs.3",
+          "checksum": "3690e2321b61719d428002f56cff83e4976d3960ee93a6f6460f8880273310f1"
+        },
+        {
+          "objectId": "npcs.4",
+          "checksum": "7ad045b8156d880defc44a028acc7ebc71a2f0e2aac25626174220769b9f68aa"
+        },
+        {
+          "objectId": "npcs.5",
+          "checksum": "3ccd70f7175b3355e94146778a3fae37fff65daa87fae3f14bb7515bb2b1c0eb"
+        },
+        {
+          "objectId": "npcs.6",
+          "checksum": "39dfa3fb2f82dcfed38b52841ebf469bb53a77a563101be9685db721486a4174"
+        },
+        {
+          "objectId": "npcs.7",
+          "checksum": "d1cfdb7c80755f8e55677888dc8bf4fd4d390d3ecadd3e3e1c08aa4edb643875"
+        },
+        {
+          "objectId": "npcs.8",
+          "checksum": "4c85a2352758b031aa8001e7419ac5833fdd7f7c95d4e83785243f3661ba2568"
+        },
+        {
+          "objectId": "npcs.9",
+          "checksum": "d487b1a6df15701c629907b39ac47a3c0b55a4f02d20d81d27a7718852b1faf0"
+        },
+        {
+          "objectId": "npcs.10",
+          "checksum": "e6a7b12b162512e02884ff880cc4c33851920b9aed8d32182203993485da32eb"
+        },
+        {
+          "objectId": "npcs.11",
+          "checksum": "68275b4cf461a397ec7b83bdd5bbad15c886f4c55239cb2c344879c12988be11"
+        },
+        {
+          "objectId": "npcs.12",
+          "checksum": "712b139cd5c309aed4744747c33b851fb3f5e118dfb2155aaefdf0f010065873"
+        },
+        {
+          "objectId": "npcs.13",
+          "checksum": "594282515571cedb042c9641a46a0808ae71f54c2b70ea89392b7cb5b828423f"
+        },
+        {
+          "objectId": "npcs.14",
+          "checksum": "0d39f3491e5aeb5be354367f33ecaaca447a6543fdc5bade477e5b8d9d577201"
+        },
+        {
+          "objectId": "npcs.15",
+          "checksum": "62549640709e5cefb44176a8c2ce3e7778757425567b842d02c2e1cc57850867"
+        },
+        {
+          "objectId": "npcs.16",
+          "checksum": "d595bcf605f3a4987a8f4f0d0fec311c95e8d4714622fcda0cc608766aeed174"
+        },
+        {
+          "objectId": "npcs.17",
+          "checksum": "b87a5b663af7a0b79bc0d999a76ca3543ee74086731d56055d8283f4fb9059ee"
+        },
+        {
+          "objectId": "npcs.18",
+          "checksum": "e21331cc188ec967259d9f1067f21531165f843976131e594f4f292c41430633"
+        },
+        {
+          "objectId": "npcs.19",
+          "checksum": "4da5e722f17e56f1c3317466dc8042c692652cd2f399652a50f31f01cce6ab7c"
+        },
+        {
+          "objectId": "npcs.20",
+          "checksum": "b9ba185eb41e58debcdaa3f0cee49260435d5a5b0c78732832914758858f23bb"
+        },
+        {
+          "objectId": "npcs.21",
+          "checksum": "2cf8d6b86168a28836a1df9070939d439bd33bbaceb1829674d78ec56efe2cd6"
+        },
+        {
+          "objectId": "npcs.22",
+          "checksum": "1305291be90d1785f1b5d5538897c3bc9bb1fdc25eb48fff93577f2326092892"
+        },
+        {
+          "objectId": "npcs.23",
+          "checksum": "b0b00eacacbf6e147620083ef8cbacd78e39f3eaddad290a3719bf228df783bb"
+        },
+        {
+          "objectId": "npcs.24",
+          "checksum": "b7f3742a579b4ddff5dc11a6a73b0192fd2208ffe58cd1da690a5eeea9b4b2b6"
+        }
+      ],
+      "evidence": "artwork/evidence/urban-modern-npcs-all24.png",
+      "notes": "All 24 selected modern sibling portraits viewed as browser gallery thumbnails. Contemporary clothing and skyline now fit the setting. Several faces and compositions still resemble one another across different NPCs; this remains an editorial quality limit. No full-resolution collection approval."
+    }
+  ]
+}

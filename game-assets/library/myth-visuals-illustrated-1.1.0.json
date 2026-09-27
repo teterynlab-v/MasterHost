@@ -1,0 +1,1890 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.myth.visuals",
+  "version": "1.1.0",
+  "type": "visuals",
+  "name": "Mythic Route Schematics — Illustrated",
+  "description": "Mythic Route Schematics for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+  "tags": [
+    "mythic-antiquity",
+    "warring-poleis",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Mythic Route Schematics for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+    "highlights": [
+      "Mythic Route Schematics",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.mythic-antiquity"
+    ],
+    "requiresCapabilities": [
+      "setting:mythic-antiquity"
+    ],
+    "providesCapabilities": [
+      "visuals:mythic-antiquity"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.myth.setting",
+      "version": "1.1.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Mythic Antiquity original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.myth.visuals"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 151
+  },
+  "media": [
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/factions.1.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/factions.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "75527e64c369944e4a858d751980cd12554b0dc9f0a9705cc6d80c96bb26cecc",
+      "size": 46252
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/factions.2.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/factions.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "ea33efaf940f1df66c4a4d09a95a9e42ee25415dfee6234122da93e95025a4c4",
+      "size": 45530
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/factions.3.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/factions.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "ee7e4e3db4481f242282dcf6a76b4b81b7f0e01d68f20e66c8b4f08c02eef928",
+      "size": 46716
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/factions.4.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/factions.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "e031fe873656451deaa2e76e9cd2937dc3b030de3ec2dc6ac0f6545dcac8d07c",
+      "size": 46128
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/factions.5.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/factions.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "bcf4929c9a87f6adff89acf8ea08b2888d72bfe97756b3d3ee44127821885677",
+      "size": 46176
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/factions.6.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/factions.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "177d282a8eba157df8e41f05f2daeb5aab5f5adf005ffafc3034b5c0286643d0",
+      "size": 46500
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/factions.7.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/factions.7.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "3c301f06962151b2de5f6621ae14ac9e3f0b263ef0743cae1ca6d0fc2fd1c843",
+      "size": 46050
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/factions.8.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/factions.8.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "62a4a32382c8a0f5249b0141ffca61d5d144c3b678361afcdaf3bdb6bd1fc5fb",
+      "size": 45712
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/locations.1.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/locations.1.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "d9eb3c1864cef969f100e87ef884459a4689cafc925db93202a6c910de353bf6",
+      "size": 44866
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/locations.2.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/locations.2.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "8d11f2e5e835025c15dd8ea21163305a7ffee91bca6e3b0eb68cc7fa1f48fd43",
+      "size": 46120
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/locations.3.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/locations.3.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "aa9f0b9cc79469780d822e844056c5139e297b6670b3d1a2204c6ad1b760b1c8",
+      "size": 47302
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/locations.4.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/locations.4.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "177937ec353c4cd5c2eeb9a067967c4313f2a0e9fc8c397d98d81b6896b9a49e",
+      "size": 46242
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/locations.5.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/locations.5.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "466b4395506086bde83540fa8f555d84d0cba2e4d0f4b63c560af8b085adb4d9",
+      "size": 46074
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/locations.6.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/locations.6.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "9f8b047915e6e1d2d4eb864ec0c0effa0fdfb1c6095bbd1a07e02ef3775ee4ec",
+      "size": 47136
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/locations.7.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/locations.7.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "ec74b103faf5f731825767bcde05090ec22ec74b2f3708d8c714236103552516",
+      "size": 44670
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/locations.8.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/locations.8.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "add79bbf6599a027a570bffe0c0854cde6471c410a08a00c6c196a70241efbe2",
+      "size": 45826
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/locations.9.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/locations.9.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "fc17a193e8d0abce3412c80008ce1c848a199b8c8613f037bb8e69443792b0c2",
+      "size": 45514
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/locations.10.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/locations.10.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "19e1ef1699e74cb11e5de8dd493b45d6034e9785c5f25c39fb2970b2ae1c53e4",
+      "size": 46276
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/locations.11.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/locations.11.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "bffc5d89f5a9fd9cf25a7406cb9b8bdfc616f03abbdc60a2d7e3bc9cc706b71e",
+      "size": 45968
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/locations.12.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/locations.12.webp",
+      "role": "location",
+      "mediaType": "image/webp",
+      "checksum": "26904d0763aaee642605b6b85608bdc4c4145460a2b2ba1081b32062645facb0",
+      "size": 47592
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.1.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "8eefc50542584e2fcf03a7f0ef1491af8754da314373192a4e07f268f5d9047e",
+      "size": 44866
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.2.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "eba256d2186c0ed84223696f2d1ffcd93713dffe5203c93718b1df46ae9eb792",
+      "size": 46072
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.3.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "b263f38bd73abc54f1936bde505d5d6d4cffb85f14746fcd7908cc789f6dd0e1",
+      "size": 46534
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.4.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "93e06f7fe6148edb844de808649eebe95fbba19b45a9ef5726c2e025687ec653",
+      "size": 45348
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.5.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "93324e3df0139be406189fadf8c111b921fcb49b2466f2433b56c36390017bc6",
+      "size": 44742
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.6.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "14730ccb2031e0402e8786ff60bfa6036491f87615fece80350463c65ef091bd",
+      "size": 46912
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.7.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "e8ea9165fadb3639c3827a80f8f86459445e6f35abdbe3467be7565c076ce82d",
+      "size": 46540
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.8.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "ec72c0ba35877221cf55f7e27e710ec4a6446cf55b1386f6c247c7674fa10791",
+      "size": 45512
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.9.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.9.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "966dfb2e79ab05538783aa2dc11c68b665afd4f26ab42ee402cd5a670b6ff196",
+      "size": 45576
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.10.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.10.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "78329084aacdaeb193726327e1b11db3c97f43749344d8270c9f3f52f22f806e",
+      "size": 45002
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.11.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.11.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "73d0310fa33642a3d527c05049c5434fec8c6a0269410cfca5eb15c34d60bfc1",
+      "size": 45554
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.12.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.12.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "43bab03ec1aae27dde5568016e7c775478497bd1f59a85d39d666d382421f200",
+      "size": 46072
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.13.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.13.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "9c3b3f82dd02edf1837eac3cfe42dde2ce10bf627855d367054d28cd558b2625",
+      "size": 45094
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.14.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.14.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "30c12c46c59e508f4b1882e5c82ce580e70f2e48f132ae77b210f64cdaca50bc",
+      "size": 46078
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.15.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.15.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "2b201e8a8ad0ac6f0d1cc260fa2a7fc01a143408df9539666305db77540d09a3",
+      "size": 45912
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.16.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.16.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "e5f74be21e7222555a5fde7ef1609fd3b6106d68bea7f1af27560dcdc07766fa",
+      "size": 45108
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.17.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.17.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "9cfed77756654479f5398da384a6dc97d7ed4ca86a443a8304fdf5a74a81173d",
+      "size": 46194
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.18.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.18.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "ebcf6bcf5f962938314899c61717e78f658e4c5a56537a4d8e6fe3ba15085247",
+      "size": 45894
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.19.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.19.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "53001867e746d87ea69e64f78b4e7fd2a6e4c174f18d9328474f26f524d68668",
+      "size": 44392
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.20.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.20.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "45c3032f65492e50641bedd2877dcecd45256a6a73bbf94ff55460a3b68da0a8",
+      "size": 45120
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.21.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.21.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "bf360d8ea15b8e9a64969c16b770ba2f5c6b3c92d96eb43684867e2d11127781",
+      "size": 46006
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.22.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.22.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "d75303d784c21fc2756ac60fc9d51b5581fda2900e11e42db86c49734a4f5e8f",
+      "size": 45176
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.23.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.23.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "eea9d17233c65e75bf9770f4cbc444f7f25d7cf9cc33d0bfaced7ef9886912d0",
+      "size": 45246
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/npcs.24.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/npcs.24.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "998d7f361118d3ce356207bbc99dfcbfa2ff774feb669c3531d36e0763a322c2",
+      "size": 45970
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/adversaries.1.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/adversaries.1.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "91388d77ef3b43dfc7eb7f5f082bcd35a951e020825cfd6a5acbfa1096c84b31",
+      "size": 48196
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/adversaries.2.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/adversaries.2.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "f536cd5d75a3d312cd0fded36538487f709cbb23c1fc526c17e7a18150a01e06",
+      "size": 50398
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/adversaries.3.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/adversaries.3.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "187e8c064ca860a29b0ba669d20889e8d2db4aca1ecc95674fb682ddd7f3399c",
+      "size": 45460
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/adversaries.4.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/adversaries.4.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "1a79aa29019da148cacdc4f7acd4661b572b8ba71e8444dbde8264e95136fd75",
+      "size": 44600
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/adversaries.5.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/adversaries.5.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "8196189ce78d0e317c38e0fc5cfeffd535be52c0acbd57cea12df29b1fdfc737",
+      "size": 54972
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/adversaries.6.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/adversaries.6.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "0b9967c14147bec0a17ca18ddb04b72e04b3a9d12b47300702f09c665d6d3e46",
+      "size": 45352
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/adversaries.7.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/adversaries.7.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "bcbaf8339a0aed36f7a4d34b0f9736b2c8b489d39934165412bdaeab10378507",
+      "size": 45372
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/adversaries.8.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/adversaries.8.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "44c926c36715171fe8c60dc0f70288fdd77d3e6c77a36da4382dcde18b119351",
+      "size": 44864
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/adversaries.9.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/adversaries.9.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "ad4d3ba6e60dcc658c812fd8f44a8ce4cebd25913593b9865f2ac6b16d6f2c70",
+      "size": 45816
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/adversaries.10.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/adversaries.10.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "0efcefde1750b5a1440c97a960fb802fd2def9427a4b02a51858e55d36f1c1c9",
+      "size": 45916
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/adversaries.11.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/adversaries.11.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "eadbcb591ab6b8fb49a5ddee41f02e87d2d484bf1f87bc98f59e1d91d7860acd",
+      "size": 46236
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/adversaries.12.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/adversaries.12.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "1b21defb585e602a1dd4b58afb5cb6a1ae6480a93cdcfa5e730b1421a4ca68a0",
+      "size": 46076
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/adversaries.13.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/adversaries.13.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "f18ccadd72cc74b45419299234a4aae46a904f0a8ecdaf7f034c6c2309c3248c",
+      "size": 52244
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/adversaries.14.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/adversaries.14.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "cab9f7d93f8ac6d1a0e7baa4c824b61d415d9b43fa4499d7a9bc26d82a891c87",
+      "size": 45702
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/adversaries.15.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/adversaries.15.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "070d30f1fd2812bdbc2587a1fe632b10287835473428a9fdfb304072c0642eae",
+      "size": 45116
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/adversaries.16.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/adversaries.16.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "81b69d77d5b24dc24c403be754de73210ba22030d07dc85487d61cf3333fa026",
+      "size": 45484
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/adversaries.17.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/adversaries.17.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "f9f8e50bafa327c62c6f12246826ad5817ac8d8275158ac1ed2264bc3c6b7edb",
+      "size": 46380
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/adversaries.18.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/adversaries.18.webp",
+      "role": "token",
+      "mediaType": "image/webp",
+      "checksum": "ac6ff4264da0283ad4ab5d77e46e5ea799eb597cd1b415dfba582f6ab0b08010",
+      "size": 45762
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.1.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.1.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "7402053815f3da598d87746daa2cc2fb62615e158e478427bddca55f1076188b",
+      "size": 44876
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.2.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.2.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "34a9474863daf193b4bcb4584f543011b1462f675ad448bf2fc8ee097ca5ff80",
+      "size": 44930
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.3.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.3.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "8fe0fac2610d26909189f61dd0a64c125004837747ca93dc9dd18106bf2f6b11",
+      "size": 46320
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.4.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.4.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "784f2ffdb3194c07e3b4c0d69039ea2274a80d181427cc45d7a8e925a42b0dcc",
+      "size": 45024
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.5.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.5.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "452f4d63b8284467a142e6b8d026cf3e0c705ad50f8f91ae05adbbffc9713c27",
+      "size": 45010
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.6.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.6.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "4a2a0fdb346d1317ab72be969903c2986a218b7d9d669a55bbb92b3b94038a88",
+      "size": 46016
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.7.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.7.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "3b4dea718645e80c0c681847a5659cab611847243e884e7dfb498155f249eb21",
+      "size": 45964
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.8.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.8.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "5df3f291d4313b950ab88feeadbbced30c6c0a28219cac96d9d49a782ffde989",
+      "size": 44958
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.9.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.9.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "094562d201604f3aa8061a6849d93e2c9edba2dc64c0504b714179505b77cef6",
+      "size": 46238
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.10.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.10.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "911f1533ca6b2fc51bfee1c3a49f980b11953ba5e8b1150f533545e9ed0eafff",
+      "size": 44834
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.11.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.11.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "983e9a5df194064fb341f7b50d869501a78b80bbc36a4b7a7305491a1aa60221",
+      "size": 46174
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.12.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.12.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "5bcce2358178b9a5ffc1d643da4c10ddcf477cecb46083505f58611b4a9674e8",
+      "size": 45818
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.13.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.13.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "4498f1f55de09a137872f692abed5ed93ac98883f04d678aea3fa74aaff06a0c",
+      "size": 46090
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.14.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.14.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "4f8540525b19b64d39ac36b43f703028e8ef40116e0283313dd3d58ae9eb1d42",
+      "size": 45690
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.15.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.15.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "ccd02a91dfe8e4387a05be7bfaad1329848663ca422e1a916fc4206386f939b9",
+      "size": 46566
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.16.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.16.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "15a15a8ee550f4e66970d70c350fe452a4155ebd5a2268bd09ef2124a0568e2b",
+      "size": 45186
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.17.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.17.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "b34e5caba9c7b023ce156900706e6834ebfb54f571dfac644f4cc56ea8264e88",
+      "size": 47654
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.18.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.18.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "f176784500ad131ef10917a92b1da54b9678640f7c58615b025014b8b5ae89d3",
+      "size": 44932
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.19.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.19.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "1c6945f980f0cddddafc5d8d68b1a3f7c1111e5176ef7af8f6b90add89f5946e",
+      "size": 45522
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.20.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.20.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "019738a41e4c5eec5b638e135c6b31f29d993a78088fcd15f6e0cefad2e9af36",
+      "size": 45318
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.21.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.21.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "4477a881123fff7f03a0ce3800e054d788e4a6085f51b25163002d466a6183aa",
+      "size": 45194
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.22.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.22.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "676e6c32e91401080ef2984cebc36dc7cf0f134ead4667b2abadc727595bc27d",
+      "size": 44566
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.23.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.23.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "188f43226598257cee584f81ddf25353369e5c6ffba7686583881c889d6d0d81",
+      "size": 45672
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/items.24.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/items.24.webp",
+      "role": "item",
+      "mediaType": "image/webp",
+      "checksum": "81d7a5305b003d693d5c7ede06fec7c752fcf8d72a5cc1e8df7494553b4160ac",
+      "size": 46516
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.1.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "fa171184c2fd7b6c67c3a6762a54398d11c46dfb59894fc0eb9b3e5d2c5cf785",
+      "size": 45820
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.2.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "7f4ed87d0e693a8cc7ee1a5d3ba12972265e8f9646e054e51bd293a9498af3b0",
+      "size": 46276
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.3.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "129fb82f409944440f8fdf7888a7bd142cdf86b5e8f3b9dd61ddfee3f479afa5",
+      "size": 46882
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.4.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c125e3aeb511cafaf2d86f6362617b51198d39b274efb5ddebfe92fa5928c0f9",
+      "size": 46350
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.5.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c77d99f12d012b752cbda45f833e5580b3f663542c7724ed1e27616b217e5ebc",
+      "size": 46312
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.6.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "aef3d3fb29c9b8e7dd7c3622c47568bbc74b627ff0287e8bb59f172541b3f7cc",
+      "size": 46360
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.7.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "2c0936d7e031bca3791caa77ee4e191a3bf06e348bc8d762548e013c506a3031",
+      "size": 45632
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.8.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "fd7362b136cd0b6e137acccfe470c3e6dc7b887908ea6b6b55e9b4e7462b449a",
+      "size": 45988
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.9.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "d18b2e93128797004c41afc851985e5315fc8d360b6be90d323336fad887281a",
+      "size": 46478
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.10.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "8839f22aa9934fbf22f8851813b62425e0253069d04d5cfd47a3c015cbbbfc2b",
+      "size": 46246
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.11.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "d0f5395b6d45a74771cd7c1aa433aa4c866b2e5867073127b19b20914448c44c",
+      "size": 46392
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.12.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "be8f73ce06cd41031438df7d60333d4dca7484e743c99ab6985c0f868ba79dd1",
+      "size": 46864
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.13.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "e993286e64e26a8c1a6d6a694b3420db3547cfe2949954ccfe0656e8adebca74",
+      "size": 45066
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.14.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "1400b91151c58d807ae1838dd8a8fbf1a5c1cb2e8276d410aefc3f23fefe9389",
+      "size": 46964
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.15.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c48dbef6fc111afa0f3b943755679fd0bfa451e2223ab3147ededdc1b383dc76",
+      "size": 47558
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.16.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "2515abdd41bc55e3ea78d460186c4b3d96cd09c69cbd745694ef50373ddf4dcb",
+      "size": 46792
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.17.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "d6a8e45a574b38b48cbffca39a17f754610a71f2df384b379bc73d3026438d0c",
+      "size": 45350
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.18.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "e988c2d1e24879f249a2b77e0717fc4cf994d2c6213e2bbd63ab107fa0f0d037",
+      "size": 46910
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.19.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.19.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "d6a948c0ce9440f5afcaaf62fe07e25d02f30626b0c0ec3e0e6b43fe19a4269c",
+      "size": 46426
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.20.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.20.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "76070d6b403b3ef1853f48e111fe38cdd20be586ab279c8dd76de79dc4320202",
+      "size": 46654
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.21.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.21.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ffc372ad46dc6ac33291aa244c700f41d66e80a62e7e3dacafb2c036d6398f3a",
+      "size": 47498
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.22.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.22.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "e647adfd6d020452c22405b317bb62ee9b7e63fea516776b05cbffba7c7a329e",
+      "size": 45614
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.23.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.23.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "03c0826d3642a26a13b88effd852753d841285bbd2dc4ffab60556fa072830fd",
+      "size": 45308
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.24.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.24.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "e5c50e41354fbe9f9336e48835495bf11e550f04ad2d5b707c67c18c7b8e6652",
+      "size": 47552
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.25.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.25.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "74b248abac88695cbb01591ed36cf1a65b2e5412175c4fad0f155050b8848d61",
+      "size": 45138
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.26.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.26.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "9ad98238001884883a940a5ddd175f0cb34ccb90d92830daba4f4f50ba8faccf",
+      "size": 46248
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.27.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.27.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "6f4f3f7614985fde7e595ee4f278a821d8d83678e5f087b5d9102d6161dcc78c",
+      "size": 45964
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.28.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.28.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "74c524b19b45cec460af71e7a8aeafe4582f5cbfe02344380073fc5b1ec17a19",
+      "size": 45552
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.29.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.29.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "f592bb2cb4bacf99d0f5a33627a91f5dda6d28f14b7670d2173798868eb7439c",
+      "size": 45568
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/events.30.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/events.30.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4b11e851a5eab1461ec25245d6c432fa63741e1f3b07f9dda80dc9ff4436b255",
+      "size": 46934
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/scenes.1.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/scenes.1.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a95164f3be5314fb6a251283f36d4432dd15d3a5716bf1a3655732caae06f034",
+      "size": 46246
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/scenes.2.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/scenes.2.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "18b1b6d535dc55a3d10d0a33c380e3b4b8d9008f5fdf67e167774520d43fdf8f",
+      "size": 46434
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/scenes.3.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/scenes.3.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "01457e0357ee5e7c497e68d2bbff7946ba45067e8677c6e84e4d169ecbec0b60",
+      "size": 46174
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/scenes.4.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/scenes.4.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "b68736d8c90e6f234cde4f7bcd9e70f360761d544181f4fb740a037663db4ab9",
+      "size": 46280
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/scenes.5.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/scenes.5.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "10ce0b9c1836fd377eb82f4ef8bca1668a113c1f976861e01cc9754928d83a25",
+      "size": 46634
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/scenes.6.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/scenes.6.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "4846c3ab4005dd04cd7fa11a77392658ae47ef1ba7e2a4c290f9214aefc99e84",
+      "size": 46718
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/scenes.7.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/scenes.7.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "812f29c2f5692601b8ca45662f071a81b7376846eab53352b25f12ef48ac7625",
+      "size": 46756
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/scenes.8.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/scenes.8.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "695e1ac841c809f7c22bb7c278a229f722b26d03953337d9f9ebc3431ba8e3c5",
+      "size": 46748
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/scenes.9.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/scenes.9.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "7d3f9a0b1521fedd397daa808181d7540cf337b9488e8e1716b65a4eee75534c",
+      "size": 46062
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/scenes.10.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/scenes.10.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "d4fb04d0c84952975603c9d0e65a364aafc4ed049dc796fd13e94ce13337bad9",
+      "size": 45030
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/scenes.11.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/scenes.11.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "3c2ecbd11c67825b1949b87c1976081c0040a213a4953f61625273da1f9fa989",
+      "size": 46064
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/scenes.12.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/scenes.12.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c1255ee920a3c53e0923e754cf86fbf1da74080ae7adfb61eb64781a546a3817",
+      "size": 46138
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/scenes.13.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/scenes.13.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "c1e2cff1f0fb69fd484bfb91fee34ec04f80341c41029c7530bf628feccee5d5",
+      "size": 46408
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/scenes.14.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/scenes.14.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "a7912ab2d7c3e26759e383870290bca251bfd2c05aaf43b46fcf9b067217bd4c",
+      "size": 46154
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/scenes.15.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/scenes.15.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "ec2ee709ae85ed1974926a74908e75bd36fe99717e9b3ab26c67e6963a82f5c4",
+      "size": 46404
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/scenes.16.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/scenes.16.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "fa1d4d5638b2a744d94a666ae1cbc31443e9a57e78c7f1494a15867112f7c3d1",
+      "size": 45758
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/scenes.17.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/scenes.17.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "6b668053d19ab80e4e03d63d4f18651157ed5926750a9cf019c209970d3c68de",
+      "size": 45908
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/scenes.18.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/scenes.18.webp",
+      "role": "background",
+      "mediaType": "image/webp",
+      "checksum": "138799f2cbf9ae9dcac6555c031506e6992539104f82ace4d1398c7b8a85bc06",
+      "size": 46430
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/archetypes.1.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/archetypes.1.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "0c6af03fa02c3421e1ae5e175b12908739d5a6a090ae6ab3d0f697a65b543741",
+      "size": 48714
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/archetypes.2.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/archetypes.2.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "5ba1187016c9ffc31e7ec0e251a51f4d0db057c3d1d86baad238e8da1a0093a1",
+      "size": 47032
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/archetypes.3.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/archetypes.3.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "cbb2316432339fa59b616e0dcee049db30b8e537f3d5cd74ff59d628e80d24b1",
+      "size": 45394
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/archetypes.4.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/archetypes.4.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "acc101ccb27c0c1423083d9172584b32b8978e0af1ccd8c36cb23a6e04e6ca49",
+      "size": 47400
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/archetypes.5.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/archetypes.5.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "8a58a66b1d04d24ba5ed0adb64e2dcea3d04aff10360fe2c6e84ed9504da9387",
+      "size": 58748
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/archetypes.6.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/archetypes.6.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "deb863e8f6a857e29bcd5db3e010166565021e11882818443553f249f634f089",
+      "size": 45994
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/archetypes.7.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/archetypes.7.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "500a865fe41278fc514344f158bb2a286cab859b9c515ed0e9b39e3df923efeb",
+      "size": 44906
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/archetypes.8.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/archetypes.8.webp",
+      "role": "portrait",
+      "mediaType": "image/webp",
+      "checksum": "4458fc89b9dd40849f080ac15003222d790b71b8eff72f9c23bef00694829ba8",
+      "size": 44832
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/progressionPaths.1.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/progressionPaths.1.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "0d8da21438dae77b06cfc77a9f87aa2b5d537400757d608863b1921e8047f6fa",
+      "size": 45566
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/progressionPaths.2.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/progressionPaths.2.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "2c12f0eab87d0ea0a5b3c016b0866663535f6e55813b23885bc8ca7f46e7f59f",
+      "size": 46018
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/progressionPaths.3.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/progressionPaths.3.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "d9c699ac5d2b3327d4b5bd30a5e526b0fb9813196c679e6761e8cb4300ee1903",
+      "size": 46694
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/progressionPaths.4.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/progressionPaths.4.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "914c5ba1255cfb806b90aafca0cf7b6c03bc44fc9b0aec72bf78607cda35d82b",
+      "size": 45412
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/progressionPaths.5.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/progressionPaths.5.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "1fc7224a7944ec8e78b96c6c5e89abfc26587430d2ba0e120e3a9466644f2de2",
+      "size": 45826
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/progressionPaths.6.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/progressionPaths.6.webp",
+      "role": "card",
+      "mediaType": "image/webp",
+      "checksum": "7854f4749418293dc3eceb9047ebd95f2dd4b5e34de2acef4d4ce362a1411196",
+      "size": 45988
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/visualThemes.1.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/visualThemes.1.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "499248815bfbc35b44cf77a98b6cedda82dc52046cc4d38f96147e34af76c68e",
+      "size": 55146
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/visualThemes.2.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/visualThemes.2.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "654264d9f1ec7543db5aa8ad6c72c9f53af71873572a71b7fa2701b0e3085b12",
+      "size": 45078
+    },
+    {
+      "name": "mythic-antiquity/illustrated-1.1.0/visualThemes.3.webp",
+      "path": "media/mythic-antiquity/illustrated-1.1.0/visualThemes.3.webp",
+      "role": "map",
+      "mediaType": "image/webp",
+      "checksum": "6de6b8ee1c0972194c82eee00f54b8dc77d4828d1aa39c31e77dfc248d057e97",
+      "size": 45112
+    }
+  ],
+  "fragment": {
+    "id": "masterhost.asset.myth.visuals",
+    "version": "1.1.0",
+    "name": "Mythic Route Schematics — Illustrated",
+    "description": "Mythic Route Schematics for Warring Poleis, Islands of the Odyssey, Underworld Frontier. Three original mythic campaigns: a rescue prophecy, a truthful homecoming and a voluntary farewell at death’s border.",
+    "provides": [
+      "visuals:mythic-antiquity"
+    ],
+    "requires": [
+      "setting:mythic-antiquity"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/artSets/illustrated-mythic-antiquity",
+        "value": {
+          "id": "illustrated-mythic-antiquity",
+          "name": "Illustrated mythic-antiquity",
+          "description": "Individual generated illustrations for every authored content object",
+          "defaults": {
+            "background": "assets/mythic-antiquity/illustrated-1.1.0/scenes.1.webp",
+            "card": "assets/mythic-antiquity/illustrated-1.1.0/scenes.1.webp",
+            "map": "assets/mythic-antiquity/illustrated-1.1.0/visualThemes.1.webp",
+            "portrait": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.1.webp",
+            "token": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.1.webp",
+            "item": "assets/mythic-antiquity/illustrated-1.1.0/items.1.webp",
+            "location": "assets/mythic-antiquity/illustrated-1.1.0/locations.1.webp"
+          },
+          "families": {
+            "illustrated.mythic-antiquity.factions.1": {
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/factions.1.webp"
+            },
+            "illustrated.mythic-antiquity.factions.2": {
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/factions.2.webp"
+            },
+            "illustrated.mythic-antiquity.factions.3": {
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/factions.3.webp"
+            },
+            "illustrated.mythic-antiquity.factions.4": {
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/factions.4.webp"
+            },
+            "illustrated.mythic-antiquity.factions.5": {
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/factions.5.webp"
+            },
+            "illustrated.mythic-antiquity.factions.6": {
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/factions.6.webp"
+            },
+            "illustrated.mythic-antiquity.factions.7": {
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/factions.7.webp"
+            },
+            "illustrated.mythic-antiquity.factions.8": {
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/factions.8.webp"
+            },
+            "illustrated.mythic-antiquity.locations.1": {
+              "location": "assets/mythic-antiquity/illustrated-1.1.0/locations.1.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/locations.1.webp"
+            },
+            "illustrated.mythic-antiquity.locations.2": {
+              "location": "assets/mythic-antiquity/illustrated-1.1.0/locations.2.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/locations.2.webp"
+            },
+            "illustrated.mythic-antiquity.locations.3": {
+              "location": "assets/mythic-antiquity/illustrated-1.1.0/locations.3.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/locations.3.webp"
+            },
+            "illustrated.mythic-antiquity.locations.4": {
+              "location": "assets/mythic-antiquity/illustrated-1.1.0/locations.4.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/locations.4.webp"
+            },
+            "illustrated.mythic-antiquity.locations.5": {
+              "location": "assets/mythic-antiquity/illustrated-1.1.0/locations.5.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/locations.5.webp"
+            },
+            "illustrated.mythic-antiquity.locations.6": {
+              "location": "assets/mythic-antiquity/illustrated-1.1.0/locations.6.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/locations.6.webp"
+            },
+            "illustrated.mythic-antiquity.locations.7": {
+              "location": "assets/mythic-antiquity/illustrated-1.1.0/locations.7.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/locations.7.webp"
+            },
+            "illustrated.mythic-antiquity.locations.8": {
+              "location": "assets/mythic-antiquity/illustrated-1.1.0/locations.8.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/locations.8.webp"
+            },
+            "illustrated.mythic-antiquity.locations.9": {
+              "location": "assets/mythic-antiquity/illustrated-1.1.0/locations.9.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/locations.9.webp"
+            },
+            "illustrated.mythic-antiquity.locations.10": {
+              "location": "assets/mythic-antiquity/illustrated-1.1.0/locations.10.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/locations.10.webp"
+            },
+            "illustrated.mythic-antiquity.locations.11": {
+              "location": "assets/mythic-antiquity/illustrated-1.1.0/locations.11.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/locations.11.webp"
+            },
+            "illustrated.mythic-antiquity.locations.12": {
+              "location": "assets/mythic-antiquity/illustrated-1.1.0/locations.12.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/locations.12.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.1": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.1.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.1.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.2": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.2.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.2.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.3": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.3.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.3.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.4": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.4.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.4.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.5": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.5.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.5.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.6": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.6.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.6.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.7": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.7.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.7.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.8": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.8.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.8.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.9": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.9.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.9.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.10": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.10.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.10.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.11": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.11.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.11.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.12": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.12.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.12.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.13": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.13.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.13.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.14": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.14.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.14.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.15": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.15.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.15.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.16": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.16.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.16.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.17": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.17.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.17.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.18": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.18.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.18.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.19": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.19.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.19.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.20": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.20.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.20.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.21": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.21.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.21.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.22": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.22.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.22.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.23": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.23.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.23.webp"
+            },
+            "illustrated.mythic-antiquity.npcs.24": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/npcs.24.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/npcs.24.webp"
+            },
+            "illustrated.mythic-antiquity.adversaries.1": {
+              "token": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.1.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.1.webp"
+            },
+            "illustrated.mythic-antiquity.adversaries.2": {
+              "token": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.2.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.2.webp"
+            },
+            "illustrated.mythic-antiquity.adversaries.3": {
+              "token": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.3.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.3.webp"
+            },
+            "illustrated.mythic-antiquity.adversaries.4": {
+              "token": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.4.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.4.webp"
+            },
+            "illustrated.mythic-antiquity.adversaries.5": {
+              "token": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.5.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.5.webp"
+            },
+            "illustrated.mythic-antiquity.adversaries.6": {
+              "token": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.6.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.6.webp"
+            },
+            "illustrated.mythic-antiquity.adversaries.7": {
+              "token": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.7.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.7.webp"
+            },
+            "illustrated.mythic-antiquity.adversaries.8": {
+              "token": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.8.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.8.webp"
+            },
+            "illustrated.mythic-antiquity.adversaries.9": {
+              "token": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.9.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.9.webp"
+            },
+            "illustrated.mythic-antiquity.adversaries.10": {
+              "token": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.10.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.10.webp"
+            },
+            "illustrated.mythic-antiquity.adversaries.11": {
+              "token": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.11.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.11.webp"
+            },
+            "illustrated.mythic-antiquity.adversaries.12": {
+              "token": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.12.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.12.webp"
+            },
+            "illustrated.mythic-antiquity.adversaries.13": {
+              "token": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.13.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.13.webp"
+            },
+            "illustrated.mythic-antiquity.adversaries.14": {
+              "token": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.14.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.14.webp"
+            },
+            "illustrated.mythic-antiquity.adversaries.15": {
+              "token": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.15.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.15.webp"
+            },
+            "illustrated.mythic-antiquity.adversaries.16": {
+              "token": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.16.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.16.webp"
+            },
+            "illustrated.mythic-antiquity.adversaries.17": {
+              "token": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.17.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.17.webp"
+            },
+            "illustrated.mythic-antiquity.adversaries.18": {
+              "token": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.18.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/adversaries.18.webp"
+            },
+            "illustrated.mythic-antiquity.items.1": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.1.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.1.webp"
+            },
+            "illustrated.mythic-antiquity.items.2": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.2.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.2.webp"
+            },
+            "illustrated.mythic-antiquity.items.3": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.3.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.3.webp"
+            },
+            "illustrated.mythic-antiquity.items.4": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.4.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.4.webp"
+            },
+            "illustrated.mythic-antiquity.items.5": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.5.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.5.webp"
+            },
+            "illustrated.mythic-antiquity.items.6": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.6.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.6.webp"
+            },
+            "illustrated.mythic-antiquity.items.7": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.7.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.7.webp"
+            },
+            "illustrated.mythic-antiquity.items.8": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.8.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.8.webp"
+            },
+            "illustrated.mythic-antiquity.items.9": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.9.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.9.webp"
+            },
+            "illustrated.mythic-antiquity.items.10": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.10.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.10.webp"
+            },
+            "illustrated.mythic-antiquity.items.11": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.11.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.11.webp"
+            },
+            "illustrated.mythic-antiquity.items.12": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.12.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.12.webp"
+            },
+            "illustrated.mythic-antiquity.items.13": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.13.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.13.webp"
+            },
+            "illustrated.mythic-antiquity.items.14": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.14.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.14.webp"
+            },
+            "illustrated.mythic-antiquity.items.15": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.15.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.15.webp"
+            },
+            "illustrated.mythic-antiquity.items.16": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.16.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.16.webp"
+            },
+            "illustrated.mythic-antiquity.items.17": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.17.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.17.webp"
+            },
+            "illustrated.mythic-antiquity.items.18": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.18.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.18.webp"
+            },
+            "illustrated.mythic-antiquity.items.19": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.19.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.19.webp"
+            },
+            "illustrated.mythic-antiquity.items.20": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.20.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.20.webp"
+            },
+            "illustrated.mythic-antiquity.items.21": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.21.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.21.webp"
+            },
+            "illustrated.mythic-antiquity.items.22": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.22.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.22.webp"
+            },
+            "illustrated.mythic-antiquity.items.23": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.23.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.23.webp"
+            },
+            "illustrated.mythic-antiquity.items.24": {
+              "item": "assets/mythic-antiquity/illustrated-1.1.0/items.24.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/items.24.webp"
+            },
+            "illustrated.mythic-antiquity.events.1": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.1.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.1.webp"
+            },
+            "illustrated.mythic-antiquity.events.2": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.2.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.2.webp"
+            },
+            "illustrated.mythic-antiquity.events.3": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.3.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.3.webp"
+            },
+            "illustrated.mythic-antiquity.events.4": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.4.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.4.webp"
+            },
+            "illustrated.mythic-antiquity.events.5": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.5.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.5.webp"
+            },
+            "illustrated.mythic-antiquity.events.6": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.6.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.6.webp"
+            },
+            "illustrated.mythic-antiquity.events.7": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.7.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.7.webp"
+            },
+            "illustrated.mythic-antiquity.events.8": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.8.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.8.webp"
+            },
+            "illustrated.mythic-antiquity.events.9": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.9.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.9.webp"
+            },
+            "illustrated.mythic-antiquity.events.10": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.10.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.10.webp"
+            },
+            "illustrated.mythic-antiquity.events.11": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.11.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.11.webp"
+            },
+            "illustrated.mythic-antiquity.events.12": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.12.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.12.webp"
+            },
+            "illustrated.mythic-antiquity.events.13": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.13.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.13.webp"
+            },
+            "illustrated.mythic-antiquity.events.14": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.14.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.14.webp"
+            },
+            "illustrated.mythic-antiquity.events.15": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.15.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.15.webp"
+            },
+            "illustrated.mythic-antiquity.events.16": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.16.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.16.webp"
+            },
+            "illustrated.mythic-antiquity.events.17": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.17.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.17.webp"
+            },
+            "illustrated.mythic-antiquity.events.18": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.18.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.18.webp"
+            },
+            "illustrated.mythic-antiquity.events.19": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.19.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.19.webp"
+            },
+            "illustrated.mythic-antiquity.events.20": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.20.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.20.webp"
+            },
+            "illustrated.mythic-antiquity.events.21": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.21.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.21.webp"
+            },
+            "illustrated.mythic-antiquity.events.22": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.22.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.22.webp"
+            },
+            "illustrated.mythic-antiquity.events.23": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.23.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.23.webp"
+            },
+            "illustrated.mythic-antiquity.events.24": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.24.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.24.webp"
+            },
+            "illustrated.mythic-antiquity.events.25": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.25.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.25.webp"
+            },
+            "illustrated.mythic-antiquity.events.26": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.26.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.26.webp"
+            },
+            "illustrated.mythic-antiquity.events.27": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.27.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.27.webp"
+            },
+            "illustrated.mythic-antiquity.events.28": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.28.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.28.webp"
+            },
+            "illustrated.mythic-antiquity.events.29": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.29.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.29.webp"
+            },
+            "illustrated.mythic-antiquity.events.30": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/events.30.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/events.30.webp"
+            },
+            "illustrated.mythic-antiquity.scenes.1": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/scenes.1.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/scenes.1.webp"
+            },
+            "illustrated.mythic-antiquity.scenes.2": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/scenes.2.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/scenes.2.webp"
+            },
+            "illustrated.mythic-antiquity.scenes.3": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/scenes.3.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/scenes.3.webp"
+            },
+            "illustrated.mythic-antiquity.scenes.4": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/scenes.4.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/scenes.4.webp"
+            },
+            "illustrated.mythic-antiquity.scenes.5": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/scenes.5.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/scenes.5.webp"
+            },
+            "illustrated.mythic-antiquity.scenes.6": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/scenes.6.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/scenes.6.webp"
+            },
+            "illustrated.mythic-antiquity.scenes.7": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/scenes.7.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/scenes.7.webp"
+            },
+            "illustrated.mythic-antiquity.scenes.8": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/scenes.8.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/scenes.8.webp"
+            },
+            "illustrated.mythic-antiquity.scenes.9": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/scenes.9.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/scenes.9.webp"
+            },
+            "illustrated.mythic-antiquity.scenes.10": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/scenes.10.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/scenes.10.webp"
+            },
+            "illustrated.mythic-antiquity.scenes.11": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/scenes.11.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/scenes.11.webp"
+            },
+            "illustrated.mythic-antiquity.scenes.12": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/scenes.12.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/scenes.12.webp"
+            },
+            "illustrated.mythic-antiquity.scenes.13": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/scenes.13.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/scenes.13.webp"
+            },
+            "illustrated.mythic-antiquity.scenes.14": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/scenes.14.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/scenes.14.webp"
+            },
+            "illustrated.mythic-antiquity.scenes.15": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/scenes.15.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/scenes.15.webp"
+            },
+            "illustrated.mythic-antiquity.scenes.16": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/scenes.16.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/scenes.16.webp"
+            },
+            "illustrated.mythic-antiquity.scenes.17": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/scenes.17.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/scenes.17.webp"
+            },
+            "illustrated.mythic-antiquity.scenes.18": {
+              "background": "assets/mythic-antiquity/illustrated-1.1.0/scenes.18.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/scenes.18.webp"
+            },
+            "illustrated.mythic-antiquity.archetypes.1": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.1.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.1.webp"
+            },
+            "illustrated.mythic-antiquity.archetypes.2": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.2.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.2.webp"
+            },
+            "illustrated.mythic-antiquity.archetypes.3": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.3.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.3.webp"
+            },
+            "illustrated.mythic-antiquity.archetypes.4": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.4.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.4.webp"
+            },
+            "illustrated.mythic-antiquity.archetypes.5": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.5.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.5.webp"
+            },
+            "illustrated.mythic-antiquity.archetypes.6": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.6.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.6.webp"
+            },
+            "illustrated.mythic-antiquity.archetypes.7": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.7.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.7.webp"
+            },
+            "illustrated.mythic-antiquity.archetypes.8": {
+              "portrait": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.8.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/archetypes.8.webp"
+            },
+            "illustrated.mythic-antiquity.progressionPaths.1": {
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/progressionPaths.1.webp"
+            },
+            "illustrated.mythic-antiquity.progressionPaths.2": {
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/progressionPaths.2.webp"
+            },
+            "illustrated.mythic-antiquity.progressionPaths.3": {
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/progressionPaths.3.webp"
+            },
+            "illustrated.mythic-antiquity.progressionPaths.4": {
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/progressionPaths.4.webp"
+            },
+            "illustrated.mythic-antiquity.progressionPaths.5": {
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/progressionPaths.5.webp"
+            },
+            "illustrated.mythic-antiquity.progressionPaths.6": {
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/progressionPaths.6.webp"
+            },
+            "illustrated.mythic-antiquity.visualThemes.1": {
+              "map": "assets/mythic-antiquity/illustrated-1.1.0/visualThemes.1.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/visualThemes.1.webp"
+            },
+            "illustrated.mythic-antiquity.visualThemes.2": {
+              "map": "assets/mythic-antiquity/illustrated-1.1.0/visualThemes.2.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/visualThemes.2.webp"
+            },
+            "illustrated.mythic-antiquity.visualThemes.3": {
+              "map": "assets/mythic-antiquity/illustrated-1.1.0/visualThemes.3.webp",
+              "card": "assets/mythic-antiquity/illustrated-1.1.0/visualThemes.3.webp"
+            }
+          }
+        }
+      }
+    ],
+    "defaultArtSet": "illustrated-mythic-antiquity"
+  }
+}

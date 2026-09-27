@@ -1,0 +1,1546 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.classic.cast",
+  "version": "1.4.0",
+  "type": "cast",
+  "name": "Crowns and Companions — Illustrated",
+  "description": "Twenty-four named allies and rivals plus eighteen adversaries tied to factions, places, and immediate motives.",
+  "tags": [
+    "classic-fantasy",
+    "border-kingdoms",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Twenty-four named allies and rivals plus eighteen adversaries tied to factions, places, and immediate motives.",
+    "highlights": [
+      "Crowns and Companions",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.classic-fantasy"
+    ],
+    "requiresCapabilities": [
+      "world:classic-fantasy"
+    ],
+    "providesCapabilities": [
+      "cast:classic-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.classic.world-template",
+      "version": "1.4.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Classic Fantasy original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.classic.cast"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 42,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 0,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.classic.cast",
+    "version": "1.4.0",
+    "name": "Crowns and Companions — Illustrated",
+    "description": "Twenty-four named allies and rivals plus eighteen adversaries tied to factions, places, and immediate motives.",
+    "provides": [
+      "cast:classic-fantasy"
+    ],
+    "requires": [
+      "world:classic-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.1",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Elara Vey"
+            },
+            "description": {
+              "value": "Elara Vey knows who profits from the crisis in Border Kingdoms but will speak only after the party protects an innocent rival."
+            },
+            "deepId": {
+              "value": "npcs.1"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.npcs.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.2",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Brother Aldren"
+            },
+            "description": {
+              "value": "Brother Aldren carries authority in War of Heirs and needs discreet allies before a public oath forces an irreversible choice."
+            },
+            "deepId": {
+              "value": "npcs.2"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.npcs.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.3",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Mira Foxglove"
+            },
+            "description": {
+              "value": "Mira Foxglove has mapped a dangerous route across Ruins of the Ancient Empire; fear of an old betrayal makes every promise difficult to trust."
+            },
+            "deepId": {
+              "value": "npcs.3"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.npcs.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.4",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Sir Corven Hale"
+            },
+            "description": {
+              "value": "Sir Corven Hale seeks reconciliation in Border Kingdoms, offering a useful favor if the party preserves dignity on both sides."
+            },
+            "deepId": {
+              "value": "npcs.4"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.npcs.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.5",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Nessa Rowan"
+            },
+            "description": {
+              "value": "Nessa Rowan knows who profits from the crisis in War of Heirs but will speak only after the party protects an innocent rival."
+            },
+            "deepId": {
+              "value": "npcs.5"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.npcs.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.6",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Tomas Flint"
+            },
+            "description": {
+              "value": "Tomas Flint carries authority in Ruins of the Ancient Empire and needs discreet allies before a public oath forces an irreversible choice."
+            },
+            "deepId": {
+              "value": "npcs.6"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.npcs.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.7",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Queen Ysabet"
+            },
+            "description": {
+              "value": "Queen Ysabet has mapped a dangerous route across Border Kingdoms; fear of an old betrayal makes every promise difficult to trust."
+            },
+            "deepId": {
+              "value": "npcs.7"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.npcs.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.8",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Prince Edric"
+            },
+            "description": {
+              "value": "Prince Edric seeks reconciliation in War of Heirs, offering a useful favor if the party preserves dignity on both sides."
+            },
+            "deepId": {
+              "value": "npcs.8"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.npcs.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.9",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Lady Maelin"
+            },
+            "description": {
+              "value": "Lady Maelin knows who profits from the crisis in Ruins of the Ancient Empire but will speak only after the party protects an innocent rival."
+            },
+            "deepId": {
+              "value": "npcs.9"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.npcs.9"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.10",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Marshal Varo"
+            },
+            "description": {
+              "value": "Marshal Varo carries authority in Border Kingdoms and needs discreet allies before a public oath forces an irreversible choice."
+            },
+            "deepId": {
+              "value": "npcs.10"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.npcs.10"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.11",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Scribe Ione"
+            },
+            "description": {
+              "value": "Scribe Ione has mapped a dangerous route across War of Heirs; fear of an old betrayal makes every promise difficult to trust."
+            },
+            "deepId": {
+              "value": "npcs.11"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.npcs.11"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.12",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Captain Brann"
+            },
+            "description": {
+              "value": "Captain Brann seeks reconciliation in Ruins of the Ancient Empire, offering a useful favor if the party preserves dignity on both sides."
+            },
+            "deepId": {
+              "value": "npcs.12"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.npcs.12"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.13",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Rook Fen"
+            },
+            "description": {
+              "value": "Rook Fen knows who profits from the crisis in Border Kingdoms but will speak only after the party protects an innocent rival."
+            },
+            "deepId": {
+              "value": "npcs.13"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.npcs.13"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.14",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Sister Calis"
+            },
+            "description": {
+              "value": "Sister Calis carries authority in War of Heirs and needs discreet allies before a public oath forces an irreversible choice."
+            },
+            "deepId": {
+              "value": "npcs.14"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.npcs.14"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.15",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Orren Pike"
+            },
+            "description": {
+              "value": "Orren Pike has mapped a dangerous route across Ruins of the Ancient Empire; fear of an old betrayal makes every promise difficult to trust."
+            },
+            "deepId": {
+              "value": "npcs.15"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.npcs.15"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.16",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Juniper Vale"
+            },
+            "description": {
+              "value": "Juniper Vale seeks reconciliation in Border Kingdoms, offering a useful favor if the party preserves dignity on both sides."
+            },
+            "deepId": {
+              "value": "npcs.16"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.npcs.16"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.17",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Hadric Moss"
+            },
+            "description": {
+              "value": "Hadric Moss knows who profits from the crisis in War of Heirs but will speak only after the party protects an innocent rival."
+            },
+            "deepId": {
+              "value": "npcs.17"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.npcs.17"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.18",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Talia Dawn"
+            },
+            "description": {
+              "value": "Talia Dawn carries authority in Ruins of the Ancient Empire and needs discreet allies before a public oath forces an irreversible choice."
+            },
+            "deepId": {
+              "value": "npcs.18"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.npcs.18"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.19",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Venn Alder"
+            },
+            "description": {
+              "value": "Venn Alder has mapped a dangerous route across Border Kingdoms; fear of an old betrayal makes every promise difficult to trust."
+            },
+            "deepId": {
+              "value": "npcs.19"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.npcs.19"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.20",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Kestrel Grey"
+            },
+            "description": {
+              "value": "Kestrel Grey seeks reconciliation in War of Heirs, offering a useful favor if the party preserves dignity on both sides."
+            },
+            "deepId": {
+              "value": "npcs.20"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.npcs.20"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.21",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Odo Bell"
+            },
+            "description": {
+              "value": "Odo Bell knows who profits from the crisis in Ruins of the Ancient Empire but will speak only after the party protects an innocent rival."
+            },
+            "deepId": {
+              "value": "npcs.21"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.npcs.21"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.22",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Rhea Marrow"
+            },
+            "description": {
+              "value": "Rhea Marrow carries authority in Border Kingdoms and needs discreet allies before a public oath forces an irreversible choice."
+            },
+            "deepId": {
+              "value": "npcs.22"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.npcs.22"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.23",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Perrin Ash"
+            },
+            "description": {
+              "value": "Perrin Ash has mapped a dangerous route across War of Heirs; fear of an old betrayal makes every promise difficult to trust."
+            },
+            "deepId": {
+              "value": "npcs.23"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.npcs.23"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.npcs.24",
+        "value": {
+          "kind": "npc",
+          "values": {
+            "name": {
+              "value": "Sable Wren"
+            },
+            "description": {
+              "value": "Sable Wren seeks reconciliation in Ruins of the Ancient Empire, offering a useful favor if the party preserves dignity on both sides."
+            },
+            "deepId": {
+              "value": "npcs.24"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.npcs.24"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.adversaries.1",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Hill Troll"
+            },
+            "description": {
+              "value": "Hill Troll threatens travel through Border Kingdoms, using terrain and frightened locals to isolate anyone who pursues it."
+            },
+            "deepId": {
+              "value": "adversaries.1"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.adversaries.1"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.adversaries.2",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Ash Wyvern"
+            },
+            "description": {
+              "value": "Ash Wyvern serves a hidden claimant in War of Heirs; defeating it reveals an order that turns a simple hunt into political evidence."
+            },
+            "deepId": {
+              "value": "adversaries.2"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.adversaries.2"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.adversaries.3",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Goblin Reaver"
+            },
+            "description": {
+              "value": "Goblin Reaver protects something valuable beneath Ruins of the Ancient Empire, and can be bargained with if the party learns the terms of its ancient duty."
+            },
+            "deepId": {
+              "value": "adversaries.3"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.adversaries.3"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.adversaries.4",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Moss Drake"
+            },
+            "description": {
+              "value": "Moss Drake exploits the unrest in Border Kingdoms, retreating toward civilians whenever direct force would carry an unacceptable cost."
+            },
+            "deepId": {
+              "value": "adversaries.4"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.adversaries.4"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.adversaries.5",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Griffin Outcast"
+            },
+            "description": {
+              "value": "Griffin Outcast threatens travel through War of Heirs, using terrain and frightened locals to isolate anyone who pursues it."
+            },
+            "deepId": {
+              "value": "adversaries.5"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.adversaries.5"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.adversaries.6",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Oathless Knight"
+            },
+            "description": {
+              "value": "Oathless Knight serves a hidden claimant in Ruins of the Ancient Empire; defeating it reveals an order that turns a simple hunt into political evidence."
+            },
+            "deepId": {
+              "value": "adversaries.6"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.adversaries.6"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.adversaries.7",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Crown Spy"
+            },
+            "description": {
+              "value": "Crown Spy protects something valuable beneath Border Kingdoms, and can be bargained with if the party learns the terms of its ancient duty."
+            },
+            "deepId": {
+              "value": "adversaries.7"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.adversaries.7"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.adversaries.8",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Marsh Hag"
+            },
+            "description": {
+              "value": "Marsh Hag exploits the unrest in War of Heirs, retreating toward civilians whenever direct force would carry an unacceptable cost."
+            },
+            "deepId": {
+              "value": "adversaries.8"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.adversaries.8"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.adversaries.9",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Stone Sentinel"
+            },
+            "description": {
+              "value": "Stone Sentinel threatens travel through Ruins of the Ancient Empire, using terrain and frightened locals to isolate anyone who pursues it."
+            },
+            "deepId": {
+              "value": "adversaries.9"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.adversaries.9"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.adversaries.10",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Barrow Wight"
+            },
+            "description": {
+              "value": "Barrow Wight serves a hidden claimant in Border Kingdoms; defeating it reveals an order that turns a simple hunt into political evidence."
+            },
+            "deepId": {
+              "value": "adversaries.10"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.adversaries.10"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.adversaries.11",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Redcap Band"
+            },
+            "description": {
+              "value": "Redcap Band protects something valuable beneath War of Heirs, and can be bargained with if the party learns the terms of its ancient duty."
+            },
+            "deepId": {
+              "value": "adversaries.11"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.adversaries.11"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.adversaries.12",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Feral Manticore"
+            },
+            "description": {
+              "value": "Feral Manticore exploits the unrest in Ruins of the Ancient Empire, retreating toward civilians whenever direct force would carry an unacceptable cost."
+            },
+            "deepId": {
+              "value": "adversaries.12"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.adversaries.12"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.adversaries.13",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Mirror Mage"
+            },
+            "description": {
+              "value": "Mirror Mage threatens travel through Border Kingdoms, using terrain and frightened locals to isolate anyone who pursues it."
+            },
+            "deepId": {
+              "value": "adversaries.13"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.adversaries.13"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.adversaries.14",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Road Harrier"
+            },
+            "description": {
+              "value": "Road Harrier serves a hidden claimant in War of Heirs; defeating it reveals an order that turns a simple hunt into political evidence."
+            },
+            "deepId": {
+              "value": "adversaries.14"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.adversaries.14"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.adversaries.15",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Bog Hydra"
+            },
+            "description": {
+              "value": "Bog Hydra protects something valuable beneath Ruins of the Ancient Empire, and can be bargained with if the party learns the terms of its ancient duty."
+            },
+            "deepId": {
+              "value": "adversaries.15"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.adversaries.15"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.adversaries.16",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Imperial Automaton"
+            },
+            "description": {
+              "value": "Imperial Automaton exploits the unrest in Border Kingdoms, retreating toward civilians whenever direct force would carry an unacceptable cost."
+            },
+            "deepId": {
+              "value": "adversaries.16"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "border-kingdoms",
+            "illustrated.classic-fantasy.adversaries.16"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.adversaries.17",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Plague Alchemist"
+            },
+            "description": {
+              "value": "Plague Alchemist threatens travel through War of Heirs, using terrain and frightened locals to isolate anyone who pursues it."
+            },
+            "deepId": {
+              "value": "adversaries.17"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "war-of-heirs",
+            "illustrated.classic-fantasy.adversaries.17"
+          ]
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/templates/classic.deep.adversaries.18",
+        "value": {
+          "kind": "creature",
+          "values": {
+            "name": {
+              "value": "Hollow Giant"
+            },
+            "description": {
+              "value": "Hollow Giant serves a hidden claimant in Ruins of the Ancient Empire; defeating it reveals an order that turns a simple hunt into political evidence."
+            },
+            "deepId": {
+              "value": "adversaries.18"
+            }
+          },
+          "tags": [
+            "classic-deep",
+            "ancient-empire-ruins",
+            "illustrated.classic-fantasy.adversaries.18"
+          ]
+        }
+      },
+      {
+        "op": "merge",
+        "path": "/content/templates/world.root/components",
+        "value": {
+          "deep-npcs-1": {
+            "template": "classic.deep.npcs.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-npcs-2": {
+            "template": "classic.deep.npcs.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-npcs-3": {
+            "template": "classic.deep.npcs.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-npcs-4": {
+            "template": "classic.deep.npcs.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-npcs-5": {
+            "template": "classic.deep.npcs.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-npcs-6": {
+            "template": "classic.deep.npcs.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-npcs-7": {
+            "template": "classic.deep.npcs.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-npcs-8": {
+            "template": "classic.deep.npcs.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-npcs-9": {
+            "template": "classic.deep.npcs.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-npcs-10": {
+            "template": "classic.deep.npcs.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-npcs-11": {
+            "template": "classic.deep.npcs.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-npcs-12": {
+            "template": "classic.deep.npcs.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-npcs-13": {
+            "template": "classic.deep.npcs.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-npcs-14": {
+            "template": "classic.deep.npcs.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-npcs-15": {
+            "template": "classic.deep.npcs.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-npcs-16": {
+            "template": "classic.deep.npcs.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-npcs-17": {
+            "template": "classic.deep.npcs.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-npcs-18": {
+            "template": "classic.deep.npcs.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-npcs-19": {
+            "template": "classic.deep.npcs.19",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-npcs-20": {
+            "template": "classic.deep.npcs.20",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-npcs-21": {
+            "template": "classic.deep.npcs.21",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-npcs-22": {
+            "template": "classic.deep.npcs.22",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-npcs-23": {
+            "template": "classic.deep.npcs.23",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-npcs-24": {
+            "template": "classic.deep.npcs.24",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-adversaries-1": {
+            "template": "classic.deep.adversaries.1",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-adversaries-2": {
+            "template": "classic.deep.adversaries.2",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-adversaries-3": {
+            "template": "classic.deep.adversaries.3",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-adversaries-4": {
+            "template": "classic.deep.adversaries.4",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-adversaries-5": {
+            "template": "classic.deep.adversaries.5",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-adversaries-6": {
+            "template": "classic.deep.adversaries.6",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-adversaries-7": {
+            "template": "classic.deep.adversaries.7",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-adversaries-8": {
+            "template": "classic.deep.adversaries.8",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-adversaries-9": {
+            "template": "classic.deep.adversaries.9",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-adversaries-10": {
+            "template": "classic.deep.adversaries.10",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-adversaries-11": {
+            "template": "classic.deep.adversaries.11",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-adversaries-12": {
+            "template": "classic.deep.adversaries.12",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-adversaries-13": {
+            "template": "classic.deep.adversaries.13",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-adversaries-14": {
+            "template": "classic.deep.adversaries.14",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-adversaries-15": {
+            "template": "classic.deep.adversaries.15",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          },
+          "deep-adversaries-16": {
+            "template": "classic.deep.adversaries.16",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "border-kingdoms"
+              ]
+            }
+          },
+          "deep-adversaries-17": {
+            "template": "classic.deep.adversaries.17",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "war-of-heirs"
+              ]
+            }
+          },
+          "deep-adversaries-18": {
+            "template": "classic.deep.adversaries.18",
+            "count": 1,
+            "when": {
+              "eq": [
+                {
+                  "descriptor": "world.pattern"
+                },
+                "ancient-empire-ruins"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

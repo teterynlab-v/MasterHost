@@ -1,0 +1,142 @@
+{
+  "schemaVersion": "1",
+  "id": "masterhost.asset.classic.rules",
+  "version": "1.3.0",
+  "type": "rules",
+  "name": "Deeds and Oaths Rules — Illustrated",
+  "description": "Pack-defined travel, checks, resources, effects, Actions, encounters, rewards, and renown progression.",
+  "tags": [
+    "classic-fantasy",
+    "border-kingdoms",
+    "one-shot"
+  ],
+  "preview": {
+    "summary": "Pack-defined travel, checks, resources, effects, Actions, encounters, rewards, and renown progression.",
+    "highlights": [
+      "Deeds and Oaths Rules",
+      "Illustrated Universe v1"
+    ]
+  },
+  "compatibility": {
+    "basePackIds": [
+      "masterhost.classic-fantasy"
+    ],
+    "requiresCapabilities": [
+      "setting:classic-fantasy"
+    ],
+    "providesCapabilities": [
+      "rules:classic-fantasy"
+    ],
+    "conflicts": []
+  },
+  "dependencies": [
+    {
+      "id": "masterhost.asset.classic.setting",
+      "version": "1.3.0"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "attribution": "Deep Classic Fantasy original content and artwork © MasterHost contributors.",
+    "source": "masterhost://bundled/masterhost.asset.classic.rules"
+  },
+  "published": true,
+  "counts": {
+    "locations": 0,
+    "actors": 0,
+    "items": 0,
+    "scenes": 0,
+    "archetypes": 0,
+    "rules": 6,
+    "media": 0
+  },
+  "media": [],
+  "fragment": {
+    "id": "masterhost.asset.classic.rules",
+    "version": "1.3.0",
+    "name": "Deeds and Oaths Rules — Illustrated",
+    "description": "Pack-defined travel, checks, resources, effects, Actions, encounters, rewards, and renown progression.",
+    "provides": [
+      "rules:classic-fantasy"
+    ],
+    "requires": [
+      "setting:classic-fantasy"
+    ],
+    "conflicts": [],
+    "parameters": {},
+    "patches": [
+      {
+        "op": "set",
+        "path": "/content/actions/classic-take-cover",
+        "value": {
+          "label": "Take Cover",
+          "target": "self",
+          "kind": "resource",
+          "resource": "resolve",
+          "operation": "add",
+          "amount": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/classic-study-signs",
+        "value": {
+          "label": "Study Signs",
+          "target": "self",
+          "kind": "resource",
+          "resource": "resolve",
+          "operation": "subtract",
+          "amount": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/classic-call-for-aid",
+        "value": {
+          "label": "Call For Aid",
+          "target": "self",
+          "kind": "resource",
+          "resource": "resolve",
+          "operation": "add",
+          "amount": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/classic-share-supplies",
+        "value": {
+          "label": "Share Supplies",
+          "target": "self",
+          "kind": "resource",
+          "resource": "resolve",
+          "operation": "subtract",
+          "amount": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/classic-invoke-oath",
+        "value": {
+          "label": "Invoke Oath",
+          "target": "self",
+          "kind": "resource",
+          "resource": "resolve",
+          "operation": "add",
+          "amount": 1
+        }
+      },
+      {
+        "op": "set",
+        "path": "/content/actions/classic-mark-the-road",
+        "value": {
+          "label": "Mark The Road",
+          "target": "self",
+          "kind": "resource",
+          "resource": "resolve",
+          "operation": "subtract",
+          "amount": 1
+        }
+      }
+    ]
+  }
+}
