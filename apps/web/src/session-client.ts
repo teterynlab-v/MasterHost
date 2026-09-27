@@ -17,5 +17,5 @@ export function sessionSocket(sessionId:string,credential:string,onEvent:(event:
  };
  const online=()=>{if(!stopped&&!socket){if(timer)clearTimeout(timer);connect()}},offline=()=>status("offline");
  addEventListener("online",online);addEventListener("offline",offline);connect();
- return{close(){stopped=true;if(timer)clearTimeout(timer);removeEventListener("online",online);removeEventListener("offline",offline);socket?.close();status("closed")}};
+ return{close(){stopped=true;if(timer)clearTimeout(timer);removeEventListener("online",online);removeEventListener("offline",offline);socket?.close()}};
 }

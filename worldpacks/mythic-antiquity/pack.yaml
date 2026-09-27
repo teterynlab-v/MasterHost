@@ -732,7 +732,7 @@ actorTemplates:
     worldEntityKinds:
       - creature
   contact:
-    label: Elara the Bold
+    label: Harbor Oracle
     resources:
       vitality: 18
       courage: 10
@@ -750,7 +750,7 @@ actorTemplates:
     worldEntityKinds:
       - npc
   elite:
-    label: Wyvern
+    label: Threshold Sentinel
     resources:
       vitality: 18
       courage: 10

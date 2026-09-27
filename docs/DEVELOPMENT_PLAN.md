@@ -670,7 +670,7 @@ The approved product expansion is defined in `docs/superpowers/specs/2026-09-22-
 | M27 | Cosmic Investigation | Complete engineering gate 2026-09-27 |
 | M28 | Age of Sail | Engineering gate complete; human editorial/play acceptance open |
 | M29 | Mecha & Kaiju | Engineering gate complete; human editorial/play acceptance open |
-| M30 | Whole-collection compatibility, localization, release and product acceptance | Planned |
+| M30 | Whole-collection compatibility, localization, release and product acceptance | Engineering verified; human product gate open |
 
 Each universe milestone closes only after the complete Deep Universe Standard, Quick and Advanced assembly, `.mhgame` round trip, restart persistence, Character → Campaign → Session play, ready demo, and clean browser gate pass.
 

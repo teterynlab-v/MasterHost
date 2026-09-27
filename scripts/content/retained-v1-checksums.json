@@ -1,0 +1,125 @@
+{
+  "sourceCommit": "cdb02cd",
+  "files": [
+    {
+      "path": "worldpacks/mythic-antiquity-v1/pack.yaml",
+      "sha256": "f24be41b6d925cb88d7026e704e88e297a89038866c8dee939951542fa0e5abd"
+    },
+    {
+      "path": "worldpacks/mythic-antiquity-v1/manifest.yaml",
+      "sha256": "8db3236503abb4e90fdb8587de6d8b5f7b15cbc605a7138aa5f420e714c73e00"
+    },
+    {
+      "path": "worldpacks/mythic-antiquity-v1/universe.yaml",
+      "sha256": "1d1141a38d493f844b26fc0fb476d8b69c780bd30eed9c0a059658f5c2149179"
+    },
+    {
+      "path": "worldpacks/mythic-antiquity-v1/artsets/standard.yaml",
+      "sha256": "46b8d2cfac6404f577f60c10d660d39a8dea44a1ecf7191650c8ddd1702f6d74"
+    },
+    {
+      "path": "worldpacks/mythic-antiquity-v1/assets/ui/background.svg",
+      "sha256": "09db8ed7b5df37596aad8c7d5da4c512940c21534da00494ce572bcff6989908"
+    },
+    {
+      "path": "worldpacks/mythic-antiquity-v1/assets/ui/creature.svg",
+      "sha256": "fc44b3c5fe31267f33ba80ce1298da988f470dfeb266c600b6ab84761e81d563"
+    },
+    {
+      "path": "worldpacks/mythic-antiquity-v1/assets/ui/item.svg",
+      "sha256": "eae49eab50590f718743cce695c10ebbd3e7e55f2e4c69f14666a69d0d01b034"
+    },
+    {
+      "path": "worldpacks/mythic-antiquity-v1/assets/ui/location.svg",
+      "sha256": "e58ab11a023957c6d62d4f217b6810d21fd2a15db98cab9c7fa03c7d8f6d590e"
+    },
+    {
+      "path": "worldpacks/mythic-antiquity-v1/assets/ui/map.svg",
+      "sha256": "21f13183eb41d57a8ec09946af198d3c0952bc000ac806fe07671a39c0ebb64f"
+    },
+    {
+      "path": "worldpacks/mythic-antiquity-v1/assets/ui/portrait.svg",
+      "sha256": "0990a2af48447eeb39f946eddcbefd6e5be50e698ad6f26b8157dc51df4734cc"
+    },
+    {
+      "path": "worldpacks/weird-west-v1/pack.yaml",
+      "sha256": "07f5c08cbac422ebd5d17e5179c90bf92e1f88932f5dd0a590228e4cae91a625"
+    },
+    {
+      "path": "worldpacks/weird-west-v1/manifest.yaml",
+      "sha256": "c6a84662b25a7694872d1835025a2ae112525aca6005841b4c7d79a4d59c4a95"
+    },
+    {
+      "path": "worldpacks/weird-west-v1/universe.yaml",
+      "sha256": "3814b7e38a7a6a49d7ec5f3623852398f0e94dc0ae30c0725f7333191aa03f9c"
+    },
+    {
+      "path": "worldpacks/weird-west-v1/artsets/standard.yaml",
+      "sha256": "c28c21f1fed01adfe60b98edcf528e1e8787fa239e6b7903af9ebaf7d5077bc3"
+    },
+    {
+      "path": "worldpacks/weird-west-v1/assets/ui/background.svg",
+      "sha256": "c5ba45596670a8f7231bf81a336ce2328a053f220e802f989599b271fae33ca7"
+    },
+    {
+      "path": "worldpacks/weird-west-v1/assets/ui/creature.svg",
+      "sha256": "8a49f3ccb37ff1483408535494e3ce295863f1e493a020bd7f7f83153c4d7545"
+    },
+    {
+      "path": "worldpacks/weird-west-v1/assets/ui/item.svg",
+      "sha256": "4a389de65c42153070b95e67f55b9fdf450d07a10e8320c01cf98bd8e4c0da62"
+    },
+    {
+      "path": "worldpacks/weird-west-v1/assets/ui/location.svg",
+      "sha256": "2ed39eb86992ef91a6873b61f1aaa0dba760e80a22cf531f84d621bf9d057755"
+    },
+    {
+      "path": "worldpacks/weird-west-v1/assets/ui/map.svg",
+      "sha256": "e76ff24c17f1375eef6b47431a090064747ecf9fdd4c3a55ed3876b2cb397b19"
+    },
+    {
+      "path": "worldpacks/weird-west-v1/assets/ui/portrait.svg",
+      "sha256": "6ae6509034862665063618b9a6ead302b1ff7a45673045b152402a32122a4f76"
+    },
+    {
+      "path": "worldpacks/urban-fantasy-v1/pack.yaml",
+      "sha256": "3679a9d9205f75ab884d87a301ebeb409e7c3538129f26dee51cf535b6142c98"
+    },
+    {
+      "path": "worldpacks/urban-fantasy-v1/manifest.yaml",
+      "sha256": "7b4c7da924906652ca939cf533c6c250ba422b587349d51dad7935f248718b19"
+    },
+    {
+      "path": "worldpacks/urban-fantasy-v1/universe.yaml",
+      "sha256": "01e345152e50dbce6ac233aec5101be9194cf8823c7ce34e40756a21082296b4"
+    },
+    {
+      "path": "worldpacks/urban-fantasy-v1/artsets/standard.yaml",
+      "sha256": "86701595be21b6157931b42aa2e7560cc966adad33ae975495e11cca96115542"
+    },
+    {
+      "path": "worldpacks/urban-fantasy-v1/assets/ui/background.svg",
+      "sha256": "bc9b7467ad0e0de29cf0a822d3a40817a9089e41500063f581f4fe0c9c884a8a"
+    },
+    {
+      "path": "worldpacks/urban-fantasy-v1/assets/ui/creature.svg",
+      "sha256": "074efe395487c522fa0476ceffc487653136400485880ed426fc951f333f9bf4"
+    },
+    {
+      "path": "worldpacks/urban-fantasy-v1/assets/ui/item.svg",
+      "sha256": "cc8ed046c9ea3909812185b27a27ddda34ae557e611d5714f8761e6a7a692637"
+    },
+    {
+      "path": "worldpacks/urban-fantasy-v1/assets/ui/location.svg",
+      "sha256": "22fdb9a257164be0a971ffe7a208be9759a4e53e258cbd26399b51f540c7ff1e"
+    },
+    {
+      "path": "worldpacks/urban-fantasy-v1/assets/ui/map.svg",
+      "sha256": "1e02d745c616d2ad7bea0fc87832862ec42d3f21b43dabed4ec13c79b99d4e23"
+    },
+    {
+      "path": "worldpacks/urban-fantasy-v1/assets/ui/portrait.svg",
+      "sha256": "1715b84ca11682baaf32fa0a96a33ecacc117be7b956a280536231c305054f2a"
+    }
+  ]
+}

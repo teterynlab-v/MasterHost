@@ -5,9 +5,9 @@ import { buildDescriptor, composeGameDescriptor, gameAssetFragments, loadGameAss
 import { compileSatisfying } from "@masterhost/world-compiler";
 
 describe("M25 Deep Weird West", () => {
-  it("loads the installed 1.0.0 profile into a portable document and ready catalog entry", async () => {
+  it("loads the installed 1.0.1 profile into a portable document and ready catalog entry", async () => {
     const pack = await loadWorldPack(resolve("worldpacks/weird-west"));
-    expect(pack.manifest).toMatchObject({ id: "masterhost.weird-west", version: "1.0.0" });
+    expect(pack.manifest).toMatchObject({ id: "masterhost.weird-west", version: "1.0.1" });
     expect(pack.universe).toMatchObject({ id: "weird-west", complexity: "intermediate", playToday: { patternId: "cursed-frontier" } });
     expect(pack.universe!.localization.supportedLocales).toEqual(["en", "ru", "es", "ja", "zh-CN", "ko"]);
     const localeKeys = Object.keys(pack.universe!.localization.strings.en).sort();

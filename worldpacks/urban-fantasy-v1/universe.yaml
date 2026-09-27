@@ -1,0 +1,3762 @@
+{
+  "schemaVersion": "1",
+  "id": "urban-fantasy",
+  "genres": [
+    "fantasy",
+    "mystery"
+  ],
+  "tones": [
+    "contemporary",
+    "secretive",
+    "personal"
+  ],
+  "complexity": "beginner",
+  "recommendedPlayers": {
+    "min": 2,
+    "max": 6
+  },
+  "gameLoop": [
+    {
+      "id": "ordinary",
+      "label": "Start with a missing book unsafe inspection or emergency call",
+      "ruleRefs": [
+        "check:wits",
+        "action:recover"
+      ]
+    },
+    {
+      "id": "hidden",
+      "label": "Find the court shade or civic spell behind the problem",
+      "ruleRefs": [
+        "check:magic",
+        "action:inspire"
+      ]
+    },
+    {
+      "id": "bargain",
+      "label": "Test a practical alternate route before accepting tribute",
+      "ruleRefs": [
+        "check:body",
+        "resource:focus"
+      ]
+    },
+    {
+      "id": "balance",
+      "label": "Record retained memories safe homes and chosen public routes",
+      "ruleRefs": [
+        "progression:renown"
+      ]
+    }
+  ],
+  "patterns": [
+    {
+      "id": "hidden-courts",
+      "name": "Hidden Courts",
+      "summary": "A missing treaty ending traps readers inside an after-hours library. Navigate rival courts, retrieve a page due tomorrow and reclaim memories demanded as exit tribute.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    },
+    {
+      "id": "monster-districts",
+      "name": "Monster Districts",
+      "summary": "A daylight inspection threatens a tower shared by ordinary and nocturnal neighbors. Repair its shades and demonstrate safety while protecting residents' private identities.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    },
+    {
+      "id": "municipal-magic-conspiracy",
+      "name": "Municipal Magic Conspiracy",
+      "summary": "A private spell extension erases streets from emergency maps. Follow its payment trail, rescue a caller on a lost route and restore names chosen by residents.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    }
+  ],
+  "campaignKits": [
+    {
+      "id": "kit.hidden-courts",
+      "name": "Hidden Courts: After-hours without Tribute",
+      "summary": "A three to four hour Hidden Courts game: A missing treaty ending traps readers inside an after-hours library. Navigate rival courts, retrieve a page due tomorrow and reclaim memories demanded as exit tribute.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "hidden-courts"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.1",
+      "sceneIds": [
+        "scenes.1",
+        "scenes.4",
+        "scenes.7",
+        "scenes.10",
+        "scenes.13",
+        "scenes.16"
+      ],
+      "npcIds": [
+        "npcs.1",
+        "npcs.4",
+        "npcs.7"
+      ],
+      "locationIds": [
+        "locations.1",
+        "locations.4",
+        "locations.7"
+      ],
+      "rewardIds": [
+        "items.1",
+        "items.4"
+      ],
+      "gmGuidance": [
+        "Start with a real patron who needs to leave the closing library.",
+        "Use record, remembered sentence and return chute as alternate clues.",
+        "Do not make giving up a memory the only valid solution.",
+        "Record readers’ retained recollections and bounded lending duties."
+      ],
+      "readyCharacterIds": [
+        "archetypes.1",
+        "archetypes.4"
+      ]
+    },
+    {
+      "id": "kit.monster-districts",
+      "name": "Monster Districts: Dawn behind Working Shades",
+      "summary": "A three to four hour Monster Districts game: A daylight inspection threatens a tower shared by ordinary and nocturnal neighbors. Repair its shades and demonstrate safety while protecting residents' private identities.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "monster-districts"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.2",
+      "sceneIds": [
+        "scenes.2",
+        "scenes.5",
+        "scenes.8",
+        "scenes.11",
+        "scenes.14",
+        "scenes.17"
+      ],
+      "npcIds": [
+        "npcs.2",
+        "npcs.5",
+        "npcs.8"
+      ],
+      "locationIds": [
+        "locations.2",
+        "locations.5",
+        "locations.8"
+      ],
+      "rewardIds": [
+        "items.2",
+        "items.5"
+      ],
+      "gmGuidance": [
+        "Show the failed shade circuit and the inspection time before dawn.",
+        "Make safety verifiable through repairs while keeping identities private.",
+        "Offer a night witness visit or staged evacuation if repair fails.",
+        "Record repair duties and the conditions of future inspection."
+      ],
+      "readyCharacterIds": [
+        "archetypes.2",
+        "archetypes.5"
+      ]
+    },
+    {
+      "id": "kit.municipal-magic-conspiracy",
+      "name": "Municipal Magic: A City that Can Find You",
+      "summary": "A three to four hour Municipal Magic Conspiracy game: A private spell extension erases streets from emergency maps. Follow its payment trail, rescue a caller on a lost route and restore names chosen by residents.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "municipal-magic-conspiracy"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.3",
+      "sceneIds": [
+        "scenes.3",
+        "scenes.6",
+        "scenes.9",
+        "scenes.12",
+        "scenes.15",
+        "scenes.18"
+      ],
+      "npcIds": [
+        "npcs.3",
+        "npcs.6",
+        "npcs.9"
+      ],
+      "locationIds": [
+        "locations.3",
+        "locations.6",
+        "locations.9"
+      ],
+      "rewardIds": [
+        "items.3",
+        "items.6"
+      ],
+      "gmGuidance": [
+        "Start with a caller whose street emergency crews cannot find.",
+        "Provide paper descriptions and resident maps before asking for magic.",
+        "Allow invoice audit, feed isolation and explicit extension termination.",
+        "Record chosen street names, correction rights and emergency backups."
+      ],
+      "readyCharacterIds": [
+        "archetypes.3",
+        "archetypes.6"
+      ]
+    }
+  ],
+  "content": {
+    "factions": [
+      {
+        "id": "factions.1",
+        "name": "After-hours Library",
+        "description": "After-hours Library: hosts rival hidden courts whose treaty lives in a missing final page.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "urban.factions.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "After-hours Library: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.2",
+        "name": "Lantern Block Tenants",
+        "description": "Lantern Block Tenants: shares a tower with nocturnal residents facing a forced daylight inspection.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "urban.factions.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Lantern Block Tenants: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.3",
+        "name": "Civic Spell Office",
+        "description": "Civic Spell Office: repairs public enchantments while an unauthorized contract erases street names.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "urban.factions.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Civic Spell Office: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.4",
+        "name": "Margin Court",
+        "description": "Margin Court: claims readers' memories when the treaty's ending cannot be found.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "urban.factions.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Margin Court: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.5",
+        "name": "Night Shift Mutual",
+        "description": "Night Shift Mutual: can provide safe inspection witnesses without exposing residents to sunlight.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "urban.factions.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Night Shift Mutual: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.6",
+        "name": "Streetname Volunteers",
+        "description": "Streetname Volunteers: records vanished addresses before emergency crews lose their routes.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "urban.factions.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Streetname Volunteers: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.7",
+        "name": "Index Court",
+        "description": "Index Court: wants the treaty restored but hides its role in lending the last page.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.7"
+          }
+        ],
+        "localeKey": "urban.factions.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Index Court: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.8",
+        "name": "Utility Archive Crew",
+        "description": "Utility Archive Crew: keeps a copy of the spell contract outside the official registry.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.11"
+          }
+        ],
+        "localeKey": "urban.factions.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Utility Archive Crew: map schematic"
+          }
+        ]
+      }
+    ],
+    "locations": [
+      {
+        "id": "locations.1",
+        "name": "Closing-time Library",
+        "description": "Closing-time Library: readers cannot leave until a borrowed treaty page is returned.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "urban.locations.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Closing-time Library: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.2",
+        "name": "Lantern Block Lobby",
+        "description": "Lantern Block Lobby: an inspector schedules a daylight sweep through nocturnal homes.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "urban.locations.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Lantern Block Lobby: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.3",
+        "name": "Nameless Junction",
+        "description": "Nameless Junction: ambulances circle a street erased from the civic spell map.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "urban.locations.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Nameless Junction: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.4",
+        "name": "Book Return Chute",
+        "description": "Book Return Chute: a treaty fragment fell into a route that delivers books to tomorrow.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "urban.locations.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Book Return Chute: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.5",
+        "name": "Blackout Stair",
+        "description": "Blackout Stair: a failed shade circuit exposes the tower's vulnerable residents.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "urban.locations.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Blackout Stair: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.6",
+        "name": "Permit Archive",
+        "description": "Permit Archive: an unauthorized spell extension replaced the city's street index.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "urban.locations.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Permit Archive: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.7",
+        "name": "Margin Reading Room",
+        "description": "Margin Reading Room: the hidden court offers exit in return for a borrowed memory.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "urban.locations.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Margin Reading Room: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.8",
+        "name": "Night Service Roof",
+        "description": "Night Service Roof: tenants can repair the shades before dawn if access is granted.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "urban.locations.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Night Service Roof: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.9",
+        "name": "Route Control Room",
+        "description": "Route Control Room: the public map can be restored from a witnessed offline copy.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.3"
+          }
+        ],
+        "localeKey": "urban.locations.9",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Route Control Room: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.10",
+        "name": "Tomorrow Desk",
+        "description": "Tomorrow Desk: the last treaty page is due back before the library's closing repeats.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.4"
+          }
+        ],
+        "localeKey": "urban.locations.10",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Tomorrow Desk: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.11",
+        "name": "Common Kitchen",
+        "description": "Common Kitchen: ordinary and supernatural neighbors can stage a safe inspection together.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.8"
+          }
+        ],
+        "localeKey": "urban.locations.11",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Common Kitchen: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.12",
+        "name": "Unbound Street",
+        "description": "Unbound Street: names reappear when residents reject the private spell extension.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.12"
+          }
+        ],
+        "localeKey": "urban.locations.12",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Unbound Street: location schematic"
+          }
+        ]
+      }
+    ],
+    "npcs": [
+      {
+        "id": "npcs.1",
+        "name": "Librarian Mara Leaf",
+        "description": "Librarian Mara Leaf: knows which borrower took the ending and refuses to surrender readers' memories.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "urban.npcs.1",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Librarian Mara Leaf: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.2",
+        "name": "Tenant Kai Lantern",
+        "description": "Tenant Kai Lantern: can repair the blackout circuit if the roof is opened.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "urban.npcs.2",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Tenant Kai Lantern: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.3",
+        "name": "Dispatcher Ren Route",
+        "description": "Dispatcher Ren Route: keeps callers' descriptions of streets the map no longer admits exist.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "urban.npcs.3",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Dispatcher Ren Route: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.4",
+        "name": "Court Reader Tessa Margin",
+        "description": "Court Reader Tessa Margin: will release patrons if the lending record proves her claim expired.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "urban.npcs.4",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Court Reader Tessa Margin: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.5",
+        "name": "Caretaker Ivo Shade",
+        "description": "Caretaker Ivo Shade: hid the inspection notice to protect neighbors and now needs their help.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "urban.npcs.5",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Caretaker Ivo Shade: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.6",
+        "name": "Clerk Bea Permit",
+        "description": "Clerk Bea Permit: copied the unauthorized contract before its index vanished.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "urban.npcs.6",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Clerk Bea Permit: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.7",
+        "name": "Borrower Neri Tomorrow",
+        "description": "Borrower Neri Tomorrow: has the final page but cannot find the return chute's present entrance.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "urban.npcs.7",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Borrower Neri Tomorrow: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.8",
+        "name": "Inspector Sol Night",
+        "description": "Inspector Sol Night: can accept a witnessed evening inspection if safety conditions are documented.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "urban.npcs.8",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Inspector Sol Night: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.9",
+        "name": "Archivist Fia Street",
+        "description": "Archivist Fia Street: keeps an offline address list in the utility basement.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "urban.npcs.9",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Archivist Fia Street: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.10",
+        "name": "Student Juno Ink",
+        "description": "Student Juno Ink: remembers the treaty's final sentence without knowing its meaning.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "urban.npcs.10",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Student Juno Ink: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.11",
+        "name": "Cook Mei Common",
+        "description": "Cook Mei Common: can gather neighbors who usually avoid each other's shifts.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "urban.npcs.11",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Cook Mei Common: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.12",
+        "name": "Engineer Oren Grid",
+        "description": "Engineer Oren Grid: can restore names if the private extension's feed is isolated.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "urban.npcs.12",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Engineer Oren Grid: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.13",
+        "name": "Court Herald Dev Index",
+        "description": "Court Herald Dev Index: admits the ending was lent without both courts' consent.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "urban.npcs.13",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Court Herald Dev Index: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.14",
+        "name": "Courier Noa Roof",
+        "description": "Courier Noa Roof: can carry repair cells through the tower's daylight landing.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "urban.npcs.14",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Courier Noa Roof: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.15",
+        "name": "Paramedic Rosa Turn",
+        "description": "Paramedic Rosa Turn: needs a usable route to the unnamed junction before another call.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "urban.npcs.15",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Paramedic Rosa Turn: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.16",
+        "name": "Pagebinder Ada Spine",
+        "description": "Pagebinder Ada Spine: can rejoin the treaty without erasing the borrower's annotation.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "urban.npcs.16",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Pagebinder Ada Spine: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.17",
+        "name": "Neighbor Pell Dawn",
+        "description": "Neighbor Pell Dawn: wants safe stairs and will oppose the forced sweep if repairs are visible.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "urban.npcs.17",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Neighbor Pell Dawn: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.18",
+        "name": "Auditor Ash Budget",
+        "description": "Auditor Ash Budget: found payments for streets that disappeared after contract renewal.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "urban.npcs.18",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Auditor Ash Budget: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.19",
+        "name": "Reader Len Memory",
+        "description": "Reader Len Memory: lost a childhood recollection while trying to leave the margin room.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "urban.npcs.19",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Reader Len Memory: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.20",
+        "name": "Witness Kira Shift",
+        "description": "Witness Kira Shift: can document a safe inspection without disclosing private identities.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "urban.npcs.20",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Witness Kira Shift: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.21",
+        "name": "Resident Taro Unbound",
+        "description": "Resident Taro Unbound: knows the old street name and wants residents to choose its return.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "urban.npcs.21",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Resident Taro Unbound: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.22",
+        "name": "Deskkeeper Siva Due",
+        "description": "Deskkeeper Siva Due: will move the return deadline if both courts sign the repair.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "urban.npcs.22",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Deskkeeper Siva Due: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.23",
+        "name": "Shadeworker Tess Wire",
+        "description": "Shadeworker Tess Wire: can bypass the broken circuit at a visible fire risk.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "urban.npcs.23",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Shadeworker Tess Wire: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.24",
+        "name": "Organizer Eri Map",
+        "description": "Organizer Eri Map: collects residents' route choices before the spell office reconnects them.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "urban.npcs.24",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Organizer Eri Map: portrait schematic"
+          }
+        ]
+      }
+    ],
+    "adversaries": [
+      {
+        "id": "adversaries.1",
+        "name": "Margin Bailiff",
+        "description": "Margin Bailiff: takes memories as exit payment unless the treaty ending is restored.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "urban.adversaries.1",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Margin Bailiff: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.2",
+        "name": "Daylight Sweep Crew",
+        "description": "Daylight Sweep Crew: forces doors open at dawn despite a safer inspection proposal.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "urban.adversaries.2",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Daylight Sweep Crew: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.3",
+        "name": "Street Eraser",
+        "description": "Street Eraser: enforces a private spell extension over public emergency routes.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "urban.adversaries.3",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Street Eraser: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.4",
+        "name": "Index Moth",
+        "description": "Index Moth: eats the return record and retreats from a complete spoken sentence.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "urban.adversaries.4",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Index Moth: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.5",
+        "name": "Shade Saboteur",
+        "description": "Shade Saboteur: cuts roof access to profit from the tower's inspection failure.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "urban.adversaries.5",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Shade Saboteur: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.6",
+        "name": "Permit Enforcer",
+        "description": "Permit Enforcer: seizes the offline list as an unauthorized map.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "urban.adversaries.6",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Permit Enforcer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.7",
+        "name": "Tomorrow Librarian",
+        "description": "Tomorrow Librarian: keeps the page beyond closing until its true due date is shown.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.7"
+          }
+        ],
+        "localeKey": "urban.adversaries.7",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Tomorrow Librarian: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.8",
+        "name": "Sunlit Sentinel",
+        "description": "Sunlit Sentinel: guards the stairs without distinguishing residents from threats.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.11"
+          }
+        ],
+        "localeKey": "urban.adversaries.8",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Sunlit Sentinel: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.9",
+        "name": "Route Doppelganger",
+        "description": "Route Doppelganger: sends rescuers to a duplicate junction absent from the paper map.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.3"
+          }
+        ],
+        "localeKey": "urban.adversaries.9",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Route Doppelganger: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.10",
+        "name": "Court Usurer",
+        "description": "Court Usurer: offers a replacement ending at the cost of permanent reader tribute.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.4"
+          }
+        ],
+        "localeKey": "urban.adversaries.10",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Court Usurer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.11",
+        "name": "False Caretaker",
+        "description": "False Caretaker: offers a shade repair that locks all tenants inside.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.8"
+          }
+        ],
+        "localeKey": "urban.adversaries.11",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "False Caretaker: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.12",
+        "name": "Budget Wraith",
+        "description": "Budget Wraith: conceals the spell extension's payment trail in repeating invoices.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.12"
+          }
+        ],
+        "localeKey": "urban.adversaries.12",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Budget Wraith: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.13",
+        "name": "Borrowed Memory Shade",
+        "description": "Borrowed Memory Shade: imitates the lost recollection to lure a reader from witnesses.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "urban.adversaries.13",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Borrowed Memory Shade: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.14",
+        "name": "Roof Lock Automaton",
+        "description": "Roof Lock Automaton: rejects valid tenant access while obeying an outdated inspection hold.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "urban.adversaries.14",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Roof Lock Automaton: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.15",
+        "name": "Archive Shredder",
+        "description": "Archive Shredder: destroys streets removed from the private index.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "urban.adversaries.15",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Archive Shredder: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.16",
+        "name": "Closing Bell Echo",
+        "description": "Closing Bell Echo: repeats the library's detention rule after the treaty is whole.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "urban.adversaries.16",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Closing Bell Echo: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.17",
+        "name": "Inspection Rumor",
+        "description": "Inspection Rumor: turns ordinary neighbors against nocturnal households with false safety claims.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "urban.adversaries.17",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Inspection Rumor: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.18",
+        "name": "Contract Reflection",
+        "description": "Contract Reflection: recreates the erased street feed unless the extension is explicitly ended.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "urban.adversaries.18",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Contract Reflection: creature schematic"
+          }
+        ]
+      }
+    ],
+    "items": [
+      {
+        "id": "items.1",
+        "name": "Treaty Ending",
+        "description": "Treaty Ending: defines the reader's right to leave without a memory payment.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "urban.items.1",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Treaty Ending: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.2",
+        "name": "Evening Inspection Proposal",
+        "description": "Evening Inspection Proposal: lists witnesses and repairs sufficient for a safe night visit.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "urban.items.2",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Evening Inspection Proposal: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.3",
+        "name": "Offline Address List",
+        "description": "Offline Address List: gives emergency crews real routes outside the private spell map.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "urban.items.3",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Offline Address List: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.4",
+        "name": "Borrowing Record",
+        "description": "Borrowing Record: proves the margin court's detention claim has expired.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "urban.items.4",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Borrowing Record: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.5",
+        "name": "Shade Repair Cell",
+        "description": "Shade Repair Cell: powers a circuit long enough to protect the dawn evacuation.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "urban.items.5",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Shade Repair Cell: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.6",
+        "name": "Extension Invoice",
+        "description": "Extension Invoice: links vanished streets to a private civic spell contract.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "urban.items.6",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Extension Invoice: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.7",
+        "name": "Present-day Return Ticket",
+        "description": "Present-day Return Ticket: opens the chute leading to the borrower at Tomorrow Desk.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "urban.items.7",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Present-day Return Ticket: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.8",
+        "name": "Roof Access Slip",
+        "description": "Roof Access Slip: allows tenants to repair their own blackout system.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "urban.items.8",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Roof Access Slip: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.9",
+        "name": "Emergency Route Chalk",
+        "description": "Emergency Route Chalk: marks one safe path while the digital spell index is absent.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.3"
+          }
+        ],
+        "localeKey": "urban.items.9",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Emergency Route Chalk: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.10",
+        "name": "Reader Annotation",
+        "description": "Reader Annotation: preserves the borrower's chosen note during treaty repair.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.4"
+          }
+        ],
+        "localeKey": "urban.items.10",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Reader Annotation: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.11",
+        "name": "Common Kitchen Roster",
+        "description": "Common Kitchen Roster: coordinates neighbors without requiring supernatural disclosure.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.8"
+          }
+        ],
+        "localeKey": "urban.items.11",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Common Kitchen Roster: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.12",
+        "name": "Public Map Witness Copy",
+        "description": "Public Map Witness Copy: can reconnect streets after residents approve their names.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.12"
+          }
+        ],
+        "localeKey": "urban.items.12",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Public Map Witness Copy: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.13",
+        "name": "Spoken Final Sentence",
+        "description": "Spoken Final Sentence: repels the index moth while the original page is recovered.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.13"
+          }
+        ],
+        "localeKey": "urban.items.13",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Spoken Final Sentence: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.14",
+        "name": "Shade Circuit Diagram",
+        "description": "Shade Circuit Diagram: shows the safe bypass and its fire-risk alternative.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.17"
+          }
+        ],
+        "localeKey": "urban.items.14",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Shade Circuit Diagram: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.15",
+        "name": "Feed Isolation Tag",
+        "description": "Feed Isolation Tag: halts the private extension without cutting all city utilities.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.21"
+          }
+        ],
+        "localeKey": "urban.items.15",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Feed Isolation Tag: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.16",
+        "name": "Court Consent Ribbon",
+        "description": "Court Consent Ribbon: records both courts' agreement to a new lending deadline.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.22"
+          }
+        ],
+        "localeKey": "urban.items.16",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Court Consent Ribbon: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.17",
+        "name": "Night Witness Badge",
+        "description": "Night Witness Badge: confirms inspection facts while protecting residents' identities.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.2"
+          }
+        ],
+        "localeKey": "urban.items.17",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Night Witness Badge: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.18",
+        "name": "Vanished Street Petition",
+        "description": "Vanished Street Petition: lets residents choose names restored to the public map.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.6"
+          }
+        ],
+        "localeKey": "urban.items.18",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Vanished Street Petition: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.19",
+        "name": "Memory Return Envelope",
+        "description": "Memory Return Envelope: holds the recollection released by the margin court.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.7"
+          }
+        ],
+        "localeKey": "urban.items.19",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Memory Return Envelope: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.20",
+        "name": "Blackout Safety Kit",
+        "description": "Blackout Safety Kit: supports evacuation if repair cells run out.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.11"
+          }
+        ],
+        "localeKey": "urban.items.20",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Blackout Safety Kit: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.21",
+        "name": "Utility Payment Audit",
+        "description": "Utility Payment Audit: proves the extension continued after its public authority ended.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.15"
+          }
+        ],
+        "localeKey": "urban.items.21",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Utility Payment Audit: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.22",
+        "name": "Unbound Treaty Copy",
+        "description": "Unbound Treaty Copy: keeps readers' exit rights independent of one physical page.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.16"
+          }
+        ],
+        "localeKey": "urban.items.22",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Unbound Treaty Copy: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.23",
+        "name": "Tenant Shade Covenant",
+        "description": "Tenant Shade Covenant: records repair duties and safe access for future inspection.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.20"
+          }
+        ],
+        "localeKey": "urban.items.23",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Tenant Shade Covenant: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.24",
+        "name": "Chosen Address Register",
+        "description": "Chosen Address Register: stores resident-approved routes with a correction process.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.24"
+          }
+        ],
+        "localeKey": "urban.items.24",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Chosen Address Register: item schematic"
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "id": "events.1",
+        "name": "Closing Detention",
+        "description": "Closing Detention: the library seals its doors with the treaty ending missing.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "urban.events.1",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Closing Detention: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.2",
+        "name": "Dawn Notice",
+        "description": "Dawn Notice: the tower receives a compulsory daylight inspection time.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "urban.events.2",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Dawn Notice: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.3",
+        "name": "Address Failure",
+        "description": "Address Failure: a rescue call cannot be placed on the spell map.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "urban.events.3",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Address Failure: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.4",
+        "name": "Memory Demand",
+        "description": "Memory Demand: the margin bailiff names the first reader's exit price.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "urban.events.4",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Memory Demand: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.5",
+        "name": "Shade Outage",
+        "description": "Shade Outage: one landing loses protection before the roof repair begins.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "urban.events.5",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Shade Outage: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.6",
+        "name": "Contract Renewal",
+        "description": "Contract Renewal: the private extension silently removes another street.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "urban.events.6",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Contract Renewal: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.7",
+        "name": "Return Echo",
+        "description": "Return Echo: the book chute announces a due date from tomorrow.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "urban.events.7",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Return Echo: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.8",
+        "name": "Night Proposal",
+        "description": "Night Proposal: Sol offers a safer inspection if tenants demonstrate repairs.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "urban.events.8",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Night Proposal: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.9",
+        "name": "Paper Route",
+        "description": "Paper Route: a paramedic reaches the lost junction with an offline description.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "urban.events.9",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Paper Route: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.10",
+        "name": "Borrower's Note",
+        "description": "Borrower's Note: the final page contains an annotation one court wants erased.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "urban.events.10",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Borrower's Note: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.11",
+        "name": "Neighbor Supper",
+        "description": "Neighbor Supper: ordinary and nocturnal residents share evidence at the kitchen.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "urban.events.11",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Neighbor Supper: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.12",
+        "name": "Audit Discovery",
+        "description": "Audit Discovery: the budget trail names who paid for the disappearing routes.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "urban.events.12",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Audit Discovery: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.13",
+        "name": "Moth Feeding",
+        "description": "Moth Feeding: the lending record begins losing its dates.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "urban.events.13",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Moth Feeding: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.14",
+        "name": "Roof Locked",
+        "description": "Roof Locked: an automated hold blocks a valid tenant repair crew.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "urban.events.14",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Roof Locked: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.15",
+        "name": "Duplicate Junction",
+        "description": "Duplicate Junction: the route reflection sends a second ambulance away.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "urban.events.15",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Duplicate Junction: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.16",
+        "name": "Sentence Recalled",
+        "description": "Sentence Recalled: Juno speaks enough of the ending to stop a memory seizure.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "urban.events.16",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Sentence Recalled: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.17",
+        "name": "Inspection Witness",
+        "description": "Inspection Witness: Kira offers documented safety without private resident names.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "urban.events.17",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Inspection Witness: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.18",
+        "name": "Feed Cut",
+        "description": "Feed Cut: isolating the extension temporarily interrupts one public utility.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "urban.events.18",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Feed Cut: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.19",
+        "name": "Reader Return",
+        "description": "Reader Return: a stolen recollection can be reclaimed before the treaty is rebound.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "urban.events.19",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Reader Return: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.20",
+        "name": "Bypass Offer",
+        "description": "Bypass Offer: a shadeworker offers a faster repair at a stated fire risk.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "urban.events.20",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Bypass Offer: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.21",
+        "name": "Residents Assemble",
+        "description": "Residents Assemble: neighbors choose the names and correction rights of restored streets.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "urban.events.21",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Residents Assemble: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.22",
+        "name": "Both Courts Meet",
+        "description": "Both Courts Meet: the lending dispute can be settled without replacing the page.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "urban.events.22",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Both Courts Meet: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.23",
+        "name": "Safe Landing",
+        "description": "Safe Landing: one repaired floor allows daylight evacuation of vulnerable residents.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "urban.events.23",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Safe Landing: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.24",
+        "name": "Extension Termination",
+        "description": "Extension Termination: the contract reflection demands explicit notice before shutting down.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "urban.events.24",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Extension Termination: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.25",
+        "name": "Chute Reopened",
+        "description": "Chute Reopened: the borrower reaches the present with the missing ending.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "urban.events.25",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Chute Reopened: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.26",
+        "name": "Evening Inspection",
+        "description": "Evening Inspection: the safe alternative is judged on visible repairs rather than rumors.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "urban.events.26",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Evening Inspection: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.27",
+        "name": "Street Reconnected",
+        "description": "Street Reconnected: emergency routes return under a witnessed public map.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "urban.events.27",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Street Reconnected: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.28",
+        "name": "Library Exit",
+        "description": "Library Exit: patrons leave under the restored treaty and their retained memories.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "urban.events.28",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Library Exit: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.29",
+        "name": "Tower after Dawn",
+        "description": "Tower after Dawn: the tenants' shade agreement sets future inspection terms.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "urban.events.29",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Tower after Dawn: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.30",
+        "name": "Names in Common",
+        "description": "Names in Common: the city map reflects residents' final route choices.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "urban.events.30",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Names in Common: background schematic"
+          }
+        ]
+      }
+    ],
+    "scenes": [
+      {
+        "id": "scenes.1",
+        "name": "The Library Will Not Close",
+        "description": "The Library Will Not Close: Objective: release detained readers. Find the borrowing record or challenge the memory price; delay takes a recollection.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.4"
+          }
+        ],
+        "localeKey": "urban.scenes.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Library Will Not Close: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.2",
+        "name": "An Inspection at Sunrise",
+        "description": "An Inspection at Sunrise: Objective: protect vulnerable tenants. Propose a night visit or stage evacuation; delay exposes the first landing.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "urban.scenes.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "An Inspection at Sunrise: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.3",
+        "name": "The Street No Map Can Find",
+        "description": "The Street No Map Can Find: Objective: reach the emergency call. Use paper directions or mark a chalk route; delay misdirects another ambulance.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.6"
+          }
+        ],
+        "localeKey": "urban.scenes.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Street No Map Can Find: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.4",
+        "name": "A Debt in the Margin",
+        "description": "A Debt in the Margin: Objective: establish readers' exit rights. Read the expired claim or recover the final sentence; delay binds another patron.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.7"
+          }
+        ],
+        "localeKey": "urban.scenes.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Debt in the Margin: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.5",
+        "name": "The Roof behind the Lock",
+        "description": "The Roof behind the Lock: Objective: restore shade access. Lift the outdated hold or escort repair cells; delay forces a risky bypass.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.8"
+          }
+        ],
+        "localeKey": "urban.scenes.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Roof behind the Lock: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.6",
+        "name": "The Contract under the Index",
+        "description": "The Contract under the Index: Objective: identify the erasing extension. Audit payments or retrieve the archive copy; delay removes another route.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "urban.scenes.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Contract under the Index: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.7",
+        "name": "Borrowed until Tomorrow",
+        "description": "Borrowed until Tomorrow: Objective: recover the final page. Open the present return chute or renegotiate its due date; delay repeats closing.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "urban.scenes.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Borrowed until Tomorrow: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.8",
+        "name": "Neighbors around One Table",
+        "description": "Neighbors around One Table: Objective: organize a safe inspection. Gather witnesses or demonstrate the repaired landing; delay spreads false rumors.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.11"
+          }
+        ],
+        "localeKey": "urban.scenes.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Neighbors around One Table: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.9",
+        "name": "The Duplicate Junction",
+        "description": "The Duplicate Junction: Objective: isolate misleading routes. Compare resident maps or cut the extension feed; delay diverts rescuers.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.12"
+          }
+        ],
+        "localeKey": "urban.scenes.9",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Duplicate Junction: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.10",
+        "name": "A Sentence Both Courts Can Read",
+        "description": "A Sentence Both Courts Can Read: Objective: repair the treaty without erasure. Preserve the annotation or witness a shared copy; delay feeds the index moth.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.13"
+          }
+        ],
+        "localeKey": "urban.scenes.10",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Sentence Both Courts Can Read: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.11",
+        "name": "Shade before the Door Opens",
+        "description": "Shade before the Door Opens: Objective: protect dawn access. Finish the safe circuit or stage the bounded evacuation; delay injures a resident.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "urban.scenes.11",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Shade before the Door Opens: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.12",
+        "name": "Who Paid to Lose a Street",
+        "description": "Who Paid to Lose a Street: Objective: end private route control. Publish the audit or terminate the extension; delay renews the contract.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.15"
+          }
+        ],
+        "localeKey": "urban.scenes.12",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Who Paid to Lose a Street: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.13",
+        "name": "The Reader's Own Memory",
+        "description": "The Reader's Own Memory: Objective: return taken recollections. Release the envelopes or witness individual claims; delay merges them with the court archive.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.16"
+          }
+        ],
+        "localeKey": "urban.scenes.13",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Reader's Own Memory: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.14",
+        "name": "The Evening Visit",
+        "description": "The Evening Visit: Objective: settle a safe inspection. Verify repairs or accept a witnessed temporary plan; delay reinstates the dawn sweep.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.17"
+          }
+        ],
+        "localeKey": "urban.scenes.14",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Evening Visit: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.15",
+        "name": "Names Chosen by Residents",
+        "description": "Names Chosen by Residents: Objective: restore a usable public map. Reconnect approved routes or maintain a witnessed paper service; delay leaves a district unreachable.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "urban.scenes.15",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Names Chosen by Residents: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.16",
+        "name": "After-hours without Tribute",
+        "description": "After-hours without Tribute: Objective: settle the courts' treaty. Bound lending claims or guarantee independent exit rights; record the readers' retained memories.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "urban.scenes.16",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "After-hours without Tribute: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.17",
+        "name": "Dawn behind Working Shades",
+        "description": "Dawn behind Working Shades: Objective: settle the tower's safety. Share repair duties or fund tested protection; record private identities kept private.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.2"
+          }
+        ],
+        "localeKey": "urban.scenes.17",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Dawn behind Working Shades: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.18",
+        "name": "A City that Can Find You",
+        "description": "A City that Can Find You: Objective: maintain public route correction. Create a resident register or independent emergency copy; record who may revise it.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.3"
+          }
+        ],
+        "localeKey": "urban.scenes.18",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A City that Can Find You: map schematic"
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "archetypes.1",
+        "name": "Treaty Reader",
+        "description": "Treaty Reader: finds exit conditions concealed by hidden court claims.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "urban.archetypes.1",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Treaty Reader: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.2",
+        "name": "Shade Caretaker",
+        "description": "Shade Caretaker: keeps nocturnal homes safe through tested practical repairs.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "urban.archetypes.2",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Shade Caretaker: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.3",
+        "name": "Route Archivist",
+        "description": "Route Archivist: restores public paths erased by private enchantment.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "urban.archetypes.3",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Route Archivist: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.4",
+        "name": "Memory Advocate",
+        "description": "Memory Advocate: returns recollections to the people who chose them.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "urban.archetypes.4",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Memory Advocate: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.5",
+        "name": "Night Inspector",
+        "description": "Night Inspector: tests safety without exposing private identities.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "urban.archetypes.5",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Night Inspector: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.6",
+        "name": "Spell Auditor",
+        "description": "Spell Auditor: traces civic enchantment contracts through ordinary budgets.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "urban.archetypes.6",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Spell Auditor: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.7",
+        "name": "Page Courier",
+        "description": "Page Courier: finds a present route through enchanted borrowing deadlines.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "urban.archetypes.7",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Page Courier: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.8",
+        "name": "Neighbor Organizer",
+        "description": "Neighbor Organizer: makes ordinary and supernatural households solve shared problems.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "urban.archetypes.8",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Neighbor Organizer: portrait schematic"
+          }
+        ]
+      }
+    ],
+    "progressionPaths": [
+      {
+        "id": "progressionPaths.1",
+        "name": "Open Door Witness",
+        "description": "Open Door Witness: earn trust through independent library exit; gain court access and lending duties.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.1"
+          }
+        ],
+        "localeKey": "urban.progressionPaths.1",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Open Door Witness: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.2",
+        "name": "Safe Dawn Keeper",
+        "description": "Safe Dawn Keeper: earn support through repaired shades; gain tenant crews and inspection obligations.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.5"
+          }
+        ],
+        "localeKey": "urban.progressionPaths.2",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Safe Dawn Keeper: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.3",
+        "name": "Public Route Guardian",
+        "description": "Public Route Guardian: earn standing through usable emergency maps; gain archives and correction duties.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.3"
+          }
+        ],
+        "localeKey": "urban.progressionPaths.3",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Public Route Guardian: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.4",
+        "name": "Memory Steward",
+        "description": "Memory Steward: earn trust by returning chosen recollections; gain reader witnesses and consent duties.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.1"
+          }
+        ],
+        "localeKey": "urban.progressionPaths.4",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Memory Steward: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.5",
+        "name": "Night Mediator",
+        "description": "Night Mediator: earn legitimacy through tested shared safety; gain neighborhood support and repair duties.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.5"
+          }
+        ],
+        "localeKey": "urban.progressionPaths.5",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Night Mediator: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.6",
+        "name": "Civic Spell Reformer",
+        "description": "Civic Spell Reformer: earn authority by ending private route erasure; gain utility access and public audit duties.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.6"
+          }
+        ],
+        "localeKey": "urban.progressionPaths.6",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Civic Spell Reformer: item schematic"
+          }
+        ]
+      }
+    ],
+    "visualThemes": [
+      {
+        "id": "visualThemes.1",
+        "name": "After-hours Index",
+        "description": "After-hours Index: silver exit clauses and violet court debts distinguish readers' rights from tribute.",
+        "patternIds": [
+          "hidden-courts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "urban.visualThemes.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "After-hours Index: map schematic"
+          },
+          {
+            "role": "ui",
+            "asset": "ui/background.svg",
+            "alt": "City navigation interface"
+          }
+        ]
+      },
+      {
+        "id": "visualThemes.2",
+        "name": "Lantern Block",
+        "description": "Lantern Block: amber repaired shades and blue night routes distinguish tested safety from daylight exposure.",
+        "patternIds": [
+          "monster-districts"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "urban.visualThemes.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Lantern Block: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "visualThemes.3",
+        "name": "Civic Route Map",
+        "description": "Civic Route Map: green resident-approved streets and gray erased feeds distinguish public routes from private control.",
+        "patternIds": [
+          "municipal-magic-conspiracy"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "urban.visualThemes.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Civic Route Map: map schematic"
+          }
+        ]
+      }
+    ]
+  },
+  "playToday": {
+    "patternId": "hidden-courts",
+    "campaignKitId": "kit.hidden-courts",
+    "visualThemeId": "visualThemes.1"
+  },
+  "localization": {
+    "sourceLocale": "en",
+    "supportedLocales": [
+      "en",
+      "ru",
+      "es",
+      "ja",
+      "zh-CN",
+      "ko"
+    ],
+    "strings": {
+      "en": {
+        "urban.factions.1": "After-hours Library",
+        "urban.factions.2": "Lantern Block Tenants",
+        "urban.factions.3": "Civic Spell Office",
+        "urban.factions.4": "Margin Court",
+        "urban.factions.5": "Night Shift Mutual",
+        "urban.factions.6": "Streetname Volunteers",
+        "urban.factions.7": "Index Court",
+        "urban.factions.8": "Utility Archive Crew",
+        "urban.locations.1": "Closing-time Library",
+        "urban.locations.2": "Lantern Block Lobby",
+        "urban.locations.3": "Nameless Junction",
+        "urban.locations.4": "Book Return Chute",
+        "urban.locations.5": "Blackout Stair",
+        "urban.locations.6": "Permit Archive",
+        "urban.locations.7": "Margin Reading Room",
+        "urban.locations.8": "Night Service Roof",
+        "urban.locations.9": "Route Control Room",
+        "urban.locations.10": "Tomorrow Desk",
+        "urban.locations.11": "Common Kitchen",
+        "urban.locations.12": "Unbound Street",
+        "urban.npcs.1": "Librarian Mara Leaf",
+        "urban.npcs.2": "Tenant Kai Lantern",
+        "urban.npcs.3": "Dispatcher Ren Route",
+        "urban.npcs.4": "Court Reader Tessa Margin",
+        "urban.npcs.5": "Caretaker Ivo Shade",
+        "urban.npcs.6": "Clerk Bea Permit",
+        "urban.npcs.7": "Borrower Neri Tomorrow",
+        "urban.npcs.8": "Inspector Sol Night",
+        "urban.npcs.9": "Archivist Fia Street",
+        "urban.npcs.10": "Student Juno Ink",
+        "urban.npcs.11": "Cook Mei Common",
+        "urban.npcs.12": "Engineer Oren Grid",
+        "urban.npcs.13": "Court Herald Dev Index",
+        "urban.npcs.14": "Courier Noa Roof",
+        "urban.npcs.15": "Paramedic Rosa Turn",
+        "urban.npcs.16": "Pagebinder Ada Spine",
+        "urban.npcs.17": "Neighbor Pell Dawn",
+        "urban.npcs.18": "Auditor Ash Budget",
+        "urban.npcs.19": "Reader Len Memory",
+        "urban.npcs.20": "Witness Kira Shift",
+        "urban.npcs.21": "Resident Taro Unbound",
+        "urban.npcs.22": "Deskkeeper Siva Due",
+        "urban.npcs.23": "Shadeworker Tess Wire",
+        "urban.npcs.24": "Organizer Eri Map",
+        "urban.adversaries.1": "Margin Bailiff",
+        "urban.adversaries.2": "Daylight Sweep Crew",
+        "urban.adversaries.3": "Street Eraser",
+        "urban.adversaries.4": "Index Moth",
+        "urban.adversaries.5": "Shade Saboteur",
+        "urban.adversaries.6": "Permit Enforcer",
+        "urban.adversaries.7": "Tomorrow Librarian",
+        "urban.adversaries.8": "Sunlit Sentinel",
+        "urban.adversaries.9": "Route Doppelganger",
+        "urban.adversaries.10": "Court Usurer",
+        "urban.adversaries.11": "False Caretaker",
+        "urban.adversaries.12": "Budget Wraith",
+        "urban.adversaries.13": "Borrowed Memory Shade",
+        "urban.adversaries.14": "Roof Lock Automaton",
+        "urban.adversaries.15": "Archive Shredder",
+        "urban.adversaries.16": "Closing Bell Echo",
+        "urban.adversaries.17": "Inspection Rumor",
+        "urban.adversaries.18": "Contract Reflection",
+        "urban.items.1": "Treaty Ending",
+        "urban.items.2": "Evening Inspection Proposal",
+        "urban.items.3": "Offline Address List",
+        "urban.items.4": "Borrowing Record",
+        "urban.items.5": "Shade Repair Cell",
+        "urban.items.6": "Extension Invoice",
+        "urban.items.7": "Present-day Return Ticket",
+        "urban.items.8": "Roof Access Slip",
+        "urban.items.9": "Emergency Route Chalk",
+        "urban.items.10": "Reader Annotation",
+        "urban.items.11": "Common Kitchen Roster",
+        "urban.items.12": "Public Map Witness Copy",
+        "urban.items.13": "Spoken Final Sentence",
+        "urban.items.14": "Shade Circuit Diagram",
+        "urban.items.15": "Feed Isolation Tag",
+        "urban.items.16": "Court Consent Ribbon",
+        "urban.items.17": "Night Witness Badge",
+        "urban.items.18": "Vanished Street Petition",
+        "urban.items.19": "Memory Return Envelope",
+        "urban.items.20": "Blackout Safety Kit",
+        "urban.items.21": "Utility Payment Audit",
+        "urban.items.22": "Unbound Treaty Copy",
+        "urban.items.23": "Tenant Shade Covenant",
+        "urban.items.24": "Chosen Address Register",
+        "urban.events.1": "Closing Detention",
+        "urban.events.2": "Dawn Notice",
+        "urban.events.3": "Address Failure",
+        "urban.events.4": "Memory Demand",
+        "urban.events.5": "Shade Outage",
+        "urban.events.6": "Contract Renewal",
+        "urban.events.7": "Return Echo",
+        "urban.events.8": "Night Proposal",
+        "urban.events.9": "Paper Route",
+        "urban.events.10": "Borrower's Note",
+        "urban.events.11": "Neighbor Supper",
+        "urban.events.12": "Audit Discovery",
+        "urban.events.13": "Moth Feeding",
+        "urban.events.14": "Roof Locked",
+        "urban.events.15": "Duplicate Junction",
+        "urban.events.16": "Sentence Recalled",
+        "urban.events.17": "Inspection Witness",
+        "urban.events.18": "Feed Cut",
+        "urban.events.19": "Reader Return",
+        "urban.events.20": "Bypass Offer",
+        "urban.events.21": "Residents Assemble",
+        "urban.events.22": "Both Courts Meet",
+        "urban.events.23": "Safe Landing",
+        "urban.events.24": "Extension Termination",
+        "urban.events.25": "Chute Reopened",
+        "urban.events.26": "Evening Inspection",
+        "urban.events.27": "Street Reconnected",
+        "urban.events.28": "Library Exit",
+        "urban.events.29": "Tower after Dawn",
+        "urban.events.30": "Names in Common",
+        "urban.scenes.1": "The Library Will Not Close",
+        "urban.scenes.2": "An Inspection at Sunrise",
+        "urban.scenes.3": "The Street No Map Can Find",
+        "urban.scenes.4": "A Debt in the Margin",
+        "urban.scenes.5": "The Roof behind the Lock",
+        "urban.scenes.6": "The Contract under the Index",
+        "urban.scenes.7": "Borrowed until Tomorrow",
+        "urban.scenes.8": "Neighbors around One Table",
+        "urban.scenes.9": "The Duplicate Junction",
+        "urban.scenes.10": "A Sentence Both Courts Can Read",
+        "urban.scenes.11": "Shade before the Door Opens",
+        "urban.scenes.12": "Who Paid to Lose a Street",
+        "urban.scenes.13": "The Reader's Own Memory",
+        "urban.scenes.14": "The Evening Visit",
+        "urban.scenes.15": "Names Chosen by Residents",
+        "urban.scenes.16": "After-hours without Tribute",
+        "urban.scenes.17": "Dawn behind Working Shades",
+        "urban.scenes.18": "A City that Can Find You",
+        "urban.archetypes.1": "Treaty Reader",
+        "urban.archetypes.2": "Shade Caretaker",
+        "urban.archetypes.3": "Route Archivist",
+        "urban.archetypes.4": "Memory Advocate",
+        "urban.archetypes.5": "Night Inspector",
+        "urban.archetypes.6": "Spell Auditor",
+        "urban.archetypes.7": "Page Courier",
+        "urban.archetypes.8": "Neighbor Organizer",
+        "urban.progressionPaths.1": "Open Door Witness",
+        "urban.progressionPaths.2": "Safe Dawn Keeper",
+        "urban.progressionPaths.3": "Public Route Guardian",
+        "urban.progressionPaths.4": "Memory Steward",
+        "urban.progressionPaths.5": "Night Mediator",
+        "urban.progressionPaths.6": "Civic Spell Reformer",
+        "urban.visualThemes.1": "After-hours Index",
+        "urban.visualThemes.2": "Lantern Block",
+        "urban.visualThemes.3": "Civic Route Map"
+      }
+    },
+    "fallbackLocales": [
+      "ru",
+      "es",
+      "ja",
+      "zh-CN",
+      "ko"
+    ]
+  }
+}

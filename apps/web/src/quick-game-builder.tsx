@@ -11,6 +11,10 @@ type Review = { ready: boolean; diagnostics: { code: string; message: string }[]
 type Preview = { report: { valid: boolean; diagnostics: { code: string; path: string; message: string }[] } };
 
 interface Props { request: (path: string, init?: RequestInit) => Promise<any>; requestMedia: (path: string) => Promise<Blob>; pack: { manifest: { id: string; version: string }; questions: Question[] }; onWorld: (world: any) => Promise<void> | void; onBack: () => void; onAdvanced: () => void }
+export function playTodayAssets<T extends {type:string;preview:{highlights:string[]}}>(assets:T[]):T[]{
+ const deep=assets.filter(asset=>asset.preview.highlights.includes("Deep Universe Standard v1"));
+ return categories.every(category=>deep.filter(asset=>asset.type===category.type).length===1)?deep:assets;
+}
 export function quickStartMatchesPack(value: ReturnType<typeof readQuickStartHandoff>, pack: Props["pack"]) { return !value || (pack.manifest.id === value.basePack.id && pack.manifest.version === value.basePack.version); }
 export function initialQuickDecisions(questions: Question[], quickStart: ReturnType<typeof readQuickStartHandoff>) {
   const decisions = Object.fromEntries(questions.map(question => [question.id, question.default]));
@@ -68,7 +72,7 @@ export function QuickGameBuilder({ request, requestMedia, pack, onWorld, onBack,
   const [assets, setAssets] = useState<Asset[]>([]), [step, setStep] = useState(0), [name, setName] = useState(quickStart ? `${quickStart.universeName} One-shot` : "Untitled One-shot"), [seed, setSeed] = useState(quickStart ? `play-today-${quickStart.universeId}` : "masterhost-quick-game"), [selected, setSelected] = useState<Record<string, Selection>>({});
   const [decisions, setDecisions] = useState<Record<string, string>>(() => initialQuickDecisions(pack.questions, quickStart)), [review, setReview] = useState<Review | null>(null), [preview, setPreview] = useState<Preview | null>(null), [busy, setBusy] = useState(false), [error, setError] = useState("");
   const exactPackActive = quickStartMatchesPack(quickStart, pack);
-  useEffect(() => { void request(`/game-assets?basePackId=${encodeURIComponent(pack.manifest.id)}`).then(setAssets).catch(reason => setError(reason.message)); }, []);
+  useEffect(() => { void request(`/game-assets?basePackId=${encodeURIComponent(pack.manifest.id)}`).then(values=>setAssets(quickStart?playTodayAssets(values):values)).catch(reason => setError(reason.message)); }, []);
   useEffect(() => { if (!assets.length) return; setSelected(current => { const next = { ...current }; for (const category of categories) { const matches = assets.filter(asset => asset.type === category.type); if (matches.length === 1 && !next[category.type]) next[category.type] = { id: matches[0]!.id, version: matches[0]!.version, parameters: parameterDefaults(matches[0]!) }; } return next; }); }, [assets]);
   const flow = useMemo(() => quickBuilderFlow(assets), [assets]), flowStep = flow[Math.min(step, flow.length - 1)]!, category = flowStep.kind === "category" ? categories.find(value => value.type === flowStep.type)! : null, choices = useMemo(() => category ? assets.filter(asset => asset.type === category.type) : [], [assets, category?.type]);
   const decisionQuestions = pack.questions.filter(question => !quickStart || !["world.pattern", "world.campaignKit", "world.visualTheme"].includes(question.id));

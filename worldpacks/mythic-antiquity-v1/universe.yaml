@@ -1,0 +1,3762 @@
+{
+  "schemaVersion": "1",
+  "id": "mythic-antiquity",
+  "genres": [
+    "myth",
+    "fantasy"
+  ],
+  "tones": [
+    "epic",
+    "tragic",
+    "wondrous"
+  ],
+  "complexity": "intermediate",
+  "recommendedPlayers": {
+    "min": 2,
+    "max": 6
+  },
+  "gameLoop": [
+    {
+      "id": "prophecy",
+      "label": "Read the conditions before claiming a divine promise",
+      "ruleRefs": [
+        "check:wits",
+        "action:recover"
+      ]
+    },
+    {
+      "id": "ordeal",
+      "label": "Face a trial with a costly alternate route",
+      "ruleRefs": [
+        "check:might",
+        "action:inspire"
+      ]
+    },
+    {
+      "id": "intervention",
+      "label": "Return weather and memory without claiming their holders",
+      "ruleRefs": [
+        "check:spirit",
+        "resource:favor"
+      ]
+    },
+    {
+      "id": "legacy",
+      "label": "Record the rescue, truthful homecoming or chosen farewell",
+      "ruleRefs": [
+        "progression:renown"
+      ]
+    }
+  ],
+  "patterns": [
+    {
+      "id": "warring-poleis",
+      "name": "Warring Poleis",
+      "summary": "Two cities read a reversed river as a promise of victory. Recover the omen's hidden condition and decide whether civic honor can mean a shared rescue.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    },
+    {
+      "id": "islands-of-odyssey",
+      "name": "Islands of the Odyssey",
+      "summary": "A homeward crew encounters the voice of a companion it abandoned. Free a captive storm and restore a truthful story before the beacon will lead them home.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    },
+    {
+      "id": "underworld-frontier",
+      "name": "Underworld Frontier",
+      "summary": "A living visitor follows an unfinished request across death's border. Face unequal judgment, choose the cost of a farewell and return without commanding the dead.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    }
+  ],
+  "campaignKits": [
+    {
+      "id": "kit.warring-poleis",
+      "name": "Warring Poleis: A Prophecy Worth Keeping",
+      "summary": "A three to four hour Warring Poleis game: Two cities read a reversed river as a promise of victory. Recover the omen's hidden condition and decide whether civic honor can mean a shared rescue.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "warring-poleis"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.1",
+      "sceneIds": [
+        "scenes.1",
+        "scenes.4",
+        "scenes.7",
+        "scenes.10",
+        "scenes.13",
+        "scenes.16"
+      ],
+      "npcIds": [
+        "npcs.1",
+        "npcs.4",
+        "npcs.7"
+      ],
+      "locationIds": [
+        "locations.1",
+        "locations.4",
+        "locations.7"
+      ],
+      "rewardIds": [
+        "items.1",
+        "items.4"
+      ],
+      "gmGuidance": [
+        "Open with the reversed river and two opposed victory claims.",
+        "Reveal that the omen contains a rescue condition rather than a guaranteed conquest.",
+        "Allow witnesses, shared restraint and practical rescue without forcing a battle.",
+        "Record the watch, repairs and each city’s changed story of honor."
+      ],
+      "readyCharacterIds": [
+        "archetypes.1",
+        "archetypes.4"
+      ]
+    },
+    {
+      "id": "kit.islands-of-odyssey",
+      "name": "Islands of the Odyssey: Weather without a Master",
+      "summary": "A three to four hour Islands of the Odyssey game: A homeward crew encounters the voice of a companion it abandoned. Free a captive storm and restore a truthful story before the beacon will lead them home.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "islands-of-odyssey"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.2",
+      "sceneIds": [
+        "scenes.2",
+        "scenes.5",
+        "scenes.8",
+        "scenes.11",
+        "scenes.14",
+        "scenes.17"
+      ],
+      "npcIds": [
+        "npcs.2",
+        "npcs.5",
+        "npcs.8"
+      ],
+      "locationIds": [
+        "locations.2",
+        "locations.5",
+        "locations.8"
+      ],
+      "rewardIds": [
+        "items.2",
+        "items.5"
+      ],
+      "gmGuidance": [
+        "Use the missing companion’s bowl, echo and song as three routes to the truth.",
+        "State evacuation and diving costs before releasing the captive storm.",
+        "Let the crew acknowledge abandonment through a log, song or shared memory.",
+        "Record a truthful homecoming and the anchorage’s recovery."
+      ],
+      "readyCharacterIds": [
+        "archetypes.2",
+        "archetypes.5"
+      ]
+    },
+    {
+      "id": "kit.underworld-frontier",
+      "name": "Underworld Frontier: The Road Back to Life",
+      "summary": "A three to four hour Underworld Frontier game: A living visitor follows an unfinished request across death's border. Face unequal judgment, choose the cost of a farewell and return without commanding the dead.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "underworld-frontier"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.3",
+      "sceneIds": [
+        "scenes.3",
+        "scenes.6",
+        "scenes.9",
+        "scenes.12",
+        "scenes.15",
+        "scenes.18"
+      ],
+      "npcIds": [
+        "npcs.3",
+        "npcs.6",
+        "npcs.9"
+      ],
+      "locationIds": [
+        "locations.3",
+        "locations.6",
+        "locations.9"
+      ],
+      "rewardIds": [
+        "items.3",
+        "items.6"
+      ],
+      "gmGuidance": [
+        "Ask which unfinished request brings the living visitor across the border.",
+        "State that neither resurrection nor consent can be bought with rank.",
+        "Make the borrowed day voluntary; a written message remains a valid alternate route.",
+        "Record the requested deed, chosen farewell and return to life."
+      ],
+      "readyCharacterIds": [
+        "archetypes.3",
+        "archetypes.6"
+      ]
+    }
+  ],
+  "content": {
+    "factions": [
+      {
+        "id": "factions.1",
+        "name": "Bronze Assembly",
+        "description": "Bronze Assembly: votes on a war promised by the city oracle while the river runs backward.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "myth.factions.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Bronze Assembly: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.2",
+        "name": "Wave Companions",
+        "description": "Wave Companions: sails a returning route only by remembering a lost crew member.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "myth.factions.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Wave Companions: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.3",
+        "name": "Threshold Chorus",
+        "description": "Threshold Chorus: guides the living through death's border without promising resurrection.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "myth.factions.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Threshold Chorus: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.4",
+        "name": "River Militia",
+        "description": "River Militia: will defend the ford but refuses an invasion disguised as prophecy.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "myth.factions.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "River Militia: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.5",
+        "name": "Island Hearths",
+        "description": "Island Hearths: offers shelter to sailors who release a stolen storm jar.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "myth.factions.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Island Hearths: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.6",
+        "name": "Silent Judges",
+        "description": "Silent Judges: measures unfinished deeds rather than earthly rank at the gate.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "myth.factions.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Silent Judges: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.7",
+        "name": "Laurel Envoys",
+        "description": "Laurel Envoys: seeks a truce before two cities fulfill the same war omen.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.7"
+          }
+        ],
+        "localeKey": "myth.factions.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Laurel Envoys: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.8",
+        "name": "Pearl Divers",
+        "description": "Pearl Divers: knows a submerged passage where a storm may be returned.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.11"
+          }
+        ],
+        "localeKey": "myth.factions.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Pearl Divers: map schematic"
+          }
+        ]
+      }
+    ],
+    "locations": [
+      {
+        "id": "locations.1",
+        "name": "Backward Ford",
+        "description": "Backward Ford: the river reverses as rival armies each claim divine permission to cross.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "myth.locations.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Backward Ford: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.2",
+        "name": "Island of Second Echoes",
+        "description": "Island of Second Echoes: every shouted command returns in the voice of a missing sailor.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "myth.locations.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Island of Second Echoes: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.3",
+        "name": "Threshold Stair",
+        "description": "Threshold Stair: the dead wait with tokens of tasks the living have forgotten.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "myth.locations.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Threshold Stair: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.4",
+        "name": "Bronze Oracle Court",
+        "description": "Bronze Oracle Court: a prophecy tablet has a scraped-away condition beneath the war decree.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "myth.locations.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Bronze Oracle Court: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.5",
+        "name": "Storm Jar Anchorage",
+        "description": "Storm Jar Anchorage: a chained squall pulls against the harbor while ships cannot depart.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "myth.locations.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Storm Jar Anchorage: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.6",
+        "name": "Hall of Unfinished Deeds",
+        "description": "Hall of Unfinished Deeds: rank and wealth vanish while abandoned promises take visible shape.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "myth.locations.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Hall of Unfinished Deeds: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.7",
+        "name": "Laurel Pass",
+        "description": "Laurel Pass: envoys can meet out of bowshot if both standards are lowered.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "myth.locations.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Laurel Pass: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.8",
+        "name": "Pearl Cavern",
+        "description": "Pearl Cavern: a submerged altar accepts the storm only after a safe diving route is marked.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "myth.locations.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Pearl Cavern: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.9",
+        "name": "Garden of Borrowed Days",
+        "description": "Garden of Borrowed Days: a lost sibling may speak while another visitor offers a day of memory.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.3"
+          }
+        ],
+        "localeKey": "myth.locations.9",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Garden of Borrowed Days: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.10",
+        "name": "Shield Foundry",
+        "description": "Shield Foundry: the defense muster can be rebuilt as a river rescue crew.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.4"
+          }
+        ],
+        "localeKey": "myth.locations.10",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Shield Foundry: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.11",
+        "name": "Homeward Beacon",
+        "description": "Homeward Beacon: a flame remembers the missing sailor when the crew tells their story.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.8"
+          }
+        ],
+        "localeKey": "myth.locations.11",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Homeward Beacon: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.12",
+        "name": "Quiet Ferry",
+        "description": "Quiet Ferry: the ferryman permits a return only with a named deed completed.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.12"
+          }
+        ],
+        "localeKey": "myth.locations.12",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Quiet Ferry: location schematic"
+          }
+        ]
+      }
+    ],
+    "npcs": [
+      {
+        "id": "npcs.1",
+        "name": "Oracle Ione Bronze",
+        "description": "Oracle Ione Bronze: can read the missing condition if protected from the war votaries.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "myth.npcs.1",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Oracle Ione Bronze: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.2",
+        "name": "Navigator Saro Wave",
+        "description": "Navigator Saro Wave: remembers the lost sailor's promise and fears admitting the ship abandoned them.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "myth.npcs.2",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Navigator Saro Wave: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.3",
+        "name": "Guide Nema Threshold",
+        "description": "Guide Nema Threshold: will lead a living visitor if they accept the limits of borrowed days.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "myth.npcs.3",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Guide Nema Threshold: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.4",
+        "name": "Marshal Theron Reed",
+        "description": "Marshal Theron Reed: can hold the ford while envoys investigate the decree.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "myth.npcs.4",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Marshal Theron Reed: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.5",
+        "name": "Diver Lysa Pearl",
+        "description": "Diver Lysa Pearl: knows how to release the squall without drowning the anchorage.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "myth.npcs.5",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Diver Lysa Pearl: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.6",
+        "name": "Judge Oren Quiet",
+        "description": "Judge Oren Quiet: allows testimony from humble deeds the royal claimant dismisses.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "myth.npcs.6",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Judge Oren Quiet: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.7",
+        "name": "Envoy Kallia Laurel",
+        "description": "Envoy Kallia Laurel: carries a truce proposal rejected before it was heard.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "myth.npcs.7",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Envoy Kallia Laurel: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.8",
+        "name": "Cook Mira Hearth",
+        "description": "Cook Mira Hearth: keeps the crew's last meal for a companion no one will name.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "myth.npcs.8",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Cook Mira Hearth: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.9",
+        "name": "Sibling Daro Garden",
+        "description": "Sibling Daro Garden: wants a message delivered rather than an unwilling resurrection.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "myth.npcs.9",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Sibling Daro Garden: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.10",
+        "name": "Smith Pela Shield",
+        "description": "Smith Pela Shield: can turn weapons into rescue hooks before the river rises.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "myth.npcs.10",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Smith Pela Shield: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.11",
+        "name": "Child Eri Beacon",
+        "description": "Child Eri Beacon: heard the missing sailor promise to bring home a story.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "myth.npcs.11",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Child Eri Beacon: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.12",
+        "name": "Ferryman Sol Still",
+        "description": "Ferryman Sol Still: needs the traveler's own unfinished deed named before granting passage.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "myth.npcs.12",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Ferryman Sol Still: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.13",
+        "name": "Votary Ash Gold",
+        "description": "Votary Ash Gold: altered the tablet to turn a rescue omen into a victory promise.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "myth.npcs.13",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Votary Ash Gold: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.14",
+        "name": "Sailor Kai Echo",
+        "description": "Sailor Kai Echo: can distinguish the island's truthful echo from a flattering imitation.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "myth.npcs.14",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Sailor Kai Echo: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.15",
+        "name": "Archivist Bea Thread",
+        "description": "Archivist Bea Thread: preserves a simple village promise beside the royal burial records.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "myth.npcs.15",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Archivist Bea Thread: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.16",
+        "name": "Captain Ren Oar",
+        "description": "Captain Ren Oar: will admit the abandonment if the crew secures another way home.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "myth.npcs.16",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Captain Ren Oar: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.17",
+        "name": "Priestess Fia Rain",
+        "description": "Priestess Fia Rain: can receive the storm if the island's dwellings are evacuated first.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "myth.npcs.17",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Priestess Fia Rain: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.18",
+        "name": "Gardener Mei Day",
+        "description": "Gardener Mei Day: counts the memory days offered and forbids taking them by force.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "myth.npcs.18",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Gardener Mei Day: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.19",
+        "name": "Scout Juno Ford",
+        "description": "Scout Juno Ford: mapped a nonmilitary crossing now blocked by both armies.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "myth.npcs.19",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Scout Juno Ford: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.20",
+        "name": "Pearl Keeper Tessa Foam",
+        "description": "Pearl Keeper Tessa Foam: holds an anchor stone useful for the final descent.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "myth.npcs.20",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Pearl Keeper Tessa Foam: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.21",
+        "name": "Witness Dev Candle",
+        "description": "Witness Dev Candle: remembers a debt the royal claimant tried to erase at death.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "myth.npcs.21",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Witness Dev Candle: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.22",
+        "name": "Soldier Noa Laurel",
+        "description": "Soldier Noa Laurel: can lower the standard if the opposite watch promises the same.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "myth.npcs.22",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Soldier Noa Laurel: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.23",
+        "name": "Singer Kira Home",
+        "description": "Singer Kira Home: knows the sailor's last song but needs the crew's missing verse.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "myth.npcs.23",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Singer Kira Home: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.24",
+        "name": "Mourner Rosa Return",
+        "description": "Mourner Rosa Return: will finish a sibling's task if allowed to hear their farewell.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "myth.npcs.24",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Mourner Rosa Return: portrait schematic"
+          }
+        ]
+      }
+    ],
+    "adversaries": [
+      {
+        "id": "adversaries.1",
+        "name": "War Votary",
+        "description": "War Votary: demands a battle at the ford and hides the tablet's condition.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "myth.adversaries.1",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "War Votary: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.2",
+        "name": "Echo Siren",
+        "description": "Echo Siren: offers a painless homecoming by erasing the abandoned sailor.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "myth.adversaries.2",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Echo Siren: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.3",
+        "name": "Royal Shade",
+        "description": "Royal Shade: claims a privileged return while others wait with unfinished tasks.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "myth.adversaries.3",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Royal Shade: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.4",
+        "name": "Bronze River Bull",
+        "description": "Bronze River Bull: charges raised standards but calms when both are lowered.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "myth.adversaries.4",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Bronze River Bull: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.5",
+        "name": "Storm Chain Sentinel",
+        "description": "Storm Chain Sentinel: attacks divers who loosen the jar without warning the island.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "myth.adversaries.5",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Storm Chain Sentinel: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.6",
+        "name": "Memory Moth",
+        "description": "Memory Moth: consumes unspoken memories in the borrowed-day garden.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "myth.adversaries.6",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Memory Moth: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.7",
+        "name": "Decree Guard",
+        "description": "Decree Guard: seizes the original tablet before a public reading.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.7"
+          }
+        ],
+        "localeKey": "myth.adversaries.7",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Decree Guard: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.8",
+        "name": "Pearl Maw",
+        "description": "Pearl Maw: guards the submerged altar but follows a sacrificial decoy shell.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.11"
+          }
+        ],
+        "localeKey": "myth.adversaries.8",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Pearl Maw: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.9",
+        "name": "Gate Hound",
+        "description": "Gate Hound: blocks visitors who refuse to name their own debt.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.3"
+          }
+        ],
+        "localeKey": "myth.adversaries.9",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Gate Hound: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.10",
+        "name": "Glory Spearman",
+        "description": "Glory Spearman: tries to provoke the truce envoys into a duel.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.4"
+          }
+        ],
+        "localeKey": "myth.adversaries.10",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Glory Spearman: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.11",
+        "name": "False Navigator",
+        "description": "False Navigator: copies the lost sailor's voice to steer toward the storm jar.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.8"
+          }
+        ],
+        "localeKey": "myth.adversaries.11",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "False Navigator: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.12",
+        "name": "Judgment Mask",
+        "description": "Judgment Mask: ranks tomb gifts above deeds until the chorus removes it.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.12"
+          }
+        ],
+        "localeKey": "myth.adversaries.12",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Judgment Mask: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.13",
+        "name": "Flood Colossus",
+        "description": "Flood Colossus: rises from the ford when the river rescue omen goes unmet.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "myth.adversaries.13",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Flood Colossus: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.14",
+        "name": "Jar Usurer",
+        "description": "Jar Usurer: sells calm weather while the harbor remains chained to the squall.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "myth.adversaries.14",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Jar Usurer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.15",
+        "name": "Day Collector",
+        "description": "Day Collector: takes memories as payment without the visitor's voluntary consent.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "myth.adversaries.15",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Day Collector: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.16",
+        "name": "Banner Thief",
+        "description": "Banner Thief: steals the lowered standards to restart the conflict.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "myth.adversaries.16",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Banner Thief: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.17",
+        "name": "Beacon Shade",
+        "description": "Beacon Shade: quenches the homeward flame when the crew omits their lost companion.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "myth.adversaries.17",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Beacon Shade: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.18",
+        "name": "Silent Bailiff",
+        "description": "Silent Bailiff: erases a promised farewell from the ferry's passenger list.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "myth.adversaries.18",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Silent Bailiff: creature schematic"
+          }
+        ]
+      }
+    ],
+    "items": [
+      {
+        "id": "items.1",
+        "name": "Conditional Omen Tablet",
+        "description": "Conditional Omen Tablet: reveals that rescue rather than victory restores the river.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "myth.items.1",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Conditional Omen Tablet: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.2",
+        "name": "Lost Sailor's Bowl",
+        "description": "Lost Sailor's Bowl: holds the meal that lets the crew name the abandoned companion.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "myth.items.2",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Lost Sailor's Bowl: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.3",
+        "name": "Unfinished Deed Token",
+        "description": "Unfinished Deed Token: shows a dead person's request without granting a right to command the living.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "myth.items.3",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Unfinished Deed Token: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.4",
+        "name": "Lowered Standard",
+        "description": "Lowered Standard: can signal a shared truce if displayed from both banks.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "myth.items.4",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Lowered Standard: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.5",
+        "name": "Storm Jar Shackle",
+        "description": "Storm Jar Shackle: holds the squall until the anchorage is safely evacuated.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "myth.items.5",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Storm Jar Shackle: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.6",
+        "name": "Borrowed Day Thread",
+        "description": "Borrowed Day Thread: records a memory willingly offered for a farewell.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "myth.items.6",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Borrowed Day Thread: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.7",
+        "name": "Envoy Laurel Seal",
+        "description": "Envoy Laurel Seal: authenticates the truce proposal ignored by the assembly.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "myth.items.7",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Envoy Laurel Seal: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.8",
+        "name": "Pearl Anchor Stone",
+        "description": "Pearl Anchor Stone: steadies a diver at the altar when the storm is released.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "myth.items.8",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Pearl Anchor Stone: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.9",
+        "name": "Village Promise Record",
+        "description": "Village Promise Record: gives humble tasks standing before the silent judges.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.3"
+          }
+        ],
+        "localeKey": "myth.items.9",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Village Promise Record: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.10",
+        "name": "Rescue Hook",
+        "description": "Rescue Hook: converts the shield foundry's labor into help for stranded river people.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.4"
+          }
+        ],
+        "localeKey": "myth.items.10",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Rescue Hook: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.11",
+        "name": "Missing Song Verse",
+        "description": "Missing Song Verse: restores the sailor's place in the homeward beacon story.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.8"
+          }
+        ],
+        "localeKey": "myth.items.11",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Missing Song Verse: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.12",
+        "name": "Quiet Ferry Coin",
+        "description": "Quiet Ferry Coin: buys passage only after a completed deed is witnessed.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.12"
+          }
+        ],
+        "localeKey": "myth.items.12",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Quiet Ferry Coin: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.13",
+        "name": "Scraped Tablet Rubbing",
+        "description": "Scraped Tablet Rubbing: preserves the hidden omen if the decree is destroyed.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.13"
+          }
+        ],
+        "localeKey": "myth.items.13",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Scraped Tablet Rubbing: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.14",
+        "name": "Evacuation Shell",
+        "description": "Evacuation Shell: calls island hearths away from the squall's return path.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.17"
+          }
+        ],
+        "localeKey": "myth.items.14",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Evacuation Shell: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.15",
+        "name": "Farewell Candle",
+        "description": "Farewell Candle: allows a dead sibling to speak without binding them to return.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.21"
+          }
+        ],
+        "localeKey": "myth.items.15",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Farewell Candle: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.16",
+        "name": "Two-bank Truce Cord",
+        "description": "Two-bank Truce Cord: joins standards while requiring both parties to keep watch.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.22"
+          }
+        ],
+        "localeKey": "myth.items.16",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Two-bank Truce Cord: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.17",
+        "name": "Diver's Air Reed",
+        "description": "Diver's Air Reed: permits one longer descent but cannot support the whole crew.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.2"
+          }
+        ],
+        "localeKey": "myth.items.17",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Diver's Air Reed: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.18",
+        "name": "Garden Consent Knot",
+        "description": "Garden Consent Knot: marks a borrowed day as voluntary and reversible before use.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.6"
+          }
+        ],
+        "localeKey": "myth.items.18",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Garden Consent Knot: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.19",
+        "name": "River Rescue Map",
+        "description": "River Rescue Map: shows the people the war prophecy failed to name.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.7"
+          }
+        ],
+        "localeKey": "myth.items.19",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "River Rescue Map: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.20",
+        "name": "Crew Admission Log",
+        "description": "Crew Admission Log: records abandonment without replacing it with a victory tale.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.11"
+          }
+        ],
+        "localeKey": "myth.items.20",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Crew Admission Log: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.21",
+        "name": "Completed Errand Basket",
+        "description": "Completed Errand Basket: carries proof of the deed asked at death's border.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.15"
+          }
+        ],
+        "localeKey": "myth.items.21",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Completed Errand Basket: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.22",
+        "name": "Bronze Repair Plan",
+        "description": "Bronze Repair Plan: defines how the ford will be rebuilt after the flood.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.16"
+          }
+        ],
+        "localeKey": "myth.items.22",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Bronze Repair Plan: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.23",
+        "name": "Homeward Flame Cup",
+        "description": "Homeward Flame Cup: carries the beacon once every companion is remembered.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.20"
+          }
+        ],
+        "localeKey": "myth.items.23",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Homeward Flame Cup: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.24",
+        "name": "Return Witness Slip",
+        "description": "Return Witness Slip: allows the living visitor to leave after fulfilling the named task.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.24"
+          }
+        ],
+        "localeKey": "myth.items.24",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Return Witness Slip: item schematic"
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "id": "events.1",
+        "name": "River Reversal",
+        "description": "River Reversal: both armies read the omen as permission to invade.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "myth.events.1",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "River Reversal: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.2",
+        "name": "Missing Voice",
+        "description": "Missing Voice: the island echoes a command in the abandoned sailor's tone.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "myth.events.2",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Missing Voice: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.3",
+        "name": "Unfinished Queue",
+        "description": "Unfinished Queue: the royal shade demands priority over a village mourner.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "myth.events.3",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Unfinished Queue: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.4",
+        "name": "Tablet Scrape",
+        "description": "Tablet Scrape: a child spots marks beneath the public war decree.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "myth.events.4",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Tablet Scrape: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.5",
+        "name": "Chain Strain",
+        "description": "Chain Strain: the captive storm pulls an anchored ship toward the rocks.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "myth.events.5",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Chain Strain: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.6",
+        "name": "Day Offer",
+        "description": "Day Offer: the garden asks for a freely given memory before a farewell.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "myth.events.6",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Day Offer: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.7",
+        "name": "Truce Arrival",
+        "description": "Truce Arrival: Laurel envoys wait while both banks raise their standards.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "myth.events.7",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Truce Arrival: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.8",
+        "name": "Diver's Warning",
+        "description": "Diver's Warning: the altar cannot receive the squall before hearths evacuate.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "myth.events.8",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Diver's Warning: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.9",
+        "name": "Humble Testimony",
+        "description": "Humble Testimony: a village promise challenges the judge's gift-based ranking.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "myth.events.9",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Humble Testimony: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.10",
+        "name": "Foundry Petition",
+        "description": "Foundry Petition: smiths offer rescue hooks instead of another weapon levy.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "myth.events.10",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Foundry Petition: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.11",
+        "name": "Forgotten Bowl",
+        "description": "Forgotten Bowl: the cook asks why one companion is absent from every toast.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "myth.events.11",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Forgotten Bowl: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.12",
+        "name": "Ferry Question",
+        "description": "Ferry Question: the ferryman asks what task brought the living visitor below.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "myth.events.12",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Ferry Question: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.13",
+        "name": "Bull at the Ford",
+        "description": "Bull at the Ford: raised banners draw the river guardian into the crowd.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "myth.events.13",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Bull at the Ford: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.14",
+        "name": "Calm Bargain",
+        "description": "Calm Bargain: the jar usurer offers a route home at the price of permanent captivity.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "myth.events.14",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Calm Bargain: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.15",
+        "name": "Memory Loss",
+        "description": "Memory Loss: a visitor's taken day vanishes before consent is recorded.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "myth.events.15",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Memory Loss: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.16",
+        "name": "Watch Exchange",
+        "description": "Watch Exchange: two soldiers consider lowering standards together.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "myth.events.16",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Watch Exchange: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.17",
+        "name": "Pearl Descent",
+        "description": "Pearl Descent: the diver reaches the altar as the chained squall wakes.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "myth.events.17",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Pearl Descent: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.18",
+        "name": "Mask Removed",
+        "description": "Mask Removed: the chorus exposes how tomb wealth distorts the judgment.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "myth.events.18",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Mask Removed: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.19",
+        "name": "Rescue Omen",
+        "description": "Rescue Omen: the hidden tablet names stranded people rather than a conquered city.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "myth.events.19",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Rescue Omen: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.20",
+        "name": "Crew Confession",
+        "description": "Crew Confession: the captain admits the homeward route began with abandonment.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "myth.events.20",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Crew Confession: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.21",
+        "name": "Sibling Request",
+        "description": "Sibling Request: Daro asks for a message and declines return to mortal life.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "myth.events.21",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Sibling Request: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.22",
+        "name": "Flood Rise",
+        "description": "Flood Rise: water reaches the smiths' new rescue equipment.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "myth.events.22",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Flood Rise: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.23",
+        "name": "Island Evacuation",
+        "description": "Island Evacuation: the hearths accept a temporary move before storm release.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "myth.events.23",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Island Evacuation: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.24",
+        "name": "Errand Witness",
+        "description": "Errand Witness: a mourner can prove the requested deed is finished.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "myth.events.24",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Errand Witness: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.25",
+        "name": "Shared Ford",
+        "description": "Shared Ford: both banks offer labor once the rescue is complete.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "myth.events.25",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Shared Ford: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.26",
+        "name": "Beacon Song",
+        "description": "Beacon Song: the homeward story must include the lost sailor's final verse.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "myth.events.26",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Beacon Song: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.27",
+        "name": "Borrowed Farewell",
+        "description": "Borrowed Farewell: a visitor may spend a day or leave the garden without speaking.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "myth.events.27",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Borrowed Farewell: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.28",
+        "name": "Prophecy Fulfilled",
+        "description": "Prophecy Fulfilled: the river returns after the chosen rescue and truce.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "myth.events.28",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Prophecy Fulfilled: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.29",
+        "name": "Unchained Weather",
+        "description": "Unchained Weather: the crew leaves a free storm and a rebuilt anchorage.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "myth.events.29",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Unchained Weather: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.30",
+        "name": "Living Return",
+        "description": "Living Return: the ferry carries back the visitor with the completed request.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "myth.events.30",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Living Return: background schematic"
+          }
+        ]
+      }
+    ],
+    "scenes": [
+      {
+        "id": "scenes.1",
+        "name": "Two Armies and One Omen",
+        "description": "Two Armies and One Omen: Objective: stop a premature crossing. Hold the ford or escort envoys; delay provokes the river bull.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.4"
+          }
+        ],
+        "localeKey": "myth.scenes.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Two Armies and One Omen: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.2",
+        "name": "The Island's Missing Voice",
+        "description": "The Island's Missing Voice: Objective: identify the lost companion. Compare echoes or recover the cook's bowl; delay lets the false navigator steer.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "myth.scenes.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Island's Missing Voice: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.3",
+        "name": "The Queue at Death's Border",
+        "description": "The Queue at Death's Border: Objective: hear the unfinished request. Join the humble line or ask the chorus; delay lets the royal shade erase it.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.6"
+          }
+        ],
+        "localeKey": "myth.scenes.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Queue at Death's Border: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.4",
+        "name": "Under the Scraped Decree",
+        "description": "Under the Scraped Decree: Objective: recover the prophecy's condition. Read the tablet or find its rubbing; delay authorizes invasion.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.7"
+          }
+        ],
+        "localeKey": "myth.scenes.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Under the Scraped Decree: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.5",
+        "name": "A Storm Kept in Chains",
+        "description": "A Storm Kept in Chains: Objective: plan a safe release. Mark the dive route or evacuate the hearths; delay wrecks another ship.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.8"
+          }
+        ],
+        "localeKey": "myth.scenes.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Storm Kept in Chains: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.6",
+        "name": "What a Life Left Undone",
+        "description": "What a Life Left Undone: Objective: judge the deed fairly. Present the village record or remove the ranking mask; delay favors tomb wealth.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "myth.scenes.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "What a Life Left Undone: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.7",
+        "name": "Standards in the Laurel Pass",
+        "description": "Standards in the Laurel Pass: Objective: secure a shared truce. Lower both banners or witness the envoys' pact; delay begins a duel.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "myth.scenes.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Standards in the Laurel Pass: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.8",
+        "name": "Descent to the Pearl Altar",
+        "description": "Descent to the Pearl Altar: Objective: return the squall to open water. Use the anchor stone or a decoy shell; delay exhausts the diver's reed.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.11"
+          }
+        ],
+        "localeKey": "myth.scenes.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Descent to the Pearl Altar: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.9",
+        "name": "The Garden of Days",
+        "description": "The Garden of Days: Objective: choose a voluntary farewell. Offer a memory or leave with the written request; delay draws the memory moth.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.12"
+          }
+        ],
+        "localeKey": "myth.scenes.9",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Garden of Days: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.10",
+        "name": "Weapons into Rescue Hooks",
+        "description": "Weapons into Rescue Hooks: Objective: fulfill the rescue omen. Free stranded people or reopen the nonmilitary crossing; delay raises the flood.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.13"
+          }
+        ],
+        "localeKey": "myth.scenes.10",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Weapons into Rescue Hooks: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.11",
+        "name": "The Companion Left Behind",
+        "description": "The Companion Left Behind: Objective: acknowledge abandonment. Record the captain's admission or sing the missing verse; delay quenches the beacon.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "myth.scenes.11",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Companion Left Behind: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.12",
+        "name": "An Errand for the Living",
+        "description": "An Errand for the Living: Objective: finish the requested task. Carry the message or witness a mourner's completion; delay closes the quiet ferry.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.15"
+          }
+        ],
+        "localeKey": "myth.scenes.12",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "An Errand for the Living: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.13",
+        "name": "The River's Reckoning",
+        "description": "The River's Reckoning: Objective: decide the ford's future. Share repair labor or maintain a witnessed neutral passage; delay renews the muster.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.16"
+          }
+        ],
+        "localeKey": "myth.scenes.13",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The River's Reckoning: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.14",
+        "name": "The Homeward Flame",
+        "description": "The Homeward Flame: Objective: open a truthful route home. Name every companion or carry their chosen story; delay leaves the crew adrift.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.17"
+          }
+        ],
+        "localeKey": "myth.scenes.14",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Homeward Flame: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.15",
+        "name": "A Return that is Not a Command",
+        "description": "A Return that is Not a Command: Objective: honor the dead person's choice. Accept the farewell or fulfill the living request; delay grants the royal shade another claim.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "myth.scenes.15",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Return that is Not a Command: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.16",
+        "name": "A Prophecy Worth Keeping",
+        "description": "A Prophecy Worth Keeping: Objective: settle the cities' legacy. Record the rescue and truce or renounce victory claims; name the next watch.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "myth.scenes.16",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Prophecy Worth Keeping: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.17",
+        "name": "Weather without a Master",
+        "description": "Weather without a Master: Objective: leave the island safely. Free the squall or bind only a voluntary shelter pact; name who repairs the anchorage.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.2"
+          }
+        ],
+        "localeKey": "myth.scenes.17",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Weather without a Master: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.18",
+        "name": "The Road Back to Life",
+        "description": "The Road Back to Life: Objective: leave death's border with consent. Present the completed deed or witness an honest refusal; record the farewell.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.3"
+          }
+        ],
+        "localeKey": "myth.scenes.18",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Road Back to Life: map schematic"
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "archetypes.1",
+        "name": "Omen Reader",
+        "description": "Omen Reader: looks for prophecy's conditions before accepting a promised victory.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "myth.archetypes.1",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Omen Reader: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.2",
+        "name": "Wave Navigator",
+        "description": "Wave Navigator: keeps a crew's route tied to truthful remembrance.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "myth.archetypes.2",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Wave Navigator: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.3",
+        "name": "Threshold Guide",
+        "description": "Threshold Guide: helps visitors hear the dead without promising ownership of their return.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "myth.archetypes.3",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Threshold Guide: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.4",
+        "name": "Bronze Defender",
+        "description": "Bronze Defender: turns martial readiness toward people named by the rescue omen.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "myth.archetypes.4",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Bronze Defender: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.5",
+        "name": "Pearl Diver",
+        "description": "Pearl Diver: plans safe descents and returns weather to open water.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "myth.archetypes.5",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Pearl Diver: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.6",
+        "name": "Quiet Witness",
+        "description": "Quiet Witness: gives unfinished humble deeds standing before the judges.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "myth.archetypes.6",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Quiet Witness: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.7",
+        "name": "Laurel Envoy",
+        "description": "Laurel Envoy: makes shared restraint possible between rival cities.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "myth.archetypes.7",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Laurel Envoy: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.8",
+        "name": "Homeward Singer",
+        "description": "Homeward Singer: preserves lost companions in the story that guides a crew.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "myth.archetypes.8",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Homeward Singer: portrait schematic"
+          }
+        ]
+      }
+    ],
+    "progressionPaths": [
+      {
+        "id": "progressionPaths.1",
+        "name": "Ford Guardian",
+        "description": "Ford Guardian: earn honor through rescue and restraint; gain shared watch authority and repair duties.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.1"
+          }
+        ],
+        "localeKey": "myth.progressionPaths.1",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Ford Guardian: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.2",
+        "name": "Free Storm Herald",
+        "description": "Free Storm Herald: earn renown by ending captive weather; gain island welcome and evacuation responsibilities.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.5"
+          }
+        ],
+        "localeKey": "myth.progressionPaths.2",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Free Storm Herald: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.3",
+        "name": "Farewell Keeper",
+        "description": "Farewell Keeper: earn trust by honoring unfinished requests; gain threshold passage and witness obligations.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.3"
+          }
+        ],
+        "localeKey": "myth.progressionPaths.3",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Farewell Keeper: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.4",
+        "name": "Laurel Peacemaker",
+        "description": "Laurel Peacemaker: earn standing by making truce practical; gain envoys and neutral route duties.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.1"
+          }
+        ],
+        "localeKey": "myth.progressionPaths.4",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Laurel Peacemaker: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.5",
+        "name": "Pearl Wayfinder",
+        "description": "Pearl Wayfinder: earn confidence through safe descents; gain altar knowledge and crew protection duties.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.5"
+          }
+        ],
+        "localeKey": "myth.progressionPaths.5",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Pearl Wayfinder: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.6",
+        "name": "Living Messenger",
+        "description": "Living Messenger: earn remembrance by finishing requested deeds; gain mourner support and consent obligations.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.6"
+          }
+        ],
+        "localeKey": "myth.progressionPaths.6",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Living Messenger: item schematic"
+          }
+        ]
+      }
+    ],
+    "visualThemes": [
+      {
+        "id": "visualThemes.1",
+        "name": "Bronze Ford",
+        "description": "Bronze Ford: gold omen marks and blue rescue routes distinguish an invasion from a shared crossing.",
+        "patternIds": [
+          "warring-poleis"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "myth.visualThemes.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Bronze Ford: map schematic"
+          },
+          {
+            "role": "ui",
+            "asset": "ui/background.svg",
+            "alt": "Mythic navigation interface"
+          }
+        ]
+      },
+      {
+        "id": "visualThemes.2",
+        "name": "Pearl Homeward",
+        "description": "Pearl Homeward: silver remembered crew marks and teal open storms distinguish a truthful route from captivity.",
+        "patternIds": [
+          "islands-of-odyssey"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "myth.visualThemes.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Pearl Homeward: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "visualThemes.3",
+        "name": "Quiet Threshold",
+        "description": "Quiet Threshold: white completed deeds and violet borrowed days distinguish farewell from forced return.",
+        "patternIds": [
+          "underworld-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "myth.visualThemes.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Quiet Threshold: map schematic"
+          }
+        ]
+      }
+    ]
+  },
+  "playToday": {
+    "patternId": "warring-poleis",
+    "campaignKitId": "kit.warring-poleis",
+    "visualThemeId": "visualThemes.1"
+  },
+  "localization": {
+    "sourceLocale": "en",
+    "supportedLocales": [
+      "en",
+      "ru",
+      "es",
+      "ja",
+      "zh-CN",
+      "ko"
+    ],
+    "strings": {
+      "en": {
+        "myth.factions.1": "Bronze Assembly",
+        "myth.factions.2": "Wave Companions",
+        "myth.factions.3": "Threshold Chorus",
+        "myth.factions.4": "River Militia",
+        "myth.factions.5": "Island Hearths",
+        "myth.factions.6": "Silent Judges",
+        "myth.factions.7": "Laurel Envoys",
+        "myth.factions.8": "Pearl Divers",
+        "myth.locations.1": "Backward Ford",
+        "myth.locations.2": "Island of Second Echoes",
+        "myth.locations.3": "Threshold Stair",
+        "myth.locations.4": "Bronze Oracle Court",
+        "myth.locations.5": "Storm Jar Anchorage",
+        "myth.locations.6": "Hall of Unfinished Deeds",
+        "myth.locations.7": "Laurel Pass",
+        "myth.locations.8": "Pearl Cavern",
+        "myth.locations.9": "Garden of Borrowed Days",
+        "myth.locations.10": "Shield Foundry",
+        "myth.locations.11": "Homeward Beacon",
+        "myth.locations.12": "Quiet Ferry",
+        "myth.npcs.1": "Oracle Ione Bronze",
+        "myth.npcs.2": "Navigator Saro Wave",
+        "myth.npcs.3": "Guide Nema Threshold",
+        "myth.npcs.4": "Marshal Theron Reed",
+        "myth.npcs.5": "Diver Lysa Pearl",
+        "myth.npcs.6": "Judge Oren Quiet",
+        "myth.npcs.7": "Envoy Kallia Laurel",
+        "myth.npcs.8": "Cook Mira Hearth",
+        "myth.npcs.9": "Sibling Daro Garden",
+        "myth.npcs.10": "Smith Pela Shield",
+        "myth.npcs.11": "Child Eri Beacon",
+        "myth.npcs.12": "Ferryman Sol Still",
+        "myth.npcs.13": "Votary Ash Gold",
+        "myth.npcs.14": "Sailor Kai Echo",
+        "myth.npcs.15": "Archivist Bea Thread",
+        "myth.npcs.16": "Captain Ren Oar",
+        "myth.npcs.17": "Priestess Fia Rain",
+        "myth.npcs.18": "Gardener Mei Day",
+        "myth.npcs.19": "Scout Juno Ford",
+        "myth.npcs.20": "Pearl Keeper Tessa Foam",
+        "myth.npcs.21": "Witness Dev Candle",
+        "myth.npcs.22": "Soldier Noa Laurel",
+        "myth.npcs.23": "Singer Kira Home",
+        "myth.npcs.24": "Mourner Rosa Return",
+        "myth.adversaries.1": "War Votary",
+        "myth.adversaries.2": "Echo Siren",
+        "myth.adversaries.3": "Royal Shade",
+        "myth.adversaries.4": "Bronze River Bull",
+        "myth.adversaries.5": "Storm Chain Sentinel",
+        "myth.adversaries.6": "Memory Moth",
+        "myth.adversaries.7": "Decree Guard",
+        "myth.adversaries.8": "Pearl Maw",
+        "myth.adversaries.9": "Gate Hound",
+        "myth.adversaries.10": "Glory Spearman",
+        "myth.adversaries.11": "False Navigator",
+        "myth.adversaries.12": "Judgment Mask",
+        "myth.adversaries.13": "Flood Colossus",
+        "myth.adversaries.14": "Jar Usurer",
+        "myth.adversaries.15": "Day Collector",
+        "myth.adversaries.16": "Banner Thief",
+        "myth.adversaries.17": "Beacon Shade",
+        "myth.adversaries.18": "Silent Bailiff",
+        "myth.items.1": "Conditional Omen Tablet",
+        "myth.items.2": "Lost Sailor's Bowl",
+        "myth.items.3": "Unfinished Deed Token",
+        "myth.items.4": "Lowered Standard",
+        "myth.items.5": "Storm Jar Shackle",
+        "myth.items.6": "Borrowed Day Thread",
+        "myth.items.7": "Envoy Laurel Seal",
+        "myth.items.8": "Pearl Anchor Stone",
+        "myth.items.9": "Village Promise Record",
+        "myth.items.10": "Rescue Hook",
+        "myth.items.11": "Missing Song Verse",
+        "myth.items.12": "Quiet Ferry Coin",
+        "myth.items.13": "Scraped Tablet Rubbing",
+        "myth.items.14": "Evacuation Shell",
+        "myth.items.15": "Farewell Candle",
+        "myth.items.16": "Two-bank Truce Cord",
+        "myth.items.17": "Diver's Air Reed",
+        "myth.items.18": "Garden Consent Knot",
+        "myth.items.19": "River Rescue Map",
+        "myth.items.20": "Crew Admission Log",
+        "myth.items.21": "Completed Errand Basket",
+        "myth.items.22": "Bronze Repair Plan",
+        "myth.items.23": "Homeward Flame Cup",
+        "myth.items.24": "Return Witness Slip",
+        "myth.events.1": "River Reversal",
+        "myth.events.2": "Missing Voice",
+        "myth.events.3": "Unfinished Queue",
+        "myth.events.4": "Tablet Scrape",
+        "myth.events.5": "Chain Strain",
+        "myth.events.6": "Day Offer",
+        "myth.events.7": "Truce Arrival",
+        "myth.events.8": "Diver's Warning",
+        "myth.events.9": "Humble Testimony",
+        "myth.events.10": "Foundry Petition",
+        "myth.events.11": "Forgotten Bowl",
+        "myth.events.12": "Ferry Question",
+        "myth.events.13": "Bull at the Ford",
+        "myth.events.14": "Calm Bargain",
+        "myth.events.15": "Memory Loss",
+        "myth.events.16": "Watch Exchange",
+        "myth.events.17": "Pearl Descent",
+        "myth.events.18": "Mask Removed",
+        "myth.events.19": "Rescue Omen",
+        "myth.events.20": "Crew Confession",
+        "myth.events.21": "Sibling Request",
+        "myth.events.22": "Flood Rise",
+        "myth.events.23": "Island Evacuation",
+        "myth.events.24": "Errand Witness",
+        "myth.events.25": "Shared Ford",
+        "myth.events.26": "Beacon Song",
+        "myth.events.27": "Borrowed Farewell",
+        "myth.events.28": "Prophecy Fulfilled",
+        "myth.events.29": "Unchained Weather",
+        "myth.events.30": "Living Return",
+        "myth.scenes.1": "Two Armies and One Omen",
+        "myth.scenes.2": "The Island's Missing Voice",
+        "myth.scenes.3": "The Queue at Death's Border",
+        "myth.scenes.4": "Under the Scraped Decree",
+        "myth.scenes.5": "A Storm Kept in Chains",
+        "myth.scenes.6": "What a Life Left Undone",
+        "myth.scenes.7": "Standards in the Laurel Pass",
+        "myth.scenes.8": "Descent to the Pearl Altar",
+        "myth.scenes.9": "The Garden of Days",
+        "myth.scenes.10": "Weapons into Rescue Hooks",
+        "myth.scenes.11": "The Companion Left Behind",
+        "myth.scenes.12": "An Errand for the Living",
+        "myth.scenes.13": "The River's Reckoning",
+        "myth.scenes.14": "The Homeward Flame",
+        "myth.scenes.15": "A Return that is Not a Command",
+        "myth.scenes.16": "A Prophecy Worth Keeping",
+        "myth.scenes.17": "Weather without a Master",
+        "myth.scenes.18": "The Road Back to Life",
+        "myth.archetypes.1": "Omen Reader",
+        "myth.archetypes.2": "Wave Navigator",
+        "myth.archetypes.3": "Threshold Guide",
+        "myth.archetypes.4": "Bronze Defender",
+        "myth.archetypes.5": "Pearl Diver",
+        "myth.archetypes.6": "Quiet Witness",
+        "myth.archetypes.7": "Laurel Envoy",
+        "myth.archetypes.8": "Homeward Singer",
+        "myth.progressionPaths.1": "Ford Guardian",
+        "myth.progressionPaths.2": "Free Storm Herald",
+        "myth.progressionPaths.3": "Farewell Keeper",
+        "myth.progressionPaths.4": "Laurel Peacemaker",
+        "myth.progressionPaths.5": "Pearl Wayfinder",
+        "myth.progressionPaths.6": "Living Messenger",
+        "myth.visualThemes.1": "Bronze Ford",
+        "myth.visualThemes.2": "Pearl Homeward",
+        "myth.visualThemes.3": "Quiet Threshold"
+      }
+    },
+    "fallbackLocales": [
+      "ru",
+      "es",
+      "ja",
+      "zh-CN",
+      "ko"
+    ]
+  }
+}

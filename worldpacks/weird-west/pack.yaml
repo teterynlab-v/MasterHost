@@ -732,7 +732,7 @@ actorTemplates:
     worldEntityKinds:
       - creature
   contact:
-    label: Elara the Bold
+    label: Frontier Guide
     resources:
       health: 18
       nerve: 10
@@ -750,7 +750,7 @@ actorTemplates:
     worldEntityKinds:
       - npc
   elite:
-    label: Wyvern
+    label: Rail Revenant
     resources:
       health: 18
       nerve: 10

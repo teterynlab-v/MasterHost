@@ -13,7 +13,7 @@
 - **M25 Weird West: engineering gate complete (2026-09-27).** New original 1.0.0 Pack, three road/ghost-railway/living-mine Kits, playable roles/resources/paths, clean transfer/runtime/restart and browser Quick/GM/player/action/reload. Evidence: `docs/M25_STATUS.md`.
 - **M26 Urban Fantasy: engineering gate complete (2026-09-27).** New original 1.0.0 Pack, three library/tower/public-route Kits, playable roles/resources/paths, clean transfer/runtime/restart and browser Quick/GM/player/action/reload. Evidence: `docs/M26_STATUS.md`.
 - **M27 Cosmic Investigation: engineering gate complete (2026-09-27).** New 1.0.0 Pack, three signal/geometry/recall Kits, explicit Exposure accumulation/reduction, clean transfer/runtime/restart and browser resource/check/scene/reload evidence. Evidence: `docs/M27_STATUS.md`.
-- **Active:** M30 whole-collection engineering and product acceptance.
+- **M30:** collection engineering candidate; real human play/editorial/localization/accessibility acceptance remains open. See `M30_STATUS.md`.
 - Ordinary clean installations now show twelve universes ready with deep content.
 
 ## Post-M18 playability correction (2026-09-22)
@@ -185,3 +185,7 @@ Engineering gate and independent review passed: 151 entries, three Kits, nine as
 ## M29 — Mecha & Kaiju
 
 Engineering gate and independent review passed: 151 entries, three Kits, nine assets, 221 tests, two clean PostgreSQL installations, portable-game transfer, Heat actions and restart. Browser verified late join, Heat0→1→0, authoritative check, scene change and player reload. Human/editorial gates remain open; see `M29_STATUS.md`.
+
+## M30 — Whole collection
+
+All twelve deep universe engineering increments are implemented. The collection gate verifies 36 campaigns, twelve portable games, clean release-archive installation, restart, generic compatibility, UI recovery and truthful locale fallback. This does **not** close M30 product acceptance: several real human games and native/editorial/accessibility review still need evidence. See `M30_STATUS.md`.

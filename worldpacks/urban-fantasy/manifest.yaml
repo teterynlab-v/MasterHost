@@ -1,6 +1,6 @@
 id: masterhost.urban-fantasy
 name: Urban Fantasy
-version: 1.0.0
+version: 1.0.1
 schemaVersion: "0.1"
 defaultArtSet: standard
 entryTemplate: world.root

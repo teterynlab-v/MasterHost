@@ -1,0 +1,16 @@
+id: masterhost.urban-fantasy
+name: Urban Fantasy
+version: 1.0.0
+schemaVersion: "0.1"
+defaultArtSet: standard
+entryTemplate: world.root
+description: "Three original city campaigns: readers detained by hidden courts,
+  nocturnal homes facing a daylight inspection and streets erased by a private
+  spell contract."
+publisher: MasterHost
+official: true
+contentRating: everyone
+license:
+  spdx: CC-BY-4.0
+  attribution: Urban Fantasy original setting content and artwork © MasterHost contributors.
+  source: https://creativecommons.org/licenses/by/4.0/

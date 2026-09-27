@@ -7,3 +7,5 @@ MasterHost-*.zip
 backups/
 *.dump
 *.log
+
+release/

@@ -10,9 +10,9 @@ const canonical = world => JSON.parse(JSON.stringify({ seed: world.seed, packId:
 
 if (phase === "export") {
   const universe = (await ok("/universes/mythic-antiquity")).data;
-  assert.deepEqual({ availability: universe.availability, targetPack: universe.targetPack, playToday: universe.playToday }, { availability: "ready", targetPack: { id: "masterhost.mythic-antiquity", version: "1.0.0" }, playToday: { patternId: "warring-poleis", campaignKitId: "kit.warring-poleis", visualThemeId: "visualThemes.1" } });
+  assert.deepEqual({ availability: universe.availability, targetPack: universe.targetPack, playToday: universe.playToday }, { availability: "ready", targetPack: { id: "masterhost.mythic-antiquity", version: "1.0.1" }, playToday: { patternId: "warring-poleis", campaignKitId: "kit.warring-poleis", visualThemeId: "visualThemes.1" } });
   await ok("/host/realms/00000000-0000-0000-0000-000000000001", { method: "PUT", body: { activePack: universe.targetPack } });
-  const pack = (await ok("/pack")).data; assert.deepEqual(pack.manifest, expectIdentity("masterhost.mythic-antiquity", "1.0.0", pack.manifest));
+  const pack = (await ok("/pack")).data; assert.deepEqual(pack.manifest, expectIdentity("masterhost.mythic-antiquity", "1.0.1", pack.manifest));
   const assets = (await ok("/game-assets?basePackId=masterhost.mythic-antiquity")).data.filter(value => value.id.startsWith("masterhost.asset.myth.")); assert.equal(assets.length, 9);
   const identities = assets.map(value => ({ id: value.id, version: value.version })), review = (await ok("/game-assets/quick-review", { method: "POST", body: { basePack: universe.targetPack, selections: identities } })).data; assert.equal(review.ready, true); assert.equal(review.selected.length, 9);
   const selections = review.orderedSelections.map(value => ({ fragmentId: value.id, version: value.version, parameters: {} }));

@@ -15,7 +15,7 @@ export const UniverseCatalogEntrySchema = z.object({
   targetPack: z.object({ id: z.string().min(1), version: z.string().min(1) }).strict(),
 }).strict();
 export type UniverseCatalogEntry = z.infer<typeof UniverseCatalogEntrySchema>;
-export interface UniverseCatalogItem extends UniverseCatalogEntry { availability: "planned" | "ready"; assessment?: DeepUniverseAssessment; playToday?: DeepUniverseProfile["playToday"] }
+export interface UniverseCatalogItem extends UniverseCatalogEntry { availability: "planned" | "ready"; sourceLocale?: string; fallbackLocales?: string[]; assessment?: DeepUniverseAssessment; playToday?: DeepUniverseProfile["playToday"] }
 
 export function parseUniverseCatalog(input: unknown): UniverseCatalogEntry[] {
   const entries = z.array(UniverseCatalogEntrySchema).length(12).parse(input);
@@ -43,6 +43,6 @@ export function resolveUniverseCatalog(entries: UniverseCatalogEntry[], document
     const assessment = assessDeepUniverse(document);
     const profilePatternIds = new Set(document.universe.patterns.map(pattern => pattern.id));
     const identityMatches = document.universe.id === entry.id && entry.patterns.every(pattern => profilePatternIds.has(pattern.id));
-    return assessment.passed && identityMatches ? { ...entry, patterns: document.universe.patterns.map(({ id, name, summary }) => ({ id, name, summary })), availability: "ready", assessment, playToday: document.universe.playToday } : { ...entry, availability: "planned", assessment };
+    return assessment.passed && identityMatches ? { ...entry, sourceLocale: document.universe.localization.sourceLocale, fallbackLocales: document.universe.localization.fallbackLocales ?? [], patterns: document.universe.patterns.map(({ id, name, summary }) => ({ id, name, summary })), availability: "ready", assessment, playToday: document.universe.playToday } : { ...entry, availability: "planned", assessment };
   });
 }

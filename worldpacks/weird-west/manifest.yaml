@@ -1,6 +1,6 @@
 id: masterhost.weird-west
 name: Weird West
-version: 1.0.0
+version: 1.0.1
 schemaVersion: "0.1"
 defaultArtSet: standard
 entryTemplate: world.root

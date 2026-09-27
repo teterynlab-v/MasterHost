@@ -5,9 +5,9 @@ import { buildDescriptor, composeGameDescriptor, gameAssetFragments, loadGameAss
 import { compileSatisfying } from "@masterhost/world-compiler";
 
 describe("M24 Deep Mythic Antiquity", () => {
-  it("loads the installed 1.0.0 profile into a portable document and ready catalog entry", async () => {
+  it("loads the installed 1.0.1 profile into a portable document and ready catalog entry", async () => {
     const pack = await loadWorldPack(resolve("worldpacks/mythic-antiquity"));
-    expect(pack.manifest).toMatchObject({ id: "masterhost.mythic-antiquity", version: "1.0.0" });
+    expect(pack.manifest).toMatchObject({ id: "masterhost.mythic-antiquity", version: "1.0.1" });
     expect(pack.universe).toMatchObject({ id: "mythic-antiquity", complexity: "intermediate", playToday: { patternId: "warring-poleis" } });
     expect(pack.universe!.localization.supportedLocales).toEqual(["en", "ru", "es", "ja", "zh-CN", "ko"]);
     const localeKeys = Object.keys(pack.universe!.localization.strings.en).sort();

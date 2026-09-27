@@ -1,0 +1,3762 @@
+{
+  "schemaVersion": "1",
+  "id": "weird-west",
+  "genres": [
+    "western",
+    "horror"
+  ],
+  "tones": [
+    "dusty",
+    "uncanny",
+    "defiant"
+  ],
+  "complexity": "intermediate",
+  "recommendedPlayers": {
+    "min": 2,
+    "max": 6
+  },
+  "gameLoop": [
+    {
+      "id": "job",
+      "label": "Identify a practical obligation behind the supernatural threat",
+      "ruleRefs": [
+        "check:wits",
+        "action:recover"
+      ]
+    },
+    {
+      "id": "journey",
+      "label": "Keep travelers workers and witnesses safe on the route",
+      "ruleRefs": [
+        "check:grit",
+        "action:inspire"
+      ]
+    },
+    {
+      "id": "threat",
+      "label": "Confront the boundary curse ghost debt or living ore",
+      "ruleRefs": [
+        "check:spirit",
+        "resource:nerve"
+      ]
+    },
+    {
+      "id": "settlement",
+      "label": "Record passage wages and a safer livelihood",
+      "ruleRefs": [
+        "progression:renown"
+      ]
+    }
+  ],
+  "patterns": [
+    {
+      "id": "cursed-frontier",
+      "name": "Cursed Frontier",
+      "summary": "A fence across a promised mourning road wakes a flood rider. Recover the shared agreement, evacuate threatened families and restore a passage people can actually use.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    },
+    {
+      "id": "ghost-railway",
+      "name": "Ghost Railway",
+      "summary": "An extra midnight carriage carries workers erased from the timetable. Repair its brake lantern, find an unpaid builder and bring the lost crew to a present-day platform.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    },
+    {
+      "id": "occult-boomtown",
+      "name": "Occult Boomtown",
+      "summary": "New gold pulses with miners' heartbeats and poisons the town well. Test the living vein, rescue lower-gallery workers and choose a livelihood above the dangerous shaft.",
+      "capabilityRefs": [
+        "core.play"
+      ]
+    }
+  ],
+  "campaignKits": [
+    {
+      "id": "kit.cursed-frontier",
+      "name": "Cursed Frontier: The Road after the Flood",
+      "summary": "A three to four hour Cursed Frontier game: A fence across a promised mourning road wakes a flood rider. Recover the shared agreement, evacuate threatened families and restore a passage people can actually use.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "cursed-frontier"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.1",
+      "sceneIds": [
+        "scenes.1",
+        "scenes.4",
+        "scenes.7",
+        "scenes.10",
+        "scenes.13",
+        "scenes.16"
+      ],
+      "npcIds": [
+        "npcs.1",
+        "npcs.4",
+        "npcs.7"
+      ],
+      "locationIds": [
+        "locations.1",
+        "locations.4",
+        "locations.7"
+      ],
+      "rewardIds": [
+        "items.1",
+        "items.4"
+      ],
+      "gmGuidance": [
+        "Open at the false fence with a flood rider moving toward homes.",
+        "Show the burial route and the shared agreement rather than inventing a faceless curse.",
+        "Allow evacuation, survey evidence and witnessed enforcement as alternate routes.",
+        "Record damaged homes, shared passage and road repairs."
+      ],
+      "readyCharacterIds": [
+        "archetypes.1",
+        "archetypes.4"
+      ]
+    },
+    {
+      "id": "kit.ghost-railway",
+      "name": "Ghost Railway: The Midnight Homecoming",
+      "summary": "A three to four hour Ghost Railway game: An extra midnight carriage carries workers erased from the timetable. Repair its brake lantern, find an unpaid builder and bring the lost crew to a present-day platform.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "ghost-railway"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.2",
+      "sceneIds": [
+        "scenes.2",
+        "scenes.5",
+        "scenes.8",
+        "scenes.11",
+        "scenes.14",
+        "scenes.17"
+      ],
+      "npcIds": [
+        "npcs.2",
+        "npcs.5",
+        "npcs.8"
+      ],
+      "locationIds": [
+        "locations.2",
+        "locations.5",
+        "locations.8"
+      ],
+      "rewardIds": [
+        "items.2",
+        "items.5"
+      ],
+      "gmGuidance": [
+        "Count the extra carriage’s workers before the train reaches the ghost bridge.",
+        "Make the year change visible through logs, tickets and passengers’ testimony.",
+        "Offer brake repair, cargo detachment and the builder’s wage book.",
+        "Record the true station, named crew and payment schedule."
+      ],
+      "readyCharacterIds": [
+        "archetypes.2",
+        "archetypes.5"
+      ]
+    },
+    {
+      "id": "kit.occult-boomtown",
+      "name": "Occult Boomtown: A Town above Ground",
+      "summary": "A three to four hour Occult Boomtown game: New gold pulses with miners' heartbeats and poisons the town well. Test the living vein, rescue lower-gallery workers and choose a livelihood above the dangerous shaft.",
+      "durationMinutes": {
+        "min": 180,
+        "max": 240
+      },
+      "playerCount": {
+        "min": 2,
+        "max": 6
+      },
+      "patternIds": [
+        "occult-boomtown"
+      ],
+      "requiredCapabilities": [
+        "core.play"
+      ],
+      "openingSceneId": "scenes.3",
+      "sceneIds": [
+        "scenes.3",
+        "scenes.6",
+        "scenes.9",
+        "scenes.12",
+        "scenes.15",
+        "scenes.18"
+      ],
+      "npcIds": [
+        "npcs.3",
+        "npcs.6",
+        "npcs.9"
+      ],
+      "locationIds": [
+        "locations.3",
+        "locations.6",
+        "locations.9"
+      ],
+      "rewardIds": [
+        "items.3",
+        "items.6"
+      ],
+      "gmGuidance": [
+        "Show the heartbeat on the assay scale before asking who closes the mine.",
+        "Separate tested exposure from rumor and give workers a safer route out.",
+        "Offer ore return, isolation, clean reserve water and surface work.",
+        "Record the closure boundary, remaining ore and water testing."
+      ],
+      "readyCharacterIds": [
+        "archetypes.3",
+        "archetypes.6"
+      ]
+    }
+  ],
+  "content": {
+    "factions": [
+      {
+        "id": "factions.1",
+        "name": "Redwater Neighbors",
+        "description": "Redwater Neighbors: needs river access restored before a boundary curse floods their homes.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "west.factions.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Redwater Neighbors: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.2",
+        "name": "Midnight Railway Crew",
+        "description": "Midnight Railway Crew: runs a train that skips the station where its builder vanished.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "west.factions.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Midnight Railway Crew: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.3",
+        "name": "Deepgold Prospectors",
+        "description": "Deepgold Prospectors: works a vein that returns gold with a living heartbeat.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "west.factions.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Deepgold Prospectors: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.4",
+        "name": "Boundary Riders",
+        "description": "Boundary Riders: guards the survey stakes without knowing they crossed a burial road.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "west.factions.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Boundary Riders: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.5",
+        "name": "Platform Watch",
+        "description": "Platform Watch: keeps lamps lit for passengers missing from the company's timetable.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "west.factions.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Platform Watch: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.6",
+        "name": "Well Cooperative",
+        "description": "Well Cooperative: can close the deep shaft if the town stops selling its strange ore.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "west.factions.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Well Cooperative: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.7",
+        "name": "River Witnesses",
+        "description": "River Witnesses: remembers an agreement erased from the county survey.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.7"
+          }
+        ],
+        "localeKey": "west.factions.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "River Witnesses: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "factions.8",
+        "name": "Black Lantern Union",
+        "description": "Black Lantern Union: demands the lost builder's wages and a safe route home.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.11"
+          }
+        ],
+        "localeKey": "west.factions.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Black Lantern Union: map schematic"
+          }
+        ]
+      }
+    ],
+    "locations": [
+      {
+        "id": "locations.1",
+        "name": "Redwater Crossing",
+        "description": "Redwater Crossing: a new fence blocks the old river road and wakes a flood rider.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "west.locations.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Redwater Crossing: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.2",
+        "name": "Midnight Depot",
+        "description": "Midnight Depot: a train arrives with one more carriage than the timetable permits.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "west.locations.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Midnight Depot: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.3",
+        "name": "Deepgold Assay Hall",
+        "description": "Deepgold Assay Hall: a tested nugget beats in time with a miner's heart.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "west.locations.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Deepgold Assay Hall: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.4",
+        "name": "Burial Road Stakes",
+        "description": "Burial Road Stakes: fresh markers cut across a route promised open to mourners.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "west.locations.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Burial Road Stakes: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.5",
+        "name": "Platform Zero",
+        "description": "Platform Zero: the builder's station appears when someone admits an unpaid debt.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "west.locations.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Platform Zero: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.6",
+        "name": "Listening Shaft",
+        "description": "Listening Shaft: the vein repeats miners' names before another tunnel opens.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "west.locations.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Listening Shaft: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.7",
+        "name": "County Survey Room",
+        "description": "County Survey Room: the new map omits an old shared passage agreement.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "west.locations.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "County Survey Room: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.8",
+        "name": "Black Lantern Bridge",
+        "description": "Black Lantern Bridge: a safe carriage can cross if its brake lantern is repaired.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "west.locations.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Black Lantern Bridge: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.9",
+        "name": "Dry Well Yard",
+        "description": "Dry Well Yard: the town's water tastes metallic while the gold trade grows.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.3"
+          }
+        ],
+        "localeKey": "west.locations.9",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Dry Well Yard: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.10",
+        "name": "River Shelter",
+        "description": "River Shelter: families can evacuate before the flood rider reaches their doors.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.4"
+          }
+        ],
+        "localeKey": "west.locations.10",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "River Shelter: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.11",
+        "name": "Builder's Cabin",
+        "description": "Builder's Cabin: a wage book explains why the vanished station was never recorded.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.8"
+          }
+        ],
+        "localeKey": "west.locations.11",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Builder's Cabin: location schematic"
+          }
+        ]
+      },
+      {
+        "id": "locations.12",
+        "name": "Sealed Fault",
+        "description": "Sealed Fault: the ore can be returned through a narrow shaft at visible collapse risk.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.12"
+          }
+        ],
+        "localeKey": "west.locations.12",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/location.svg",
+            "alt": "Sealed Fault: location schematic"
+          }
+        ]
+      }
+    ],
+    "npcs": [
+      {
+        "id": "npcs.1",
+        "name": "Rider Mara Reed",
+        "description": "Rider Mara Reed: will guide evacuees if the crew removes the unlawful fence.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "west.npcs.1",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Rider Mara Reed: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.2",
+        "name": "Conductor Ivo Bell",
+        "description": "Conductor Ivo Bell: knows the extra carriage carries unpaid railway workers.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "west.npcs.2",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Conductor Ivo Bell: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.3",
+        "name": "Assayer Tessa Flint",
+        "description": "Assayer Tessa Flint: can prove the ore is living but fears losing the town's only income.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "west.npcs.3",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Assayer Tessa Flint: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.4",
+        "name": "Surveyor Ren Pike",
+        "description": "Surveyor Ren Pike: copied the false boundary under a threat from the county owner.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "west.npcs.4",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Surveyor Ren Pike: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.5",
+        "name": "Lampkeeper Bea Zero",
+        "description": "Lampkeeper Bea Zero: remembers the vanished builder and needs a repaired brake lantern.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "west.npcs.5",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Lampkeeper Bea Zero: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.6",
+        "name": "Miner Juno Deep",
+        "description": "Miner Juno Deep: heard the vein ask for its gold back before the well changed.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "west.npcs.6",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Miner Juno Deep: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.7",
+        "name": "Witness Noa River",
+        "description": "Witness Noa River: holds a passage agreement signed by both banks.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "west.npcs.7",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Witness Noa River: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.8",
+        "name": "Engineer Kai Lantern",
+        "description": "Engineer Kai Lantern: can detach the unsafe carriage if workers first reach a real platform.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "west.npcs.8",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Engineer Kai Lantern: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.9",
+        "name": "Wellkeeper Fia Root",
+        "description": "Wellkeeper Fia Root: keeps a clean reserve hidden from the assay buyers.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "west.npcs.9",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Wellkeeper Fia Root: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.10",
+        "name": "Deputy Sol Ford",
+        "description": "Deputy Sol Ford: will stop defending the fence if the original route is established.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "west.npcs.10",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Deputy Sol Ford: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.11",
+        "name": "Builder Neri Rail",
+        "description": "Builder Neri Rail: waits at Platform Zero for wages and acknowledgment of the missing crew.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "west.npcs.11",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Builder Neri Rail: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.12",
+        "name": "Doctor Rosa Dust",
+        "description": "Doctor Rosa Dust: can treat miners' irregular pulse if exposure stops.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "west.npcs.12",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Doctor Rosa Dust: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.13",
+        "name": "Farmer Dev Bank",
+        "description": "Farmer Dev Bank: offers transport for flooded families at the cost of a lost harvest.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "west.npcs.13",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Farmer Dev Bank: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.14",
+        "name": "Porter Mei Midnight",
+        "description": "Porter Mei Midnight: has counted every missing passenger without company permission.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "west.npcs.14",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Porter Mei Midnight: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.15",
+        "name": "Buyer Pell Gold",
+        "description": "Buyer Pell Gold: can fund a safer trade if the council stops disguising the living ore.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "west.npcs.15",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Buyer Pell Gold: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.16",
+        "name": "Archivist Ada County",
+        "description": "Archivist Ada County: knows where the passage copy was removed from the survey index.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "west.npcs.16",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Archivist Ada County: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.17",
+        "name": "Passenger Ash Watch",
+        "description": "Passenger Ash Watch: carries a wage token but does not know which year they boarded.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "west.npcs.17",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Passenger Ash Watch: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.18",
+        "name": "Blaster Oren Fault",
+        "description": "Blaster Oren Fault: can seal the mine after enough workers leave the lower galleries.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "west.npcs.18",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Blaster Oren Fault: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.19",
+        "name": "Fencehand Len Rope",
+        "description": "Fencehand Len Rope: will pull the stakes if promised protection from the owner.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "west.npcs.19",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Fencehand Len Rope: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.20",
+        "name": "Telegrapher Kira Line",
+        "description": "Telegrapher Kira Line: can send the builder's account ahead of the approaching train.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "west.npcs.20",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Telegrapher Kira Line: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.21",
+        "name": "Councilor Siva Well",
+        "description": "Councilor Siva Well: will close the shaft if the town sees a viable food and water plan.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.3"
+          }
+        ],
+        "localeKey": "west.npcs.21",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Councilor Siva Well: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.22",
+        "name": "Guide Taro Shelter",
+        "description": "Guide Taro Shelter: marked a dry route for families threatened by the flood.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.1"
+          }
+        ],
+        "localeKey": "west.npcs.22",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Guide Taro Shelter: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.23",
+        "name": "Mechanic Tess Brake",
+        "description": "Mechanic Tess Brake: needs a replacement lamp to keep the midnight carriage from rolling backward.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.5"
+          }
+        ],
+        "localeKey": "west.npcs.23",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Mechanic Tess Brake: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "npcs.24",
+        "name": "Grower Eri Plain",
+        "description": "Grower Eri Plain: offers surface work and clean food for miners leaving Deepgold.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "factions.6"
+          }
+        ],
+        "localeKey": "west.npcs.24",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Grower Eri Plain: portrait schematic"
+          }
+        ]
+      }
+    ],
+    "adversaries": [
+      {
+        "id": "adversaries.1",
+        "name": "Flood Rider",
+        "description": "Flood Rider: follows the blocked mourning route and stops when passage is restored.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "west.adversaries.1",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Flood Rider: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.2",
+        "name": "Wage Collector Shade",
+        "description": "Wage Collector Shade: locks carriages until the missing workers are named and paid.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "west.adversaries.2",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Wage Collector Shade: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.3",
+        "name": "Heartgold Sentinel",
+        "description": "Heartgold Sentinel: guards the living vein and attacks ore removed without return.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "west.adversaries.3",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Heartgold Sentinel: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.4",
+        "name": "Fence Enforcer",
+        "description": "Fence Enforcer: tries to burn the old agreement before the county hearing.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "west.adversaries.4",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Fence Enforcer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.5",
+        "name": "Timetable Clerk",
+        "description": "Timetable Clerk: erases Platform Zero and the passengers assigned to it.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "west.adversaries.5",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Timetable Clerk: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.6",
+        "name": "Assay Blackmailer",
+        "description": "Assay Blackmailer: threatens the tester who discovered the pulse.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "west.adversaries.6",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Assay Blackmailer: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.7",
+        "name": "Stake Hound",
+        "description": "Stake Hound: hunts people crossing the new line but follows uprooted markers.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.7"
+          }
+        ],
+        "localeKey": "west.adversaries.7",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Stake Hound: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.8",
+        "name": "Brake Wraith",
+        "description": "Brake Wraith: pushes the extra carriage backward over an unlit bridge.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.11"
+          }
+        ],
+        "localeKey": "west.adversaries.8",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Brake Wraith: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.9",
+        "name": "Ore Bloom",
+        "description": "Ore Bloom: spreads through stored gold and weakens when isolated from well water.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.3"
+          }
+        ],
+        "localeKey": "west.adversaries.9",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Ore Bloom: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.10",
+        "name": "County Gunhand",
+        "description": "County Gunhand: claims the shared road is private and fears public testimony.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.4"
+          }
+        ],
+        "localeKey": "west.adversaries.10",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "County Gunhand: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.11",
+        "name": "False Conductor",
+        "description": "False Conductor: offers a shortcut that strands unpaid workers in an earlier year.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.8"
+          }
+        ],
+        "localeKey": "west.adversaries.11",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "False Conductor: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.12",
+        "name": "Shaft Maw",
+        "description": "Shaft Maw: opens under blasting crews and can be lured by returned ore.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.12"
+          }
+        ],
+        "localeKey": "west.adversaries.12",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Shaft Maw: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.13",
+        "name": "River Toll Gang",
+        "description": "River Toll Gang: charges evacuees for a route promised free.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "west.adversaries.13",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "River Toll Gang: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.14",
+        "name": "Ticket Eater",
+        "description": "Ticket Eater: consumes proof that a missing passenger was ever aboard.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "west.adversaries.14",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Ticket Eater: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.15",
+        "name": "Gold Fever Mob",
+        "description": "Gold Fever Mob: breaks the cooperative's seal to reopen the listening shaft.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "west.adversaries.15",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Gold Fever Mob: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.16",
+        "name": "Boundary Echo",
+        "description": "Boundary Echo: repeats a fraudulent order after the surveyor has withdrawn it.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.10"
+          }
+        ],
+        "localeKey": "west.adversaries.16",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Boundary Echo: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.17",
+        "name": "Lantern Thief",
+        "description": "Lantern Thief: steals the brake light to keep the builder's station unreachable.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.2"
+          }
+        ],
+        "localeKey": "west.adversaries.17",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Lantern Thief: creature schematic"
+          }
+        ]
+      },
+      {
+        "id": "adversaries.18",
+        "name": "Vein Whisperer",
+        "description": "Vein Whisperer: promises wealth if the council feeds another name to the mine.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.6"
+          }
+        ],
+        "localeKey": "west.adversaries.18",
+        "media": [
+          {
+            "role": "token",
+            "asset": "ui/creature.svg",
+            "alt": "Vein Whisperer: creature schematic"
+          }
+        ]
+      }
+    ],
+    "items": [
+      {
+        "id": "items.1",
+        "name": "Shared Passage Copy",
+        "description": "Shared Passage Copy: proves both banks promised access for mourners and neighbors.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "west.items.1",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Shared Passage Copy: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.2",
+        "name": "Missing Wage Book",
+        "description": "Missing Wage Book: names workers removed from the railway timetable.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "west.items.2",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Missing Wage Book: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.3",
+        "name": "Pulsing Nugget",
+        "description": "Pulsing Nugget: links the living vein to illness in the miners.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "west.items.3",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Pulsing Nugget: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.4",
+        "name": "Survey Stake Puller",
+        "description": "Survey Stake Puller: removes the fence before the flood reaches the shelter.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "west.items.4",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Survey Stake Puller: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.5",
+        "name": "Brake Lantern",
+        "description": "Brake Lantern: lets the extra carriage cross the ghost bridge safely.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "west.items.5",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Brake Lantern: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.6",
+        "name": "Clean Reserve Jar",
+        "description": "Clean Reserve Jar: proves the well can recover after ore exposure ends.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "west.items.6",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Clean Reserve Jar: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.7",
+        "name": "Two-bank Witness Slip",
+        "description": "Two-bank Witness Slip: validates the passage before the county owner arrives.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "west.items.7",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Two-bank Witness Slip: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.8",
+        "name": "Platform Zero Ticket",
+        "description": "Platform Zero Ticket: names a destination absent from the printed map.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "west.items.8",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Platform Zero Ticket: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.9",
+        "name": "Fault Return Basket",
+        "description": "Fault Return Basket: carries living ore back without mixing it into water stores.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.3"
+          }
+        ],
+        "localeKey": "west.items.9",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Fault Return Basket: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.10",
+        "name": "Evacuation Wagon Map",
+        "description": "Evacuation Wagon Map: marks the dry route and limited places before the flood.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.4"
+          }
+        ],
+        "localeKey": "west.items.10",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Evacuation Wagon Map: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.11",
+        "name": "Builder's Wage Token",
+        "description": "Builder's Wage Token: records a debt that cannot be erased by changing the year.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.8"
+          }
+        ],
+        "localeKey": "west.items.11",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Builder's Wage Token: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.12",
+        "name": "Assay Pulse Chart",
+        "description": "Assay Pulse Chart: shows miners' symptoms follow gold exposure.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.12"
+          }
+        ],
+        "localeKey": "west.items.12",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Assay Pulse Chart: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.13",
+        "name": "Fence Withdrawal Order",
+        "description": "Fence Withdrawal Order: lets workers remove stakes without another private command.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.13"
+          }
+        ],
+        "localeKey": "west.items.13",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Fence Withdrawal Order: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.14",
+        "name": "Union Passenger List",
+        "description": "Union Passenger List: names the missing crew before carriage detachment.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.17"
+          }
+        ],
+        "localeKey": "west.items.14",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Union Passenger List: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.15",
+        "name": "Surface Work Agreement",
+        "description": "Surface Work Agreement: provides a bounded alternative to reopening the living shaft.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.21"
+          }
+        ],
+        "localeKey": "west.items.15",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Surface Work Agreement: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.16",
+        "name": "River Rope Kit",
+        "description": "River Rope Kit: makes one evacuation crossing safe but needs an anchored watch.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.22"
+          }
+        ],
+        "localeKey": "west.items.16",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "River Rope Kit: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.17",
+        "name": "Repaired Timetable",
+        "description": "Repaired Timetable: records Platform Zero and the crew's true working dates.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.2"
+          }
+        ],
+        "localeKey": "west.items.17",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Repaired Timetable: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.18",
+        "name": "Mine Closure Seal",
+        "description": "Mine Closure Seal: blocks the unsafe lower gallery if the council witnesses it.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.6"
+          }
+        ],
+        "localeKey": "west.items.18",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Mine Closure Seal: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.19",
+        "name": "Mourning Road Marker",
+        "description": "Mourning Road Marker: restores the route without pretending the flooded losses vanished.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.7"
+          }
+        ],
+        "localeKey": "west.items.19",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Mourning Road Marker: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.20",
+        "name": "Carriage Release Lever",
+        "description": "Carriage Release Lever: frees passengers only after a safe platform is ready.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.11"
+          }
+        ],
+        "localeKey": "west.items.20",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Carriage Release Lever: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.21",
+        "name": "Returned Gold Receipt",
+        "description": "Returned Gold Receipt: records how much ore was restored and what remains dangerous.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.15"
+          }
+        ],
+        "localeKey": "west.items.21",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Returned Gold Receipt: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.22",
+        "name": "County Hearing Bell",
+        "description": "County Hearing Bell: calls both banks to witness the revised survey.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.16"
+          }
+        ],
+        "localeKey": "west.items.22",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "County Hearing Bell: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.23",
+        "name": "Homeward Rail Lamp",
+        "description": "Homeward Rail Lamp: guides the lost builder once wages and acknowledgment are settled.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.20"
+          }
+        ],
+        "localeKey": "west.items.23",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Homeward Rail Lamp: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "items.24",
+        "name": "Clean Well Covenant",
+        "description": "Clean Well Covenant: sets testing and surface work obligations after mine closure.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.24"
+          }
+        ],
+        "localeKey": "west.items.24",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Clean Well Covenant: item schematic"
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "id": "events.1",
+        "name": "Fence at Dawn",
+        "description": "Fence at Dawn: the river road closes as the first flood rider appears.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "west.events.1",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Fence at Dawn: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.2",
+        "name": "Extra Carriage",
+        "description": "Extra Carriage: Midnight arrives with a coach missing from its departure log.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "west.events.2",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Extra Carriage: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.3",
+        "name": "Assay Heartbeat",
+        "description": "Assay Heartbeat: gold on the scale pulses while a miner faints.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "west.events.3",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Assay Heartbeat: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.4",
+        "name": "Stakes Advance",
+        "description": "Stakes Advance: the owner's crew moves the boundary closer to the burial road.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "west.events.4",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Stakes Advance: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.5",
+        "name": "Unprinted Stop",
+        "description": "Unprinted Stop: a passenger sees Platform Zero through a closed window.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "west.events.5",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Unprinted Stop: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.6",
+        "name": "Well Taste",
+        "description": "Well Taste: children report metal in the water after another gold shipment.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "west.events.6",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Well Taste: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.7",
+        "name": "Agreement Missing",
+        "description": "Agreement Missing: the survey index has a torn leaf where the shared road belonged.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "west.events.7",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Agreement Missing: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.8",
+        "name": "Lantern Failure",
+        "description": "Lantern Failure: the brake carriage begins sliding toward the ghost bridge.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "west.events.8",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Lantern Failure: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.9",
+        "name": "Vein Speech",
+        "description": "Vein Speech: the lower gallery repeats Juno's name in a familiar voice.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "west.events.9",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Vein Speech: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.10",
+        "name": "Evacuation Call",
+        "description": "Evacuation Call: neighbors ask for the dry route before the flood rises.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "west.events.10",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Evacuation Call: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.11",
+        "name": "Wage Token",
+        "description": "Wage Token: an old worker proves the debt belongs to the company rather than the passengers.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "west.events.11",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Wage Token: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.12",
+        "name": "Exposure Pattern",
+        "description": "Exposure Pattern: Rosa compares the pulse chart with gold handling shifts.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "west.events.12",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Exposure Pattern: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.13",
+        "name": "County Threat",
+        "description": "County Threat: the gunhand orders witnesses to stay away from the hearing.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "west.events.13",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "County Threat: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.14",
+        "name": "Builder's Account",
+        "description": "Builder's Account: a telegraph reveals why the station disappeared.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "west.events.14",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Builder's Account: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.15",
+        "name": "Closure Proposal",
+        "description": "Closure Proposal: the well cooperative asks for another livelihood before sealing the shaft.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "west.events.15",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Closure Proposal: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.16",
+        "name": "Marker Removal",
+        "description": "Marker Removal: pulling one stake diverts the rider toward the false survey room.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "west.events.16",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Marker Removal: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.17",
+        "name": "Passenger Count",
+        "description": "Passenger Count: Mei identifies the missing workers before carriage detachment.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "west.events.17",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Passenger Count: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.18",
+        "name": "Fault Return",
+        "description": "Fault Return: the vein quiets when an untouched nugget is lowered back.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "west.events.18",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Fault Return: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.19",
+        "name": "Two-bank Hearing",
+        "description": "Two-bank Hearing: both banks can renew a route without accepting the false fence.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "west.events.19",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Two-bank Hearing: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.20",
+        "name": "Backward Roll",
+        "description": "Backward Roll: the unsafe carriage forces a choice between cargo and brake repair.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "west.events.20",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Backward Roll: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.21",
+        "name": "Gold Sale",
+        "description": "Gold Sale: the buyer offers surface jobs if the council tells the truth about the ore.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "west.events.21",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Gold Sale: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.22",
+        "name": "Shelter Reached",
+        "description": "Shelter Reached: families arrive but need water and transport for the last group.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "west.events.22",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Shelter Reached: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.23",
+        "name": "Name Restored",
+        "description": "Name Restored: the builder's name returns to the timetable under public witness.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "west.events.23",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Name Restored: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.24",
+        "name": "Lower Gallery",
+        "description": "Lower Gallery: the sealing crew finds another miner beyond the blast line.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "west.events.24",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Lower Gallery: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.25",
+        "name": "Passage Open",
+        "description": "Passage Open: the rider stops when the mourning route is physically restored.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "west.events.25",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Passage Open: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.26",
+        "name": "Workers Step Off",
+        "description": "Workers Step Off: the vanished crew reaches a present-day platform.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "west.events.26",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Workers Step Off: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.27",
+        "name": "Surface Shift",
+        "description": "Surface Shift: miners choose between clean work and another hidden descent.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "west.events.27",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Surface Shift: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.28",
+        "name": "River after Flood",
+        "description": "River after Flood: the revised survey reflects the crew's final crossing agreement.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "west.events.28",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "River after Flood: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.29",
+        "name": "Train Home",
+        "description": "Train Home: Midnight departs with a true passenger and wage record.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "west.events.29",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Train Home: background schematic"
+          }
+        ]
+      },
+      {
+        "id": "events.30",
+        "name": "Town above Ground",
+        "description": "Town above Ground: the well clears after the closure and ore-return decision.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "west.events.30",
+        "media": [
+          {
+            "role": "background",
+            "asset": "ui/background.svg",
+            "alt": "Town above Ground: background schematic"
+          }
+        ]
+      }
+    ],
+    "scenes": [
+      {
+        "id": "scenes.1",
+        "name": "A Fence across the Mourning Road",
+        "description": "A Fence across the Mourning Road: Objective: stop the flood threat. Pull unlawful stakes or escort evacuees; delay floods the first homes.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.4"
+          }
+        ],
+        "localeKey": "west.scenes.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Fence across the Mourning Road: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.2",
+        "name": "One Carriage Too Many",
+        "description": "One Carriage Too Many: Objective: identify the extra coach. Count passengers or compare departure logs; delay reaches the ghost bridge.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.5"
+          }
+        ],
+        "localeKey": "west.scenes.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "One Carriage Too Many: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.3",
+        "name": "Gold with a Heartbeat",
+        "description": "Gold with a Heartbeat: Objective: establish the ore's danger. Test the nugget or compare patient pulses; delay taints another water jar.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.6"
+          }
+        ],
+        "localeKey": "west.scenes.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Gold with a Heartbeat: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.4",
+        "name": "The Survey's Missing Leaf",
+        "description": "The Survey's Missing Leaf: Objective: prove shared passage. Recover the agreement or call both-bank witnesses; delay burns the survey copy.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.7"
+          }
+        ],
+        "localeKey": "west.scenes.4",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Survey's Missing Leaf: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.5",
+        "name": "The Station that Was Erased",
+        "description": "The Station that Was Erased: Objective: reach Platform Zero. Admit the wage debt or repair the destination ticket; delay changes the carriage's year.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.8"
+          }
+        ],
+        "localeKey": "west.scenes.5",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Station that Was Erased: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.6",
+        "name": "Voices in the Listening Shaft",
+        "description": "Voices in the Listening Shaft: Objective: protect lower-gallery miners. Follow their signals or isolate the ore stores; delay opens another fault.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.9"
+          }
+        ],
+        "localeKey": "west.scenes.6",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Voices in the Listening Shaft: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.7",
+        "name": "Dry Ground before Judgment",
+        "description": "Dry Ground before Judgment: Objective: evacuate threatened families. Stage wagons or anchor the rope crossing; delay cuts off the last shelter.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.10"
+          }
+        ],
+        "localeKey": "west.scenes.7",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Dry Ground before Judgment: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.8",
+        "name": "The Brake Lantern Bridge",
+        "description": "The Brake Lantern Bridge: Objective: cross safely with the workers. Repair the lamp or detach cargo first; delay rolls the coach backward.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.11"
+          }
+        ],
+        "localeKey": "west.scenes.8",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Brake Lantern Bridge: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.9",
+        "name": "Water without Gold",
+        "description": "Water without Gold: Objective: keep the town supplied. Open the clean reserve or test an alternate well; delay spreads the ore bloom.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.12"
+          }
+        ],
+        "localeKey": "west.scenes.9",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Water without Gold: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.10",
+        "name": "The County Gunhand's Order",
+        "description": "The County Gunhand's Order: Objective: stop coercion at the hearing. Withdraw the survey order or secure a public witness; delay isolates the neighbors.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.13"
+          }
+        ],
+        "localeKey": "west.scenes.10",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The County Gunhand's Order: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.11",
+        "name": "The Builder's Unpaid Years",
+        "description": "The Builder's Unpaid Years: Objective: settle wages and acknowledgment. Publish the wage book or secure a union payment; delay strands the builder.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.14"
+          }
+        ],
+        "localeKey": "west.scenes.11",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Builder's Unpaid Years: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.12",
+        "name": "A Living Vein's Return",
+        "description": "A Living Vein's Return: Objective: remove the source of illness. Return ore or isolate the unsafe gallery; delay names another miner.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.15"
+          }
+        ],
+        "localeKey": "west.scenes.12",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Living Vein's Return: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.13",
+        "name": "Two Banks at the Hearing",
+        "description": "Two Banks at the Hearing: Objective: renew a usable crossing. Preserve shared passage or create a witnessed limited route; delay restarts the fence work.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.16"
+          }
+        ],
+        "localeKey": "west.scenes.13",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Two Banks at the Hearing: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.14",
+        "name": "A Platform in the Present",
+        "description": "A Platform in the Present: Objective: bring the crew home. Record the station or guide workers with the rail lamp; delay erases the passenger list.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.17"
+          }
+        ],
+        "localeKey": "west.scenes.14",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Platform in the Present: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.15",
+        "name": "No Fortune beneath the Well",
+        "description": "No Fortune beneath the Well: Objective: close without abandoning workers. Fund surface shifts or a clean food reserve; delay reopens the shaft in secret.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.18"
+          }
+        ],
+        "localeKey": "west.scenes.15",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "No Fortune beneath the Well: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.16",
+        "name": "The Road after the Flood",
+        "description": "The Road after the Flood: Objective: settle the boundary. Restore the mourning route and repair homes or witness a shared crossing; record losses and duties.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.1"
+          }
+        ],
+        "localeKey": "west.scenes.16",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Road after the Flood: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.17",
+        "name": "The Midnight Homecoming",
+        "description": "The Midnight Homecoming: Objective: end the railway debt. Pay the named crew or agree a witnessed schedule; record the true station and years.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.2"
+          }
+        ],
+        "localeKey": "west.scenes.17",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "The Midnight Homecoming: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "scenes.18",
+        "name": "A Town above Ground",
+        "description": "A Town above Ground: Objective: settle the mine's future. Seal the listening shaft or maintain bounded safe isolation; record water tests and alternative work.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "leads-to",
+            "targetId": "scenes.3"
+          }
+        ],
+        "localeKey": "west.scenes.18",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "A Town above Ground: map schematic"
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "archetypes.1",
+        "name": "River Guide",
+        "description": "River Guide: evacuates neighbors and keeps shared routes usable.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.1"
+          }
+        ],
+        "localeKey": "west.archetypes.1",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "River Guide: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.2",
+        "name": "Railway Witness",
+        "description": "Railway Witness: tracks missing stations workers and unpaid years.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.5"
+          }
+        ],
+        "localeKey": "west.archetypes.2",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Railway Witness: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.3",
+        "name": "Pulse Assayer",
+        "description": "Pulse Assayer: tests strange ore without concealing danger for profit.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.9"
+          }
+        ],
+        "localeKey": "west.archetypes.3",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Pulse Assayer: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.4",
+        "name": "Boundary Deputy",
+        "description": "Boundary Deputy: withdraws false orders and protects hearing witnesses.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.10"
+          }
+        ],
+        "localeKey": "west.archetypes.4",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Boundary Deputy: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.5",
+        "name": "Brake Engineer",
+        "description": "Brake Engineer: keeps a ghost carriage safe before freeing its passengers.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.14"
+          }
+        ],
+        "localeKey": "west.archetypes.5",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Brake Engineer: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.6",
+        "name": "Well Doctor",
+        "description": "Well Doctor: separates exposure from superstition and secures clean water.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.18"
+          }
+        ],
+        "localeKey": "west.archetypes.6",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Well Doctor: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.7",
+        "name": "County Archivist",
+        "description": "County Archivist: preserves shared agreements against fraudulent surveys.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.19"
+          }
+        ],
+        "localeKey": "west.archetypes.7",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "County Archivist: portrait schematic"
+          }
+        ]
+      },
+      {
+        "id": "archetypes.8",
+        "name": "Surface Organizer",
+        "description": "Surface Organizer: makes mine closure possible without abandoning its workers.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "npcs.23"
+          }
+        ],
+        "localeKey": "west.archetypes.8",
+        "media": [
+          {
+            "role": "portrait",
+            "asset": "ui/portrait.svg",
+            "alt": "Surface Organizer: portrait schematic"
+          }
+        ]
+      }
+    ],
+    "progressionPaths": [
+      {
+        "id": "progressionPaths.1",
+        "name": "Crossing Keeper",
+        "description": "Crossing Keeper: earn trust through evacuation and restored passage; gain neighbor crews and road repair duties.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.1"
+          }
+        ],
+        "localeKey": "west.progressionPaths.1",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Crossing Keeper: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.2",
+        "name": "Midnight Steward",
+        "description": "Midnight Steward: earn standing by bringing lost workers home; gain rail access and wage-record duties.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.5"
+          }
+        ],
+        "localeKey": "west.progressionPaths.2",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Midnight Steward: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.3",
+        "name": "Clean Well Guardian",
+        "description": "Clean Well Guardian: earn support by ending ore exposure; gain water reserves and testing obligations.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.3"
+          }
+        ],
+        "localeKey": "west.progressionPaths.3",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Clean Well Guardian: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.4",
+        "name": "Hearing Marshal",
+        "description": "Hearing Marshal: earn legitimacy by opposing false boundary orders; gain witnesses and fair enforcement duties.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.1"
+          }
+        ],
+        "localeKey": "west.progressionPaths.4",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Hearing Marshal: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.5",
+        "name": "Lantern Navigator",
+        "description": "Lantern Navigator: earn confidence through safe ghost crossings; gain carriage crews and repair duties.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.5"
+          }
+        ],
+        "localeKey": "west.progressionPaths.5",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Lantern Navigator: item schematic"
+          }
+        ]
+      },
+      {
+        "id": "progressionPaths.6",
+        "name": "Surface Builder",
+        "description": "Surface Builder: earn respect by replacing harmful work; gain town support and livelihood obligations.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "archetypes.6"
+          }
+        ],
+        "localeKey": "west.progressionPaths.6",
+        "media": [
+          {
+            "role": "item",
+            "asset": "ui/item.svg",
+            "alt": "Surface Builder: item schematic"
+          }
+        ]
+      }
+    ],
+    "visualThemes": [
+      {
+        "id": "visualThemes.1",
+        "name": "Redwater Survey",
+        "description": "Redwater Survey: blue shared roads and rust false stakes distinguish safe passage from private seizure.",
+        "patternIds": [
+          "cursed-frontier"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.1"
+          }
+        ],
+        "localeKey": "west.visualThemes.1",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Redwater Survey: map schematic"
+          },
+          {
+            "role": "ui",
+            "asset": "ui/background.svg",
+            "alt": "Frontier navigation interface"
+          }
+        ]
+      },
+      {
+        "id": "visualThemes.2",
+        "name": "Midnight Timetable",
+        "description": "Midnight Timetable: amber brake lights and violet missing years distinguish real platforms from ghost shortcuts.",
+        "patternIds": [
+          "ghost-railway"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.5"
+          }
+        ],
+        "localeKey": "west.visualThemes.2",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Midnight Timetable: map schematic"
+          }
+        ]
+      },
+      {
+        "id": "visualThemes.3",
+        "name": "Deepgold Pulse",
+        "description": "Deepgold Pulse: green clean wells and red living veins distinguish safe stores from dangerous ore.",
+        "patternIds": [
+          "occult-boomtown"
+        ],
+        "relations": [
+          {
+            "type": "involves",
+            "targetId": "locations.9"
+          }
+        ],
+        "localeKey": "west.visualThemes.3",
+        "media": [
+          {
+            "role": "map",
+            "asset": "ui/map.svg",
+            "alt": "Deepgold Pulse: map schematic"
+          }
+        ]
+      }
+    ]
+  },
+  "playToday": {
+    "patternId": "cursed-frontier",
+    "campaignKitId": "kit.cursed-frontier",
+    "visualThemeId": "visualThemes.1"
+  },
+  "localization": {
+    "sourceLocale": "en",
+    "supportedLocales": [
+      "en",
+      "ru",
+      "es",
+      "ja",
+      "zh-CN",
+      "ko"
+    ],
+    "strings": {
+      "en": {
+        "west.factions.1": "Redwater Neighbors",
+        "west.factions.2": "Midnight Railway Crew",
+        "west.factions.3": "Deepgold Prospectors",
+        "west.factions.4": "Boundary Riders",
+        "west.factions.5": "Platform Watch",
+        "west.factions.6": "Well Cooperative",
+        "west.factions.7": "River Witnesses",
+        "west.factions.8": "Black Lantern Union",
+        "west.locations.1": "Redwater Crossing",
+        "west.locations.2": "Midnight Depot",
+        "west.locations.3": "Deepgold Assay Hall",
+        "west.locations.4": "Burial Road Stakes",
+        "west.locations.5": "Platform Zero",
+        "west.locations.6": "Listening Shaft",
+        "west.locations.7": "County Survey Room",
+        "west.locations.8": "Black Lantern Bridge",
+        "west.locations.9": "Dry Well Yard",
+        "west.locations.10": "River Shelter",
+        "west.locations.11": "Builder's Cabin",
+        "west.locations.12": "Sealed Fault",
+        "west.npcs.1": "Rider Mara Reed",
+        "west.npcs.2": "Conductor Ivo Bell",
+        "west.npcs.3": "Assayer Tessa Flint",
+        "west.npcs.4": "Surveyor Ren Pike",
+        "west.npcs.5": "Lampkeeper Bea Zero",
+        "west.npcs.6": "Miner Juno Deep",
+        "west.npcs.7": "Witness Noa River",
+        "west.npcs.8": "Engineer Kai Lantern",
+        "west.npcs.9": "Wellkeeper Fia Root",
+        "west.npcs.10": "Deputy Sol Ford",
+        "west.npcs.11": "Builder Neri Rail",
+        "west.npcs.12": "Doctor Rosa Dust",
+        "west.npcs.13": "Farmer Dev Bank",
+        "west.npcs.14": "Porter Mei Midnight",
+        "west.npcs.15": "Buyer Pell Gold",
+        "west.npcs.16": "Archivist Ada County",
+        "west.npcs.17": "Passenger Ash Watch",
+        "west.npcs.18": "Blaster Oren Fault",
+        "west.npcs.19": "Fencehand Len Rope",
+        "west.npcs.20": "Telegrapher Kira Line",
+        "west.npcs.21": "Councilor Siva Well",
+        "west.npcs.22": "Guide Taro Shelter",
+        "west.npcs.23": "Mechanic Tess Brake",
+        "west.npcs.24": "Grower Eri Plain",
+        "west.adversaries.1": "Flood Rider",
+        "west.adversaries.2": "Wage Collector Shade",
+        "west.adversaries.3": "Heartgold Sentinel",
+        "west.adversaries.4": "Fence Enforcer",
+        "west.adversaries.5": "Timetable Clerk",
+        "west.adversaries.6": "Assay Blackmailer",
+        "west.adversaries.7": "Stake Hound",
+        "west.adversaries.8": "Brake Wraith",
+        "west.adversaries.9": "Ore Bloom",
+        "west.adversaries.10": "County Gunhand",
+        "west.adversaries.11": "False Conductor",
+        "west.adversaries.12": "Shaft Maw",
+        "west.adversaries.13": "River Toll Gang",
+        "west.adversaries.14": "Ticket Eater",
+        "west.adversaries.15": "Gold Fever Mob",
+        "west.adversaries.16": "Boundary Echo",
+        "west.adversaries.17": "Lantern Thief",
+        "west.adversaries.18": "Vein Whisperer",
+        "west.items.1": "Shared Passage Copy",
+        "west.items.2": "Missing Wage Book",
+        "west.items.3": "Pulsing Nugget",
+        "west.items.4": "Survey Stake Puller",
+        "west.items.5": "Brake Lantern",
+        "west.items.6": "Clean Reserve Jar",
+        "west.items.7": "Two-bank Witness Slip",
+        "west.items.8": "Platform Zero Ticket",
+        "west.items.9": "Fault Return Basket",
+        "west.items.10": "Evacuation Wagon Map",
+        "west.items.11": "Builder's Wage Token",
+        "west.items.12": "Assay Pulse Chart",
+        "west.items.13": "Fence Withdrawal Order",
+        "west.items.14": "Union Passenger List",
+        "west.items.15": "Surface Work Agreement",
+        "west.items.16": "River Rope Kit",
+        "west.items.17": "Repaired Timetable",
+        "west.items.18": "Mine Closure Seal",
+        "west.items.19": "Mourning Road Marker",
+        "west.items.20": "Carriage Release Lever",
+        "west.items.21": "Returned Gold Receipt",
+        "west.items.22": "County Hearing Bell",
+        "west.items.23": "Homeward Rail Lamp",
+        "west.items.24": "Clean Well Covenant",
+        "west.events.1": "Fence at Dawn",
+        "west.events.2": "Extra Carriage",
+        "west.events.3": "Assay Heartbeat",
+        "west.events.4": "Stakes Advance",
+        "west.events.5": "Unprinted Stop",
+        "west.events.6": "Well Taste",
+        "west.events.7": "Agreement Missing",
+        "west.events.8": "Lantern Failure",
+        "west.events.9": "Vein Speech",
+        "west.events.10": "Evacuation Call",
+        "west.events.11": "Wage Token",
+        "west.events.12": "Exposure Pattern",
+        "west.events.13": "County Threat",
+        "west.events.14": "Builder's Account",
+        "west.events.15": "Closure Proposal",
+        "west.events.16": "Marker Removal",
+        "west.events.17": "Passenger Count",
+        "west.events.18": "Fault Return",
+        "west.events.19": "Two-bank Hearing",
+        "west.events.20": "Backward Roll",
+        "west.events.21": "Gold Sale",
+        "west.events.22": "Shelter Reached",
+        "west.events.23": "Name Restored",
+        "west.events.24": "Lower Gallery",
+        "west.events.25": "Passage Open",
+        "west.events.26": "Workers Step Off",
+        "west.events.27": "Surface Shift",
+        "west.events.28": "River after Flood",
+        "west.events.29": "Train Home",
+        "west.events.30": "Town above Ground",
+        "west.scenes.1": "A Fence across the Mourning Road",
+        "west.scenes.2": "One Carriage Too Many",
+        "west.scenes.3": "Gold with a Heartbeat",
+        "west.scenes.4": "The Survey's Missing Leaf",
+        "west.scenes.5": "The Station that Was Erased",
+        "west.scenes.6": "Voices in the Listening Shaft",
+        "west.scenes.7": "Dry Ground before Judgment",
+        "west.scenes.8": "The Brake Lantern Bridge",
+        "west.scenes.9": "Water without Gold",
+        "west.scenes.10": "The County Gunhand's Order",
+        "west.scenes.11": "The Builder's Unpaid Years",
+        "west.scenes.12": "A Living Vein's Return",
+        "west.scenes.13": "Two Banks at the Hearing",
+        "west.scenes.14": "A Platform in the Present",
+        "west.scenes.15": "No Fortune beneath the Well",
+        "west.scenes.16": "The Road after the Flood",
+        "west.scenes.17": "The Midnight Homecoming",
+        "west.scenes.18": "A Town above Ground",
+        "west.archetypes.1": "River Guide",
+        "west.archetypes.2": "Railway Witness",
+        "west.archetypes.3": "Pulse Assayer",
+        "west.archetypes.4": "Boundary Deputy",
+        "west.archetypes.5": "Brake Engineer",
+        "west.archetypes.6": "Well Doctor",
+        "west.archetypes.7": "County Archivist",
+        "west.archetypes.8": "Surface Organizer",
+        "west.progressionPaths.1": "Crossing Keeper",
+        "west.progressionPaths.2": "Midnight Steward",
+        "west.progressionPaths.3": "Clean Well Guardian",
+        "west.progressionPaths.4": "Hearing Marshal",
+        "west.progressionPaths.5": "Lantern Navigator",
+        "west.progressionPaths.6": "Surface Builder",
+        "west.visualThemes.1": "Redwater Survey",
+        "west.visualThemes.2": "Midnight Timetable",
+        "west.visualThemes.3": "Deepgold Pulse"
+      }
+    },
+    "fallbackLocales": [
+      "ru",
+      "es",
+      "ja",
+      "zh-CN",
+      "ko"
+    ]
+  }
+}
