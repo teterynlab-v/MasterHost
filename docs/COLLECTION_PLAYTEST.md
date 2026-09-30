@@ -20,4 +20,4 @@ For each game record date, universe/Pack version, Kit, participant count, approx
 
 For each non-English content locale, a native reviewer must review names, adventure instructions and rules terminology. Current adventure content uses declared English fallback. UI language selection alone does not satisfy translation acceptance. Keyboard/assistive-technology users must review the table and creation flow; the narrow automated/375px checks are only engineering evidence.
 
-The owner can accept the open-source product when actual full games work for the intended group and recorded blockers are resolved. Until then M30 product acceptance is open.
+The owner can accept the self-hosted product when actual full games work for the intended group and recorded blockers are resolved. Until then M30 product acceptance is open.

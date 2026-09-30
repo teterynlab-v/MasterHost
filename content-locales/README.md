@@ -8,6 +8,6 @@ The browser calls the resolver only at authored display sites. Pack-owned `unive
 
 Run `node scripts/content-localization-inventory.mjs` to extract required official strings and `vitest run tests/content-localization-coverage.test.ts` to enforce complete target coverage. Native editorial and actual friends-game M30 acceptance remain separate gates.
 
-Translations of official narrative content follow the original content license (CC BY 4.0, MasterHost contributors); shared UI strings follow the application MIT license. Authoring helpers are reconstruction tools for exact repeated source structures, not runtime dependencies.
+Translations of official narrative content follow the original content license (CC BY 4.0, MasterHost contributors); shared UI strings follow the application PolyForm Noncommercial 1.0.0 license. Authoring helpers are reconstruction tools for exact repeated source structures, not runtime dependencies.
 
 Authoring helpers use the committed ordered snapshots in `sources/`; they do not require temporary paths. They expand repeated names and captions from explicitly authored clauses. The standalone locale JSON files are the runtime inputs. After reconstructing a helper corpus, run `node scripts/sync-manifest-locales.mjs` and `node scripts/sync-artset-locales.mjs`, then the full coverage test, to restore the additional manifest and Art Set captions. Native editorial approval is not implied by coverage.

@@ -18,4 +18,4 @@ Use `.mhgame` to share a complete authored game. Use a PostgreSQL backup to prot
 3. Required rolls appear as the strongest action. Phone navigation jumps to Character, abilities, map, party and journal.
 4. Reopen the same browser to reconnect. Choose **Join another game** to leave.
 
-Application navigation supports English, Russian, Spanish, Japanese, Simplified Chinese and Korean. Pack-authored names and narrative content retain the Pack language.
+Application navigation and bundled official universe content support English, Russian, Spanish, Japanese, Simplified Chinese and Korean. User-authored text stays in its original language. Human editorial review of the translations is still pending; see [localization status](CONTENT_LOCALIZATION_STATUS.md).

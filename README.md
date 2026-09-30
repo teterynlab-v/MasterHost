@@ -1,8 +1,8 @@
 # MasterHost
 
-MasterHost is a self-hosted tabletop RPG engine for preparing and running complete games. A Game Master selects ready assets or uses the advanced visual editor; MasterHost composes a versioned World Pack, builds a Descriptor and materializes a persistent World. Players join with a six-digit code, create Pack-defined Characters and use the same generic engine for maps, dice, actions, encounters, inventory, progression and the shared journal.
+MasterHost is a self-hosted tabletop RPG engine for creating and running original game worlds. A creator or Game Master selects ready assets or uses the visual editor; MasterHost composes a versioned World Pack, builds a Descriptor and materializes a persistent World. Players join with a six-digit code, create Pack-defined Characters and use the generic engine for maps, dice, actions, encounters, inventory, progression and the shared journal. The Docker Compose installation runs locally with PostgreSQL; an AI provider or SaaS account is not required. The optional AI endpoint is currently disabled.
 
-The repository is open source under the [MIT License](LICENSE). Bundled original game content and artwork carry their own open-license metadata.
+The source code is available under the [PolyForm Noncommercial License 1.0.0](LICENSE): noncommercial use is permitted; commercial use requires separate permission from the rights holder. This is a source-available license, not an OSI-approved open-source license. Bundled original game content, artwork and translations have separate CC BY 4.0 terms; see [licensing and attribution](docs/LICENSES.md).
 
 ## Start the product
 
@@ -30,6 +30,7 @@ Product traffic uses one browser origin: Nginx serves the application and proxie
 - [Backup, restore and diagnostics](docs/OPERATIONS.md)
 - [Licensing and attribution](docs/LICENSES.md)
 - [Current milestone evidence](docs/PROJECT_STATUS.md)
+- [Contributing](CONTRIBUTING.md)
 
 ## Protect active games
 
@@ -51,7 +52,7 @@ The archive includes source, operator documentation, `VERSION`, a third-party de
 
 ## Local development
 
-Development requires Node.js 22+, Docker and Corepack or npm. The repository pins pnpm 10.17.1. `scripts/m0-check.sh` starts only the development PostgreSQL service from `compose.dev.yaml`, installs dependencies and runs the baseline checks.
+Development requires Node.js 22+, Docker and Corepack or npm. The repository pins pnpm 10.17.1. `scripts/m0-check.sh` starts only the development PostgreSQL service from `compose.dev.yaml`, installs dependencies and runs the baseline checks. If `pnpm` is unavailable, use `corepack pnpm` or `npm exec --yes --package=pnpm@10.17.1 -- pnpm` for the commands below.
 
 ```bash
 ./scripts/m0-check.sh
@@ -87,4 +88,4 @@ Game rules and content live in Packs. The compiler and runtime remain generic, a
 
 ## Current product status
 
-M0 through M15 have passed their documented local engineering gates. M16 release engineering and the approved product UX are implemented and locally verified. Full product acceptance still requires a real three-to-four-hour game with one GM and two to five players, human accessibility and localization review, and an explicitly authorized public release. See [M16 status](docs/M16_STATUS.md) for the exact boundary.
+The twelve-universe collection and official content localization have passed documented engineering checks. This is an engineering candidate, not a completed product acceptance or hosted service. Full product acceptance still requires real human games, editorial and accessibility review, and independent installation. Publishing source code does not close those gates. See [M30 status](docs/M30_STATUS.md), [localization status](docs/CONTENT_LOCALIZATION_STATUS.md) and the [project status](docs/PROJECT_STATUS.md) for the evidence and limits.

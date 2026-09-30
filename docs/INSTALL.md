@@ -9,7 +9,7 @@
 ## First start
 
 ```bash
-git clone <your MasterHost repository URL>
+git clone https://github.com/teterynlab/MasterHost.git
 cd MasterHost
 cp .env.example .env
 ```
