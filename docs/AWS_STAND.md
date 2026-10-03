@@ -1,6 +1,6 @@
 # AWS development stand
 
-Deployment evidence recorded 2026-10-04. This is a development stand; public domain acceptance remains pending.
+Deployment evidence recorded 2026-10-04. This is a development stand; public HTTPS transport and landing acceptance passed.
 
 ## Resources and cost
 
@@ -19,7 +19,7 @@ Release application source is commit `57b843e`, deployed at `/opt/masterhost/rel
 
 SSH uses `/Users/viktarteteryn/.ssh/masterhost_lightsail_rsa`, user `ubuntu`. Firewall allows TCP 22 only from `150.228.49.182/32` (update when the operator address changes); 80/443 are public. Bootstrap initially failed because Lightsail ran its wrapper under `sh`; installation was completed explicitly using Bash. Docker, Compose and Caddy are installed and verified; historical cloud-init error is not an application health signal.
 
-Unique database, Realm author and platform secrets live in the remote mode-600 `.env`. Caddy's domain configuration requires demo authentication, then sets an HTTP-only, Secure, SameSite cookie so application Bearer requests remain usable. Local credentials are in `/Users/viktarteteryn/.ssh/masterhost-demo-access.txt` (mode 600), never in this repository. Public authentication and WebSocket upgrade through HTTPS still need testing after DNS activation. AWS provisioning used temporary root browser credentials; a scoped operator identity remains to be configured.
+Unique database, Realm author and platform secrets live in the remote mode-600 `.env`. Caddy's domain configuration requires demo authentication, then sets an HTTP-only, Secure, SameSite cookie so application Bearer requests remain usable. Local credentials are in `/Users/viktarteteryn/.ssh/masterhost-demo-access.txt` (mode 600), never in this repository. Public authentication and WebSocket upgrade through HTTPS passed after DNS activation. AWS provisioning used temporary root browser credentials; a scoped operator identity remains to be configured.
 
 Temporary operator demo: SSH tunnel `127.0.0.1:8350` → remote `127.0.0.1:8088`. This tunnel is not a public endpoint or an independently managed service.
 
@@ -43,4 +43,4 @@ One off-host copy is stored locally at `/Users/viktarteteryn/.ssh/masterhost-bac
 
 Registrar requested by the user is GoDaddy, but authoritative nameservers are `mary.ns.cloudflare.com` and `chance.ns.cloudflare.com`. Add **A `mh` → `3.120.125.5`** in the existing Cloudflare zone, initially DNS-only. Parent nameservers and root/www family-site records must remain unchanged.
 
-Cloudflare session is logged out; user login is required before this record can be created. No DNS record was created and public HTTPS has not been accepted. After login: create record, verify authoritative resolution, confirm Caddy certificate issuance, test unauthenticated denial, authenticated cookie/Bearer requests, WebSocket reconnect and browser gameplay at `https://mh.teterynlab.com`.
+After user login, created A `mh` → `3.120.125.5`, DNS-only, TTL Auto, and read it back in Cloudflare and from authoritative nameserver. Existing family-site and mail records were untouched. Caddy obtained a valid Let’s Encrypt certificate. Verified public TLS without bypass, anonymous HTTP 401, authenticated HTTP 200, Secure/HttpOnly cookie, Bearer API access, GM/player private-note isolation and authenticated WSS session snapshot. Browser displayed the Russian landing page and retained World at `https://mh.teterynlab.com/?realm=default&lang=ru`. This is public transport/landing acceptance, not a full human gameplay acceptance gate.
