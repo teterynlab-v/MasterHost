@@ -1,3 +1,4 @@
+import {registerSessionAdmin} from "./session-admin.js";
 import {withRecapDisplay} from './recap-localization.js';
 import type{FastifyInstance}from"fastify";import websocket from"@fastify/websocket";import{RuntimeRepository,GameRepository,ActorStateRepository,EncounterRepository,RuntimeMutationRepository,RuntimeReplayRepository,CheckRecoveryRepository,PostgresRealtimeBus,AdvancedEcosystemRepository}from"@masterhost/persistence";import type{WorldRepository,RealtimeBusMessage}from"@masterhost/persistence";import{newCheckRequest,resolveCheck,initializeResources,effectiveModifier,executeAction,startEncounter,advanceEncounter,endEncounter,reconcileWorldLink,grantItem,transferItem,changeProgression,moveActor,visibleExplorationBoard,buildCampaignRecap,redactSpectatorTimeline,createTableState,visibleTableState,isTablePhase,buildRehearsalReport,assertActorControl}from"@masterhost/game-runtime";import type{CheckDefinition,CheckRequest,CheckResolution,ResourceDefinition,EffectDefinition,ActorRuntimeState,ItemDefinition,ProgressionDefinition,FogRegion,TablePhase}from"@masterhost/game-runtime";import{buildCharacterState,evaluateCharacterPortability}from"@masterhost/worldpack-sdk";import type{LoadedWorldPack}from"@masterhost/worldpack-sdk";
 import{createHash,randomUUID}from"node:crypto";
@@ -21,6 +22,12 @@ export async function registerRuntime(app:FastifyInstance,x:{db:string;realmId:s
  const snapshot=async(id:string)=>{const[session,participants,actorStates,sessionEncounters,lastSequence]=await Promise.all([repo.session(id),repo.participants(id),actors.all(id),encounters.forSession(id),game.latestSequence(id)]);return{session,participants,actors:actorStates,encounters:sessionEncounters,lastSequence}};
  const deliver=async(message:RealtimeBusMessage)=>{const wire=JSON.stringify(message);for(const client of sockets.get(message.sessionId)??[])if(client.socket.readyState===1&&(!message.participantId||client.gm||client.participantId===message.participantId))client.socket.send(wire)};await bus.subscribe(deliver);
  const broadcast=async(id:string,type:string,payload:any,participantId?:string)=>bus.publish({type,sessionId:id,payload,participantId,sequence:await game.latestSequence(id)});
+ await registerSessionAdmin(app,{
+  authorize:async req=>{const realm=app.masterhostContext?.()?.realm;if(!realm||await app.masterhostRole?.(req,realm)!=="owner")throw Object.assign(Error("Realm admin authorization required"),{statusCode:403});return realm.id},
+  list:realmId=>repo.adminSessions(realmId),
+  manage:(realmId,id,action,expectedState,participantId)=>repo.manageSession(realmId,id,action,expectedState,participantId),
+  notify:async(id,action,participantId)=>{if(action==="remove"){await broadcast(id,"participant.left",{id:participantId});for(const client of sockets.get(id)??[])if(client.participantId===participantId)client.socket.close(1008,"participant removed by administrator")}else await broadcast(id,"session.state",await repo.session(id))},
+ });
  const token=(req:any)=>String(req.headers.authorization??"").replace(/^Bearer\s+/i,"");
  const realmFor=(req:any)=>app.masterhostContext?.()?.realm.id??x.realmId;
  const requireCampaignGm=async(req:any,id:string)=>{if(!await repo.verifyCampaignGm(id,token(req)))throw Object.assign(Error("GM authorization required"),{statusCode:403})};

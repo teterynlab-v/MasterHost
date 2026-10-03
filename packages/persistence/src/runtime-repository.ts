@@ -55,5 +55,33 @@ export class RuntimeRepository{
  async selectCharacter(id:string,characterId:string){await this.sql`update session_participants set character_id=${characterId} where id=${id}`;return true}
  async leave(id:string){const r=(await this.sql`update session_participants set left_at=now() where id=${id} returning session_id`)[0];return r?.session_id as string|undefined}
  private mapSession(r:any):GameSession{return{id:r.id,realmId:r.realm_id,campaignId:r.campaign_id,gmId:r.gm_id??undefined,state:r.state,pin:r.pin??undefined,pinExpiresAt:r.pin_expires_at?new Date(r.pin_expires_at).toISOString():undefined,createdAt:new Date(r.created_at).toISOString(),startedAt:r.started_at?new Date(r.started_at).toISOString():undefined,finishedAt:r.finished_at?new Date(r.finished_at).toISOString():undefined}}
+ async adminSessions(realmId:string){
+  const rows=await this.sql`select s.*,c.name as campaign_name,c.world_id,
+   (select max(created_at) from game_events where session_id=s.id) as last_activity_at,
+   (select count(*) from session_participants where session_id=s.id and left_at is null) as participant_count
+   from sessions s join campaigns c on c.id=s.campaign_id where s.realm_id=${realmId} order by s.created_at desc limit 100`;
+  return Promise.all(rows.map(async row=>({...this.mapSession(row),campaignName:String(row.campaign_name),worldId:String(row.world_id),lastActivityAt:row.last_activity_at?new Date(String(row.last_activity_at)).toISOString():null,participants:await this.participants(String(row.id))})));
+ }
+ async manageSession(realmId:string,id:string,action:"finish"|"resume"|"remove",expectedState:string,participantId?:string){
+  const nextPin=action==="resume"?await this.newPin(realmId):null;
+  await this.sql.begin(async tx=>{
+   const row=(await tx`select * from sessions where id=${id} and realm_id=${realmId} for update`)[0];
+   if(!row)throw Object.assign(Error("session not found"),{statusCode:404});
+   if(row.state!==expectedState)throw Object.assign(Error("session changed; refresh before retrying"),{statusCode:409});
+   if(action==="remove"){
+    if(!["live","lobby"].includes(String(row.state)))throw Object.assign(Error("session is closed"),{statusCode:409});
+    const removed=await tx`update session_participants set left_at=now() where id=${participantId!} and session_id=${id} and left_at is null returning id`;
+    if(!removed.length)throw Object.assign(Error("participant not found in session"),{statusCode:404});
+   }else if(action==="finish"){
+    if(!["preparing","lobby","live"].includes(String(row.state)))throw Object.assign(Error("session is already closed"),{statusCode:409});
+    await tx`update sessions set state='finished',finished_at=now(),pin=null where id=${id}`;
+   }else{
+    if(row.state!=="finished")throw Object.assign(Error("only finished sessions can resume"),{statusCode:409});
+    await tx`update sessions set state='live',finished_at=null,started_at=coalesce(started_at,now()),pin=${nextPin},pin_expires_at=now()+interval '6 hours' where id=${id}`;
+   }
+   await tx`insert into game_events(id,session_id,event_type,payload,schema_version) values(gen_random_uuid(),${id},'SessionAdminOperation',${tx.json({action,participantId:participantId??null,previousState:row.state})},'1')`;
+  });
+  return this.session(id);
+ }
  async close(){await this.sql.end()}
 }

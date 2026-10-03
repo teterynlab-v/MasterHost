@@ -70,3 +70,7 @@ textarea{width:100%;resize:vertical;background:#0f131a;color:#e9eef5;border:1px 
 .npcAvatar{position:relative;overflow:hidden}.npcAvatar .avatarArt{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit}
 
 .universeCover{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;margin:0 0 12px}
+
+.packCreator dialog { background:#171e27; color:#e9edf4; border:1px solid #435064; border-radius:16px; padding:24px; max-width:min(560px,calc(100vw - 48px)); }
+.packCreator dialog::backdrop { background:#070b10bb; }
+.packCreator dialog button { margin-right:12px; }

@@ -1,3 +1,4 @@
+import {SessionAdmin} from "./session-admin.js";
 import {useContentI18n} from './i18n/content-react.js';
 import React,{useEffect,useState}from"react";import{createRoot}from"react-dom/client";import"./style.css";import{PlayerJoin,GmLobby}from"./lobby.js";
 import { WorldBuilder } from "./world-builder.js";
@@ -40,6 +41,7 @@ function App(){
  if(hash==="join")return <PlayerJoin/>;
  if(hash==="gm"&&world)return <GmLobby world={world} onBack={()=>location.hash="game"}/>;
  if(hash==="pack")return <PackCreator request={api} requestMedia={apiMedia} apiRoot={API} onBack={()=>location.hash=""}/>;
+ if(hash==="admin")return <SessionAdmin request={api} onBack={()=>location.hash=""}/>;
  if(hash==="realm")return <RealmConsole request={api} onBack={()=>location.hash=""}/>;
  if(hash==="official")return <OfficialLibrary realm={realm} request={api} onBack={()=>location.hash=""}/>;
  if(!pack||!realm)return <main><h1>{c("MASTERHOST")}</h1><p>{error||"Loading…"}</p></main>;

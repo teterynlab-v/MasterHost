@@ -1,0 +1,16 @@
+import {beforeAll,afterAll,describe,it,expect} from 'vitest';
+import {randomUUID} from 'node:crypto';
+import postgres from 'postgres';
+import {RuntimeRepository,GameRepository,AdvancedEcosystemRepository} from '@masterhost/persistence';
+import {createTableState} from '@masterhost/game-runtime';
+const url=process.env.TEST_DATABASE_URL;
+(url?describe:describe.skip)('administrator persistence and isolation',()=>{
+ let repo:RuntimeRepository,game:GameRepository,advanced:AdvancedEcosystemRepository;
+ const realm=randomUUID(),other=randomUUID(),worldId=randomUUID();let sessionId:string,oldPin:string,participantId:string,accessToken:string;
+ beforeAll(async()=>{repo=new RuntimeRepository(url!);game=new GameRepository(url!);advanced=new AdvancedEcosystemRepository(url!);await repo.migrate();await game.migrate();await advanced.migrate();await repo.ensureRealm(realm,`admin-${realm}`);const campaign=await repo.createCampaign({realmId:realm,worldId,name:'Admin proof'});const session=await repo.startLobby({realmId:realm,campaignId:campaign.id});sessionId=session.id;oldPin=session.pin!;await repo.transition(sessionId,'live');const participant=await repo.joinGuest({sessionId,pin:oldPin,displayName:'Player'});participantId=participant.id;accessToken=participant.accessToken;await advanced.createTable({...createTableState({sessionId,scenes:[{id:'scene',title:'Saved scene'}]}),privateNotes:['saved secret']})});
+ afterAll(async()=>{await repo?.close();await game?.close();await advanced?.close()});
+ it('does not list another Realm or reveal authorization tokens',async()=>{expect(await repo.adminSessions(other)).toEqual([]);const list=await repo.adminSessions(realm);expect(list[0]?.participants[0]?.id).toBe(participantId);expect(JSON.stringify(list)).not.toContain(accessToken)});
+ it('rejects cross-Realm mutation and stale state',async()=>{await expect(repo.manageSession(other,sessionId,'finish','live')).rejects.toMatchObject({statusCode:404});await expect(repo.manageSession(realm,sessionId,'finish','lobby')).rejects.toMatchObject({statusCode:409});expect((await repo.session(sessionId))?.state).toBe('live')});
+ it('removes a player and revokes their authorization',async()=>{await repo.manageSession(realm,sessionId,'remove','live',participantId);expect(await repo.verifyParticipant(participantId,accessToken)).toBe(false);expect(await repo.participants(sessionId)).toEqual([])});
+ it('ends and resumes the same saved table without reviving removed players',async()=>{await repo.manageSession(realm,sessionId,'finish','live');expect(await repo.resolvePin(realm,oldPin)).toBeNull();expect((await advanced.table(sessionId))?.privateNotes).toEqual(['saved secret']);await repo.manageSession(realm,sessionId,'resume','finished');const resumed=await repo.session(sessionId);expect(resumed?.state).toBe('live');expect(resumed?.pin).toMatch(/^\d{6}$/);expect((await repo.resolvePin(realm,resumed!.pin!))?.id).toBe(sessionId);expect((await advanced.table(sessionId))?.privateNotes).toEqual(['saved secret']);expect(await repo.verifyParticipant(participantId,accessToken)).toBe(false);const sql=postgres(url!);const events=await sql`select payload from game_events where session_id=${sessionId} and event_type='SessionAdminOperation'`;expect(events.map(e=>e.payload.action)).toEqual(['remove','finish','resume']);await sql.end()});
+});
