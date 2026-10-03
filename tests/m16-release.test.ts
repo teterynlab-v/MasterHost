@@ -1,15 +1,34 @@
 import { describe, expect, it } from "vitest";
-import { mkdir, mkdtemp, writeFile } from "node:fs/promises";
+import { mkdir, mkdtemp, writeFile, rm } from "node:fs/promises";
+import { spawnSync } from "node:child_process";
 import os from "node:os";
 import path from "node:path";
-import { collectThirdPartyPackages, createChecksumManifest, releasePathAllowed, requiredReleaseFiles, validateReleaseInventory } from "../scripts/release-manifest.mjs";
+import { collectThirdPartyPackages, createChecksumManifest, createReleaseArchive, releasePathAllowed, requiredReleaseFiles, validateReleaseInventory } from "../scripts/release-manifest.mjs";
 
 describe("M16 release engineering", () => {
+  it("ships plain files without macOS metadata sidecars that Linux would load as YAML", async () => {
+    const root = await mkdtemp(path.join(os.tmpdir(), "masterhost-portable-archive-"));
+    try {
+      await mkdir(path.join(root, "fixture", "artsets"), { recursive: true });
+      const source = path.join(root, "fixture", "artsets", "standard.yaml");
+      await writeFile(source, "id: standard\n");
+      if (process.platform === "darwin") {
+        const attr = spawnSync("xattr", ["-w", "com.apple.provenance", "test-metadata", source]);
+        expect(attr.status).toBe(0);
+      }
+      const archive = path.join(root, "fixture.tar.gz");
+      createReleaseArchive(root, "fixture", archive);
+      const listing = spawnSync("tar", ["-tzf", archive], { encoding: "utf8" });
+      expect(listing.status).toBe(0);
+      expect(listing.stdout).toContain("fixture/artsets/standard.yaml");
+      expect(listing.stdout).not.toMatch(/(^|\/)\._/m);
+    } finally { await rm(root, { recursive: true, force: true }); }
+  });
   it("excludes local state and generated output from release archives", () => {
     expect(releasePathAllowed("README.md")).toBe(true);
     expect(releasePathAllowed(".env.example")).toBe(true);
     expect(releasePathAllowed("worldpacks/space-opera/pack.yaml")).toBe(true);
-    for (const value of [".env", ".env.local", ".git/config", "node_modules/x", "apps/web/dist/index.html", "release/a.tar.gz", "backups/masterhost.dump", "local.dump", "api.log", ".DS_Store"])
+    for (const value of [".env", ".env.local", ".git/config", "node_modules/x", "apps/web/dist/index.html", "release/a.tar.gz", "backups/masterhost.dump", "local.dump", "api.log", ".DS_Store", "worldpacks/space-opera/artsets/._standard.yaml"])
       expect(releasePathAllowed(value)).toBe(false);
   });
 

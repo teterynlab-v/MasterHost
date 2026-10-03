@@ -3,7 +3,7 @@ import { spawnSync } from "node:child_process";
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { collectThirdPartyPackages, createChecksumManifest, releasePathAllowed } from "./release-manifest.mjs";
+import { collectThirdPartyPackages, createChecksumManifest, createReleaseArchive, releasePathAllowed } from "./release-manifest.mjs";
 
 const root = fileURLToPath(new URL("..", import.meta.url)), version = process.argv[2] ?? "0.1.0", output = path.resolve(process.argv[3] ?? path.join(root, "release"));
 if (!/^[0-9A-Za-z][0-9A-Za-z._-]{0,63}$/.test(version)) throw Error("release version must use letters, numbers, dot, underscore or dash");
@@ -19,8 +19,8 @@ try {
   const releaseFiles = [...files, "THIRD_PARTY_LICENSES.json", "VERSION"];
   await writeFile(path.join(stage, "SHA256SUMS"), await createChecksumManifest(stage, releaseFiles));
   await mkdir(output, { recursive: true });
-  const archive = path.join(output, `${folder}.tar.gz`), result = spawnSync("tar", ["-czf", archive, "-C", temp, folder], { encoding: "utf8" });
-  if (result.status !== 0) throw Error(result.stderr || "tar failed");
+  const archive = path.join(output, `${folder}.tar.gz`);
+  createReleaseArchive(temp, folder, archive);
   const checksum = (await createChecksumManifest(output, [path.basename(archive)])).trim();
   await writeFile(`${archive}.sha256`, `${checksum}\n`);
   console.log(JSON.stringify({ archive, checksum, files: releaseFiles.length, dependencies: licenses.length }));

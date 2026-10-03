@@ -1,12 +1,21 @@
 import { createHash } from "node:crypto";
 import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
+import { spawnSync } from "node:child_process";
 
 const excluded = [
   /(^|\/)\.git(\/|$)/, /(^|\/)\.env(?!\.example(?:\/|$))($|\.)/, /(^|\/)node_modules(\/|$)/,
   /(^|\/)dist(\/|$)/, /(^|\/)coverage(\/|$)/, /(^|\/)release(\/|$)/,
-  /(^|\/)backups(\/|$)/, /(^|\/)[^/]+\.(dump|log)$/, /(^|\/)\.DS_Store$/, /^MasterHost-.*\.(zip|tar\.gz)$/,
+  /(^|\/)backups(\/|$)/, /(^|\/)[^/]+\.(dump|log)$/, /(^|\/)\.DS_Store$/, /(^|\/)\._/, /^MasterHost-.*\.(zip|tar\.gz)$/,
 ];
+
+export function createReleaseArchive(parent, folder, archive) {
+  const metadataOptions = process.platform === "darwin" ? ["--no-xattrs", "--disable-copyfile"] : [];
+  const result = spawnSync("tar", [...metadataOptions, "-czf", archive, "-C", parent, folder], {
+    encoding: "utf8", env: { ...process.env, COPYFILE_DISABLE: "1" },
+  });
+  if (result.status !== 0) throw Error(result.stderr || "tar failed");
+}
 
 export const requiredReleaseFiles = [
   ".env.example", "README.md", "LICENSE", "Dockerfile", "compose.yaml", "deploy/nginx.conf",
