@@ -1,5 +1,6 @@
 import {SessionAdmin} from "./session-admin.js";
 import {Feedback} from "./feedback.js";
+import {restoreSavedWorld} from './world-recovery.js';
 import {useContentI18n} from './i18n/content-react.js';
 import React,{useEffect,useState}from"react";import{createRoot}from"react-dom/client";import"./style.css";import{PlayerJoin,GmLobby}from"./lobby.js";
 import { WorldBuilder } from "./world-builder.js";
@@ -9,7 +10,7 @@ import { OfficialLibrary } from "./official-library.js";
 import { GameDescriptorBuilder } from "./game-descriptor-builder.js";
 import { QuickGameBuilder } from "./quick-game-builder.js";
 import { currentRealm,realmHeaders } from "./realm.js";
-import { I18nProvider,LanguageSwitcher } from "./i18n/react.js";
+import { I18nProvider,LanguageSwitcher,useI18n } from "./i18n/react.js";
 import { ProductHome } from "./product-home.js";
 import { UniverseCatalog } from "./universe-catalog.js";
 import { GameHub } from "./game-hub.js";
@@ -19,6 +20,8 @@ async function api(path:string,init?:RequestInit){const r=await fetch(`${API}${p
 async function apiMedia(path:string){const r=await fetch(`${API}${path}`,{headers:realmHeaders()});if(!r.ok)throw Error(`HTTP ${r.status}`);return r.blob()}
 async function download(path:string,fallback:string){const r=await fetch(`${API}${path}`,{headers:realmHeaders()});if(!r.ok){const body=await r.json().catch(()=>({}));throw Error(body.message??`HTTP ${r.status}`)}const blob=await r.blob(),match=r.headers.get("content-disposition")?.match(/filename="([^"]+)"/),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=match?.[1]??fallback;a.click();URL.revokeObjectURL(url)}
 function App(){
+ const{t}=useI18n();
+ const[savedWorldId]=useState(()=>localStorage.getItem(`masterhost.worldId.${REALM}`)??sessionStorage.getItem(`masterhost.worldId.${REALM}`)),[recoveryError,setRecoveryError]=useState(''),[recoveringWorld,setRecoveringWorld]=useState(false);
  const[hash,setHash]=useState(location.hash.slice(1));useEffect(()=>{const f=()=>setHash(location.hash.slice(1));addEventListener("hashchange",f);return()=>removeEventListener("hashchange",f)},[]);
 
  const[realm,setRealm]=useState<any>(),[pack,setPack]=useState<any>(),[choices,setChoices]=useState<Record<string,string>>({}),[world,setWorld]=useState<any>(),[worldContentPack,setWorldContentPack]=useState<any>(),[error,setError]=useState(""),[report,setReport]=useState<any>(),[impact,setImpact]=useState<any>();
@@ -27,7 +30,8 @@ function App(){
  useEffect(()=>{Promise.all([api("/host/realm"),api("/pack")]).then(([r,p]:any[])=>{setRealm(r);setPack(p);setChoices(Object.fromEntries(p.questions.map((q:any)=>[q.id,q.default])));const root=document.documentElement;root.style.setProperty("--realm-primary",r.brand.theme.primary);root.style.setProperty("--realm-accent",r.brand.theme.accent);root.style.setProperty("--realm-background",r.brand.theme.background);document.title=r.name;if(r.assets?.favicon){let icon=document.querySelector("link[rel='icon']")as HTMLLinkElement|null;if(!icon){icon=document.createElement("link");icon.rel="icon";document.head.append(icon)}icon.href=`${API}/cdn/${r.assets.favicon.checksum}`}}).catch((e:any)=>setError(e.message))},[]);
  const loadWorlds=async(p=pack)=>{const all=await api("/worlds") as any[];const compatible=all.filter(w=>(w.packId===p.manifest.id&&w.packVersion===p.manifest.version)||Boolean(w.descriptor?.composition));setWorlds(compatible);setSelectedWorldId(current=>compatible.some(w=>w.id===current&&`${w.name} ${w.id}`.toLowerCase().includes(worldFilter.toLowerCase()))?current:compatible.find(w=>`${w.name} ${w.id}`.toLowerCase().includes(worldFilter.toLowerCase()))?.id??"")};
  const loadMeta=async(w:any)=>{const [nextReport,nextSnapshots,nextContentPack]=await Promise.all([api(`/worlds/${w.id}/report`),api(`/worlds/${w.id}/snapshots`),api(`/worlds/${w.id}/content-localization`)]);setWorldContentPack(nextContentPack);setWorld(w);localStorage.setItem(`masterhost.worldId.${REALM}`,w.id);setReport(nextReport);setSnapshots(nextSnapshots as any[]);setSelectedSnapshotId("");setForkName(`${w.name} Fork`);setImpact(undefined)};
- useEffect(()=>{if(!pack)return;void loadWorlds(pack).catch((e:any)=>setError(e.message));const key=`masterhost.worldId.${REALM}`,id=localStorage.getItem(key)??sessionStorage.getItem(key);if(id)void api(`/worlds/${id}`).then(async(w:any)=>{if((w.packId!==pack.manifest.id||w.packVersion!==pack.manifest.version)&&!w.descriptor?.composition)throw Error("incompatible saved World");await loadMeta(w)}).catch(()=>{localStorage.removeItem(key);sessionStorage.removeItem(key)})},[pack]);
+ async function recoverWorld(){setRecoveringWorld(true);setRecoveryError("");try{await restoreSavedWorld(`masterhost.worldId.${REALM}`,{getItem:key=>localStorage.getItem(key)??sessionStorage.getItem(key)},async id=>{const w=await api(`/worlds/${id}`);if((w.packId!==pack.manifest.id||w.packVersion!==pack.manifest.version)&&!w.descriptor?.composition)throw Error("incompatible saved World");return w},loadMeta)}catch(failure){setRecoveryError(failure instanceof Error?failure.message:String(failure))}finally{setRecoveringWorld(false)}}
+ useEffect(()=>{if(!pack)return;void loadWorlds(pack).catch((e:any)=>setError(e.message));void recoverWorld()},[pack]);
  async function generate(){try{setError("");await loadMeta(await api("/worlds",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({choices})}));await loadWorlds()}catch(e:any){setError(e.message)}}
  async function importWorld(file:File){try{setError("");await loadMeta(await api("/worlds/import",{method:"POST",headers:{"content-type":"application/vnd.masterhost.world+zip"},body:file}));await loadWorlds()}catch(e:any){setError(e.message)}}
  async function importGame(file:File){try{setError("");const result=await api("/games/import",{method:"POST",headers:{"content-type":"application/vnd.masterhost.game+zip"},body:file}),[nextRealm,nextPack]=await Promise.all([api("/host/realm"),api("/pack")]);setRealm(nextRealm);setPack(nextPack);setInstalled(result);await loadMeta(await api(`/worlds/${result.worldId}`));await loadWorlds(nextPack)}catch(e:any){setError(e.message)}}
@@ -46,6 +50,7 @@ function App(){
  if(hash==="realm")return <RealmConsole request={api} onBack={()=>location.hash=""}/>;
  if(hash==="official")return <OfficialLibrary realm={realm} request={api} onBack={()=>location.hash=""}/>;
  if(!pack||!realm)return <main><h1>{c("MASTERHOST")}</h1><p>{error||"Loading…"}</p></main>;
+ if(hash==="gm"&&!world&&savedWorldId)return <main className="campaignFlow"><header className="productHeader"><h1>{t("common.reconnecting")}</h1><LanguageSwitcher/></header><section className="readyCard">{recoveryError&&<p className="error" role="alert">{recoveryError}</p>}<div className="actions"><button disabled={recoveringWorld} onClick={()=>void recoverWorld()}>{t("setup.retry")}</button><button className="secondary" onClick={()=>location.hash=""}>{t("setup.games")}</button></div></section></main>;
  if(hash==="universes")return <UniverseCatalog request={api} onBack={()=>location.hash=""} onAdvanced={()=>location.hash="advanced-game-builder"} onPlay={async value=>{try{setError("");if(pack.manifest.id!==value.basePack.id||pack.manifest.version!==value.basePack.version){await api(`/host/realms/${realm.id}`,{method:"PUT",headers:{"content-type":"application/json"},body:JSON.stringify({activePack:value.basePack})});const next=await api("/pack");setPack(next);setChoices(Object.fromEntries(next.questions.map((q:any)=>[q.id,q.default])))}location.hash="game-builder"}catch(reason:any){throw reason}}}/>;
  if(hash==="game-builder")return <QuickGameBuilder request={api} requestMedia={apiMedia} pack={pack} onWorld={async next=>{await loadMeta(next);await loadWorlds();location.hash="game"}} onBack={()=>location.hash="universes"} onAdvanced={()=>location.hash="advanced-game-builder"}/>;
  if(hash==="advanced-game-builder")return <GameDescriptorBuilder request={api} requestMedia={apiMedia} pack={pack} onWorld={async next=>{await loadMeta(next);await loadWorlds();location.hash="game"}} onBack={()=>location.hash="game-builder"} onFork={project=>{sessionStorage.setItem("masterhost.packProject",project.id);location.hash="pack"}}/>;
