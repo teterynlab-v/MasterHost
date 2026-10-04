@@ -65,3 +65,7 @@ Actual iOS/Android touch, virtual keyboard, safe areas, screen reader and longer
 ## Extracted release gate — 2026-10-04
 
 Candidate `masterhost-0.1.4-mobile.tar.gz` from source `88aaf46` passed independent archive/checksum/license validation. API and web images built from its extracted source; all three containers in the isolated Compose stack became healthy. M15 setup passed via Nginx against its new PostgreSQL volume, including Character, actions/checks and reconnect. Hosted deployment and GitHub release publication are still blocked by the access requirements recorded in `PLAYTEST_RELEASE.md`.
+
+## Hosted release — 2026-10-04
+
+Application source `88aaf46` is deployed at `https://mh.teterynlab.com`, release marker `0.1.4-mobile+88aaf46`. Fresh backup/isolated restore, unchanged World digest, retained initial database counts, healthy Linux stack and authenticated HTTPS checks passed. Public GM/player browser checks exercised portrait/landscape, a real Pack action and a server-resolved check. Further checks switched to the in-app browser at the owner's request: its direct public navigation is blocked, while the deployed GM table through the local SSH tunnel connected and rendered both orientations. Real-phone and original zero-value-report limitations still apply. See `AWS_STAND.md` for exact proof and restart limits. GitHub publication remains pending.

@@ -33,3 +33,7 @@ The GitHub connector still reports `teterynlab`, but the browser authenticated a
 For production builds, pass `--build-arg VITE_RELEASE_VERSION=<release>` when building the web image; otherwise reports truthfully use `development`.
 
 The remaining accepted product work is tracked in [the friends playtest plan](superpowers/plans/2026-10-04-friends-playtest.md). Scoped password-free invitations, measured presence, table refinements, reversible actions, retained off-host backup and human playtest acceptance are still open. Current code license remains PolyForm Noncommercial; this preparation does not change it.
+
+## Deployment follow-up — 2026-10-04
+
+The AWS access gate was resolved and application source `88aaf46` was deployed as `0.1.4-mobile+88aaf46` with the existing database/authentication retained. Fresh backup restore, unchanged World digest, public HTTPS/API and GM/player mobile gameplay checks passed; exact evidence and remaining in-app direct-navigation/reconnect limits are in `AWS_STAND.md`. Repository `teterynlab-v/MasterHost` still contains its initial README; the prerelease draft has no uploaded complete-source asset. Chrome use was stopped at the owner's request. Publication now awaits login to `teterynlab-v` in the in-app browser or an appropriately authenticated GitHub connector; no additional Chrome extension permission is needed.
