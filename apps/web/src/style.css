@@ -74,3 +74,8 @@ textarea{width:100%;resize:vertical;background:#0f131a;color:#e9eef5;border:1px 
 .packCreator dialog { background:#171e27; color:#e9edf4; border:1px solid #435064; border-radius:16px; padding:24px; max-width:min(560px,calc(100vw - 48px)); }
 .packCreator dialog::backdrop { background:#070b10bb; }
 .packCreator dialog button { margin-right:12px; }
+/* Explicit local feedback export is available from every product screen. */
+.feedback{position:fixed;bottom:12px;left:12px;z-index:80;max-width:calc(100vw - 24px)}
+.feedback>button{font-size:12px;padding:8px 12px;min-height:36px}
+.feedback>section{position:absolute;bottom:48px;left:0;width:min(420px,calc(100vw - 24px));background:#171e28;border:1px solid #465569;border-radius:12px;padding:16px;box-sizing:border-box;box-shadow:0 12px 40px #0008}
+.feedback textarea{display:block;box-sizing:border-box;width:100%;min-height:120px;margin:8px 0 12px;color:inherit;background:#0f141c;border:1px solid #65758a;border-radius:6px;padding:8px;resize:vertical}

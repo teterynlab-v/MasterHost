@@ -1,4 +1,5 @@
 import {SessionAdmin} from "./session-admin.js";
+import {Feedback} from "./feedback.js";
 import {useContentI18n} from './i18n/content-react.js';
 import React,{useEffect,useState}from"react";import{createRoot}from"react-dom/client";import"./style.css";import{PlayerJoin,GmLobby}from"./lobby.js";
 import { WorldBuilder } from "./world-builder.js";
@@ -65,4 +66,4 @@ function App(){
 const hot=(import.meta as ImportMeta & {hot?:{data:{root?:ReturnType<typeof createRoot>}}}).hot;
 const root=hot?.data.root??createRoot(document.getElementById("root")!);
 if(hot)hot.data.root=root;
-root.render(<I18nProvider><App/></I18nProvider>);
+root.render(<I18nProvider><App/><Feedback/></I18nProvider>);

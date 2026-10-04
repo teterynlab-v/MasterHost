@@ -18,7 +18,8 @@ CMD ["./node_modules/.bin/tsx", "apps/server/src/index.ts"]
 FROM source AS web-build
 ARG VITE_API_URL=/api
 ARG VITE_WS_URL=
-ENV VITE_API_URL=$VITE_API_URL VITE_WS_URL=$VITE_WS_URL
+ARG VITE_RELEASE_VERSION=development
+ENV VITE_API_URL=$VITE_API_URL VITE_WS_URL=$VITE_WS_URL VITE_RELEASE_VERSION=$VITE_RELEASE_VERSION
 RUN pnpm --filter @masterhost/web build
 
 FROM nginx:1.27-alpine AS web

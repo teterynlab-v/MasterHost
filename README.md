@@ -31,6 +31,8 @@ Product traffic uses one browser origin: Nginx serves the application and proxie
 - [Licensing and attribution](docs/LICENSES.md)
 - [Current milestone evidence](docs/PROJECT_STATUS.md)
 - [Contributing](CONTRIBUTING.md)
+- [Security reporting](SECURITY.md)
+- [Friends playtest release preparation and remaining gates](docs/PLAYTEST_RELEASE.md)
 
 ## Protect active games
 

@@ -1,0 +1,10 @@
+import React from 'react';import type {Locale} from './i18n/catalog.js';import {useI18n} from './i18n/react.js';
+export const lifecycleCopy:Record<Locale,{ended:string;help:string;next:string;worlds:string;saved:string;back:string}>={
+ en:{ended:'Session ended',help:'Game actions have stopped. The campaign, characters, map and journal are saved. Start a new session, or ask the administrator to resume this saved table.',next:'New session',worlds:'Saved worlds',saved:'Saved world',back:'Back to worlds'},
+ ru:{ended:'Сессия завершена',help:'Игровые действия остановлены. Кампания, персонажи, карта и журнал сохранены. Начните новую сессию или попросите администратора возобновить этот сохранённый стол.',next:'Новая сессия',worlds:'Сохранённые миры',saved:'Сохранённый мир',back:'К списку миров'},
+ es:{ended:'Sesión finalizada',help:'Las acciones de juego se han detenido. La campaña, los personajes, el mapa y el diario están guardados. Inicia una nueva sesión o pide al administrador que reanude esta mesa.',next:'Nueva sesión',worlds:'Mundos guardados',saved:'Mundo guardado',back:'Volver a los mundos'},
+ ja:{ended:'セッション終了',help:'ゲーム操作は停止しました。キャンペーン、キャラクター、マップ、記録は保存されています。新しいセッションを開始するか、管理者に保存済みの卓の再開を依頼してください。',next:'新しいセッション',worlds:'保存済みの世界',saved:'保存済みの世界',back:'世界一覧に戻る'},
+ 'zh-CN':{ended:'会话已结束',help:'游戏操作已停止。战役、角色、地图和日志已保存。开始新会话，或请管理员恢复已保存的游戏桌。',next:'新会话',worlds:'已保存的世界',saved:'已保存的世界',back:'返回世界列表'},
+ ko:{ended:'세션 종료',help:'게임 행동이 중지되었습니다. 캠페인, 캐릭터, 지도와 기록은 저장되었습니다. 새 세션을 시작하거나 관리자에게 저장된 테이블 재개를 요청하세요.',next:'새 세션',worlds:'저장된 세계',saved:'저장된 세계',back:'세계 목록으로'},
+};
+export function SessionEnded({onBack,onNext,error,busy=false,backLabel}:{onBack:()=>void;onNext?:()=>void;error?:string;busy?:boolean;backLabel?:string}){const {locale}=useI18n(),c=lifecycleCopy[locale];return <section className="readyCard" role="status"><span className="homeIcon">✓</span><h2>{c.ended}</h2><p>{c.help}</p>{error&&<p className="error">{error}</p>}<div className="actions">{onNext&&<button disabled={busy} onClick={onNext}>{c.next}</button>}<button className="secondary" onClick={onBack}>{backLabel??c.back}</button></div></section>}
