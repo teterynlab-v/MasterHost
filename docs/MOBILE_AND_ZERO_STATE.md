@@ -26,3 +26,11 @@ Interactive prototype: [mobile-table/index.html](design/mobile-table/index.html)
 Designer independently checked 360/390/430 px. Root independently checked 360/390 px, role/tab switching, player Character, dice sheet, GM participants drawer, reconnecting and ended states. No horizontal overflow; visible phone buttons were at least 44 px in root's measured test (the design aims for 48 px). Actual phone keyboard/safe-area behavior and real gameplay integration are not accepted yet.
 
 The earlier user requirement remains: review and approve mockups before applying the design. Production table layout has not been changed. The standalone mobile prototype does not turn MasterHost into an iOS/Android native application.
+
+## Landscape review — 2026-10-04
+
+Added GM and player landscape layouts, plus explicit Portrait / Landscape / Automatic preview controls. Navigation moves to the left rail, the map occupies the centre, and GM scene notes or player Character context occupy the right pane above the dice control. Dialogs dock at the right and scroll internally on short screens.
+
+Designer and root independently checked 844×390 and 740×360 in Chrome. Root measured page dimensions matching both viewports and visible buttons at least 44 px. Root verified player Character and GM participants dialogs remain open through rotation into portrait and back; a typed GM journal note and the selected tab also remain intact. Reconnecting disables the dice control, and the ended GM view retains the next-session controls. Prototype JavaScript syntax check passed.
+
+Landscape screenshots are in `design/mobile-table/`. This change contains standalone mockups and documentation only. User approval, actual phone safe areas/keyboard, longer translations, accessibility review and production gameplay integration remain open. The reported zero-value game failure remains unreproduced.
