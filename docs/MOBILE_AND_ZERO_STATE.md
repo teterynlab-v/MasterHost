@@ -61,3 +61,7 @@ Participant removal requires an explicit confirmation. API rejection remains vis
 ### Remaining acceptance
 
 Actual iOS/Android touch, virtual keyboard, safe areas, screen reader and longer content review remain open. The new layouts are locally verified, not yet deployed to `mh.teterynlab.com`. No claim of native app delivery or resolution of the user's original zero-value report is made.
+
+## Extracted release gate — 2026-10-04
+
+Candidate `masterhost-0.1.4-mobile.tar.gz` from source `88aaf46` passed independent archive/checksum/license validation. API and web images built from its extracted source; all three containers in the isolated Compose stack became healthy. M15 setup passed via Nginx against its new PostgreSQL volume, including Character, actions/checks and reconnect. Hosted deployment and GitHub release publication are still blocked by the access requirements recorded in `PLAYTEST_RELEASE.md`.

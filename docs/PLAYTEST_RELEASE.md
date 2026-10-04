@@ -22,9 +22,13 @@ The Vite bundle warning remains: main JavaScript is approximately 4.7 MB before 
 
 ## Deployment/publication gate
 
-No new deployment or GitHub release has occurred. AWS credentials expired and SSH allows the former operator IP. CLI reauthentication was opened; the authorization response is pending. Docker daemon is unavailable, so clean PostgreSQL and extracted-release Docker build checks remain pending.
+Release candidate `masterhost-0.1.4-mobile.tar.gz` contains application source `88aaf46`. SHA256: `044ac2ac257f1ea3c3e481cca927f85e0766b983b7a231dd80a094614acc28a7`. All 3495 extracted file checksums and 197 dependency licenses were independently checked. Final source passed TypeScript, production build and 327 tests on a fresh PostgreSQL database with no skips.
 
-GitHub connector reports `teterynlab`. The product owner selected `teterynlab-v` and will connect that account. Do not publish to the other account. Repository creation, remote push, CI completion and release upload each require actual verification.
+Both API and web Docker images were built from the extracted candidate. An isolated Compose project `masterhost-mobile-release-proof` started with a new PostgreSQL volume; all three containers became healthy. The existing M15 setup rehearsal passed through Character, exploration, social, action/check, encounter, reward, progression and reconnect via its Nginx origin. This closes the local extracted-release build/runtime gate, not the public deployment gate.
+
+No new hosted deployment has occurred. SSH to the existing instance timed out; its allowlist contains the former operator IP. Current operator IP is `150.228.49.109`. The official MCP proxy using profile `masterhost` reported that its refresh token had expired. A fresh CLI login was opened and is awaiting browser authentication. Production firewall, stack, data and secrets have not been changed in this release attempt.
+
+The GitHub connector still reports `teterynlab`, but the browser authenticated as the chosen account `teterynlab-v`. Created the public repository [teterynlab-v/MasterHost](https://github.com/teterynlab-v/MasterHost) with an initial README and prepared a prerelease draft. Complete source/archive upload, Git source import, CI completion and release publication remain pending. The browser extension rejected the archive file upload because file-URL access is disabled; no archive was uploaded. The release notes explicitly distinguish the future complete application asset from the current README-only branch/tag.
 
 For production builds, pass `--build-arg VITE_RELEASE_VERSION=<release>` when building the web image; otherwise reports truthfully use `development`.
 
