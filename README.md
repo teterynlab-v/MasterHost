@@ -21,6 +21,8 @@ docker compose up --build -d
 
 Open [http://localhost:8088](http://localhost:8088). Choose **Create a game** to assemble a game from the asset library, **Run game** to prepare a room, or **Join a game** when you have an invitation code.
 
+All bundled official World Packs are installed together. Choose a universe in the application for each new game; no `.env` change or container restart is needed. A game uses one base World Pack, with compatible assets selected during creation. The `MASTERHOST_WORLD_PACK` override in Compose controls only the fallback Pack for the default Realm before a Pack is selected there; it does not restrict the universe catalog.
+
 Product traffic uses one browser origin: Nginx serves the application and proxies HTTP API and WebSocket traffic to the private API container. PostgreSQL and the API are not published on host ports.
 
 ## Guides
@@ -61,7 +63,7 @@ Development requires Node.js 22+, Docker and Corepack or npm. The repository pin
 npm exec --yes --package=pnpm@10.17.1 -- pnpm dev
 ```
 
-Open `http://localhost:5173`; the development API is at `http://localhost:8080`. Set `WORLD_PACK_PATH=./worldpacks/<pack-directory>` to run another installed Pack.
+Open `http://localhost:5173`; the development API is at `http://localhost:8080`. All official Packs are available in development too. `WORLD_PACK_PATH=./worldpacks/<pack-directory>` changes only the server's fallback Pack for the default Realm.
 
 Core verification:
 

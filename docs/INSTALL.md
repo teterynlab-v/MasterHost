@@ -9,7 +9,7 @@
 ## First start
 
 ```bash
-git clone https://github.com/teterynlab/MasterHost.git
+git clone https://github.com/teterynlab-v/MasterHost.git
 cd MasterHost
 cp .env.example .env
 ```
@@ -21,7 +21,7 @@ docker compose up --build -d
 ./scripts/diagnose.sh
 ```
 
-Open `http://localhost:8088`. A new installation starts with no saved games; choose **Create a game**. **Advanced tools → World editor and import** installs an existing `.mhgame` or `.mhworld` file.
+Open `http://localhost:8088`. A new installation starts with no saved games; choose **Create a game**. All bundled official World Packs are available in the universe catalog without changing `.env` or restarting. Each game has one base World Pack. **Advanced tools → World editor and import** installs an existing `.mhgame` or `.mhworld` file.
 
 Stop with `docker compose stop` and restart with `docker compose start`. `docker compose down` removes containers while retaining the named PostgreSQL volume. Do not use `docker compose down -v` unless permanent data deletion is intended.
 
