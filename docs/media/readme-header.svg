@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title description">
+  <title id="title">MasterHost — Build a world. Run the game.</title>
+  <desc id="description">A dark MasterHost title card with mint-green accents and a simple world-to-table path.</desc>
+  <rect width="1200" height="300" rx="20" fill="#101820"/>
+  <rect x="1" y="1" width="1198" height="298" rx="19" fill="none" stroke="#293946" stroke-width="2"/>
+  <rect x="52" y="49" width="44" height="44" rx="12" fill="#68d9aa"/>
+  <text x="74" y="79" text-anchor="middle" fill="#101820" font-family="Arial, sans-serif" font-size="26" font-weight="700">M</text>
+  <text x="112" y="79" fill="#edf3f3" font-family="Arial, sans-serif" font-size="28" font-weight="700">MasterHost</text>
+  <text x="52" y="166" fill="#edf3f3" font-family="Georgia, serif" font-size="48" font-weight="700">Build a world. Run the game.</text>
+  <text x="54" y="207" fill="#aebdc6" font-family="Arial, sans-serif" font-size="21">Make your own tabletop world and play it with friends.</text>
+  <path d="M54 250H1146" stroke="#293946" stroke-width="2"/>
+  <text x="54" y="277" fill="#68d9aa" font-family="Arial, sans-serif" font-size="15" letter-spacing="2">WORLD PACK</text>
+  <text x="204" y="277" fill="#758a96" font-family="Arial, sans-serif" font-size="16">→</text>
+  <text x="238" y="277" fill="#68d9aa" font-family="Arial, sans-serif" font-size="15" letter-spacing="2">DESCRIPTOR</text>
+  <text x="393" y="277" fill="#758a96" font-family="Arial, sans-serif" font-size="16">→</text>
+  <text x="427" y="277" fill="#68d9aa" font-family="Arial, sans-serif" font-size="15" letter-spacing="2">WORLD</text>
+  <text x="528" y="277" fill="#758a96" font-family="Arial, sans-serif" font-size="16">→</text>
+  <text x="562" y="277" fill="#68d9aa" font-family="Arial, sans-serif" font-size="15" letter-spacing="2">LIVE TABLE</text>
+</svg>

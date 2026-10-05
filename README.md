@@ -1,3 +1,5 @@
+![MasterHost — Build a world. Run the game.](docs/media/readme-header.svg)
+
 # MasterHost
 
 **Build a world. Run the game.**
@@ -13,6 +15,16 @@ You do not need to write code to make a game. The guided builder uses reusable a
 - **Share your work:** export a playable game or a reusable Pack as a file. Active campaigns and session history live in PostgreSQL and need a database backup.
 
 Twelve illustrated universes are included as starting points. They are optional: all official Packs are installed together, and choosing one for a new game does not require editing `.env` or restarting the server. Each game has one base Pack and can use compatible assets during creation.
+
+## See it
+
+The [screenshots and World Pack gallery](docs/SHOWCASE.md) shows the current catalog, GM and player tables, and cover art for all twelve included settings. These are actual application captures and packaged illustrations.
+
+<a href="docs/SHOWCASE.md"><img src="game-assets/library/media/classic-fantasy/illustrated-1.4.0/scenes.1.webp" alt="Classic Fantasy: travelers overlooking a border kingdom" width="32%"></a>
+<a href="docs/SHOWCASE.md"><img src="game-assets/library/media/space-opera/illustrated-1.1.0/scenes.1.webp" alt="Space Opera: a station and ships in deep space" width="32%"></a>
+<a href="docs/SHOWCASE.md"><img src="game-assets/library/media/cyberpunk/illustrated-1.1.0/scenes.1.webp" alt="Cyberpunk: a crew in a rain-soaked city" width="32%"></a>
+
+You can use these Packs as they are, change the choices in the builder, or make a World Pack of your own.
 
 ## Try it locally
 
