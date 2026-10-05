@@ -30,7 +30,7 @@ export function exportMhWorldZip(world:MaterializedWorld,assets:Record<string,Ui
  if(Object.keys(assets).length!==Object.keys(world.assets??{}).length)throw Error("World asset set is incomplete");
  for(const[k,v]of Object.entries(assets)){if(!safePath(k)||!world.assets?.[k]||world.assets[k].checksum!==digest(v)||world.assets[k].size!==v.length)throw Error(`Invalid World asset ${k}`);files[`assets/${k}`]=v;b.checksums[`assets/${k}`]=digest(v)}
  files["checksums.json"]=strToU8(JSON.stringify(b.checksums,null,2));
- return zipSync(files,{level:6});
+ return zipSync(files,{level:6,mtime:new Date(1980,0,1)});
 }
 export function inspectMhWorldZip(bytes:Uint8Array){scanZip(bytes);const f=unzipSync(bytes),required=new Set(["manifest.json","descriptor.json","world/entities.ndjson","world/metadata.json","checksums.json"]);for(const k of Object.keys(f))if(!safePath(k)||!required.has(k)&&!k.startsWith("assets/"))throw Error(`Unsafe archive path ${k}`);
  const req=(k:string)=>{if(!f[k])throw Error(`Missing ${k}`);return strFromU8(f[k]!)};

@@ -62,7 +62,7 @@ export function exportMhGame(input: MhGameExportInput): Uint8Array {
   const files: Record<string, Uint8Array> = { "game.json": strToU8(JSON.stringify(manifest, null, 2)), "pack.mhpack": exportMhPack(input.packProject), "world.mhworld": exportMhWorldZip(input.world, input.worldAssets), "dependencies.lock.json": strToU8(JSON.stringify(dependencyLock, null, 2)), "attribution.json": strToU8(JSON.stringify(attribution, null, 2)) };
   for (const asset of gameAssets) files[`game-assets/${asset.id}@${asset.version}.json`] = strToU8(JSON.stringify(asset, null, 2));
   files["checksums.json"] = strToU8(JSON.stringify(Object.fromEntries(Object.entries(files).map(([name, data]) => [name, sha(data)])), null, 2));
-  return zipSync(files, { level: 6 });
+  return zipSync(files, { level: 6, mtime: new Date(1980, 0, 1) });
 }
 
 export function inspectMhGame(bytes: Uint8Array, realmId: string): ImportedMhGame {

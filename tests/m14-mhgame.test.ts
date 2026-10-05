@@ -1,5 +1,5 @@
 import { createHash, randomUUID } from "node:crypto";
-import { afterAll, beforeAll, describe, expect, it } from "vitest";
+import { afterAll, beforeAll, describe, expect, it, vi } from "vitest";
 import { strFromU8, strToU8, unzipSync, zipSync } from "fflate";
 import { createStarterPack } from "@masterhost/worldpack-sdk";
 import { buildDescriptor } from "@masterhost/descriptor";
@@ -16,6 +16,18 @@ function fixture(): MhGameExportInput {
 }
 
 describe("M14 mhgame transport", () => {
+  it("keeps the portable archive identical across ZIP timestamp boundaries", () => {
+    const input = fixture();
+    vi.useFakeTimers();
+    try {
+      vi.setSystemTime(new Date("2026-10-05T12:00:00.000Z"));
+      const first = exportMhGame(input);
+      vi.setSystemTime(new Date("2026-10-05T12:00:04.000Z"));
+      expect(exportMhGame(input)).toEqual(first);
+    } finally {
+      vi.useRealTimers();
+    }
+  });
   it("round-trips the exact nested packages, evidence and media", () => {
     const input = fixture(), bytes = exportMhGame(input), files = unzipSync(bytes);
     expect(exportMhGame(input)).toEqual(bytes);
