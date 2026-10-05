@@ -1,95 +1,59 @@
 # MasterHost
 
-MasterHost is a self-hosted tabletop RPG engine for creating and running original game worlds. A creator or Game Master selects ready assets or uses the visual editor; MasterHost composes a versioned World Pack, builds a Descriptor and materializes a persistent World. Players join with a six-digit code, create Pack-defined Characters and use the generic engine for maps, dice, actions, encounters, inventory, progression and the shared journal. The Docker Compose installation runs locally with PostgreSQL; an AI provider or SaaS account is not required. The optional AI endpoint is currently disabled.
+**Build a world. Run the game.**
 
-The source code is available under the [PolyForm Noncommercial License 1.0.0](LICENSE): noncommercial use is permitted; commercial use requires separate permission from the rights holder. This is a source-available license, not an OSI-approved open-source license. Bundled original game content, artwork and translations have separate CC BY 4.0 terms; see [licensing and attribution](docs/LICENSES.md).
+MasterHost is a self-hosted toolkit for making tabletop RPG worlds and playing them with friends. Start with a ready setting or build your own rules, places, characters, scenes and visual style. Then open a live table, invite players and keep the game moving with maps, character sheets, dice and a shared journal.
 
-## Start the product
+You do not need to write code to make a game. The guided builder uses reusable assets; the advanced editor lets you create and publish a custom World Pack. A finished game can be exported as a `.mhgame` file, and a custom Pack as a `.mhpack` file.
 
-Requirements: Docker Engine 24 or newer with Docker Compose v2, 4 GB free memory, 5 GB free disk and a current browser.
+## What you can do
+
+- **Create a world:** choose a setting and compatible assets, make your own choices, or author a Pack from scratch. MasterHost saves the result as a versioned game rather than a temporary setup screen.
+- **Run a session:** give players an invitation link or six-digit code. The GM has scenes, maps, notes, encounters and dice at the table; players get a sheet and actions defined by the game's Pack.
+- **Share your work:** export a playable game or a reusable Pack as a file. Active campaigns and session history live in PostgreSQL and need a database backup.
+
+Twelve illustrated universes are included as starting points. They are optional: all official Packs are installed together, and choosing one for a new game does not require editing `.env` or restarting the server. Each game has one base Pack and can use compatible assets during creation.
+
+## Try it locally
+
+You need Docker Engine 24+, Docker Compose v2, about 4 GB of free memory and 5 GB of free disk space.
 
 ```bash
 cp .env.example .env
 ```
 
-Replace `MASTERHOST_DB_PASSWORD` and `MASTERHOST_ADMIN_TOKEN` in `.env` with two independent URL-safe random values, for example output from `openssl rand -hex 32`. MasterHost refuses to start the product Compose stack when either value is absent.
+Set `MASTERHOST_DB_PASSWORD` and `MASTERHOST_ADMIN_TOKEN` in `.env` to two different URL-safe random values. For example, run `openssl rand -hex 32` twice. Then start the application:
 
 ```bash
 docker compose up --build -d
 ./scripts/diagnose.sh
 ```
 
-Open [http://localhost:8088](http://localhost:8088). Choose **Create a game** to assemble a game from the asset library, **Run game** to prepare a room, or **Join a game** when you have an invitation code.
+Open [localhost:8088](http://localhost:8088). Choose **Create a game**, then **Run game** when you are ready to invite players. The [GM and player guide](docs/GAME_GUIDE.md) walks through the first session. See [installation and upgrades](docs/INSTALL.md) for local-network access and upgrades.
 
-All bundled official World Packs are installed together. Choose a universe in the application for each new game; no `.env` change or container restart is needed. A game uses one base World Pack, with compatible assets selected during creation. The `MASTERHOST_WORLD_PACK` override in Compose controls only the fallback Pack for the default Realm before a Pack is selected there; it does not restrict the universe catalog.
+## How a game is built
 
-Product traffic uses one browser origin: Nginx serves the application and proxies HTTP API and WebSocket traffic to the private API container. PostgreSQL and the API are not published on host ports.
-
-## Guides
-
-- [Installation and upgrades](docs/INSTALL.md)
-- [GM and player game guide](docs/GAME_GUIDE.md)
-- [Backup, restore and diagnostics](docs/OPERATIONS.md)
-- [Licensing and attribution](docs/LICENSES.md)
-- [Current milestone evidence](docs/PROJECT_STATUS.md)
-- [Contributing](CONTRIBUTING.md)
-- [Security reporting](SECURITY.md)
-- [Friends playtest release preparation and remaining gates](docs/PLAYTEST_RELEASE.md)
-
-## Protect active games
-
-```bash
-./scripts/backup.sh
-./scripts/restore.sh backups/your-backup.dump --confirm-replace
+```text
+World Pack → Descriptor → compiler → saved World → campaign and live session
 ```
 
-Restore replaces the configured database. Read [Operations and recovery](docs/OPERATIONS.md) before using it. A `.mhgame` file transfers an authored game; a database backup protects Campaigns, Characters, Sessions and play history.
+A World Pack holds the rules and content. The Descriptor records the GM's choices. The compiler turns them into a persistent World. The same runtime reads the resulting Pack for character creation, actions and play; individual universes do not need their own game engine. Saved Worlds retain the exact Pack and Descriptor versions they were built from.
 
-## Build a release archive
+The code lives in [`apps/web`](apps/web) and [`apps/server`](apps/server). The reusable model, compiler, runtime and storage packages are in [`packages`](packages). Bundled settings live in [`worldpacks`](worldpacks); selectable assets and examples are in [`game-assets`](game-assets).
 
-```bash
-pnpm release -- 0.1.0
-node scripts/verify-release.mjs release/masterhost-0.1.0.tar.gz
-```
+## Project state
 
-The archive includes source, operator documentation, `VERSION`, a third-party dependency license inventory and SHA-256 manifests. Local environment files, database data, dependencies and build output are excluded.
+MasterHost is a **playtest release**. The world builder, character system and live GM/player tables have automated and local runtime checks. A full game with friends, independent installation, accessibility review and native-language editorial review are still open. The [project status](docs/PROJECT_STATUS.md) records what was tested and what remains.
 
-## Local development
+The code is [source-available under PolyForm Noncommercial 1.0.0](LICENSE). It is not OSI-approved open source. Original bundled content, art and translations have separate CC BY 4.0 terms; see [licenses and attribution](docs/LICENSES.md).
 
-Development requires Node.js 22+, Docker and Corepack or npm. The repository pins pnpm 10.17.1. `scripts/m0-check.sh` starts only the development PostgreSQL service from `compose.dev.yaml`, installs dependencies and runs the baseline checks. If `pnpm` is unavailable, use `corepack pnpm` or `npm exec --yes --package=pnpm@10.17.1 -- pnpm` for the commands below.
+## Work on MasterHost
+
+See [contributing](CONTRIBUTING.md) for setup and test expectations, [security reporting](SECURITY.md) for vulnerabilities, and [operations](docs/OPERATIONS.md) for backups and recovery. Local development uses Node.js 22+ and pnpm 10.17.1:
 
 ```bash
 ./scripts/m0-check.sh
 npm exec --yes --package=pnpm@10.17.1 -- pnpm dev
 ```
 
-Open `http://localhost:5173`; the development API is at `http://localhost:8080`. All official Packs are available in development too. `WORLD_PACK_PATH=./worldpacks/<pack-directory>` changes only the server's fallback Pack for the default Realm.
-
-Core verification:
-
-```bash
-pnpm typecheck
-pnpm test
-cd apps/web && pnpm build
-```
-
-The complete local release engineering gate is `./scripts/m16-release-gate.sh`. It creates and deletes its own isolated Compose project and volume.
-
-## Architecture
-
-```mermaid
-flowchart LR
-  Assets[Game assets and GM choices] --> Pack[Versioned World Pack]
-  Pack --> Descriptor[Descriptor]
-  Descriptor --> Compiler[Generic compiler]
-  Compiler --> World[Materialized World]
-  World --> Runtime[Campaign and Session runtime]
-  Runtime --> GM[GM table]
-  Runtime --> Players[Player clients]
-```
-
-Game rules and content live in Packs. The compiler and runtime remain generic, and exact Pack and Descriptor identities are persisted with Worlds so saved games can be reopened and transferred without reconstructing the original UI choices.
-
-## Current product status
-
-The twelve-universe collection and official content localization have passed documented engineering checks. This is an engineering candidate, not a completed product acceptance or hosted service. Full product acceptance still requires real human games, editorial and accessibility review, and independent installation. Publishing source code does not close those gates. See [M30 status](docs/M30_STATUS.md), [localization status](docs/CONTENT_LOCALIZATION_STATUS.md) and the [project status](docs/PROJECT_STATUS.md) for the evidence and limits.
+The development frontend runs at `http://localhost:5173`; the API runs at `http://localhost:8080`. All installed official Packs remain available. `WORLD_PACK_PATH` changes only the fallback Pack for the default Realm.
