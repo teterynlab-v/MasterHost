@@ -15,6 +15,13 @@ backups/
 
 release/
 
+# Historical planning documents stay local to the authoring checkout.
+/MasterHost_Development_Plan_v0.1.md
+/MasterHost_Product_Architecture_v0.1.docx
+/MasterHost_Technical_Design_v0.1.docx
+/docs/MasterHost_Product_Architecture_v0.1.docx
+/docs/MasterHost_Technical_Design_v0.1.docx
+
 # Original generated artwork stays in the local authoring archive.
 # Versioned delivery images are tracked under game-assets/library/media/.
 artwork/generated/
