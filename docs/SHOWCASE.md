@@ -1,28 +1,8 @@
-# MasterHost in pictures
+# MasterHost worlds
 
 MasterHost lets a GM build a world and run it at a shared table. The included settings below are starting points; the builder and World Pack format also support original worlds.
 
 [Project overview](../README.md) · [First game guide](GAME_GUIDE.md) · [Pack architecture](../README.md#how-a-game-is-built)
-
-## The application
-
-These screenshots were captured from the running application on 5 October 2026. They show the current interface, including work still being refined. Select a screenshot to open it at full size.
-
-### Choose a starting point
-
-[![MasterHost catalog with illustrated world cards](design/audit-2026-10-05/catalog-desktop.png)](design/audit-2026-10-05/catalog-desktop.png)
-
-The catalog presents ready settings. The advanced builder lets you assemble something different.
-
-### Run the game
-
-[![GM table with scenes, map, dice, notes and player panel](design/audit-2026-10-05/gm-desktop-after.png)](design/audit-2026-10-05/gm-desktop-after.png)
-
-The GM sees scenes, a map, notes, dice and participants at one table.
-
-[![Player table with map and character controls](design/audit-2026-10-05/player-desktop.png)](design/audit-2026-10-05/player-desktop.png)
-
-Players have their own table view and character controls.
 
 ## Included World Packs
 

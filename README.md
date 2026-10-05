@@ -18,7 +18,7 @@ Twelve illustrated universes are included as starting points. They are optional:
 
 ## See it
 
-The [screenshots and World Pack gallery](docs/SHOWCASE.md) shows the current catalog, GM and player tables, and cover art for all twelve included settings. These are actual application captures and packaged illustrations.
+The [World Pack gallery](docs/SHOWCASE.md) shows cover art and a short introduction to all twelve included settings. Each image opens at full size, and each setting links to its Pack files.
 
 <a href="docs/SHOWCASE.md"><img src="game-assets/library/media/classic-fantasy/illustrated-1.4.0/scenes.1.webp" alt="Classic Fantasy: travelers overlooking a border kingdom" width="32%"></a>
 <a href="docs/SHOWCASE.md"><img src="game-assets/library/media/space-opera/illustrated-1.1.0/scenes.1.webp" alt="Space Opera: a station and ships in deep space" width="32%"></a>
