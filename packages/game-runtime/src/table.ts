@@ -2,8 +2,10 @@ export const tablePhases=["setup","exploration","social","encounter","reward","e
 export type TablePhase=typeof tablePhases[number];
 export type TableSceneStatus="upcoming"|"active"|"complete";
 export interface TableScene{id:string;title:string;summary?:string;sourceEntityId?:string;status:TableSceneStatus}
-export interface TableState{sessionId:string;revision:number;phase:TablePhase;activeSceneId?:string;scenes:TableScene[];sharedNotes:string[];privateNotes:string[];updatedAt:string}
-export type PublicTableState=Omit<TableState,"privateNotes">;
+export interface TablePrivateNoteImage{checksum:string;mediaType:string;size:number;name:string}
+export interface TablePrivateNote{id:string;text:string;image?:TablePrivateNoteImage}
+export interface TableState{sessionId:string;revision:number;phase:TablePhase;activeSceneId?:string;scenes:TableScene[];sharedNotes:string[];privateNotes:string[];privateNoteEntries?:TablePrivateNote[];updatedAt:string}
+export type PublicTableState=Omit<TableState,"privateNotes"|"privateNoteEntries">;
 export interface TableEvent{type:string;payload?:Record<string,unknown>}
 export interface RehearsalStage{passed:boolean;count:number}
 export interface RehearsalReport{sessionId:string;gatePassed:boolean;stages:{setup:RehearsalStage;characterCreation:RehearsalStage;exploration:RehearsalStage;socialInteraction:RehearsalStage;encounter:RehearsalStage;rewards:RehearsalStage;progression:RehearsalStage;reconnection:RehearsalStage;completion:RehearsalStage};missing:string[]}
@@ -15,7 +17,7 @@ export function createTableState(input:{sessionId:string;scenes:Array<Omit<Table
 
 export function visibleTableState(table:TableState,gm:boolean):TableState|PublicTableState{
  if(gm)return structuredClone(table);
- const{privateNotes:_,...visible}=structuredClone(table);return visible;
+ const{privateNotes:_,privateNoteEntries:__,...visible}=structuredClone(table);return visible;
 }
 
 export function isTablePhase(value:unknown):value is TablePhase{return typeof value==="string"&&(tablePhases as readonly string[]).includes(value)}
@@ -44,4 +46,29 @@ export function buildRehearsalReport(input:{sessionId:string;sessionState:string
  };
  const missing=Object.entries(stages).filter(([,stage])=>!stage.passed).map(([name])=>name);
  return{sessionId:input.sessionId,stages,missing,gatePassed:missing.length===0};
+}
+
+/** Legacy IDs remain deterministic until the first mutation saves structured entries. */
+export function normalizeTablePrivateNotes(table:TableState){
+ table.privateNoteEntries??=table.privateNotes.map((text,index)=>({id:`legacy-${index}`,text}));
+ table.privateNotes=table.privateNoteEntries.map(note=>note.text);
+ return table.privateNoteEntries;
+}
+export type TablePrivateNoteMutation={kind:"add"|"edit";id:string;text:string;image?:TablePrivateNoteImage|null}|{kind:"delete";id:string};
+export function mutateTablePrivateNote(table:TableState,mutation:TablePrivateNoteMutation){
+ const entries=normalizeTablePrivateNotes(table),index=entries.findIndex(note=>note.id===mutation.id);
+ if(mutation.kind!=="add"&&index<0)throw Object.assign(Error("private note not found"),{statusCode:404});
+ if(mutation.kind==="delete")entries.splice(index,1);
+ else{
+  const image=mutation.image===undefined&&mutation.kind==="edit"?entries[index]?.image:mutation.image??undefined;
+  const text=mutation.text.trim();
+  if(text.length>2000||!text&&!image)throw Object.assign(Error("note requires text or image"),{statusCode:400});
+  const note={id:mutation.id,text,...(image?{image}:{})};
+  if(mutation.kind==="add"){
+   if(index>=0)throw Object.assign(Error("private note already exists"),{statusCode:409});
+   if(entries.length>=100)throw Object.assign(Error("private note limit reached"),{statusCode:400});
+   entries.push(note);
+  }else entries[index]=note;
+ }
+ table.privateNotes=entries.map(note=>note.text);
 }

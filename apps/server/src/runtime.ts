@@ -1,3 +1,4 @@
+import {registerTableNotes} from "./table-notes.js";
 import {registerSessionAdmin} from "./session-admin.js";
 import {withRecapDisplay} from './recap-localization.js';
 import type{FastifyInstance}from"fastify";import websocket from"@fastify/websocket";import{RuntimeRepository,GameRepository,ActorStateRepository,EncounterRepository,RuntimeMutationRepository,RuntimeReplayRepository,CheckRecoveryRepository,PostgresRealtimeBus,AdvancedEcosystemRepository}from"@masterhost/persistence";import type{WorldRepository,RealtimeBusMessage}from"@masterhost/persistence";import{newCheckRequest,resolveCheck,initializeResources,effectiveModifier,executeAction,startEncounter,advanceEncounter,endEncounter,reconcileWorldLink,grantItem,transferItem,changeProgression,moveActor,visibleExplorationBoard,buildCampaignRecap,redactSpectatorTimeline,createTableState,visibleTableState,isTablePhase,buildRehearsalReport,assertActorControl}from"@masterhost/game-runtime";import type{CheckDefinition,CheckRequest,CheckResolution,ResourceDefinition,EffectDefinition,ActorRuntimeState,ItemDefinition,ProgressionDefinition,FogRegion,TablePhase}from"@masterhost/game-runtime";import{buildCharacterState,evaluateCharacterPortability}from"@masterhost/worldpack-sdk";import type{LoadedWorldPack}from"@masterhost/worldpack-sdk";
@@ -32,6 +33,13 @@ export async function registerRuntime(app:FastifyInstance,x:{db:string;realmId:s
  const realmFor=(req:any)=>app.masterhostContext?.()?.realm.id??x.realmId;
  const requireCampaignGm=async(req:any,id:string)=>{if(!await repo.verifyCampaignGm(id,token(req)))throw Object.assign(Error("GM authorization required"),{statusCode:403})};
  const requireSessionGm=async(req:any,id:string)=>{if(!await repo.verifySessionGm(id,token(req)))throw Object.assign(Error("GM authorization required"),{statusCode:403})};
+ await registerTableNotes(app,{
+  authorize:requireSessionGm,
+  session:id=>repo.session(id),
+  update:(id,revision,mutate,event,image)=>advanced.updateTable(id,revision,mutate,event,image),
+  image:(id,noteId)=>advanced.noteImage(id,noteId),
+  notify:async(id,table)=>{await broadcast(id,"table.state",visibleTableState(table,false))},
+ });
  const requireParticipant=async(req:any,id:string)=>{if(!await repo.verifyParticipant(id,token(req)))throw Object.assign(Error("participant authorization required"),{statusCode:403})};
  const requireSessionMember=async(req:any,id:string)=>{if(!await repo.verifySessionGm(id,token(req))&&!await repo.sessionMember(id,token(req)))throw Object.assign(Error("session authorization required"),{statusCode:403})};
  const viewerRole=async(req:any,id:string)=>await repo.verifySessionGm(id,token(req))?"gm":await repo.sessionMember(id,token(req))?"player":await advanced.verifySpectator(id,token(req))?"spectator":null;

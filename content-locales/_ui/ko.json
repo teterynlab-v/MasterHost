@@ -507,5 +507,7 @@
   "scenes": "장면",
   "archetypes": "유형",
   "progressionPaths": "성장 경로",
-  "visualThemes": "시각적 스타일"
+  "visualThemes": "시각적 스타일",
+  "TablePrivateNoteUpdated": "비공개 메모 수정",
+  "TablePrivateNoteDeleted": "비공개 메모 삭제"
 }

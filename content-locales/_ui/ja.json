@@ -507,5 +507,7 @@
   "scenes": "シーン",
   "archetypes": "アーキタイプ",
   "progressionPaths": "成長ルート",
-  "visualThemes": "ビジュアルスタイル"
+  "visualThemes": "ビジュアルスタイル",
+  "TablePrivateNoteUpdated": "非公開メモを更新",
+  "TablePrivateNoteDeleted": "非公開メモを削除"
 }

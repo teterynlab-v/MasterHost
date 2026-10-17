@@ -507,5 +507,7 @@
   "scenes": "Сцены",
   "archetypes": "Архетипы",
   "progressionPaths": "Пути развития",
-  "visualThemes": "Визуальные стили"
+  "visualThemes": "Визуальные стили",
+  "TablePrivateNoteUpdated": "Личная заметка изменена",
+  "TablePrivateNoteDeleted": "Личная заметка удалена"
 }

@@ -507,5 +507,7 @@
   "scenes": "场景",
   "archetypes": "原型",
   "progressionPaths": "成长路线",
-  "visualThemes": "视觉风格"
+  "visualThemes": "视觉风格",
+  "TablePrivateNoteUpdated": "私人笔记已更新",
+  "TablePrivateNoteDeleted": "私人笔记已删除"
 }

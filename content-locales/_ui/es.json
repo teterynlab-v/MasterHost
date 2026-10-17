@@ -507,5 +507,7 @@
   "scenes": "Escenas",
   "archetypes": "Arquetipos",
   "progressionPaths": "Rutas de progresión",
-  "visualThemes": "Estilos visuales"
+  "visualThemes": "Estilos visuales",
+  "TablePrivateNoteUpdated": "Nota privada actualizada",
+  "TablePrivateNoteDeleted": "Nota privada eliminada"
 }

@@ -1,30 +1,95 @@
 import postgres from "postgres";
 import {createHash,randomBytes,randomUUID,timingSafeEqual} from "node:crypto";
-import {filterCommunityCatalog} from "@masterhost/game-runtime";
-import type {ExplorationBoard,ExplorationNode,FogRegion,TableState} from "@masterhost/game-runtime";
+import {filterCommunityCatalog,normalizeTablePrivateNotes} from "@masterhost/game-runtime";
+import type {ExplorationBoard,ExplorationNode,FogRegion,TableState,TablePrivateNote,TablePrivateNoteImage} from "@masterhost/game-runtime";
 import type {WorldPackProject} from "@masterhost/worldpack-sdk";
+
+import {assetChecksum,validateWorldImage} from "./world-assets.js";
+export interface TableNoteImageUpload extends TablePrivateNoteImage{data:Uint8Array}
 
 const hash=(value:string)=>createHash("sha256").update(value).digest("hex");
 const tokenMatches=(token:string,expected:string)=>{if(!token||!expected)return false;const a=Buffer.from(hash(token),"hex"),b=Buffer.from(expected,"hex");return a.length===b.length&&timingSafeEqual(a,b)};
 const conflict=()=>Object.assign(Error("revision changed; reload and retry"),{statusCode:409});
 
+/** Legacy snapshots remain authoritative when an older API has appended or truncated notes. */
+function reconcilePrivateNotes(table:TableState,entries:TablePrivateNote[]|null|undefined){
+ if(entries==null){delete table.privateNoteEntries;return normalizeTablePrivateNotes(table)}
+ const remaining=structuredClone(entries),usedIds=new Set(entries.map(note=>note.id));
+ table.privateNoteEntries=table.privateNotes.map((text,index)=>{
+  const match=remaining.findIndex(note=>note.text===text);
+  if(match>=0)return remaining.splice(match,1)[0]!;
+  const base=`legacy-${hash(JSON.stringify([table.sessionId,index,text])).slice(0,32)}`;
+  let id=base,suffix=1;while(usedIds.has(id))id=`${base}-${suffix++}`;
+  usedIds.add(id);return{id,text};
+ });
+ return table.privateNoteEntries;
+}
+function storedTableState(table:TableState){const {privateNoteEntries:_,...state}=table;return state}
+
 export class AdvancedEcosystemRepository{
  private sql;constructor(url:string){this.sql=postgres(url)}
- async migrate(){
-  await this.sql`create table if not exists exploration_boards(session_id uuid primary key,world_id uuid not null,revision int not null,state jsonb not null,updated_at timestamptz not null default now())`;
-  await this.sql`create table if not exists session_table_state(session_id uuid primary key,revision int not null,state jsonb not null,updated_at timestamptz not null default now())`;
-  await this.sql`create table if not exists spectator_grants(id uuid primary key,session_id uuid not null,label text not null,token_hash text unique not null,revoked_at timestamptz null,created_at timestamptz not null default now())`;
-  await this.sql`create table if not exists realm_canon_facts(realm_id uuid not null,fact_key text not null,revision int not null,title text not null,value jsonb not null,source_campaign_id uuid not null,source_session_id uuid not null,created_at timestamptz not null default now(),updated_at timestamptz not null default now(),primary key(realm_id,fact_key))`;
-  await this.sql`create table if not exists collaboration_documents(id uuid primary key,realm_id uuid not null,resource_kind text not null,resource_id text not null,revision int not null,content jsonb not null,created_at timestamptz not null default now(),updated_at timestamptz not null default now(),unique(realm_id,resource_kind,resource_id))`;
-  await this.sql`create table if not exists collaboration_revisions(document_id uuid not null,revision int not null,author_id text not null,summary text not null,content jsonb not null,created_at timestamptz not null default now(),primary key(document_id,revision))`;
- }
+ async migrate(){return this.sql.begin(async tx=>{
+  // Separate from the application migration lock to permit nested startup migrations.
+  await tx`select pg_advisory_xact_lock(7649021123457)`;
+  await tx`create table if not exists exploration_boards(session_id uuid primary key,world_id uuid not null,revision int not null,state jsonb not null,updated_at timestamptz not null default now())`;
+  await tx`create table if not exists session_table_state(session_id uuid primary key,revision int not null,state jsonb not null,updated_at timestamptz not null default now())`;
+  await tx`alter table session_table_state add column if not exists private_note_entries jsonb`;
+  // Upgrade snapshots written by intermediate versions before exposing them to an older API.
+  await tx`update session_table_state set private_note_entries=coalesce(private_note_entries,state->'privateNoteEntries'),state=state-'privateNoteEntries' where state ? 'privateNoteEntries'`;
+  await tx`create table if not exists session_note_images(session_id uuid not null references session_table_state(session_id) on delete cascade,checksum text not null,media_type text not null,data bytea not null,primary key(session_id,checksum))`;
+  await tx`create table if not exists spectator_grants(id uuid primary key,session_id uuid not null,label text not null,token_hash text unique not null,revoked_at timestamptz null,created_at timestamptz not null default now())`;
+  await tx`create table if not exists realm_canon_facts(realm_id uuid not null,fact_key text not null,revision int not null,title text not null,value jsonb not null,source_campaign_id uuid not null,source_session_id uuid not null,created_at timestamptz not null default now(),updated_at timestamptz not null default now(),primary key(realm_id,fact_key))`;
+  await tx`create table if not exists collaboration_documents(id uuid primary key,realm_id uuid not null,resource_kind text not null,resource_id text not null,revision int not null,content jsonb not null,created_at timestamptz not null default now(),updated_at timestamptz not null default now(),unique(realm_id,resource_kind,resource_id))`;
+  await tx`create table if not exists collaboration_revisions(document_id uuid not null,revision int not null,author_id text not null,summary text not null,content jsonb not null,created_at timestamptz not null default now(),primary key(document_id,revision))`;
+ })}
  private mapBoard(row:any):ExplorationBoard|null{return row?row.state as ExplorationBoard:null}
  async board(sessionId:string){return this.mapBoard((await this.sql`select state from exploration_boards where session_id=${sessionId}`)[0])}
  async createBoard(input:{sessionId:string;worldId:string;nodes:ExplorationNode[];fog?:FogRegion[]}){const now=new Date().toISOString(),state:ExplorationBoard={id:randomUUID(),sessionId:input.sessionId,worldId:input.worldId,revision:1,nodes:input.nodes,tokens:[],fog:input.fog??[],updatedAt:now};return this.sql.begin(async tx=>{const inserted=await tx`insert into exploration_boards(session_id,world_id,revision,state) values(${input.sessionId},${input.worldId},1,${tx.json(state as any)}) on conflict(session_id) do nothing returning state`;if(inserted.length){await tx`insert into game_events(id,session_id,event_type,payload,schema_version) values(gen_random_uuid(),${input.sessionId},'ExplorationStarted',${tx.json({boardId:state.id,nodeCount:state.nodes.length,fogCount:state.fog.length} as any)},'1')`;return{board:state,created:true}}const row=(await tx`select state from exploration_boards where session_id=${input.sessionId}`)[0];return{board:row.state as ExplorationBoard,created:false}})}
  async updateBoard(sessionId:string,expectedRevision:number,mutate:(board:ExplorationBoard)=>void,event:{type:string;payload:Record<string,unknown>}){return this.sql.begin(async tx=>{const row=(await tx`select revision,state from exploration_boards where session_id=${sessionId} for update`)[0];if(!row)throw Object.assign(Error("exploration board not found"),{statusCode:404});if(Number(row.revision)!==expectedRevision)throw conflict();const board=structuredClone(row.state as ExplorationBoard);mutate(board);board.revision++;board.updatedAt=new Date().toISOString();await tx`update exploration_boards set revision=${board.revision},state=${tx.json(board as any)},updated_at=now() where session_id=${sessionId}`;await tx`insert into game_events(id,session_id,event_type,payload,schema_version) values(gen_random_uuid(),${sessionId},${event.type},${tx.json({...event.payload,boardRevision:board.revision} as any)},'1')`;return board})}
- async table(sessionId:string){const row=(await this.sql`select state from session_table_state where session_id=${sessionId}`)[0];return(row?.state??null)as TableState|null}
- async createTable(state:TableState){return this.sql.begin(async tx=>{const inserted=await tx`insert into session_table_state(session_id,revision,state) values(${state.sessionId},1,${tx.json({...state,revision:1} as any)}) on conflict(session_id) do nothing returning state`;if(inserted.length){await tx`insert into game_events(id,session_id,event_type,payload,schema_version) values(gen_random_uuid(),${state.sessionId},'TableStarted',${tx.json({sceneCount:state.scenes.length,phase:state.phase} as any)},'1')`;return{table:inserted[0]!.state as TableState,created:true}}const row=(await tx`select state from session_table_state where session_id=${state.sessionId}`)[0];return{table:row.state as TableState,created:false}})}
- async updateTable(sessionId:string,expectedRevision:number,mutate:(table:TableState)=>void,event:{type:string;payload:Record<string,unknown>}){return this.sql.begin(async tx=>{const row=(await tx`select revision,state from session_table_state where session_id=${sessionId} for update`)[0];if(!row)throw Object.assign(Error("table state not found"),{statusCode:404});if(Number(row.revision)!==expectedRevision)throw conflict();const table=structuredClone(row.state as TableState);mutate(table);table.revision++;table.updatedAt=new Date().toISOString();await tx`update session_table_state set revision=${table.revision},state=${tx.json(table as any)},updated_at=now() where session_id=${sessionId}`;const payload=event.type==="TablePrivateNoteRecorded"?{noteCount:table.privateNotes.length,tableRevision:table.revision}:{...event.payload,tableRevision:table.revision};await tx`insert into game_events(id,session_id,event_type,payload,schema_version) values(gen_random_uuid(),${sessionId},${event.type},${tx.json(payload as any)},'1')`;return table})}
+ private mapTable(row:any):TableState|null{
+  if(!row)return null;
+  const table=structuredClone(row.state as TableState);
+  reconcilePrivateNotes(table,row.private_note_entries??table.privateNoteEntries);
+  return table;
+ }
+ async table(sessionId:string){return this.mapTable((await this.sql`select state,private_note_entries from session_table_state where session_id=${sessionId}`)[0])}
+ async noteImage(sessionId:string,noteId:string){
+  const table=await this.table(sessionId),image=table?.privateNoteEntries?.find(note=>note.id===noteId)?.image;
+  if(!image)return null;
+  const row=(await this.sql`select data,media_type from session_note_images where session_id=${sessionId} and checksum=${image.checksum}`)[0];
+  return row?{data:row.data as Uint8Array,mediaType:String(row.media_type)}:null;
+ }
+ async createTable(state:TableState){return this.sql.begin(async tx=>{
+  const table=structuredClone({...state,revision:1});reconcilePrivateNotes(table,table.privateNoteEntries);
+  const inserted=await tx`insert into session_table_state(session_id,revision,state,private_note_entries) values(${state.sessionId},1,${tx.json(storedTableState(table) as any)},${tx.json(table.privateNoteEntries as any)}) on conflict(session_id) do nothing returning state,private_note_entries`;
+  if(inserted.length){
+   await tx`insert into game_events(id,session_id,event_type,payload,schema_version) values(gen_random_uuid(),${state.sessionId},'TableStarted',${tx.json({sceneCount:state.scenes.length,phase:state.phase} as any)},'1')`;
+   return{table:this.mapTable(inserted[0])!,created:true};
+  }
+  const row=(await tx`select state,private_note_entries from session_table_state where session_id=${state.sessionId}`)[0];return{table:this.mapTable(row)!,created:false};
+ })}
+ async updateTable(sessionId:string,expectedRevision:number,mutate:(table:TableState)=>void,event:{type:string;payload:Record<string,unknown>},image?:TableNoteImageUpload){return this.sql.begin(async tx=>{
+  const row=(await tx`select revision,state,private_note_entries from session_table_state where session_id=${sessionId} for update`)[0];
+  if(!row)throw Object.assign(Error("table state not found"),{statusCode:404});
+  if(Number(row.revision)!==expectedRevision)throw conflict();
+  const table=this.mapTable(row)!,original=structuredClone(table.privateNoteEntries!);
+  mutate(table);
+  // Preserve compatibility with existing callers that append to the string array.
+  if(JSON.stringify(table.privateNoteEntries)===JSON.stringify(original)&&JSON.stringify(table.privateNotes)!==JSON.stringify(original.map(note=>note.text))){
+   reconcilePrivateNotes(table,original);
+  }
+  normalizeTablePrivateNotes(table);
+  if(image){
+   try{validateWorldImage("note-image",image.mediaType,image.data)}catch{throw Object.assign(Error("invalid private note image"),{statusCode:400})}
+   if(image.checksum!==assetChecksum(image.data)||image.size!==image.data.length||!image.name.trim()||image.name.length>180||/[\x00-\x1f\x7f]/.test(image.name)||!table.privateNoteEntries?.some(note=>note.image?.checksum===image.checksum))throw Object.assign(Error("invalid private note image metadata"),{statusCode:400});
+   await tx`insert into session_note_images(session_id,checksum,media_type,data) values(${sessionId},${image.checksum},${image.mediaType},${Buffer.from(image.data)}) on conflict(session_id,checksum) do nothing`;
+  }
+  table.revision++;table.updatedAt=new Date().toISOString();
+  await tx`update session_table_state set revision=${table.revision},state=${tx.json(storedTableState(table) as any)},private_note_entries=${tx.json(table.privateNoteEntries as any)},updated_at=now() where session_id=${sessionId}`;
+  await tx`delete from session_note_images where session_id=${sessionId} and checksum not in (select entry->'image'->>'checksum' from jsonb_array_elements(${tx.json(table.privateNoteEntries as any)}) entry where entry->'image'->>'checksum' is not null)`;
+  const payload=event.type.startsWith("TablePrivateNote")?{noteCount:table.privateNotes.length,tableRevision:table.revision}:{...event.payload,tableRevision:table.revision};
+  await tx`insert into game_events(id,session_id,event_type,payload,schema_version) values(gen_random_uuid(),${sessionId},${event.type},${tx.json(payload as any)},'1')`;return table;
+ })}
  async createSpectator(sessionId:string,label:string){const id=randomUUID(),accessToken=randomBytes(32).toString("base64url");await this.sql`insert into spectator_grants(id,session_id,label,token_hash) values(${id},${sessionId},${label.trim()||"Spectator"},${hash(accessToken)})`;return{id,sessionId,label:label.trim()||"Spectator",accessToken,createdAt:new Date().toISOString()}}
  async verifySpectator(sessionId:string,token:string){const row=(await this.sql`select token_hash from spectator_grants where session_id=${sessionId} and revoked_at is null and token_hash=${hash(token)} limit 1`)[0];return typeof row?.token_hash==="string"&&tokenMatches(token,row.token_hash)}
  async revokeSpectator(id:string,sessionId:string){await this.sql`update spectator_grants set revoked_at=now() where id=${id} and session_id=${sessionId}`;return{revoked:true}}
